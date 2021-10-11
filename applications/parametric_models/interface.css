@@ -1,0 +1,283 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+/* removes tap blinking on ios devices */
+.ring-size {
+    width: 120px;
+    height: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ring-size-datalist {
+}
+
+.slider-div {
+}
+
+.ring-button-core {
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    position: static;
+    background-position: center center;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    margin: 5px;
+    background-size: contain;
+    float: left;
+    cursor: pointer;
+    outline: none;
+    border-style: none;
+    border-color: #959595;
+}
+
+.ring-button-1 {
+    background-image: url('images/button_1.png');
+    border-top-style: none;
+}
+
+.ring-button-2 {
+    background-image: url('images/button_2.png');
+    border-style: none;
+}
+
+.ring-button-3 {
+    background-image: url('images/button_3.png');
+    border-style: none;
+}
+
+.models-desk-div {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: block;
+    float: none;
+    clear: both;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.models-list {
+    position: absolute;
+    display: block;
+    width: 393px;
+    height: 160px;
+    float: none;
+    overflow: hidden;
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: -200px;
+    top: auto;
+    left: 0px;
+    right: 0px;
+    border: 1px solid #919191;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.models-list-central-div {
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.model-button {
+    position: static;
+    float: left;
+    width: 125px;
+    height: 150px;
+    margin: 5px 3px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    cursor: pointer;
+}
+
+.ring-panel {
+    width: 210px;
+    height: 70px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border-style: none;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+}
+
+.mechanism-part-panel {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    height: 70px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-style: none;
+    border-radius: 15px;
+    display: none;
+}
+
+.ring-button-4 {
+    background-image: url('images/button_4.png');
+}
+
+.ring-button-5 {
+    background-image: url('images/button_5.png');
+}
+
+.ring-button-6 {
+    background-image: url('images/button_6.png');
+}
+
+.ring-button-7 {
+    background-image: url('images/button_7.png');
+}
+
+.ring-button-8 {
+    background-image: url('images/button_8.png');
+}
+
+.ring-button-9 {
+    background-image: url('images/button_9.png');
+}
+
+.shelf-panel {
+    width: 140px;
+    height: 70px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 15px;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: none;
+}
+
+.button-ring-10 {
+    background-image: url('images/button_10.png');
+}
+
+.button-ring-11 {
+    background-image: url('images/button_11.png');
+}
+
+.model-desk-palen-small {
+    width: 280px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    top: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.button-desk-1 {
+    background-image: url('images/button_12.png');
+}
+
+.button-desk-2 {
+    background-image: url('images/button_13.png');
+}
+
+.button-desk-3 {
+    background-image: url('images/button_14.png');
+}
+
+.button-desk-4 {
+    background-image: url('images/fullscreen_1.png');
+}
+
+.preloader-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 4;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.preloader-center-div {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    overflow: visible;
+}
+
+.preloader-text {
+    font-family: Archivo Narrow;
+    font-size: 19px;
+    line-height: 2;
+    width: 200px;
+    height: 60x;
+    right: 10px;
+    bottom: 14px;
+    position: static;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.preloader-percentage {
+    font-family: ArchivoNarrowBolt;
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    right: -40px;
+    bottom: -14px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: 0px;
+    padding-bottom: 0px;
+    border-style: none;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #8c8c8c;
+    overflow: hidden;
+    clear: both;
+}
+
+@font-face {
+    font-family: ArchivoNarrowBolt;
+    src: url(./fonts/ArchivoNarrow-Bold.ttf);
+}

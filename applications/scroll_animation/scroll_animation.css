@@ -1,0 +1,318 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+  margin: 0px;
+  overflow: visible;
+  font-family: "Thasadith";
+}
+
+#v3d-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  display: none;
+  z-index: 1;
+}
+
+.fullscreen-open {
+  background-image: url('media/fullscreen_open.svg');
+}
+
+.fullscreen-close {
+  background-image: url('media/fullscreen_close.svg');
+}
+
+/* removes tap blinking on ios devices */
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+
+h1,h2,h3,p {
+  color: white;
+}
+
+.txt-container {
+  position: absolute;
+  width: 100%;
+  height: 100%
+  top: 0px;
+  right: 0px;
+}
+
+.txt-main-head  {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  width:100%;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.separator {
+  position: absolute;
+  right: auto;
+  left: 50%;
+  margin-left: -300px;
+  top: 100px;
+  width: 600px;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+.description-container {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 250px;
+  margin: 0 0 0 100px;
+}
+
+.history-container {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 700px;
+  right: 0px;
+  margin: 0 100px 0 0;
+}
+
+.main-tools-container {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 1200px;
+  margin: 0 0 0 100px;
+}
+
+.txt-secondary-head {
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+.description {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.tools-list {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.tools-list:before {
+  content: "●";
+  margin: 0 10px 0 0;
+}
+
+.add-tools-container  {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 1800px;
+  right: 0px;
+  margin: 0 100px 0 0px;
+}
+
+.materials-container-1 {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 2300px;
+  margin: 0 0 0 100px;
+}
+
+.materials-container-2 {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 2700px;
+  right: 0px;
+  margin: 0 100px 0 0px;
+}
+
+.design-container {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 3200px;
+  margin: 0 0 0 100px;
+}
+
+.colors-container {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 3700px;
+  right: 0px;
+  margin: 0 100px 0 0px;
+}
+
+.enquare-button {
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  padding: 14px 5px 0 5px;
+  text-align: center;
+  top: 4200px;
+  left: 50%;
+  margin-left: -90px;
+  background-color: white;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+.enquare-link:visited, .enquare-link:visited {
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+
+.description-container, .main-tools-container, .materials-container-1, .design-container {
+  margin: 0 0 0 50px;
+  width: 250px;
+}
+
+.history-container, .add-tools-container {
+  width: 250px;
+  right: auto;
+  left: 0px;
+  margin: 0 0 0 50px;
+}
+
+.materials-container-2, .colors-container {
+  margin: 0 50px 0 0;
+  width: 250px;
+}
+
+.enquare-button {
+  top: 4250px;
+}
+
+}
+
+@media screen and (max-width: 720px) {
+
+.description, .tools-list {
+ font-size: 14px;
+}
+
+.txt-secondary-head {
+  font-size: 30px;
+}
+
+.txt-main-head {
+  font-size: 40px
+}
+
+.separator {
+  top: 70px;
+  width: 400px;
+  margin-left: -200px;
+}
+
+.description-container, .main-tools-container, .materials-container-1, .design-container {
+  margin: 0 0 0 50px;
+  width: 200px;
+}
+
+.history-container, .add-tools-container {
+  width: 200px;
+  right: auto;
+  left: 0px;
+  margin: 0 0 0 50px;
+}
+
+.materials-container-2, .colors-container {
+  margin: 0 50px 0 0;
+  width: 200px;
+}
+
+.enquare-button {
+  left: 60px;
+  margin-left: 0px;
+  width: 150px;
+  height: 30px;
+  padding: 4px 5px 0 5px;
+}
+
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+.description-container, .main-tools-container, .materials-container-1, .design-container, .history-container, .add-tools-container, .materials-container-2, .colors-container {
+  width: 200px;
+  left: 50%;
+  right: auto;
+  margin-left: -100px;
+  }
+
+.enquare-button {
+  text-align: center;
+  left: 50%;
+  margin-left: -90px;
+  border-radius: 30px;
+}
+
+.description-container {
+  top: 200px;
+}
+
+.colors-container {
+  top: 3900px;
+}
+
+.history-container {
+  top: 600px;
+}
+
+.main-tools-container {
+  top: 1100px;
+}
+
+.add-tools-container {
+  top: 1700px;
+}
+
+.materials-container-1 {
+  top: 2200px;
+}
+
+.design-container {
+  top: 3300px;
+}
+
+.enquare-button {
+  top: 4300px;
+}
+
+}
+
+
+@font-face {
+font-family: "Thasadith";
+src: url("./fonts/ExpletusSans-Regular.ttf") format("truetype");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Thasadith";
+src: url("./fonts/ExpletusSans-Bold.ttf") format("truetype");
+font-style: normal;
+font-weight: bolt;
+}

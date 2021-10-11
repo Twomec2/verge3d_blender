@@ -1,0 +1,574 @@
+.interface {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: -1px;
+  bottom: 0px;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  float: none;
+  clear: none;
+}
+
+.image {
+  display: inline-block;
+}
+
+.div-block-2 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  float: left;
+  border: 2px none #e4d1c1;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  box-shadow: inset 0 0 43px 7px #a89090, 1px 1px 28px 3px #000;
+}
+
+.body {
+  background-image: -webkit-linear-gradient(270deg, #000, #000);
+  background-image: linear-gradient(180deg, #000, #000);
+}
+
+.heading {
+  margin: 8px 14px auto;
+  font-family: 'Great Vibes', cursive;
+  color: #83431f;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.heading.cookiheading {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #e5d6c5;
+}
+
+.heading.progress-bar-text {
+  position: static;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  clear: none;
+  color: #db7137;
+}
+
+.text-block {
+  display: block;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-left: 12px;
+  opacity: 1;
+  font-family: Vollkorn, serif;
+  color: #83431f;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+}
+
+.border-line-2 {
+  height: 2px;
+  margin-right: 60px;
+  margin-left: 60px;
+  background-image: -webkit-linear-gradient(270deg, #e5d6c5, #e5d6c5);
+  background-image: linear-gradient(180deg, #e5d6c5, #e5d6c5);
+}
+
+.top-menu {
+  position: fixed;
+  z-index: 1;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 80px;
+  max-height: 80px;
+  min-height: 40px;
+}
+
+.div-block-5 {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
+.windows-main-style {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  float: left;
+  border: 2px none #e4d1c1;
+  border-radius: 0px;
+  background-image: url('../images/wood.jpg'), -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: url('../images/wood.jpg'), linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  background-position: 0px 0px, 0px 0px;
+  background-size: 125px, auto;
+  box-shadow: inset 0 0 43px 7px #a89090, 1px 1px 28px 3px #000;
+}
+
+.windows-main-style.top-menu {
+  position: static;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  float: right;
+  background-image: url('../images/wood.jpg'), -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: url('../images/wood.jpg'), linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  background-position: 0px 0px, 0px 0px;
+  background-size: 125px, auto;
+  box-shadow: inset 0 0 43px 7px #a89090, 1px 1px 28px 3px #000;
+}
+
+.windows-main-style.left-top-buttons {
+  position: static;
+  width: 20%;
+  height: 50px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  float: left;
+  background-image: -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  box-shadow: inset 0 0 43px 7px #a89090, 1px 1px 28px 3px #000;
+}
+
+.windows-main-style.buttons {
+  position: static;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  float: right;
+  background-image: -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  box-shadow: inset 0 0 43px 7px #a89090;
+}
+
+.windows-main-style.buttons.settings-button {
+  width: 50px;
+  height: 50px;
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+.windows-main-style.buttons.buttons-vert {
+  display: block;
+  overflow: visible;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  box-shadow: inset 0 0 43px 7px #a89090, 3px 3px 37px -8px #000;
+}
+
+.windows-main-style.info-window {
+  z-index: 1;
+  display: block;
+}
+
+.windows-main-style.help-wondow {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+  width: 400px;
+  height: 320px;
+  margin-top: 117px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.windows-main-style.left-top-buttons {
+  position: static;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  float: right;
+  background-image: -webkit-linear-gradient(270deg, #f6e3d2, #f6e3d2);
+  background-image: linear-gradient(180deg, #f6e3d2, #f6e3d2);
+  box-shadow: inset 0 0 43px 7px #a89090, 3px 3px 37px 3px rgba(0, 0, 0, .47);
+}
+
+.windows-main-style.left-top-buttons.settings-button {
+  width: 50px;
+  height: 50px;
+  margin-right: 0px;
+  margin-left: 8px;
+}
+
+.windows-main-style.left-top-buttons.buttons-vert {
+  display: block;
+  overflow: visible;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  box-shadow: inset 0 0 43px 7px #a89090, 3px 3px 37px 3px #000;
+}
+
+.windows-main-style.coocking-info-tab {
+  left: 0px;
+  top: 0px;
+  bottom: auto;
+  display: none;
+  height: 200px;
+  margin-top: 129px;
+  background-image: none;
+  box-shadow: none;
+  opacity: 0;
+}
+
+.row {
+  width: 70%;
+  height: 100%;
+  float: right;
+}
+
+.brand {
+  width: 80px;
+  height: 80px;
+}
+
+.brand-2 {
+  width: 80px;
+  height: 80px;
+}
+
+.top-menu-buttons {
+  height: 50px;
+  font-family: Vollkorn, serif;
+  color: #83431f;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav-link-2 {
+  height: 60px;
+}
+
+.container {
+  height: 50px;
+  float: none;
+}
+
+.div-block-6 {
+  margin-left: 8px;
+  float: left;
+}
+
+.item-buttons {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+  width: 80px;
+  max-width: 270px;
+  margin: 20px;
+  float: right;
+  opacity: 1;
+}
+
+.button-images {
+  width: 72px;
+  height: 72px;
+  margin: 4px;
+  padding-left: 0px;
+  opacity: 1;
+}
+
+.button-images.fullscreen {
+  width: 42px;
+  height: 42px;
+}
+
+.button-images.settings-image {
+  width: 42px;
+  height: 42px;
+  padding-left: 0px;
+  float: left;
+}
+
+.nav-menu {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: block;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  clear: none;
+  text-align: center;
+}
+
+.text-block-2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: inline;
+  overflow: visible;
+  width: 72px;
+  height: 72px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.container-2 {
+  display: block;
+  overflow: scroll;
+  height: 100px;
+  background-image: -webkit-linear-gradient(270deg, rgba(255, 0, 0, .5), rgba(255, 0, 0, .5));
+  background-image: linear-gradient(180deg, rgba(255, 0, 0, .5), rgba(255, 0, 0, .5));
+}
+
+.div-block-8 {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  float: none;
+  background-image: -webkit-linear-gradient(270deg, red, red);
+  background-image: linear-gradient(180deg, red, red);
+}
+
+.iframe-canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+  overflow: hidden;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  clear: none;
+  background-image: -webkit-linear-gradient(270deg, #000, #000);
+  background-image: linear-gradient(180deg, #000, #000);
+  cursor: default;
+}
+
+.html-embed {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 22%;
+}
+
+.div-block-9 {
+  margin-right: 20px;
+  float: right;
+}
+
+.div-block-10 {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  margin-top: 195px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.drink-image {
+  display: block;
+  width: 120px;
+  height: 120px;
+  max-height: 120px;
+  max-width: 120%;
+  min-height: 60px;
+  min-width: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-block-3 {
+  font-family: Vollkorn, serif;
+  color: #e5d6c5;
+  font-size: 18px;
+  text-align: center;
+}
+
+.progress-bar-page {
+  position: fixed;
+  z-index: 2;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(270deg, #000, #000);
+  background-image: linear-gradient(180deg, #000, #000);
+}
+
+.progress-bar-div {
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  right: 0px;
+  bottom: 40%;
+  display: block;
+  height: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.progress-bar-image {
+  position: static;
+  left: 0px;
+  top: 35%;
+  right: 0px;
+  bottom: 35%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+
+.border-line-1 {
+  height: 2px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-image: -webkit-linear-gradient(270deg, #603535, #603535);
+  background-image: linear-gradient(180deg, #603535, #603535);
+}
+
+.image-4 {
+  display: none;
+}
+
+.div-block-11 {
+  display: block;
+  width: 200px;
+  height: 120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.teapot-colored {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/progress_bar.gif');
+  background-position: 50% 31%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div-block-12 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/progress_bar_hider.gif');
+  background-position: 50% 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 991px) {
+  .nav-menu {
+    position: static;
+    display: block;
+    overflow: visible;
+    width: 50px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .windows-main-style.buttons {
+    padding-left: 0px;
+  }
+  .windows-main-style.buttons.settings-button {
+    padding-left: 0px;
+  }
+  .windows-main-style.buttons.buttons-vert {
+    margin-top: 10px;
+  }
+  .windows-main-style.left-top-buttons {
+    padding-left: 0px;
+  }
+  .windows-main-style.left-top-buttons.settings-button {
+    padding-left: 0px;
+  }
+  .windows-main-style.left-top-buttons.buttons-vert {
+    margin-top: 10px;
+  }
+  .item-buttons {
+    right: 0px;
+    bottom: 0px;
+    width: 80px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 479px) {
+  .heading {
+    font-size: 20px;
+  }
+  .heading.progress-bar-text {
+    margin-top: 5px;
+  }
+  .text-block {
+    font-size: 16px;
+  }
+  .windows-main-style {
+    margin-right: 0px;
+  }
+  .windows-main-style.buttons.settings-button {
+    padding-left: 0px;
+  }
+  .windows-main-style.info-window {
+    display: block;
+    width: 80%;
+    height: 300px;
+    margin-right: 20px;
+  }
+  .windows-main-style.left-top-buttons.settings-button {
+    padding-left: 0px;
+  }
+  .windows-main-style.coocking-info-tab {
+    display: none;
+    width: 260px;
+    height: 200px;
+  }
+  .progress-bar-div {
+    top: 43%;
+    bottom: 43%;
+    height: 14%;
+  }
+  .progress-bar-image {
+    width: 140px;
+    height: auto;
+  }
+}

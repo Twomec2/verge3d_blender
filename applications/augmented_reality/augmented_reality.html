@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Interactive Augmented Reality Demo Made with Verge3D</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- Search Engines -->
+  <meta name="description" content="This immersive browser-based AR experience runs on Android and iOS without the need to install anything. Designed with Verge3D for Blender.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Interactive Augmented Reality Demo Made with Verge3D">
+  <meta name="twitter:description" content="This immersive browser-based AR experience runs on Android and iOS without the need to install anything. Designed with Verge3D for Blender.">
+  <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/augmented_reality.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Interactive Augmented Reality Demo Made with Verge3D">
+  <meta property="og:description" content="This immersive browser-based AR experience runs on Android and iOS without the need to install anything. Designed with Verge3D for Blender.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/augmented_reality.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 3.2.0">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+  <script src="v3d.js"></script>
+  <script src="augmented_reality.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="augmented_reality.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+    <div class="warning-center" id="warning_message_div">
+      <div class="warning-AR-unavailable" id="warning_AR_unavailable" data-pg-name="Warning 1"></div>
+      <div class="warning-could-not-enter-AR" id="warning_could_not_enter_AR" data-pg-name="Warning 2"></div>
+    </div>
+    <a class="enter-AR-button" id="enter_AR_button"><img src="media/enter_AR_button.png"></img></a>
+    <a href="https://www.soft8soft.com/augmented-reality-in-the-browser/" target="_blank"><button data-pg-name="Info" id="info_button" class="info-button"></button></a>
+  </div>
+</body>
+
+</html>

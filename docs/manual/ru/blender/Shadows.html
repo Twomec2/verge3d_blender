@@ -1,0 +1,628 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для Blender: Тени - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how to setup beautiful shadows in Verge3D for Blender.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Shadows.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для Blender: Тени - Soft8Soft">
+            <meta property="og:description" content="Learn how to setup beautiful shadows in Verge3D for Blender.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Shadows.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для Blender: Тени - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to setup beautiful shadows in Verge3D for Blender.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/render-engine.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/viewport-shading.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/soft-shadows-not-supported.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-basic.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-bilinear.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf-bilinear.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf-poisson-disk.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-esm.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-settings-global-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-settings-perlight-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-settings-permaterial.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-settings-perobject.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-settings-cascades.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/self-shadow-artefacts.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-light-leaking.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-sharp-shadows.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-receiver-edge.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-self-shadow.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Тени / Blender</h1>
+
+    <p>
+        Здесь описаны лучшие методы настроек используемых в Blender для отображения красивых теней в реальном времени в Verge3D. 
+    </p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/QbCBcTd9hP0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Shadows.html#prepare_viewport">Подготовка вьюпорта Blender'a</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering">Типы Фильтрации Теней</a><ul><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_basic">Basic</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_bilinear">Bilinear</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf">PCF</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_bilinear">PCF (Bilinear)</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson Disk)</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a></li><li><a href="manual/ru/blender/Shadows.html#shadow_filtering_choose">Какой тип фильтрации выбрать?</a></li></ul></li><li><a href="manual/ru/blender/Shadows.html#global_settings">Общие Настройки</a></li><li><a href="manual/ru/blender/Shadows.html#per_light_settings">Per-light Settings</a></li><li><a href="manual/ru/blender/Shadows.html#per_object_material_settings">Настройки для Каждого Объекта/Материала</a></li><li><a href="manual/ru/blender/Shadows.html#configuring_sun_shadows">Настройка Теней от Солнца</a></li><li><a href="manual/ru/blender/Shadows.html#troubleshooting">Устранение Неполадок</a></li></ul><!-- /TOC -->
+
+    <p class="note">
+        Этот раздел написан для Blender'a версии 2.81 (или выше). Настройки теней для более старых версий Blender'a немного отличаются. 
+    </p>
+
+
+    <p><a href="manual/ru/blender/Shadows.html#prepare_viewport" id="prepare_viewport" class="permalink">#</a></p>
+    <h2>Подготовка вьюпорта Blender'a</h2>
+    <p class="note">
+        Чтобы облегчить настройку теней, рекомендуется настроить окно просмотра Blender'a, как описано в этом разделе.
+    </p>
+
+    <p>
+        Verge3D старается быть похожим на движок для рендеринга Eevee(Blender). Следуйте этим инструкциям, чтобы включить его: 
+    </p>
+
+    <ul>
+        <li>
+            Убедитесь, что в <strong>Render Properties</strong>, в диалоговом окне <strong>Render Engine</strong> выбран рендерер "Eevee". В версиях Blender 2.8 и выше Eevee включён по умолчанию, но по какой-то причине в файле .blend может быть использован другой движок. В таком случае рекомендуется переключить его на Eevee.
+        </li>
+    </ul>
+    <img src="files/shadows-blender/render-engine.jpg" class="centered" style="max-width: 467px;">
+    <ul>
+        <li>
+            Переключите <strong>Viewport Shading</strong> (затенение в окне вьюпорта) на "Rendered".
+        </li>
+    </ul>
+    <img src="files/shadows-blender/viewport-shading.jpg" class="centered" style="max-width: 369px;">
+
+    <p>
+        Стоит отметить, что Verge3D не поддерживает мягкие тени так же хорошо как Blender. Опция <strong>Soft Shadows</strong> в Blender'е включает постепенный рендеринг теней, но Verge3D полагается на рендеринг в реальном времени. Учитывая вышесказанное, лучше отключить опцию <strong>Soft Shadows</strong>. Также для достижения мягких теней в Verge3D можно попробовать различные <a href="manual/ru/blender/Shadows.html#shadow_filtering">методы фильтрации теней</a> и настроить <a href="manual/ru/blender/Shadows.html#blur-radius"></a>радиус их размытия. 
+    </p>
+    <img src="files/shadows-blender/soft-shadows-not-supported.jpg" class="centered" style="max-width: 381px;">
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering" id="shadow_filtering" class="permalink">#</a></p>
+
+    <h2>Типы Фильтрации Теней</h2>
+
+    <p>Тени в Verge3D могут выглядеть по-разному в зависимости от того, какой алгоритм фильтрации карты теней используется. Для указания алгоритма используется свойство <strong>Shadow Map Filtering</strong>, расположенное на вкладке <strong>Render Properties</strong>.
+    </p>
+
+    <img src="files/shadows-blender/shadow-filtering-settings.jpg" class="centered" style="max-width: 425px">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_basic" id="shadow_filtering_basic" class="permalink">#</a></p>
+
+    <h3>Basic</h3>
+
+    <p>Отключить фильтрацию, рендерить карту теней такой, какая она есть. Это самый быстрый метод рендеринга теней.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-basic.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_bilinear" id="shadow_filtering_bilinear" class="permalink">#</a></p>
+
+    <h3>Bilinear</h3>
+
+    <p>Используйте билинейную фильтрацию для сглаживания соседних пикселей карты теней.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-bilinear.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf" id="shadow_filtering_pcf" class="permalink">#</a></p>
+
+    <h3>PCF</h3>
+
+    <p>Расшифровывается как Percentage Closer Filtering. Использует множественный поиск карты теней для сглаженного рендеринга. Среднее качество и производительность.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_bilinear" id="shadow_filtering_pcf_bilinear" class="permalink">#</a></p>
+
+    <h3>PCF (Bilinear)</h3>
+
+    <p>Аналогичен PCF, но использует билинейную интерполяцию для каждого поиска карты теней. Дает сглаженные тени за счет большей вычислительной мощности.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf-bilinear.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_poisson_disk" id="shadow_filtering_pcf_poisson_disk" class="permalink">#</a></p>
+
+    <h3>PCF (Poisson Disk)</h3>
+
+    <p>Использует псевдослучайный <em>Poisson Disk Sampling</em> для устранения пикселизации для теней PCF. Эта настройка была выбрана по умолчанию, поскольку она наиболее соответствует тому, что вы видите во вьюпорте 3D-редактора. Производительность сравнима с алгоритмом <strong>PCF (Bilinear)</strong> или даже лучше.
+    </p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf-poisson-disk.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_esm" id="shadow_filtering_esm" class="permalink">#</a></p>
+
+    <h3>ESM</h3>
+
+    <p>
+        Расшифровывается как Exponential Shadow Maps. Этот режим позволяет получить наиболее плавные тени, но возможны утечки света. Используйте настройку <a href="manual/ru/blender/Shadows.html#esm-bias">ESM Bias</a> для света, чтобы удалить возможные артефакты. Производительность сравнима с алгоритмом <strong>PCF (Bilinear)</strong>. Тени ESM могут быть особенно сложны в настройке, поэтому см. раздел <a href="manual/ru/blender/Shadows.html#troubleshooting">"Устранение неполадок"</a>, посвященный проблемам, связанным с ESM.
+    </p>
+
+    <img src="files/shadows-blender/shadow-filtering-esm.jpg">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#shadow_filtering_choose" id="shadow_filtering_choose" class="permalink">#</a></p>
+
+    <h3>Какой тип фильтрации выбрать?</h3>
+    <p>
+        Рекомендуем попробовать использовать тени
+        <a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson Disk)</a>
+        ,выставленные по умолчанию, потому что они обеспечивают хорошее качество и производительность. 
+        Если вам вам нужны более быстрые, но менее качественные тени, то попробуйте
+        <a href="manual/ru/blender/Shadows.html#shadow_filtering_basic">Basic</a>
+        или
+        <a href="manual/ru/blender/Shadows.html#shadow_filtering_bilinear">Bilinear</a>.
+        Для большего качества стоит выбрать <a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a>
+        мягкие тени, но недостатком является то, что они могут быть сложными для настройки (исправление артефактов) для конкретной сцены.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Shadows.html#global_settings" id="global_settings" class="permalink">#</a></p>
+
+    <h2>Общие Настройки</h2>
+
+    <p>
+       Рендеринг теней настраивается с помощью панелей <strong>Shadows</strong> и <strong>Verge3D Settings</strong>, расположенных на вкладке <strong>Render</strong> в Blender.
+    </p>
+
+    <img src="files/shadows-blender/shadow-settings-global-blender.jpg" class="centered" style="max-width: 603px">
+
+    <dl>
+        <dt id="cube-size">Cube Size</dt>
+        <dd>размер карты для теней, отбрасываемых источниками света <em>Point</em>, <em>Spot</em>, and <em>Area</em>.  Большие значения дают лучшее качество, но снижают производительность.</dd>
+        <dt id="cascade-size">Cascade Size</dt>
+        <dd>размер карты для теней, отбрасываемых источником освещения <em>Sun</em>. Большие значения дают лучшее качество, но снижают производительность.</dd>
+        <dt>Light Threshold</dt>
+        <dd>порог интенсивности света, используемый для расчета расстояния до теневого объема.</dd>
+        <dt id="enable-shadows">Enable Shadows</dt>
+        <dd>включить/выключить тени в Verge3D.</dd>
+        <dt>Shadow Map Filtering</dt>
+        <dd>алгоритм фильтрации карты теней. <a href="manual/ru/blender/Shadows.html#shadow_filtering">См. выше</a>.</dd>
+        <dt>Shadow Map Side</dt>
+        <dd>обозначает, какая сторона полигонов отрисовывается во время прохода тени. Подстройте это значение для устранения артефактов самозатенения или если вы рендерите модели состоящие из плоскости(например, листья или бумагу).</dd>
+        <dt id="esm-distance-scale">ESM Distance Scale</dt>
+        <dd>
+            Коэффициент масштабирования теней ESM. Поскольку алгоритм фильтрации ESM использует абсолютные значения расстояния, уменьшите значение масштаба, если вы работаете над сценой, которая намного больше стандартного куба, и увеличьте его, если ваша сцена намного меньше. Значение по умолчанию равно 1. Работает только для теней <a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a>. 
+        </dd>
+    </dl>
+
+    <p><a href="manual/ru/blender/Shadows.html#per_light_settings" id="per_light_settings" class="permalink">#</a></p>
+
+    <h2>Per-light Settings</h2>
+
+    <p>
+        Тени могут быть включены/выключены/настроены для каждого отдельного света с помощью панелей <strong>Shadow</strong> и <strong>Verge3D Settings</strong>.
+    </p>
+
+    <img src="files/shadows-blender/shadow-settings-perlight-blender.jpg" class="centered" style="max-width: 305px">
+
+    <dl>
+        <dt>Clip Start</dt>
+        <dd>Начальное расстояние обрезания, более высокие значения могут немного улучшить качество теней.</dd>
+        <dt id="bias">Bias</dt>
+        <dd>основной параметр, который следует подстроить, чтобы избавиться от артефактов самозатенения и/или эффекта "peter-panning"</dd>
+        <dt id="blur-radius">Blur Radius</dt>
+        <dd>
+            укажите значение больше 1, чтобы сделать тени более плавными (увеличить размытость теней). Этот параметр работает только для
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf">PCF</a>,
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_bilinear">PCF (Bilinear)</a>,
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson Disk)</a>
+            и
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a> теней.
+        </dd>
+        <dt id="esm-bias">ESM Bias</dt>
+        <dd>
+            смещение для уменьшения артефактов <em>утечки света</em> ESM. Работает только для  
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a>
+            теней.
+        </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Shadows.html#per_object_material_settings" id="per_object_material_settings" class="permalink">#</a></p>
+
+    <h2>Настройки для Каждого Объекта/Материала</h2>
+
+    <p>
+        Отбрасывание теней можно включить/выключить для каждого отдельного материала через панель <strong>Settings</strong>.
+    </p>
+
+    <img src="files/shadows-blender/shadow-settings-permaterial.jpg" class="centered" style="max-width: 433px">
+
+    <dl>
+        <dt id="shadow-mode">Shadow Mode</dt>
+        <dd>
+            режим отбрасывания тени для материала. В настоящее время поддерживаются только <strong>None</strong> и <strong>Opaque</strong>. 
+        </dd>
+    </dl>
+
+    <br>
+
+    <p>
+        Прием теней может быть включен/выключен для каждого отдельного объекта через панель <strong>Verge3D Settings</strong>. 
+    </p>
+
+    <img src="files/shadows-blender/shadow-settings-perobject.jpg" class="centered" style="max-width: 432px;">
+
+    <dl>
+        <dt id="receive-shadows">Receive Shadows</dt>
+        <dd>
+            отрисовывать тени на данном объекте или нет.
+        </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Shadows.html#configuring_sun_shadows" id="configuring_sun_shadows" class="permalink">#</a></p>
+
+    <h2>Настройка Теней от Солнца</h2>
+
+    <p>Поскольку Verge3D пока не поддерживает каскадные карты теней, для настройки солнечных теней необходимо выполнить следующие шаги:</p>
+
+    <ol>
+      <li>Установить значение каскадов <strong>Count</strong> равным 1.</li>
+      <li>Перейти к просмотру активной камеры, используя меню <strong>View</strong>-&gt;<strong>Cameras</strong>-&gt;<strong>Active Camera</strong> или клавишу <strong>Numpad 0</strong>.</li>
+      <li id="max-distance">Настроить параметр *Максимальное расстояние*.</li>
+    </ol>
+
+    <img src="files/shadows-blender/shadow-settings-cascades.jpg" class="centered" style="max-width: 322px">
+
+
+    <p><a href="manual/ru/blender/Shadows.html#troubleshooting" id="troubleshooting" class="permalink">#</a></p>
+
+    <h2>Устранение Неполадок</h2>
+
+    <h3>Тени в Verge3D и во вьюпорте Blender выглядят по-разному</h3>
+    <ul>
+        <li>
+            Verge3D не использует те же методы рендеринга теней, которые могут использоваться в 3d-программах - в основном из-за производительности. Трассировка лучей, различные эффекты постобработки и нереалистичные методы. Вот почему могут быть различия и тени не будут выглядеть точно так же, как во вьюпорте.
+        </li>
+        <li>
+            Verge3D основывается на движке рендеринга Eevee. Для того чтобы настроить тени в Eevee, следуйте инструкциям описанным здесь: <a href="manual/ru/blender/Shadows.html#prepare_viewport">Preparing Blender Viewport</a>.
+        </li>
+        <li>
+            Если используется источник освещения <strong>Sun</strong>, ознакомьтесь с
+            <a href="manual/ru/blender/Shadows.html#configuring_sun_shadows">Configuring Sun Shadows</a>.
+        </li>
+    </ul>
+
+    <h3>Тени выглядят слишком пикселизированными</h3>
+    <ul>
+        <li>
+            Используйте более высокое значение <a href="manual/ru/blender/Shadows.html#cube-size">Cube Size</a>
+            для источников освещения типа <strong>Point</strong>, <strong>Spot</strong>, и <strong>Area</strong>. Используйте более высокое значение
+            <a href="manual/ru/blender/Shadows.html#cascade-size">Cascade Size</a>
+            для <strong>Sun</strong>.
+        </li>
+        <li>
+            При использовании источника освещения <strong>Sun</strong> постарайтесь уменьшить значение
+            <a href="manual/ru/blender/Shadows.html#max-distance">Max Distance</a>
+            настолько, насколько это возможно пока позволяет ваша сцена.
+        </li>
+        <li>
+            Старайтесь маскировать низкое разрешение мягкими полутенями. Такие методы фильтрации теней, как
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson)</a>
+            и
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering_esm">ESM</a>
+            а также правильно настроенный
+            <a href="manual/ru/blender/Shadows.html#blur-radius">Blur Radius</a>
+            могут сделать пикселизацию менее заметной.
+        </li>
+    </ul>
+
+    <h3>Тени видны во вьюпорте Blender, но не видны в Verge3D</h3>
+    <ul>
+        <li>
+            Тени включены по умолчанию, но их можно отключить вручную. Убедитесь, что опция <a href="manual/ru/blender/Shadows.html#enable-shadows">Enable Shadows</a>
+            активна. Также убедитесь, что опция <a href="manual/ru/blender/Shadows.html#receive-shadows">Receive Shadows</a>
+            не была отключена для объектов, которые должны получать тени.
+        </li>
+        <li>
+            Очень высокое значение <a href="manual/ru/blender/Shadows.html#bias">Bias</a>
+            , а иногда и <a href="manual/ru/blender/Shadows.html#blur-radius">Blur Radius</a>
+            могут частично или полностью удалить тени. Если это так, попробуйте снизить эти значения. 
+        </li>
+    </ul>
+
+    <h3>Тени с артефактами</h3>
+    <img src="files/shadows-blender/self-shadow-artefacts.jpg" class="centered" style="max-width: 485px">
+    <ul>
+        <li>
+            Такие артефакты называются "shadow acne" или "self-shadow artefacts".
+            Увеличьте значение <a href="manual/ru/blender/Shadows.html#bias">Bias</a>, чтобы избавиться от них.
+        </li>
+    </ul>
+
+    <h3>У теней нет полутени/полутень слишком мала</h3>
+    <ul>
+        <li>
+            При использовании <a href="manual/ru/blender/Shadows.html#shadow_filtering_basic">Basic</a>
+            или <a href="manual/ru/blender/Shadows.html#shadow_filtering_bilinear">Bilinear</a>
+            теней нет контроля над полутенью. Вместо них выберите
+            <a href="manual/ru/blender/Shadows.html#shadow_filtering">shadow filtering types</a>.
+        </li>
+        <li>
+            Увеличьте <a href="manual/ru/blender/Shadows.html#blur-radius">Blur Radius</a>.
+        </li>
+    </ul>
+
+    <h3>ESM тени выглядят блеклыми</h3>
+    <img src="files/shadows-blender/esm-artefacts-light-leaking.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Увеличьте значение <a href="manual/ru/blender/Shadows.html#esm-bias">ESM Bias</a>.
+        </li>
+        <li>
+            Увеличьте значение <a href="manual/ru/blender/Shadows.html#esm-distance-scale">ESM Distance Scale</a>.
+        </li>
+    </ul>
+
+    <h3>ESM тени выглядят слишком резкими или не имеют полутени.</h3>
+    <img src="files/shadows-blender/esm-sharp-shadows.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Увеличьте <a href="manual/ru/blender/Shadows.html#blur-radius">Blur Radius</a>.
+        </li>
+        <li>
+            Уменьшите значение <a href="manual/ru/blender/Shadows.html#esm-bias">ESM Bias</a>.
+        </li>
+        <li>
+            Уменьшите значение <a href="manual/ru/blender/Shadows.html#esm-distance-scale">ESM Distance Scale</a>
+        </li>
+        <li>
+            Такие артефакты могут появляться на краю объекта, на который падает тень.
+            <img src="files/shadows-blender/esm-artefacts-receiver-edge.jpg" class="centered" style="max-width: 500px">
+            Это один из недостатков ESM. Решение состоит в том, чтобы избежать таких ситуаций.
+        </li>
+        <li>
+            Если объект, принимающий тени, сам не отбрасывает тени 
+            (например, если они отключены в режиме <a href="manual/ru/blender/Shadows.html#shadow-mode">Shadow Mode</a>),
+            то тени могут вообще не иметь полутени, независимо от того, насколько велик
+            <a href="manual/ru/blender/Shadows.html#blur-radius">Blur Radius</a>. Решением является включение отбрасывания теней на принимающем объекте или использование дополнительного объекта, отбрасывающего тени, в качестве подложки для исправления полутени.
+        </li>
+    </ul>
+
+    <h3>ESM Тени с артефактами</h3>
+    <img src="files/shadows-blender/esm-artefacts-self-shadow.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Уменьшите значение <a href="manual/ru/blender/Shadows.html#esm-bias">ESM Bias</a>.
+        </li>
+        <li>
+            Уменьшите значение <a href="manual/ru/blender/Shadows.html#esm-distance-scale">ESM Distance Scale</a>.
+        </li>
+    </ul>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,864 @@
+.html-embed {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.locker {
+  position: fixed;
+  z-index: 4;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: auto;
+  height: 90%;
+  max-width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+
+.start-button {
+  position: relative;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: 134px;
+  height: 34px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  background-image: url('../images/button_1.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.div-block-3 {
+  position: relative;
+  display: block;
+  width: 600px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tiltle {
+  position: relative;
+  top: 30%;
+  display: block;
+  height: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.div-block-4 {
+  position: static;
+  width: auto;
+  height: 40%;
+}
+
+.button {
+  float: left;
+}
+
+.image {
+  margin-right: 20px;
+  float: right;
+}
+
+.image-2 {
+  margin-left: 20px;
+}
+
+.progess-bar {
+  position: fixed;
+  z-index: 5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #d0e2ff;
+}
+
+.image-3 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.top-left-bar {
+  position: relative;
+  z-index: 3;
+  display: none;
+  overflow: hidden;
+  width: auto;
+  max-width: 540px;
+  min-width: 340px;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  clear: none;
+}
+
+.text-block {
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  float: right;
+  font-family: 'Changa One', Impact, sans-serif;
+  color: #000;
+  font-size: 40px;
+}
+
+.text-block.final-score {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 20px;
+  float: left;
+}
+
+.text-block.share-on {
+  position: static;
+  margin: 0px 20px;
+  padding-top: 0px;
+  float: left;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
+}
+
+.text-block.scores-block {
+  float: left;
+}
+
+.text-block.scores-text-block {
+  display: block;
+  margin-top: 5px;
+  margin-right: 20px;
+  float: right;
+}
+
+.fruit-tab {
+  position: static;
+  display: block;
+  width: auto;
+  height: 60px;
+  max-width: 145px;
+  float: left;
+}
+
+.scores-tab {
+  position: static;
+  display: block;
+  width: auto;
+  height: 60px;
+  max-width: auto;
+  margin-left: 10px;
+  float: left;
+  clear: left;
+}
+
+.top-right-bar {
+  position: relative;
+  z-index: 3;
+  display: none;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.fullscreen-button {
+  position: static;
+  z-index: 3;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  margin-left: 10px;
+  float: right;
+  background-color: transparent;
+  background-image: url('../images/fullscreen_on.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.help {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.help-desk {
+  position: relative;
+  top: 10%;
+  display: block;
+  width: 40%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border: 15px none #ffd549;
+  background-image: -webkit-linear-gradient(270deg, #fff2cf, #fff2cf);
+  background-image: linear-gradient(180deg, #fff2cf, #fff2cf);
+  box-shadow: 10px 0 26px 0 rgba(0, 0, 0, .83);
+}
+
+.column {
+  height: 100%;
+}
+
+.column-2 {
+  height: 100%;
+}
+
+.column-3 {
+  height: 100%;
+}
+
+.row {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+
+.help-header {
+  display: block;
+  margin: 5px auto;
+  float: none;
+  font-family: 'Droid Sans', sans-serif;
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+}
+
+.heading-2 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.heading-3 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.help-image {
+  display: block;
+  width: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-block-2 {
+  display: block;
+  margin: 17px auto 25px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.help-button {
+  position: static;
+  z-index: 3;
+  display: block;
+  width: 60px;
+  height: 60px;
+  float: right;
+  background-color: transparent;
+  background-image: url('../images/help.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.scores {
+  position: fixed;
+  z-index: 4;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.div-block-6 {
+  position: static;
+  display: block;
+  width: 300px;
+  margin-right: auto;
+  margin-bottom: 17px;
+  margin-left: auto;
+  float: none;
+  border: 3px solid #d79317;
+  border-radius: 50px;
+  background-image: -webkit-linear-gradient(270deg, #ffc673, #ffc673);
+  background-image: linear-gradient(180deg, #ffc673, #ffc673);
+}
+
+.heading-4 {
+  float: left;
+}
+
+.heading-5 {
+  float: right;
+}
+
+.start-again-button {
+  position: relative;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: 134px;
+  height: 34px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  background-image: url('../images/button_1.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  font-family: Lato, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.social-media-block {
+  position: static;
+  display: block;
+  width: 250px;
+  height: auto;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.share-on-twitter {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  background-image: url('../images/twitter.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.div-block-7 {
+  width: 100%;
+}
+
+.help-discription {
+  display: block;
+  margin-right: 15px;
+  margin-left: 15px;
+  float: none;
+  font-family: Varela, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.div-block-8 {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
+.help-discription-copy {
+  display: block;
+  margin-right: 15px;
+  margin-left: 15px;
+  float: none;
+  font-family: Varela, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+.main-div {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.loader-text {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  max-width: 180px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  font-family: 'Changa One', Impact, sans-serif;
+  color: #3ddb00;
+  font-size: 26px;
+  text-align: center;
+}
+
+.div-block-9 {
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  right: 0px;
+  display: block;
+  overflow: visible;
+  width: auto;
+  height: 20%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.green-apple {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  background-image: url('../images/progress_bar_combined.gif');
+  background-position: 0px 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.div-block-11 {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+
+.red-apple {
+  position: static;
+  display: block;
+  overflow: visible;
+  width: 0%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+  background-image: url('../images/progress_bar_combined.gif');
+  background-position: -128px 50%;
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  .html-embed {
+    display: block;
+  }
+  .locker {
+    display: block;
+  }
+  .buttons {
+    z-index: 3;
+  }
+  .image {
+    width: 80px;
+  }
+  .image-2 {
+    width: 80px;
+  }
+  .progess-bar {
+    z-index: 5;
+    display: block;
+  }
+  .top-left-bar {
+    display: none;
+  }
+  .top-right-bar {
+    display: none;
+  }
+  .fullscreen-button {
+    width: 60px;
+    height: 60px;
+  }
+  .help {
+    display: none;
+  }
+  .help-desk {
+    top: 10%;
+    width: 60%;
+    height: auto;
+  }
+  .help-header {
+    font-size: 22px;
+  }
+  .help-image {
+    width: 40px;
+  }
+  .text-block-2 {
+    margin-top: 18px;
+    margin-bottom: 22px;
+  }
+  .help-button {
+    width: 60px;
+    height: 60px;
+  }
+  .scores {
+    display: none;
+  }
+  .div-block-6 {
+    background-image: -webkit-linear-gradient(270deg, #ffc673, #ffc673);
+    background-image: linear-gradient(180deg, #ffc673, #ffc673);
+  }
+  .help-discription {
+    font-size: 12px;
+  }
+  .red-apple {
+    width: 0%;
+  }
+}
+
+@media (max-width: 767px) {
+  .html-embed {
+    display: block;
+  }
+  .locker {
+    display: block;
+  }
+  .title-image {
+    width: auto;
+    height: 90%;
+  }
+  .start-button {
+    bottom: 0px;
+    height: 38px;
+  }
+  .div-block-2 {
+    width: 20px;
+    height: 100%;
+    float: left;
+  }
+  .buttons {
+    z-index: 3;
+  }
+  .progess-bar {
+    display: block;
+  }
+  .image-3 {
+    width: auto;
+    height: auto;
+  }
+  .top-left-bar {
+    display: none;
+    width: 150px;
+    min-width: 150px;
+  }
+  .text-block {
+    margin-top: 10px;
+    font-size: 26px;
+  }
+  .text-block.final-score {
+    font-size: 40px;
+  }
+  .text-block.scores-block {
+    margin-top: 10px;
+  }
+  .text-block.scores-text-block {
+    font-size: 40px;
+  }
+  .fruit-tab {
+    height: 40px;
+  }
+  .fruit-image {
+    width: 40px;
+    height: 40px;
+  }
+  .scores-tab {
+    height: 30px;
+    margin-left: 6px;
+  }
+  .top-right-bar {
+    display: none;
+  }
+  .help {
+    display: none;
+  }
+  .help-desk {
+    top: 10%;
+    width: 80%;
+    height: auto;
+  }
+  .column-2 {
+    position: relative;
+  }
+  .column-3 {
+    position: static;
+    display: block;
+    overflow: visible;
+  }
+  .row {
+    width: 300px;
+    float: none;
+  }
+  .help-header {
+    font-size: 20px;
+  }
+  .help-image {
+    width: 40px;
+  }
+  .text-block-2 {
+    margin-top: 15px;
+    margin-bottom: 23px;
+    font-size: 20px;
+  }
+  .div-block-6 {
+    background-image: -webkit-linear-gradient(270deg, #ffc673, #ffc673);
+    background-image: linear-gradient(180deg, #ffc673, #ffc673);
+  }
+  .start-again-button {
+    bottom: 0px;
+    height: 38px;
+  }
+  .help-discription {
+    font-size: 12px;
+  }
+  .loader-text {
+    height: auto;
+    font-size: 20px;
+  }
+  .div-block-9 {
+    height: 20%;
+  }
+  .div-block-11 {
+    width: 100px;
+    height: 100px;
+  }
+  .red-apple {
+    width: 0%;
+    background-position: -99px 0px;
+  }
+}
+
+@media (max-width: 479px) {
+  .html-embed {
+    display: block;
+  }
+  .locker {
+    display: block;
+  }
+  .start-button {
+    width: 80px;
+    height: 20px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+    background-image: url('../images/button.png');
+    background-size: contain;
+    font-size: 12px;
+  }
+  .tiltle {
+    display: block;
+  }
+  .buttons {
+    z-index: 3;
+    display: block;
+  }
+  .image {
+    width: 60px;
+  }
+  .image-2 {
+    width: 60px;
+  }
+  .progess-bar {
+    display: block;
+  }
+  .image-3 {
+    margin-top: 0px;
+  }
+  .top-left-bar {
+    display: none;
+    width: 140px;
+    max-width: 300px;
+    min-width: 140px;
+  }
+  .text-block {
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
+    font-size: 20px;
+  }
+  .text-block.final-score {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    line-height: 44px;
+  }
+  .text-block.scores-block {
+    margin-top: 4px;
+  }
+  .text-block.scores-text-block {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+    font-size: 24px;
+  }
+  .fruit-tab {
+    width: 70px;
+    height: 30px;
+    float: left;
+  }
+  .fruit-image {
+    width: 22px;
+    height: 22px;
+    float: left;
+  }
+  .scores-tab {
+    height: auto;
+    margin-left: 0px;
+    float: left;
+    clear: left;
+  }
+  .top-right-bar {
+    display: none;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .fullscreen-button {
+    display: block;
+    width: 20px;
+    height: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: left;
+    clear: left;
+  }
+  .help {
+    display: none;
+    overflow: visible;
+  }
+  .help-desk {
+    display: block;
+    height: auto;
+  }
+  .row {
+    width: auto;
+  }
+  .help-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+  }
+  .help-image {
+    width: 30px;
+  }
+  .text-block-2 {
+    margin-top: 10px;
+    margin-bottom: 11px;
+  }
+  .help-button {
+    display: block;
+    width: 20px;
+    height: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+    float: right;
+    clear: right;
+  }
+  .scores {
+    display: none;
+  }
+  .div-block-6 {
+    width: 200px;
+    margin-bottom: 0px;
+    background-image: -webkit-linear-gradient(270deg, #ffc673, #ffc673);
+    background-image: linear-gradient(180deg, #ffc673, #ffc673);
+    font-size: 14px;
+  }
+  .start-again-button {
+    width: 80px;
+    height: 20px;
+    margin-top: 6px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+    background-image: url('../images/button.png');
+    background-size: contain;
+    font-size: 12px;
+  }
+  .help-discription {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .div-block-11 {
+    width: 100px;
+    height: 100px;
+  }
+  .red-apple {
+    width: 0%;
+  }
+}

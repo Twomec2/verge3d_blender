@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Функционал Verge3D - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Список функций и возможностей Verge3D.">
+    <base href="../../../">
+    <script src="list.js"></script>
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+      table, td, th {
+        border: 1px solid #2194CE;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: left;
+        min-width: 180px;
+        font-size: 16px;
+      }
+      table {
+        margin-bottom: 20px;
+      }
+      th {
+        text-align: center;
+        text-decoration: none;
+        color: #0b7188;
+        font-size: 17px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: normal;
+      }
+      td ul {
+        margin: 10px 0px;
+        padding-left: 20px;
+      }
+      td {
+        vertical-align: top;
+      }
+      td.centered {
+        text-align: center;
+      }
+    </style>
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Features.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Функционал Verge3D - Soft8Soft">
+            <meta property="og:description" content="Список функций и возможностей Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Features.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Функционал Verge3D - Soft8Soft">
+            <meta name="twitter:description" content="Список функций и возможностей Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Функционал Verge3D</h1>
+
+    <p>Ниже приведен список основных функций и возможностей Verge3D.</p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/xJIsmgd2nNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <h2>Содержание</h2>
+
+    <ul>
+      <li><a href="manual/ru/introduction/Features.html#feature_dcc">Создание контента</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_materials">Система материалов</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_lighting">Освещение</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_shadows">Тени</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_app_management">Менеджер приложений</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_animation">Анимация</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_visual_scripting">Визуальное программирование</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_programming">Программирование</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_publishing">Публикация приложения</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_ui">UI и HTML окружение</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_networking">Серверные функции и сеть</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_postprocessing">Пост-эффекты</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_vr">VR (Виртуальная реальность)</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_ar">AR (Дополненная реальность)</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_shaders">Шейдеры</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_physics">Физика</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_audio">Звук</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_video">Видео</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_material_libraries">Библиотеки материалов/a&gt;</a></li><a href="manual/ru/introduction/Features.html#feature_material_libraries">
+      </a><li><a href="manual/ru/introduction/Features.html#feature_material_libraries"></a><a href="manual/ru/introduction/Features.html#feature_demos">Демо и примеры</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_import_formats">Форматы импорта</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_export_formats">Форматы экспорта</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_camera_controls">Управление камерой</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_3d_primitives">3D примтивы</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_requirements">Системные требования</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_dev_requirements">Системные требования для разработки</a></li>
+    </ul>
+
+    <h2>Возможности и требования</h2>
+
+    <table style="width:100%">
+
+      <tbody><tr id="feature_dcc">
+        <th rowspan="3">Создание контента</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+
+      <tr>
+        <td class="centered">Blender 2.80-2.90</td>
+        <td class="centered">Autodesk 3ds Max 2018-2021</td>
+        <td class="centered">Autodesk Maya 2017-2021</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          Кроме того, вы можете использовать любой пакет моделирования, поддерживающий экспорт в формат glTF 2.0, а также любое программное обеспечение для 3D-графики, поддерживающее экспорт в <a href="manual/en/introduction/Features.html#feature_import_formats"> 20+ форматов импорта, </a> включая FBX, OBJ, COLLADA и 3DS.
+        </td>
+      </tr>
+
+      <tr id="feature_materials">
+        <th rowspan="2">Система материалов</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#Eevee">нодовые материалы рендера Eevee</a>.
+            </li>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#Cycles">нодовые материалы рендера Cycles</a>.
+            </li>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#glTF_compliant_PBR">glTF-совместимый PBR</a>.
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Physical">Physical material</a> рендера ART.
+            </li>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Standard">Standard material</a> рендера Scanline .
+            </li>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Physical_glTF_compliant">Physical glTF-совместимый материал</a>.
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              Based on Arnold's <a href="manual/ru/maya/Materials.html#aiStandardSurface">aiStandardSurface</a> shaders
+            </li>
+            <li>
+              <a href="manual/ru/maya/Materials.html#StandardSurface">Standard Surface</a> (только Maya 2020+)
+            </li>
+            <li>
+              Approximated <a href="manual/ru/maya/Materials.html#Lambert">Lambert, Phong, Blinn, StingrayPBS</a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_lighting">
+        <th rowspan="3">Освещение</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>
+              Источники света:
+              <ul>
+                <li>Point</li>
+                <li>Sun</li>
+                <li>Spot</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании Environment Map (шейдерные ноды World)
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              Фотометрические источники света
+              <ul>
+                <li>Free</li>
+                <li>Target</li>
+              </ul>
+            </li>
+            <li>
+              Стандартные источники света:
+              <ul>
+                <li>Target Spot</li>
+                <li>Free Spot</li>
+                <li>Target Direct</li>
+                <li>Free Direct</li>
+                <li>Omni</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании Environment Map
+            </li>
+          </ul></td>
+          <td>
+          <ul>
+            <li>
+              Источники света:
+              <ul>
+                <li>Ambient</li>
+                <li>Directional</li>
+                <li>Point</li>
+                <li>Spot</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании текстур совместно с aiSkyDomeLight.
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">Кроме того, вы можете создавать прямоугольные (rectangular) и полусферические (hemisphere) источники света с помощью JavaScript.</td>
+      </tr>
+
+      <tr id="feature_shadows">
+        <th>Тени</th>
+        <td colspan="3">
+          Verge3D поддерживает отбрасывание теней от направленных (directional), точечных (point) и прожекторных (spot) источников света:
+          <ul>
+            <li>Basic non-smoothed shadows.</li>
+            <li>Bilinear shadows.</li>
+            <li>PCF shadows.</li>
+            <li>Bilinear PCF shadows.</li>
+            <li>Poisson disk PCF shadows.</li>
+            <li>ESM shadows.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_app_management">
+        <th>Менеджер приложений</th>
+        <td colspan="3">
+          Менеджер приложений - это удобный инструмент предлагающий:
+          <ul>
+            <li> Создание новых приложений на основе шаблонов. </li>
+            <li> Запуск приложений и программ для 3D-моделирования (Blender, 3ds Max, Maya). </li>
+            <li> Редактирование и запуск визуального редактора логики. </li>
+            <li> Обновление приложений до новых версий Verge3D. </li>
+            <li> Публикация приложений в Verge3D Network. </li>
+            <li> Управление лицензионными ключами. </li>
+            <li> Доступ к документации и каналам поддержки Verge3D. </li>
+          </ul>
+          К менеджеру приложений легко получить доступ прямо из Blender, 3ds Max или Maya.
+        </td>
+      </tr>
+
+      <tr id="feature_animation">
+        <th rowspan="2">Анимация</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li>Анимация с использованием нод RGB и Value.</li>
+            <li>Шейповая анимация (морфинг).</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li>Анимационный контроллер материалов. Поддерживаемые параметры float и color.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li> Анимация параметров материала. </li>
+            <li> Морфинг. </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_visual_scripting">
+        <th>Визуальное программирование</th>
+        <td colspan="3">
+          <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">Verge3D Puzzles</a> - это визуальный конструктор логики, позволяющий быстро создавать интерактивные сценарии, путем перетаскивания блоков мышью. Его возможности:
+          <ul>
+            <li> Обработка пользовательских событий, таких как click, touch, hover, drag. </li>
+            <li> Получение объектов сцены, анимации, групп и материалов. </li>
+            <li> Перемещение, вращение и масштабирование 3D-объектов, определение дистанции между объектами. </li>
+            <li> Отображение и скрытие объектов. </li>
+            <li> Изменение иерархии объектов. </li>
+            <li> Добавление к сцене 2D текстовых аннотаций (billboard). </li>
+            <li> Изменение параметров материала, загрузка текстур. </li>
+            <li> Управление анимацией. </li>
+            <li> Перемещение и вращение камеры. Выбор активной камеры. </li>
+            <li> Динамическая загрузка ресурсов. </li>
+            <li> Загрузка и скачивание данных по сети в форматах JSON, CSV, Text. </li>
+            <li> Загрузка пользовательских изображений. </li>
+            <li> Реализация функций undo/redo. </li>
+            <li> Составление и отправка кастомных заказов. </li>
+            <li> Определение параметров пользователя, таких как браузер, ОС и т.д. </li>
+            <li> Взаимодействие с логикой, написанной на JavaScript. </li>
+            <li> Выполнение событий по таймеру. </li>
+            <li> Инициализация сеансов виртуальной и дополненной реальности. </li>
+            <li> Управление HTML/CSS загруженной страницы. </li>
+            <li> Воспроизведение звуков. </li>
+            <li> Симуляция физики. </li>
+            <li> Включение эффектов постобработки. </li>
+            <li> Управление логикой и данными приложения. </li>
+            <li> Математические функции. </li>
+            <li> Запуск собственного кода JavaScript. </li>
+          </ul>
+          <p> В дополнение к этому, вы можете создавать свои собственные блоки, используя плагины Puzzles. </p>
+        </td>
+      </tr>
+
+      <tr id="feature_programming">
+        <th>Программирование</th>
+        <td colspan="3">
+          <p>Функциональность приложения может быть <a href="manual/ru/introduction/Using-JavaScript.html"> расширена с помощью JavaScript, </a> путем изменения исходников или интеграции кода с помощью пазлов. </p>
+          <p> Verge3D основан на библиотеке с открытым исходным кодом Three.js и предоставляет свой API через пространство имен <strong>v3d</strong> или <strong>THREE</strong>. Следовательно, можно использовать любой существующий код Three.js с Verge3D. </p>
+        </td>
+      </tr>
+
+      <tr id="feature_publishing">
+        <th>Публикация приложения</th>
+        <td colspan="3">
+          Вы можете распространять свой контент, используя:
+          <ul>
+            <li>Ваш собственный сервер.</li>
+            <li>Любой веб-хостинг (GoDaddy, DigitalOcean, Amazon AWS и т.д.).</li>
+            <li><a href="https://www.soft8soft.com/verge3d-network/" target="_blank">Verge3D Network</a>.</li>
+            <li>В виде компьютерного или мобильного приложения, созданного с помощью фреймворков Electron или Cordova.
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ui">
+        <th>UI и HTML окружение</th>
+        <td colspan="3">
+          Интерфейс приложения, созданный с помощью внешних редакторов WYSIWYG, можно <a href="manual/ru/introduction/HTML-based-user-interfaces.html"> связать с пазлами </a>, для управления 3D-сценой.
+          <br>Мы рекомендуем использовать <a href="https://webflow.grsm.io/3441118" target="_blank">Webflow</a> конструктор сайтов без написания кода.
+        </td>
+      </tr>
+
+      <tr id="feature_networking">
+        <th>Серверные функции и сеть</th>
+        <td colspan="3">
+          Verge3D содержит <a href="manual/ru/introduction/Wordpress-Plugin.html"> плагин для WordPress </a>, самой популярной системы управления контентом (CMS). Плагин включает в себя следующие функции:
+          <ul>
+            <li> Размещение и публикация приложений (встраивание). </li>
+            <li> Постоянное хранилище файлов. </li>
+            <li> Полностью настраиваемая система электронной коммерции для обработки заказов клиентов. </li>
+          </ul>
+          В дополнение к этому, редактор визуальной логики Puzzles поддерживает блоки для отправки и получения данных по сети в формате JSON, CSV или обычного текста.
+        </td>
+      </tr>
+
+      <tr id="feature_postprocessing">
+        <th>Пост-эффекты</th>
+        <td colspan="3">
+          Следующие эффекты можно <a href="manual/ru/puzzles/Postprocessing.html"> включить с помощью пазлов </a>:
+          <ul>
+            <li>Ambient Occlusion</li>
+            <li>Bloom</li>
+            <li>Brightness/Contrast</li>
+            <li>Depth of Field</li>
+            <li>Grayscale</li>
+            <li>Outline</li>
+            <li>Screen Space Reflection and Refraction (SSR)</li>
+            <li>Supersampling Anti-Aliasing (SSAA)</li>
+          </ul>
+          Дополнительно вы можете включить еще эффекты с JavaScript:
+          <ul>
+            <li>Adaptive Tone Mapping</li>
+            <li>Crepuscular Rays (солнечные лучи или god rays)</li>
+            <li>Enhanced Subpixel Morphological Anti-Aliasing (SMAA)</li>
+            <li>Glitch</li>
+            <li>Image Crossfading</li>
+            <li>Image Masking</li>
+            <li>Motion Blur</li>
+            <li>Pixelated Imagery</li>
+            <li>Sobel Filter</li>
+            <li>Temporal Anti-Aliasing (TAA)</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_vr">
+        <th>VR (Виртуальная реальность)</th>
+        <td colspan="3">
+          <p><a href="manual/ru/introduction/AR-VR-development.html"> Поддерживаются </a> следующии технологии VR:</p>
+          <ul>
+            <li> WebXR </li>
+            <li> WebVR - через модуль совместимости. </li>
+            <li> Cardboard - на мобильных устройствах, которые еще не поддерживают стандарты WebXR/WebVR. </li>
+            <li> Anaglyph 3D - может быть активирован с помощью JavaScript. </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ar">
+        <th>AR (Дополненная реальность)</th>
+        <td colspan="3">
+          Поддерживается в Chrome для Android (требуется мобильное устройство, поддерживающее ARCore, также известное как Google Play Services для AR) и Mozilla WebXR Viewer на iOS.
+        </td>
+      </tr>
+
+      <tr id="feature_shaders">
+        <th>Шейдеры</th>
+        <td colspan="3">
+          Пользовательские шейдеры могут быть добавлены с использованием OpenGL ES Shading Language 2.0 (WebGL 1.0) или 3.0 (WebGL 2.0).
+        </td>
+      </tr>
+
+      <tr id="feature_physics">
+        <th>Физика</th>
+        <td colspan="3">
+          <a href="manual/ru/introduction/Physics-Guide.html"> Физический модуль </a> обеспечивает обнаружение столкновений, динамическое перемещение объектов, поддержку персонажей и транспортных средств, имитацию пружин, веревок и ткани. Начиная с версии 2.11, физические симуляции можно создавать и управлять ими без программирования с помощью пазлов.
+        </td>
+      </tr>
+
+      <tr id="feature_audio">
+        <th>Звук</th>
+        <td colspan="3">
+          Фоновую музыку, а также сэмплы можно добавить с помощью <a href="manual/ru/puzzles/Sound.html"> звуковых пазлов </a> или с JavaScript. Кроме того, вы можете программировать расположение аудиоисточников и слушателей с помощью серверной части Web Audio API.
+        </td>
+      </tr>
+
+      <tr id="feature_video">
+        <th>Видео</th>
+        <td colspan="3">
+          Видео текстуры можно назначать и воспроизводить с помощью <a href="manual/ru/puzzles/Sound.html"> специальных пазлов </a> или JavaScript.
+        </td>
+      </tr>
+
+      <tr id="feature_material_libraries">
+        <th rowspan="2">Библиотеки материалов</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Blender Essential Pack</li>
+            <li>Blender Jewelry Pack</li>
+          </ul>
+          <p><a href="manual/ru/blender/Material-Library.html">Изучите</a>, как использовать библиотеки материалов с Verge3D для Blender.</p>
+        </td>
+        <td>
+          <ul>
+            <li>3ds Max Essential Pack</li>
+          </ul>
+        </td>
+        <td class="centered">TBD</td>
+      </tr>
+
+      <tr id="feature_demos">
+        <th>Демо и примеры</th>
+        <td colspan="3">
+          Более 150 примеров в коде и ряд полнофункциональных демонстрационных приложений, включая:
+          <ul>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/augmented_reality/augmented_reality.html" target="_blank">Augmented Reality</a> — базовое демо AR.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/custom_image/custom_image.html" target="_blank">Custom Image</a> — виртуальная фоторамка с возможностью загрузки, хранения и публикации изображений.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/farmers_journey/index.html" target="_blank">Farmer's Journey</a> — аркадная браузерная игра.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/industrial_robot/index.html" target="_blank">Industrial Robot VR</a> — интерактивная симуляция робота с возможностями VR/AR.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/jewelry_configurator/index.html" target="_blank">Jewelry Configurator</a> — расширенный ювелирный конфигуратор для e-commerce.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/load_unload/load_unload.html" target="_blank">Load Unload</a> — пример использования динамической загрузки ассетов.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/parametric_models/index.html" target="_blank">Parametric Models</a> — 3D конфигуратор параметрических моделей.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/pbr/pbr.html" target="_blank">PBR</a> — демонстрация материалов совместимых с glTF 2.0.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/recliner/index.html" target="_blank">Recliner</a> — 3D конфигуратор и готовый к использованию e-commerce вебсайт.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/player/player.html?load=../applications/ring/ring.gltf" target="_blank">Ring</a> — простой 3D конфигуратор ювелирных изделий с возможностью онлайн-заказа.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/scooter/index.html" target="_blank">Scooter</a> — расширенный 3D конфигуратор с реалистичными PBR материалами и множеством возможных комбинаций.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/scroll_animation/scroll_animation.html" target="_blank">Scroll Animation</a> — демонстрация возможностей современного прокручиваемого сайта с настраиваемой 3D моделью.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/simple_configurator/simple_configurator.html" target="_blank">Simple Configurator</a> — простое обучающее демо для e-commerce.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/spinner/spinner.html" target="_blank">Spinner</a> — простая презентация продукта с изменяемыми материалами и анимацией.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/swiss_army_knife/index.html" target="_blank">Swiss Army Knife</a> — расширенное обучающее демо для e-commerce.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/teapot_heater/index.html" target="_blank">Teapot Heater</a> — необычное интерактивное 3D-приложение созданное при помощи пазлов.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/vehicle/vehicle.html" target="_blank">Vehicle</a> — демо гонок с демонстрации реалистичной физики.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/video_texture/video_texture.html" target="_blank">Video Texture</a> — vпример использования видеотекстур.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_import_formats">
+        <th>Форматы импорта</th>
+        <td colspan="3">
+          <p>В дополнение к glTF 2.0 вы можете импортировать следующие форматы.</p>
+          <p>Геометрия и материалы:</p>
+          <ul>
+            <li>3DS — старый формат проектов Autodesk 3ds Max.</li>
+            <li>3MF — 3D manufacturing format.</li>
+            <li>AMF — Additive manufacturing file format.</li>
+            <li>AWD — используется в движке Away3D.</li>
+            <li>babylon — используется в движке Babylon.js.</li>
+            <li>COLLADA</li>
+            <li>CTM — формат OpenCTM.</li>
+            <li>FBX</li>
+            <li>glTF 1.0 — устаревший формат. Используйте glTF 2.0.</li>
+            <li>KMZ — Keyhole Markup Language.</li>
+            <li>OBJ/MTL</li>
+            <li>PCD — 3D point cloud data format.</li>
+            <li>PDB — Protein Data Bank format.</li>
+            <li>PlayCanvas — JSON-подобный формат, используемый в движке PlayCanvas.</li>
+            <li>PLY — Polygon File Format, предназначен для хранения трехмерных данных с 3D-сканеров.</li>
+            <li>PRWM — Packed Raw WebGL Model.</li>
+            <li>STL — формат данных стереолитографии. Берет свое начало от программного обеспечения CAD от 3D Systems.</li>
+            <li>SEA3D — формат с открытым исходным кодом для разработки игр.</li>
+            <li>VRML — специализированный формат для VR.</li>
+            <li>VRM — формат 3D avatar, основанный на glTF.</li>
+            <li>VTK — формат Visualization Toolkit.</li>
+            <li>X — формат DirectX.</li>
+          </ul>
+          <p>Анимация:</p>
+          <ul>
+            <li>BVH — Формат файлов анимации персонажей Biovision Hierarchy.</li>
+            <li>MD2 — используется в движке Quake II.</li>
+            <li>MMD — формат MikuMikuDance.</li>
+          </ul>
+          <p>Изображения:</p>
+          <ul>
+            <li>DDS — сжатая текстура.</li>
+            <li>EXR — OpenEXR, формат растрового файла с высоким динамическим диапазоном .</li>
+            <li>PVR — сжатая текстура.</li>
+            <li>HDR — RGBE или Radiance HDR.</li>
+            <li>KTX — формат текстуры от Khronos.</li>
+            <li>NRRD — "nearly raw raster data" format.</li>
+            <li>SVG</li>
+            <li>TGA — Truevision TGA - растровый графический формат.</li>
+            <li>TTF</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_export_formats">
+        <th>Форматы экспорта</th>
+        <td colspan="3">
+          В дополнении к glTF 2.0 поддерживается экспорт в следующие форматы:
+          <ul>
+            <li>COLLADA</li>
+            <li>MMD</li>
+            <li>OBJ</li>
+            <li>PLY</li>
+            <li>STL</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_camera_controls">
+        <th>Управление камерой</th>
+        <td colspan="3">
+          Эти режимы управления камерой доступны по умолчанию:
+          <ul>
+            <li>Orbit Controls — привязка камеры к определенному объекту в сцене.</li>
+            <li>Flying Controls — свободное перемещение камеры в сцене.</li>
+            <li>First-Person Controls - управление камерой от первого лица</li>
+            <li>Virtual Reality Controls - специализирвоанный режим для VR</li>
+          </ul>
+          Эти режимы управления камерой можно включить с помощью JavaScript:
+          <ul>
+            <li>Flyover Controls</li>
+            <li>Pointerlock Controls</li>
+            <li>Device Orientation Controls — использование гироскопа устройства</li>
+            <li>Map Controls — hovering camera</li>
+            <li>Trackball Controls</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_3d_primitives">
+        <th>3D примитивы</th>
+        <td colspan="3">
+          Вы можете загрузить геометрию, экспортированную из любого пакета моделирования. В дополнение к этому, 3D примитивы могут быть созданы с помощью JavaScript:
+          <ul>
+            <li>Circle</li>
+            <li>Cone</li>
+            <li>Convex Hull</li>
+            <li>Cube (Box)</li>
+            <li>Cylinder</li>
+            <li>Dodecahedron — многогранник с двенадцатью гранями.</li>
+            <li>Extruded Shape</li>
+            <li>Icosahedron — многогранник с 20 гранями.</li>
+            <li>Font — процедурный текст, созданный из шрифтов <em> typeface.json </em>.</li>
+            <li>Lathe (Vase) — 3D-объект с осевой симметрией.</li>
+            <li>Line</li>
+            <li>NURBS</li>
+            <li>Octahedron —  многогранник с 8 гранями.</li>
+            <li>Plane</li>
+            <li>Ring</li>
+            <li>Sphere</li>
+            <li>Spline Curve</li>
+            <li>Tetrahedron — треугольная пирамида.</li>
+            <li>Polyhedron</li>
+            <li>Text</li>
+            <li>Torus</li>
+            <li>Tube</li>
+            <li>Utah Teapot</li>
+            <li>Wireframe</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_requirements">
+        <th>Системные требования</th>
+        <td colspan="3">
+          Приложения Verge3D можно запускать в любой системе, способной запускать веб-браузер с поддержкой технологии WebGL (см. список браузеров <a href="https://www.soft8soft.com/webgl-supported-browsers-and-troubleshooting/" target="_blank"> здесь</a>).
+        </td>
+      </tr>
+
+      <tr id="feature_dev_requirements">
+        <th rowspan="2">Системные требования для разработки</th>
+        <th>Verge3D для Blender</th>
+        <th>Verge3D для 3ds Max</th>
+        <th>Verge3D для Maya</th>
+      </tr>
+
+      <tr>
+        <td class="centered">
+          <a href="https://www.blender.org/download/requirements/" target="_blank"> Соответствуют требованиям к Blender</a>
+        </td>
+        <td class="centered">
+          <a href="https://knowledge.autodesk.com/support/3ds-max/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-3ds-Max-2018.html" target="_blank"> Соответствуют требованиям к 3ds Max</a>
+        </td>
+        <td class="centered">
+          <a href="https://knowledge.autodesk.com/support/maya/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Maya-2020.html" target="_blank"> Соответствуют требованиям к Maya</a>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+    <p><a href="manual/ru/introduction/Features.html#see_also" id="see_also" class="permalink">#</a></p>
+    <h2>Все еще есть вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

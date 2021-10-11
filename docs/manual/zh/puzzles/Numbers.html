@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>数字拼图参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="数字拼图提供了各种在场景中操作数字的方法。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/Numbers.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="数字拼图参考 - Soft8Soft">
+            <meta property="og:description" content="数字拼图提供了各种在场景中操作数字的方法。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/Numbers.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="数字拼图参考 - Soft8Soft">
+            <meta name="twitter:description" content="数字拼图提供了各种在场景中操作数字的方法。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-number-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-angle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-elementary-operation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-elementary-operation-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-arithmetic-operation-single-input.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-arithmetic-operation-single-input-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-round-with-precision-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-check.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-check-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-clamp.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-clamp-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-integer.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-integer-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-fraction.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-random-fraction-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-remainder.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-remainder-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-operations-on-list.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-operations-on-list-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-trigonometric-functions.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-trigonometric-functions-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-constants.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-constants-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-create-vector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-set-vector-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-get-vector-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-numbers-vector-math.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>数字 | Numbers</h1>
+
+    <p>数字拼图提供了各种在场景中操作数字的方法。</p>
+      
+    <img src="files/puzzles/puzzles-numbers.jpg" style="max-width: 1000px">
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/Numbers.html#puzzles_reference">拼图参考</a><ul><li><a href="manual/zh/puzzles/Numbers.html#number">number(数字)</a></li><li><a href="manual/zh/puzzles/Numbers.html#angle">angle(角度)</a></li><li><a href="manual/zh/puzzles/Numbers.html#arithmetic_operation_two_inputs">arithmetic operation (with two inputs)</a></li><li><a href="manual/zh/puzzles/Numbers.html#arithmetic_operation_single_input">arithmetic operation (with single input)</a></li><li><a href="manual/zh/puzzles/Numbers.html#round">round (to integer)</a></li><li><a href="manual/zh/puzzles/Numbers.html#round_with_precision">round with precision(按精度取整)</a></li><li><a href="manual/zh/puzzles/Numbers.html#check">check(检查)</a></li><li><a href="manual/zh/puzzles/Numbers.html#clamp">clamp(钳制)</a></li><li><a href="manual/zh/puzzles/Numbers.html#random_integer">random integer(随机整数)</a></li><li><a href="manual/zh/puzzles/Numbers.html#random_fraction">random fraction(随机分数)</a></li><li><a href="manual/zh/puzzles/Numbers.html#remainder">remainder(余数)</a></li><li><a href="manual/zh/puzzles/Numbers.html#operations_on_list">对列表的操作</a></li><li><a href="manual/zh/puzzles/Numbers.html#trigonometric_functions">trigonometric functions(三角函数)</a></li><li><a href="manual/zh/puzzles/Numbers.html#constants">constants(常数)</a></li><li><a href="manual/zh/puzzles/Numbers.html#create_vector">create vector(创建向量)</a></li><li><a href="manual/zh/puzzles/Numbers.html#set_vector_value">set vector value(设置向量值)</a></li><li><a href="manual/zh/puzzles/Numbers.html#get_vector_value">get vector value(获取向量值)</a></li><li><a href="manual/zh/puzzles/Numbers.html#vector_math">vector math(矢量运算)</a></li></ul></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/Numbers.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>拼图参考</h2>
+
+    <p><a href="manual/zh/puzzles/Numbers.html#number" id="number" class="permalink">#</a></p>
+
+    <h3>number(数字)</h3>
+
+    <p>这个常用拼图可用于向拼图场景提供一些数字的方法。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-number.jpg" style="max-width: 1000px">
+    <p>数字可以不含小数（整数）或含小数（浮点数）。超大或超小的数字可用科学技术法（指数符号）表示。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-number-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#angle" id="angle" class="permalink">#</a></p>
+
+    <h3>angle(角度)</h3>
+
+    <p>此拼图用于直观地定义角度（度数）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-angle.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#arithmetic_operation_two_inputs" id="arithmetic_operation_two_inputs" class="permalink">#</a></p>
+
+    <h3>arithmetic operation (with two inputs)</h3>
+
+    <p>此拼图允许您进行基本的算术运算：加法（+），减法（-），乘法（×）和除法（÷），以及指数化（^）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-elementary-operation.jpg" style="max-width: 1000px">
+    <p>请注意，浮点运算并不总是100%的精确，在比较数值时可能会产生不可预知的结果。为了避免出现精度问题，您可以使用 <a href="manual/en/puzzles/Numbers.html#round_with_precision">round with precision(按精度取整)</a> 拼图。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-elementary-operation-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#arithmetic_operation_single_input" id="arithmetic_operation_single_input" class="permalink">#</a></p>
+
+    <h3>arithmetic operation (with single input)</h3>
+
+    <p>此拼图允许您进行以下数学运算：平方根（√），绝对值又称模数（|x|），符号变化又称否定（-），自然对数（ln），小数对数（log10），自然指数函数（e^），以及10的幂（10^）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-arithmetic-operation-single-input.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-arithmetic-operation-single-input-example.jpg" style="max-width: 1000px">
+    <p>请注意，浮点运算并不总是100%的精确，在比较数值时可能会产生不可预知的结果。为了避免精度问题，您可以使用 <a href="manual/en/puzzles/Numbers.html#round_with_precision">round with precision(按精度取整)</a> 拼图。</p>
+
+    <p><a href="manual/zh/puzzles/Numbers.html#round" id="round" class="permalink">#</a></p>
+
+    <h3>round (to integer)</h3>
+
+    <p>此拼图将指定数值取整。<strong>round</strong> 变体将一个数字四舍五入到最接近的整数。2.49将被向下舍入（为2），而2.5将被向上舍入（为3）。<strong>round up</strong>
+      变体将一个数字向上舍入到最接近的整数。2.1将被向上舍入（为3）。<strong>round down</strong> 变体将一个数字向下舍入到最接近的整数。2.9将被向下舍入（为2）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-round.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-round-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#round_with_precision" id="round_with_precision" class="permalink">#</a></p>
+
+    <h3>round with precision(按精度取整)</h3>
+
+    <p>此拼图使用指定的精度对一个给定的数字进行舍入。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-round-with-precision.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-round-with-precision-example.jpg" style="max-width: 1000px">
+    <p>浮点运算并不总是100%准确的，在比较数值时可能会产生不可预知的结果。为了摆脱这些精度问题，您可以使用精确取整，如下所示：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-round-with-precision-example2.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#check" id="check" class="permalink">#</a></p>
+
+    <h3>check(检查)</h3>
+
+    <p>这个拼图检查一个指定的数字是否为偶数、奇数、素数、整数、正数、负数或能否被其他数字整除。如果是返回 <strong>true</strong> ，如果否返回 <strong>false</strong> 。与 <a href="manual/en/puzzles/Logic.html">逻辑拼图</a> 一起使用。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-check.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-check-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#clamp" id="clamp" class="permalink">#</a></p>
+
+    <h3>clamp(钳制)</h3>
+
+    <p>这个拼图限制一个数字必须在指定的极限值之间（包括）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-clamp.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-clamp-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#random_integer" id="random_integer" class="permalink">#</a></p>
+
+    <h3>random integer(随机整数)</h3>
+
+    <p>此拼图返回一个介于指定数字（包括两个极限）之间的随机整数。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-random-integer.jpg" style="max-width: 1000px">
+    <p>注意：尽管可以提供非整数的限制，但这样会扩大范围，因为此拼图在引擎中执行一些额外的四舍五入。</p>
+
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-random-integer-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#random_fraction" id="random_fraction" class="permalink">#</a></p>
+
+    <h3>random fraction(随机分数)</h3>
+
+    <p>此拼图返回一个大于等于0，小于1的随机浮点数。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-random-fraction.jpg" style="max-width: 1000px">
+    <p>下方示例中，此拼图用于为材质生成一个随机的颜色。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-random-fraction-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#remainder" id="remainder" class="permalink">#</a></p>
+
+    <h3>remainder(余数)</h3>
+
+    <p>此拼图用于获取一个数字除以另一个数字后的余数（又称模运算）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-remainder.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-remainder-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#operations_on_list" id="operations_on_list" class="permalink">#</a></p>
+
+    <h3>对列表的操作</h3>
+
+    <p>对指定 <a href="manual/en/puzzles/Lists.html">列表</a>中的数字执行运算。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-operations-on-list.jpg" style="max-width: 1000px">
+    <p>
+    </p><ul>
+      <li><strong>sum</strong> — 计算列表中所有数字的总和。</li>
+      <li><strong>min</strong> — 找到最小的数字。</li>
+      <li><strong>max</strong> — 找到最大的数字。</li>
+      <li><strong>average</strong> — 求平均值（所有数字求和后除以列表项目数量）。</li>
+      <li><strong>median</strong> — 找到中位数（当所有数字从最小到最大排序时，找到最中间的数字）。</li>
+      <li><strong>modes</strong> — 找到众数（一组数里出现频率最高的那个数）。</li>
+      <li><strong>standard deviation</strong> — 计算标准差（方差的平方根）。</li>
+      <li><strong>random item</strong> — 返回一个随机选择的项目。</li>
+    </ul>
+    <p></p>
+
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-operations-on-list-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#trigonometric_functions" id="trigonometric_functions" class="permalink">#</a></p>
+
+    <h3>trigonometric functions(三角函数)</h3>
+
+    <p>此拼图用于计算三角函数 <strong>正弦</strong>（sin），<strong>余弦</strong>（cos）和<strong>正切</strong>（tan）的值，以及它们的逆函数<strong>反正弦</strong>（asin），<strong>反余弦</strong>（acos），和<strong>反正切</strong>（atan）的值。该拼图期望（或返回）以度数表示的数值。
+    </p>
+      
+    <img src="files/puzzles/puzzles-numbers-trigonometric-functions.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-trigonometric-functions-examples.jpg" style="max-width: 1000px">
+    <p>请注意，浮点运算并不总是100%的精确，在比较数值时可能会产生不可预知的结果。为了避免精度问题，您可以使用 <a href="manual/en/puzzles/Numbers.html#round_with_precision">round with precision(按精度取整)</a> 拼图。</p>
+
+    <p><a href="manual/zh/puzzles/Numbers.html#constants" id="constants" class="permalink">#</a></p>
+
+    <h3>constants(常数)</h3>
+
+    <p>此拼图返回以下数学常数：π (π)，欧拉数 <i>e</i>，黄金分割率 (φ)，2的平方根， ½的平方根，以及无穷大值 (∞)。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-constants.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+      
+    <img src="files/puzzles/puzzles-numbers-constants-examples.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#create_vector" id="create_vector" class="permalink">#</a></p>
+
+    <h3>create vector(创建向量)</h3>
+
+    <p>此拼图返回一个新的三维向量，它由给定的X，Y，Z坐标组成。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-create-vector.jpg" class="centered" style="max-width: 664px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#set_vector_value" id="set_vector_value" class="permalink">#</a></p>
+
+    <h3>set vector value(设置向量值)</h3>
+
+    <p>此拼图为给定的向量设置数值（<strong>x</strong>，<strong>y</strong>，<strong>z</strong>坐标或<strong>长度</strong>）。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-set-vector-value.jpg" class="centered" style="max-width: 611px">
+
+    <p><a href="manual/zh/puzzles/Numbers.html#get_vector_value" id="get_vector_value" class="permalink">#</a></p>
+
+    <h3>get vector value(获取向量值)</h3>
+
+    <p>此拼图返回从给定向量中获取的数值。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-get-vector-value.jpg" class="centered" style="max-width: 744px">
+    <p>返回值：</p>
+
+    <ul>
+      <li><strong>x</strong> — X坐标。</li>
+      <li><strong>y</strong> — Y坐标。</li>
+      <li><strong>z</strong> — Z坐标。</li>
+      <li><strong>is zero</strong> — 如果向量的长度为零，返回返回 <em>true</em> ，否则返回 <em>false</em> 。</li>
+      <li><strong>length</strong> — 向量的长度。</li>
+      <li><strong>negated</strong> — 一个新的向量，它指向相反的方向。</li>
+      <li><strong>normalized</strong> — 一个长度为1的新向量。</li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Numbers.html#vector_math" id="vector_math" class="permalink">#</a></p>
+
+    <h3>vector math(矢量运算)</h3>
+
+    <p>此拼图在两个向量之间进行数学运算并返回一个新的向量。</p>
+      
+    <img src="files/puzzles/puzzles-numbers-vector-math.jpg" class="centered" style="max-width: 758px">
+    <p>操作：</p>
+
+    <ul>
+      <li><strong>+</strong> — 向量相加。</li>
+      <li><strong>—</strong> — 向量相减。</li>
+      <li><strong>×</strong> — 向量相乘（每个分量）。</li>
+      <li><strong>/</strong> — 向量相除（每个分量）。</li>
+      <li><strong>dot</strong> — 计算并返回向量之间的点积。</li>
+      <li><strong>cross</strong> — 计算并返回向量间的交叉积。</li>
+      <li><strong>rotate</strong> — 按第二个参数给出的欧拉角旋转一个向量。欧拉角的单位是度。</li>
+    </ul>
+
+
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

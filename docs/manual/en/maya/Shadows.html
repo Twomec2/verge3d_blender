@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for Maya: Shadows - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how to setup beautiful shadows in Verge3D for Maya.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/maya/Shadows.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for Maya: Shadows - Soft8Soft">
+            <meta property="og:description" content="Learn how to setup beautiful shadows in Verge3D for Maya.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/maya/Shadows.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for Maya: Shadows - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to setup beautiful shadows in Verge3D for Maya.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/shadows-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/lighting-menu.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/shadow-filtering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-basic.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-bilinear.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf-bilinear.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-pcf-poisson-disk.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/shadow-filtering-esm.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/shadow-settings-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/shadow-settings-perlight.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-maya/shadow-settings-perobject.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/self-shadow-artefacts.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-light-leaking.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-sharp-shadows.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-receiver-edge.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shadows-blender/esm-artefacts-self-shadow.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Shadows / Maya</h1>
+
+    <p>
+      Here are described the settings and best practices to setup beautiful real-time shadows in Verge3D for Maya.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/maya/Shadows.html#prepare_viewport">Preparing Maya Viewport</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering">Shadow Filtering Types</a><ul><li><a href="manual/en/maya/Shadows.html#shadow_filtering_basic">Basic</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_bilinear">Bilinear</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf">PCF</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_bilinear">PCF (Bilinear)</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson Disk)</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_esm">ESM</a></li><li><a href="manual/en/maya/Shadows.html#shadow_filtering_choose">Which filtering type to choose?</a></li></ul></li><li><a href="manual/en/maya/Shadows.html#global_settings">Global Settings</a></li><li><a href="manual/en/maya/Shadows.html#per_light_settings">Per-Light Settings</a></li><li><a href="manual/en/maya/Shadows.html#per_object_settings">Per-Object Settings</a></li><li><a href="manual/en/maya/Shadows.html#troubleshooting">Troubleshooting</a></li></ul><!-- /TOC -->
+
+    <img src="files/shadows-maya/shadows-example.jpg" class="centered with-caption" style="max-width: 577px">
+
+    <p class="note">
+      Verge3D supports shadows for Directional, Point, Spot, and Area lights.
+    </p>
+
+
+    <p><a href="manual/en/maya/Shadows.html#prepare_viewport" id="prepare_viewport" class="permalink">#</a></p>
+
+    <h2>Preparing Maya Viewport</h2>
+
+    <p>
+      It's recommended to set up Maya's viewport settings as described below to make configuring shadows easier.
+    </p>
+
+    <p>
+      Enable the following viewport options:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Lighting</strong> -&gt; <strong>Use All Lights</strong>
+      </li>
+      <li>
+        <strong>Lighting</strong> -&gt; <strong>Shadows</strong>
+      </li>
+    </ul>
+
+    <img src="files/shadows-maya/lighting-menu.jpg" class="centered">
+
+    <p>
+      Make sure you have at least one light source located on your scene.
+    </p>
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering" id="shadow_filtering" class="permalink">#</a></p>
+
+    <h2>Shadow Filtering Types</h2>
+
+    <p>Shadows in Verge3D look very differently depending on what shadow map filtering algorithm is in use. The <strong>Shadow Filtering</strong> property located on the <strong>Verge3D Export Settings</strong> panel is used to specify the algorithm.</p>
+
+    <img src="files/shadows-maya/shadow-filtering-settings.jpg" class="centered" style="max-width: 413px">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_basic" id="shadow_filtering_basic" class="permalink">#</a></p>
+
+    <h3>Basic</h3>
+
+    <p>Disable filtering, render shadow map as is. This is the fastest method to render shadows.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-basic.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_bilinear" id="shadow_filtering_bilinear" class="permalink">#</a></p>
+
+    <h3>Bilinear</h3>
+
+    <p>Use bilinear filtering to smooth adjacent shadow map pixels.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-bilinear.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf" id="shadow_filtering_pcf" class="permalink">#</a></p>
+
+    <h3>PCF</h3>
+
+    <p>Stands for Percentage Closer Filtering. Uses multiple shadow map lookups for smoothed shadow rendering. Average quality and performance.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_bilinear" id="shadow_filtering_pcf_bilinear" class="permalink">#</a></p>
+
+    <h3>PCF (Bilinear)</h3>
+
+    <p>Similar to PCF but uses bilinear interpolation for each shadow map lookup. Gives smoothed shadows at the expense of more computation power.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf-bilinear.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_poisson_disk" id="shadow_filtering_pcf_poisson_disk" class="permalink">#</a></p>
+
+    <h3>PCF (Poisson Disk)</h3>
+
+    <p>Uses pseudorandom <em>Poisson Disk Sampling</em> to eliminate shadow pixelation for PCF shadows. This was made the default setting because it corresponds the most to what you see in the 3D editor viewport. The performance is comparable to <strong>PCF (Bilinear)</strong> algorithm or better.</p>
+
+    <img src="files/shadows-blender/shadow-filtering-pcf-poisson-disk.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_esm" id="shadow_filtering_esm" class="permalink">#</a></p>
+
+    <h3>ESM</h3>
+
+    <p>
+        Stands for Exponential Shadow Maps. Shadows are smoothest but light
+        leaks are possible. Use <a href="manual/en/maya/Shadows.html#esm-bias">ESM Bias</a>
+        setting on lights to remove light leaks artefacts. The performance is
+        comparable to <strong>PCF (Bilinear)</strong> algorithm. ESM shadows can be particularly
+        tricky to set up, therefore see ESM-related issues in the
+        <a href="manual/en/maya/Shadows.html#troubleshooting">Troubleshooting</a>
+        section.
+    </p>
+
+    <img src="files/shadows-blender/shadow-filtering-esm.jpg">
+
+
+    <p><a href="manual/en/maya/Shadows.html#shadow_filtering_choose" id="shadow_filtering_choose" class="permalink">#</a></p>
+
+    <h3>Which filtering type to choose?</h3>
+    <p>
+        It's recommended to try the default
+        <a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson Disk)</a>
+        shadows first, because they offer good quality and performance. If you
+        need faster but less quality shadows then try
+        <a href="manual/en/maya/Shadows.html#shadow_filtering_basic">Basic</a>
+        or
+        <a href="manual/en/maya/Shadows.html#shadow_filtering_bilinear">Bilinear</a>.
+        Try <a href="manual/en/maya/Shadows.html#shadow_filtering_esm">ESM</a>
+        if you want more quality, soft shadows, but the drawback is that they
+        can be tricky to set up (artefact-wise) for a particular scene.
+    </p>
+
+
+    <p><a href="manual/en/maya/Shadows.html#global_settings" id="global_settings" class="permalink">#</a></p>
+
+    <h2>Global Settings</h2>
+
+    <p>
+        Global settings for shadows are located in the <strong>Verge3D Export Settings</strong> menu.
+    </p>
+
+    <img src="files/shadows-maya/shadow-settings-global.jpg" class="centered" style="max-width: 431px">
+
+    <dl>
+        <dt>Shadow Filtering</dt>
+        <dd>shadow map filtering algorithm. See <a href="manual/en/maya/Shadows.html#shadow_filtering">above</a>.</dd>
+
+        <dt id="esm-distance-scale">ESM Distance Scale</dt>
+        <dd>
+            ESM shadows scaling factor. Since the ESM filtering algorithm uses
+            absolute distance values, decrease the scale value if you're working
+            on a scene which is much bigger than the default cube, and increase
+            it if your scene is much smaller. Default value is 2.5. Works only for
+            <a href="manual/en/maya/Shadows.html#shadow_filtering_esm">ESM</a>
+            shadows.
+        </dd>
+    </dl>
+
+
+    <p><a href="manual/en/maya/Shadows.html#per_light_settings" id="per_light_settings" class="permalink">#</a></p>
+
+    <h2>Per-Light Settings</h2>
+
+    <p>
+      Shadows can be enabled/disabled for each individual light using Maya's native panels. Supported shadow settings are highlighted with green.
+    </p>
+
+    <img src="files/shadows-maya/shadow-settings-perlight.jpg" class="centered with-caption" style="max-width: 459px">
+
+    <dl>
+        <dt id="use-depth-map-shadows">Use Depth Map Shadows</dt>
+        <dd>
+            must be enabled for shadows to appear in Verge3D.
+        </dd>
+        <dt id="resolution">Resolution</dt>
+        <dd>
+            controls how big is the shadow texture (trading between speed and
+            quality).
+        </dd>
+        <dt id="filter-size">Filter Size</dt>
+        <dd>
+            controls the blurriness ratio for shadows.
+        </dd>
+        <dt id="bias">Bias</dt>
+        <dd>
+            can be tweaked until you get rid of self-shadow artefacts and/or
+            the peter-panning effect.
+        </dd>
+        <dt id="esm-bias">ESM Bias</dt>
+        <dd>
+            controls the bias to reduce ESM <em>light leaking</em> artefacts.
+            Works only for
+            <a href="manual/en/maya/Shadows.html#shadow_filtering_esm">ESM</a>
+            shadows.
+        </dd>
+    </dl>
+
+
+    <p><a href="manual/en/maya/Shadows.html#per_object_settings" id="per_object_settings" class="permalink">#</a></p>
+
+    <h2>Per-Object Settings</h2>
+
+    <p>
+      You can also enable and disable receiving and casting shadow on per-object basis.
+    </p>
+
+    <img src="files/shadows-maya/shadow-settings-perobject.jpg" class="centered" style="max-width: 422px">
+
+    <dl>
+        <dt id="casts-shadows">Casts Shadows</dt>
+        <dd>enable/disable shadow casting for this object.</dd>
+        <dt>Receive Shadows</dt>
+        <dd>enable/disable shadow receiving for this object.</dd>
+    </dl>
+
+    <br>
+
+    <p>
+      See also Autodesk's official <a href="https://help.autodesk.com/view/MAYAUL/2020/ENU/?guid=GUID-E4FE3CCF-EB03-4C4C-85D4-87792109B771" target="_blank">documentation</a> for more information and best practices on using shadows in Maya.
+    </p>
+
+
+    <p><a href="manual/en/maya/Shadows.html#troubleshooting" id="troubleshooting" class="permalink">#</a></p>
+
+    <h2>Troubleshooting</h2>
+
+    <h3>Shadows in Verge3D and in the Maya viewport look different</h3>
+    <ul>
+        <li>
+            Verge3D doesn't use the same shadow rendering
+            techniques as a 3d software can use - mostly for performance reasons.
+            This can include ray-traycing, various post-processing effects and
+            non-realtime methods. That's why there can be differences and
+            shadows won't look exactly the same as in the viewport.
+        </li>
+        <li>
+            Verge3D aims to resemble the Maya viewport. In order to make
+            configuring shadows easier, follow the instructions described here:
+            <a href="manual/en/maya/Shadows.html#prepare_viewport">Preparing Maya Viewport</a>.
+        </li>
+    </ul>
+
+    <h3>Shadows look too pixelated</h3>
+    <ul>
+        <li>
+            Use higher <a href="manual/en/maya/Shadows.html#resolution">Resolution</a>
+            values.
+        </li>
+        <li>
+            Try to mask low resolution with soft penumbra. Such shadow filtering
+            techniques as
+            <a href="manual/en/maya/Shadows.html#shadow_filtering_pcf_poisson_disk">PCF (Poisson)</a>
+            and
+            <a href="manual/en/maya/Shadows.html#shadow_filtering_esm">ESM</a>
+            along with properly adjusted
+            <a href="manual/en/maya/Shadows.html#filter-size">Filter Size</a>
+            can make pixelization less prominent.
+        </li>
+    </ul>
+
+    <h3>Shadows are visible in the Maya viewport but not in Verge3D</h3>
+    <ul>
+        <li>
+            In order to enable shadows in Verge3D the
+            <a href="manual/en/maya/Shadows.html#use-depth-map-shadows">Use Depth Map Shadows</a>
+            option must be enabled.
+        </li>
+        <li>
+            Very high <a href="manual/en/maya/Shadows.html#bias">Bias</a>
+            can partially or completely remove shadows. If that's the case try
+            to lower its value.
+        </li>
+    </ul>
+
+    <h3>Shadows have artefacts</h3>
+    <img src="files/shadows-blender/self-shadow-artefacts.jpg" class="centered" style="max-width: 485px">
+    <ul>
+        <li>
+            Such artefacts are called "shadow acne" or "self-shadow artefacts".
+            Increase the <a href="manual/en/maya/Shadows.html#bias">Bias</a>
+            value to get rid of them.
+        </li>
+    </ul>
+
+    <h3>Shadows have no/small penumbra</h3>
+    <ul>
+        <li>
+            In case of <a href="manual/en/maya/Shadows.html#shadow_filtering_basic">Basic</a>
+            or <a href="manual/en/maya/Shadows.html#shadow_filtering_bilinear">Bilinear</a>
+            shadows there's no control of the penumbra. Choose the other
+            <a href="manual/en/maya/Shadows.html#shadow_filtering">shadow filtering types</a>
+            instead.
+        </li>
+        <li>
+            Increase <a href="manual/en/maya/Shadows.html#filter-size">Filter Size</a>.
+        </li>
+    </ul>
+
+    <h3>ESM shadows look faded</h3>
+    <img src="files/shadows-blender/esm-artefacts-light-leaking.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Increase the <a href="manual/en/maya/Shadows.html#esm-bias">ESM Bias</a>
+            value.
+        </li>
+        <li>
+            Increase the <a href="manual/en/maya/Shadows.html#esm-distance-scale">ESM Distance Scale</a>
+            value.
+        </li>
+    </ul>
+
+    <h3>ESM shadows look too sharp or have no penumbra</h3>
+    <img src="files/shadows-blender/esm-sharp-shadows.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Increase <a href="manual/en/maya/Shadows.html#filter-size">Filter Size</a>.
+        </li>
+        <li>
+            Decrease the <a href="manual/en/maya/Shadows.html#esm-bias">ESM Bias</a>
+            value.
+        </li>
+        <li>
+            Decrease the <a href="manual/en/maya/Shadows.html#esm-distance-scale">ESM Distance Scale</a>
+            value.
+        </li>
+        <li>
+            Such artefacts can appear on a receiver object's edge.
+            <img src="files/shadows-blender/esm-artefacts-receiver-edge.jpg" class="centered" style="max-width: 500px">
+            It's one of ESM drawbacks. The solution is to avoid such situations.
+        </li>
+        <li>
+            If an object receiving shadows doesn't cast shadows itself
+            (e.g. if they are disabled via <a href="manual/en/maya/Shadows.html#casts-shadows">Casts shadows</a>),
+            then the shadows can have no penumbra at all no matter how large
+            <a href="manual/en/maya/Shadows.html#filter-size">Filter Size</a>
+            is. The solution is to enable shadow casting on the receiving
+            object or use an additional shadow casting object as an underlay
+            to fix the penumbra.
+        </li>
+    </ul>
+
+    <h3>ESM Shadows have artefacts</h3>
+    <img src="files/shadows-blender/esm-artefacts-self-shadow.jpg" class="centered" style="max-width: 500px">
+    <ul>
+        <li>
+            Decrease the <a href="manual/en/maya/Shadows.html#esm-bias">ESM Bias</a>
+            value.
+        </li>
+        <li>
+            Decrease the <a href="manual/en/maya/Shadows.html#esm-distance-scale">ESM Distance Scale</a>
+            value.
+        </li>
+    </ul>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

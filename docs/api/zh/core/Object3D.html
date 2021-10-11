@@ -1,0 +1,527 @@
+<!DOCTYPE html><html lang="zh"><head>
+                <title>Object3D - Verge3D User Manual - Soft8Soft</title>
+                <meta name="description" content="Learn how to use Object3D in your interactive 3D apps made with Verge3D or Three.js">
+            
+  <meta charset="utf-8">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/zh/core/Object3D.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Object3D - Verge3D User Manual - Soft8Soft">
+            <meta property="og:description" content="Learn how to use Object3D in your interactive 3D apps made with Verge3D or Three.js">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/zh/core/Object3D.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Object3D - Verge3D User Manual - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to use Object3D in your interactive 3D apps made with Verge3D or Three.js">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="api/zh/index.html">开发者参考</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>程序员指南</h2><ul id="程序员指南"><li><a href="manual/zh/programmers_guide/Developer-Kit.html" id="程序员指南_开发者套件">开发者套件</a></li><li><a href="manual/zh/programmers_guide/Programming-basics.html" id="程序员指南_编程基础">编程基础</a></li><li><a href="manual/zh/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="程序员指南_与React.js/Vue.js集成">与React.js/Vue.js集成</a></li><li><a href="manual/zh/programmers_guide/Matrix-transformations.html" id="程序员指南_矩阵变换">矩阵变换</a></li><li><a href="manual/zh/programmers_guide/Animation-system.html" id="程序员指南_动画系统">动画系统</a></li><li><a href="manual/zh/programmers_guide/Drawing-lines.html" id="程序员指南_画线">画线</a></li><li><a href="manual/zh/programmers_guide/How-to-update-things.html" id="程序员指南_更新内容">更新内容</a></li><li><a href="manual/zh/programmers_guide/How-to-obtain-Verge3D-sources.html" id="程序员指南_如何获取资源">如何获取资源</a></li></ul></div><div><h2>动画</h2><ul id="动画"><li><a href="api/zh/animation/AnimationAction.html" id="动画_AnimationAction">AnimationAction</a></li><li><a href="api/zh/animation/AnimationClip.html" id="动画_AnimationClip">AnimationClip</a></li><li><a href="api/zh/animation/AnimationMixer.html" id="动画_AnimationMixer">AnimationMixer</a></li><li><a href="api/zh/animation/AnimationObjectGroup.html" id="动画_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/zh/animation/AnimationUtils.html" id="动画_AnimationUtils">AnimationUtils</a></li><li><a href="api/zh/animation/KeyframeTrack.html" id="动画_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/zh/animation/PropertyBinding.html" id="动画_PropertyBinding">PropertyBinding</a></li><li><a href="api/zh/animation/PropertyMixer.html" id="动画_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>动画 / 轨道</h2><ul id="动画_/_轨道"><li><a href="api/zh/animation/tracks/BooleanKeyframeTrack.html" id="动画_/_轨道_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/ColorKeyframeTrack.html" id="动画_/_轨道_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/NumberKeyframeTrack.html" id="动画_/_轨道_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/QuaternionKeyframeTrack.html" id="动画_/_轨道_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/StringKeyframeTrack.html" id="动画_/_轨道_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/VectorKeyframeTrack.html" id="动画_/_轨道_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>应用</h2><ul id="应用"><li><a href="api/zh/extras/App.html" id="应用_App">App</a></li><li><a href="api/zh/extras/AppUtils.html" id="应用_AppUtils">AppUtils</a></li></ul></div><div><h2>音频</h2><ul id="音频"><li><a href="api/zh/audio/Audio.html" id="音频_Audio">Audio</a></li><li><a href="api/zh/audio/AudioAnalyser.html" id="音频_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/zh/audio/AudioContext.html" id="音频_AudioContext">AudioContext</a></li><li><a href="api/zh/audio/AudioListener.html" id="音频_AudioListener">AudioListener</a></li><li><a href="api/zh/audio/PositionalAudio.html" id="音频_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>摄影机</h2><ul id="摄影机"><li><a href="api/zh/cameras/ArrayCamera.html" id="摄影机_ArrayCamera">ArrayCamera</a></li><li><a href="api/zh/cameras/Camera.html" id="摄影机_Camera">Camera</a></li><li><a href="api/zh/cameras/CubeCamera.html" id="摄影机_CubeCamera">CubeCamera</a></li><li><a href="api/zh/cameras/OrthographicCamera.html" id="摄影机_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/zh/cameras/PerspectiveCamera.html" id="摄影机_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/zh/cameras/StereoCamera.html" id="摄影机_StereoCamera">StereoCamera</a></li></ul></div><div><h2>常量</h2><ul id="常量"><li><a href="api/zh/constants/Animation.html" id="常量_Animation">Animation</a></li><li><a href="api/zh/constants/Controls.html" id="常量_Controls">Controls</a></li><li><a href="api/zh/constants/Core.html" id="常量_Core">Core</a></li><li><a href="api/zh/constants/CustomBlendingEquations.html" id="常量_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/zh/constants/DrawModes.html" id="常量_DrawModes">DrawModes</a></li><li><a href="api/zh/constants/Lights.html" id="常量_Lights">Lights</a></li><li><a href="api/zh/constants/Materials.html" id="常量_Materials">Materials</a></li><li><a href="api/zh/constants/Renderer.html" id="常量_Renderer">Renderer</a></li><li><a href="api/zh/constants/Textures.html" id="常量_Textures">Textures</a></li></ul></div><div><h2>约束</h2><ul id="约束"><li><a href="api/zh/constraints/ChildOfConstraint.html" id="约束_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/zh/constraints/Constraint.html" id="约束_Constraint">Constraint</a></li><li><a href="api/zh/constraints/CopyLocationConstraint.html" id="约束_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/zh/constraints/CopyRotationConstraint.html" id="约束_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/zh/constraints/CopyScaleConstraint.html" id="约束_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/zh/constraints/FloorConstraint.html" id="约束_FloorConstraint">FloorConstraint</a></li><li><a href="api/zh/constraints/LimitLocationConstraint.html" id="约束_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/zh/constraints/LimitRotationConstraint.html" id="约束_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/zh/constraints/LimitScaleConstraint.html" id="约束_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/zh/constraints/LockedTrackConstraint.html" id="约束_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/zh/constraints/TargetConstraint.html" id="约束_TargetConstraint">TargetConstraint</a></li><li><a href="api/zh/constraints/TrackToConstraint.html" id="约束_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>控制</h2><ul id="控制"><li><a href="api/zh/controls/KeyListener.html" id="控制_KeyListener">KeyListener</a></li><li><a href="api/zh/controls/OrbitControls.html" id="控制_OrbitControls">OrbitControls</a></li></ul></div><div><h2>核心</h2><ul id="核心"><li><a href="api/zh/core/BufferAttribute.html" id="核心_BufferAttribute">BufferAttribute</a></li><li><a href="api/zh/core/BufferGeometry.html" id="核心_BufferGeometry">BufferGeometry</a></li><li><a href="api/zh/core/Clock.html" id="核心_Clock">Clock</a></li><li><a href="api/zh/core/Detector.html" id="核心_Detector">Detector</a></li><li><a href="api/zh/core/DirectGeometry.html" id="核心_DirectGeometry">DirectGeometry</a></li><li><a href="api/zh/core/EventDispatcher.html" id="核心_EventDispatcher">EventDispatcher</a></li><li><a href="api/zh/core/Face3.html" id="核心_Face3">Face3</a></li><li><a href="api/zh/core/Geometry.html" id="核心_Geometry">Geometry</a></li><li><a href="api/zh/core/InstancedBufferAttribute.html" id="核心_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/zh/core/InstancedBufferGeometry.html" id="核心_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/zh/core/InstancedInterleavedBuffer.html" id="核心_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBuffer.html" id="核心_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBufferAttribute.html" id="核心_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/zh/core/Layers.html" id="核心_Layers">Layers</a></li><li><a href="api/zh/core/Object3D.html" id="核心_Object3D">Object3D</a></li><li><a href="api/zh/core/Raycaster.html" id="核心_Raycaster">Raycaster</a></li><li><a href="api/zh/core/Uniform.html" id="核心_Uniform">Uniform</a></li></ul></div><div><h2>核心 / BufferAttributes</h2><ul id="核心_/_BufferAttributes"><li><a href="api/zh/core/bufferAttributeTypes/BufferAttributeTypes.html" id="核心_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>附件</h2><ul id="附件"><li><a href="api/zh/extras/Earcut.html" id="附件_Earcut">Earcut</a></li><li><a href="api/zh/extras/ImageUtils.html" id="附件_ImageUtils">ImageUtils</a></li><li><a href="api/zh/extras/PMREMGenerator.html" id="附件_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/zh/extras/Preloader.html" id="附件_Preloader">Preloader</a></li><li><a href="api/zh/extras/PuzzlesLoader.html" id="附件_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/zh/extras/SceneUtils.html" id="附件_SceneUtils">SceneUtils</a></li><li><a href="api/zh/extras/ShapeUtils.html" id="附件_ShapeUtils">ShapeUtils</a></li><li><a href="api/zh/extras/SimplePreloader.html" id="附件_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>附件 / 核心</h2><ul id="附件_/_核心"><li><a href="api/zh/extras/core/Curve.html" id="附件_/_核心_Curve">Curve</a></li><li><a href="api/zh/extras/core/CurvePath.html" id="附件_/_核心_CurvePath">CurvePath</a></li><li><a href="api/zh/extras/core/Font.html" id="附件_/_核心_Font">Font</a></li><li><a href="api/zh/extras/core/Interpolations.html" id="附件_/_核心_Interpolations">Interpolations</a></li><li><a href="api/zh/extras/core/Path.html" id="附件_/_核心_Path">Path</a></li><li><a href="api/zh/extras/core/Shape.html" id="附件_/_核心_Shape">Shape</a></li><li><a href="api/zh/extras/core/ShapePath.html" id="附件_/_核心_ShapePath">ShapePath</a></li></ul></div><div><h2>附件 / 曲线</h2><ul id="附件_/_曲线"><li><a href="api/zh/extras/curves/ArcCurve.html" id="附件_/_曲线_ArcCurve">ArcCurve</a></li><li><a href="api/zh/extras/curves/CatmullRomCurve3.html" id="附件_/_曲线_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve.html" id="附件_/_曲线_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve3.html" id="附件_/_曲线_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/zh/extras/curves/EllipseCurve.html" id="附件_/_曲线_EllipseCurve">EllipseCurve</a></li><li><a href="api/zh/extras/curves/LineCurve.html" id="附件_/_曲线_LineCurve">LineCurve</a></li><li><a href="api/zh/extras/curves/LineCurve3.html" id="附件_/_曲线_LineCurve3">LineCurve3</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve.html" id="附件_/_曲线_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve3.html" id="附件_/_曲线_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/zh/extras/curves/SplineCurve.html" id="附件_/_曲线_SplineCurve">SplineCurve</a></li></ul></div><div><h2>附件 / 对象</h2><ul id="附件_/_对象"><li><a href="api/zh/extras/objects/ImmediateRenderObject.html" id="附件_/_对象_ImmediateRenderObject">ImmediateRenderObject</a></li><li><a href="api/zh/extras/objects/LineHTML.html" id="附件_/_对象_LineHTML">LineHTML</a></li><li><a href="api/zh/extras/objects/MeshLine.html" id="附件_/_对象_MeshLine">MeshLine</a></li><li><a href="api/zh/extras/objects/MeshLineIndexed.html" id="附件_/_对象_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/zh/extras/objects/MeshLineMaterial.html" id="附件_/_对象_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>几何体</h2><ul id="几何体"><li><a href="api/zh/geometries/BoxBufferGeometry.html" id="几何体_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/zh/geometries/BoxGeometry.html" id="几何体_BoxGeometry">BoxGeometry</a></li><li><a href="api/zh/geometries/CircleBufferGeometry.html" id="几何体_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/zh/geometries/CircleGeometry.html" id="几何体_CircleGeometry">CircleGeometry</a></li><li><a href="api/zh/geometries/ConeBufferGeometry.html" id="几何体_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/zh/geometries/ConeGeometry.html" id="几何体_ConeGeometry">ConeGeometry</a></li><li><a href="api/zh/geometries/CylinderBufferGeometry.html" id="几何体_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/zh/geometries/CylinderGeometry.html" id="几何体_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/zh/geometries/DodecahedronBufferGeometry.html" id="几何体_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/zh/geometries/DodecahedronGeometry.html" id="几何体_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/zh/geometries/EdgesGeometry.html" id="几何体_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/zh/geometries/ExtrudeBufferGeometry.html" id="几何体_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/zh/geometries/ExtrudeGeometry.html" id="几何体_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/zh/geometries/IcosahedronBufferGeometry.html" id="几何体_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/zh/geometries/IcosahedronGeometry.html" id="几何体_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/zh/geometries/LatheBufferGeometry.html" id="几何体_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/zh/geometries/LatheGeometry.html" id="几何体_LatheGeometry">LatheGeometry</a></li><li><a href="api/zh/geometries/OctahedronBufferGeometry.html" id="几何体_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/zh/geometries/OctahedronGeometry.html" id="几何体_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/zh/geometries/ParametricBufferGeometry.html" id="几何体_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/zh/geometries/ParametricGeometry.html" id="几何体_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/zh/geometries/PlaneBufferGeometry.html" id="几何体_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/zh/geometries/PlaneGeometry.html" id="几何体_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/zh/geometries/PolyhedronBufferGeometry.html" id="几何体_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/zh/geometries/PolyhedronGeometry.html" id="几何体_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/zh/geometries/RingBufferGeometry.html" id="几何体_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/zh/geometries/RingGeometry.html" id="几何体_RingGeometry">RingGeometry</a></li><li><a href="api/zh/geometries/ShapeBufferGeometry.html" id="几何体_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/zh/geometries/ShapeGeometry.html" id="几何体_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/zh/geometries/SphereBufferGeometry.html" id="几何体_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/zh/geometries/SphereGeometry.html" id="几何体_SphereGeometry">SphereGeometry</a></li><li><a href="api/zh/geometries/TetrahedronBufferGeometry.html" id="几何体_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/zh/geometries/TetrahedronGeometry.html" id="几何体_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/zh/geometries/TextBufferGeometry.html" id="几何体_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/zh/geometries/TextGeometry.html" id="几何体_TextGeometry">TextGeometry</a></li><li><a href="api/zh/geometries/TorusBufferGeometry.html" id="几何体_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/zh/geometries/TorusGeometry.html" id="几何体_TorusGeometry">TorusGeometry</a></li><li><a href="api/zh/geometries/TorusKnotBufferGeometry.html" id="几何体_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/zh/geometries/TorusKnotGeometry.html" id="几何体_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/zh/geometries/TubeBufferGeometry.html" id="几何体_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/zh/geometries/TubeGeometry.html" id="几何体_TubeGeometry">TubeGeometry</a></li><li><a href="api/zh/geometries/WireframeGeometry.html" id="几何体_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>辅助对象</h2><ul id="辅助对象"><li><a href="api/zh/helpers/ArrowHelper.html" id="辅助对象_ArrowHelper">ArrowHelper</a></li><li><a href="api/zh/helpers/AxesHelper.html" id="辅助对象_AxesHelper">AxesHelper</a></li><li><a href="api/zh/helpers/BoxHelper.html" id="辅助对象_BoxHelper">BoxHelper</a></li><li><a href="api/zh/helpers/Box3Helper.html" id="辅助对象_Box3Helper">Box3Helper</a></li><li><a href="api/zh/helpers/CameraHelper.html" id="辅助对象_CameraHelper">CameraHelper</a></li><li><a href="api/zh/helpers/DirectionalLightHelper.html" id="辅助对象_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/zh/helpers/GridHelper.html" id="辅助对象_GridHelper">GridHelper</a></li><li><a href="api/zh/helpers/PolarGridHelper.html" id="辅助对象_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/zh/helpers/HemisphereLightHelper.html" id="辅助对象_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/zh/helpers/PlaneHelper.html" id="辅助对象_PlaneHelper">PlaneHelper</a></li><li><a href="api/zh/helpers/PointLightHelper.html" id="辅助对象_PointLightHelper">PointLightHelper</a></li><li><a href="api/zh/helpers/SkeletonHelper.html" id="辅助对象_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/zh/helpers/SpotLightHelper.html" id="辅助对象_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>灯光</h2><ul id="灯光"><li><a href="api/zh/lights/AmbientLight.html" id="灯光_AmbientLight">AmbientLight</a></li><li><a href="api/zh/lights/CubeReflectionProbe.html" id="灯光_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/zh/lights/DirectionalLight.html" id="灯光_DirectionalLight">DirectionalLight</a></li><li><a href="api/zh/lights/HemisphereLight.html" id="灯光_HemisphereLight">HemisphereLight</a></li><li><a href="api/zh/lights/Light.html" id="灯光_Light">Light</a></li><li><a href="api/zh/lights/PointLight.html" id="灯光_PointLight">PointLight</a></li><li><a href="api/zh/lights/RectAreaLight.html" id="灯光_RectAreaLight">RectAreaLight</a></li><li><a href="api/zh/lights/SpotLight.html" id="灯光_SpotLight">SpotLight</a></li></ul></div><div><h2>灯光 / 阴影</h2><ul id="灯光_/_阴影"><li><a href="api/zh/lights/shadows/LightShadow.html" id="灯光_/_阴影_LightShadow">LightShadow</a></li><li><a href="api/zh/lights/shadows/PointLightShadow.html" id="灯光_/_阴影_PointLightShadow">PointLightShadow</a></li><li><a href="api/zh/lights/shadows/DirectionalLightShadow.html" id="灯光_/_阴影_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/zh/lights/shadows/SpotLightShadow.html" id="灯光_/_阴影_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>加载器</h2><ul id="加载器"><li><a href="api/zh/loaders/AnimationLoader.html" id="加载器_AnimationLoader">AnimationLoader</a></li><li><a href="api/zh/loaders/AudioLoader.html" id="加载器_AudioLoader">AudioLoader</a></li><li><a href="api/zh/loaders/BufferGeometryLoader.html" id="加载器_BufferGeometryLoader">BufferGeometryLoader</a></li><li><a href="api/zh/loaders/Cache.html" id="加载器_Cache">Cache</a></li><li><a href="api/zh/loaders/CompressedTextureLoader.html" id="加载器_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/zh/loaders/CubeTextureLoader.html" id="加载器_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/zh/loaders/DataTextureLoader.html" id="加载器_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/zh/loaders/FileLoader.html" id="加载器_FileLoader">FileLoader</a></li><li><a href="api/zh/loaders/FontLoader.html" id="加载器_FontLoader">FontLoader</a></li><li><a href="api/zh/loaders/ImageBitmapLoader.html" id="加载器_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/zh/loaders/ImageLoader.html" id="加载器_ImageLoader">ImageLoader</a></li><li><a href="api/zh/loaders/GLTFLoader.html" id="加载器_GLTFLoader">GLTFLoader</a></li><li><a href="api/zh/loaders/Loader.html" id="加载器_Loader">Loader</a></li><li><a href="api/zh/loaders/LoaderUtils.html" id="加载器_LoaderUtils">LoaderUtils</a></li><li><a href="api/zh/loaders/MaterialLoader.html" id="加载器_MaterialLoader">MaterialLoader</a></li><li><a href="api/zh/loaders/ObjectLoader.html" id="加载器_ObjectLoader">ObjectLoader</a></li><li><a href="api/zh/loaders/TextureLoader.html" id="加载器_TextureLoader">TextureLoader</a></li></ul></div><div><h2>加载器 / 管理器</h2><ul id="加载器_/_管理器"><li><a href="api/zh/loaders/managers/DefaultLoadingManager.html" id="加载器_/_管理器_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/zh/loaders/managers/LoadingManager.html" id="加载器_/_管理器_LoadingManager">LoadingManager</a></li></ul></div><div><h2>材质</h2><ul id="材质"><li><a href="api/zh/materials/LineBasicMaterial.html" id="材质_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/zh/materials/LineDashedMaterial.html" id="材质_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/zh/materials/Material.html" id="材质_Material">Material</a></li><li><a href="api/zh/materials/MaterialUtils.html" id="材质_MaterialUtils">MaterialUtils</a></li><li><a href="api/zh/materials/MeshBasicMaterial.html" id="材质_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/zh/materials/MeshDepthMaterial.html" id="材质_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/zh/materials/MeshDistanceMaterial.html" id="材质_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/zh/materials/MeshLambertMaterial.html" id="材质_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/zh/materials/MeshMatcapMaterial.html" id="材质_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/zh/materials/MeshNodeMaterial.html" id="材质_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/zh/materials/MeshNormalMaterial.html" id="材质_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/zh/materials/MeshPhongMaterial.html" id="材质_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/zh/materials/MeshPhysicalMaterial.html" id="材质_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/zh/materials/MeshStandardMaterial.html" id="材质_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/zh/materials/MeshToonMaterial.html" id="材质_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/zh/materials/PointsMaterial.html" id="材质_PointsMaterial">PointsMaterial</a></li><li><a href="api/zh/materials/RawShaderMaterial.html" id="材质_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/zh/materials/ShaderMaterial.html" id="材质_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/zh/materials/ShadowMaterial.html" id="材质_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/zh/materials/SpriteMaterial.html" id="材质_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>数学</h2><ul id="数学"><li><a href="api/zh/math/Box2.html" id="数学_Box2">Box2</a></li><li><a href="api/zh/math/Box3.html" id="数学_Box3">Box3</a></li><li><a href="api/zh/math/Color.html" id="数学_Color">Color</a></li><li><a href="api/zh/math/Cylindrical.html" id="数学_Cylindrical">Cylindrical</a></li><li><a href="api/zh/math/Euler.html" id="数学_Euler">Euler</a></li><li><a href="api/zh/math/Frustum.html" id="数学_Frustum">Frustum</a></li><li><a href="api/zh/math/Interpolant.html" id="数学_Interpolant">Interpolant</a></li><li><a href="api/zh/math/Line3.html" id="数学_Line3">Line3</a></li><li><a href="api/zh/math/Math.html" id="数学_Math">Math</a></li><li><a href="api/zh/math/MathUtils.html" id="数学_MathUtils">MathUtils</a></li><li><a href="api/zh/math/Matrix3.html" id="数学_Matrix3">Matrix3</a></li><li><a href="api/zh/math/Matrix4.html" id="数学_Matrix4">Matrix4</a></li><li><a href="api/zh/math/Plane.html" id="数学_Plane">Plane</a></li><li><a href="api/zh/math/Quaternion.html" id="数学_Quaternion">Quaternion</a></li><li><a href="api/zh/math/Ray.html" id="数学_Ray">Ray</a></li><li><a href="api/zh/math/Sphere.html" id="数学_Sphere">Sphere</a></li><li><a href="api/zh/math/Spherical.html" id="数学_Spherical">Spherical</a></li><li><a href="api/zh/math/Triangle.html" id="数学_Triangle">Triangle</a></li><li><a href="api/zh/math/Vector2.html" id="数学_Vector2">Vector2</a></li><li><a href="api/zh/math/Vector3.html" id="数学_Vector3">Vector3</a></li><li><a href="api/zh/math/Vector4.html" id="数学_Vector4">Vector4</a></li></ul></div><div><h2>数学 / 插值</h2><ul id="数学_/_插值"><li><a href="api/zh/math/interpolants/CubicInterpolant.html" id="数学_/_插值_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/zh/math/interpolants/DiscreteInterpolant.html" id="数学_/_插值_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/zh/math/interpolants/LinearInterpolant.html" id="数学_/_插值_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/zh/math/interpolants/QuaternionLinearInterpolant.html" id="数学_/_插值_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>对象</h2><ul id="对象"><li><a href="api/zh/objects/Annotation.html" id="对象_Annotation">Annotation</a></li><li><a href="api/zh/objects/AnnotationControl.html" id="对象_AnnotationControl">AnnotationControl</a></li><li><a href="api/zh/objects/Bone.html" id="对象_Bone">Bone</a></li><li><a href="api/zh/objects/Group.html" id="对象_Group">Group</a></li><li><a href="api/zh/objects/InstancedMesh.html" id="对象_InstancedMesh">InstancedMesh</a></li><li><a href="api/zh/objects/Line.html" id="对象_Line">Line</a></li><li><a href="api/zh/objects/LineLoop.html" id="对象_LineLoop">LineLoop</a></li><li><a href="api/zh/objects/LineSegments.html" id="对象_LineSegments">LineSegments</a></li><li><a href="api/zh/objects/LOD.html" id="对象_LOD">LOD</a></li><li><a href="api/zh/objects/Mesh.html" id="对象_Mesh">Mesh</a></li><li><a href="api/zh/objects/Points.html" id="对象_Points">Points</a></li><li><a href="api/zh/objects/Skeleton.html" id="对象_Skeleton">Skeleton</a></li><li><a href="api/zh/objects/SkinnedMesh.html" id="对象_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/zh/objects/Sprite.html" id="对象_Sprite">Sprite</a></li></ul></div><div><h2>渲染器</h2><ul id="渲染器"><li><a href="api/zh/renderers/WebGLMultisampleRenderTarget.html" id="渲染器_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/zh/renderers/RenderUtils.html" id="渲染器_RenderUtils">RenderUtils</a></li><li><a href="api/zh/renderers/WebGLRenderer.html" id="渲染器_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/zh/renderers/WebGLRenderTarget.html" id="渲染器_WebGLRenderTarget">WebGLRenderTarget</a></li><li><a href="api/zh/renderers/WebGLCubeRenderTarget.html" id="渲染器_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li></ul></div><div><h2>渲染器 / 着色器</h2><ul id="渲染器_/_着色器"><li><a href="api/zh/renderers/shaders/ShaderChunk.html" id="渲染器_/_着色器_ShaderChunk">ShaderChunk</a></li><li><a href="api/zh/renderers/shaders/ShaderLib.html" id="渲染器_/_着色器_ShaderLib">ShaderLib</a></li><li><a href="api/zh/renderers/shaders/UniformsLib.html" id="渲染器_/_着色器_UniformsLib">UniformsLib</a></li><li><a href="api/zh/renderers/shaders/UniformsUtils.html" id="渲染器_/_着色器_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>场景</h2><ul id="场景"><li><a href="api/zh/scenes/Fog.html" id="场景_Fog">Fog</a></li><li><a href="api/zh/scenes/FogExp2.html" id="场景_FogExp2">FogExp2</a></li><li><a href="api/zh/scenes/Scene.html" id="场景_Scene">Scene</a></li><li><a href="api/zh/scenes/SceneBackground.html" id="场景_SceneBackground">SceneBackground</a></li></ul></div><div><h2>纹理贴图</h2><ul id="纹理贴图"><li><a href="api/zh/textures/CanvasTexture.html" id="纹理贴图_CanvasTexture">CanvasTexture</a></li><li><a href="api/zh/textures/CompressedTexture.html" id="纹理贴图_CompressedTexture">CompressedTexture</a></li><li><a href="api/zh/textures/CubeTexture.html" id="纹理贴图_CubeTexture">CubeTexture</a></li><li><a href="api/zh/textures/DataTexture.html" id="纹理贴图_DataTexture">DataTexture</a></li><li><a href="api/zh/textures/DataTexture3D.html" id="纹理贴图_DataTexture3D">DataTexture3D</a></li><li><a href="api/zh/textures/DepthTexture.html" id="纹理贴图_DepthTexture">DepthTexture</a></li><li><a href="api/zh/textures/Texture.html" id="纹理贴图_Texture">Texture</a></li><li><a href="api/zh/textures/VideoTexture.html" id="纹理贴图_VideoTexture">VideoTexture</a></li></ul></div><div><h2>差异化支持</h2><ul id="差异化支持"><li><a href="api/zh/Polyfills.html" id="差异化支持_Polyfills">Polyfills</a></li></ul></div><div><h2>WebGL渲染器</h2><ul id="WebGL渲染器"><li><a href="api/zh/renderers/webgl/WebGLProgram.html" id="WebGL渲染器_WebGLProgram">WebGLProgram</a></li><li><a href="api/zh/renderers/webgl/WebGLShader.html" id="WebGL渲染器_WebGLShader">WebGLShader</a></li><li><a href="api/zh/renderers/webgl/WebGLState.html" id="WebGL渲染器_WebGLState">WebGLState</a></li></ul></div></div>
+        </nav>
+  <h1>三维物体（Object3D）</h1>
+
+  <p class="desc">
+    这是Verge3D中大部分对象的基类，提供了一系列的属性和方法来对三维空间中的物体进行操纵。<br><br>
+
+    请注意，可以通过<a href="api/zh/core/Object3D.html#add">.add</a>(object)方法来将对象进行组合，该方法将对象添加为子对象，但为此最好使用<a href="api/zh/objects/Group.html">Group</a>（来作为父对象）。
+  </p>
+
+
+  <h2>构造器</h2>
+
+
+  <h3>Object3D()</h3>
+  <p>
+    构造器中不带有参数。
+  </p>
+
+
+  <h2>属性</h2>
+
+  <h3><a href="api/zh/core/Object3D.html#animations" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#animations" id="animations">animations</a>  : <a href="api/zh/animation/AnimationClip.html" class="param">AnimationClip</a></h3>
+  <p>Array with object's animation clips.</p>
+
+  <h3><a href="api/zh/core/Object3D.html#castShadow" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#castShadow" id="castShadow">castShadow</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>对象是否被渲染到阴影贴图中。默认值为<strong>false</strong>。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#children" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#children" id="children">children</a>  : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>含有对象的子级的数组。请参阅<a href="api/zh/objects/Group.html">Group</a>来了解将手动对象进行分组的相关信息。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#customDepthMaterial" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#customDepthMaterial" id="customDepthMaterial">customDepthMaterial</a>  : <a href="api/zh/materials/Material.html" class="param">Material</a></h3>
+  <p>渲染到深度贴图时此材质要使用的自定义深度材质。
+    当使用<a href="api/zh/lights/DirectionalLight.html">DirectionalLight</a>或<a href="api/zh/lights/SpotLight.html">SpotLight</a>进行阴影投射时，如果您正在（a）修改顶点着色器中的顶点位置，
+    （b）使用位移贴图，（c）alphaTest中使用alpha贴图，或（d）alphaTest中使用透明纹理，
+    您必须指定customDepthMaterial以得到合适的阴影。默认值<strong>undefined</strong>。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#customDistanceMaterial" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#customDistanceMaterial" id="customDistanceMaterial">customDistanceMaterial</a>  : <a href="api/zh/materials/Material.html" class="param">Material</a></h3>
+  <p>与<a href="api/zh/core/Object3D.html#customDepthMaterial">customDepthMaterial</a>相同，但与<a href="api/zh/lights/PointLight.html">PointLight</a>一起使用。默认值为<strong>undefined</strong>。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#frustumCulled" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#frustumCulled" id="frustumCulled">frustumCulled</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>
+    当这个属性被设置的时候，它将在渲染物体之前，检查每一帧的物体是否在摄像机的视锥体中。
+    否则，即使该物体不可见，它也将在每一帧中被渲染，默认值为<strong>true</strong>。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#id" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#id" id="id">id</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+  <p>只读 —— 表示该对象实例ID的唯一数字。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#layers" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#layers" id="layers">layers</a>  : <a href="api/zh/core/Layers.html" class="param">Layers</a></h3>
+  <p>
+    物体的层级关系。
+    物体只有和一个正在使用的<a href="api/zh/cameras/Camera.html">Camera</a>至少在同一个层时才可见。This property can also be used to filter out
+    unwanted objects in ray-intersection tests when using <a href="api/zh/core/Raycaster.html">Raycaster</a>.
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#matrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#matrix" id="matrix">matrix</a>  : <a href="api/zh/math/Matrix4.html" class="param">Matrix4</a></h3>
+  <p>局部变换矩阵。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#matrixAutoUpdate" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#matrixAutoUpdate" id="matrixAutoUpdate">matrixAutoUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>
+    当这个属性设置了之后，它将计算每一帧的位移、旋转（四元变换）和缩放矩阵，并重新计算matrixWorld属性。默认值是<a href="api/zh/core/Object3D.html#DefaultMatrixAutoUpdate">Object3D.DefaultMatrixAutoUpdate</a> (true)。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#matrixWorld" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#matrixWorld" id="matrixWorld">matrixWorld</a>  : <a href="api/zh/math/Matrix4.html" class="param">Matrix4</a></h3>
+  <p>
+    物体的世界变换。若这个Object3D没有父级，则它将和local transform <a href="api/zh/core/Object3D.html#matrix">.matrix</a>（局部变换矩阵）相同。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#matrixWorldNeedsUpdate" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#matrixWorldNeedsUpdate" id="matrixWorldNeedsUpdate">matrixWorldNeedsUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>
+    当这个属性设置了之后，它将计算在那一帧中的matrixWorld，并将这个值重置为false。默认值为<strong>false</strong>。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#modelViewMatrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#modelViewMatrix" id="modelViewMatrix">modelViewMatrix</a>  : <a href="api/zh/math/Matrix4.html" class="param">Matrix4</a></h3>
+  <p>这个值传递给着色器，用于计算物体的位置。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#name" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#name" id="name">name</a>  : <a href="javascript:;" class="param">String</a></h3>
+  <p>对象的名称，可选、不必唯一。默认值是一个空字符串。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#normalMatrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#normalMatrix" id="normalMatrix">normalMatrix</a>  : <a href="api/zh/math/Matrix3.html" class="param">Matrix3</a></h3>
+  <p>
+    这个值传递给着色器，用于计算物体的光照。
+    它是物体的modelViewMatrix矩阵中，左上角3x3子矩阵的逆的转置矩阵。
+    <br><br>
+    使用这个特殊矩阵的原因，是只需使用modelViewMatrix就可以得出一个法线（缩放时）的非单位长度或者非垂直的方向（不规则缩放时）。
+    <br><br>
+    另一方面，modelViewMatrix矩阵中的位移部分和法线的计算无关，因此Matrix3就已经足够了。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#onAfterRender" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#onAfterRender" id="onAfterRender">onAfterRender</a>  : <a href="javascript:;" class="param">Function</a></h3>
+  <p>
+    一个可选的回调函数，在Object3D渲染之后直接执行。
+    使用以下参数来调用此函数：renderer，scene，camera，geometry，material，group。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#onBeforeRender" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#onBeforeRender" id="onBeforeRender">onBeforeRender</a>  : <a href="javascript:;" class="param">Function</a></h3>
+  <p>
+    一个可选的回调函数，在Object3D渲染之前直接执行。
+    使用以下参数来调用此函数：renderer，scene，camera，geometry，material，group。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#parent" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#parent" id="parent">parent</a>  : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>在<a href="https://en.wikipedia.org/wiki/Scene_graph"  target="_blank">scene graph</a>（场景图）中，一个对象的父级对象。
+    一个对象最多仅能有一个父级对象。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#position" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#position" id="position">position</a>  : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>表示对象局部位置的<a href="api/zh/math/Vector3.html">Vector3</a>。默认值为(0, 0, 0)。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#quaternion" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#quaternion" id="quaternion">quaternion</a>  : <a href="api/zh/math/Quaternion.html" class="param">Quaternion</a></h3>
+  <p>表示对象局部旋转的<a href="api/zh/math/Quaternion.html">Quaternion</a>（四元数）。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#receiveShadow" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#receiveShadow" id="receiveShadow">receiveShadow</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>材质是否接收阴影。默认值为<strong>false</strong>。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#renderOrder" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#renderOrder" id="renderOrder">renderOrder</a>  : <a href="javascript:;" class="param">Number</a></h3>
+  <p>
+    这个值将使得<a href="https://en.wikipedia.org/wiki/Scene_graph"  target="_blank">scene graph</a>（场景图）中默认的的渲染顺序被覆盖，
+    即使不透明对象和透明对象保持独立顺序。
+    渲染顺序是由低到高来排序的，默认值为<strong>0</strong>。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotation" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotation" id="rotation">rotation</a>  : <a href="api/zh/math/Euler.html" class="param">Euler</a></h3>
+  <p>
+    物体的局部旋转，以弧度来表示。（请参阅<a href="https://en.wikipedia.org/wiki/Euler_angles"  target="_blank">Euler angles</a>-欧拉角）
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#scale" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#scale" id="scale">scale</a>  : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    物体的局部缩放。默认值是<a href="api/zh/math/Vector3.html">Vector3</a>(1, 1, 1)。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#up" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#up" id="up">up</a>  : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    这个属性由<a href="api/zh/core/Object3D.html#lookAt">lookAt</a>方法所使用，例如，来决定结果的朝向。
+    默认值是<a href="api/zh/core/Object3D.html#DefaultUp">Object3D.DefaultUp</a>，即(0, 1, 0)。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#userData" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#userData" id="userData">userData</a>  : <a href="javascript:;" class="param">Object</a></h3>
+  <p>
+    一个用于存储Object3D自定义数据的对象。
+    它不应当包含对函数的引用，因为这些函数将不会被克隆。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#uuid" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#uuid" id="uuid">uuid</a>  : <a href="javascript:;" class="param">String</a></h3>
+  <p>
+    该对象实例的<a href="http://en.wikipedia.org/wiki/Universally_unique_identifier"  target="_blank">UUID</a>。
+    这是一个自动生成的值，不应当对其进行修改。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#visible" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#visible" id="visible">visible</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>可见性。这个值为<strong>true</strong>时，物体将被渲染。默认值为<strong>true</strong>。</p>
+
+
+
+
+  <h2>静态属性</h2>
+  <p>
+    静态属性和方法由每个类所定义，并非由每个类的实例所定义。
+    也就是说，改变<a href="api/zh/core/Object3D.html#DefaultUp">Object3D.DefaultUp</a>或<a href="api/zh/core/Object3D.html#DefaultMatrixAutoUpdate">Object3D.DefaultMatrixAutoUpdate</a>的值，
+    将改变<b>每个在此之后</b>由Object3D类（或派生类）创建的实例中的<a href="api/zh/core/Object3D.html#up">up</a>和<a href="api/zh/core/Object3D.html#matrixAutoUpdate">matrixAutoUpdate</a>的值。（已经创建好的Object3D不会受到影响）。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#DefaultUp" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#DefaultUp" id="DefaultUp">DefaultUp</a>  : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    默认的物体的<a href="api/zh/core/Object3D.html#up">up</a>方向，同时也作为<a href="api/zh/lights/DirectionalLight.html">DirectionalLight</a>、<a href="api/zh/lights/HemisphereLight.html">HemisphereLight</a>和<a href="javascript:;">Spotlight</a>（自顶向下创建的灯光）的默认方向。
+    默认设为(0, 1, 0)。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#DefaultMatrixAutoUpdate" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#DefaultMatrixAutoUpdate" id="DefaultMatrixAutoUpdate">DefaultMatrixAutoUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+  <p>
+      <a href="api/zh/core/Object3D.html#matrixAutoUpdate">matrixAutoUpdate</a>的默认设置，用于新创建的Object3D。<br>
+
+  </p>
+
+
+  <h2>方法</h2>
+
+  <h3><a href="api/zh/core/EventDispatcher.html">EventDispatcher</a> 方法在这个类上是可用的。</h3>
+
+  <h3><a href="api/zh/core/Object3D.html#add" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#add" id="add">add</a> (object : <a href="api/zh/core/Object3D.html" class="param">Object3D</a>, ...) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    添加<b>对象</b>到这个对象的子级，可以添加任意数量的对象。
+    当前传入的对象中的父级将在这里被移除，因为一个对象仅能有一个父级。<br><br>
+    请参阅<a href="api/zh/objects/Group.html">Group</a>来查看手动编组对象的相关信息。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#applyMatrix4" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#applyMatrix4" id="applyMatrix4">applyMatrix4</a> (matrix : <a href="api/zh/math/Matrix4.html" class="param">Matrix4</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>对当前物体应用这个变换矩阵，并更新物体的位置、旋转和缩放。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#applyQuaternion" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#applyQuaternion" id="applyQuaternion">applyQuaternion</a> (quaternion : <a href="api/zh/math/Quaternion.html" class="param">Quaternion</a>) : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>对当前物体应用由四元数所表示的变换。</p>
+
+
+  <h3><a href="api/zh/core/Object3D.html#attach" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#attach" id="attach">attach</a> (object : <a href="api/zh/core/Object3D.html" class="param">Object3D</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>将<strong>object</strong>作为子级来添加到该对象中，同时保持该object的世界变换。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#clone" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#clone" id="clone">clone</a> (recursive : <a href="javascript:;" class="param">Boolean</a>) : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>
+    recursive —— 如果值为true，则该物体的后代也会被克隆。默认值为true。<br><br>
+
+    返回对象前物体的克隆（以及可选的所有后代）。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#copy" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#copy" id="copy">copy</a> (object : <a href="api/zh/core/Object3D.html" class="param">Object3D</a>, recursive : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    recursive —— 如果值为true，则该物体的后代也会被复制。默认值为true。<br><br>
+
+    复制给定的对象到这个对象中。
+
+    请注意，事件监听器和用户定义的回调函数（<a href="api/zh/core/Object3D.html#onAfterRender">.onAfterRender</a> 和 <a href="api/zh/core/Object3D.html#onBeforeRender">.onBeforeRender</a>）不会被复制。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getObjectById" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getObjectById" id="getObjectById">getObjectById</a> (id : <a href="javascript:;" class="param">Integer</a>) : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>
+    id —— 标识该对象实例的唯一数字。<br><br>
+
+    从该对象开始，搜索一个对象及其子级，返回第一个带有匹配id的子对象。<br>
+    请注意，id是按照时间顺序来分配的：1、2、3、……，每增加一个新的对象就自增1。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getObjectByName" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getObjectByName" id="getObjectByName">getObjectByName</a> (name : <a href="javascript:;" class="param">String</a>) : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>
+    name —— 用于来匹配子物体中Object3D.name属性的字符串。<br><br>
+
+    从该对象开始，搜索一个对象及其子级，返回第一个带有匹配name的子对象。<br>
+    请注意，大多数的对象中name默认是一个空字符串，要使用这个方法，你将需要手动地设置name属性。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getObjectByProperty" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getObjectByProperty" id="getObjectByProperty">getObjectByProperty</a> (name : <a href="javascript:;" class="param">String</a>, value : <a href="javascript:;" class="param">Float</a>) : <a href="api/zh/core/Object3D.html" class="param">Object3D</a></h3>
+  <p>
+    name —— 将要用于查找的属性的名称。<br>
+    value —— 给定的属性的值。 <br><br>
+    从该对象开始，搜索一个对象及其子级，返回第一个给定的属性中包含有匹配的值的子对象。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getWorldPosition" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getWorldPosition" id="getWorldPosition">getWorldPosition</a> (target : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    <a href="api/zh/math/Vector3.html">target</a> — 结果将被复制到这个Vector3中。<br><br>
+    返回一个表示该物体在世界空间中位置的矢量。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getWorldQuaternion" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getWorldQuaternion" id="getWorldQuaternion">getWorldQuaternion</a> (target : <a href="api/zh/math/Quaternion.html" class="param">Quaternion</a>) : <a href="api/zh/math/Quaternion.html" class="param">Quaternion</a></h3>
+  <p>
+    <a href="api/zh/math/Quaternion.html">target</a> — 结果将被复制到这个Quaternion中。<br><br>
+    返回一个表示该物体在世界空间中旋转的四元数。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getWorldScale" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getWorldScale" id="getWorldScale">getWorldScale</a> (target : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    <a href="api/zh/math/Vector3.html">target</a> — 结果将被复制到这个Vector3中。<br><br>
+    返回一个包含着该物体在世界空间中各个轴向上所应用的缩放因数的矢量。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#getWorldDirection" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#getWorldDirection" id="getWorldDirection">getWorldDirection</a> (target : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    <a href="api/zh/math/Vector3.html">target</a> — 结果将被复制到这个Vector3中。 <br><br>
+    返回一个表示该物体在世界空间中Z轴正方向的矢量。
+  </p>
+
+
+  <h3><a href="api/zh/core/Object3D.html#localToWorld" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#localToWorld" id="localToWorld">localToWorld</a> (vector : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    vector - 一个表示在该物体局部空间中位置的向量。<br><br>
+
+    将该向量从物体的局部空间转换到世界空间。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#lookAt" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#lookAt" id="lookAt">lookAt</a> (vector : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="javascript:;" class="param">null</a><br>
+    <a href="api/zh/core/Object3D.html#lookAt" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#lookAt" id="lookAt">lookAt</a> (x : <a href="javascript:;" class="param">Float</a>, y : <a href="javascript:;" class="param">Float</a>, z : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    vector - 一个表示世界空间中位置的向量。<br><br>
+    也可以使用世界空间中<a href="api/zh/core/Object3D.html#x">x</a>、<a href="api/zh/core/Object3D.html#y">y</a>和<a href="api/zh/core/Object3D.html#z">z</a>的位置分量。<br><br>
+    旋转物体使其在世界空间中面朝一个点。<br><br>
+    这一方法不支持其父级被旋转过或者被位移过的物体。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#raycast" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#raycast" id="raycast">raycast</a> (raycaster : <a href="api/zh/core/Raycaster.html" class="param">Raycaster</a>, intersects : <a href="javascript:;" class="param">Array</a>) : <a href="javascript:;" class="param">Array</a></h3>
+  <p>抽象（空方法），在一条被投射出的射线与这个物体之间获得交点。
+    在一些子类，例如<a href="api/zh/objects/Mesh.html">Mesh</a>, <a href="api/zh/objects/Line.html">Line</a>, and <a href="api/zh/objects/Points.html">Points</a>实现了这个方法，以用于光线投射。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#remove" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#remove" id="remove">remove</a> (object : <a href="api/zh/core/Object3D.html" class="param">Object3D</a>, ...) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    从当前对象的子级中移除<b>对象</b>。可以移除任意数量的对象。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotateOnAxis" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotateOnAxis" id="rotateOnAxis">rotateOnAxis</a> (axis : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    axis —— 一个在局部空间中的标准化向量。<br>
+    angle —— 角度，以弧度来表示。<br><br>
+    在局部空间中绕着该物体的轴来旋转一个物体，假设这个轴已被标准化。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotateOnWorldAxis" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotateOnWorldAxis" id="rotateOnWorldAxis">rotateOnWorldAxis</a> (axis : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    axis -- 一个在世界空间中的标准化向量。<br>
+    angle -- 角度，以弧度来表示。<br><br>
+
+    在世界空间中绕着该物体的轴来旋转一个物体，假设这个轴已被标准化。
+    方法假设该物体没有旋转过的父级。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotateX" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotateX" id="rotateX">rotateX</a> (rad : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    rad - 将要旋转的角度（以弧度来表示）。<br><br>
+    绕局部空间的X轴旋转这个物体。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotateY" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotateY" id="rotateY">rotateY</a> (rad : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    rad - 将要旋转的角度（以弧度来表示）。<br><br>
+    绕局部空间的Y轴旋转这个物体。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#rotateZ" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#rotateZ" id="rotateZ">rotateZ</a> (rad : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    rad - 将要旋转的角度（以弧度来表示）。<br><br>
+    绕局部空间的Z轴旋转这个物体。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#setRotationFromAxisAngle" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#setRotationFromAxisAngle" id="setRotationFromAxisAngle">setRotationFromAxisAngle</a> (axis : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    axis -- 一个在局部空间中的标准化向量。<br>
+    angle -- 角度（以弧度来表示）。<br><br>
+
+    调用<a href="api/zh/core/Object3D.html#quaternion">.quaternion</a>中的<a href="api/zh/math/Quaternion.html#setFromAxisAngle">setFromAxisAngle</a>(<a href="javascript:;">axis</a>, <a href="javascript:;">angle</a>)。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#setRotationFromEuler" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#setRotationFromEuler" id="setRotationFromEuler">setRotationFromEuler</a> (euler : <a href="api/zh/math/Euler.html" class="param">Euler</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    euler -- 指定了旋转量的欧拉角。<br>
+
+    调用<a href="api/zh/core/Object3D.html#quaternion">.quaternion</a>中的<a href="api/zh/math/Quaternion.html#setRotationFromEuler">setRotationFromEuler</a>(<a href="api/zh/math/Euler.html">euler</a>)。
+
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#setRotationFromMatrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#setRotationFromMatrix" id="setRotationFromMatrix">setRotationFromMatrix</a> (m : <a href="api/zh/math/Matrix4.html" class="param">Matrix4</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    m -- 通过该矩阵中的旋转分量来旋转四元数。<br>
+
+    调用<a href="api/zh/core/Object3D.html#quaternion">.quaternion</a>中的<a href="api/zh/math/Quaternion.html#setFromRotationMatrix">setFromRotationMatrix</a>(<a href="api/zh/math/Matrix4.html">m</a>)。
+    <br><br>
+
+    请注意，这里假设m上的3x3矩阵是一个纯旋转矩阵（即未缩放的矩阵）。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#setRotationFromQuaternion" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#setRotationFromQuaternion" id="setRotationFromQuaternion">setRotationFromQuaternion</a> (q : <a href="api/zh/math/Quaternion.html" class="param">Quaternion</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    q -- 标准化的四元数。<br><br>
+
+    将所给的四元数复制到<a href="api/zh/core/Object3D.html#quaternion">.quaternion</a>中。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#toJSON" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#toJSON" id="toJSON">toJSON</a> (meta : <a href="javascript:;" class="param">Object</a>) : <a href="javascript:;" class="param">Object</a></h3>
+  <p>
+    meta -- 包含有元数据的对象，例如该对象的材质、纹理或图片。
+    将对象转换为 Verge3D <a href="https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4"  target="_blank">JSON Object/Scene format</a>（Verge3D JSON 物体/场景格式）。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#translateOnAxis" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#translateOnAxis" id="translateOnAxis">translateOnAxis</a> (axis : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>, distance : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>
+    axis -- 一个在局部空间中的标准化向量。<br>
+    distance -- 将要平移的距离。<br><br>
+    在局部空间中沿着一条轴来平移物体，假设轴已被标准化。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#translateX" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#translateX" id="translateX">translateX</a> (distance : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>沿着X轴将平移<strong>distance</strong>个单位。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#translateY" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#translateY" id="translateY">translateY</a> (distance : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>沿着Y轴将平移<strong>distance</strong>个单位。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#translateZ" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#translateZ" id="translateZ">translateZ</a> (distance : <a href="javascript:;" class="param">Float</a>) : <a href="javascript:;" class="param">this</a></h3>
+  <p>沿着Z轴将平移<strong>distance</strong>个单位。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#traverse" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#traverse" id="traverse">traverse</a> (callback : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+
+    callback - 以一个object3D对象作为第一个参数的函数。
+    <br><br>
+
+    在对象以及后代中执行的回调函数。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#traverseVisible" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#traverseVisible" id="traverseVisible">traverseVisible</a> (callback : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+      callback - 以一个object3D对象作为第一个参数的函数。
+      <br><br>
+
+    类似traverse函数，但在这里，回调函数仅对可见的对象执行，不可见对象的后代将不遍历。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#traverseAncestors" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#traverseAncestors" id="traverseAncestors">traverseAncestors</a> (callback : <a href="javascript:;" class="param">Function</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    callback - 以一个object3D对象作为第一个参数的函数。<br><br>
+
+    在所有的祖先中执行回调函数。
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#updateMatrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#updateMatrix" id="updateMatrix">updateMatrix</a> () : <a href="javascript:;" class="param">null</a></h3>
+  <p>更新局部变换。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#updateMatrixWorld" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#updateMatrixWorld" id="updateMatrixWorld">updateMatrixWorld</a> (force : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>更新物体及其后代的全局变换。</p>
+
+  <h3><a href="api/zh/core/Object3D.html#updateWorldMatrix" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#updateWorldMatrix" id="updateWorldMatrix">updateWorldMatrix</a> (updateParents : <a href="javascript:;" class="param">Boolean</a>, updateChildren : <a href="javascript:;" class="param">Boolean</a>) : <a href="javascript:;" class="param">null</a></h3>
+  <p>
+    updateParents - recursively updates global transform of ancestors.<br>
+    updateChildren - recursively updates global transform of descendants.<br><br>
+
+    Updates the global transform of the object.
+  </p>
+
+  <h3><a href="api/zh/core/Object3D.html#worldToLocal" class="permalink">#</a> .<a href="api/zh/core/Object3D.html#worldToLocal" id="worldToLocal">worldToLocal</a> (vector : <a href="api/zh/math/Vector3.html" class="param">Vector3</a>) : <a href="api/zh/math/Vector3.html" class="param">Vector3</a></h3>
+  <p>
+    vector - 一个表示在世界空间中位置的向量。<br><br>
+
+    将该向量从世界空间转换到物体的局部空间。
+  </p>
+
+  <h2>源代码</h2>
+
+  <p>
+      <a href="https://github.com/mrdoob/three.js/blob/master/src/core/Object3D.js"  target="_blank">src/core/Object3D.js</a>
+    </p>
+
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

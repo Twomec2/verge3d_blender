@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <title>硬件相关问题 - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="学习如何处理与硬件有关的问题和限制。">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #2194CE;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: left;
+            min-width: 180px;
+            font-size: 16px;
+        }
+
+        table {
+            margin-bottom: 20px;
+        }
+
+        th {
+            text-align: center;
+            text-decoration: none;
+            color: #0b7188;
+            font-size: 17px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: normal;
+        }
+
+        td ul {
+            margin: 10px 0px;
+            padding-left: 20px;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        td.centered {
+            text-align: center;
+        }
+    </style>
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/Hardware-Related-Issues.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="硬件相关问题 - Soft8Soft">
+            <meta property="og:description" content="学习如何处理与硬件有关的问题和限制。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/Hardware-Related-Issues.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="硬件相关问题 - Soft8Soft">
+            <meta name="twitter:description" content="学习如何处理与硬件有关的问题和限制。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/too-many-attributes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/aa_msaa.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/aa_fxaa.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/z-fighting.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+    <article>
+
+        <h1>硬件相关问题</h1>
+
+        <p>本章节描述了在开发web应用过程中可能会遇到的典型的硬件问题，以及项目实施相关的限制。</p>
+
+        <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/Hardware-Related-Issues.html#too_many_attributes">Too Many Attributes</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html#aa_issues">使用程序纹理时出现锯齿问题</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html#z_fighting">当两个物体过于靠近时出现相交伪影</a></li></ul><!-- /TOC --> <p><a href="manual/zh/introduction/Hardware-Related-Issues.html#too_many_attributes" id="too_many_attributes" class="permalink">#</a></p>
+
+        <h2>Too Many Attributes</h2>
+
+        <p>在您的场景运行过程中，偶尔可能会遇到一些对象没有被渲染的问题，浏览器控制台会显示如下错误：</p>
+        
+        <img src="files/hardware-related-issues/too-many-attributes.jpg" class="centered" style="max-width: 846px"> <span class="img-caption">浏览器控制台中出现“Too Many Attributes（属性太多）”错误</span>
+        <p>这个错误意味着一些对象(那些未被渲染的对象)超过了单个着色器可使用的顶点属性的最大数量限制。</p>
+
+        <p>一个对象使用多少属性取决于不同的因素：是否存在形态键(Blender)/变形目标(3ds Max)/混合形状(Maya)及其数量，是否用到蒙皮，是否用到特定的材质节点，等等……</p>
+
+        <p>下表解释了如何计算对象所使用属性的数量:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>属性的数量</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="centered">3</td>
+                    <td>必要属性： <b>位置</b>， <b>法线</b>， <b>uv</b>。</td>
+                </tr>
+                <tr>
+                    <td class="centered">+2x</td>
+                    <td>每用到1个形状键(Blender)/变形目标(3ds Max) /混合形状目标(Maya)，则增加两个属性。此类属性值上限为 <b>+12</b>。</td>
+                </tr>
+                <tr>
+                    <td class="centered">+2</td>
+                    <td>如果用到蒙皮则增加两个属性。</td>
+                </tr>
+                <tr>
+                    <td class="centered">+1x</td>
+                    <td>对象材质中每使用1个不同的<a href="manual/zh/introduction/Hardware-Related-Issues.html#attribute-table0">*</a>顶点颜色时，为以下节点增加一个属性:
+                        <ul>
+                            <li>Blender: <b>属性</b>， <b>顶点颜色</b></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centered">+1x</td>
+                    <td>当对象材质中使用了不同<a href="manual/zh/introduction/Hardware-Related-Issues.html#attribute-table0">*</a>的<b>uv</b>贴图时，每增加一个以下节点（第一个除外，已包含在必要属性中，见第一行），则增加一个属性：
+                        <ul>
+                            <li>Blender: <b>UV贴图(UV Map)</b></li>
+                            <li>3ds Max: <b>Bitmap(位图)</b>（仅当“映射类型”设置为“纹理”时），<b>Gradient Ramp(梯度渐变)</b>，<b>Noise(噪波)</b>（仅当“映射”设置为“显式贴图通道”时）</li>
+                            <li>Maya: <b>place2dTexture</b></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centered">+1</td>
+                    <td>如果对象材质有任意以下节点，每个增加1个属性：<ul>
+                            <li>Blender: <b>Normal Map（法线贴图）</b>, <b>Tangent（切线）</b>， (仅计"UV Map"模式)</li>
+                            <li>3ds Max: <b>法线凹凸</b></li>
+                            <li><b>aiNormalMap</b>, <b>bump2d</b> (仅在"Bump Interp"输入 &gt; 0时计算), <b>samplerInfo</b></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centered">+1</td>
+                    <td>如果对象材质有任意以下节点，每个增加1个属性：<ul>
+                            <li>3ds Max: <b>顶点颜色(Vertex Color)</b></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p id="attribute-table0" style="font-size: 14px;">*如果多个节点使用相同的顶点颜色或uv贴图，则在计算属性极限时，将所有这些节点都计为一个节点。</p>
+
+        <p>通常情况下，限制顶点属性在<b>16</b>个以下即可（尽管某些老旧/低端的设备仅能支持8个顶点属性）。大部分情况下，您只需关注使用了多个形态键的对象。除此之外，特定对象/材质的顶点属性一般都不会突破极限。</p>
+
+        <p><a href="manual/zh/introduction/Hardware-Related-Issues.html#aa_issues" id="aa_issues" class="permalink">#</a></p>
+
+        <h2>使用程序纹理时出现锯齿问题</h2>
+
+        <p>在使用过程纹理时，有时你可能会遇到锯齿问题。例如，当使用Checker映射贴图时：</p>
+        
+        <img src="files/hardware-related-issues/aa_msaa.jpg">
+
+        <p>当 <strong>Anti-Aliasing(抗锯齿)</strong> 输出设置为 MSAA 或 Auto 时，这种情况就会发生(在任意)容硬件上，这里默认设置为 MSAA 4x）。MSAA（多样本抗锯齿）技术可产生不错的图像质量，并且对性能的影响较小。但对于对象颜色突然变化的程序纹理效果不佳。</p>
+
+        <p>将 <strong>Anti-Aliasing(抗锯齿)</strong> 技术切换为 FXAA 可解决该问题：</p>
+        
+        <img src="files/hardware-related-issues/aa_fxaa.jpg">
+
+        <p>FXAA 使用后期处理渲染来减少锯齿，并在这类由程序贴图生成的“边缘”上表现很好。</p>
+
+        <p><a href="manual/zh/introduction/Hardware-Related-Issues.html#z_fighting" id="z_fighting" class="permalink">#</a></p>
+
+        <h2>当两个物体过于靠近时出现相交伪影</h2>
+
+        <p>有时您可能会遇到类似下面的情况：</p>
+        
+        <img src="files/hardware-related-issues/z-fighting.jpg" alt="z缓冲冲突伪影">
+
+        <p>这种现象称之为 <strong>z-fighting(z缓冲冲突)</strong> (见<a href="https://en.wikipedia.org/wiki/Z-fighting" target="_blank">维基百科名词解释</a>)。当不同的多边形到摄影机的距离相等或非常相近时，就会发生这种情况。</p>
+
+        <p>要解决此问题，你可以采用以下方案之一：</p>
+
+        <ul>
+            <li>最直接且简单的解决办法是：将对象彼此位置放远一点。</li>
+            <li>增大摄影机的 <em>近</em> 距离（<em>裁切起点</em>），或减小 <em>远</em> 距离（<em>裁剪结束点</em>）。这将使摄影机的距离范围缩小，从而提高深度缓冲区中存储数值的精度。</li>
+            <li>如果您需要在某个表面上放置billboard纹理——请禁用其材质上的 <strong>Depth Test(深度测试)</strong> 参数，并增大billboard对象的 <strong>Rendering Order(渲染顺序)</strong> 参数。这样billboard对象将在表面对象渲染完成后再渲染，并且忽略了该对象存储的深度。这样可以有效消除两个对象之间可能发生的 <strong>z-fighting(z缓冲冲突)</strong> 。</li>
+        </ul>
+
+
+    </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Определение тонкостей производительности в Verge3D - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+
+    <meta property="og:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+    <meta property="article:tag" content="performance">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Performance-Bottlenecks.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Определение тонкостей производительности в Verge3D - Soft8Soft">
+            <meta property="og:description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Performance-Bottlenecks.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Определение тонкостей производительности в Verge3D - Soft8Soft">
+            <meta name="twitter:description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/fps-counter.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-materials.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/network-browser-profile.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-textures.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-render-buffers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Определение тонкостей производительности в Verge3D</h1>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#intro">Интро</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#fps">Проверьте FPS</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile">Профиль Производительности</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_bottlenecks">Общие Тонкости Рендера</a><ul><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#complex_materials">Сложные материалы</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#postprocessing">Постпроцессинг</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#shadows">Тени</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_much_geometry">Слишком Много Геометрии</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#slow_ibl">Медленное Освещение на Основе Изображения</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_many_lights">Слишком Много Света</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_many_render_calls">Слишком Много Запросов Рендеринга</a></li></ul></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#scene_loading_time">Время Загрузки Сцены</a><ul><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_binary_textures">Большие Двоичные Данные или Текстуры</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#shader_compilation">Слишком Много Материалов или Слишком Сложные Материалы</a></li></ul></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#gpu_memory_usage">Использование Памяти GPU</a><ul><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_textures">Большие Текстуры</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#many_postprocessing_passes">Слишком Много Циклов Постобработки</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_geometry_buffers">Большие Буферы Геометрии</a></li></ul></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html#see_also">Смотрите Также</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#intro" id="intro" class="permalink">#</a></p>
+
+    <h2>Интро</h2>
+
+    <p>Учитывая, что вашими приложениями может пользоваться широкая интернет-аудитория, ваши приложения на базе Verge3D должны демонстрировать хорошую производительность. Например, некоторые классы устройств с поддержкой WebGL могут работать гораздо хуже, чем вы ожидаете:</p>
+
+    <ul>
+      <li>Обычные ноутбуки низкого или среднего класса с интегрированным GPU (графика Intel, AMD APU)</li>
+      <li>Устаревшие смартфоны или планшеты.</li>
+      <li>Мобильные устройства VR, такие как Oculus Go или Oculus Quest. Для предотвращения размытия необходимо, чтобы эти устройства выдавали изображение с подходящей частотой кадров. (60, 72, или даже 90 FPS).</li>
+      <li>Устройства с батареей. Огромная загрузка графического процессора быстро разряжает батарею, питающую мобильные устройства</li>
+    </ul>
+
+    <p>Для эффективной оптимизации без ухудшения качества вашего приложения вы должны понимать основу <a href="manual/ru/introduction/Optimizing-WebGL-performance.html">оптимизации ассетов</a>, и понимать, как определить что именно в вашем приложении вызывает медленную загрузку и рендеринг. Это называется <em>performance bottlenecks</em>.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#fps" id="fps" class="permalink">#</a></p>
+
+    <h2>Проверьте FPS</h2>
+
+    <p>FPS (кадры в секунду, или частота кадров) это важнейшая величина, отражающая время рендеринга вашего приложения:</p>
+
+    <ul>
+      <li>&lt; 20 — ваше приложение очень медленное, им почти невозможно пользоваться.</li>
+      <li>20-40 — медленно, но приемлемо.</li>
+      <li>40-60 — достаточно хорошо.</li>
+      <li>60 — идеальная частота кадров на компьютерных и мобильных браузерах.</li>
+      <li>&gt; 60 - частота кадров, на которую следует ориентироваться при использовании гарнитур VR.</li>
+    </ul>
+
+    <p>Начиная с версии 3.2, Verge3D поставляется со встроенным счетчиком FPS. Активировать его можно следующим образом:</p>
+
+    <ul>
+      <li>Быстро нажимая <strong>F</strong>, <strong>F</strong>, <strong>F</strong> (тройное F) на вашей клавиатуре.</li>
+      <li>Использовать JavaScript и метод API <a href="api/en/extras/App.html#showFPS">showFPS()</a> .</li>
+    </ul>
+
+    <p>После активации вы сможете увидеть текущее значение FPS (вместе с его диапазоном и графиком истории) на небольшой панели в левом верхнем углу вашего приложения:</p>
+
+    <img src="files/performance-bottlenecks/fps-counter.jpg" alt="Verge3D FPS counter window" class="centered" style="max-width: 879px;">
+
+    <p>Чтобы получить достоверные значения, следует измерять FPS на самых медленных/старых устройствах, которые у вас есть. Кроме того, большинство браузеров не позволяют приложению работать с частотой кадров более 60 Гц (это улучшает синхронизацию кадров, экономит ресурс батареи и снижает шум вентилятора).</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile" id="performance_profile" class="permalink">#</a></p>
+
+    <h2>Профиль Производительности</h2>
+
+    <p>Verge3D оснащен функцией генерации профилей производительности в режиме реального времени. Вы можете получить быстрое представление о том, что происходит с производительностью в вашем приложении и что нужно сделать для ее повышения. Для создания таких профилей вы можете использовать один из следующих методов:</p>
+
+    <ul>
+      <li>Быстро нажимая <strong>P</strong>, <strong>P</strong>, <strong>P</strong> (тройное P) на вашей клавиатуре. (Verge3D 3.2+).</li>
+      <li>Используйте пазл <a href="manual/ru/puzzles/System.html#print_performance_info">print performance info</a> .</li>
+      <li>Использовать JavaScript и метод из API <a href="api/en/extras/App.html#printPerformanceInfo">printPerformanceInfo()</a> .</li>
+    </ul>
+
+    <p>Подождите не менее 1 секунды, пока Verge3D соберет данные профиля, затем откройте <a href="manual/ru/introduction/FAQ.html#browser_console">консоль</a> браузера. Проверьте строку в открывшемся окне консоли:</p>
+
+    <code>--- Verge3D Performance Profile (1s) ---</code>
+
+    <p>Под ним - строки с собранной информацией о производительности:</p>
+
+    <img src="files/performance-bottlenecks/performance-profile.jpg" alt="Verge3D performance profile" class="centered" style="max-width: 880px;">
+
+    <p>Вот что можно узнать из созданного профиля производительности:</p>
+
+    <dl>
+      <dt>Scene Loading Time</dt>
+      <dd>Время в секундах, необходимое для загрузки <em>основной</em> сцены приложения. Смотрите <a href="manual/ru/introduction/Performance-Bottlenecks.html#scene_loading_time">ниже</a> о том, как его уменьшить.</dd>
+
+      <dt>FPS</dt>
+      <dd>Частота кадров рендеринга. Это то же значение, о котором сообщает счетчик FPS.</dd>
+
+      <dt>Render Calls</dt>
+      <dd>Количество запросов рендера на кадр. Важное значение, показывающее, сколько операций отрисовки выполняется в течение одного кадра. Это значение представляет собой количество различных материалов на вашей сцене + различные дополнительные запросы рендера, такие как тени, постобработка и т.д. </dd>
+
+      <dt>Triangles Rendered</dt>
+      <dd>Сколько треугольников было отрисовано за кадр. Подробнее об этом значении смотрите ниже.</dd>
+
+      <dt>Geometry Buffers</dt>
+      <dd>Сколько буферов геометрии использует ваше приложение.</dd>
+
+      <dt>HDR Rendering</dt>
+      <dd>Был ли  HDR рендеринг <em>включен</em> или <em>выключен</em>.</dd>
+
+      <dt>Viewport Resolution</dt>
+      <dd>Разрешение рендера вьюпорта.</dd>
+
+      <dt>Pixel Ratio</dt>
+      <dd>Текущее соотношение пикселей (используемое рендером) и соотношение пикселей устройства (нативное).</dd>
+
+      <dt>Image-Based Lighting</dt>
+      <dd>Тип освещения IBL и размер кубамапы IBL.</dd>
+
+      <dt>Lights</dt>
+      <dd>Количество источников света в вашей сцене.</dd>
+
+      <dt>Post-Processing</dt>
+      <dd>Проходы постобработки сцены (в порядке рендеринга).</dd>
+
+      <dt>Shadow Map</dt>
+      <dd>Параметры карты теней: размер фильтрации; количество отрисованных карт теней; разрешение карты теней.</dd>
+
+      <dt>Materials and Shaders</dt>
+      <dd>Список отрисованных материалов и шейдеров. Каждый элемент списка содержит следующую информацию: имя материала (или имена, если они используют один и тот же шейдер), имя шейдера и время рендеринга на кадр (измеряется в миллисекундах).</dd>
+
+      <dt>Total Render Time</dt>
+      <dd>Общее количество времени (в миллисекундах), которое потребовалось для рендеринга вашей сцены.</dd>
+
+      <dt>Textures &amp; Render Buffers</dt>
+      <dd>Статистика текстур и буферов рендера. Текстуры выводятся в верхней части списка (с префиксом <strong>Texture</strong>), а буферы рендера - в нижней (с префиксом <strong>WebGLRenderTarget</strong>).</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_bottlenecks" id="performance_bottlenecks" class="permalink">#</a></p>
+
+    <h2>Общие Тонкости Рендера</h2>
+
+    <p>Вот наиболее часто встречающиеся слабые места, ограничивающие частоту кадров.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#complex_materials" id="complex_materials" class="permalink">#</a></p>
+
+    <h3>Сложные материалы</h3>
+
+    <p>Графическое оборудование способно отображать ограниченное количество пикселей в секунду. В большинстве сценариев вы не можете отрисовать больше, потому что ваши материалы используют длинные и сложные пиксельные (фрагментные) шейдеры, которые требуют слишком много вычислительной мощности от GPU.</p>
+
+    <p>Вы можете легко определить ситуацию с ограниченной производительностью пикселей, уменьшив или увеличив размер окна браузера. Если частота кадров (FPS) существенно возрастает при уменьшении размера, то у вас именно такая ситуация.</p>
+
+    <p>Самый простой способ повысить производительность - упростить материалы. Обратите внимание на верхнюю часть списка  <strong>Materials and Shaders</strong> в <a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile">профиле производительности</a>.
+
+    <img src="files/performance-bottlenecks/performance-profile-materials.jpg" alt="Profiling materials and shaders">
+
+    </p><p>Во многих случаях проблемы с производительностью материалов возникают из-за медленной работы нод затенения. Подробнее смотрите в разделах об оптимизации материалов в <a href="manual/ru/blender/Shader-Nodes-Reference.html#performance_considerations">Blender</a>, <a href="manual/ru/max/Materials-Maps-Reference.html#performance_considerations">3ds Max</a> or <a href="manual/ru/maya/Materials.html#performance_considerations">Maya</a> .</p>
+
+    <p>Вы также можете избавиться от проблемы плохой производительности шейдеров, установив соотношение пикселей &lt; 1 с помощью пазла <a href="manual/ru/puzzles/System.html#set_screen_scale">set screen scale</a> . Это может сильно повлиять на качество вашего приложения, поэтому считайте это решением на крайний случай.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#postprocessing" id="postprocessing" class="permalink">#</a></p>
+
+    <h3>Постпроцессинг</h3>
+
+    <p>Несколько эффектов постобработки могут существенно снизить производительность ваших приложений:</p>
+
+    <ul>
+      <li>Screen-space refraction and reflection (см. пазл <a href="manual/ru/puzzles/Postprocessing.html#ssr"></a>).</li>
+      <li>Ambient occlusion (см. пазл <a href="manual/ru/puzzles/Postprocessing.html#ssao"></a>).</li>
+      <li>Depth-of-field (см. пазл <a href="manual/ru/puzzles/Postprocessing.html#dof"></a>).</li>
+    </ul>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#shadows" id="shadows" class="permalink">#</a></p>
+
+    <h3>Тени</h3>
+
+    <p>Сложные алгоритмы теней с большими размерами карт теней также могут негативно повлиять на скорость рендеринга.</p>
+
+    <ol>
+      <li>Если на сцене несколько источников света, отключите тени для самых слабых (с низкой интенсивностью).</li>
+      <li>В большинстве случаев тени от источника освещения типа <em>point</em> требуют больше вычислений, чем тени от <em>spot</em> или <em>sun/directional</em>.</li>
+      <li>Уменьшите размер карты теней (см. <a href="manual/ru/blender/Shadows.html#global_settings">Blender</a>, <a href="manual/ru/max/Shadows.html#per_light_settings">3ds Max</a>, <a href="manual/ru/maya/Shadows.html#per_light_settings">Maya</a>).</li>
+      <li>Переход на менее требовательный к производительности алгоритм фильтрации теней (см. <a href="manual/ru/blender/Shadows.html#shadow_filtering">Blender</a>, <a href="manual/ru/max/Shadows.html#shadow_filtering">3ds Max</a>, <a href="manual/ru/maya/Shadows.html#shadow_filtering">Maya</a>).</li>
+    </ol>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_much_geometry" id="too_much_geometry" class="permalink">#</a></p>
+
+    <h3>Слишком Много Геометрии</h3>
+
+    <p>Слишком сложная геометрия также может повлиять на производительность рендеринга. Мы рекомендуем использовать не более 100K треугольников на модель или 1M треугольников на всю сцену.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#slow_ibl" id="slow_ibl" class="permalink">#</a></p>
+
+    <h3>Медленное Освещение на Основе Изображения</h3>
+
+    <p>В Verge3D можно выполнить несколько настроек производительности для освещения окружения:</p>
+
+    <ol>
+      <li>Уменьшите размер кубомапы (см. <a href="manual/ru/blender/Lighting-and-Rendering.html">Blender</a>, <a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">3ds Max</a>, <a href="manual/ru/maya/Lighting-and-Rendering.html#environment_lighting">Maya</a>). В большинстве случаев мы рекомендуем использовать кубомапу размером в 256 pixel.</li>
+      <li>Переключитесь на более эффективный режим окружения (см. <a href="manual/ru/blender/Lighting-and-Rendering.html">Blender</a>, <a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">3ds Max</a>, <a href="manual/ru/maya/Lighting-and-Rendering.html#global_rendering_settings">Maya</a>).</li>
+    </ol>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_many_lights" id="too_many_lights" class="permalink">#</a></p>
+
+    <h3>Слишком Много Света</h3>
+
+    <p>Чрезмерные расчеты света увеличивают сложность ваших шейдеров. Попробуйте уменьшить их количество или переключиться на освещение <a href="manual/ru/introduction/Optimizing-WebGL-performance.html#HDR_Lighting">IBL-only</a> .</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#too_many_render_calls" id="too_many_render_calls" class="permalink">#</a></p>
+
+    <h3>Слишком Много Запросов Рендеринга</h3>
+
+    <p>
+      Сотни запросов рендеринга значительно нагружают процессор. Поэтому следует держать это значение как можно ниже. В большинстве ситуаций мы рекомендуем вам держать количество запросов рендеринга ниже 100.
+    </p>
+
+    <p>
+      Если вы рендерите много статических объектов с одним и тем же материалом, вы можете значительно увеличить производительность, используя пазл <a href="manual/ru/puzzles/Scenes.html#batch_geometry">batch geometry</a> .
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#scene_loading_time" id="scene_loading_time" class="permalink">#</a></p>
+
+    <h2>Время Загрузки Сцены</h2>
+
+    <p>Еще один момент, на который необходимо обратить внимание, - это время загрузки сцены. Пользователи не любят долго ждать, пока загрузится ваше приложение.</p>
+
+    <p>Вот наиболее часто встречающиеся слабые места, которые замедляют загрузку вашего приложения.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_binary_textures" id="large_binary_textures" class="permalink">#</a></p>
+
+    <h3>Большие Двоичные Данные или Текстуры</h3>
+
+    <p>Поскольку ассеты вашего приложения передаются по сети, их размер следует минимизировать. Чтобы помочь вам в оптимизации ассетов, существует инструмент проверки сети, доступный из <a href="manual/ru/introduction/FAQ.html#browser_console">консоли</a> браузера. Просто нажмите на вкладку <strong>Network</strong> и перезагрузите страницу.</p>
+
+    <img src="files/performance-bottlenecks/network-browser-profile.jpg" alt="Profiling network activity in Verge3D" class="centered" style="max-width: 943px;">
+
+    <p class="note">О том, как использовать эту функцию, читайте в документации к браузеру: <a href="https://developers.google.com/web/tools/chrome-devtools/network" target="_blank">Chrome</a>, <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor" target="_blank">Firefox</a>, <a href="https://developer.apple.com/safari/tools/" target="_blank">Safari</a>.</p>
+
+    <p>Сортируйте ресурсы по размеру, чтобы отобрать те, которые больше всего влияют на время загрузки. В большинстве случаев эти ресурсы можно разделить на две категории:</p>
+
+    <ol>
+      <li><strong>Verge3D Binary</strong> (*.bin или *.bin.xz расширения) — содержит геометрию, морфинг и анимацию вашей сцены. Сжатие ассетов может значительно уменьшить размер этого файла, всегда <a href="manual/ru/introduction/Asset-compression.html">учитывайте</a> это в ваших приложениях.</li>
+      <li><strong>Textures</strong> (*.jpg, *.png, или *.hdr расширения) — см. <a href="manual/ru/introduction/Optimizing-WebGL-performance.html#Texturing">здесь</a> для получения дополнительной информации о том, как их оптимизировать.</li>
+    </ol>
+
+    <p>Кроме того, есть два грубых, но очень эффективных метода оптимизации текстур:</p>
+
+    <ol>
+      <li>Уменьшите масштаб текстур, уменьшив их размеры в 2 раза (например, 2048x2048 до 1024x1024 или даже 512x512).</li>
+      <li>Конвертируйте все текстуры PNG в JPEG (даже карты нормалей).</li>
+    </ol>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#shader_compilation" id="shader_compilation" class="permalink">#</a></p>
+
+    <h3>Слишком Много Материалов или Слишком Сложные Материалы</h3>
+
+    <p>За некоторыми исключениями, каждый материал на вашей сцене требует компиляции пары специальных программ, называемых шейдерами <em>vertex shader</em> и <em>fragment (или пиксельный) шейдер</em>. Шейдер - это специальная программа, выполняемая на вашем GPU для расчета различных объектов рендеринга, таких как положение вертексов, текстуры, освещение, отражения, преломления и т.д.</p>
+
+    <p>Компиляция шейдеров - это требовательная к вычислениям задача, которая выполняется при каждой загрузке вашего приложения. Если на сцене используется большое количество различных материалов, компиляция шейдеров может значительно увеличить общее время загрузки.</p>
+
+    <p>Поэтому чем меньше шейдеров использует ваше приложение, тем быстрее оно загружается. Кроме того, шейдеры кэшируются WebGL, поэтому если шейдер используется несколькими объектами, он компилируется только один раз.</p>
+
+    <p>Поэтому для быстрой загрузки важно использовать как можно меньше уникальных шейдеров. Одним из возможных способов достижения этого является включение флага совместимости glTF, который а) значительно упрощает шейдеры, чтобы они компилировались и работали быстрее, и б) стандартизирует их для более эффективного кэширования.</p>
+
+    <p>Очевидным недостатком использования glTF-совместимых шейдеров является то, что они могут быть слишком упрощенными для реализации желаемых графических эффектов. Поэтому, как это всегда бывает в графике реального времени, необходимо балансировать между качеством и производительностью.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#gpu_memory_usage" id="gpu_memory_usage" class="permalink">#</a></p>
+
+    <h2>Использование Памяти GPU</h2>
+
+    <p>Чрезмерное использование памяти GPU может значительно снизить производительность или даже привести к закрытию вашего приложения. Следующие вещи потребляют много памяти.</p>
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_textures" id="large_textures" class="permalink">#</a></p>
+
+    <h3>Большие Текстуры</h3>
+
+    <p>Например, одна только текстура размером 4096x4096 занимает почти 90 Мб видеопамяти. Чтобы получить все текстуры в вашем приложении, проверьте раздел <strong>Textures &amp; Render Buffers</strong> в <a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile">профиле производительности</a>.</p>
+
+    <img src="files/performance-bottlenecks/performance-profile-textures.jpg" alt="Profiling textures in Verge3D">
+
+    <p>См. <a href="manual/ru/introduction/FAQ.html#texture_memory_usage">здесь</a> для получения дополнительной информации о том, как рассчитать использование памяти текстурами.</p>
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#many_postprocessing_passes" id="many_postprocessing_passes" class="permalink">#</a></p>
+
+    <h3>Слишком Много Циклов Постобработки</h3>
+
+    <p>Большинство эффектов постобработки требуют дополнительных буферов рендеринга, которые потребляют память GPU. Обратите внимание на нижнюю часть списка <strong>Textures &amp; Render Buffers</strong> в <a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile">профиле производительности</a> чтобы увидеть все буферы рендеринга.</p>
+
+    <img src="files/performance-bottlenecks/performance-profile-render-buffers.jpg" alt="Profiling render buffers in Verge3D" class="centered" style="max-width: 816px;">
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#large_geometry_buffers" id="large_geometry_buffers" class="permalink">#</a></p>
+
+    <h3>Большие Буферы Геометрии</h3>
+
+    <p>Меши с большим количеством треугольников требуют больших буферов геометрии и потребляют много видеопамяти для их хранения.</p>
+
+
+
+    <p><a href="manual/ru/introduction/Performance-Bottlenecks.html#see_also" id="see_also" class="permalink">#</a></p>
+
+    <h2>Смотрите Также</h2>
+
+    <p>
+      Ознакомьтесь с разделом <a href="manual/ru/introduction/Optimizing-WebGL-performance.html">методы оптимизации</a> для получения дополнительной информации о способах оптимизации ассетов.
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

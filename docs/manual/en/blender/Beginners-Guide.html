@@ -1,0 +1,557 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for Blender: Beginner's Guide - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up Blender for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/blender/Beginners-Guide.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for Blender: Beginner's Guide - Soft8Soft">
+            <meta property="og:description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up Blender for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/blender/Beginners-Guide.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for Blender: Beginner's Guide - Soft8Soft">
+            <meta name="twitter:description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up Blender for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/sneak-peek-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create-options.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-running.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-open-source-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/export-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/export-name-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/puzzles-editor.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-toolbox.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-toolbox2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-save.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-network.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-complete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/license-key-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-license-activation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-license-activated.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Beginner's Guide / Blender</h1>
+
+    <p>
+    Verge3D is a versatile piece of software which you can utilize differently depending on your personal preferences. This guide describes just one of possible ways of how you can build your workflow, so take it as a friendly recommendation. The only prerequisite is that you should have some experience with Blender on top of which Verge3D works.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/blender/Beginners-Guide.html#Installation">Installation</a></li><li><a href="manual/en/blender/Beginners-Guide.html#Sneak_Peek">Sneak Peek</a></li><li><a href="manual/en/blender/Beginners-Guide.html#App_Manager">App Manager</a></li><li><a href="manual/en/blender/Beginners-Guide.html#Running_Your_App">Running Your App</a></li><li><a href="manual/en/blender/Beginners-Guide.html#Export">Export</a></li><li><a href="manual/en/blender/Beginners-Guide.html#Puzzles">Puzzles</a></li><li><a href="manual/en/blender/Beginners-Guide.html#Publishing">Publishing</a></li><li><a href="manual/en/blender/Beginners-Guide.html#License_Key">Activating License</a></li><li><a href="manual/en/blender/Beginners-Guide.html#whats_next">What's Next</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Installation" id="Installation" class="permalink">#</a></p>
+
+    <h2>Installation</h2>
+
+    <p>
+    The installation procedure is thoroughly described <a href="manual/en/blender/Installation.html">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Sneak_Peek" id="Sneak_Peek" class="permalink">#</a></p>
+
+    <h2>Sneak Peek</h2>
+
+    <p>
+    To make sure that Verge3D is installed correctly, you can render a basic model in the web browser by using the <strong>Sneak Peek</strong> button. This function will perform an export to a temporary folder and will run the default web browser with interactive rendering.
+    </p>
+
+    <img src="files/beginner_guide/sneak-peek-blender.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+    You may use <strong>Sneak Peek</strong> for quick tests any time you are working on your projects.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#App_Manager" id="App_Manager" class="permalink">#</a></p>
+
+    <h2>App Manager</h2>
+
+    <p>
+    Although you can start working on graphics first and create a Verge3D project later, we encourage you to get used to the App Manager from the beginning. By doing so you ensure that your files are properly organized and stored within the same folder which is important for integrity of your project, especially if you plan to transfer it to a third party.
+    </p>
+
+    <p>
+    Another benefit of leveraging the App Manager beforehand is that you will always have a functioning web application which you can run/reload in the browser without the need to go to your scene files first.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-main.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    The App Manager opens up in the web browser when you click the <strong>App Manager</strong> button. The default system browser will be running - you can change it in your OS settings. Any modern browser will work yet we recommend the latest version of <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> which is fast, standards-compliant and offers good web development tools.
+    </p>
+
+    <img src="files/beginner_guide/app-manager-blender.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+    You can create a new project using the button on the left bar.
+    </p>
+
+    <img src="files/app-manager/app-manager-create.jpg" class="centered" style="max-width: 569px">
+
+    <p>
+    Type a project name (or just leave <i>my_awesome_app</i>) and click <strong>Create App</strong>. Leave the default configuration options as they are for now.
+    </p>
+
+    <img src="files/app-manager/app-manager-create-options.jpg" class="centered" style="max-width: 522px">
+
+    <p>
+    Once a new application is created, it will appear in the list.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Running_Your_App" id="Running_Your_App" class="permalink">#</a></p>
+
+    <h2>Running Your App</h2>
+
+    <p>
+    You can run your app any time by clicking the Verge3D icons, either the blue or the green one. The blue icon launches an app in its final form, with its Puzzles scenario and the programming code (if present). On the contrary, the green icon only opens the exported scene.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-run.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+    A freshly created app loads and displays just a cube. You can look around with the left mouse button pressed, and zoom in and out with the mouse wheel.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-running.jpg" class="centered" style="max-width: 985px">
+
+    <p class="note">
+    If instead of the cube it shows something like "This site can’t be reached" this means that the development server is down, probably because you accidentally closed the first launched instance of your 3D editor and the development server along with it. In this case you should launch Blender, or, if the program is already running, start the App Manager again.
+    </p>
+
+    <p class="note">
+    Although very rare, another warning can be shown: "Ouch! Your graphics card does not support WebGL." This can happen if you're using an outdated or unsupported browser such as Internet Explorer below version 11, or your video card and/or drivers are blacklisted by the browser. Try installing latest Google Chrome/updating your OS/downloading latest drivers, or just find another computer to work on.
+    </p>
+
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Export" id="Export" class="permalink">#</a></p>
+
+    <h2>Export</h2>
+
+    <p>
+    By clicking on the <strong>B</strong> icon you can open up the main <strong>.blend</strong> file of your application.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-open-source-file.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+    The save files can also be opened as usual via the "File &gt; Open" dialog or simply by double-clicking on them in the application folder. "File &gt; Open" may sometimes be more efficient since it does not spawn a new instance of Blender.
+    </p>
+
+    <p class="note">
+    It is important to understand that an application only loads files exported in glTF format, rather than Blender's save files. So every time you change something in your source file, you must export from it in order to see the modified scene in your app.
+    </p>
+
+    <p>
+    Exporting can be performed from the "File &gt; Export" menu. You might want to assign a shortcut for this operation since you may perform it quite often.
+    </p>
+
+    <img src="files/beginner_guide/export-blender.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+    Export your scene to the root of the corresponding application folder, in <strong>glTF</strong> format.
+    </p>
+
+    <img src="files/beginner_guide/export-name-blender.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+    To test it out, add some Suzannes to your scene, export to <strong>glTF</strong> and run your app by clicking the blue Verge3D logo icon in the App Manager.
+    </p>
+
+    <p class="note">
+    For quicker iterations, you can keep your application always running in a browser tab.
+      Hit "F5" on your keyboard after you re-export your scene so that it reloads in the browser.
+      Use the "Alt+Tab" ("Command+Tab" on Mac) shortcut to instantly switch between Blender and the browser.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Puzzles" id="Puzzles" class="permalink">#</a></p>
+
+    <h2>Puzzles</h2>
+
+    <p>
+    Until now we used Verge3D as a fancy web exporter, which generates live 3D views running in the browser. With Puzzles, Verge3D's visual scripting tool, you can add behavior scenarios so that your 3D scene becomes a truly interactive web application.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-puzzles.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+    Click the <strong>Puzzles</strong> button near your app name in the App Manager. This will run your app with the Puzzles editor attached on top of it.
+    </p>
+
+    <img src="files/beginners-guide-blender/puzzles-editor.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    On the left the toolbox with some categories ("Events", "Selectors", "Objects", etc) is located. The categories are expanded upon mouse click revealing puzzles which you can drag out to the workspace. By connecting <a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html">various puzzles</a> with each other, you can create a scenario of how your 3D objects will behave upon user input.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-toolbox.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    To do something meaningful for the beginning, drag out the <strong>when clicked</strong> puzzle from the <strong>Events</strong> category, and the <strong>select an object</strong> puzzle from the <strong>Selectors</strong>.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-toolbox2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Connecting them together means that you app will be waiting until the user clicks on the object that you chose in the dropdown menu ("Cube", for example), and will do... nothing unless you add something in the <strong>do</strong> slot.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-example.jpg" class="centered" style="max-width: 500px">
+
+    <p>
+    Drag out the <strong>hide</strong> puzzle from the <strong>Objects</strong> and insert it to that slot. Drag out another object selector puzzle and connect it with <strong>hide</strong>.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-example2.jpg" class="centered" style="max-width: 500px">
+
+    <p>
+    Now, once the user clicks on the 3D object, it it should disappear. Click the <strong>Run</strong> button in order to launch your program and check if it works by clicking on the cube.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-run.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    In order to make your scenario a persistent part of your application, be sure to save it.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-save.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Once you finished with Puzzles, you can run your now-interactive app using the blue icon in the App Manager.
+    </p>
+
+    <p class="note">Congratulations, you have become a programmer!</p>
+
+    <p>
+    You can also check out <a href="https://www.youtube.com/watch?v=VkjEfSmI2xM" target="_blank">this video</a> explaining how to work with the Puzzles.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#Publishing" id="Publishing" class="permalink">#</a></p>
+
+    <h2>Publishing</h2>
+
+
+    <h3>On your own website...</h3>
+
+    <p>
+    You've created a web application and probably want the billions of Internet users to come and check it out. If you own a website, this won't be a problem - simply upload the entire folder with your application to your server (via FTP, for example). Once deployed, you can provide a link to the app's HTML file somewhere on your website, or embed it in a web page with the <strong>iframe</strong> HTML element:
+    </p>
+
+    <code>
+      &lt;iframe width="1024" height="640" src="https://www.example.com/my_awesome_app/my_awesome_app.html"&gt;&lt;/iframe&gt;
+    </code>
+
+    <h3>Using WordPress...</h3>
+
+    <p>
+    The task is even more simplified if you are running the WordPress CMS on your website - you can use the free Verge3D <a href="manual/en/introduction/Wordpress-Plugin.html">WordPress plugin</a> to upload and embed Verge3D apps.
+    </p>
+
+    <h3>On Verge3D Network...</h3>
+
+    <p>
+    But what if you haven't had the chance to become a web master? No problem - by clicking a button in the App Manager you can upload your app to the <a href="https://www.soft8soft.com/verge3d-network/" target="_blank">Verge3D Network</a>, a cloud-based storage and CDN hosted on Amazon servers.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-network.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+    After the uploading is complete, a screen will show up with a direct link which you can share by whatever means (in a blog post, social media, comments, email, you name it). It will also generate HTML code for embedding your app in third-party websites just like you do it with YouTube videos.
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-complete.jpg" class="centered" style="max-width: 642px">
+
+    <p>
+    You can also check out <a href="https://www.youtube.com/watch?v=ZyYlxQ3aVY4" target="_blank">this video</a> explaining how to publish your app on Verge3D Network.
+    </p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#License_Key" id="License_Key" class="permalink">#</a></p>
+
+    <h2>Activating License</h2>
+
+    <p>
+    You can take the trial for a spin for indefinitely long period of time. However, for use in production you will need a <a href="https://www.soft8soft.com/licensing/" target="_blank">license</a>. The license information is sent via email (the key below is a random example).
+    </p>
+
+    <img src="files/beginners-guide-blender/license-key-example.jpg" class="centered" style="max-width: 900px">
+
+    <img src="files/beginners-guide-blender/app-manager-license-activation.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    The license key will activate your Verge3D instance and will remove the trial watermark from all your apps.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-license-activated.jpg" class="centered" style="max-width: 504px">
+
+    <p class="note">Be sure to enter the license key each time you update to a new version.</p>
+
+
+    <p><a href="manual/en/blender/Beginners-Guide.html#whats_next" id="whats_next" class="permalink">#</a></p>
+
+    <h2>What's Next</h2>
+
+    <p>
+    Proceed to the <a href="manual/en/introduction/Workflow.html">Workflow</a> chapter for a more advanced guide on using Verge3D.
+    </p>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for Blender: Animation - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page contains the information about Blender's animation types supported in Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/blender/Animation.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for Blender: Animation - Soft8Soft">
+            <meta property="og:description" content="This page contains the information about Blender's animation types supported in Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/blender/Animation.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for Blender: Animation - Soft8Soft">
+            <meta name="twitter:description" content="This page contains the information about Blender's animation types supported in Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/insert-keyframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/skeletal-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/shape-key-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/shape-key-animation-insert-keyframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/node-material-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/node-material-animation-insert-keyframes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation-animate-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/blender-verge3d-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/interpolation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/animation-blender/frame-rate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Animation / Blender</h1>
+
+    <p>
+    This page contains the information about Blender's animation types which can be used with Verge3D, as well as supported playback options and means to control the animation interactively.
+    </p>
+
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/blender/Animation.html#Setting_Up_Blender">Setting Up in Blender</a><ul><li><a href="manual/en/blender/Animation.html#Whole_Object_Animation">Whole-Object Animation</a></li><li><a href="manual/en/blender/Animation.html#Skeletal_Animation">Skeletal Animation</a></li><li><a href="manual/en/blender/Animation.html#Shape_Key_Animation">Shape Key Animation</a></li><li><a href="manual/en/blender/Animation.html#Material_Animation">Material Animation</a></li><li><a href="manual/en/blender/Animation.html#Procedural_Animation">Procedural Animation</a></li></ul></li><li><a href="manual/en/blender/Animation.html#Playback_Options">Playback Options</a><ul><li><a href="manual/en/blender/Animation.html#Verge3D_Per_Object_Settings">Verge3D Per-Object Settings</a></li><li><a href="manual/en/blender/Animation.html#Interpolation">Interpolation</a></li><li><a href="manual/en/blender/Animation.html#Frame_Rate">Frame Rate</a></li></ul></li><li><a href="manual/en/blender/Animation.html#Animation_Control_with_Puzzles">Animation Control with Puzzles</a></li></ul><!-- /TOC -->
+
+
+
+    <p><a href="manual/en/blender/Animation.html#Setting_Up_Blender" id="Setting_Up_Blender" class="permalink">#</a></p>
+
+    <h2>Setting Up in Blender</h2>
+
+
+    <p><a href="manual/en/blender/Animation.html#Whole_Object_Animation" id="Whole_Object_Animation" class="permalink">#</a></p>
+
+    <h3>Whole-Object Animation</h3>
+
+    <p>
+    Animation keyframes can be added in standard ways in Blender, by using Object &gt; Animation &gt; Insert Keyframe... menu (or with the shortcut <strong>I</strong>), selecting another frame on the timeline, moving/rotating/scaling an object to a new position and adding a new animation keyframe for this position.
+    </p>
+
+    <img src="files/animation-blender/insert-keyframe.jpg" alt="Inserting keyframes in Verge3D for Blender" class="centered" style="max-width: 1000px">
+
+
+    <p>See also the following tutorial:</p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/VkjEfSmI2xM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+
+    <p><a href="manual/en/blender/Animation.html#Skeletal_Animation" id="Skeletal_Animation" class="permalink">#</a></p>
+
+    <h3>Skeletal Animation</h3>
+
+    <p>
+    An object can be skinned in Blender with an <a href="https://docs.blender.org/manual/en/latest/animation/armatures/index.html" target="_blank">Armature</a> object. Verge3D support maximum 4 weights per bone (4 most influential weights are selected, others are ignored). The armature's bones can be animated in <strong>Pose Mode</strong> (Ctrl-Tab), by using Pose &gt; Animation &gt; Insert Keyframe... menu (or with the shortcut <strong>I</strong>), selecting another frame on the timeline, moving/rotating/scaling a bone to a new position and adding a new animation keyframe for this position.
+    </p>
+
+    <img src="files/animation-blender/skeletal-animation.jpg" alt="Inserting keyframes for skeletal animation in Verge3D for Blender" class="centered" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/blender/Animation.html#Shape_Key_Animation" id="Shape_Key_Animation" class="permalink">#</a></p>
+
+    <h3>Shape Key Animation</h3>
+
+    <p>
+    You can add <a href="manual/en/blender/Morphing.html">shape keys</a> to an object in standard ways in Blender (click on the link for more details).
+    </p>
+
+    <img src="files/animation-blender/shape-key-animation.jpg" alt="Shape key animation in Verge3D for Blender" class="centered" style="max-width: 889px">
+
+    <p>
+    The values for shape keys can be animated in Blender, by right-clicking on a value field and selecting <strong>Insert Keyframe</strong> (or by hovering the cursor over it and using the shortcut <strong>I</strong>), selecting another frame on the timeline, setting a new value in the field and adding a new animation keyframe for this value.
+    </p>
+
+    <img src="files/animation-blender/shape-key-animation-insert-keyframe.jpg" alt="Inserting keyframes for shape key animation in Verge3D for Blender" class="centered" style="max-width: 199px">
+
+
+    <p><a href="manual/en/blender/Animation.html#Material_Animation" id="Material_Animation" class="permalink">#</a></p>
+
+    <h3>Material Animation</h3>
+
+    <p>
+    Unlike with Blender, you can only animate a material parameter by first connecting it to a <strong>Value</strong> or <strong>RGB</strong> node.
+    </p>
+
+    <img src="files/animation-blender/node-material-animation.jpg" alt="Node material animation in Verge3D for Blender" class="centered" style="max-width: 1000px">
+
+    <p>
+    The values or colors specified by these nodes can be animated in Blender, by right-clicking on a node and selecting <strong>Insert Keyframe</strong> (or by hovering the cursor over it and using the shortcut <strong>I</strong>), selecting another frame on the timeline, setting a new value or color and adding a new animation keyframe for it.
+    </p>
+
+    <img src="files/animation-blender/node-material-animation-insert-keyframes.jpg" alt="Inserting keyframes for node material animation in Verge3D for Blender" class="centered" style="max-width: 200px">
+
+
+    <p><a href="manual/en/blender/Animation.html#Procedural_Animation" id="Procedural_Animation" class="permalink">#</a></p>
+
+    <h3>Procedural Animation</h3>
+
+    <p>
+    Instead of playing back some animation which was pre-made in Blender, you can use Puzzles or JavaScript to modify coordinates or some other parameters with time. Particulurly, the <a href="manual/en/puzzles/Animation.html#animate_param">animate param</a> puzzle (based on the Tween.js library) is a convenient way to create your own animation on the fly.
+    </p>
+
+    <img src="files/puzzles/puzzles-animation-animate-param.jpg" alt="Using the animate param puzzle to create animation in Verge3D for Blender" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/en/blender/Animation.html#Playback_Options" id="Playback_Options" class="permalink">#</a></p>
+
+    <h2>Playback Options</h2>
+
+
+    <p><a href="manual/en/blender/Animation.html#Verge3D_Per_Object_Settings" id="Verge3D_Per_Object_Settings" class="permalink">#</a></p>
+
+    <h3>Verge3D Per-Object Settings</h3>
+
+    <p>
+    Each object in Blender is assigned with Verge3D settings, including the settings for animation playback.
+    </p>
+
+    <img src="files/animation-blender/blender-verge3d-animation-settings.jpg" alt="Verge3D for Blender animation settings panel" class="centered" style="max-width: 403px">
+
+    <p>
+    Animation settings:
+    </p>
+    <p>
+    </p><ul>
+    <li>
+    <strong>Auto Start</strong> - whether this object's animation will start after the scene is loaded.
+    </li>
+    <li>
+    <strong>Loop Mode</strong> - playback mode: <strong>Repeat</strong> - plays from the start to the end and repeats, <strong>Once</strong> - plays one time and stops, <strong>Ping Pong</strong> - plays from the start to the end and then in reverse.
+    </li>
+    <li>
+    <strong>Repeat Infinitely</strong> - whether this object's animation will be played all over again. Valid only for <strong>Repeat</strong> and <strong>Ping Pong</strong> modes.
+    </li>
+    <li>
+    <strong>Repeat Count</strong> - how many times the animation will be played. Valid only for <strong>Repeat</strong> and <strong>Ping Pong</strong> modes if <strong>Repeat Infinitely</strong> is disabled.
+    </li>
+    <li>
+    <strong>Offset</strong> - how many frames will be skipped before the animation starts.
+    </li>
+    </ul>
+    <p></p>
+
+
+    <p><a href="manual/en/blender/Animation.html#Interpolation" id="Interpolation" class="permalink">#</a></p>
+
+    <h3>Interpolation</h3>
+
+    <p>
+    The menu for switching keyframe interpolation is invoked with right click on the timeline window in Blender (shortcut <strong>T</strong>).
+    </p>
+
+    <img src="files/animation-blender/interpolation.jpg" alt="Keyframe interpolation in Verge3D for Blender" class="centered" style="max-width: 1000px">
+
+    <p>
+    All interpolation modes available in Blender for animation keyframes are supported by Verge3D.
+    </p>
+
+
+    <p><a href="manual/en/blender/Animation.html#Frame_Rate" id="Frame_Rate" class="permalink">#</a></p>
+
+    <h3>Frame Rate</h3>
+
+    <p>
+    The frame rate value (default - 24 fps) which affect the playback speed can be changed in the <strong>Output Properties</strong> tab.
+    </p>
+
+    <img src="files/animation-blender/frame-rate.jpg" alt="Frame rate selector in Verge3D for Blender" class="centered" style="max-width: 389px">
+
+
+    <p><a href="manual/en/blender/Animation.html#Animation_Control_with_Puzzles" id="Animation_Control_with_Puzzles" class="permalink">#</a></p>
+
+    <h2>Animation Control with Puzzles</h2>
+
+    <p>
+    You can use <a href="manual/en/puzzles/Animation.html">animation puzzles</a> for playing back a pre-made animation (click on the link for more details).
+    </p>
+
+    <img src="files/puzzles/puzzles-animation.jpg" alt="Animation puzzles of Verge3D" class="centered" style="max-width: 1000px">
+
+    <p>
+    Animation can also be implemented with other visual scripting blocks - see <a href="manual/en/puzzles/Camera.html">Camera</a> and <a href="manual/en/puzzles/Time.html">Time</a> puzzles.
+    </p>
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

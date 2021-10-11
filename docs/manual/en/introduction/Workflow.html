@@ -1,0 +1,454 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D workflow for Blender, 3ds Max or Maya artists - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Here we describe a recommended workflow that proved to be optimal for creating interactive 3D web experiences using Blender, 3ds Max or Maya.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/introduction/Workflow.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D workflow for Blender, 3ds Max or Maya artists - Soft8Soft">
+            <meta property="og:description" content="Here we describe a recommended workflow that proved to be optimal for creating interactive 3D web experiences using Blender, 3ds Max or Maya.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/introduction/Workflow.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D workflow for Blender, 3ds Max or Maya artists - Soft8Soft">
+            <meta name="twitter:description" content="Here we describe a recommended workflow that proved to be optimal for creating interactive 3D web experiences using Blender, 3ds Max or Maya.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/teapot-heater.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/teapot-modeling.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/hdr-environment.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/scooter-bloom.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/animation.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/advanced_animation_puzzle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/webflow-project.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/post-process-effects.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/sounds.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example1.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Workflow</h1>
+
+    <p>
+      Below is documented a typical workflow that is used internally by the Soft8Soft team and by Verge3D users (examples include the <a href="https://cdn.soft8soft.com/demo/applications/scooter/index.html" target="_blank">Scooter Configurator</a> demo, <a href="https://cdn.soft8soft.com/demo/applications/teapot_heater_max/index.html" target="_blank">Teapot Heater</a> demo, <a href="https://cdn.soft8soft.com/demo/applications/industrial_robot/index.html" target="_blank">Industrial Robot​</a> demo, <a href="https://cdn.soft8soft.com/demo/applications/jewelry_configurator/index.html" target="_blank">Jewelry Configurator</a> among others).
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/introduction/Workflow.html#Modeling_and_Baking">Modeling and Baking</a></li><li><a href="manual/en/introduction/Workflow.html#Choosing_Material_System">Choosing Material System</a></li><li><a href="manual/en/introduction/Workflow.html#Image_Formats_and_Resolution">Image Formats, Resolution and Best Practices</a></li><li><a href="manual/en/introduction/Workflow.html#Environment_Map">Environment Map (Image-Based Lighting)</a></li><li><a href="manual/en/introduction/Workflow.html#HDR_Rendering">HDR Rendering</a></li><li><a href="manual/en/introduction/Workflow.html#Animation_">Animation</a></li><li><a href="manual/en/introduction/Workflow.html#Layout_and_UI">Layout and UI</a></li><li><a href="manual/en/introduction/Workflow.html#Post_processing">Post-Processing</a></li><li><a href="manual/en/introduction/Workflow.html#Audio_">Audio</a></li><li><a href="manual/en/introduction/Workflow.html#Asset_Compression">Asset compression</a></li><li><a href="manual/en/introduction/Workflow.html#Publishing">Publishing</a></li></ul><!-- /TOC -->
+
+    <p>
+      To create interactive 3D web content you can use Blender, 3ds Max, or Maya version of Verge3D with equal success.
+    </p>
+
+    <img src="files/workflow/teapot-heater.jpg" class="centered" style="max-width: 819px;">
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Modeling_and_Baking" id="Modeling_and_Baking" class="permalink">#</a></p>
+
+    <h2>Modeling and Baking</h2>
+
+    <p>
+      In our team, we practice the following modeling pipeline. At first, high-poly versions of models are created. At the next stage, low- to middle-poly models are obtained via simply removing the subsurf modifier or retopology. No more than 100k tris per model is recommended.
+    </p>
+
+    <img src="files/workflow/teapot-modeling.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      The low-poly models are then UV-unwrapped. Finally, the meshes are triangulated - this is not a requirement of Verge3D but rather recommended for baking maps. Also, triangulated models are better suited for loading to third-party editors such as Substance Painter.
+    </p>
+
+    <p>
+      Normal and occlusion maps, if they are needed, are baked using the superimposed high-poly and triangulated low-poly meshes.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Choosing_Material_System" id="Choosing_Material_System" class="permalink">#</a></p>
+
+    <h2>Choosing Material System</h2>
+
+    <p>In most cases, you should base your material workflow on the native materials used in your favorite modelling suite:</p>
+
+    <ul>
+      <li><a href="manual/en/blender/Material-System.html">Blender</a> — shading nodes with Eevee as reference renderer.</li>
+      <li><a href="manual/en/max/Material-System.html">3ds Max</a> — Physical (with ART or Arnold as reference renderer) or Standard (with Scanline as reference renderer).</li>
+      <li><a href="manual/en/maya/Materials.html">Maya</a> — Standard Surface (v. 2020+) or aiStandardSurface (v.2019 or early) with Viewport 2.0 as reference renderer.</li>
+    </ul>
+
+    <p>Alternatively, if your content needs to be compatible with glTF 2.0 standard <a href="manual/en/introduction/FAQ.html#gltf_materials">for some reason</a>, you should use glTF-compatible materials (see the setups for <a href="manual/en/blender/GLTF-Materials.html">Blender</a>, <a href="manual/en/max/GLTF-Materials.html">3ds Max</a>, or <a href="manual/en/maya/GLTF-Materials.html">Maya</a>).</p>
+
+    <p>
+      You may also check out the following videos explaining how to use materials in your Verge3D-based apps: <a href="https://youtu.be/symQy5gEHdY" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">3ds Max</a>, <a href="https://www.youtube.com/watch?v=9BzE98XIOnI">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Image_Formats_and_Resolution" id="Image_Formats_and_Resolution" class="permalink">#</a></p>
+
+    <h2>Image Formats, Resolution and Best Practices</h2>
+
+    <h3>PNG or JPEG</h3>
+
+    <p>
+      For best efficiency, we recommend you to use web-friendly formats for your textures: lossless PNG with maximum compression, or lossy JPEG (although Verge3D also supports GIF, BMP, TIFF). As a rule of thumb, if you don't need the alpha channel in your texture, prefer using JPEG over PNG.
+    </p>
+
+    <h3>Normal Maps</h3>
+
+    <p>
+      The normal maps should be saved as PNG even if the alpha channel is wasted, because normal maps loaded in JPEG format often produce visible shading artefacts. The images in PNG format, however, may be too heavy in regards to file size, so use normal maps only if there is a strong need in them.
+    </p>
+
+    <h3>Resolution</h3>
+
+    <p>
+      Be careful to not use too detailed textures unless you really need them. Big images can adversely impact the performance, drain video memory which is scarce on handheld devices (all the way down to crash) and significantly prolong the loading. The resolution of most of your textures should be 1024 px or below.
+    </p>
+
+    <h3>Beware of NPOT</h3>
+
+    <p>
+      The resolution of the textures should follow power the <i>power-of-two</i> rule (256, 512, 1024 px is great while 1000 px is bad). The engine re-scales all non-power-of-two (NPOT) images upon loading anyway, so consider carefully reviewing your textures in order to achieve maximum efficiency with regard to file size and loading time.
+    </p>
+
+    <h3>Aspect</h3>
+
+    <p>
+      Textures may be square or rectangular such as 1024x512 px.
+    </p>
+
+    <h3>Reuse</h3>
+
+    <p>
+      Always try re-using image files in your materials, and texture maps/nodes in your shaders, rather than making copies.
+    </p>
+
+    <p class="note">
+      Resist the impulse to reuse textures as UI icons — those should be pre-scaled even if it means more files.
+    </p>
+
+    <h3>Pack BW in RGBA</h3>
+
+    <p>
+      If you have several black and white images (AO, light maps, transparency masks, color masks, etc), consider <a href="manual/en/introduction/Optimizing-WebGL-performance.html#Texturing">packing</a> them in the RGBA channels of a single texture.
+    </p>
+
+    <h3>Load on Demand</h3>
+
+    <p>
+      If you are developing a customizer or a similar app, you may consider loading only a limited set of textures on startup. The other textures can be loaded and applied to your models on demand with the <a href="manual/en/puzzles/Materials.html#replace_texture">replace texture</a> puzzle. Another method is to load parts of your scenes dynamically with the <a href="manual/en/puzzles/Scenes.html#append_scene">append scene</a> puzzle.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Environment_Map" id="Environment_Map" class="permalink">#</a></p>
+
+    <h2>Environment Map (Image-Based Lighting)</h2>
+
+    <p>
+      Environment map is a key component of a real-time scene used for providing the background and material reflections. We recommend artists to use equirectangular images in HDR or JPEG format. For performance reasons, the size of the environment map is better to not exceed 2048x1024 px.
+    </p>
+
+    <img src="files/workflow/hdr-environment.jpg" class="centered" style="max-width: 772px;">
+
+    <p>
+      Besides that, HDR textures can be used for imitating complex lighting conditions – for example, if there are too many light sources to be represented by traditional lamps, or they are extended.
+    </p>
+
+    <p>
+      The default cube projects for Blender, 3ds Max, or Maya include the HDR texture called <i>environment.hdr</i> which you can reuse in your apps.
+    </p>
+
+    <p>
+      You may also check out the following videos explaining how to setup the HDR environment in your scene: <a href="https://youtu.be/symQy5gEHdY" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">3ds Max</a>, <a href="https://www.youtube.com/watch?v=9BzE98XIOnI">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#HDR_Rendering" id="HDR_Rendering" class="permalink">#</a></p>
+
+    <h2>HDR Rendering</h2>
+
+    <p>
+      HDR (high dynamic range) rendering pipeline can be enabled with the corresponding checkbox in Verge3D export settings window (3ds Max, Maya), or on Verge3D settings panel under the Render tab (Blender). In this mode, half-float textures are used by the engine for better precision and intensity range, which particularly, is important for proper rendering of the <a href="manual/en/puzzles/Postprocessing.html#bloom">bloom post-process effect</a>.
+    </p>
+
+    <img src="files/workflow/scooter-bloom.jpg" class="centered" style="max-width: 919px;">
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Animation_" id="Animation_" class="permalink">#</a></p>
+
+    <h2>Animation</h2>
+
+    <p>
+      Animation clips are created for relevant model parts as usual. Skinning, whole-object, morph-target and material animation can be used to produce various effects (see more in the <a href="manual/en/blender/Animation.html">Blender</a>, <a href="">3ds Max</a>, or <a href="manual/en/maya/Animation.html">Maya</a> animation guide).
+    </p>
+
+    <img src="files/workflow/animation.png" class="centered" style="max-width: 819px;">
+
+    <p>
+      You might want to provide human-readable names to animated objects so that they can be easily found in the <a href="manual/en/puzzles/Animation.html">Puzzles editor</a>.
+    </p>
+
+    <img src="files/workflow/advanced_animation_puzzle.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      You may also check out the following videos explaining how to create animation: <a href="https://youtu.be/VkjEfSmI2xM" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=0dskMLdNpJ4" target="_blank">3ds Max</a>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Layout_and_UI" id="Layout_and_UI" class="permalink">#</a></p>
+
+    <h2>Layout and UI</h2>
+
+    <p>
+      In our code-less workflow the HTML-based interface is built using external web design software. Any WYSIWYG editor capable of exporting HTML/CSS/JS files will work. One example is <a href="https://webflow.grsm.io/3441118" target="_blank">Webflow</a> which we used to create most Verge3D demos such as Scooter, Farmer's Journey or Industrial Robot. You can, of course, build the HTML interface manually with code or using some other tools instead.
+    </p>
+
+    <img src="files/workflow/webflow-project.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      Interface elements (menus, buttons, info boxes...) are created as part of a separate web page in which a Verge3D app is embedded. See the detailed <a href="manual/en/introduction/HTML-based-user-interfaces.html">guide on creating HTML-based GUI</a> for more details and examples.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Post_processing" id="Post_processing" class="permalink">#</a></p>
+
+    <h2>Post-Processing</h2>
+
+    <p>
+      Ambient Occlusion (GTAO) can be enabled and exported from within
+      <a href="manual/en/blender/Lighting-and-Rendering.html#ambient_occlusion">Blender</a> /
+      <a href="manual/en/max/Lighting-and-Rendering.html#ambient_occlusion">Max</a> /
+      <a href="manual/en/maya/Lighting-and-Rendering.html#ambient_occlusion">Maya</a>.
+    </p>
+
+    <p>
+      Also, the following effects can be enabled with <a href="manual/en/puzzles/Postprocessing.html">post-processing puzzles</a>: bloom (which works best with HDR enabled), brightness-contrast, grayscale, depth of field, screen-space reflection and screen-space refraction. Parameters for these effects can be changed in runtime or animated with high performance thanks to internal caching. There is also a puzzle for removing all post-processing effects from a scene.
+    </p>
+
+    <img src="files/workflow/post-process-effects.png" class="centered" style="max-width: 755px;">
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Audio_" id="Audio_" class="permalink">#</a></p>
+
+    <h2>Audio</h2>
+
+    <p>
+      Background music and/or event sounds can be added with <a href="manual/en/puzzles/Sound.html">Sound Puzzles</a> to be triggered by the user. You should use the <strong>mp3</strong> format for your audio files as it is supported in all web browsers.
+    </p>
+
+    <img src="files/workflow/sounds.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+      There is a special restriction for playing sounds: the sound playback can only be initiated via direct interaction with a web page. For example, the following setup would work everywhere including on Apple's devices:
+    </p>
+
+    <img src="files/workflow/audio-example1.jpg" class="centered" style="max-width: 389px;">
+
+    <p>
+      However, if a sound is played upon some event which is not caused by direct user action, it wouldn't work:
+    </p>
+
+    <img src="files/workflow/audio-example2.jpg" class="centered" style="max-width: 505px;">
+
+    <p>
+      To overcome this problem, you can use the <strong>on event / touchstart</strong> puzzle that would play and immediately pause all the sounds used in a scene when the user taps on the screen for the first time:
+    </p>
+
+    <img src="files/workflow/audio-example3.jpg" class="centered" style="max-width: 847px;">
+
+    <p>
+      The above setup is available from the Puzzle Library under the name <strong>Sound iOS Workaround</strong>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Asset_Compression" id="Asset_Compression" class="permalink">#</a></p>
+
+    <h2>Asset compression</h2>
+
+    <p>
+      When the app is complete, you can optimize the loading of its scene files as described in the corresponding <a href="manual/en/introduction/Asset-compression.html">section</a> of this manual.
+    </p>
+
+    <p>
+      You may also check out the following videos explaining how to enable asset compression for your apps: <a href="https://youtu.be/yYOyUwRveAU" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=2WHsmOohNy8" target="_blank">3ds Max</a>, <a href="https://youtu.be/NfynjpynifI" target="_blank">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Workflow.html#Publishing" id="Publishing" class="permalink">#</a></p>
+
+    <h2>Publishing</h2>
+
+    <p>
+      You can publish your project using either of methods mentioned in the publishing subsection of the <a href="manual/en/introduction/App-Manager.html#Publish">App Manager</a> guide.
+    </p>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

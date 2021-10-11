@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D Сжатие Ассетов - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Verge3D supports loading assets compressed using the XZ/LZMA compression. Find out how to enable this feature on this page.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Asset-compression.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D Сжатие Ассетов - Soft8Soft">
+            <meta property="og:description" content="Verge3D supports loading assets compressed using the XZ/LZMA compression. Find out how to enable this feature on this page.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Asset-compression.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D Сжатие Ассетов - Soft8Soft">
+            <meta name="twitter:description" content="Verge3D supports loading assets compressed using the XZ/LZMA compression. Find out how to enable this feature on this page.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/compression_chart.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/lzma-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/lzma-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/lzma-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-app-buttons-puzzles.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/puzzles-init.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/puzzles-configure-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/console-check.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/asset_compression/7zip_add_to_archive.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Сжатие Ассетов</h1>
+
+    <p>
+      В Verge3D файлы сцен могут быть сжаты с помощью высокоэффективного алгоритма сжатия LZMA2, что позволяет значительно уменьшить размер файлов. В то же время LZMA2 обеспечивает быструю декомпрессию на стороне браузера. Типичные показатели сжатия, наблюдаемые для сцен Verge3D, составляют: 20x для файлов <strong>.gltf</strong> и 6x для файлов <strong>.bin</strong>. 
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Asset-compression.html#When_Compress_Files">Когда Сжимать Файлы</a></li><li><a href="manual/ru/introduction/Asset-compression.html#Exporting_Compressed_Files">Экспорт Сжатых Файлов</a></li><li><a href="manual/ru/introduction/Asset-compression.html#Using_Compressed_Files">Использование Сжатых Файлов</a></li><li><a href="manual/ru/introduction/Asset-compression.html#Checking_Your_Files">Проверка Ваших Файлов</a></li><li><a href="manual/ru/introduction/Asset-compression.html#Code_Based_or_Player_Based_Apps">Code-Based или Player-Based Приложения</a></li><li><a href="manual/ru/introduction/Asset-compression.html#Archivers">Архиваторы</a><ul><li><a href="manual/ru/introduction/Asset-compression.html#windows">Windows</a></li><li><a href="manual/ru/introduction/Asset-compression.html#linux">Linux</a></li><li><a href="manual/ru/introduction/Asset-compression.html#macos">macOS</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#When_Compress_Files" id="When_Compress_Files" class="permalink">#</a></p>
+
+    <h2>Когда Сжимать Файлы</h2>
+
+    <p>
+      Использование сжатия активов особенно рекомендуется в следующих случаях:
+      </p><ul>
+        <li>Файлы сцен .gltf/.bin или .glb относительно велики, поэтому эффект от сжатия значителен с точки зрения уменьшения размера;</li>
+        <li>вы ожидаете медленного соединения и каждый килобайт на счету;</li>
+        <li>стандартное сжатие GZIP на стороне сервера не включено или неудовлетворительно, или у вас даже нет доступа к серверу, чтобы настроить GZIP для файлов сцен Verge3D.</li>
+      </ul>
+    <p></p>
+
+    <img src="files/asset_compression/compression_chart.png" class="centered with-caption" style="max-width: 630px;">
+    <span class="img-caption">Сравнение размеров для образца файла: необработанный файл, GZIP-сжатый файл, LZMA2-сжатый файл</span>
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#Exporting_Compressed_Files" id="Exporting_Compressed_Files" class="permalink">#</a></p>
+
+    <h2>Экспорт Сжатых Файлов</h2>
+
+    <p>
+      Verge3D поддерживает загрузку файлов сцен, сжатых в формате <strong>.xz</strong>, который включает алгоритм сжатия LZMA2. Чтобы включить автоматическое создание файлов <strong>.xz</strong> при экспорте, достаточно включить соответствующую опцию в настройках экспорта. 
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.4933849949187601" checked="" class="v3d-tab-input" id="0.4933849949187601-0"><label class="v3d-tab-label" for="0.4933849949187601-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/asset_compression/lzma-blender.jpg" class="centered" style="max-width: 525px">
+      </div><input type="radio" name="0.4933849949187601" class="v3d-tab-input" id="0.4933849949187601-1"><label class="v3d-tab-label" for="0.4933849949187601-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/asset_compression/lzma-max.jpg" class="centered" style="max-width: 709px">
+      </div><input type="radio" name="0.4933849949187601" class="v3d-tab-input" id="0.4933849949187601-2"><label class="v3d-tab-label" for="0.4933849949187601-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/asset_compression/lzma-maya.jpg" class="centered" style="max-width: 708px">
+      </div></div>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#Using_Compressed_Files" id="Using_Compressed_Files" class="permalink">#</a></p>
+
+    <h2>Использование Сжатых Файлов</h2>
+
+    <p>
+      Сжатые <strong>.xz</strong> файлы (например, <i>my_awesome_app.gltf.xz</i> и <i>my_awesome_app.bin.xz</i>) должны появиться рядом с оригинальными. Осталось только включить их загрузку в вашем приложении. Для этого перейдите в раздел Пазлы...
+    </p>
+
+    <img src="files/beginner_guide/app-manager-app-buttons-puzzles.png" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    ...и переключитесь на вкладку <strong>init</strong>: 
+    <p></p>
+
+    <img src="files/asset_compression/puzzles-init.jpg" class="centered" style="max-width: 600px">
+
+    <p>
+      Перетащите пазл <strong>configure application</strong> из категории <strong>Initialization</strong>, если он еще не присутствует в рабочей области, и включите на нем флажок <strong>compressed assets</strong>:
+    </p>
+
+    <img src="files/asset_compression/puzzles-configure-app.jpg" class="centered" style="max-width: 850px">
+
+    <p>
+      Наконец, нажмите кнопку <strong>Save</strong>. Вот и все! 
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#Checking_Your_Files" id="Checking_Your_Files" class="permalink">#</a></p>
+
+    <h2>Проверка Ваших Файлов</h2>
+
+    <p>
+      Чтобы убедиться, что ваше приложение теперь действительно загружает сжатые активы, запустите ваше приложение (либо из App Manager, либо с веб-сайта, на котором оно развернуто). Откройте консоль браузера и переключитесь на вкладку <strong>Сеть</strong>. 
+    </p>
+
+    <img src="files/asset_compression/console-check.jpg" class="centered">
+
+    <p>
+      Перезагрузите приложение, чтобы консоль начала отображать файлы с самого начала. Найдите в списке файлы сцены - если все в порядке, они должны заканчиваться <strong>.xz</strong>. 
+    </p>
+
+    <p>
+      Консоль браузера обычно открывается клавишей F12 (Chrome, Firefox в Windows, Linux). На Mac используйте меню View &gt; Developer &gt; JavaScript Console (Option-Cmd-J) в Chrome или меню Develop &gt; Show Error Console (Option-Cmd-C) в Safari.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#Code_Based_or_Player_Based_Apps" id="Code_Based_or_Player_Based_Apps" class="permalink">#</a></p>
+
+    <h2>Code-Based или Player-Based Приложения</h2>
+
+    <p>Если по каким-то причинам вы не хотите использовать пазлы, выполните следующие шаги, чтобы включить сжатие активов для ваших приложений.</p>
+
+    <p>
+      Для <strong>Code-Based</strong> приложений просто измените
+
+      <code>
+        var url = 'my_awesome_app.gltf';
+      </code>
+      на:
+      <code>
+        var url = 'my_awesome_app.gltf.xz';
+      </code>
+
+      в файле <i>your_awesome_app.js</i>.
+
+    </p>
+
+    <p>
+      Для Player-based приложений, у которых файл сцены <strong>.gltf</strong> указан в URL следующим образом:
+      <code class="language-html">
+        https://cdn.soft8soft.com/demo/player/player.html?load=../applications/ring/ring.gltf
+      </code>
+      вы можете просто заменить его на путь к сжатому файлу <strong>.gltf.xz</strong>:
+      <code class="language-html">
+        https://cdn.soft8soft.com/demo/player/player.html?load=../applications/ring/ring.gltf.xz
+      </code>
+    </p>
+
+    <p>
+      То же самое относится к файлам <strong>.glb</strong> и <strong>.glb.xz</strong>, если они используются вместо <strong>.gltf/.bin</strong>. 
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#Archivers" id="Archivers" class="permalink">#</a></p>
+
+    <h2>Архиваторы</h2>
+
+    <p>
+      В качестве альтернативы можно создавать файлы <strong>.xz</strong> с помощью таких архивных утилит, как <strong>7-Zip</strong>, <strong>XZ Utils</strong> или других.
+    </p>
+
+    <p class="note">
+      Архивирование с помощью внешних инструментов рекомендуется в качестве меры экономии времени для команд, работающих над большими проектами. Возможно, вам потребуется написать несколько пакетных скриптов для автоматизированного архивирования ваших активов.
+    </p>
+
+    <p>
+      Реализация Verge3D декомпрессора .xz накладывает некоторые ограничения на сжатые файлы в целях оптимизации, поэтому не каждый файл .xz может быть загружен. Файлы .tar.xz также не поддерживаются. Учитывая это, рекомендуется использовать настройки, описанные ниже.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#windows" id="windows" class="permalink">#</a></p>
+
+    <h3>Windows</h3>
+
+    <p>
+      1) 
+      Для создания файлов .xz можно использовать популярный файловый архиватор <a href="https://www.7-zip.org/download.html">7-Zip</a>.
+    </p>
+
+    <p>
+      Чтобы сжать файл, можно щелкнуть его правой кнопкой мыши, а затем выбрать "7-Zip" -&gt; "Добавить в архив...". - это откроется соответствующее диалоговое окно:
+    </p>
+
+    <img src="files/asset_compression/7zip_add_to_archive.png" class="centered" style="max-width: 630px;">
+
+    <p>
+      Настройки архивации должны выглядеть следующим образом:
+      </p><ul>
+        <li>Формат архива: xz</li>
+        <li>Уровень сжатия: any (Normal, Maximum и Ultra обеспечивают лучший результат)</li>
+        <li>Метод сжатия: LZMA2 (единственная доступная опция)</li>
+        <li>Размер словаря: до 8 MB - чем больше, тем лучше (более 8MB не поддерживается движком)</li>
+      </ul>
+      Остальные параметры можно оставить по умолчанию.
+    <p></p>
+
+    <p>
+      Также вы можете использовать версию <strong>7-Zip</strong> для командной строки:
+
+      <code>
+        7z.exe a -m0=LZMA2:d23 scene.gltf.xz scene.gltf
+7z.exe a -m0=LZMA2:d23 scene.bin.xz scene.bin
+      </code>
+    </p>
+
+    <p>
+      2) 
+      В качестве альтернативы можно использовать специальный инструмент командной строки под названием <strong>XZ Utils</strong>. Его двоичные файлы для Windows доступны <a href="https://tukaani.org/xz/">здесь</a> в разделе <strong>Pre-built binaries</strong>.
+    </p>
+
+    <p>
+      Простое использование:
+      <code>
+        xz.exe -k -f -6 scene.gltf
+xz.exe -k -f -6 scene.bin
+      </code>
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#linux" id="linux" class="permalink">#</a></p>
+
+    <h3>Linux</h3>
+
+    <p>
+      1) Порт командной строки <strong>7-Zip</strong> может быть доступен из коробки или из официальных репозиториев в виде пакета с именем <strong>p7zip</strong>.
+    </p>
+
+    <p>
+
+      Использование аналогично использованию в Windows:
+      <code>
+        7z a -m0=LZMA2:d23 scene.gltf.xz scene.gltf
+7z a -m0=LZMA2:d23 scene.bin.xz scene.bin
+      </code>
+    </p>
+
+    <p>
+      2) <strong>XZ Utils</strong> также доступен из коробки или из официальных репозиториев в большинстве дистрибутивов Linux.
+    </p>
+
+    <p>
+      Использование аналогично использованию в Windows:
+      <code>
+        xz -k -f -6 scene.gltf
+xz -k -f -6 scene.bin
+      </code>
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Asset-compression.html#macos" id="macos" class="permalink">#</a></p>
+
+    <h3>macOS</h3>
+
+    <p>
+      1) 
+      Порт командной строки <strong>7-Zip</strong> может быть установлен через <strong>Homebrew</strong> как пакет с именем <strong>p7zip</strong>:
+      <code>
+        $ brew update
+$ brew install p7zip
+      </code>
+      Использование такое же, как и в Linux. 
+    </p>
+
+    <p>
+      2) Двоичные файлы <strong>XZ Utils</strong> доступны для macOS 10.5+ <a href="https://tukaani.org/xz/">здесь</a> в разделе <strong>Pre-built binaries</strong>.
+      Использование такое же, как и в Linux.
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

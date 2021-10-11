@@ -1,0 +1,729 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="709.5417371200028" scrolly="0" scale="0.8775782159765174"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="445.6906577627569" scrolly="261.05476807277864" scale="0.3554568269145695">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="%rKJbbBE}kpC_p`-QpmN" type="">loaded_scenes</variable>
+      <variable id="b8W7R[T`[a,_*Xp0s#n;" type="">percentage</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setHTMLElemStyle" id=".]EJDKi^0k^m-H(#B@i*" x="-710" y="-1350">
+      <field name="PROPERTY">transform</field>
+      <field name="PARENT">FALSE</field>
+      <value name="VALUE">
+        <block type="text" id="8IIyx+i+N(xx-}b(z+e}">
+          <field name="TEXT">scale(1.03)</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="querySelector" id="3Ffy%mRF-F*,Ud+bHI;5">
+          <value name="QUERY">
+            <shadow type="text" id="-JKQdKb^k7;sq%Wuu@)V">
+              <field name="TEXT">#v3d-container &gt; canvas</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="setHTMLElemStyle" id="n80D}F8Q(`%f|7ikJ}H^">
+          <field name="PROPERTY">transition</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="6m7s`^pMRaLn^,;]MYB[">
+              <field name="TEXT">filter 0.3s ease-in</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="querySelector" id="=rBE[7b%?/{xOz}qBRLP">
+              <value name="QUERY">
+                <shadow type="text" id="N9Q?DFlUdQ1a8X!3NGbN">
+                  <field name="TEXT">#v3d-container &gt; canvas</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="scO_FI4?C-+in1wduw=+" x="-710" y="-1150">
+      <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+      <value name="VALUE">
+        <block type="dictCreateEmpty" id="J8FG;Z=vAe:`|e:eJ0G$"/>
+      </value>
+      <next>
+        <block type="dictSet" id="_%I^nn^ytX_o.gAkZPHT">
+          <value name="DICT">
+            <block type="variables_get" id="GHImJmJ^sBGKojrzP{AR">
+              <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+            </block>
+          </value>
+          <value name="KEY">
+            <shadow type="text" id="Vr%9,s@n%XLrogXC4n#;">
+              <field name="TEXT">chair</field>
+            </shadow>
+          </value>
+          <value name="VALUE">
+            <block type="logic_boolean" id="]Lti*A3;!-u3step.VUv">
+              <field name="BOOL">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="dictSet" id="0E$J1/~KY!@19Xc-kktd">
+              <value name="DICT">
+                <block type="variables_get" id="`2WB9nWobl7v42-CdLI8">
+                  <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                </block>
+              </value>
+              <value name="KEY">
+                <shadow type="text" id="!|RD33F@%Cal__]KNu,^">
+                  <field name="TEXT">puff</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <block type="logic_boolean" id="=VP]x1TRv^gQr?X%o?FZ">
+                  <field name="BOOL">FALSE</field>
+                </block>
+              </value>
+              <next>
+                <block type="dictSet" id="$6Cu-M:yrDA=pBhZ,n.(">
+                  <value name="DICT">
+                    <block type="variables_get" id="-!p6?N8~{#Kj7Iz:=7F?">
+                      <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                    </block>
+                  </value>
+                  <value name="KEY">
+                    <shadow type="text" id="HG@s*rWru0UYt2E!~J#1">
+                      <field name="TEXT">table</field>
+                    </shadow>
+                  </value>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="=DHB}2Ft(~+:HzGw/a1S">
+                      <field name="BOOL">FALSE</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="dictSet" id="0C/g]finI.jsb9x+6olc">
+                      <value name="DICT">
+                        <block type="variables_get" id="Q-0Q/|Bvt(nwOT_Ia09t">
+                          <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                        </block>
+                      </value>
+                      <value name="KEY">
+                        <shadow type="text" id="ewSN~iU0W1BFX^kKODW=">
+                          <field name="TEXT">tv_stand</field>
+                        </shadow>
+                      </value>
+                      <value name="VALUE">
+                        <block type="logic_boolean" id="/^cg55N46zoby8j1SzI6">
+                          <field name="BOOL">FALSE</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="dictSet" id=":XX0(W*JytWXi#Xajc~Y">
+                          <value name="DICT">
+                            <block type="variables_get" id="Y_tkJcxo~-!B,3Zqo5@8">
+                              <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                            </block>
+                          </value>
+                          <value name="KEY">
+                            <shadow type="text" id="^cI$~L3mC!_l.@5jf-XN">
+                              <field name="TEXT">nightlight</field>
+                            </shadow>
+                          </value>
+                          <value name="VALUE">
+                            <block type="logic_boolean" id="}vsVH7(N[vlCGamw@:)+">
+                              <field name="BOOL">FALSE</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="pDi9_oIlsx!q-0Y7%,?C" x="-730" y="-870">
+      <field name="NAME">startPreloader</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setHTMLElemStyle" id="OU~;)xCo$l{R=i6_EgBM">
+          <field name="PROPERTY">filter</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="1:VtfCxpWm*7=peQvNgQ">
+              <field name="TEXT">blur(8px)</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="querySelector" id="~AfkSR:5@jareU`dEa!w">
+              <value name="QUERY">
+                <shadow type="text" id="~bJ:9xgM1E?E!zBd/*Br">
+                  <field name="TEXT">#v3d-container &gt; canvas</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="setTimeout" id="BDV1%~|n@@.qoKdU(rLb">
+              <value name="VALUE">
+                <shadow type="math_number" id="%1l#9?^qS,jzBW9OG8b^">
+                  <field name="NUM">0.1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="setHTMLElemStyle" id="]XN*O!|WiJ`YZ@(z/e8S">
+                  <field name="PROPERTY">display</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="text" id="5Kc,*F,@8AI7.k#Wwc+A">
+                      <field name="TEXT">block</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <block type="text" id="X0!a.bOfcm7P[)2VRC]Z">
+                      <field name="TEXT">preloader</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="setHTMLElemStyle" id="vQ)0d^?g5?x[:5]`mUwI">
+                      <field name="PROPERTY">width</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="VALUE">
+                        <block type="text" id="IaaO/,DETf:B1A.3Ie/@">
+                          <field name="TEXT">0%</field>
+                        </block>
+                      </value>
+                      <value name="ID">
+                        <block type="text" id="!ZBgXF*f9I0.d}@3cWL7">
+                          <field name="TEXT">preloader_bar</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="{;NQj)5BztU@A9/!5sx:" x="-730" y="-650">
+      <mutation>
+        <arg name="percentage" varid="b8W7R[T`[a,_*Xp0s#n;"/>
+      </mutation>
+      <field name="NAME">updatePreloader</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setHTMLElemStyle" id=".8(8^kt9P~,Akd:bS@7c">
+          <field name="PROPERTY">width</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text_join" id="U(Krr1!Zb.@,#/xrh|nF">
+              <mutation items="2"/>
+              <value name="ADD0">
+                <block type="variables_get" id="~|B~h9R9gZ50jstFtHcm">
+                  <field name="VAR" id="b8W7R[T`[a,_*Xp0s#n;">percentage</field>
+                </block>
+              </value>
+              <value name="ADD1">
+                <block type="text" id="U4^C`~rrV:Fg7:{s{CkO">
+                  <field name="TEXT">%</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="text" id="IlgVlvTPph,S`We?bpPQ">
+              <field name="TEXT">preloader_bar</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="2-9GHK;=#iEXWp#PEAlt" x="-730" y="-530">
+      <field name="NAME">endPreloader</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setTimeout" id="$fH)G?ZirgFFCEl6rGH$">
+          <value name="VALUE">
+            <shadow type="math_number" id="ZVMJlz1(,C:}s?qg:h+G">
+              <field name="NUM">0.1</field>
+            </shadow>
+          </value>
+          <statement name="DO">
+            <block type="setHTMLElemStyle" id="},8$9@bfB:{s[5}XY[=0">
+              <field name="PROPERTY">filter</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="text" id="H+w0Y@tt~Nd~mTgGw=;E">
+                  <field name="TEXT">blur(0px)</field>
+                </block>
+              </value>
+              <value name="ID">
+                <block type="querySelector" id="th.~)He|C`C}Fw}|D(=v">
+                  <value name="QUERY">
+                    <shadow type="text" id="|RhQ$}9`Mk+TYX]OmitR">
+                      <field name="TEXT">#v3d-container &gt; canvas</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="setHTMLElemStyle" id="-w?;GG7EzX-vmUPs.BxP">
+                  <field name="PROPERTY">display</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="text" id="?Ww$~RuMsXMB-@$:T[l}">
+                      <field name="TEXT">none</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <block type="text" id="j@wuTe#oa+kpfU!PheZT">
+                      <field name="TEXT">preloader</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="mXe|(ImqQn[b6vDm:l_4" x="-730" y="-330">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <block type="text" id="N!VZZt;(gkc)V+Ih]Jaq">
+          <field name="TEXT">button_load</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="Q8t,^(d}mC5K[pdB%b1d">
+          <mutation name="startPreloader"/>
+          <next>
+            <block type="setTimeout" id="B{@+Qh]$tU!Pz5}#Pyx(">
+              <value name="VALUE">
+                <shadow type="math_number" id="Zb+!zwF#UM.m,_`x;s,_">
+                  <field name="NUM">0.3</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="loadScene" id="3Sqh|t.i^5GtUyy78/])">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" enableonprogress="true" enableonerror="false" enablealias="false"></mutation>
+                  <value name="URL">
+                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="?|_^w(1eJkuX(b6PQP@a">
+                      <field name="TEXT">cube.gltf</field>
+                    </shadow>
+                    <block type="text_join" id="w~ZV~FgDjM]Em(Vf}hN*">
+                      <mutation items="2"/>
+                      <value name="ADD0">
+                        <block type="getHTMLElemAttribute" id="pc,^b9V-!+3;fx+#FNm5">
+                          <field name="ATTRIBUTE">value</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="ID">
+                            <block type="text" id="w[$2wBTj):BZLd!7_z4q">
+                              <field name="TEXT">scene_selector</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="text" id="ggdxiw_B%kN0QV=4__US">
+                          <field name="TEXT">.gltf</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO_PROGRESS">
+                    <block type="procedures_callnoreturn" id="j0r[9gUCa2|Bn`yH)Y-k">
+                      <mutation name="updatePreloader">
+                        <arg name="percentage"/>
+                      </mutation>
+                      <value name="ARG0">
+                        <block type="percentage2" id="Ij^@XUA3`*[.pNGeBc(i"/>
+                      </value>
+                    </block>
+                  </statement>
+                  <statement name="DO">
+                    <block type="procedures_callnoreturn" id="SfmJur-wX+X=nah7fOi+">
+                      <mutation name="endPreloader"/>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="3sPdTA=~TgJe(92A`cKI" x="-730" y="10">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <block type="text" id="|(:_vhN*w~wK{|zZ!#nE">
+          <field name="TEXT">button_add</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="controls_if" id="!G-2by!2G%Psw?QBK*$g">
+          <value name="IF0">
+            <block type="logic_compare" id="N%ea(M%`/9Gnjd[ycM_d">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="dictGet" id="KRKJ67K~zudsTN]cvB=^">
+                  <value name="DICT">
+                    <block type="variables_get" id="kmd4FY:t_n*Y0!1IKFk0">
+                      <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                    </block>
+                  </value>
+                  <value name="KEY">
+                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="X1b}s~Y`Lr9ghe^ftD5Z">
+                      <field name="TEXT">someKey</field>
+                    </shadow>
+                    <block type="getHTMLElemAttribute" id="`A8f)o^3X`52%T#PGh6O">
+                      <field name="ATTRIBUTE">value</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <block type="text" id="sq^~6,:q=T_zvW@i)?e3">
+                          <field name="TEXT">scene_selector</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="7tHvhTkD~G%_]%#DNo=1">
+                  <field name="BOOL">FALSE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="procedures_callnoreturn" id="+r_4Mj,[Dl:v/@?dY??_">
+              <mutation name="startPreloader"/>
+              <next>
+                <block type="setTimeout" id="Zu#YL,4^2%:,/6jNmN6p">
+                  <value name="VALUE">
+                    <shadow type="math_number" id="rxWXWpVd0[R(tt~$2C(}">
+                      <field name="NUM">0.3</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_if" id="p+A@H)rJD6-O6]aiE5o|">
+                      <mutation else="1"/>
+                      <value name="IF0">
+                        <block type="isSceneLoaded" id="0p[j_C_Pk=pkBnErc,[k">
+                          <value name="URL">
+                            <shadow type="text" id="T.I$dHSqqkr=Qw!Xn1k?">
+                              <field name="TEXT"/>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="appendScene" id="g4O7*^]h.j28fJ`3JuKB">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" enableonprogress="true" enableonerror="false" loadcameras="false" loadlights="false" enablealias="false"></mutation>
+                          <value name="URL">
+                            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="nS9:$LkK3*^]ex@be@T|">
+                              <field name="TEXT">path/to/scene.gltf</field>
+                            </shadow>
+                            <block type="text_join" id="YhY)l~w;fuX$]uKGTl!~">
+                              <mutation items="2"/>
+                              <value name="ADD0">
+                                <block type="getHTMLElemAttribute" id="DVufL`zLg[G|6Y|2ErGG">
+                                  <field name="ATTRIBUTE">value</field>
+                                  <field name="PARENT">FALSE</field>
+                                  <value name="ID">
+                                    <block type="text" id="Mbz2(3F@;MS$8Epp4YOz">
+                                      <field name="TEXT">scene_selector</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="ADD1">
+                                <block type="text" id="Z`uM]r;2T_(+pPt;d70R">
+                                  <field name="TEXT">.gltf</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO_PROGRESS">
+                            <block type="procedures_callnoreturn" id="fW{8rI}VB7B7_IGqqk.8">
+                              <mutation name="updatePreloader">
+                                <arg name="percentage"/>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="percentage2" id="NVemWkx=%s(zot;}lkX-"/>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn" id="zL8e8o$B9l/4mBd,ckVa">
+                              <mutation name="endPreloader"/>
+                              <next>
+                                <block type="snapToObject" id="^/j|~*a[OeQv4Vz%Ug|[">
+                                  <value name="SNAPWHAT">
+                                    <block type="text_join" id="sZ.s{EWSOif~-Z;;Mf7z">
+                                      <mutation items="2"/>
+                                      <value name="ADD0">
+                                        <block type="getHTMLElemAttribute" id="IU|;`UZisXcRw(:7fh5x">
+                                          <field name="ATTRIBUTE">value</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="ID">
+                                            <block type="text" id="a87g~OddFo#BH0y)E7V8">
+                                              <field name="TEXT">scene_selector</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="ADD1">
+                                        <block type="text" id="I|oXRt8fS5~V[1B.|.4n">
+                                          <field name="TEXT">_base</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="SNAPTO">
+                                    <block type="text_join" id="neYp4KxMZH./TbY#8856">
+                                      <mutation items="2"/>
+                                      <value name="ADD0">
+                                        <block type="getHTMLElemAttribute" id="yOYUnv!eo21dKYU3E,b(">
+                                          <field name="ATTRIBUTE">value</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="ID">
+                                            <block type="text" id="(=Jf@At(s2Z5kzF-SQ]H">
+                                              <field name="TEXT">scene_selector</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="ADD1">
+                                        <block type="text" id="@T;v]u(9@;VW),+Zsxru">
+                                          <field name="TEXT">_place</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="dictSet" id="11yR^t@GGB$?POeG@N_p">
+                                      <value name="DICT">
+                                        <block type="variables_get" id="_~fvxuDqHXqo8_1%FHH-">
+                                          <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                                        </block>
+                                      </value>
+                                      <value name="KEY">
+                                        <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="84ERW%YOl(is^Gn17Ph+">
+                                          <field name="TEXT">someKey</field>
+                                        </shadow>
+                                        <block type="getHTMLElemAttribute" id="=B10yuz=:35WEw9K%B)}">
+                                          <field name="ATTRIBUTE">value</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="ID">
+                                            <block type="text" id="o:-p:?F/437l[#qZ/C?3">
+                                              <field name="TEXT">scene_selector</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <value name="VALUE">
+                                        <block type="logic_boolean" id="Ie)~*wsT]5^O74r-gkj%">
+                                          <field name="BOOL">TRUE</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="console.log" id="si*PW`W=;j2$k/9mb^t+">
+                                          <value name="VALUE">
+                                            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="R2Hk{RjaJ*fFX5s#.(%V">
+                                              <field name="TEXT">I'm here!!!</field>
+                                            </shadow>
+                                            <block type="text_join" id="6KN3o0#)`+?`KFR_Gqkz">
+                                              <mutation items="2"/>
+                                              <value name="ADD0">
+                                                <block type="getHTMLElemAttribute" id="jyGy/bu%JizXqh1@V8sC">
+                                                  <field name="ATTRIBUTE">value</field>
+                                                  <field name="PARENT">FALSE</field>
+                                                  <value name="ID">
+                                                    <block type="text" id="n3`*)ZF)V9*`oH4~;M[M">
+                                                      <field name="TEXT">scene_selector</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                              <value name="ADD1">
+                                                <block type="text" id=",lTbET`I[^}`~b/dPjMY">
+                                                  <field name="TEXT">_base</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="loadScene" id="t9UUQ)WFk2BSFKmf;wy[">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" enableonprogress="true" enableonerror="false" enablealias="false"></mutation>
+                          <value name="URL">
+                            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text">
+                              <field name="TEXT">cube.gltf</field>
+                            </shadow>
+                            <block type="text_join" id="!v9P$;4u/n%`@$7:FcLZ">
+                              <mutation items="2"/>
+                              <value name="ADD0">
+                                <block type="getHTMLElemAttribute" id="q{Mpx)mM3@dZSv4Fnqw^">
+                                  <field name="ATTRIBUTE">value</field>
+                                  <field name="PARENT">FALSE</field>
+                                  <value name="ID">
+                                    <block type="text" id="{aDsrxnV]1XUI*hXkBz7">
+                                      <field name="TEXT">scene_selector</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="ADD1">
+                                <block type="text" id=";PpDzh;3fmZ3kzbqG3|@">
+                                  <field name="TEXT">.gltf</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO_PROGRESS">
+                            <block type="procedures_callnoreturn" id="1Z7hNmO`5mp)k[@Qisl.">
+                              <mutation name="updatePreloader">
+                                <arg name="percentage"/>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="percentage2" id="oBs7z$xXr*Q)K@qC(GsM"/>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn" id="uD$z}FtrW~;(HQds$_t)">
+                              <mutation name="endPreloader"/>
+                            </block>
+                          </statement>
+                        </block>
+                      </statement>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="[+e/dTEXW#7x1F!rqOcJ" x="-730" y="870">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <block type="text" id="W6`3`yIH8]BPLM7U1~cc">
+          <field name="TEXT">button_unload</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="controls_if" id="7MRaI[R4vxSJj7J7skHE">
+          <value name="IF0">
+            <block type="logic_compare" id="GIngSv5zMVkYP2JOR,Eq">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="dictGet" id="K89#XX]]5AKmna3WP`JU">
+                  <value name="DICT">
+                    <block type="variables_get" id="S^XwElNsxPQu2Vgp;0}h">
+                      <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                    </block>
+                  </value>
+                  <value name="KEY">
+                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="X1b}s~Y`Lr9ghe^ftD5Z">
+                      <field name="TEXT">someKey</field>
+                    </shadow>
+                    <block type="getHTMLElemAttribute" id="npF]dBFvE^YDfDuy(h+H">
+                      <field name="ATTRIBUTE">value</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <block type="text" id="=/HjNarRTcFK~sJEMv2z">
+                          <field name="TEXT">scene_selector</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_boolean" id="o,K@$5KDAbGk9zwF~zOm">
+                  <field name="BOOL">TRUE</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="unloadScene" id="$`Cu+43Eka:w)MZEHlh/">
+              <value name="URL">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="Ivas9Au]Si]l]Ivy.M)a">
+                  <field name="TEXT"></field>
+                </shadow>
+                <block type="text_join" id="H|%y5W;`r(-hIL9+/F=@">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="getHTMLElemAttribute" id="pX*R-%q+m?cc)V0R3K|*">
+                      <field name="ATTRIBUTE">value</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <block type="text" id="8v;ph3^XYXfcr8bfi8hr">
+                          <field name="TEXT">scene_selector</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="=(EDAOfRbRp6@c*-?]D[">
+                      <field name="TEXT">.gltf</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="dictSet" id="^b~Etd{S!SO:M+,^v2o,">
+                  <value name="DICT">
+                    <block type="variables_get" id="}^t%Pmw$]b$||wmQIv3Z">
+                      <field name="VAR" id="%rKJbbBE}kpC_p`-QpmN">loaded_scenes</field>
+                    </block>
+                  </value>
+                  <value name="KEY">
+                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="84ERW%YOl(is^Gn17Ph+">
+                      <field name="TEXT">someKey</field>
+                    </shadow>
+                    <block type="getHTMLElemAttribute" id="K_#8]i@$|?f:I]k{Qh9m">
+                      <field name="ATTRIBUTE">value</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <block type="text" id="ilSS]o,{1DxC)G#r!%DS">
+                          <field name="TEXT">scene_selector</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="VALUE">
+                    <block type="logic_boolean" id="Fs`yT2[9+VpMfBx=%tn@">
+                      <field name="BOOL">FALSE</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="987" viewport-y="28" viewport-w="915" viewport-h="720.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>拼图库参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="使用Verge3D拼图库来长期保存拼图模组，并在不同应用间复用。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/Library.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="拼图库参考 - Soft8Soft">
+            <meta property="og:description" content="使用Verge3D拼图库来长期保存拼图模组，并在不同应用间复用。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/Library.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="拼图库参考 - Soft8Soft">
+            <meta name="twitter:description" content="使用Verge3D拼图库来长期保存拼图模组，并在不同应用间复用。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-library.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-library-save.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-library-retrieve.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-library-rename.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-library-backup.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>为您的拼图建立库(Library)</h1>
+
+    <p>拼图库里可以长期存储拼图模组，并在不同项目间复用您存储的自定义模组。</p>
+      
+    <img src="files/puzzles/puzzles-library.jpg">
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/Library.html#introduction">简介</a></li><li><a href="manual/zh/puzzles/Library.html#adding_entries">添加条目</a></li><li><a href="manual/zh/puzzles/Library.html#using_entries">使用条目</a></li><li><a href="manual/zh/puzzles/Library.html#renaming_entries">重命名条目</a></li><li><a href="manual/zh/puzzles/Library.html#deleting_entries">删除条目</a></li><li><a href="manual/zh/puzzles/Library.html#backup">备份</a></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/Library.html#introduction" id="introduction" class="permalink">#</a></p>
+
+    <h2>简介</h2>
+
+    <p>Verge3D中有两个库。</p>
+
+    <ul>
+      <li><strong>系统库</strong> - 存储在 <strong>library.xml</strong> 文件中的 <strong>puzzles</strong> 文件夹中。这是Verge3D自带的只读拼图库。</li>
+      <li><strong>用户库</strong> - 存储在 <strong>puzzles</strong> 文件夹下的 <strong>my_library.xml</strong> 文件中。您可以使用这个库来添加您自己的拼图。</li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Library.html#adding_entries" id="adding_entries" class="permalink">#</a></p>
+
+    <h2>添加条目</h2>
+
+    <p>您可以通过右键单击拼图组并选择选项 <strong>Save N Puzzles to Library(将 N 个拼图保存到库)</strong>来将拼图组添加到 <em>用户库</em>
+      。在模式窗口中输入组的名称，随后它将出现在库的条目列表中。用拼图编辑器重新加载页面即可更新条目列表。</p>
+      
+    <img src="files/puzzles/puzzles-library-save.jpg">
+
+    <p><a href="manual/zh/puzzles/Library.html#using_entries" id="using_entries" class="permalink">#</a></p>
+
+    <h2>使用条目</h2>
+
+    <p>已保存的拼图组可以从库中直接通放到工作区。</p>
+      
+    <img src="files/puzzles/puzzles-library-retrieve.jpg">
+
+    <p><a href="manual/zh/puzzles/Library.html#renaming_entries" id="renaming_entries" class="permalink">#</a></p>
+
+    <h2>重命名条目</h2>
+
+    <p>从3.1版本开始，您无法直接对库中的条目进行重命名。但您可以编辑 <strong>my_library.xml</strong> 文件，修改其中两处名称的方式来重命名条目。</p>
+      
+    <img src="files/puzzles/puzzles-library-rename.jpg" style="max-width: 895px">
+    <p>重命名后，拼图库条目名称将在刷新编辑器后更新。</p>
+
+    <p><a href="manual/zh/puzzles/Library.html#deleting_entries" id="deleting_entries" class="permalink">#</a></p>
+
+    <h2>删除条目</h2>
+
+    <p>点击 ❌ 按钮即可从<em>用户库</em>中删除一个条目。</p>
+
+    <p><a href="manual/zh/puzzles/Library.html#backup" id="backup" class="permalink">#</a></p>
+
+    <h2>备份</h2>
+
+    <p>每次保存或删除条目时，之前保存的文件 <strong>puzzles/my_library.xml</strong> 都会复制到名为 <strong>library_backup</strong> 的文件夹中，并在文件名中添加时间戳。</p>
+      
+    <img src="files/puzzles/puzzles-library-backup.jpg" style="max-width: 971px">
+    <p>这样，当您在需要时恢复拼图<em>库</em>时，都可以找到先前保存的修订版本。将对应的文件复制回 <strong>puzzles</strong> 目录，重命名删除时间戳件即可恢复。刷新编辑器即可更新拼图库。</p>
+
+
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

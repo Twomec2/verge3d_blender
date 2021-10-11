@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Using JavaScript in Verge3D applications - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how you can extend functionality of your Verge3D applications with JavaScript code.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Using-JavaScript.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Using JavaScript in Verge3D applications - Soft8Soft">
+            <meta property="og:description" content="Learn how you can extend functionality of your Verge3D applications with JavaScript code.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Using-JavaScript.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Using JavaScript in Verge3D applications - Soft8Soft">
+            <meta name="twitter:description" content="Learn how you can extend functionality of your Verge3D applications with JavaScript code.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/basics-exec-script-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/standard-app-template.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/basics-console-log.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/basics-change-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/basics-code-examples.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/compact-app-template.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/using-javascript/get-inspired-by-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Использование JavaScript в приложениях Verge3D</h1>
+
+    <p>
+        Благодаря пазлам вы можете реализовать большую часть функциональности, присутствующей в типичных приложениях WebGL, не написав ни строчки кода. Однако могут быть особые случаи, когда вам может понадобиться JavaScript - например, для использования библиотек программирования сторонних разработчиков или для реализации какой-либо нетривиальной функции, которую невозможно реализовать только с помощью пазлов.
+    </p>
+
+    <p>
+        Вы можете использовать любой текстовый редактор для добавления кода JavaScript, но удобнее работать, если ваш редактор поддерживает подсветку синтаксиса и нумерацию строк, как Notepad++ или VS Code.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Using-JavaScript.html#Method_1_Basic">Метод #1 (Basic)</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html#Method_2_Standard">Метод #2 (Standard)</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html#Method_3_Compact">Метод #3 (Compact)</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html#Method_4_Hardcore">Метод #4 (Hardcore)</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html#Get_Inspired_by_Puzzles">Вдохновляйтесь пазлами</a></li></ul><!-- /TOC -->
+
+
+
+    <p><a href="manual/ru/introduction/Using-JavaScript.html#Method_1_Basic" id="Method_1_Basic" class="permalink">#</a></p>
+
+    <h2>Метод #1 (Basic)</h2>
+
+    <p>
+        Самый простой способ включить код javascript в ваши пазлы - использовать специальный пазл под названием <a href="manual/ru/puzzles/Advanced.html#exec_script">exec script</a>.
+        Он имеет встроенный полнофункциональный текстовый редактор с возможностью синтаксической
+        подсветки, проверки синтаксиса, сворачивания кода и многих других функции.
+    </p>
+
+    <p>
+        Этот пазл выполняет фрагмент кода javascript.
+        Преимущества использования "exec script" следующие:
+        </p><ul>
+            <li>это подход, основанный только на пазлах (нет необходимости редактировать .js файлы проекта)</li>
+            <li>такие фрагменты кода можно сохранить в библиотеке пазлов и легко использовать повторно в других проектах</li>
+        </ul>
+    <p></p>
+
+    <p>
+        Для того чтобы получить доступ к пазлам <a href="manual/ru/puzzles/Variables.html">переменных</a>
+        и <a href="manual/ru/puzzles/Procedures.html">процедур</a> puzzles
+        изнутри "exec script" вы можете использовать встроенные модули <b>VARS</b> и <b>PROC</b>. Более подробную информацию можно найти в документации <a href="manual/ru/puzzles/Advanced.html#exec_script">"exec script"</a>.
+    </p>
+
+    <p>
+        Например, настройка следующего пазла с использованием "exec script" заставляет
+        объекты сцены менять свой материал по щелчку мыши:
+    </p>
+
+    <img src="files/using-javascript/basics-exec-script-example.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/introduction/Using-JavaScript.html#Method_2_Standard" id="Method_2_Standard" class="permalink">#</a></p>
+
+    <h2>Метод #2 (Standard)</h2>
+
+    <p>
+        Если вы хотите иметь больший контроль, чем тот, который может предложить пазл "exec script", тогда этот метод для вас. Он предполагает использование стандартного шаблона приложения
+        <b>Standard</b>  (<b>Standard Light</b> или <b>Standard Dark</b>):
+    </p>
+
+    <img src="files/using-javascript/standard-app-template.jpg" class="centered" style="max-width: 522px">
+
+    <p>
+        Предположим, вы создали свое приложение с помощью App Manager (с параметрами по умолчанию), и назвали его <strong>my_awesome_app</strong>. 
+        Переходите в папку <i>verge3d/applications</i>, затем в папку <i>my_awesome_app</i>
+        , и откройте файл JavaScript <i>my_awesome_app.js</i> вашим текстовым редактором.
+    </p>
+
+    <p>
+        Найдите "runCode" - это место в файле должно выглядеть примерно так:
+    </p>
+
+    <code>
+function runCode(app) {
+        // добавьте сюда свой код, например console.log('Hello, World!');
+
+}
+    </code>
+
+    <p>
+        Вы можете добавить некоторый код между фигурными скобками, и тогда получится:
+    </p>
+
+    <code>
+function runCode(app) {
+        // add your code here, e.g. console.log('Hello, World!');
+        console.log('Just added some JavaScript!');
+}
+    </code>
+
+    <p>
+        Теперь, если вы сохраните <strong>.js</strong> файл и запустите свое приложение, вы заметите... ничего, пока не откроете консоль браузера. Она обычно открывается клавишей F12 (Chrome, Firefox в Windows, Linux). На Mac используйте меню View &gt; Developer &gt; JavaScript Console (Option-Cmd-J) в Chrome или меню Develop &gt; Show Error Console (Option-Cmd-C) в Safari.
+    </p>
+
+    <img src="files/using-javascript/basics-console-log.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        С помощью кода вы можете изменить что-то в сцене, например, переместить дефолтный куб Verge3D (названный "Box001" в 3ds Max и "Cube" в Blender)...
+    </p>
+
+    <code>
+function runCode(app) {
+        var obj = app.scene.getObjectByName('Cube');
+        obj.position.x = 2;
+}
+    </code>
+
+    <p>
+        ...или создать новый материал:
+    </p>
+
+    <code>
+function runCode(app) {
+        var obj = app.scene.getObjectByName('Cube');
+        obj.material = new v3d.MeshPhongMaterial({ color: '#00BB00', emissive: '#550000' });
+}
+    </code>
+
+    <img src="files/using-javascript/basics-change-material.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Посмотрите <a href="https://cdn.soft8soft.com/demo/examples/index.html" target="_blank">примеры кода Verge3D</a>, чтобы вдохновиться. Нажмите кнопку <strong>View source</strong>, чтобы открыть код.
+    </p>
+
+    <img src="files/using-javascript/basics-code-examples.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/introduction/Using-JavaScript.html#Method_3_Compact" id="Method_3_Compact" class="permalink">#</a></p>
+
+    <h2>Метод #3 (Compact)</h2>
+
+    <p>
+        Этот метод подойдет опытным программистам, которые хотели бы иметь
+        минимальный рабочий фрагмент кода для начала. Это практически то же самое
+        как и <b>Standard</b> за исключением того, что вы используете другой шаблон приложения под названием <b>Code-Based</b> когда создаёте новое приложение:
+    </p>
+
+    <img src="files/using-javascript/compact-app-template.jpg" class="centered" style="max-width: 522px">
+
+    <p>
+        Это приведет к упрощению структуры проекта, при этом редактор пазлов не будет прикреплен к вашему приложению, а файл app <strong>.js</strong> будет содержать всего несколько строк кода:
+    </p>
+
+    <code>
+'use strict';
+
+window.addEventListener('load', function() {
+
+var app = new v3d.App('container', null,
+        new v3d.SimplePreloader({ container: 'container' }));
+
+var url = 'my_awesome_app.gltf';
+
+app.load(url, function() {
+        app.enableControls();
+        runCode();
+});
+
+function runCode() {
+        // add your code here, e.g. console.log('Hello, World!');
+
+}
+
+});
+    </code>
+
+    <p>
+        Приложения такого типа очень просты, но при этом они способны загружать сцену в формате <strong>.gltf</strong> (с прелоадером) и предоставлять пользователю стандартные средства управления камерой.
+    </p>
+
+    <p>
+        Вы можете продолжить, добавив свой код внутри функции "runCode", как описано в Методе #2. Конечно, вы можете полностью изменить этот шаблон приложения - например, отказаться от класса App, загрузить сцену с помощью другого формата файла или настроить элементы управления каким-то особым образом.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/Using-JavaScript.html#Method_4_Hardcore" id="Method_4_Hardcore" class="permalink">#</a></p>
+
+    <h2>Метод #4 (Hardcore)</h2>
+
+    <p>
+        Этот метод подойдет программистам, знакомым с библиотекой Three.js, поскольку в Verge3D вы можете использовать тот же API.
+    </p>
+
+    <p></p>
+    Скопируйте файл <strong>v3d.js</strong> из папки <i>verge3d/build</i>, свяжите его с файлом <strong>.html</strong> и <a href="manual/ru/programmers_guide/Programming-basics.html">начинайте кодить</a>! Как, по вашему мнению, были созданы <a href="https://cdn.soft8soft.com/demo/examples/index.html" target="_blank">примеры кода</a>?
+    <p></p>
+
+
+
+    <p><a href="manual/ru/introduction/Using-JavaScript.html#Get_Inspired_by_Puzzles" id="Get_Inspired_by_Puzzles" class="permalink">#</a></p>
+
+    <h2>Вдохновляйтесь пазлами</h2>
+
+    <p>
+        Это не метод, а скорее совет. На самом деле, когда вы нажмете кнопку *Сохранить* в редакторе пазлов, он создаст самодостаточный, читаемый модуль JavaScript, сохраненный как файл <strong>visual_logic.js</strong> в папке вашего приложения.
+    </p>
+
+
+    <img src="files/using-javascript/get-inspired-by-puzzles.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Таким образом, вы можете получить рабочий пример того, как работают определенные методы JavaScript API, и повторно использовать сгенерированный сниппет для интересующего вас пазла в собственном коде.
+    </p>
+
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

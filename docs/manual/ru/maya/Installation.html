@@ -1,0 +1,473 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для Maya: Установка - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page describes the installation procedure for Maya version of Verge3D. Find you how to setup Verge3D for Maya on Windows, macOS and Linux.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/maya/Installation.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для Maya: Установка - Soft8Soft">
+            <meta property="og:description" content="This page describes the installation procedure for Maya version of Verge3D. Find you how to setup Verge3D for Maya on Windows, macOS and Linux.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/maya/Installation.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для Maya: Установка - Soft8Soft">
+            <meta name="twitter:description" content="This page describes the installation procedure for Maya version of Verge3D. Find you how to setup Verge3D for Maya on Windows, macOS and Linux.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/installer-maya-choosing-path.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/menu-plugin-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-enable-verge3d.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/verge3d-menu.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/verge3d-desktop-icon.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/installer-macos-command-line-tools.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/menu-plugin-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-browse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-open-install-script.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/untrusted-plugin-loading.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-enable-verge3d.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/verge3d-menu.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/menu-plugin-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-browse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-open-install-script.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/plugin-manager-enable-verge3d.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation-maya/verge3d-menu.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Установка / Maya</h1>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/maya/Installation.html#prerequisites">Предварительные условия</a></li><li><a href="manual/ru/maya/Installation.html#install_windows">Установка Verge3D на Windows</a></li><li><a href="manual/ru/maya/Installation.html#install_macos">Установка Verge3D на macOS</a></li><li><a href="manual/ru/maya/Installation.html#install_linux">Установка Verge3D на Linux</a></li><li><a href="manual/ru/maya/Installation.html#Configuring_Plugin_Path_Manually">Настройка пути плагина вручную</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/maya/Installation.html#prerequisites" id="prerequisites" class="permalink">#</a></p>
+
+    <h2>Предварительные условия</h2>
+
+    <h3>Maya</h3>
+
+    <p>
+      Для начала необходимо установить Autodesk Maya 2018-2022, так как Verge3D работает поверх него. В случае отсутсвия программы, вы можете загрузить бесплатный пробный пакет с <a href="https://www.autodesk.com/products/maya/free-trial" target="_blank">сайта Autodesk</a>, или попробовать Verge3D для Blender.
+    </p>
+
+    <p>Мы рекомендуем использовать последнюю стабильную версию Maya (2022 на момент написания статьи) для достижения наилучших результатов.</p>
+
+    <h3>Операционная система</h3>
+
+    <p>
+      Мы рекомендуем использовать Verge3D на Windows 10, macOS 10.14/10.15 или последней версии RedHat/CentOS/Fedora Linux. Убедитесь, что у вас установлены последние версии видеодрайверов. Для установки не требуются права администратора.
+    </p>
+
+    <h3>Веб-браузер</h3>
+
+    <p>
+      Verge3D может работать в любом браузере, таком как Chrome, Firefox, Opera, Edge или Internet Explorer 11. Однако мы рекомендуем использовать браузер Chrome для разработки, так как он быстрый и предоставляет хорошие инструменты для разработки. Также вы можете сделать его браузером по умолчанию для более удобного предварительного просмотра.
+    </p>
+
+
+
+    <p><a href="manual/ru/maya/Installation.html#install_windows" id="install_windows" class="permalink">#</a></p>
+
+    <h2>Установка Verge3D на Windows</h2>
+
+    <p>
+    <a href="https://www.soft8soft.com/get-verge3d/" target="_blank">Скачайте</a> пакет Verge3D и дважды щелкните на файле <strong>.exe</strong>, чтобы запустить программу установки.
+    </p>
+
+    <p>
+      Выберите папку для установки, которая имеет достаточно прав на чтение и запись (или лучше оставьте ее по умолчанию). Не рекомендуется устанавливать в системные папки, такие как "Program Files" и "Desktop".
+    </p>
+
+    <img src="files/installation-maya/installer-maya-choosing-path.jpg" class="centered" style="max-width: 499px">
+
+    <p>
+      После завершения установки вы можете открыть Maya. Если она была запущена, не забудьте закрыть и открыть ее снова. Теперь перейдите к настройкам <strong>Plug-in Manager</strong>...    </p>
+
+    <img src="files/installation-maya/menu-plugin-manager.jpg" class="centered" style="max-width: 785px">
+
+    <p>
+      ...и активируйте плагин <strong>verge3d.py</strong>, включив флажки <strong>Loaded</strong> и <strong>Auto load</strong>.
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-enable-verge3d.jpg" class="centered" style="max-width: 450px">
+
+    <p class="note">
+      Дополнительно вы можете активировать плагин <strong>gltfExport.py</strong>, если хотите экспортироватm сцены Verge3D через опцию меню <b>File-&gt;Export All...</b>. Включение
+      <strong>gltfExport.py</strong> добавляет опцию типа файла <strong>Verge3D GLTF</strong> для диалогового окна <strong>Export All</strong>.
+
+
+    </p><p>
+      Теперь вы должны увидеть меню <strong>Verge3D</strong> в строке главного меню.
+     </p>
+
+    <img src="files/installation-maya/verge3d-menu.jpg" class="centered" style="max-width: 561px">
+
+    <p>
+      Также теперь у вас есть возможность запускать Verge3D's App Manager независимо от Maya, нажав на значок на рабочем столе или используя меню "Пуск".
+    </p>
+
+    <img src="files/installation-maya/verge3d-desktop-icon.jpg" class="centered" style="max-width: 751px">
+
+
+
+    <p><a href="manual/ru/maya/Installation.html#install_macos" id="install_macos" class="permalink">#</a></p>
+
+    <h2>Установка Verge3D на macOS</h2>
+
+    <p>
+      <a href="https://www.soft8soft.com/get-verge3d/" target="_blank">Скачайте пакет Verge3D</a> XZ и распакуйте его в выбранный вами каталог. Убедитесь, что у вас достаточно прав для чтения/записи в этой папке. Установка в системный каталог не рекомендуется.
+    </p>
+
+
+    <p>
+      Если вы используете Maya версии до 2022 года, вам необходимо выполнить дополнительные шаги для установки Python (который входит в состав <strong>Command Line Tools</strong>). Если вы используете Maya 2022 или новее, перейдите к шагу с вызовом <strong>Plug-in Manager</strong>.
+    </p>
+
+    <p>
+      Для установки <strong>Command Line Tools</strong> откройте macOS Terminal и выполните команду:
+    </p>
+
+    <code>
+      xcode-select --install
+    </code>
+
+    <p>
+      Если инструменты не установлены в вашей системе, сценарий вызовет следующее диалоговое окно установки:
+    </p>
+
+    <img src="files/installation-maya/installer-macos-command-line-tools.jpg" class="centered" style="max-width: 487px">
+
+    <p>
+      Дождитесь завершения установки, прежде чем приступать к дальнейшим действиям.    </p>
+
+    <p>
+      Теперь откройте Maya и перейдите к настройкам <strong>Plug-in Manager</strong>...    </p>
+
+    <img src="files/installation-maya/menu-plugin-manager.jpg" class="centered" style="max-width: 785px">
+
+    <p>
+      Нажмите на кнопку <strong>Browse</strong>
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-browse.jpg" class="centered" style="max-width: 621px">
+
+    <p>
+      затем перейдите в директорию <em>Path_To_Verge3D_Installation/maya_plugin/setup</em> и откройте скрипт <em>install.py</em>.
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-open-install-script.jpg" class="centered" style="max-width: 847px">
+
+    <p>
+      В более новых версиях Maya может появиться следующее диалоговое окно - нажмите <strong>Allow</strong>.
+    </p>
+
+    <img src="files/installation-maya/untrusted-plugin-loading.jpg" class="centered" style="max-width: 569px">
+
+    <p>
+      Перезапустите Maya, снова откройте настройки <strong>Plug-in Manager</strong> и активируйте плагин <strong>verge3d.py</strong>, включив флажки <strong>Loaded</strong> и <strong>Auto load</strong>.
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-enable-verge3d.jpg" class="centered" style="max-width: 450px">
+
+    <p class="note">
+      Если хотите экспортировать сцены Verge3D через опцию меню <b>File-&gt;Export All...</b> вам необходимо активировать плагин <strong>gltfExport.py</strong>. Включение
+      <strong>gltfExport.py</strong> добавляет опцию типа файла <strong>Verge3D GLTF</strong> для диалогового окна <strong>Export All</strong>.
+    </p>
+
+    <p>
+      Теперь вы должны увидеть меню <strong>Verge3D</strong> в строке главного меню.
+      </p>
+
+    <img src="files/installation-maya/verge3d-menu.jpg" class="centered" style="max-width: 561px">
+
+
+
+    <p><a href="manual/ru/maya/Installation.html#install_linux" id="install_linux" class="permalink">#</a></p>
+
+    <h2>Установка Verge3D на Linux</h2>
+
+    <p>
+      <a href="https://www.soft8soft.com/get-verge3d/" target="_blank">Скачайте пакет Verge3D</a> XZ и распакуйте его в выбранный вами каталог. Убедитесь, что у вас достаточно прав для чтения/записи в этой папке. Установка в системный каталог не рекомендуется.
+    </p>
+
+    <p>
+      Теперь откройте Maya и перейдите к настройкам <strong>Plug-in Manager</strong>...
+    </p>
+
+    <img src="files/installation-maya/menu-plugin-manager.jpg" class="centered" style="max-width: 785px">
+
+    <p>
+      Нажмите кнопку <strong>Browse</strong>
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-browse.jpg" class="centered" style="max-width: 621px">
+
+    <p>
+      затем перейдите в директорию <em>Path_To_Verge3D_Installation/maya_plugin/setup</em> и откройте скрипт<em>install.py</em>.
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-open-install-script.jpg" class="centered" style="max-width: 847px">
+
+    <p>
+      Перезапустите Maya, снова откройте настройки <strong>Plug-in Manager</strong> и активируйте плагин <strong>verge3d.py</strong>, включив флажки <strong>Loaded</strong> и <strong>Auto load</strong>.
+    </p>
+
+    <img src="files/installation-maya/plugin-manager-enable-verge3d.jpg" class="centered" style="max-width: 450px">
+
+    <p class="note">
+      Если хотите экспортировать сцены Verge3D через опцию меню <b>File-&gt;Export All...</b> вам необходимо активировать плагин <strong>gltfExport.py</strong>. Включение
+      <strong>gltfExport.py</strong> добавляет опцию типа файла <strong>Verge3D GLTF</strong> для диалогового окна <strong>Export All</strong>.
+    </p>
+
+    <p>
+      Теперь вы должны увидеть меню <strong>Verge3D</strong> в строке главного меню.
+    </p>
+
+    <img src="files/installation-maya/verge3d-menu.jpg" class="centered" style="max-width: 561px">
+
+
+
+    <p><a href="manual/ru/maya/Installation.html#Configuring_Plugin_Path_Manually" id="Configuring_Plugin_Path_Manually" class="permalink">#</a></p>
+
+    <h2>Настройка пути плагина вручную</h2>
+
+    <p>Иногда меню Verge3D не отображается. Это может произойти по нескольким причинам:</p>
+
+    <ul>
+      <li>Вы отключили опцию <strong>Auto-Configure</strong> в программе установки.</li>
+      <li>Вы установили и запустили неподдерживаемую версию Maya.</li>
+      <li>Вы сменили пользователя Windows.</li>
+    </ul>
+
+    <p>В этом случае вы можете использовать следующую процедуру для настройки пути к плагину вручную.</p>
+
+    <p>Найдите файл с именем <strong>Maya.env</strong>, который обычно находится в следующих папках:</p>
+
+    <ul>
+      <li>Windows - <em>\Users\user\Documents\maya\VERSION</em></li>
+      <li>macOS - <em>$HOME/Library/Preferences/Autodesk/maya/VERSION</em></li>
+      <li>Linux - <em>$HOME/maya/VERSION</em></li>
+    </ul>
+
+    <p>Отредактируйте этот файл, чтобы указать переменную окружения <strong>MAYA_PLUGIN_PATH</strong> следующим образом:</p>
+
+    <code>
+      MAYA_PLUG_IN_PATH=\Users\user\verge3d_maya\maya_plugin
+    </code>
+
+    <p>
+      Сохраните файл и откройте Maya. Если она была запущена, не забудьте закрыть и открыть ее снова. Найдите плагин <strong>Verge3D</strong> в диалоге настроек Plug-In Manager. Активируйте его, нажав на флажки <strong>Loaded</strong> и <strong>Auto load</strong>. Теперь вы должны увидеть меню <strong>Verge3D</strong> в строке главного меню.
+    </p>
+
+
+
+    <h2>Что дальше?</h2>
+
+    <p>Ознакомьтесь с <a href="manual/ru/maya/Beginners-Guide.html">основами</a>!</p>
+
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

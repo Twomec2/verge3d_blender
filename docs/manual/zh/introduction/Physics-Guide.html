@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>Verge3D物理系统指南 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="如何使用Verge3D物理引擎来模拟场景中的动力学和碰撞。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/Physics-Guide.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D物理系统指南 - Soft8Soft">
+            <meta property="og:description" content="如何使用Verge3D物理引擎来模拟场景中的动力学和碰撞。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/Physics-Guide.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D物理系统指南 - Soft8Soft">
+            <meta name="twitter:description" content="如何使用Verge3D物理引擎来模拟场景中的动力学和碰撞。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/app-manager-physics.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/capsule-shape.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/create-character-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/firstperson-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/snap-camera-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/snap-camera-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/moving-character-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>Verge3D物理系统指南</h1>
+
+    <p>Verge3D附带了一个物理引擎，可以让您模拟像真实世界一样的物理特性。这个功能对于创建3D游戏和AR/VR应用特别有用。</p>
+    
+    <iframe class="video-480p" src="https://player.bilibili.com/player.html?aid=45327507&amp;bvid=BV15b411z7ez&amp;cid=79362931&amp;page=1&amp;high_quality=1&amp;danmaku=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+
+    <p>我们使用开源的物理引擎Bullet作为物理系统后端,它的web版本被称为 <a href="https://github.com/kripken/ammo.js" target="_blank">ammo.js</a>。</p>
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/Physics-Guide.html#getting_started_with_physics">物理系统入门</a></li><li><a href="manual/zh/introduction/Physics-Guide.html#using_puzzles">使用拼图</a></li><li><a href="manual/zh/introduction/Physics-Guide.html#general_recommendations">一般性建议</a></li><li><a href="manual/zh/introduction/Physics-Guide.html#creating_first_person_character">创造第一人称角色</a></li><li><a href="manual/zh/introduction/Physics-Guide.html#simulating_car_physics">模拟车辆物理</a></li></ul><!-- /TOC --> <p><a href="manual/zh/introduction/Physics-Guide.html#getting_started_with_physics" id="getting_started_with_physics" class="permalink">#</a></p>
+
+    <h2>物理系统入门</h2>
+
+    <p>在使用物理系统之前，必须将物理模块添加到应用中。您可以在应用管理器中创建新应用时启用该模块。</p>
+    
+    <img src="files/physics-guide/app-manager-physics.jpg" class="centered" style="max-width: 574px">
+
+    <p class="note">默认情况下，Verge3D使用物理引擎的所谓WebAssembly版本。与常规版本相比，此版本具有显著的性能提升，但不适用于Internet Explorer 11和更早的Safari浏览器（版本10或更低版本）。如果您需要您的应用在这些浏览器中得到支持，请在应用创建对话框中同时启用<strong>Physics</strong>和<strong>IE11</strong>模块。</p>
+
+    <p>或者，您可以将物理模块添加到现有的应用中。为此，将文件<strong>ammo.wasm.js</strong>和<strong>ammo.wasm.wasm</strong>从<strong>verge3d/build</strong>文件夹复制到应用文件夹，并添加这行代码</p>
+
+    <code>
+      &lt;script src="ammo.wasm.js"&gt;&lt;/script&gt;
+    </code>
+
+    <p>到应用的 <strong>.html</strong> 中<strong>v3d.js</strong> 脚本的上方。</p>
+
+    <p><a href="manual/zh/introduction/Physics-Guide.html#using_puzzles" id="using_puzzles" class="permalink">#</a></p>
+
+    <h2>使用拼图</h2>
+
+    <p>请在 <a href="manual/zh/puzzles/Physics.html">物理拼图</a>章节中熟悉这些拼图。</p>
+
+    <p><a href="manual/zh/introduction/Physics-Guide.html#general_recommendations" id="general_recommendations" class="permalink">#</a></p>
+
+    <h2>一般性建议</h2>
+
+    <ul>
+      <li>一定要在建模套件中应用比例，因为物理引擎会忽略对象的比例。</li>
+      <li>为了得到最好的结果，对象的原点应该与质心重合。在Blender2.8中，请使用如下方式 <strong>物体 &gt; 设置原点 &gt; 原点到质心（体积）</strong>设置。</li>
+      <li>切勿直接对 <em>动态</em> 体直接进行位置和动画设置。作为替代，使用 <a href="manual/zh/puzzles/Physics.html#apply_vector">apply vector(应用向量)</a> 执行力/冲量/向量操作，使用 <a href="manual/zh/puzzles/Physics.html#snap_body">snap body(绑定体)</a> 拼图执行绑定到另一个对象的操作。</li>
+      <li>出于性能优化考虑，Verge3D会禁用一段时间后不活动的 <em>动态</em> 实体。您可以通过应用一些矢量将它们与其他物体碰撞，或使用 <a href="manual/zh/puzzles/Physics.html#set_body_state">set body state(设置体状态)</a> 拼图来重新激活它们。如果您需要这些体始终处于活动状态，使用此拼图为它们设置 <strong>disable deactivation</strong> 状态。</li>
+      <li>启用连续碰撞检测（CCD）技术，以提高快速运动物体的模拟质量，如射弹、弹球、台球、保龄球等。要做到这一点，请在该物体上设置 <strong>CCD运动阈值</strong> 和 <strong>CCD扫描球体半径</strong> 参数。参见 <a href="manual/zh/puzzles/Physics.html#apply_body_param">这里</a> 的更多信息。</li>
+      <li>请记住，你不能在 <strong>static</strong>/<strong>static</strong>、<strong>static</strong>/<strong>kinematic</strong>或<strong>kinematic</strong>/<strong>kinematic</strong>物体之间 <a href="manual/zh/puzzles/Physics.html#detect_collisions">检测碰撞</a> 。如果不能使用<strong>dynamic</strong> 实体，可以考虑指定 <strong>ghost</strong>
+        物理学来实现移动的非动态物体与 <strong>static</strong>/<strong>kinematic</strong> 环境的近似检测。</li>
+    </ul>
+
+    <p><a href="manual/zh/introduction/Physics-Guide.html#creating_first_person_character" id="creating_first_person_character" class="permalink">#</a></p>
+
+    <h2>创造第一人称角色</h2>
+
+    <p>第一人称角色模式不仅适用于射击游戏和RPG游戏，也适用于任何需要调查大型环境的应用。例如，建筑可视化应用，电子学习软件，交互式参观指南，虚拟博物馆，文化设施模拟，甚至是3D虚拟卖场等。此外，您可以在VR应用中融入第一人称角色，使它更加真实和有趣！</p>
+
+    <p>实现FPS模式有很多可能的方法，但对于Verge3D初级用户，我们建议您遵循这篇简短的指南，以更快地实现效果。</p>
+
+    <p>创建一个胶囊形状对象代表角色。调整它的高度和宽度，使其看起来更逼真。确保正确设置对象的中心。</p>
+    
+    <img src="files/physics-guide/capsule-shape.jpg" class="centered" style="max-width: 639px">
+
+    <p>在拼图中，为角色指定<strong>dynamic</strong> <strong>capsule</strong>的body，并禁用其旋转自由度。通过这样，允许角色移动，但不允许旋转。同时，在胶囊上应用<strong>disable deactivation</strong>。</p>
+    
+    <img src="files/physics-guide/create-character-puzzles.jpg" style="max-width: 725px">
+
+    <p>由于角色需要在地板(+墙壁）或地面上行走，使用相应的<strong>create physics body</strong>拼图来创建这样的体。</p>
+
+    <p>下一步是配置摄影机。摄影机不会分配任何物理特征，因为我们只需要它作为“眼睛”即可。设置<strong>First-Person</strong>控件，但不要分配任何碰撞材质（我们将使用物理引擎提供的全功能碰撞检测，而不是基本的地板/墙壁模拟）。此外，取消选中<strong>Allow Panning</strong>，并将<strong>Movement Speed</strong>值设置为零：</p>
+    
+    <img src="files/physics-guide/firstperson-camera-settings.jpg" class="centered" style="max-width: 320px">
+
+    <p>现在需要把摄影机附加在角色的“头”上了。不需要为头部创建模型，在场景中添加一个名为“Head”的空对象，并将其设置为胶囊模型的上部的子物体。这样“Head”就会随着角色移动。</p>
+
+    <p>通过使用附加的“Head”对象，您可以在运行时将摄影机与角色连接或分离。若要连接摄影机，请使用 <a href="manual/zh/puzzles/Objects.html#parent">parent</a> 和 <a href="manual/zh/puzzles/Objects.html#snap_to_object">snap to object</a> 拼图：</p>
+    
+    <img src="files/physics-guide/snap-camera-puzzles.jpg" style="max-width: 560px">
+
+    <p>通过使用附加的“Head”对象，您可以在运行时将摄影机与角色连接或分离。若要连接摄影机，请使用 <a href="manual/zh/puzzles/Objects.html#parent">parent</a> 和 <a href="manual/zh/puzzles/Objects.html#snap_to_object">snap to object</a> 拼图：</p>
+        
+        <img src="files/physics-guide/snap-camera-puzzles.jpg" style="max-width: 560px">
+        
+    <p class="note">若要分离摄影机，请在使用<strong>parent</strong>拼图时将<strong>to object</strong>字段留空。</p>
+
+    <p>角色创建好了！现在是时候让它在场景中移动了。在最基本的情况下，我们需要在用户按下向上箭头键时向前移动。为此，将<strong>linear velocity</strong>矢量应用于角色，该矢量是从摄影机水平方向计算的。要使模拟稳健，应始终使用 <a href="manual/zh/puzzles/Physics.html#on_simulation_tick">on simulation link</a> 拼图。</p>
+    
+    <img src="files/physics-guide/moving-character-puzzles.jpg" style="max-width: 981px">
+
+    <p>要在移动设备上移动您的角色，您需要额外的“controller”元素。您可以使用摄影机父级的3D对象创建它们，也可以使用 <a href="manual/zh/introduction/HTML-based-user-interfaces.html">HTML元素</a>.</p>
+
+    <p>若要在VR模式下移动角色，可以使用 <a href="manual/zh/puzzles/AR_VR.html#get_controller_prop">get controller property(获取控制器属性)</a> 和 <a href="manual/zh/puzzles/System.html#get_gamepad_prop">get gamepad property(获取游戏手柄属性)</a> 拼图来获得VR控制器按钮与轴的状态。</p>
+
+    <p><a href="manual/zh/introduction/Physics-Guide.html#simulating_car_physics" id="simulating_car_physics" class="permalink">#</a></p>
+
+    <h2>模拟车辆物理</h2>
+
+    <p>逼真的车辆物理模拟在交互式汽车定制器或赛车游戏等应用中很实用。查看Verge3D的官方案例 <em>Arcade Racing</em> 游戏，看一看如何在您的应用中也实现这一功能。</p>
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

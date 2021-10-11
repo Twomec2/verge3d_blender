@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Неполадки, связанные с аппаратным обеспечением - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how to deal with hardware-related problems and restrictions.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+        table, td, th {
+          border: 1px solid #2194CE;
+          border-collapse: collapse;
+          padding: 10px;
+          text-align: left;
+          min-width: 180px;
+          font-size: 16px;
+        }
+        table {
+          margin-bottom: 20px;
+        }
+        th {
+          text-align: center;
+          text-decoration: none;
+          color: #0b7188;
+          font-size: 17px;
+          font-family: 'Oswald', sans-serif;
+          font-weight: normal;
+        }
+        td ul {
+          margin: 10px 0px;
+          padding-left: 20px;
+        }
+        td {
+          vertical-align: top;
+        }
+        td.centered {
+          text-align: center;
+        }
+      </style>
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Hardware-Related-Issues.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Неполадки, связанные с аппаратным обеспечением - Soft8Soft">
+            <meta property="og:description" content="Learn how to deal with hardware-related problems and restrictions.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Hardware-Related-Issues.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Неполадки, связанные с аппаратным обеспечением - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to deal with hardware-related problems and restrictions.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/too-many-attributes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/aa_msaa.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/aa_fxaa.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/hardware-related-issues/z-fighting.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Неполадки, связанные с аппаратным обеспечением</h1>
+
+    <p>
+        В этом разделе руководства описаны типичные неполадки, связанные с аппаратным обеспечением и внедрением, которые могут возникнуть во время разработки приложения WebGL.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Hardware-Related-Issues.html#too_many_attributes">Слишком Много Атрибутов</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html#aa_issues">Проблемы со Сглаживанием при Использовании Процедурных Текстур</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html#z_fighting">Артефакты Пересечения, Когда Два Объекта Расположены Близко Друг к Другу</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Hardware-Related-Issues.html#too_many_attributes" id="too_many_attributes" class="permalink">#</a></p>
+
+    <h2>Слишком Много Атрибутов</h2>
+
+    <p>
+        Время от времени при работе над сценой вы можете столкнуться с проблемой, когда
+        некоторые объекты не отрисовываются вообще, а в консоли браузера появляется
+        следующая ошибка:
+    </p>
+
+    <img src="files/hardware-related-issues/too-many-attributes.jpg" class="centered" style="max-width: 846px">
+    <span class="img-caption">Ошибка "Too many attributes" в консоли браузера</span>
+
+    <p>
+        Эта ошибка означает, что некоторые объекты (очевидно те, которые не смогли
+        быть отрисованы) превышают максимальное количество вертексов, которые могут быть
+        использовать в одном шейдере.
+    </p>
+
+    <p>
+        То, сколько атрибутов использует объект, зависит от различных факторов:
+        наличие и количество shape keys (Blender) / morph targets
+        (3ds Max) / blend shapes (Maya), наличие скиннинга, определенных
+        нод материалов и т.д.
+    </p>
+
+    <p>
+        Вот таблица, которая объясняет, как рассчитать количество используемых
+        атрибутов:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Чисто атрибутов</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="centered">3</td>
+                <td>Обязательные атрибуты: <b>position</b>, <b>normal</b>, <b>uv</b>.</td>
+            </tr>
+            <tr>
+                <td class="centered">+2x</td>
+                <td>
+                    Добавляется за каждый shape key (Blender) / morph target (3ds Max) /
+                    blend shape target (Maya). Максимальное количество атрибутов для
+                    для этой категории ограничено <b>+12</b>.
+                </td>
+            </tr>
+            <tr>
+                <td class="centered">+2</td>
+                <td>Добавляется если объект использует скиннинг</td>
+            </tr>
+            <tr>
+                <td class="centered">+1x</td>
+                <td>
+                    Добавьте для каждой из следующих нод материала объекта,
+                    которые используют различные<a href="manual/ru/introduction/Hardware-Related-Issues.html#attribute-table0">*</a>
+                    вертексные цвета:
+                    <ul>
+                        <li>Blender: <b>Attribute</b>, <b>Vertex Color</b></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="centered">+1x</td>
+                <td>
+                    Добавьте для каждой из следующих нод материала объекта,
+                    которые используют различные<a href="manual/ru/introduction/Hardware-Related-Issues.html#attribute-table0">*</a>
+                    карты нормалей кроме первой (она уже покрыта обязательным атрибутом uv, см. первую строку): 
+                    <ul>
+                        <li>Blender: <b>UV Map</b></li>
+                        <li>
+                            3ds Max: <b>Bitmap</b> (только если "Mapping Type" выставлен на "Texture")
+                            <b>Gradient Ramp</b>, <b>Noise</b> (только если "Mapping" выставлен на "Explicit Map Channel")
+                        </li>
+                        <li>Maya: <b>place2dTexture</b></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="centered">+1</td>
+                <td>
+                    Добавьте, если материал объекта имеет одну из следующих нод:
+                    <ul>
+                        <li>Blender: <b>Normal Map</b>, <b>Tangent</b> (только в режиме "UV Map")</li>
+                        <li>3ds Max: <b>Normal Bump</b></li>
+                        <li>Maya: <b>aiNormalMap</b>, <b>bump2d</b> (только во вход "Bump Interp" &gt; 0), <b>samplerInfo</b></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="centered">+1</td>
+                <td>
+                    Добавьте, если материал объекта имеет одну из следующих нод:
+                    <ul>
+                        <li>3ds Max: <b>Vertex Color</b></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="attribute-table0" style="font-size: 14px;">
+        * Если несколько узлов используют один и тот же вертексный цвет или карту нормалей, то все эти ноды считаются как одна.
+    </p>
+
+    <p>
+        Как правило, достаточно оставаться в пределах <b>16</b> вертексных атрибутов
+        (хотя некоторые старые/низкокачественные устройства могут поддерживать только 8). Чаще всего вам следует беспокоиться только об объектах, использующих несколько ключей формы. В остальном количество вертексных атрибутов обычно не превышает
+        лимит для типичного объекта/материала.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Hardware-Related-Issues.html#aa_issues" id="aa_issues" class="permalink">#</a></p>
+
+    <h2>Проблемы со Сглаживанием при Использовании Процедурных Текстур</h2>
+
+    <p>Иногда при использовании процедурных текстур могут возникать проблемы со сглаживанием. Например, при использовании карты Checker:</p>
+
+    <img src="files/hardware-related-issues/aa_msaa.jpg">
+
+    <p>
+        Это происходит, когда в настройках экспорта <strong>Anti-Aliasing</strong> установлено значение <strong>MSAA</strong> или <strong>Auto</strong> (которое по умолчанию использует MSAA 4x на любом совместимом оборудовании). Техника MSAA ( мультисэмплерное сглаживание) обеспечивает достойное качество изображения и имеет низкое влияние на производительность, однако она не очень хорошо работает для процедурных текстур с резкими изменениями цвета объектов.
+    </p>
+
+    <p>Переключение метода <strong>Anti-Aliasing</strong> на <strong>FXAA</strong> устраняет проблему:</p>
+
+    <img src="files/hardware-related-issues/aa_fxaa.jpg">
+
+    <p><strong>FXAA</strong> использует пост-процессинговый рендеринг для уменьшения ступенчатости и хорошо работает для таких "граней", создаваемых процедурными картами.</p>
+
+
+    <p><a href="manual/ru/introduction/Hardware-Related-Issues.html#z_fighting" id="z_fighting" class="permalink">#</a></p>
+
+    <h2>Артефакты Пересечения, Когда Два Объекта Расположены Близко Друг к Другу</h2>
+
+    <p>
+        Иногда вы можете столкнуться с артефактами, подобными этим:
+    </p>
+
+    <img src="files/hardware-related-issues/z-fighting.jpg" alt="z-fighting artifacts">
+
+    <p>
+        Это так называемый <strong>z-fighting</strong> (<a href="https://en.wikipedia.org/wiki/Z-fighting" target="_blank">техническая документация на Wikipedia</a>) и происходит он, когда разные полигоны имеют равную дистанцию до камеры, или их дистанция отличается очень незначительно.
+    </p>
+
+    <p>
+        Чтобы исправить это, вам нужно сделать одно из следующих действий:
+    </p>
+
+    <ul>
+      <li>Самое простое решение - расположить объекты дальше друг от друга.</li>
+      <li>Увеличьте дистанцию<em>near</em> (или <em>clip start</em>) камеры и/или уменьшите дистанцию <em>far</em> (или <em>clip end</em>) камеры. Это сделает диапазон расстояний камеры меньше и тем самым повысит точность значений, хранящихся в буфере глубины.</li>
+      <li>Если вам нужно разместить текстуру билборда над какой-либо поверхностью - отключите <strong>Depth Test</strong> на материале билборда и увеличьте параметр <strong>Rendering Order</strong> на объекте. Билборд будет отображаться после объекта поверхности и будет игнорировать глубину, сохраненную этим объектом. Это эффективно устраняет z-fighting, который может произойти между этими двумя объектами.</li>
+    </ul>
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+    
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

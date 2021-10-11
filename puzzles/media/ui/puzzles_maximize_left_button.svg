@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg2612"
+   version="1.1"
+   viewBox="0 0 9.5249998 9.5250003"
+   height="36"
+   width="36">
+  <defs
+     id="defs2606">
+    <linearGradient
+       y2="99.237892"
+       x2="339.22046"
+       y1="105.25716"
+       x1="333.53189"
+       gradientTransform="matrix(4.8593926,0,0,4.8593949,-1612.8879,-481.11099)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2603-0"
+       xlink:href="#linearGradient1935" />
+    <linearGradient
+       id="linearGradient1935">
+      <stop
+         style="stop-color:#dbdbdb;stop-opacity:1"
+         offset="0"
+         id="stop1931" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop1933" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata2609">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-287.47498)"
+     id="layer1">
+    <path
+       id="path2601-6"
+       transform="matrix(0.26458333,0,0,0.26458333,0,287.47498)"
+       d="M 18 0 C 8.0564031 2.2737368e-13 2.3684758e-15 8.0564787 0 18 C 0 27.943559 8.0564031 36 18 36 C 27.943521 36 36 27.943559 36 18 C 36 8.0564787 27.943521 0 18 0 z M 10.466797 7.2207031 L 25.396484 7.2207031 C 26.541574 7.2207031 27.431641 8.1531444 27.431641 9.2558594 L 27.431641 26.898438 C 27.431641 28.043521 26.541574 28.935547 25.396484 28.935547 L 10.466797 28.935547 C 9.3641182 28.935547 8.4316406 28.043521 8.4316406 26.898438 L 8.4316406 9.2558594 C 8.4316406 8.1531444 9.3641182 7.2207031 10.466797 7.2207031 z M 15.216797 9.2558594 L 15.216797 26.898438 L 25.142578 26.898438 C 25.312222 26.898438 25.396484 26.814232 25.396484 26.644531 L 25.396484 9.5117188 C 25.396484 9.3847266 25.312222 9.2558594 25.142578 9.2558594 L 15.216797 9.2558594 z "
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.64731169px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;display:inline;fill:url(#linearGradient2603-0);fill-opacity:1;stroke:none;stroke-width:0.92903244" />
+  </g>
+</svg>

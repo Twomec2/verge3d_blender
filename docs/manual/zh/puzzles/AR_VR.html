@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>AR/VR类拼图参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="如何在Verge3D拼图编辑器里为应用启用虚拟现实和增强现实功能。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/AR_VR.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="AR/VR类拼图参考 - Soft8Soft">
+            <meta property="og:description" content="如何在Verge3D拼图编辑器里为应用启用虚拟现实和增强现实功能。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/AR_VR.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="AR/VR类拼图参考 - Soft8Soft">
+            <meta name="twitter:description" content="如何在Verge3D拼图编辑器里为应用启用虚拟现实和增强现实功能。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-check-vr-mode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-enter-vr-mode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-enter-vr-mode-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-end-vr-session.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-check-ar-mode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-enter-ar-mode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-ar-hit-test.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-ar-hit-point.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-on-session-event.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-traverse-controllers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ar-vr-get-controller-prop.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>增强现实/虚拟现实 | AR/VR</h1>
+
+    <p>此类拼图可用于实现基于网页的增强现实（AR）和虚拟现实（VR）体验。这是一种正在开发中的浏览器技术，称为WebXR（eXtended Reality on the Web）。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr.jpg">
+    <p>关于支持的VR设备，以及开展最佳实践的详细介绍，请参见手册中的 <a href="manual/zh/introduction/AR-VR-development.html">对应章节</a> 。</p>
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/AR_VR.html#puzzles_reference">拼图参考</a><ul><li><a href="manual/zh/puzzles/AR_VR.html#check_vr_mode">check VR mode(检查AR模式)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#enter_vr_mode">enter VR mode(进入AR模式)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#end_vr_session">end VR session(结束VR会话)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#check_ar_mode">check AR mode(检查AR模式)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#enter_ar_mode">enter AR mode(进入AR模式)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#ar_hit_test">detect horizontal surface AR(检测AR水平面)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#ar_hit_point">AR hit point(AR碰撞点)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#session_event">on session event(在会话事件...)</a></li><li><a href="manual/zh/puzzles/AR_VR.html#traverse_controllers">遍历控制器</a></li><li><a href="manual/zh/puzzles/AR_VR.html#get_controller_prop">get controller property</a></li></ul></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/AR_VR.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>拼图参考</h2>
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#check_vr_mode" id="check_vr_mode" class="permalink">#</a></p>
+
+    <h3>check VR mode(检查AR模式)</h3>
+
+    <p>检查虚拟现实系统。如果成功的话，<strong>if available do</strong> 中的拼图会被触发。如果浏览器不支持VR或者没有找到VR硬件，那么 <strong>if unavailable do</strong> 插槽中的拼图将被触发。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-check-vr-mode.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#enter_vr_mode" id="enter_vr_mode" class="permalink">#</a></p>
+
+    <h3>enter VR mode(进入AR模式)</h3>
+
+    <p>进入虚拟现实模式。在进入或退出VR模式时，放置在 <strong>on enter do</strong> 和 <strong>on exit do</strong> 槽中的拼图会被触发。在无法建立VR会话时将触发放在 <strong>if unavailable do</strong> 插槽的拼图。</p>
+
+    <p>VR定位模式：</p>
+
+    <dl>
+      <dt>sitting or standing(坐着或站着)</dt>
+      <dd>放置在离地面一定高度的不可移动的摄影机。</dd>
+      <dt>room(房间模式)</dt>
+      <dd>位于某些范围内（如房间）的移动摄影机（例如HTC Vive、Oculus Quest）。</dd>
+      <dt>looking around(环顾四周)</dt>
+      <dd>位于零坐标处的不移动的摄影机。</dd>
+      <dt>walking(步行模式)</dt>
+      <dd>无边界的移动摄影机。</dd>
+      <dt>viewer locked(锁定观看者)</dt>
+      <dd>位于零坐标处的不移动的摄影机。所有内容都以视图为父节点。</dd>
+    </dl>
+
+    <p>数字参数 <strong>hover to click after</strong> 表示在VR视窗中十字线上悬停于对象多久后接收鼠标点击事件，以秒为单位计时。默认值Infinity意味着不执行从悬停到点击的转换。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-enter-vr-mode.jpg">
+    <p>
+      为在VR模式下正确地控制摄影机，请确保在进入VR模式时，将其与一些空对象、虚拟对象或真实对象相对齐，请在您选择的3D编辑器中进行定位。这一点很必要，因为VR会话对您的摄影机有完全的控制权，而您只能移动摄影机所依附的空对象或虚拟对象。
+    </p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-enter-vr-mode-example.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#end_vr_session" id="end_vr_session" class="permalink">#</a></p>
+
+    <h3>end VR session(结束VR会话)</h3>
+
+    <p>结束一个虚拟现实会话。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-end-vr-session.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#check_ar_mode" id="check_ar_mode" class="permalink">#</a></p>
+
+    <h3>check AR mode(检查AR模式)</h3>
+
+    <p>检查增强现实系统。如果成功的话，<strong>if available do</strong> 中的拼图会被触发。如果浏览器不支持AR或者没有找到AR硬件，那么 <strong>if unavailable do</strong> 插槽中的拼图将被触发。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-check-ar-mode.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#enter_ar_mode" id="enter_ar_mode" class="permalink">#</a></p>
+
+    <h3>enter AR mode(进入AR模式)</h3>
+
+    <p>进入增强现实模式。在进入或退出AR模式时，放置在 <strong>on enter do</strong> 和 <strong>on exit do</strong> 槽中的拼图会被触发。在无法建立AR会话时将触发放在 <strong>if unavailable do</strong> 插槽的拼图。</p>
+
+    <p>属性 <strong>allow HTML</strong> 用于在AR模式中显示HTML内容。如果选定， <em>canvas container</em> 元素的内容将被渲染在3D内容之上。此选项是实验性的。</p>
+
+    <p>AR定位模式：</p>
+
+    <dl>
+      <dt>sitting or standing(坐着或站着)</dt>
+      <dd>放置在离地面一定高度的不可移动的摄影机。</dd>
+      <dt>room(房间模式)</dt>
+      <dd>移动摄像机位于某个范围内，如房间。</dd>
+      <dt>looking around(环顾四周)</dt>
+      <dd>位于零坐标处的不移动的摄影机。</dd>
+      <dt>walking(步行模式)</dt>
+      <dd>无边界的移动摄影机。</dd>
+      <dt>viewer locked(锁定观看者)</dt>
+      <dd>位于零坐标处的不移动的摄影机。所有内容都以视图为父节点。</dd>
+    </dl><img src="files/puzzles/puzzles-ar-vr-enter-ar-mode.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#ar_hit_test" id="ar_hit_test" class="permalink">#</a></p>
+
+    <h3>detect horizontal surface AR(检测AR水平面)</h3>
+
+    <p>在AR模式下，通过向前投射一条射线来检测水平面。当相交时，该光线会在 <strong>on intersection do</strong> 槽中触发拼图。如果没有发生相交或者设备处于预热状态，拼图就会触发 <strong>if missed do</strong> 槽。</p>
+
+    <p>参数 <strong>smooth</strong> 是用来平滑化AR标记的运动。指定值为0表示禁用平滑，接近1的值表示最大的平滑。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-ar-hit-test.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#ar_hit_point" id="ar_hit_point" class="permalink">#</a></p>
+
+    <h3>AR hit point(AR碰撞点)</h3>
+
+    <p>由 <a href="manual/zh/puzzles/AR_VR.html#ar_hit_test">detect horizontal surface AR(检测AR水平面)</a>
+      拼图检测到的表面点坐标。可以是<strong>X</strong>，<strong>Y</strong>，<strong>Z</strong>值，或<strong>XYZ</strong>矢量。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-ar-hit-point.jpg">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#session_event" id="session_event" class="permalink">#</a></p>
+
+    <h3>on session event(在会话事件...)</h3>
+
+    <p>捕获一个由VR设备（例如：头戴式显示器或控制器按钮）产生的VR会话事件，并触发在 <strong>do</strong> 槽中指定的拼图。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-on-session-event.jpg">
+    <p>事件：</p>
+
+    <ul>
+      <li><strong>select</strong> - 当用户按下并释放主控制器按钮时触发。</li>
+      <li><strong>selectstart</strong> - 当用户按下主控制器按钮时触发。</li>
+      <li><strong>selectend</strong> - 当用户释放主控制器按钮时触发。</li>
+      <li><strong>squeeze</strong> - 当用户挤压并释放控制器时触发。</li>
+      <li><strong>squeezestart</strong> - 当用户挤压一个控制器时触发。</li>
+      <li><strong>squeezeend</strong> - 当用户取消挤压控制器时触发。</li>
+      <li><strong>connected</strong> - 当VR控制器连接时被触发，即进入VR会话时。使用这个事件来初始化任何控制器逻辑。</li>
+      <li><strong>disconnected</strong> - 当VR控制器断开连接时被触发。</li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#traverse_controllers" id="traverse_controllers" class="permalink">#</a></p>
+
+    <h3>遍历控制器</h3>
+
+    <p>循环遍历所有连接的VR控制器，执行 <strong>do</strong> 槽中指定的拼图。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-traverse-controllers.jpg" class="centered" style="max-width: 825px">
+
+    <p><a href="manual/zh/puzzles/AR_VR.html#get_controller_prop" id="get_controller_prop" class="permalink">#</a></p>
+
+    <h3>get controller property</h3>
+
+    <p>获取控制器的属性。</p>
+      
+    <img src="files/puzzles/puzzles-ar-vr-get-controller-prop.jpg" class="centered" style="max-width: 819px">
+    <p>属性：</p>
+
+    <ul>
+      <li><strong>object</strong> - 一个代表控制器的空对象。
+      </li><li><strong>ray/reticle</strong> - 控制器的射线或十字线对象。
+      </li><li><strong>handedness</strong> - 控制器的惯用手："left"（左控制器），"right"（右控制器），"none"（未指定，可能是头戴式控制器）。
+      </li><li><strong>Target ray mode</strong> - 目标射线模式："gaze" （用于注视类设备，即Cardboard类设备），"tracked-pointer" （用于普通的手持控制器），
+        "screen" （该事件与画布输入有关，目前尚未实现）。
+      </li><li><strong>profiles</strong> - 控制器配置文件名称的列表。
+      </li><li><strong>gamepad index</strong> - 控制器的游戏手柄索引，可以传递给 <a href="manual/zh/puzzles/System.html#get_gamepad_prop">get gamepad
+          property(获取游戏手柄属性)</a> 拼图，以便从您的控制器获取更多信息，比如按钮/轴的状态。</li>
+    </ul>
+
+
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

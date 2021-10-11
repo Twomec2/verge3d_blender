@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="zh"><head>
+                <title>Material - Verge3D User Manual - Soft8Soft</title>
+                <meta name="description" content="Learn how to use Material in your interactive 3D apps made with Verge3D or Three.js">
+            
+  <meta charset="utf-8">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/zh/materials/Material.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Material - Verge3D User Manual - Soft8Soft">
+            <meta property="og:description" content="Learn how to use Material in your interactive 3D apps made with Verge3D or Three.js">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/zh/materials/Material.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Material - Verge3D User Manual - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to use Material in your interactive 3D apps made with Verge3D or Three.js">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+<body><nav id="panel" class="collapsed">
+          <h1><a href="api/zh/index.html">开发者参考</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>程序员指南</h2><ul id="程序员指南"><li><a href="manual/zh/programmers_guide/Developer-Kit.html" id="程序员指南_开发者套件">开发者套件</a></li><li><a href="manual/zh/programmers_guide/Programming-basics.html" id="程序员指南_编程基础">编程基础</a></li><li><a href="manual/zh/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="程序员指南_与React.js/Vue.js集成">与React.js/Vue.js集成</a></li><li><a href="manual/zh/programmers_guide/Matrix-transformations.html" id="程序员指南_矩阵变换">矩阵变换</a></li><li><a href="manual/zh/programmers_guide/Animation-system.html" id="程序员指南_动画系统">动画系统</a></li><li><a href="manual/zh/programmers_guide/Drawing-lines.html" id="程序员指南_画线">画线</a></li><li><a href="manual/zh/programmers_guide/How-to-update-things.html" id="程序员指南_更新内容">更新内容</a></li><li><a href="manual/zh/programmers_guide/How-to-obtain-Verge3D-sources.html" id="程序员指南_如何获取资源">如何获取资源</a></li></ul></div><div><h2>动画</h2><ul id="动画"><li><a href="api/zh/animation/AnimationAction.html" id="动画_AnimationAction">AnimationAction</a></li><li><a href="api/zh/animation/AnimationClip.html" id="动画_AnimationClip">AnimationClip</a></li><li><a href="api/zh/animation/AnimationMixer.html" id="动画_AnimationMixer">AnimationMixer</a></li><li><a href="api/zh/animation/AnimationObjectGroup.html" id="动画_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/zh/animation/AnimationUtils.html" id="动画_AnimationUtils">AnimationUtils</a></li><li><a href="api/zh/animation/KeyframeTrack.html" id="动画_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/zh/animation/PropertyBinding.html" id="动画_PropertyBinding">PropertyBinding</a></li><li><a href="api/zh/animation/PropertyMixer.html" id="动画_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>动画 / 轨道</h2><ul id="动画_/_轨道"><li><a href="api/zh/animation/tracks/BooleanKeyframeTrack.html" id="动画_/_轨道_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/ColorKeyframeTrack.html" id="动画_/_轨道_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/NumberKeyframeTrack.html" id="动画_/_轨道_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/QuaternionKeyframeTrack.html" id="动画_/_轨道_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/StringKeyframeTrack.html" id="动画_/_轨道_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/VectorKeyframeTrack.html" id="动画_/_轨道_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>应用</h2><ul id="应用"><li><a href="api/zh/extras/App.html" id="应用_App">App</a></li><li><a href="api/zh/extras/AppUtils.html" id="应用_AppUtils">AppUtils</a></li></ul></div><div><h2>音频</h2><ul id="音频"><li><a href="api/zh/audio/Audio.html" id="音频_Audio">Audio</a></li><li><a href="api/zh/audio/AudioAnalyser.html" id="音频_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/zh/audio/AudioContext.html" id="音频_AudioContext">AudioContext</a></li><li><a href="api/zh/audio/AudioListener.html" id="音频_AudioListener">AudioListener</a></li><li><a href="api/zh/audio/PositionalAudio.html" id="音频_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>摄影机</h2><ul id="摄影机"><li><a href="api/zh/cameras/ArrayCamera.html" id="摄影机_ArrayCamera">ArrayCamera</a></li><li><a href="api/zh/cameras/Camera.html" id="摄影机_Camera">Camera</a></li><li><a href="api/zh/cameras/CubeCamera.html" id="摄影机_CubeCamera">CubeCamera</a></li><li><a href="api/zh/cameras/OrthographicCamera.html" id="摄影机_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/zh/cameras/PerspectiveCamera.html" id="摄影机_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/zh/cameras/StereoCamera.html" id="摄影机_StereoCamera">StereoCamera</a></li></ul></div><div><h2>常量</h2><ul id="常量"><li><a href="api/zh/constants/Animation.html" id="常量_Animation">Animation</a></li><li><a href="api/zh/constants/Controls.html" id="常量_Controls">Controls</a></li><li><a href="api/zh/constants/Core.html" id="常量_Core">Core</a></li><li><a href="api/zh/constants/CustomBlendingEquations.html" id="常量_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/zh/constants/DrawModes.html" id="常量_DrawModes">DrawModes</a></li><li><a href="api/zh/constants/Lights.html" id="常量_Lights">Lights</a></li><li><a href="api/zh/constants/Materials.html" id="常量_Materials">Materials</a></li><li><a href="api/zh/constants/Renderer.html" id="常量_Renderer">Renderer</a></li><li><a href="api/zh/constants/Textures.html" id="常量_Textures">Textures</a></li></ul></div><div><h2>约束</h2><ul id="约束"><li><a href="api/zh/constraints/ChildOfConstraint.html" id="约束_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/zh/constraints/Constraint.html" id="约束_Constraint">Constraint</a></li><li><a href="api/zh/constraints/CopyLocationConstraint.html" id="约束_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/zh/constraints/CopyRotationConstraint.html" id="约束_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/zh/constraints/CopyScaleConstraint.html" id="约束_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/zh/constraints/FloorConstraint.html" id="约束_FloorConstraint">FloorConstraint</a></li><li><a href="api/zh/constraints/LimitLocationConstraint.html" id="约束_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/zh/constraints/LimitRotationConstraint.html" id="约束_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/zh/constraints/LimitScaleConstraint.html" id="约束_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/zh/constraints/LockedTrackConstraint.html" id="约束_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/zh/constraints/TargetConstraint.html" id="约束_TargetConstraint">TargetConstraint</a></li><li><a href="api/zh/constraints/TrackToConstraint.html" id="约束_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>控制</h2><ul id="控制"><li><a href="api/zh/controls/KeyListener.html" id="控制_KeyListener">KeyListener</a></li><li><a href="api/zh/controls/OrbitControls.html" id="控制_OrbitControls">OrbitControls</a></li></ul></div><div><h2>核心</h2><ul id="核心"><li><a href="api/zh/core/BufferAttribute.html" id="核心_BufferAttribute">BufferAttribute</a></li><li><a href="api/zh/core/BufferGeometry.html" id="核心_BufferGeometry">BufferGeometry</a></li><li><a href="api/zh/core/Clock.html" id="核心_Clock">Clock</a></li><li><a href="api/zh/core/Detector.html" id="核心_Detector">Detector</a></li><li><a href="api/zh/core/DirectGeometry.html" id="核心_DirectGeometry">DirectGeometry</a></li><li><a href="api/zh/core/EventDispatcher.html" id="核心_EventDispatcher">EventDispatcher</a></li><li><a href="api/zh/core/Face3.html" id="核心_Face3">Face3</a></li><li><a href="api/zh/core/Geometry.html" id="核心_Geometry">Geometry</a></li><li><a href="api/zh/core/InstancedBufferAttribute.html" id="核心_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/zh/core/InstancedBufferGeometry.html" id="核心_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/zh/core/InstancedInterleavedBuffer.html" id="核心_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBuffer.html" id="核心_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBufferAttribute.html" id="核心_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/zh/core/Layers.html" id="核心_Layers">Layers</a></li><li><a href="api/zh/core/Object3D.html" id="核心_Object3D">Object3D</a></li><li><a href="api/zh/core/Raycaster.html" id="核心_Raycaster">Raycaster</a></li><li><a href="api/zh/core/Uniform.html" id="核心_Uniform">Uniform</a></li></ul></div><div><h2>核心 / BufferAttributes</h2><ul id="核心_/_BufferAttributes"><li><a href="api/zh/core/bufferAttributeTypes/BufferAttributeTypes.html" id="核心_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>附件</h2><ul id="附件"><li><a href="api/zh/extras/Earcut.html" id="附件_Earcut">Earcut</a></li><li><a href="api/zh/extras/ImageUtils.html" id="附件_ImageUtils">ImageUtils</a></li><li><a href="api/zh/extras/PMREMGenerator.html" id="附件_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/zh/extras/Preloader.html" id="附件_Preloader">Preloader</a></li><li><a href="api/zh/extras/PuzzlesLoader.html" id="附件_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/zh/extras/SceneUtils.html" id="附件_SceneUtils">SceneUtils</a></li><li><a href="api/zh/extras/ShapeUtils.html" id="附件_ShapeUtils">ShapeUtils</a></li><li><a href="api/zh/extras/SimplePreloader.html" id="附件_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>附件 / 核心</h2><ul id="附件_/_核心"><li><a href="api/zh/extras/core/Curve.html" id="附件_/_核心_Curve">Curve</a></li><li><a href="api/zh/extras/core/CurvePath.html" id="附件_/_核心_CurvePath">CurvePath</a></li><li><a href="api/zh/extras/core/Font.html" id="附件_/_核心_Font">Font</a></li><li><a href="api/zh/extras/core/Interpolations.html" id="附件_/_核心_Interpolations">Interpolations</a></li><li><a href="api/zh/extras/core/Path.html" id="附件_/_核心_Path">Path</a></li><li><a href="api/zh/extras/core/Shape.html" id="附件_/_核心_Shape">Shape</a></li><li><a href="api/zh/extras/core/ShapePath.html" id="附件_/_核心_ShapePath">ShapePath</a></li></ul></div><div><h2>附件 / 曲线</h2><ul id="附件_/_曲线"><li><a href="api/zh/extras/curves/ArcCurve.html" id="附件_/_曲线_ArcCurve">ArcCurve</a></li><li><a href="api/zh/extras/curves/CatmullRomCurve3.html" id="附件_/_曲线_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve.html" id="附件_/_曲线_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve3.html" id="附件_/_曲线_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/zh/extras/curves/EllipseCurve.html" id="附件_/_曲线_EllipseCurve">EllipseCurve</a></li><li><a href="api/zh/extras/curves/LineCurve.html" id="附件_/_曲线_LineCurve">LineCurve</a></li><li><a href="api/zh/extras/curves/LineCurve3.html" id="附件_/_曲线_LineCurve3">LineCurve3</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve.html" id="附件_/_曲线_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve3.html" id="附件_/_曲线_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/zh/extras/curves/SplineCurve.html" id="附件_/_曲线_SplineCurve">SplineCurve</a></li></ul></div><div><h2>附件 / 对象</h2><ul id="附件_/_对象"><li><a href="api/zh/extras/objects/ImmediateRenderObject.html" id="附件_/_对象_ImmediateRenderObject">ImmediateRenderObject</a></li><li><a href="api/zh/extras/objects/LineHTML.html" id="附件_/_对象_LineHTML">LineHTML</a></li><li><a href="api/zh/extras/objects/MeshLine.html" id="附件_/_对象_MeshLine">MeshLine</a></li><li><a href="api/zh/extras/objects/MeshLineIndexed.html" id="附件_/_对象_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/zh/extras/objects/MeshLineMaterial.html" id="附件_/_对象_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>几何体</h2><ul id="几何体"><li><a href="api/zh/geometries/BoxBufferGeometry.html" id="几何体_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/zh/geometries/BoxGeometry.html" id="几何体_BoxGeometry">BoxGeometry</a></li><li><a href="api/zh/geometries/CircleBufferGeometry.html" id="几何体_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/zh/geometries/CircleGeometry.html" id="几何体_CircleGeometry">CircleGeometry</a></li><li><a href="api/zh/geometries/ConeBufferGeometry.html" id="几何体_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/zh/geometries/ConeGeometry.html" id="几何体_ConeGeometry">ConeGeometry</a></li><li><a href="api/zh/geometries/CylinderBufferGeometry.html" id="几何体_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/zh/geometries/CylinderGeometry.html" id="几何体_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/zh/geometries/DodecahedronBufferGeometry.html" id="几何体_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/zh/geometries/DodecahedronGeometry.html" id="几何体_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/zh/geometries/EdgesGeometry.html" id="几何体_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/zh/geometries/ExtrudeBufferGeometry.html" id="几何体_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/zh/geometries/ExtrudeGeometry.html" id="几何体_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/zh/geometries/IcosahedronBufferGeometry.html" id="几何体_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/zh/geometries/IcosahedronGeometry.html" id="几何体_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/zh/geometries/LatheBufferGeometry.html" id="几何体_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/zh/geometries/LatheGeometry.html" id="几何体_LatheGeometry">LatheGeometry</a></li><li><a href="api/zh/geometries/OctahedronBufferGeometry.html" id="几何体_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/zh/geometries/OctahedronGeometry.html" id="几何体_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/zh/geometries/ParametricBufferGeometry.html" id="几何体_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/zh/geometries/ParametricGeometry.html" id="几何体_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/zh/geometries/PlaneBufferGeometry.html" id="几何体_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/zh/geometries/PlaneGeometry.html" id="几何体_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/zh/geometries/PolyhedronBufferGeometry.html" id="几何体_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/zh/geometries/PolyhedronGeometry.html" id="几何体_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/zh/geometries/RingBufferGeometry.html" id="几何体_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/zh/geometries/RingGeometry.html" id="几何体_RingGeometry">RingGeometry</a></li><li><a href="api/zh/geometries/ShapeBufferGeometry.html" id="几何体_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/zh/geometries/ShapeGeometry.html" id="几何体_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/zh/geometries/SphereBufferGeometry.html" id="几何体_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/zh/geometries/SphereGeometry.html" id="几何体_SphereGeometry">SphereGeometry</a></li><li><a href="api/zh/geometries/TetrahedronBufferGeometry.html" id="几何体_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/zh/geometries/TetrahedronGeometry.html" id="几何体_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/zh/geometries/TextBufferGeometry.html" id="几何体_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/zh/geometries/TextGeometry.html" id="几何体_TextGeometry">TextGeometry</a></li><li><a href="api/zh/geometries/TorusBufferGeometry.html" id="几何体_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/zh/geometries/TorusGeometry.html" id="几何体_TorusGeometry">TorusGeometry</a></li><li><a href="api/zh/geometries/TorusKnotBufferGeometry.html" id="几何体_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/zh/geometries/TorusKnotGeometry.html" id="几何体_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/zh/geometries/TubeBufferGeometry.html" id="几何体_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/zh/geometries/TubeGeometry.html" id="几何体_TubeGeometry">TubeGeometry</a></li><li><a href="api/zh/geometries/WireframeGeometry.html" id="几何体_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>辅助对象</h2><ul id="辅助对象"><li><a href="api/zh/helpers/ArrowHelper.html" id="辅助对象_ArrowHelper">ArrowHelper</a></li><li><a href="api/zh/helpers/AxesHelper.html" id="辅助对象_AxesHelper">AxesHelper</a></li><li><a href="api/zh/helpers/BoxHelper.html" id="辅助对象_BoxHelper">BoxHelper</a></li><li><a href="api/zh/helpers/Box3Helper.html" id="辅助对象_Box3Helper">Box3Helper</a></li><li><a href="api/zh/helpers/CameraHelper.html" id="辅助对象_CameraHelper">CameraHelper</a></li><li><a href="api/zh/helpers/DirectionalLightHelper.html" id="辅助对象_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/zh/helpers/GridHelper.html" id="辅助对象_GridHelper">GridHelper</a></li><li><a href="api/zh/helpers/PolarGridHelper.html" id="辅助对象_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/zh/helpers/HemisphereLightHelper.html" id="辅助对象_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/zh/helpers/PlaneHelper.html" id="辅助对象_PlaneHelper">PlaneHelper</a></li><li><a href="api/zh/helpers/PointLightHelper.html" id="辅助对象_PointLightHelper">PointLightHelper</a></li><li><a href="api/zh/helpers/SkeletonHelper.html" id="辅助对象_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/zh/helpers/SpotLightHelper.html" id="辅助对象_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>灯光</h2><ul id="灯光"><li><a href="api/zh/lights/AmbientLight.html" id="灯光_AmbientLight">AmbientLight</a></li><li><a href="api/zh/lights/CubeReflectionProbe.html" id="灯光_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/zh/lights/DirectionalLight.html" id="灯光_DirectionalLight">DirectionalLight</a></li><li><a href="api/zh/lights/HemisphereLight.html" id="灯光_HemisphereLight">HemisphereLight</a></li><li><a href="api/zh/lights/Light.html" id="灯光_Light">Light</a></li><li><a href="api/zh/lights/PointLight.html" id="灯光_PointLight">PointLight</a></li><li><a href="api/zh/lights/RectAreaLight.html" id="灯光_RectAreaLight">RectAreaLight</a></li><li><a href="api/zh/lights/SpotLight.html" id="灯光_SpotLight">SpotLight</a></li></ul></div><div><h2>灯光 / 阴影</h2><ul id="灯光_/_阴影"><li><a href="api/zh/lights/shadows/LightShadow.html" id="灯光_/_阴影_LightShadow">LightShadow</a></li><li><a href="api/zh/lights/shadows/PointLightShadow.html" id="灯光_/_阴影_PointLightShadow">PointLightShadow</a></li><li><a href="api/zh/lights/shadows/DirectionalLightShadow.html" id="灯光_/_阴影_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/zh/lights/shadows/SpotLightShadow.html" id="灯光_/_阴影_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>加载器</h2><ul id="加载器"><li><a href="api/zh/loaders/AnimationLoader.html" id="加载器_AnimationLoader">AnimationLoader</a></li><li><a href="api/zh/loaders/AudioLoader.html" id="加载器_AudioLoader">AudioLoader</a></li><li><a href="api/zh/loaders/BufferGeometryLoader.html" id="加载器_BufferGeometryLoader">BufferGeometryLoader</a></li><li><a href="api/zh/loaders/Cache.html" id="加载器_Cache">Cache</a></li><li><a href="api/zh/loaders/CompressedTextureLoader.html" id="加载器_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/zh/loaders/CubeTextureLoader.html" id="加载器_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/zh/loaders/DataTextureLoader.html" id="加载器_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/zh/loaders/FileLoader.html" id="加载器_FileLoader">FileLoader</a></li><li><a href="api/zh/loaders/FontLoader.html" id="加载器_FontLoader">FontLoader</a></li><li><a href="api/zh/loaders/ImageBitmapLoader.html" id="加载器_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/zh/loaders/ImageLoader.html" id="加载器_ImageLoader">ImageLoader</a></li><li><a href="api/zh/loaders/GLTFLoader.html" id="加载器_GLTFLoader">GLTFLoader</a></li><li><a href="api/zh/loaders/Loader.html" id="加载器_Loader">Loader</a></li><li><a href="api/zh/loaders/LoaderUtils.html" id="加载器_LoaderUtils">LoaderUtils</a></li><li><a href="api/zh/loaders/MaterialLoader.html" id="加载器_MaterialLoader">MaterialLoader</a></li><li><a href="api/zh/loaders/ObjectLoader.html" id="加载器_ObjectLoader">ObjectLoader</a></li><li><a href="api/zh/loaders/TextureLoader.html" id="加载器_TextureLoader">TextureLoader</a></li></ul></div><div><h2>加载器 / 管理器</h2><ul id="加载器_/_管理器"><li><a href="api/zh/loaders/managers/DefaultLoadingManager.html" id="加载器_/_管理器_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/zh/loaders/managers/LoadingManager.html" id="加载器_/_管理器_LoadingManager">LoadingManager</a></li></ul></div><div><h2>材质</h2><ul id="材质"><li><a href="api/zh/materials/LineBasicMaterial.html" id="材质_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/zh/materials/LineDashedMaterial.html" id="材质_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/zh/materials/Material.html" id="材质_Material">Material</a></li><li><a href="api/zh/materials/MaterialUtils.html" id="材质_MaterialUtils">MaterialUtils</a></li><li><a href="api/zh/materials/MeshBasicMaterial.html" id="材质_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/zh/materials/MeshDepthMaterial.html" id="材质_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/zh/materials/MeshDistanceMaterial.html" id="材质_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/zh/materials/MeshLambertMaterial.html" id="材质_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/zh/materials/MeshMatcapMaterial.html" id="材质_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/zh/materials/MeshNodeMaterial.html" id="材质_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/zh/materials/MeshNormalMaterial.html" id="材质_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/zh/materials/MeshPhongMaterial.html" id="材质_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/zh/materials/MeshPhysicalMaterial.html" id="材质_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/zh/materials/MeshStandardMaterial.html" id="材质_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/zh/materials/MeshToonMaterial.html" id="材质_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/zh/materials/PointsMaterial.html" id="材质_PointsMaterial">PointsMaterial</a></li><li><a href="api/zh/materials/RawShaderMaterial.html" id="材质_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/zh/materials/ShaderMaterial.html" id="材质_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/zh/materials/ShadowMaterial.html" id="材质_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/zh/materials/SpriteMaterial.html" id="材质_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>数学</h2><ul id="数学"><li><a href="api/zh/math/Box2.html" id="数学_Box2">Box2</a></li><li><a href="api/zh/math/Box3.html" id="数学_Box3">Box3</a></li><li><a href="api/zh/math/Color.html" id="数学_Color">Color</a></li><li><a href="api/zh/math/Cylindrical.html" id="数学_Cylindrical">Cylindrical</a></li><li><a href="api/zh/math/Euler.html" id="数学_Euler">Euler</a></li><li><a href="api/zh/math/Frustum.html" id="数学_Frustum">Frustum</a></li><li><a href="api/zh/math/Interpolant.html" id="数学_Interpolant">Interpolant</a></li><li><a href="api/zh/math/Line3.html" id="数学_Line3">Line3</a></li><li><a href="api/zh/math/Math.html" id="数学_Math">Math</a></li><li><a href="api/zh/math/MathUtils.html" id="数学_MathUtils">MathUtils</a></li><li><a href="api/zh/math/Matrix3.html" id="数学_Matrix3">Matrix3</a></li><li><a href="api/zh/math/Matrix4.html" id="数学_Matrix4">Matrix4</a></li><li><a href="api/zh/math/Plane.html" id="数学_Plane">Plane</a></li><li><a href="api/zh/math/Quaternion.html" id="数学_Quaternion">Quaternion</a></li><li><a href="api/zh/math/Ray.html" id="数学_Ray">Ray</a></li><li><a href="api/zh/math/Sphere.html" id="数学_Sphere">Sphere</a></li><li><a href="api/zh/math/Spherical.html" id="数学_Spherical">Spherical</a></li><li><a href="api/zh/math/Triangle.html" id="数学_Triangle">Triangle</a></li><li><a href="api/zh/math/Vector2.html" id="数学_Vector2">Vector2</a></li><li><a href="api/zh/math/Vector3.html" id="数学_Vector3">Vector3</a></li><li><a href="api/zh/math/Vector4.html" id="数学_Vector4">Vector4</a></li></ul></div><div><h2>数学 / 插值</h2><ul id="数学_/_插值"><li><a href="api/zh/math/interpolants/CubicInterpolant.html" id="数学_/_插值_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/zh/math/interpolants/DiscreteInterpolant.html" id="数学_/_插值_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/zh/math/interpolants/LinearInterpolant.html" id="数学_/_插值_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/zh/math/interpolants/QuaternionLinearInterpolant.html" id="数学_/_插值_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>对象</h2><ul id="对象"><li><a href="api/zh/objects/Annotation.html" id="对象_Annotation">Annotation</a></li><li><a href="api/zh/objects/AnnotationControl.html" id="对象_AnnotationControl">AnnotationControl</a></li><li><a href="api/zh/objects/Bone.html" id="对象_Bone">Bone</a></li><li><a href="api/zh/objects/Group.html" id="对象_Group">Group</a></li><li><a href="api/zh/objects/InstancedMesh.html" id="对象_InstancedMesh">InstancedMesh</a></li><li><a href="api/zh/objects/Line.html" id="对象_Line">Line</a></li><li><a href="api/zh/objects/LineLoop.html" id="对象_LineLoop">LineLoop</a></li><li><a href="api/zh/objects/LineSegments.html" id="对象_LineSegments">LineSegments</a></li><li><a href="api/zh/objects/LOD.html" id="对象_LOD">LOD</a></li><li><a href="api/zh/objects/Mesh.html" id="对象_Mesh">Mesh</a></li><li><a href="api/zh/objects/Points.html" id="对象_Points">Points</a></li><li><a href="api/zh/objects/Skeleton.html" id="对象_Skeleton">Skeleton</a></li><li><a href="api/zh/objects/SkinnedMesh.html" id="对象_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/zh/objects/Sprite.html" id="对象_Sprite">Sprite</a></li></ul></div><div><h2>渲染器</h2><ul id="渲染器"><li><a href="api/zh/renderers/WebGLMultisampleRenderTarget.html" id="渲染器_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/zh/renderers/RenderUtils.html" id="渲染器_RenderUtils">RenderUtils</a></li><li><a href="api/zh/renderers/WebGLRenderer.html" id="渲染器_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/zh/renderers/WebGLRenderTarget.html" id="渲染器_WebGLRenderTarget">WebGLRenderTarget</a></li><li><a href="api/zh/renderers/WebGLCubeRenderTarget.html" id="渲染器_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li></ul></div><div><h2>渲染器 / 着色器</h2><ul id="渲染器_/_着色器"><li><a href="api/zh/renderers/shaders/ShaderChunk.html" id="渲染器_/_着色器_ShaderChunk">ShaderChunk</a></li><li><a href="api/zh/renderers/shaders/ShaderLib.html" id="渲染器_/_着色器_ShaderLib">ShaderLib</a></li><li><a href="api/zh/renderers/shaders/UniformsLib.html" id="渲染器_/_着色器_UniformsLib">UniformsLib</a></li><li><a href="api/zh/renderers/shaders/UniformsUtils.html" id="渲染器_/_着色器_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>场景</h2><ul id="场景"><li><a href="api/zh/scenes/Fog.html" id="场景_Fog">Fog</a></li><li><a href="api/zh/scenes/FogExp2.html" id="场景_FogExp2">FogExp2</a></li><li><a href="api/zh/scenes/Scene.html" id="场景_Scene">Scene</a></li><li><a href="api/zh/scenes/SceneBackground.html" id="场景_SceneBackground">SceneBackground</a></li></ul></div><div><h2>纹理贴图</h2><ul id="纹理贴图"><li><a href="api/zh/textures/CanvasTexture.html" id="纹理贴图_CanvasTexture">CanvasTexture</a></li><li><a href="api/zh/textures/CompressedTexture.html" id="纹理贴图_CompressedTexture">CompressedTexture</a></li><li><a href="api/zh/textures/CubeTexture.html" id="纹理贴图_CubeTexture">CubeTexture</a></li><li><a href="api/zh/textures/DataTexture.html" id="纹理贴图_DataTexture">DataTexture</a></li><li><a href="api/zh/textures/DataTexture3D.html" id="纹理贴图_DataTexture3D">DataTexture3D</a></li><li><a href="api/zh/textures/DepthTexture.html" id="纹理贴图_DepthTexture">DepthTexture</a></li><li><a href="api/zh/textures/Texture.html" id="纹理贴图_Texture">Texture</a></li><li><a href="api/zh/textures/VideoTexture.html" id="纹理贴图_VideoTexture">VideoTexture</a></li></ul></div><div><h2>差异化支持</h2><ul id="差异化支持"><li><a href="api/zh/Polyfills.html" id="差异化支持_Polyfills">Polyfills</a></li></ul></div><div><h2>WebGL渲染器</h2><ul id="WebGL渲染器"><li><a href="api/zh/renderers/webgl/WebGLProgram.html" id="WebGL渲染器_WebGLProgram">WebGLProgram</a></li><li><a href="api/zh/renderers/webgl/WebGLShader.html" id="WebGL渲染器_WebGLShader">WebGLShader</a></li><li><a href="api/zh/renderers/webgl/WebGLState.html" id="WebGL渲染器_WebGLState">WebGLState</a></li></ul></div></div>
+        </nav>
+<h1>材质(Material)</h1>
+
+<p class="desc">材质的抽象基类。<br><br>
+  材质描述了对象<a href="javascript:;">objects</a>的外观。它们的定义方式与渲染器无关，
+  因此，如果您决定使用不同的渲染器，不必重写材质。<br><br>
+  所有其他材质类型都继承了以下属性和方法（尽管它们可能具有不同的默认值）。
+</p>
+
+<h2>构造函数(Constructor)</h2>
+
+
+<h3>Material()</h3>
+<p>该方法创建一个通用材质。</p>
+
+
+<h2>属性(Properties)</h2>
+
+<h3><a href="api/zh/materials/Material.html#alphaTest" class="permalink">#</a> .<a href="api/zh/materials/Material.html#alphaTest" id="alphaTest">alphaTest</a>  : <a href="javascript:;" class="param">Float</a></h3>
+<p>设置运行alphaTest时要使用的alpha值。如果不透明度低于此值，则不会渲染材质。默认值为<strong>0</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#blendDst" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendDst" id="blendDst">blendDst</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 混合目标。默认值为<a href="api/zh/constants/CustomBlendingEquations.html">OneMinusSrcAlphaFactor</a>。
+  目标因子所有可能的取值请参阅<a href="api/zh/constants/CustomBlendingEquations.html">constants</a>。
+  必须将材质的<a href="javascript:;">blending</a>设置为<a href="api/zh/constants/Materials.html">CustomBlending</a>才能生效。<br>
+</p>
+
+<h3><a href="api/zh/materials/Material.html#blendDstAlpha" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendDstAlpha" id="blendDstAlpha">blendDstAlpha</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> <a href="api/zh/materials/Material.html#blendDst">.blendDst</a>的透明度。 默认值为 <strong>null</strong>.</p>
+
+<h3><a href="api/zh/materials/Material.html#blendEquation" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendEquation" id="blendEquation">blendEquation</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 使用混合时所采用的混合方程式。默认值为<a href="api/zh/constants/CustomBlendingEquations.html">AddEquation</a>。
+  混合方程式所有可能的取值请参阅<a href="api/zh/constants/CustomBlendingEquations.html">constants</a>。
+  必须将材质的<a href="javascript:;">blending</a>设置为<a href="api/zh/constants/Materials.html">CustomBlending</a>才能生效。<br>
+</p>
+
+<h3><a href="api/zh/materials/Material.html#blendEquationAlpha" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendEquationAlpha" id="blendEquationAlpha">blendEquationAlpha</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p><a href="api/zh/materials/Material.html#blendEquation">.blendEquation</a> 的透明度. 默认值为 <strong>null</strong>.</p>
+
+<h3><a href="api/zh/materials/Material.html#blending" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blending" id="blending">blending</a>  : <a href="javascript:;" class="param">Blending</a></h3>
+<p> 在使用此材质显示对象时要使用何种混合。<br>
+  必须将其设置为<a href="api/zh/constants/Materials.html">CustomBlending</a>才能使用自定义<a href="javascript:;">blendSrc</a>, <a href="javascript:;">blendDst</a> 或者 [page:Constant
+  blendEquation]。
+  混合模式所有可能的取值请参阅<a href="api/zh/constants/Materials.html">constants</a>。默认值为<a href="api/zh/constants/Materials.html">NormalBlending</a>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#blendSrc" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendSrc" id="blendSrc">blendSrc</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 混合源。默认值为<a href="api/zh/constants/CustomBlendingEquations.html">SrcAlphaFactor</a>。
+  源因子所有可能的取值请参阅<a href="api/zh/constants/CustomBlendingEquations.html">constants</a>。<br>
+  必须将材质的<a href="javascript:;">blending</a>设置为<a href="api/zh/constants/Materials.html">CustomBlending</a>才能生效。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#blendSrcAlpha" class="permalink">#</a> .<a href="api/zh/materials/Material.html#blendSrcAlpha" id="blendSrcAlpha">blendSrcAlpha</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> <a href="api/zh/materials/Material.html#blendSrc">.blendSrc</a>的透明度。 默认值为 <strong>null</strong>.</p>
+
+<h3><a href="api/zh/materials/Material.html#clipIntersection" class="permalink">#</a> .<a href="api/zh/materials/Material.html#clipIntersection" id="clipIntersection">clipIntersection</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>更改剪裁平面的行为，以便仅剪切其交叉点，而不是它们的并集。默认值为 <strong>false</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#clippingPlanes" class="permalink">#</a> .<a href="api/zh/materials/Material.html#clippingPlanes" id="clippingPlanes">clippingPlanes</a>  : <a href="javascript:;" class="param">Array</a></h3>
+<p>
+  用户定义的剪裁平面，在世界空间中指定为v3d.Plane对象。这些平面适用于所有使用此材质的对象。空间中与平面的有符号距离为负的点被剪裁（未渲染）。
+  这需要<a href="api/zh/renderers/WebGLRenderer.html#localClippingEnabled">WebGLRenderer.localClippingEnabled</a>为<strong>true</strong>。
+  示例请参阅<a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_clipping_intersection"  target="_blank">WebGL / clipping /intersection</a>。默认值为 <strong>null</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#clipShadows" class="permalink">#</a> .<a href="api/zh/materials/Material.html#clipShadows" id="clipShadows">clipShadows</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>定义是否根据此材质上指定的剪裁平面剪切阴影。默认值为 <strong>false</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#colorWrite" class="permalink">#</a> .<a href="api/zh/materials/Material.html#colorWrite" id="colorWrite">colorWrite</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 是否渲染材质的颜色。
+  这可以与网格的<a href="javascript:;">renderOrder</a>属性结合使用，以创建遮挡其他对象的不可见对象。默认值为<strong>true</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#defines" class="permalink">#</a> .<a href="api/zh/materials/Material.html#defines" id="defines">defines</a>  : <a href="javascript:;" class="param">Object</a></h3>
+<p> 注入shader的自定义对象。 以键值对形式的对象传递，{ MY_CUSTOM_DEFINE: '' , PI2: Math.PI * 2 }。
+  这些键值对在顶点和片元着色器中定义。默认值为<strong>undefined</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#depthFunc" class="permalink">#</a> .<a href="api/zh/materials/Material.html#depthFunc" id="depthFunc">depthFunc</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 使用何种深度函数。默认为<a href="api/zh/constants/Materials.html">LessEqualDepth</a>。
+  深度模式所有可能的取值请查阅<a href="api/zh/constants/Materials.html">constants</a>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#depthTest" class="permalink">#</a> .<a href="api/zh/materials/Material.html#depthTest" id="depthTest">depthTest</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>是否在渲染此材质时启用深度测试。默认为 <strong>true</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#depthWrite" class="permalink">#</a> .<a href="api/zh/materials/Material.html#depthWrite" id="depthWrite">depthWrite</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>渲染此材质是否对深度缓冲区有任何影响。默认为<strong>true</strong>。<br><br>
+  在绘制2D叠加时，将多个事物分层在一起而不创建z-index时，禁用深度写入会很有用。
+</p>
+
+
+<h3><a href="api/zh/materials/Material.html#stencilWrite" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilWrite" id="stencilWrite">stencilWrite</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>
+Whether stencil operations are performed against the stencil buffer. In order to perform writes or comparisons against the stencil buffer this value must be <strong>true</strong>. Default is <strong>false</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilWriteMask" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilWriteMask" id="stencilWriteMask">stencilWriteMask</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+The bit mask to use when writing to the stencil buffer. Default is <strong>0xFF</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilFunc" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilFunc" id="stencilFunc">stencilFunc</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+The stencil comparison function to use. Default is <a href="api/zh/constants/Materials.html">AlwaysStencilFunc</a>. See stencil function <a href="api/zh/constants/Materials.html">constants</a> for all possible values.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilRef" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilRef" id="stencilRef">stencilRef</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+The value to use when performing stencil comparisons or stencil operations. Default is <strong>0</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilFuncMask" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilFuncMask" id="stencilFuncMask">stencilFuncMask</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+The bit mask to use when comparing against the stencil buffer. Default is <strong>0xFF</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilFail" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilFail" id="stencilFail">stencilFail</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+Which stencil operation to perform when the comparison function returns false. Default is <a href="api/zh/constants/Materials.html">KeepStencilOp</a>. See the stencil operations <a href="api/zh/constants/Materials.html">constants</a> for all possible values.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilZFail" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilZFail" id="stencilZFail">stencilZFail</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+Which stencil operation to perform when the comparison function returns true but the depth test fails. Default is <a href="api/zh/constants/Materials.html">KeepStencilOp</a>. See the stencil operations <a href="api/zh/constants/Materials.html">constants</a> for all possible values.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#stencilZPass" class="permalink">#</a> .<a href="api/zh/materials/Material.html#stencilZPass" id="stencilZPass">stencilZPass</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+Which stencil operation to perform when the comparison function returns true and the depth test passes. Default is <a href="api/zh/constants/Materials.html">KeepStencilOp</a>. See the stencil operations <a href="api/zh/constants/Materials.html">constants</a> for all possible values.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#flatShading" class="permalink">#</a> .<a href="api/zh/materials/Material.html#flatShading" id="flatShading">flatShading</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 定义材质是否使用平面着色进行渲染。默认值为false。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#fog" class="permalink">#</a> .<a href="api/zh/materials/Material.html#fog" id="fog">fog</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>材质是否受雾影响。默认为<strong>true</strong>。</p>
+
+<h3><a href="api/zh/materials/Material.html#id" class="permalink">#</a> .<a href="api/zh/materials/Material.html#id" id="id">id</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>此材质实例的唯一编号。</p>
+
+<h3><a href="api/zh/materials/Material.html#name" class="permalink">#</a> .<a href="api/zh/materials/Material.html#name" id="name">name</a>  : <a href="javascript:;" class="param">String</a></h3>
+<p>对象的可选名称（不必是唯一的）。默认值为空字符串。</p>
+
+<h3><a href="api/zh/materials/Material.html#needsUpdate" class="permalink">#</a> .<a href="api/zh/materials/Material.html#needsUpdate" id="needsUpdate">needsUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>指定需要重新编译材质。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#opacity" class="permalink">#</a> .<a href="api/zh/materials/Material.html#opacity" id="opacity">opacity</a>  : <a href="javascript:;" class="param">Float</a></h3>
+<p> 在0.0 - 1.0的范围内的浮点数，表明材质的透明度。值<strong>0.0</strong>表示完全透明，<strong>1.0</strong>表示完全不透明。<br>
+  如果材质的<a href="javascript:;">transparent</a>属性未设置为<strong>true</strong>，则材质将保持完全不透明，此值仅影响其颜色。
+  默认值为<strong>1.0</strong>。 <br>
+
+</p>
+
+<h3><a href="api/zh/materials/Material.html#polygonOffset" class="permalink">#</a> .<a href="api/zh/materials/Material.html#polygonOffset" id="polygonOffset">polygonOffset</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 是否使用多边形偏移。默认值为<strong>false</strong>。这对应于WebGL的<strong>GL_POLYGON_OFFSET_FILL</strong>功能。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#polygonOffsetFactor" class="permalink">#</a> .<a href="api/zh/materials/Material.html#polygonOffsetFactor" id="polygonOffsetFactor">polygonOffsetFactor</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>设置多边形偏移系数。默认值为<strong>0</strong>。</p>
+
+<h3><a href="api/zh/materials/Material.html#polygonOffsetUnits" class="permalink">#</a> .<a href="api/zh/materials/Material.html#polygonOffsetUnits" id="polygonOffsetUnits">polygonOffsetUnits</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>设置多边形偏移单位。默认值为<strong>0</strong>。</p>
+
+<h3><a href="api/zh/materials/Material.html#precision" class="permalink">#</a> .<a href="api/zh/materials/Material.html#precision" id="precision">precision</a>  : <a href="javascript:;" class="param">String</a></h3>
+<p> 重写此材质渲染器的默认精度。可以是"<strong>highp</strong>", "<strong>mediump</strong>" 或 "<strong>lowp</strong>"。默认值为<strong>null</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#premultipliedAlpha" class="permalink">#</a> .<a href="api/zh/materials/Material.html#premultipliedAlpha" id="premultipliedAlpha">premultipliedAlpha</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 是否预乘alpha（透明度）值。有关差异的示例，请参阅<a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_physical_transmission"  target="_blank">WebGL / Materials / Physical / Transmission</a>。
+  默认值为<strong>false</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#dithering" class="permalink">#</a> .<a href="api/zh/materials/Material.html#dithering" id="dithering">dithering</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 是否对颜色应用抖动以消除条带的外观。默认值为 <strong>false</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#shadowSide" class="permalink">#</a> .<a href="api/zh/materials/Material.html#shadowSide" id="shadowSide">shadowSide</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 定义投影的面。设置时，可以是<a href="api/zh/constants/Materials.html">v3d.FrontSide</a>, <a href="api/zh/constants/Materials.html">v3d.BackSide</a>, 或<a href="api/zh/constants/Materials.html">Materials</a>。默认值为 <strong>null</strong>。
+   <br>
+  如果为<strong>null</strong>， 则面投射阴影确定如下： <br>
+
+</p><table>
+  <thead>
+  <tr>
+    <th><a href="api/zh/materials/Material.html#side">Material.side</a></th>
+    <th>Side casting shadows</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td>v3d.FrontSide</td>
+    <td>背面</td>
+  </tr>
+  <tr>
+    <td>v3d.BackSide</td>
+    <td>前面</td>
+  </tr>
+  <tr>
+    <td>v3d.DoubleSide</td>
+    <td>双面</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<p></p>
+
+<h3><a href="api/zh/materials/Material.html#side" class="permalink">#</a> .<a href="api/zh/materials/Material.html#side" id="side">side</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p> 定义将要渲染哪一面 - 正面，背面或两者。
+  默认为<a href="api/zh/constants/Materials.html">v3d.FrontSide</a>。其他选项有<a href="api/zh/constants/Materials.html">v3d.BackSide</a>和<a href="api/zh/constants/Materials.html">v3d.DoubleSide</a>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#toneMapped" class="permalink">#</a> .<a href="api/zh/materials/Material.html#toneMapped" id="toneMapped">toneMapped</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>
+Defines whether this material is tone mapped according to the renderer's <a href="api/zh/renderers/WebGLRenderer.html#toneMapping">toneMapping</a> setting. Default is <strong>true</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#transparent" class="permalink">#</a> .<a href="api/zh/materials/Material.html#transparent" id="transparent">transparent</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>
+  定义此材质是否透明。这对渲染有影响，因为透明对象需要特殊处理，并在非透明对象之后渲染。
+  <br>
+  设置为true时，通过设置材质的<a href="javascript:;">opacity</a>属性来控制材质透明的程度。<br>
+  默认值为<strong>false</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#type" class="permalink">#</a> .<a href="api/zh/materials/Material.html#type" id="type">type</a>  : <a href="javascript:;" class="param">String</a></h3>
+<p> 值是字符串'Material'。不应该被更改，并且可以用于在场景中查找此类型的所有对象。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#uuid" class="permalink">#</a> .<a href="api/zh/materials/Material.html#uuid" id="uuid">uuid</a>  : <a href="javascript:;" class="param">String</a></h3>
+<p> 此材质实例的<a href="http://en.wikipedia.org/wiki/Universally_unique_identifier"  target="_blank">UUID</a>，会自动分配，不应该被更改。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#version" class="permalink">#</a> .<a href="api/zh/materials/Material.html#version" id="version">version</a>  : <a href="javascript:;" class="param">Integer</a></h3>
+<p>
+This starts at <strong>0</strong> and counts how many times <a href="api/zh/materials/Material.html#needsUpdate" class="permalink">#</a> .<a href="api/zh/materials/Material.html#needsUpdate" id="needsUpdate">needsUpdate</a>  : <a href="javascript:;" class="param">Boolean</a>is set to <strong>true</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#vertexColors" class="permalink">#</a> .<a href="api/zh/materials/Material.html#vertexColors" id="vertexColors">vertexColors</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p>
+Defines whether vertex coloring is used. Default is <strong>false</strong>.
+</p>
+
+<h3><a href="api/zh/materials/Material.html#visible" class="permalink">#</a> .<a href="api/zh/materials/Material.html#visible" id="visible">visible</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+<p> 此材质是否可见。默认为<strong>true</strong>。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#userData" class="permalink">#</a> .<a href="api/zh/materials/Material.html#userData" id="userData">userData</a>  : <a href="javascript:;" class="param">Object</a></h3>
+<p> 一个对象，可用于存储有关Material的自定义数据。它不应该包含对函数的引用，因为这些函数不会被克隆。
+</p>
+
+<h2>方法(Methods)</h2>
+
+<h3><a href="api/zh/core/EventDispatcher.html">EventDispatcher</a> 方法在此类中可用。</h3>
+
+<h3><a href="api/zh/materials/Material.html#clone" class="permalink">#</a> .<a href="api/zh/materials/Material.html#clone" id="clone">clone</a> () : <a href="api/zh/materials/Material.html" class="param">Material</a></h3>
+<p> 返回与此材质具有相同参数的新材质。</p>
+
+<h3><a href="api/zh/materials/Material.html#copy" class="permalink">#</a> .<a href="api/zh/materials/Material.html#copy" id="copy">copy</a> (material : <a href="javascript:;" class="param">material</a>) : <a href="api/zh/materials/Material.html" class="param">Material</a></h3>
+<p> 将被传入材质中的参数复制到此材质中。</p>
+
+<h3><a href="api/zh/materials/Material.html#dispose" class="permalink">#</a> .<a href="api/zh/materials/Material.html#dispose" id="dispose">dispose</a> () : <a href="javascript:;" class="param">null</a></h3>
+<p> 处理材质。材质的纹理不会被处理。需要通过<a href="api/zh/textures/Texture.html">Texture</a>处理。
+</p>
+
+<h3><a href="api/zh/materials/Material.html#onBeforeCompile" class="permalink">#</a> .<a href="api/zh/materials/Material.html#onBeforeCompile" id="onBeforeCompile">onBeforeCompile</a> (shader : <a href="javascript:;" class="param">Shader</a>, renderer : <a href="api/zh/renderers/WebGLRenderer.html" class="param">WebGLRenderer</a>) : <a href="javascript:;" class="param">null</a></h3>
+<p> 在编译shader程序之前立即执行的可选回调。此函数使用shader源码作为参数。用于修改内置材质。
+</p>
+<p>
+Unlike properties, the callback is not supported by <a href="api/zh/materials/Material.html#clone">.clone</a>(), <a href="api/zh/materials/Material.html#copy">.copy</a>() and <a href="api/zh/materials/Material.html#toJSON">.toJSON</a>().
+</p>
+
+<h3><a href="api/zh/materials/Material.html#customProgramCacheKey" class="permalink">#</a> .<a href="api/zh/materials/Material.html#customProgramCacheKey" id="customProgramCacheKey">customProgramCacheKey</a> () : <a href="javascript:;" class="param">String</a></h3>
+<p>
+In case onBeforeCompile is used, this callback can be used to identify values of settings used in onBeforeCompile, so Verge3D can reuse a cached shader or recompile the shader for this material as needed.
+</p>
+
+<p>
+For example, if onBeforeCompile contains a conditional statement like:<br>
+
+<code>if (black) {
+
+  shader.fragmentShader = shader.fragmentShader.replace('gl_FragColor = vec4(1)', 'gl_FragColor = vec4(0)')
+
+}
+</code>
+
+then customProgramCacheKey should be set like this:<br>
+
+<code>material.customProgramCacheKey = function() {
+
+  return black ? '1' : '0';
+
+}
+</code>
+
+</p>
+
+<p>
+Unlike properties, the callback is not supported by <a href="api/zh/materials/Material.html#clone">.clone</a>(), <a href="api/zh/materials/Material.html#copy">.copy</a>() and <a href="api/zh/materials/Material.html#toJSON">.toJSON</a>().
+</p>
+
+<h3><a href="api/zh/materials/Material.html#setValues" class="permalink">#</a> .<a href="api/zh/materials/Material.html#setValues" id="setValues">setValues</a> (values : <a href="javascript:;" class="param">Object</a>) : <a href="javascript:;" class="param">null</a></h3>
+<p> values -- 具有参数的容器。
+  根据<strong>values</strong>设置属性。<br>
+</p>
+
+<h3><a href="api/zh/materials/Material.html#toJSON" class="permalink">#</a> .<a href="api/zh/materials/Material.html#toJSON" id="toJSON">toJSON</a> (meta : <a href="javascript:;" class="param">Object</a>) : <a href="javascript:;" class="param">Object</a></h3>
+<p>
+  meta -- 包含有元数据的对象，例如该对象的纹理或图片。
+  将material对象转换为 Verge3D <a href="https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4"  target="_blank">JSON Object/Scene format</a>（Verge3D JSON 物体/场景格式）。
+</p>
+
+<h2>源码(Source)</h2>
+
+<p>
+      <a href="https://github.com/mrdoob/three.js/blob/master/src/materials/Material.js"  target="_blank">src/materials/Material.js</a>
+    </p>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Работа с Verge3D для художников: Blender, 3ds Max или Maya - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Здесь мы рассматриваем рабочий процесс, который оказался оптимальным для создания интерактивных 3D веб-приложений с использованием Blender, 3ds Max или Maya.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Workflow.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Работа с Verge3D для художников: Blender, 3ds Max или Maya - Soft8Soft">
+            <meta property="og:description" content="Здесь мы рассматриваем рабочий процесс, который оказался оптимальным для создания интерактивных 3D веб-приложений с использованием Blender, 3ds Max или Maya.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Workflow.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Работа с Verge3D для художников: Blender, 3ds Max или Maya - Soft8Soft">
+            <meta name="twitter:description" content="Здесь мы рассматриваем рабочий процесс, который оказался оптимальным для создания интерактивных 3D веб-приложений с использованием Blender, 3ds Max или Maya.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/teapot-heater.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/teapot-modeling.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/hdr-environment.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/scooter-bloom.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/animation.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/advanced_animation_puzzle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/webflow-project.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/post-process-effects.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/sounds.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example1.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/workflow/audio-example3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Рабочий процесс</h1>
+
+    <p>
+      Здесь мы рассмотрим рабочий процесс, который используется разработчиками Soft8Soft и пользователями Verge3D (на примерах <a href="https://cdn.soft8soft.com/demo/applications/scooter/index.html" target="_blank">Scooter Configurator</a>, <a href="https://cdn.soft8soft.com/demo/applications/teapot_heater_max/index.html" target="_blank">Teapot Heater</a>, <a href="https://cdn.soft8soft.com/demo/applications/industrial_robot/index.html" target="_blank">Industrial Robot​</a>, <a href="https://cdn.soft8soft.com/demo/applications/jewelry_configurator/index.html" target="_blank">Jewelry Configurator</a> и других приложений).
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Workflow.html#Modeling_and_Baking">Моделирование и выпечка</a></li><li><a href="manual/ru/introduction/Workflow.html#Choosing_Material_System">Выбор системы материалов</a></li><li><a href="manual/ru/introduction/Workflow.html#Image_Formats_and_Resolution">Форматы изображений, разрешение и рекомендации</a></li><li><a href="manual/ru/introduction/Workflow.html#Environment_Map">Environment Map (Image-Based Lighting)</a></li><li><a href="manual/ru/introduction/Workflow.html#HDR_Rendering">HDR рендеринг</a></li><li><a href="manual/ru/introduction/Workflow.html#Animation_">Анимация</a></li><li><a href="manual/ru/introduction/Workflow.html#Layout_and_UI">Верстка и UI</a></li><li><a href="manual/ru/introduction/Workflow.html#Post_processing">Постобработка</a></li><li><a href="manual/ru/introduction/Workflow.html#Audio_">Звук</a></li><li><a href="manual/ru/introduction/Workflow.html#Asset_Compression">Сжатие ассетов</a></li><li><a href="manual/ru/introduction/Workflow.html#Publishing">Публикация</a></li></ul><!-- /TOC -->
+
+    <p>
+      Для создания интерактивного 3D веб-контента вы можете использовать любую сборку Verge3D с одинаковым результатом, будь-то Verge3D Blender, 3ds Max или Maya.
+    </p>
+
+    <img src="files/workflow/teapot-heater.jpg" class="centered" style="max-width: 819px;">
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Modeling_and_Baking" id="Modeling_and_Baking" class="permalink">#</a></p>
+
+    <h2>Моделирование и выпечка</h2>
+
+    <p>
+      В нашей команде мы практикуем следующий подход к моделированию. Сначала создаются высокополигональные версии объектов. Затем удаляется модификатор Subsurf или выполняется ретопология для получения низкополигональных моделей. Рекомендуем использовать не более 100 тысяч треугольников на один объект.
+    </p>
+
+    <img src="files/workflow/teapot-modeling.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      Для низкополигональных моделей создается развертка UV, а сетка Mesh триангулируется. Это не требование Verge3D. В дальнейшем такие модели будет проще запекать или импортировать в сторонние редакторы, например Substance Painter.
+    </p>
+
+    <p>
+      Если необходимы карты Normal Map или Occlusion Map, то последние запекаются путем совмещения высокополигональных и триангулированных низкополигональных Mesh-объектов.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Choosing_Material_System" id="Choosing_Material_System" class="permalink">#</a></p>
+
+    <h2>Выбор системы материалов</h2>
+
+    <p>В большинстве случаев, ваш рабочий процесс может основываться на нативной системе материалов используемой в любимом 3D редакторе:</p>
+
+    <ul>
+      <li><a href="manual/ru/blender/Material-System.html">Blender</a> — шейдерные ноды с рендером Eevee.</li>
+      <li><a href="manual/ru/max/Material-System.html">3ds Max</a> — физический (рендер ART) или стандартный (рендер Scanline).</li>
+      <li><a href="manual/ru/maya/Materials.html">Maya</a> — Standard Surface (версии 2020+) или aiStandardSurface (версии 2019 или новее) с Viewport 2.0 в качестве рендера.</li>
+    </ul>
+
+    <p>Если, по каким-либо <a href="manual/ru/introduction/FAQ.html#gltf_materials">причинам</a>, ваш контент должен быть совместим со стандартом gLTF 2.0, то следует использовать специальные материалы (см. настройки для <a href="manual/ru/blender/GLTF-Materials.html">Blender</a>, <a href="manual/ru/max/GLTF-Materials.html">3ds Max</a> или <a href="manual/ru/maya/GLTF-Materials.html">Maya</a>).</p>
+
+    <p>
+      Вы также можете посмотреть видео, в которых объясняется, как использовать материалы в приложениях Verge3D:  <a href="https://youtu.be/liWX2tAvsns" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">3ds Max</a>, <a href="https://youtu.be/fll3Wvo0eE4">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Image_Formats_and_Resolution" id="Image_Formats_and_Resolution" class="permalink">#</a></p>
+
+    <h2>Форматы изображений, разрешение и рекомендации</h2>
+
+    <h3>PNG или JPEG</h3>
+
+    <p>
+      Для максимальной эффективности мы рекомендуем использовать для текстур форматы: PNG с максимальным сжатием без потерь или  JPEG с некоторыми потерями (впрочем, Verge3D также поддерживает GIF, BMP, TIFF). Если вам не нужна прозрачность в текстуре (альфа-канал), то предпочтите JPEG вместо PNG.
+    </p>
+
+    <h3>Normal Map</h3>
+
+    <p>
+      Карты нормалей следует сохранять в формате PNG, поскольку текстуры в формате JPEG часто создают видимые артефакты. Учтите, что изображение в PNG могут быть слишком большими с точки зрения размера файла, поэтому используйте карты нормалей только по необходимости.
+    </p>
+
+    <h3>Разрешение</h3>
+
+    <p>
+      Старайтесь не использовать слишком детализированные текстуры. Большие изображения плохо влияют на производительность, истощают видеопамять (особенно это касается мобильных устройств, вплоть до сбоя приложения) и значительно продлевают загрузку. Разрешение большинства текстур можно удерживать в пределах 1024 пикселей или даже еще меньше.
+    </p>
+
+    <h3>Остерегайтесь NPOT</h3>
+
+    <p>
+      Разрешение текстур должно соответствовать правилу POT (power of two), т.е. быть кратным 2. Таким образом значения 256, 512, 1024 выглядят отличными, а вот, скажем, 1000 - уже плохо. Учтите, что движок автоматически масштабирует NPOT-текстуры. Вы можете добиться большей эффективности в загрузке сцены, если заранее приведете свои текстуры в соответствии с правилом POT.
+    </p>
+
+    <h3>Соотношение сторон</h3>
+
+    <p>
+      Текстуры могут быть квадратными или прямоугольными, например, 1024x512 пикселей.
+    </p>
+
+    <h3>Повторное использование</h3>
+
+    <p>
+      Всегда старайтесь повторно использовать файлы изображений в своих материалах, а не подгружать их копии.
+    </p>
+
+    <p class="note">
+      Не стоит повторно использовать большие текстуры в виде элементов UI. Их следует заранее масштабировать и сохранить в виде новых файлов, пусть это несколько увеличит время загрузки.
+    </p>
+
+    <h3>Пакуйте черно-белые текстуры в RGBA</h3>
+
+    <p>
+      Если у вас есть несколько черно-белых изображений (карты AO, лайтмапы, карты прозрачности, цветные маски и т.д.), постарайтесь <a href="manual/ru/introduction/Optimizing-WebGL-performance.html#Texturing">упаковать</a> их в каналы RGBA одной текстуры.
+    </p>
+
+    <h3>Загружайте по необходимости</h3>
+
+    <p>
+      Если вы разрабатываете приложение со множеством вариаций цветовых решений, то лучшим вариантом будет загружать сначала стартовый набор текстур. Затем подгружать необходимые текстуры с помощью пазла <a href="manual/ru/puzzles/Materials.html#replace_texture">Replace texture</a> или частей сцены с помощью пазла <a href="manual/ru/puzzles/Scenes.html#append_scene">Append scene</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Environment_Map" id="Environment_Map" class="permalink">#</a></p>
+
+    <h2>Environment Map (Image-Based Lighting)</h2>
+
+    <p>
+      Environment Map предназначена для создания фона сцены и генерации отражений на материалах объектов.  Мы рекомендуем художникам использовать изображения (equirectangular) в формате HDR или JPEG. Из соображений производительности размер карты окружения не должен превышать 2048x1024 пикселей.
+    </p>
+
+    <img src="files/workflow/hdr-environment.jpg" class="centered" style="max-width: 772px;">
+
+    <p>
+      Кроме того, текстуры HDR можно использовать для имитации сложных условий освещения. Например, если источников света слишком много, чтобы их можно было представить традиционными лампами.
+    </p>
+
+    <p>
+      Проекты по умолчанию для Blender, 3ds Max или Maya уже включают текстуру HDR (файл называется <i>environment.hdr</i>). Вы можете использовать ее в своих проектах.
+    </p>
+
+    <p>
+      Посмотрите обучающее видео по настройке HDR окружения в сцене: <a href="https://youtu.be/liWX2tAvsns" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">3ds Max</a>, <a href="https://youtu.be/fll3Wvo0eE4">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#HDR_Rendering" id="HDR_Rendering" class="permalink">#</a></p>
+
+    <h2>HDR рендеринг</h2>
+
+    <p>
+      HDR (high dynamic range) рендеринг можно включить с помощью соответствующей опции в окне настроек экспорта Verge3D (3ds Max и Maya). Для Blender похожая опция находится на панели Render в настройках Verge3D. В этом режиме возможности HDR используются для более выразительного рендеринга при контрастном освещении, что особенно важно для корректной визуализации постэффекта <a href="manual/ru/puzzles/Postprocessing.html#bloom">Bloom</a>.
+    </p>
+
+    <img src="files/workflow/scooter-bloom.jpg" class="centered" style="max-width: 919px;">
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Animation_" id="Animation_" class="permalink">#</a></p>
+
+    <h2>Анимация</h2>
+
+    <p>
+      Анимационные клипы создаются для необходимых частей модели. Можно использовать скелетную и объектную анимации, морфинг и анимацию материалов (подробнее смотрите в руководстве по анимации <a href="manual/ru/blender/Animation.html">Blender</a>, <a href="">3ds Max</a> или <a href="manual/ru/maya/Animation.html">Maya</a>).
+    </p>
+
+    <img src="files/workflow/animation.png" class="centered" style="max-width: 819px;">
+
+    <p>
+      Давайте понятные названия анимированным объектам, что поможет легко их искать в <a href="manual/ru/puzzles/Animation.html">редакторе пазлов</a>.
+    </p>
+
+    <img src="files/workflow/advanced_animation_puzzle.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      Посмотрите следующие видео по работе с анимацией: <a href="https://youtu.be/pnuHwTCbGfk" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=0dskMLdNpJ4" target="_blank">3ds Max</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Layout_and_UI" id="Layout_and_UI" class="permalink">#</a></p>
+
+    <h2>Верстка и UI</h2>
+
+    <p>
+      В нашем рабочем процессе интерфейс создается на базе HTML с использованием стороннего программного обеспечения для веб-дизайна. Вы можете брать любой редактор WYSIWYG способный экспортировать файлы HTML, CSS и JS. Неплохим инструментом является <a href="https://webflow.grsm.io/3441118" target="_blank">Webflow</a>, который мы использовали для создания большинства демонстраций Verge3D, таких как Scooter, Farmer's Journey или Industrial Robot. Конечно, вы можете создать HTML-интерфейс вручную с помощью кода или найти другие инструменты.
+    </p>
+
+    <img src="files/workflow/webflow-project.jpg" class="centered" style="max-width: 819px;">
+
+    <p>
+      Элементы интерфейса (меню, кнопки, информационные поля...) создаются как часть отдельной веб-страницы, в которую встроено приложение Verge3D. Изучите <a href="manual/ru/introduction/HTML-based-user-interfaces.html"> подробное руководство</a> по разработке графического интерфейса на основе HTML.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Post_processing" id="Post_processing" class="permalink">#</a></p>
+
+    <h2>Постобработка</h2>
+
+    <p>
+      Пост-эффекты могут быть включены с помощью <a href="manual/ru/puzzles/Postprocessing.html">специльных пазлов</a>: bloom (лучше использовать с активной опцией HDR), brightness-contrast, grayscale, depth of field, screen-space refraction и ambient occlusion. Параметры для этих эффектов могут быть изменены во время выполнения или анимированы с высокой производительностью, благодаря внутреннему кешированию. Существует также пазл для удаления всех эффектов постобработки со сцены.
+    </p>
+
+    <img src="files/workflow/post-process-effects.jpg" class="centered" style="max-width: 819px;">
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Audio_" id="Audio_" class="permalink">#</a></p>
+
+    <h2>Звук</h2>
+
+    <p>
+      Фоновая музыка, звуки событий могут быть добавлены с помощью <a href="manual/ru/puzzles/Sound.html">звуковых пазлов.</a> При этом необходимо использовать формат mp3 для аудиофайлов, так как он поддерживается во всех веб-браузерах.
+    </p>
+
+    <img src="files/workflow/sounds.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+      Существует ограничение для использования звуков: воспроизведение может быть начато только через прямое взаимодействие с веб-страницей. Например, блок ниже будет работать везде, в том числе на устройствах Apple:
+    </p>
+
+    <img src="files/workflow/audio-example1.jpg" class="centered" style="max-width: 389px;">
+
+    <p>
+      Учтите, что звук при каком-либо событии воспроизводится не будет, если оно не вызвано действием пользователя:
+    </p>
+
+    <img src="files/workflow/audio-example2.jpg" class="centered" style="max-width: 505px;">
+
+    <p>
+      Для решения проблемы вы можете использовать пазл <strong>on event / touchstart</strong>. В блоке ниже выполняется проигрывание и установка паузы для всех звуков при первом клике пользователя по экрану:
+    </p>
+
+    <img src="files/workflow/audio-example3.jpg" class="centered" style="max-width: 847px;">
+
+    <p>
+      Эту заготовку вы можете найти в библиотеке пазлов с названием <strong>Sound iOS Workaround</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Asset_Compression" id="Asset_Compression" class="permalink">#</a></p>
+
+    <h2>Сжатие ассетов</h2>
+
+    <p>
+      После завершения работы над приложением, вы можете оптимизировать загрузку файлов, прочитав соответствующее <a href="manual/ru/introduction/Asset-compression.html">руководство.</a>
+    </p>
+
+    <p>
+      Вы также можете посмотреть видео, где демонстрируется работа со сжатыми ассетами: <a href="https://youtu.be/yYOyUwRveAU" target="_blank">Blender</a>, <a href="https://www.youtube.com/watch?v=2WHsmOohNy8" target="_blank">3ds Max</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Workflow.html#Publishing" id="Publishing" class="permalink">#</a></p>
+
+    <h2>Публикация</h2>
+
+    <p>
+      Вы можете опубликовать свой проект, изучив руководство по <a href="manual/ru/introduction/App-Manager.html#Publish">App Manager (менеджер проектов).</a>
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Не стесняйтесь спрашивать на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

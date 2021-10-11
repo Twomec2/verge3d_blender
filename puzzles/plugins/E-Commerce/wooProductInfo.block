@@ -1,0 +1,16 @@
+<template
+    color="#d4af37"
+    output=""
+    tooltip='Returns the product info dictionary retrieved by the "connect to WooCommerce" puzzle.'
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/ECommerce.html#woo_product_info"
+>
+    <dummy>
+        <label>product info</label>
+    </dummy>
+</template>
+
+<script>
+function code(block) {
+    return ['_pGlob.wooProductInfo', Blockly.JavaScript.ORDER_ATOMIC];
+}
+</script>

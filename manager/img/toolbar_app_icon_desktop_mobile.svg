@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="toolbar_app_icon_mobile.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 15.875 15.875"
+   height="60"
+   width="60">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1935"
+       id="linearGradient4158"
+       gradientUnits="userSpaceOnUse"
+       x1="369.24503"
+       y1="115.87357"
+       x2="373.51144"
+       y2="110.84649"
+       gradientTransform="matrix(4.8593949,0,0,4.8593949,-1773.7891,-521.18294)" />
+    <linearGradient
+       id="linearGradient1935"
+       inkscape:collect="always">
+      <stop
+         id="stop1931"
+         offset="0"
+         style="stop-color:#dbdbdb;stop-opacity:1" />
+      <stop
+         id="stop1933"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       y2="99.237892"
+       x2="339.22046"
+       y1="105.25716"
+       x1="333.53189"
+       gradientTransform="translate(-335.35547,-96.355781)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient7668-1"
+       xlink:href="#linearGradient2768" />
+    <linearGradient
+       id="linearGradient2768">
+      <stop
+         id="stop2764"
+         offset="0"
+         style="stop-color:#414141;stop-opacity:1" />
+      <stop
+         id="stop2766"
+         offset="1"
+         style="stop-color:#767676;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     units="px"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-height="1177"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="31.5124"
+     inkscape:cx="40.574881"
+     inkscape:zoom="11.2"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       transform="scale(0.26458333)"
+       d="M 30 12 C 20.056517 12 12 20.056479 12 30 C 12 39.943559 20.056517 48 30 48 C 39.943597 48 48 39.943559 48 30 C 48 20.056479 39.943597 12 30 12 z M 19.806641 19.583984 L 34.882812 19.583984 C 35.806365 19.583984 36.59375 20.369415 36.59375 21.292969 L 36.59375 23.558594 L 33.861328 23.558594 L 33.861328 22.314453 L 20.828125 22.314453 L 20.828125 31.490234 L 30.068359 31.490234 L 30.068359 35.359375 L 17.796875 35.359375 C 16.86314 35.359375 15.580078 34.610719 15.580078 33.166016 L 15.580078 32.078125 C 15.580078 31.752692 15.842533 31.490234 16.167969 31.490234 L 18.097656 31.490234 L 18.097656 21.292969 C 18.097656 20.369419 18.88309 19.583984 19.806641 19.583984 z M 32.902344 24.814453 L 40.388672 24.814453 C 41.312222 24.814453 42.099609 25.599894 42.099609 26.523438 L 42.099609 39.064453 C 42.099609 39.987996 41.312222 40.773438 40.388672 40.773438 L 32.902344 40.773438 C 31.978791 40.773437 31.191406 39.988003 31.191406 39.064453 L 31.191406 26.523438 C 31.191406 25.599885 31.978791 24.814453 32.902344 24.814453 z M 33.923828 27.544922 L 33.923828 38.042969 L 39.367188 38.042969 L 39.367188 27.544922 L 33.923828 27.544922 z "
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.64731px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;display:inline;fill:url(#linearGradient4158);fill-opacity:1;stroke:none;stroke-width:0.929034"
+       id="path13143" />
+  </g>
+</svg>

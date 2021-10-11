@@ -1,0 +1,723 @@
+<!DOCTYPE html><html lang="zh"><head>
+        <title>为3D网页应用构建基于HTML的用户界面 - Soft8Soft</title>
+        <meta charset="utf-8">
+        <meta name="description" content="了解如何用HTML和CSS扩展Verge3D应用。">
+        <base href="../../../">
+        <script src="page.js"></script>
+        <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/HTML-based-user-interfaces.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="为3D网页应用构建基于HTML的用户界面 - Soft8Soft">
+            <meta property="og:description" content="了解如何用HTML和CSS扩展Verge3D应用。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/HTML-based-user-interfaces.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="为3D网页应用构建基于HTML的用户界面 - Soft8Soft">
+            <meta name="twitter:description" content="了解如何用HTML和CSS扩展Verge3D应用。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/layered-html.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/teapot-heater-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-buy-account-plans.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-new-project.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-new-project2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe4.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons4.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons5.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons6.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/html-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/html-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/annotation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+        <article>
+
+                <h1>构建基于HTML的三维网页应用的用户界面</h1>
+
+                <p>了解如何利用标准web技术创建丰富且移动端友好的用户界面与网站集成。</p>
+
+                <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Introduction">简介</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Where_to_Add_HTML_and_CSS">在哪里添加HTML和CSS?</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Quick_Overview_Teapot_Heater">案例概览：Teapot Heater</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Tutorial">教程</a><ul><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Designer_Approach">设计师方法</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Developer_Approach">开发人员方法</a></li></ul></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#annotations">注释</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html#see_also">另请参阅</a></li></ul><!-- /TOC --> <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Introduction" id="Introduction" class="permalink">#</a></p>
+
+                <h2>简介</h2>
+
+                <p>Verge3D主程序提供的模板是一个带有全屏按钮和预加载器的单页宽屏布局网页。在摄影机上固定3D对象可以实现像按钮这样的交互元素，同样的方法也适用于文本类型对象。</p>
+
+                <p>但更为灵活和有效的方法，是利用已有的web标准来创建用户界面。通过HTML和CSS，您可以为应用构建任何布局，并使其具有响应性和SEO友好性。由于现代web浏览器多基于特殊光栅化引擎，因此使用HTML和CSS创建的界面，尤其是文本看起来通常比3D元素更清晰。这种方法还允许您轻松地将图像、视频和web链接等2D媒体与WebGL内容混合使用，并使应用的风格与将要部署它的网站的设计相匹配。
+                </p>
+
+                <p>互联网中有大量的Web设计工具，从纯文本编辑器到功能完善的网站编辑器，一应俱全。一些网站编辑器提供完整的HTML/CSS/JavaScript模板，借助这些工具，可以实现轻代码甚至是零代码建站，降低了用户技术成本。
+                </p>
+
+                <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Where_to_Add_HTML_and_CSS" id="Where_to_Add_HTML_and_CSS" class="permalink">#</a></p>
+
+                <h2>在哪里添加HTML和CSS?</h2>
+
+                <p>如果您使用了应用管理器的默认设置，并在其中创建了一个 <strong>My_Awesome_App</strong>新应用，那么您会在文件夹
+                        <i>Verge3D/ApplicationS/My_Awesome_App</i> 看到 <i>my_awesome_app.html</i> 和
+                        <i>my_awesome_app.css</i> 这两个文件。也许您自然而然地想直接编辑他们，
+                </p>
+
+                <p>但我们并不推荐这样做——因为这些被应用管理器自动生成的文件，会在应用 <a href="manual/zh/introduction/Updating.html" target="_blank">更新</a>过程中被直接覆盖。更为合理的方法是 <i>新建</i> 一个 <strong>.html</strong>
+                        文件，并将Verge3D应用的 <strong>.html</strong> 文件嵌套进去，就像俄罗斯套娃那样。</p>
+
+                <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Quick_Overview_Teapot_Heater" id="Quick_Overview_Teapot_Heater" class="permalink">#</a></p>
+
+                <h2>案例概览：Teapot Heater</h2>
+
+                <p>请查看此案例(Verge3D <a href="https://cdn.soft8soft.com/demo/applications/teapot_heater_max/index.html" target="_blank">茶壶加热器</a> Demo）：应用中的前端界面都是在第三方网页设计软件中制作的，并存储为 <i>index.html</i>
+                        (此命名非必需，可修改)。除了界面中的HTML元素，此 <i>index.html</i> 文件中还通过 <strong>iframe</strong> 素内嵌了Verge3D项目的
+                        <i>teapot_heater.html</i>文件。
+                </p><img src="files/HTML-based-user-interfaces/layered-html.jpg" class="centered" style="max-width: 1000px">
+                <p>在Verge3D应用管理器中，这样的复合型项目会有两个启动图标，点击后分别启动您自行建立的<i> index.html</i> 页面及独立的Verge3D应用页面。</p><img src="files/HTML-based-user-interfaces/teapot-heater-app-manager.jpg" class="centered" style="max-width: 676px;">
+                <p>最后，2D和3D部分通过 <a href="manual/zh/puzzles/HTML.html" target="_blank">HTML拼图</a> 建立逻辑联系以处理用户事件。</p>
+
+                <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Tutorial" id="Tutorial" class="permalink">#</a></p>
+
+                <h2>教程</h2>
+
+                <p>在下面的教程中，我们将介绍如何使用基于HTML的UI创建一个简单的应用。此应用只有2个按钮，用于隐藏和显示默认立方体。</p><img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+                <p>我们首先通过应用管理器创建项目，命名为 <strong>My_Awesome_App</strong> 。紧接着，我们演示两种创建UI中附加的 <strong>.html</strong>
+                        的方法：使用第三方网页编辑器的可视化方法和基于代码的方法。UI准备就绪，我们就可以用HTML按钮来进行拼图操作了。</p>
+
+                <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Designer_Approach" id="Designer_Approach" class="permalink">#</a></p>
+
+                <h3>设计师方法</h3>
+
+                <p>经过将Verge3D的工作流程放在时下各种免费或付费的网站编辑器中实验后，我们选择并推荐使用 <a href="https://webflow.grsm.io/3441118" target="_blank">WebFlow</a>
+                        。这是一个在线编辑器，可以让毫无代码基础的用户也可以轻松地为Verge3D应用创建UI。当然，您也可以尝试其他工具，例如Adobe Dreamweaver、Google Web
+                        Designer、Tumult Hype或Pinegrow等，它们可能需要用户具备一定的HTML/CSS基础。</p>
+
+                <p>在Webflow的官网点击“Get started”建立一个帐户。所需的“Embed”组件和“Export
+                        Code”功能只有付费账户才可以使用，因此您需要 <a href="https://webflow.grsm.io/3441119" target="_blank">subscription（订阅）</a> 之后，才可以完全跟进本教程的所有流程。</p><img src="files/HTML-based-user-interfaces/webflow-buy-account-plans.jpg" class="centered" style="max-width: 1000px;">
+                <p>登录您的Webflow帐户，转到 <strong>Dashboard</strong> ，然后单击 <strong>New Project</strong>。</p><img src="files/HTML-based-user-interfaces/webflow-new-project.jpg" class="centered" style="max-width: 1000px;">
+                <p>从模板中选择 <strong>Blank Site</strong> 。填写项目名称，然后单击 <strong>Create project</strong>：</p><img src="files/HTML-based-user-interfaces/webflow-new-project2.jpg" class="centered" style="max-width: 1000px;">
+                <p>现在我们将已创建的Verge3D应用嵌入到这个网页中。在左侧面板上，单击最上面带有“加号”图标的按钮（<strong>Add Elements</strong>）。找到
+                        <strong>Embed</strong> 组件，然后单击（或拖拽）：
+                </p><img src="files/HTML-based-user-interfaces/webflow-add-iframe.jpg" class="centered" style="max-width: 1000px;">
+                <p>复制以下行并将其粘贴到编辑器窗口：</p>
+
+        <code>
+&lt;iframe width="100%" height="100%" frameborder="0" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+        </code>
+
+                <img src="files/HTML-based-user-interfaces/webflow-add-iframe2.jpg" class="centered" style="max-width: 801px;">
+                <p class="note">这行代码假设的前提是把Webflow生成的网页复制到Verge3D应用文件夹中，这样&lt;iframe&gt;元素将获取应用中名为
+                        <b>my_awesome_app.html</b>的文件。
+                </p>
+
+                <p>点击 <strong>Save &amp; Close</strong>。现在 <strong>Embed</strong>
+                        组件已经放在页面上。请暂时忽略404错误提示——导出项目到本地后它会消失。</p><img src="files/HTML-based-user-interfaces/webflow-add-iframe3.jpg" class="centered" style="max-width: 1000px;">
+                <p>现在我们来修改 <strong>Embed</strong> 组件，让其占满整个页面。单击右上角的 <strong>Style</strong> 按钮。在 <strong>Size</strong>
+                        面板，将 <strong>Width</strong> 和 <strong>Height</strong> 设置为 <strong>100%</strong> ，（您需要点击
+                        <strong>px</strong> 按钮，将单位从像素切换为百分比）。为 <strong>Position</strong> 选择 <strong>Fixed</strong>模式。
+                </p><img src="files/HTML-based-user-interfaces/webflow-add-iframe4.jpg" class="centered" style="max-width: 1000px;">
+                <p>现在来创建两个按钮。再次单击 <strong>Add Elements</strong> 按钮，找到 <strong>Button</strong> 元素,并将其拖拽到动到页面中。</p><img src="files/HTML-based-user-interfaces/webflow-add-buttons.jpg" class="centered" style="max-width: 1000px;">
+                <p>注意，该按钮不会立即可见，因为它被前面添加的 <strong>Embed</strong> 挡住了。要修正此问题，请单击左侧图标栏中 <strong>Navigator</strong>
+                        按钮，在其中选择中新添加的元素...</p><img src="files/HTML-based-user-interfaces/webflow-add-buttons2.jpg" class="centered" style="max-width: 1000px;">
+                <p>…在 <strong>Style</strong> 选项卡中，将 <strong>Position</strong> 设置为 <strong>Fixed</strong> ，如
+                        <strong>Embed</strong> 一样。将页边距的上边和左边都设置为10个像素，让按钮不要太贴边。
+                </p><img src="files/HTML-based-user-interfaces/webflow-add-buttons3.jpg" class="centered" style="max-width: 1000px;">
+                <p>现在按钮就会显示在页面左上角了。双击编辑标题，改为“Hide/隐藏”。</p><img src="files/HTML-based-user-interfaces/webflow-add-buttons4.jpg" class="centered" style="max-width: 1000px;">
+                <p>用相同方法添加另一个按钮。将其左边距设置为80像素，并将其标题更改为“Show/显示”。</p><img src="files/HTML-based-user-interfaces/webflow-add-buttons5.jpg" class="centered" style="max-width: 1000px;">
+                <p>现在我们需要为两个按钮设置独有的 <strong>ID</strong> ——我们将在拼图中使用它们。要执行此操作，请选择一个按钮，转到 <strong>Element
+                                Settings</strong> 选项卡，然后在 <strong>ID</strong>
+                        处填写“hide_button”。对第二个按钮重复此操作，将“show_button”分配给它的 <strong>ID</strong>。
+                </p><img src="files/HTML-based-user-interfaces/webflow-add-buttons6.jpg" class="centered" style="max-width: 1000px;">
+                <p>在这一阶段，我们可以生成UI的 <strong>.html</strong> 文件，并放在Verge3D应用目录中测试。单击在上面的尖括号按钮（<strong>Export
+                                Code</strong>）...</p><img src="files/HTML-based-user-interfaces/webflow-export-code.jpg" class="centered" style="max-width: 1000px">
+                <p>...然后单击 <strong>Prepare ZIP</strong> ，最后，单击 <strong>Download ZIP</strong>：</p><img src="files/HTML-based-user-interfaces/webflow-export-code2.jpg" class="centered" style="max-width: 638px">
+                <p>找到下载的ZIP文件并将其内容解压到应用文件夹 <strong>My_Awesome_App</strong>中。</p><img src="files/HTML-based-user-interfaces/webflow-export-code3.jpg" class="centered" style="max-width: 829px">
+                <p>运行或重新加载Verge3D应用管理器——新的 <strong>.html</strong> 文件显示为一个额外的蓝色图标。</p><img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+                <p>单击应用名称打开详情页，可以更清楚地看到文件结构，</p><img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+                <p>现在，单击 <strong>index.html</strong> 图标，即可运行组合后的应用。您会看到如下内容：</p><img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+                <p>紧接着使HTML按钮可被点击，这样用户就可以隐藏和显示立方体了。这可以通过将HTML类的 <a href="manual/zh/puzzles/HTML.html#event">event</a>
+                        拼图与WebFlow中相关元素的ID连接起来轻松实现。运行拼图编辑器并添加以下块：</p><img src="files/HTML-based-user-interfaces/html-puzzles.jpg" class="centered" style="max-width: 632px;">
+                <p>因为按钮位于嵌入Verge3D应用的父级 <strong>.html</strong> 文件中，因此必须选中 <strong>in parent doc</strong> 复选框。</p>
+
+                <p>搞定！保存拼图并再次运行/重新加载组装好的应用，检查一下按钮是否能够正常起作用。</p>
+
+                <!--
+
+    <h2>Case #2: Google Web Designer</h2>
+
+    <p>
+    There were a video version of this tutorial on our <a href="https://www.youtube.com/watch?v=g0wTXSm5mN0" target="_blank">YouTube channel</a>, but it is now considered outdated. Please refer to the content below for the modern version.
+    </p>
+
+    <p>
+    <a href="https://www.google.com/webdesigner/" target="_blank">Google Web Designer</a> is a free cross-platform tool for creating web pages and web-based adverts in a visual manner. Unfortunately for 3D artists, this tool still requires some knowledge of CSS attributes which should be typed manually in the text box, and have some other issues (aka the hidden cost of freebies). Nevertheless, this tool may still be useful for creating intermediate products with simplified UI to be finalized by a web developer.
+    </p>
+
+    <p>
+    Once you launched this software, select <strong>Create new file</strong>...
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-create-new.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    ...then select <strong>HTML</strong> on the left panel and fill out all the fields: <strong>Name</strong> (e.g. "my_awesome_app_gwd"), <strong>Location</strong> (use any path, yet preferably <i>out</i> of your app folder to avoid confusion with the published version) and <strong>Title</strong> (e.g. "My Awesome App"), and click <strong>OK</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-create-new2.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+    At first run, if you didn't maximize the window at startup and maximized it later, the newly created blank document may appear small. Use the <strong>Viewport Resize</strong> tool and drag the document corner to make it bigger or even fullscreen.
+    <img src="files/HTML-based-user-interfaces/gwd-viewport-resize.jpg" class="centered" style="max-width: 800px">
+    </p>
+
+    <p>
+    Let's start by adding the <strong>iframe</strong> element for embedding our Verge3D app's main launching file, <i>my_awesome_app.html</i>. In Google Web Designer this can be done by dragging the <strong>IFrame</strong> component out from the list under the <strong>Components</strong> tab.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-iframe.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    After the <strong>IFrame</strong> component is placed on the page, switch to the <strong>Properties</strong> tab and make your <strong>iframe</strong> element occupy the entire page by specifying zeroes for the left and top positions and 100% for the width and height. Also, in the <strong>Source</strong> field put the path to Verge3D app main file - "my_awesome_app.html" (assuming that we'll be publishing our UI file in the root of the app folder).
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-iframe2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    At this stage we can generate our UI <strong>.html</strong> file and try it with the Verge3D app. Click the <strong>Publish</strong> button in the top-right corner and select <strong>Locally</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    In the publishing dialog select the path to the <strong>verge3d/applications</strong> folder as <strong>Location</strong>. Use the name of your application folder, <strong>my_awesome_app</strong>, in the <strong>Name</strong> field in order to save the files right in its root.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    As a result, several new files will be added to your application folder, including <strong>index.html</strong> and some scripts.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish-check-files.jpg" class="centered" style="max-width: 602px">
+
+    <p>
+    The new HTML file immediately starts being displayed as an extra blue icon in the App Manager. You can run it to check if it actually loads the Verge3D app.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+
+    <p>
+    More clearly the file structure can be seen from the application page, which you can open by clicking on your application name.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+
+    <p>
+    Now let's add those two buttons. On the most left panel click on the <strong>Element tool</strong>, then select the <strong>Div element</strong> and start drawing a rectangle on the page.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+    In the <strong>Properties</strong> tab use the color picker to fill the button with color, specify its position and dimensions and most importantly, set the <strong>ID</strong> for this element which we will be using for referencing it in Puzzles.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons2.jpg" class="centered" style="max-width: 325px;">
+
+    <p>
+    To add a caption to the button ("Hide" or "Show"), double-click on it so that it becomes outlined in red. Click on the <strong>Text tool</strong>, then on the button and type text in the text area. Use font settings to setup the size, color and other properties. You can use the <strong>Selection tool</strong> (the first button with an arrow) to move your text field on the button.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons3.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+    As a result, in the <strong>Outliner</strong> panel you should see the <strong>iframe</strong> element, 2 <strong>div</strong> elements with unique IDs assigned to them and two text elements nested inside those <strong>divs</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons4.jpg" class="centered" style="max-width: 328px;">
+
+    <p>
+    As a finishing touch, in the CSS properties window we can make the mouse cursor turn to its "clicking" form when it is over those buttons:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons5.jpg" class="centered" style="max-width: 384px;">
+
+    <p>
+    After publishing the <i>index.html</i> file and running the assembled app from the App Manager you should see something like this:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+
+    <p>
+    For more information on using Google Web Designer tools and components refer to their <a href="https://support.google.com/webdesigner" target="_blank">docs</a>.
+    </p>
+--> 
+
+<p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#Developer_Approach" id="Developer_Approach" class="permalink">#</a></p>
+
+    <h3>开发人员方法</h3>
+        <p>大多数网页设计师仍然认为纯文本编辑器是最强大且最灵活的网页构建工具。即使您不打算深入研究编码，本指南也可以帮助您进一步了解由可视化工具生成的网页的内部结构。</p>
+
+        <p>您可以使用任何文本编辑器来编辑HTML/CSS代码。但使用支持显示行号及语法高亮的工具会提高工作效率，比如Notepad++或VS Code等。</p>
+
+        <p>我们可以从一个基础HTML文档开始，如下所示。将以下代码内容复制到一个新的文本文档中，命名为 <i>index.html</i> ，并保存到
+        <strong>verge3d/applications/my_awesome_app</strong> 文件夹下。同样，文件名不是固定的，我们只是为了保持一致性才总是用这个名称。
+        </p>
+
+
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Index of My Awesome App&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
+&lt;meta name="description" content="Put some description here - remember about SEO!"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+        </code>
+                
+
+
+        <p>运行或重新加载Verge3D应用管理器——新的 <strong>.html</strong> 文件显示为一个额外的蓝色图标。</p><img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+        <p>单击应用名称打开详情页，可以更清楚地看到文件结构，</p><img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+        <p>现在我们可以添加一个 <strong>iframe</strong> 元素到文档的 <strong>body</strong> 部分，嵌入Verge3D应用的主文件
+                <i>my_awesome_app.html</i>：
+        </p>
+
+
+        <code>
+&lt;body&gt;
+&lt;iframe id="my_iframe" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+        </code>
+
+
+        <p>如果您现在从应用管理器运行该应用，它会显示为一个嵌入在屏幕左上角的默认立方体。我们可以通过嵌入一些CSS来去除边框并占满屏幕：</p>
+
+
+        <code>
+&lt;style&gt;
+#my_iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+}
+&lt;/style&gt;
+        </code>
+
+
+        <p>现在，来为两个按钮创建对应的 <strong>div</strong> 元素，每个按钮都必须使用唯一的 <strong>ID</strong> 属性，以便在CSS和拼图中引用：</p>
+
+
+        <code>
+&lt;div id="hide_button"&gt;Hide&lt;/div&gt;
+&lt;div id="show_button"&gt;Show&lt;/div&gt;
+        </code>
+
+
+                <p>不过，在您用CSS给它们指定绝对位置和样式之前，不会在应用中找到它们：</p>
+
+
+        <code>
+#hide_button, #show_button {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background-color: DodgerBlue;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+}
+
+#hide_button {
+        left: 10px;
+}
+
+#show_button {
+        left: 120px;
+}
+        </code>
+
+
+                <p>好了，现在应用页面中有了两个HTML按钮。下面是完整的 <i>index.html</i> 页面代码：</p>
+
+
+                <code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Index of My Awesome App&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
+&lt;meta name="description" content="Put some description here - remember about SEO!"&gt;
+&lt;style&gt;
+#my_iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+}
+
+#hide_button, #show_button {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background-color: DodgerBlue;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+}
+
+#hide_button {
+        left: 10px;
+}
+
+#show_button {
+        left: 120px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+        &lt;iframe id="my_iframe" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+
+        &lt;div id="hide_button"&gt;Hide&lt;/div&gt;
+        &lt;div id="show_button"&gt;Show&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                            </code>
+
+
+        <p>当从应用管理器运行这一组装好的应用时，您会看到如下内容：</p><img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+        <p>紧接着使HTML按钮可被点击，这样用户就可以隐藏和显示立方体了。这可以通过将HTML类的 <a href="manual/zh/puzzles/HTML.html#event">event</a>
+                拼图与WebFlow中相关元素的ID连接起来轻松实现。运行拼图编辑器并添加以下块：</p><img src="files/HTML-based-user-interfaces/html-puzzles.jpg" class="centered" style="max-width: 632px;">
+        <p>因为按钮位于嵌入Verge3D应用的父级 <strong>.html</strong> 文件中，因此必须选中 <strong>in parent doc</strong> 复选框。</p>
+
+        <p>搞定！保存拼图并再次运行/重新加载组装好的应用，检查一下按钮是否能够正常起作用。</p>
+
+        <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#annotations" id="annotations" class="permalink">#</a></p>
+
+        <h2>注释</h2>
+
+        <p>Verge3D注释是在3D内容上方绘制信息弹出元素的最简单的方法。您不需要通晓HTML就可以将它们添加到应用中。只需使用 <a href="manual/zh/puzzles/Objects.html#add_annotation">add annotation</a> 拼图即可。</p><img src="files/HTML-based-user-interfaces/annotation.jpg" class="centered" style="max-width: 600px">
+        <p>可以通过修改字体、形状、颜色或大小来更改批注的样式。参见 <a href="manual/zh/introduction/Styling-Verge3D-Apps.html#annotations">这里</a> 的更多信息。
+        </p>
+
+        <p><a href="manual/zh/introduction/HTML-based-user-interfaces.html#see_also" id="see_also" class="permalink">#</a></p>
+
+        <h2>另请参阅</h2>
+
+        <p>您可以从下面的视频教程中了解如何为3D网页应用创建基于HTML的用户界面。</p>
+                
+        <iframe class="video-480p" src="https://player.bilibili.com/player.html?aid=925684140&amp;bvid=BV1WT4y1u7pT&amp;cid=194143600&amp;page=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+        </iframe>
+                
+        <h2>遇到问题？</h2>
+
+        <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+        </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

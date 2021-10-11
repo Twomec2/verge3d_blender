@@ -1,0 +1,114 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+#v3d-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 1;
+}
+
+.fullscreen-open {
+    background-image: url('media/fullscreen_open.svg');
+}
+
+.fullscreen-close {
+    background-image: url('media/fullscreen_close.svg');
+}
+
+.warning-AR-unavailable {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    float: none;
+    clear: both;
+    width: 242px;
+    height: 50px;
+    background-image: url('media/warning_AR_unavailable.png');
+    background-position: center center;
+    background-size: 100% 100%;
+    bottom: 0;
+    right: -121px;
+}
+
+.warning-center {
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+}
+
+.warning-could-not-enter-AR {
+    height: 50px;
+    width: 182px;
+    background-image: url('media/warning_could_not_enter_AR.png');
+    background-position: center center;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    border-style: none;
+    right: -91px;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    bottom: 0;
+}
+
+.enter-AR-button {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    height: 50px;
+    width: 197px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background-size: 100% 100%;
+    border-style: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    outline: 0;
+}
+
+.info-button {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    background-image: url('media/info.png');
+    background-color: rgba(255, 255, 255, 0);
+    top: 10px;
+    right: 10px;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    border-style: none;
+    border-color: #000000;
+    cursor: pointer;
+    outline: none;
+}
+
+/* removes tap blinking on ios devices */
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }

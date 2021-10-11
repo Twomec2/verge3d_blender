@@ -1,0 +1,42 @@
+<category name="E-Commerce" color="#d4af37">
+    <label text="WooCommerce:" allow-init="true"></label>
+    <block type="wooGetProductInfo" allow-init="true"></block>
+    <block type="wooProductInfo" allow-init="true"></block>
+    <block type="wooProductAttribute" allow-init="true">
+        <value name="NAME">
+            <shadow type="text">
+                <field name="TEXT"></field>
+            </shadow>
+        </value>
+    </block>
+    <sep gap="40" allow-init="true"></sep>
+    <label text="Generic order form:"></label>
+    <block type="placeOrder">
+        <value name="URL">
+            <shadow type="text">
+                <field name="TEXT">https://sandbox.soft8soft.com/order-form/</field>
+            </shadow>
+        </value>
+        <value name="TITLE">
+            <shadow type="text">
+                <field name="TEXT">Fruits order</field>
+            </shadow>
+        </value>
+        <value name="CONTENT">
+            <shadow type="text">
+                <field name="TEXT">Eco-friendly bags:1; Red apples:1.5 kg; Sweet oranges:2 kg</field>
+            </shadow>
+        </value>
+        <value name="PRICE">
+            <shadow type="math_number">
+                <field name="NUM">8.25</field>
+            </shadow>
+        </value>
+    </block>
+</category>
+
+<script>
+function code() {
+    return `_pGlob.wooProductInfo = {};`;
+}
+</script>

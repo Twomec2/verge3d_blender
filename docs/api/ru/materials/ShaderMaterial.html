@@ -1,0 +1,584 @@
+<!DOCTYPE html><html lang="ru"><head>
+                <title>ShaderMaterial - Verge3D User Manual - Soft8Soft</title>
+                <meta name="description" content="Learn how to use ShaderMaterial in your interactive 3D apps made with Verge3D or Three.js">
+            
+    <meta charset="utf-8">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/ru/materials/ShaderMaterial.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="ShaderMaterial - Verge3D User Manual - Soft8Soft">
+            <meta property="og:description" content="Learn how to use ShaderMaterial in your interactive 3D apps made with Verge3D or Three.js">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/ru/materials/ShaderMaterial.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="ShaderMaterial - Verge3D User Manual - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to use ShaderMaterial in your interactive 3D apps made with Verge3D or Three.js">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="api/ru/index.html">Руководство разработчика</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Programmer's Guide</h2><ul id="Programmer_s_Guide"><li><a href="manual/ru/programmers_guide/Developer-Kit.html" id="Programmer_s_Guide_Developer_Kit">Developer Kit</a></li><li><a href="manual/ru/programmers_guide/Programming-basics.html" id="Programmer_s_Guide_Programming_Basics">Programming Basics</a></li><li><a href="manual/ru/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="Programmer_s_Guide_Integration_with_React.js/Vue.js">Integration with React.js/Vue.js</a></li><li><a href="manual/ru/programmers_guide/Matrix-transformations.html" id="Programmer_s_Guide_Matrix_Transformations">Matrix Transformations</a></li><li><a href="manual/ru/programmers_guide/Animation-system.html" id="Programmer_s_Guide_Animation_System">Animation System</a></li><li><a href="manual/ru/programmers_guide/Drawing-lines.html" id="Programmer_s_Guide_Drawing_Lines">Drawing Lines</a></li><li><a href="manual/ru/programmers_guide/How-to-update-things.html" id="Programmer_s_Guide_How_to_Update_Things">How to Update Things</a></li><li><a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html" id="Programmer_s_Guide_How_to_Obtain_Sources">How to Obtain Sources</a></li></ul></div><div><h2>Animation</h2><ul id="Animation"><li><a href="api/ru/animation/AnimationAction.html" id="Animation_AnimationAction">AnimationAction</a></li><li><a href="api/ru/animation/AnimationClip.html" id="Animation_AnimationClip">AnimationClip</a></li><li><a href="api/ru/animation/AnimationMixer.html" id="Animation_AnimationMixer">AnimationMixer</a></li><li><a href="api/ru/animation/AnimationObjectGroup.html" id="Animation_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/ru/animation/AnimationUtils.html" id="Animation_AnimationUtils">AnimationUtils</a></li><li><a href="api/ru/animation/KeyframeTrack.html" id="Animation_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/ru/animation/PropertyBinding.html" id="Animation_PropertyBinding">PropertyBinding</a></li><li><a href="api/ru/animation/PropertyMixer.html" id="Animation_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>Animation / Tracks</h2><ul id="Animation_/_Tracks"><li><a href="api/ru/animation/tracks/BooleanKeyframeTrack.html" id="Animation_/_Tracks_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/ColorKeyframeTrack.html" id="Animation_/_Tracks_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/NumberKeyframeTrack.html" id="Animation_/_Tracks_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/QuaternionKeyframeTrack.html" id="Animation_/_Tracks_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/StringKeyframeTrack.html" id="Animation_/_Tracks_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/VectorKeyframeTrack.html" id="Animation_/_Tracks_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>Application</h2><ul id="Application"><li><a href="api/ru/extras/App.html" id="Application_App">App</a></li><li><a href="api/ru/extras/AppPuzzles.html" id="Application_AppPuzzles">AppPuzzles</a></li><li><a href="api/ru/extras/AppUtils.html" id="Application_AppUtils">AppUtils</a></li></ul></div><div><h2>Audio</h2><ul id="Audio"><li><a href="api/ru/audio/Audio.html" id="Audio_Audio">Audio</a></li><li><a href="api/ru/audio/AudioAnalyser.html" id="Audio_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/ru/audio/AudioContext.html" id="Audio_AudioContext">AudioContext</a></li><li><a href="api/ru/audio/AudioListener.html" id="Audio_AudioListener">AudioListener</a></li><li><a href="api/ru/audio/PositionalAudio.html" id="Audio_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>Cameras</h2><ul id="Cameras"><li><a href="api/ru/cameras/ArrayCamera.html" id="Cameras_ArrayCamera">ArrayCamera</a></li><li><a href="api/ru/cameras/Camera.html" id="Cameras_Camera">Camera</a></li><li><a href="api/ru/cameras/CubeCamera.html" id="Cameras_CubeCamera">CubeCamera</a></li><li><a href="api/ru/cameras/OrthographicCamera.html" id="Cameras_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/ru/cameras/PerspectiveCamera.html" id="Cameras_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/ru/cameras/StereoCamera.html" id="Cameras_StereoCamera">StereoCamera</a></li></ul></div><div><h2>Constants</h2><ul id="Constants"><li><a href="api/ru/constants/Animation.html" id="Constants_Animation">Animation</a></li><li><a href="api/ru/constants/Controls.html" id="Constants_Controls">Controls</a></li><li><a href="api/ru/constants/Core.html" id="Constants_Core">Core</a></li><li><a href="api/ru/constants/CustomBlendingEquations.html" id="Constants_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/ru/constants/Lights.html" id="Constants_Lights">Lights</a></li><li><a href="api/ru/constants/Materials.html" id="Constants_Materials">Materials</a></li><li><a href="api/ru/constants/Renderer.html" id="Constants_Renderer">Renderer</a></li><li><a href="api/ru/constants/Textures.html" id="Constants_Textures">Textures</a></li></ul></div><div><h2>Constraints</h2><ul id="Constraints"><li><a href="api/ru/constraints/ChildOfConstraint.html" id="Constraints_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/ru/constraints/Constraint.html" id="Constraints_Constraint">Constraint</a></li><li><a href="api/ru/constraints/CopyLocationConstraint.html" id="Constraints_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/ru/constraints/CopyRotationConstraint.html" id="Constraints_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/ru/constraints/CopyScaleConstraint.html" id="Constraints_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/ru/constraints/FloorConstraint.html" id="Constraints_FloorConstraint">FloorConstraint</a></li><li><a href="api/ru/constraints/LimitLocationConstraint.html" id="Constraints_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/ru/constraints/LimitRotationConstraint.html" id="Constraints_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/ru/constraints/LimitScaleConstraint.html" id="Constraints_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/ru/constraints/LockedTrackConstraint.html" id="Constraints_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/ru/constraints/TargetConstraint.html" id="Constraints_TargetConstraint">TargetConstraint</a></li><li><a href="api/ru/constraints/TrackToConstraint.html" id="Constraints_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>Controls</h2><ul id="Controls"><li><a href="api/ru/controls/KeyListener.html" id="Controls_KeyListener">KeyListener</a></li><li><a href="api/ru/controls/OrbitControls.html" id="Controls_OrbitControls">OrbitControls</a></li></ul></div><div><h2>Core</h2><ul id="Core"><li><a href="api/ru/core/BufferAttribute.html" id="Core_BufferAttribute">BufferAttribute</a></li><li><a href="api/ru/core/BufferGeometry.html" id="Core_BufferGeometry">BufferGeometry</a></li><li><a href="api/ru/core/Clock.html" id="Core_Clock">Clock</a></li><li><a href="api/ru/core/Detector.html" id="Core_Detector">Detector</a></li><li><a href="api/ru/core/DirectGeometry.html" id="Core_DirectGeometry">DirectGeometry</a></li><li><a href="api/ru/core/EventDispatcher.html" id="Core_EventDispatcher">EventDispatcher</a></li><li><a href="api/ru/core/Face3.html" id="Core_Face3">Face3</a></li><li><a href="api/ru/core/Geometry.html" id="Core_Geometry">Geometry</a></li><li><a href="api/ru/core/InstancedBufferAttribute.html" id="Core_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/ru/core/InstancedBufferGeometry.html" id="Core_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/ru/core/InstancedInterleavedBuffer.html" id="Core_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBuffer.html" id="Core_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBufferAttribute.html" id="Core_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/ru/core/Layers.html" id="Core_Layers">Layers</a></li><li><a href="api/ru/core/Object3D.html" id="Core_Object3D">Object3D</a></li><li><a href="api/ru/core/Raycaster.html" id="Core_Raycaster">Raycaster</a></li><li><a href="api/ru/core/Uniform.html" id="Core_Uniform">Uniform</a></li></ul></div><div><h2>Core / BufferAttributes</h2><ul id="Core_/_BufferAttributes"><li><a href="api/ru/core/bufferAttributeTypes/BufferAttributeTypes.html" id="Core_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>Extras</h2><ul id="Extras"><li><a href="api/ru/extras/Earcut.html" id="Extras_Earcut">Earcut</a></li><li><a href="api/ru/extras/ImageUtils.html" id="Extras_ImageUtils">ImageUtils</a></li><li><a href="api/ru/extras/PMREMGenerator.html" id="Extras_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/ru/extras/Preloader.html" id="Extras_Preloader">Preloader</a></li><li><a href="api/ru/extras/PuzzlesLoader.html" id="Extras_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/ru/extras/SceneUtils.html" id="Extras_SceneUtils">SceneUtils</a></li><li><a href="api/ru/extras/ShapeUtils.html" id="Extras_ShapeUtils">ShapeUtils</a></li><li><a href="api/ru/extras/SimplePreloader.html" id="Extras_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>Extras / Core</h2><ul id="Extras_/_Core"><li><a href="api/ru/extras/core/Curve.html" id="Extras_/_Core_Curve">Curve</a></li><li><a href="api/ru/extras/core/CurvePath.html" id="Extras_/_Core_CurvePath">CurvePath</a></li><li><a href="api/ru/extras/core/Font.html" id="Extras_/_Core_Font">Font</a></li><li><a href="api/ru/extras/core/Interpolations.html" id="Extras_/_Core_Interpolations">Interpolations</a></li><li><a href="api/ru/extras/core/Path.html" id="Extras_/_Core_Path">Path</a></li><li><a href="api/ru/extras/core/Shape.html" id="Extras_/_Core_Shape">Shape</a></li><li><a href="api/ru/extras/core/ShapePath.html" id="Extras_/_Core_ShapePath">ShapePath</a></li></ul></div><div><h2>Extras / Curves</h2><ul id="Extras_/_Curves"><li><a href="api/ru/extras/curves/ArcCurve.html" id="Extras_/_Curves_ArcCurve">ArcCurve</a></li><li><a href="api/ru/extras/curves/CatmullRomCurve3.html" id="Extras_/_Curves_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve.html" id="Extras_/_Curves_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve3.html" id="Extras_/_Curves_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/ru/extras/curves/EllipseCurve.html" id="Extras_/_Curves_EllipseCurve">EllipseCurve</a></li><li><a href="api/ru/extras/curves/LineCurve.html" id="Extras_/_Curves_LineCurve">LineCurve</a></li><li><a href="api/ru/extras/curves/LineCurve3.html" id="Extras_/_Curves_LineCurve3">LineCurve3</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve.html" id="Extras_/_Curves_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve3.html" id="Extras_/_Curves_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/ru/extras/curves/SplineCurve.html" id="Extras_/_Curves_SplineCurve">SplineCurve</a></li></ul></div><div><h2>Extras / Objects</h2><ul id="Extras_/_Objects"><li><a href="api/ru/extras/objects/ImmediateRenderObject.html" id="Extras_/_Objects_ImmediateRenderObject">ImmediateRenderObject</a></li><li><a href="api/ru/extras/objects/LineHTML.html" id="Extras_/_Objects_LineHTML">LineHTML</a></li><li><a href="api/ru/extras/objects/MeshLine.html" id="Extras_/_Objects_MeshLine">MeshLine</a></li><li><a href="api/ru/extras/objects/MeshLineIndexed.html" id="Extras_/_Objects_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/ru/extras/objects/MeshLineMaterial.html" id="Extras_/_Objects_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>Geometries</h2><ul id="Geometries"><li><a href="api/ru/geometries/BoxBufferGeometry.html" id="Geometries_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/ru/geometries/BoxGeometry.html" id="Geometries_BoxGeometry">BoxGeometry</a></li><li><a href="api/ru/geometries/CircleBufferGeometry.html" id="Geometries_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/ru/geometries/CircleGeometry.html" id="Geometries_CircleGeometry">CircleGeometry</a></li><li><a href="api/ru/geometries/ConeBufferGeometry.html" id="Geometries_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/ru/geometries/ConeGeometry.html" id="Geometries_ConeGeometry">ConeGeometry</a></li><li><a href="api/ru/geometries/CylinderBufferGeometry.html" id="Geometries_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/ru/geometries/CylinderGeometry.html" id="Geometries_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/ru/geometries/DodecahedronBufferGeometry.html" id="Geometries_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/ru/geometries/DodecahedronGeometry.html" id="Geometries_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/ru/geometries/EdgesGeometry.html" id="Geometries_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/ru/geometries/ExtrudeBufferGeometry.html" id="Geometries_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/ru/geometries/ExtrudeGeometry.html" id="Geometries_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/ru/geometries/IcosahedronBufferGeometry.html" id="Geometries_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/ru/geometries/IcosahedronGeometry.html" id="Geometries_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/ru/geometries/LatheBufferGeometry.html" id="Geometries_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/ru/geometries/LatheGeometry.html" id="Geometries_LatheGeometry">LatheGeometry</a></li><li><a href="api/ru/geometries/OctahedronBufferGeometry.html" id="Geometries_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/ru/geometries/OctahedronGeometry.html" id="Geometries_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/ru/geometries/ParametricBufferGeometry.html" id="Geometries_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/ru/geometries/ParametricGeometry.html" id="Geometries_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/ru/geometries/PlaneBufferGeometry.html" id="Geometries_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/ru/geometries/PlaneGeometry.html" id="Geometries_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/ru/geometries/PolyhedronBufferGeometry.html" id="Geometries_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/ru/geometries/PolyhedronGeometry.html" id="Geometries_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/ru/geometries/RingBufferGeometry.html" id="Geometries_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/ru/geometries/RingGeometry.html" id="Geometries_RingGeometry">RingGeometry</a></li><li><a href="api/ru/geometries/ShapeBufferGeometry.html" id="Geometries_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/ru/geometries/ShapeGeometry.html" id="Geometries_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/ru/geometries/SphereBufferGeometry.html" id="Geometries_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/ru/geometries/SphereGeometry.html" id="Geometries_SphereGeometry">SphereGeometry</a></li><li><a href="api/ru/geometries/TetrahedronBufferGeometry.html" id="Geometries_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/ru/geometries/TetrahedronGeometry.html" id="Geometries_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/ru/geometries/TextBufferGeometry.html" id="Geometries_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/ru/geometries/TextGeometry.html" id="Geometries_TextGeometry">TextGeometry</a></li><li><a href="api/ru/geometries/TorusBufferGeometry.html" id="Geometries_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/ru/geometries/TorusGeometry.html" id="Geometries_TorusGeometry">TorusGeometry</a></li><li><a href="api/ru/geometries/TorusKnotBufferGeometry.html" id="Geometries_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/ru/geometries/TorusKnotGeometry.html" id="Geometries_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/ru/geometries/TubeBufferGeometry.html" id="Geometries_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/ru/geometries/TubeGeometry.html" id="Geometries_TubeGeometry">TubeGeometry</a></li><li><a href="api/ru/geometries/WireframeGeometry.html" id="Geometries_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>Helpers</h2><ul id="Helpers"><li><a href="api/ru/helpers/ArrowHelper.html" id="Helpers_ArrowHelper">ArrowHelper</a></li><li><a href="api/ru/helpers/AxesHelper.html" id="Helpers_AxesHelper">AxesHelper</a></li><li><a href="api/ru/helpers/BoxHelper.html" id="Helpers_BoxHelper">BoxHelper</a></li><li><a href="api/ru/helpers/Box3Helper.html" id="Helpers_Box3Helper">Box3Helper</a></li><li><a href="api/ru/helpers/CameraHelper.html" id="Helpers_CameraHelper">CameraHelper</a></li><li><a href="api/ru/helpers/DirectionalLightHelper.html" id="Helpers_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/ru/helpers/GridHelper.html" id="Helpers_GridHelper">GridHelper</a></li><li><a href="api/ru/helpers/PolarGridHelper.html" id="Helpers_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/ru/helpers/HemisphereLightHelper.html" id="Helpers_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/ru/helpers/PlaneHelper.html" id="Helpers_PlaneHelper">PlaneHelper</a></li><li><a href="api/ru/helpers/PointLightHelper.html" id="Helpers_PointLightHelper">PointLightHelper</a></li><li><a href="api/ru/helpers/SkeletonHelper.html" id="Helpers_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/ru/helpers/SpotLightHelper.html" id="Helpers_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>Lights</h2><ul id="Lights"><li><a href="api/ru/lights/AmbientLight.html" id="Lights_AmbientLight">AmbientLight</a></li><li><a href="api/ru/lights/CubeReflectionProbe.html" id="Lights_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/ru/lights/DirectionalLight.html" id="Lights_DirectionalLight">DirectionalLight</a></li><li><a href="api/ru/lights/HemisphereLight.html" id="Lights_HemisphereLight">HemisphereLight</a></li><li><a href="api/ru/lights/Light.html" id="Lights_Light">Light</a></li><li><a href="api/ru/lights/PointLight.html" id="Lights_PointLight">PointLight</a></li><li><a href="api/ru/lights/RectAreaLight.html" id="Lights_RectAreaLight">RectAreaLight</a></li><li><a href="api/ru/lights/SpotLight.html" id="Lights_SpotLight">SpotLight</a></li></ul></div><div><h2>Lights / Shadows</h2><ul id="Lights_/_Shadows"><li><a href="api/ru/lights/shadows/LightShadow.html" id="Lights_/_Shadows_LightShadow">LightShadow</a></li><li><a href="api/ru/lights/shadows/PointLightShadow.html" id="Lights_/_Shadows_PointLightShadow">PointLightShadow</a></li><li><a href="api/ru/lights/shadows/DirectionalLightShadow.html" id="Lights_/_Shadows_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/ru/lights/shadows/SpotLightShadow.html" id="Lights_/_Shadows_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>Loaders</h2><ul id="Loaders"><li><a href="api/ru/loaders/AnimationLoader.html" id="Loaders_AnimationLoader">AnimationLoader</a></li><li><a href="api/ru/loaders/AudioLoader.html" id="Loaders_AudioLoader">AudioLoader</a></li><li><a href="api/ru/loaders/BufferGeometryLoader.html" id="Loaders_BufferGeometryLoader">BufferGeometryLoader</a></li><li><a href="api/ru/loaders/Cache.html" id="Loaders_Cache">Cache</a></li><li><a href="api/ru/loaders/CompressedTextureLoader.html" id="Loaders_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/ru/loaders/CubeTextureLoader.html" id="Loaders_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/ru/loaders/DataTextureLoader.html" id="Loaders_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/ru/loaders/FileLoader.html" id="Loaders_FileLoader">FileLoader</a></li><li><a href="api/ru/loaders/FontLoader.html" id="Loaders_FontLoader">FontLoader</a></li><li><a href="api/ru/loaders/ImageBitmapLoader.html" id="Loaders_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/ru/loaders/ImageLoader.html" id="Loaders_ImageLoader">ImageLoader</a></li><li><a href="api/ru/loaders/GLTFLoader.html" id="Loaders_GLTFLoader">GLTFLoader</a></li><li><a href="api/ru/loaders/Loader.html" id="Loaders_Loader">Loader</a></li><li><a href="api/ru/loaders/LoaderUtils.html" id="Loaders_LoaderUtils">LoaderUtils</a></li><li><a href="api/ru/loaders/MaterialLoader.html" id="Loaders_MaterialLoader">MaterialLoader</a></li><li><a href="api/ru/loaders/ObjectLoader.html" id="Loaders_ObjectLoader">ObjectLoader</a></li><li><a href="api/ru/loaders/TextureLoader.html" id="Loaders_TextureLoader">TextureLoader</a></li></ul></div><div><h2>Loaders / Managers</h2><ul id="Loaders_/_Managers"><li><a href="api/ru/loaders/managers/DefaultLoadingManager.html" id="Loaders_/_Managers_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/ru/loaders/managers/LoadingManager.html" id="Loaders_/_Managers_LoadingManager">LoadingManager</a></li></ul></div><div><h2>Materials</h2><ul id="Materials"><li><a href="api/ru/materials/LineBasicMaterial.html" id="Materials_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/ru/materials/LineDashedMaterial.html" id="Materials_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/ru/materials/Material.html" id="Materials_Material">Material</a></li><li><a href="api/ru/materials/MaterialUtils.html" id="Materials_MaterialUtils">MaterialUtils</a></li><li><a href="api/ru/materials/MeshBasicMaterial.html" id="Materials_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/ru/materials/MeshDepthMaterial.html" id="Materials_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/ru/materials/MeshDistanceMaterial.html" id="Materials_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/ru/materials/MeshLambertMaterial.html" id="Materials_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/ru/materials/MeshMatcapMaterial.html" id="Materials_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/ru/materials/MeshNodeMaterial.html" id="Materials_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/ru/materials/MeshNormalMaterial.html" id="Materials_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/ru/materials/MeshPhongMaterial.html" id="Materials_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/ru/materials/MeshPhysicalMaterial.html" id="Materials_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/ru/materials/MeshStandardMaterial.html" id="Materials_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/ru/materials/MeshToonMaterial.html" id="Materials_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/ru/materials/PointsMaterial.html" id="Materials_PointsMaterial">PointsMaterial</a></li><li><a href="api/ru/materials/RawShaderMaterial.html" id="Materials_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/ru/materials/ShaderMaterial.html" id="Materials_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/ru/materials/ShadowMaterial.html" id="Materials_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/ru/materials/SpriteMaterial.html" id="Materials_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>Math</h2><ul id="Math"><li><a href="api/ru/math/Box2.html" id="Math_Box2">Box2</a></li><li><a href="api/ru/math/Box3.html" id="Math_Box3">Box3</a></li><li><a href="api/ru/math/Color.html" id="Math_Color">Color</a></li><li><a href="api/ru/math/Cylindrical.html" id="Math_Cylindrical">Cylindrical</a></li><li><a href="api/ru/math/Euler.html" id="Math_Euler">Euler</a></li><li><a href="api/ru/math/Frustum.html" id="Math_Frustum">Frustum</a></li><li><a href="api/ru/math/Interpolant.html" id="Math_Interpolant">Interpolant</a></li><li><a href="api/ru/math/Line3.html" id="Math_Line3">Line3</a></li><li><a href="api/ru/math/MathUtils.html" id="Math_MathUtils">MathUtils</a></li><li><a href="api/ru/math/Matrix3.html" id="Math_Matrix3">Matrix3</a></li><li><a href="api/ru/math/Matrix4.html" id="Math_Matrix4">Matrix4</a></li><li><a href="api/ru/math/Plane.html" id="Math_Plane">Plane</a></li><li><a href="api/ru/math/Quaternion.html" id="Math_Quaternion">Quaternion</a></li><li><a href="api/ru/math/Ray.html" id="Math_Ray">Ray</a></li><li><a href="api/ru/math/Sphere.html" id="Math_Sphere">Sphere</a></li><li><a href="api/ru/math/Spherical.html" id="Math_Spherical">Spherical</a></li><li><a href="api/ru/math/Triangle.html" id="Math_Triangle">Triangle</a></li><li><a href="api/ru/math/Vector2.html" id="Math_Vector2">Vector2</a></li><li><a href="api/ru/math/Vector3.html" id="Math_Vector3">Vector3</a></li><li><a href="api/ru/math/Vector4.html" id="Math_Vector4">Vector4</a></li></ul></div><div><h2>Math / Interpolants</h2><ul id="Math_/_Interpolants"><li><a href="api/ru/math/interpolants/CubicInterpolant.html" id="Math_/_Interpolants_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/ru/math/interpolants/DiscreteInterpolant.html" id="Math_/_Interpolants_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/ru/math/interpolants/LinearInterpolant.html" id="Math_/_Interpolants_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/ru/math/interpolants/QuaternionLinearInterpolant.html" id="Math_/_Interpolants_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>Objects</h2><ul id="Objects"><li><a href="api/ru/objects/Annotation.html" id="Objects_Annotation">Annotation</a></li><li><a href="api/ru/objects/AnnotationControl.html" id="Objects_AnnotationControl">AnnotationControl</a></li><li><a href="api/ru/objects/Bone.html" id="Objects_Bone">Bone</a></li><li><a href="api/ru/objects/Group.html" id="Objects_Group">Group</a></li><li><a href="api/ru/objects/InstancedMesh.html" id="Objects_InstancedMesh">InstancedMesh</a></li><li><a href="api/ru/objects/Line.html" id="Objects_Line">Line</a></li><li><a href="api/ru/objects/LineLoop.html" id="Objects_LineLoop">LineLoop</a></li><li><a href="api/ru/objects/LineSegments.html" id="Objects_LineSegments">LineSegments</a></li><li><a href="api/ru/objects/LOD.html" id="Objects_LOD">LOD</a></li><li><a href="api/ru/objects/Mesh.html" id="Objects_Mesh">Mesh</a></li><li><a href="api/ru/objects/Points.html" id="Objects_Points">Points</a></li><li><a href="api/ru/objects/Skeleton.html" id="Objects_Skeleton">Skeleton</a></li><li><a href="api/ru/objects/SkinnedMesh.html" id="Objects_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/ru/objects/Sprite.html" id="Objects_Sprite">Sprite</a></li></ul></div><div><h2>Renderers</h2><ul id="Renderers"><li><a href="api/ru/renderers/WebGLMultisampleRenderTarget.html" id="Renderers_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/ru/renderers/RenderUtils.html" id="Renderers_RenderUtils">RenderUtils</a></li><li><a href="api/ru/renderers/WebGLRenderer.html" id="Renderers_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/ru/renderers/WebGLRenderTarget.html" id="Renderers_WebGLRenderTarget">WebGLRenderTarget</a></li><li><a href="api/ru/renderers/WebGLCubeRenderTarget.html" id="Renderers_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li></ul></div><div><h2>Renderers / Shaders</h2><ul id="Renderers_/_Shaders"><li><a href="api/ru/renderers/shaders/ShaderChunk.html" id="Renderers_/_Shaders_ShaderChunk">ShaderChunk</a></li><li><a href="api/ru/renderers/shaders/ShaderLib.html" id="Renderers_/_Shaders_ShaderLib">ShaderLib</a></li><li><a href="api/ru/renderers/shaders/UniformsLib.html" id="Renderers_/_Shaders_UniformsLib">UniformsLib</a></li><li><a href="api/ru/renderers/shaders/UniformsUtils.html" id="Renderers_/_Shaders_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>Scenes</h2><ul id="Scenes"><li><a href="api/ru/scenes/Fog.html" id="Scenes_Fog">Fog</a></li><li><a href="api/ru/scenes/FogExp2.html" id="Scenes_FogExp2">FogExp2</a></li><li><a href="api/ru/scenes/Scene.html" id="Scenes_Scene">Scene</a></li><li><a href="api/ru/scenes/SceneBackground.html" id="Scenes_SceneBackground">SceneBackground</a></li></ul></div><div><h2>Textures</h2><ul id="Textures"><li><a href="api/ru/textures/CanvasTexture.html" id="Textures_CanvasTexture">CanvasTexture</a></li><li><a href="api/ru/textures/CompressedTexture.html" id="Textures_CompressedTexture">CompressedTexture</a></li><li><a href="api/ru/textures/CubeTexture.html" id="Textures_CubeTexture">CubeTexture</a></li><li><a href="api/ru/textures/DataTexture.html" id="Textures_DataTexture">DataTexture</a></li><li><a href="api/ru/textures/DataTexture3D.html" id="Textures_DataTexture3D">DataTexture3D</a></li><li><a href="api/ru/textures/DepthTexture.html" id="Textures_DepthTexture">DepthTexture</a></li><li><a href="api/ru/textures/Texture.html" id="Textures_Texture">Texture</a></li><li><a href="api/ru/textures/VideoTexture.html" id="Textures_VideoTexture">VideoTexture</a></li></ul></div><div><h2>WebGLRenderer</h2><ul id="WebGLRenderer"><li><a href="api/ru/renderers/webgl/WebGLProgram.html" id="WebGLRenderer_WebGLProgram">WebGLProgram</a></li><li><a href="api/ru/renderers/webgl/WebGLShader.html" id="WebGLRenderer_WebGLShader">WebGLShader</a></li><li><a href="api/ru/renderers/webgl/WebGLState.html" id="WebGLRenderer_WebGLState">WebGLState</a></li></ul></div></div>
+        </nav>
+    <a href="api/ru/materials/Material.html">Material</a> →
+
+    <h1>ShaderMaterial</h1>
+
+    <p class="desc">
+      A material rendered with custom shaders. A shader is a small program written in
+      <a href="https://www.khronos.org/files/opengles_shading_language.pdf"  target="_blank">GLSL</a> that runs on the GPU.
+      You may want to use a custom shader if you need to:
+    </p><ul>
+      <li>implement an effect not included with any of the built-in <a href="api/ru/materials/Material.html">materials</a></li>
+      <li>combine many objects into a single <a href="api/ru/core/Geometry.html">Geometry</a> or <a href="api/ru/core/BufferGeometry.html">BufferGeometry</a> in order to improve performance</li>
+    </ul>
+    There are the following notes to bear in mind when using a <strong>ShaderMaterial</strong>:
+
+    <ul>
+      <li>
+        A <strong>ShaderMaterial</strong> will only be rendered properly by <a href="api/ru/renderers/WebGLRenderer.html">WebGLRenderer</a>,
+        since the GLSL code in the <a href="https://en.wikipedia.org/wiki/Shader#Vertex_shaders"  target="_blank">vertexShader</a>
+        and <a href="https://en.wikipedia.org/wiki/Shader#Pixel_shaders"  target="_blank">fragmentShader</a> properties must
+        be compiled and run on the GPU using WebGL.
+      </li>
+      <li>
+        As of v3d r72, directly assigning attributes in a ShaderMaterial is no longer supported.
+        A <a href="api/ru/core/BufferGeometry.html">BufferGeometry</a> instance (instead of a <a href="api/ru/core/Geometry.html">Geometry</a> instance) must be used instead,
+        using <a href="api/ru/core/BufferAttribute.html">BufferAttribute</a> instances to define custom attributes.
+      </li>
+      <li>
+        As of v3d r77, <a href="api/ru/renderers/WebGLRenderTarget.html">WebGLRenderTarget</a> or <a href="api/ru/renderers/WebGLCubeRenderTarget.html">WebGLCubeRenderTarget</a> instances
+        are no longer supposed to be used as uniforms. Their <a href="api/ru/textures/Texture.html">texture</a> property
+        must be used instead.
+      </li>
+      <li>
+        Built in attributes and uniforms are passed to the shaders along with your code.
+        If you don't want the <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a> to add anything to your shader code, you can use
+        <a href="api/ru/materials/RawShaderMaterial.html">RawShaderMaterial</a> instead of this class.
+      </li>
+      <li>
+        You can use the directive #pragma unroll_loop_start and #pragma unroll_loop_end in order to unroll a <strong>for</strong> loop in GLSL by the shader preprocessor.
+        The directive has to be placed right above the loop. The loop formatting has to correspond to a defined standard.
+        <ul>
+          <li>
+            The loop has to be <a href="https://en.wikipedia.org/wiki/Normalized_loop"  target="_blank">normalized</a>.
+          </li>
+          <!-- Verge3D -->
+          <li>
+            The loop variable has to be a valid identifier.
+          </li>
+          <li>
+            The usage of the loop variable has to be limited to simple indexing, e.g. myVariable[i] or enclosed in braces, e.g. int counter = (i);.
+          </li>
+          <li>
+            The exit condition has to be "&lt;" or "&lt;=".
+          </li>
+          <li>
+            The loop has to use a certain whitespace formatting.
+          </li>
+          <li>
+            Nested loops each with its #pragma directive are supported. But GLSL commentaries with uneven curly brackets inside loops will break the unrolling regular expression.
+          </li>
+        </ul>
+        <code>
+    #pragma unroll_loop_start
+    for (int i = 0; i &lt; 10; i++) {
+
+      // ...
+
+    }
+    #pragma unroll_loop_end
+        </code>
+      </li>
+    </ul>
+    <p></p>
+
+    <h2>Code Example</h2>
+
+    <code>
+    const material = new v3d.ShaderMaterial({
+
+      uniforms: {
+
+        time: { value: 1.0 },
+        resolution: { value: new v3d.Vector2() }
+
+      },
+
+      vertexShader: document.getElementById('vertexShader').textContent,
+
+      fragmentShader: document.getElementById('fragmentShader').textContent
+
+    });
+    </code>
+
+    <h2>Examples</h2>
+
+    <p>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_animation_cloth"  target="_blank">webgl / animation / cloth</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_buffergeometry_custom_attributes_particles"  target="_blank">webgl / buffergeometry / custom / attributes / particles</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_buffergeometry_selective_draw"  target="_blank">webgl / buffergeometry / selective / draw</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_custom_attributes"  target="_blank">webgl / custom / attributes</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_custom_attributes_lines"  target="_blank">webgl / custom / attributes / lines</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_custom_attributes_points"  target="_blank">webgl / custom / attributes / points</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_custom_attributes_points2"  target="_blank">webgl / custom / attributes / points2</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_custom_attributes_points3"  target="_blank">webgl / custom / attributes / points3</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_depth_texture"  target="_blank">webgl / depth / texture</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_gpgpu_birds"  target="_blank">webgl / gpgpu / birds</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_gpgpu_protoplanet"  target="_blank">webgl / gpgpu / protoplanet</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_gpgpu_water"  target="_blank">webgl / gpgpu / water</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_hdr"  target="_blank">webgl / hdr</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_interactive_points"  target="_blank">webgl / interactive / points</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_kinect"  target="_blank">webgl / kinect</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_lights_hemisphere"  target="_blank">webgl / lights / hemisphere</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_marchingcubes"  target="_blank">webgl / marchingcubes</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_bumpmap_skin"  target="_blank">webgl / materials / bumpmap / skin</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_envmaps"  target="_blank">webgl / materials / envmaps</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_lightmap"  target="_blank">webgl / materials / lightmap</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_parallaxmap"  target="_blank">webgl / materials / parallaxmap</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_shaders_fresnel"  target="_blank">webgl / materials / shaders / fresnel</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_skin"  target="_blank">webgl / materials / skin</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_wireframe"  target="_blank">webgl / materials / wireframe</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_modifier_tessellation"  target="_blank">webgl / modifier / tessellation</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_postprocessing_dof2"  target="_blank">webgl / postprocessing / dof2</a><br>
+      <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_postprocessing_godrays"  target="_blank">webgl / postprocessing / godrays</a>
+    </p>
+
+    <h2>Vertex shaders and fragment shaders</h2>
+
+    <div>
+      <p>You can specify two different types of shaders for each material:</p>
+      <ul>
+        <li>
+          The vertex shader runs first; it receives <strong>attributes</strong>, calculates / manipulates
+          the position of each individual vertex, and passes additional data (<strong>varying</strong>s) to the fragment shader.
+        </li>
+        <li>
+          The fragment (or pixel) shader runs second; it sets the color of each individual "fragment"
+          (pixel) rendered to the screen.
+        </li>
+      </ul>
+      <p>There are three types of variables in shaders: uniforms, attributes, and varyings:</p>
+      <ul>
+        <li>
+          <strong>Uniforms</strong> are variables that have the same value for all vertices - lighting, fog,
+          and shadow maps are examples of data that would be stored in uniforms.
+          Uniforms can be accessed by both the vertex shader and the fragment shader.
+        </li>
+        <li>
+          <strong>Attributes</strong> are variables associated with each vertex---for instance, the vertex position,
+          face normal, and vertex color are all examples of data that would be stored in attributes.
+          Attributes can <em>only</em> be accessed within the vertex shader.
+        </li>
+        <li>
+          <strong>Varyings</strong> are variables that are passed from the vertex shader to the fragment shader.
+          For each fragment, the value of each varying will be smoothly interpolated from the values of adjacent vertices.
+        </li>
+      </ul>
+      <p>
+        Note that <em>within</em> the shader itself, uniforms and attributes act like constants;
+        you can only modify their values by passing different values to the buffers from your JavaScript code.
+      </p>
+    </div>
+
+
+  <h2>Built-in attributes and uniforms</h2>
+
+  <div>
+      <p>
+      The <a href="api/ru/renderers/WebGLRenderer.html">WebGLRenderer</a> provides many attributes and uniforms to shaders by default;
+      definitions of these variables are prepended to your <strong>fragmentShader</strong> and <strong>vertexShader</strong>
+      code by the <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a> when the shader is compiled; you don't need to declare them yourself.
+      See <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a> for details of these variables.
+      </p>
+      <p>
+      Some of these uniforms or attributes (e.g. those pertaining lighting, fog, etc.)
+      require properties to be set on the material in order for <a href="api/ru/renderers/WebGLRenderer.html">WebGLRenderer</a> to copy
+      the appropriate values to the GPU - make sure to set these flags if you want to use these
+      features in your own shader.
+      </p>
+      <p>
+      If you don't want <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a> to add anything to your shader code, you can use
+      <a href="api/ru/materials/RawShaderMaterial.html">RawShaderMaterial</a> instead of this class.
+      </p>
+    </div>
+
+
+    <h2>Custom attributes and uniforms</h2>
+
+    <div>
+      <p>
+        Both custom attributes and uniforms must be declared in your GLSL shader code
+        (within <strong>vertexShader</strong> and/or <strong>fragmentShader</strong>). Custom uniforms must be defined in <em>both</em>
+        the <strong>uniforms</strong> property of your <strong>ShaderMaterial</strong>, whereas any custom attributes must be
+        defined via <a href="api/ru/core/BufferAttribute.html">BufferAttribute</a> instances. Note that <strong>varying</strong>s only need to
+        be declared within the shader code (not within the material).
+      </p>
+      <p>
+        To declare a custom attribute, please reference the <a href="api/ru/core/BufferGeometry.html">BufferGeometry</a> page for an overview,
+        and the <a href="api/ru/core/BufferAttribute.html">BufferAttribute</a> page for a detailed look at the <strong>BufferAttribute</strong> API.
+      </p>
+      <p>
+        When creating your attributes, each typed array that you create to hold your
+        attribute's data must be a multiple of your data type's size. For example, if your
+        attribute is a <a href="api/ru/math/Vector3.html">v3d.Vector3</a> type, and you have 3000 vertices in your
+        <a href="api/ru/core/BufferGeometry.html">BufferGeometry</a>, your typed array value must be created with a length of 3000 * 3,
+        or 9000 (one value per-component). A table of each data type's size is shown below for reference:
+      </p>
+
+      <table>
+        <caption><a id="attribute-sizes">Attribute sizes</a></caption>
+        <thead>
+          <tr>
+            <th>GLSL type</th>
+            <th>JavaScript type</th>
+            <th>Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>float</td>
+            <td><a href="javascript:;">Number</a></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>vec2</td>
+            <td><a href="api/ru/math/Vector2.html">v3d.Vector2</a></td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>vec3</td>
+            <td><a href="api/ru/math/Vector3.html">v3d.Vector3</a></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>vec3</td>
+            <td><a href="api/ru/math/Color.html">v3d.Color</a></td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>vec4</td>
+            <td><a href="api/ru/math/Vector4.html">v3d.Vector4</a></td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Note that attribute buffers are <em>not</em> refreshed automatically when their values change. To update custom attributes,
+        set the <strong>needsUpdate</strong> flag to true on the <a href="api/ru/core/BufferAttribute.html">BufferAttribute</a> of the geometry (see <a href="api/ru/core/BufferGeometry.html">BufferGeometry</a>
+        for further details).
+      </p>
+
+      <p>
+      To declare a custom <a href="api/ru/core/Uniform.html">Uniform</a>, use the <strong>uniforms</strong> property:
+      <code>
+      uniforms: {
+        time: { value: 1.0 },
+        resolution: { value: new v3d.Vector2() }
+      }
+      </code>
+      </p>
+
+      <p>
+      You're recommended to update custom <a href="api/ru/core/Uniform.html">Uniform</a> values depending on <a href="api/ru/core/Object3D.html">object</a> and <a href="api/ru/cameras/Camera.html">camera</a>
+      in <a href="api/ru/core/Object3D.html#onBeforeRender">Object3D.onBeforeRender</a> because <a href="api/ru/materials/Material.html">Material</a> can be shared among <a href="api/ru/objects/Mesh.html">meshes</a>, <a href="api/ru/math/Matrix4.html">matrixWorld</a>
+      of <a href="api/ru/scenes/Scene.html">Scene</a> and <a href="api/ru/cameras/Camera.html">Camera</a> are updated in <a href="api/ru/renderers/WebGLRenderer.html#render">WebGLRenderer.render</a>, and some effects render a <a href="api/ru/scenes/Scene.html">scene</a>
+      with their own private <a href="api/ru/cameras/Camera.html">cameras</a>.
+      </p>
+
+    </div>
+
+    <h2>Constructor</h2>
+
+    <h3>ShaderMaterial(parameters : <a href="javascript:;" class="param">Object</a>)</h3>
+    <p>
+      <a href="javascript:;">parameters</a> - (optional) an object with one or more properties defining the material's appearance.
+      Any property of the material (including any property inherited from <a href="api/ru/materials/Material.html">Material</a>) can be passed in here.
+    </p>
+
+    <h2>Properties</h2>
+    <p>See the base <a href="api/ru/materials/Material.html">Material</a> class for common properties.</p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#clipping" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#clipping" id="clipping">clipping</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Defines whether this material supports clipping; true to let the renderer pass the clippingPlanes uniform. Default is false.
+    </p>
+
+    <!-- Verge3D -->
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#customPrepTokens" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#customPrepTokens" id="customPrepTokens">customPrepTokens</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+    Custom preprocessing tokens - an object analogous to the <a href="api/ru/materials/ShaderMaterial.html#defines">.defines</a> property, but
+    instead of adding a #define directive for every key/value pair they are manually
+    replaced in the GLSL code before shader compilation. Used for the #pragma unroll_loop
+    directive to define the loop initializer and the condition values the same way as
+    with a #define directive, but since unrolling is performed prior to compilation
+    these values also have to be known afore, that's why this property is a distinct
+    container for such values:
+    <code>
+    customPrepTokens: {
+        MAX_SIZE: 10
+    }
+    </code>
+    makes the following code:
+    <code>
+for (int i = 1; i &lt;= MAX_SIZE; i++) {
+        // ...
+}
+    </code>
+    to be this before compilation:
+    <code>
+for (int i = 1; i &lt;= 10; i++) {
+        // ...
+}
+    </code>
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#defaultAttributeValues" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#defaultAttributeValues" id="defaultAttributeValues">defaultAttributeValues</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      When the rendered geometry doesn't include these attributes but the material does,
+       these default values will be passed to the shaders. This avoids errors when buffer data is missing.
+
+      <code>
+this.defaultAttributeValues = {
+  'color': [1, 1, 1],
+  'uv': [0, 0],
+  'uv2': [0, 0]
+};
+      </code>
+
+    </p>
+
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#defines" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#defines" id="defines">defines</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+    Defines custom constants using *#define* directives within the GLSL code for both the
+    vertex shader and the fragment shader; each key/value pair yields another directive:
+    <code>
+    defines: {
+      FOO: 15,
+      BAR: true
+    }
+    </code>
+    yields the lines
+    <code>
+    #define FOO 15
+    #define BAR true
+    </code>
+    in the GLSL code.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#extensions" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#extensions" id="extensions">extensions</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+    An object with the following properties:
+    <code>
+this.extensions = {
+  derivatives: false, // set to use derivatives
+  fragDepth: false, // set to use fragment depth values
+  drawBuffers: false, // set to use draw buffers
+  shaderTextureLOD: false // set to use shader texture LOD
+};
+    </code>
+    </p>
+
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#fog" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#fog" id="fog">fog</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Define whether the material color is affected by global fog settings; true to pass
+      fog uniforms to the shader. Default is false.
+    </p>
+
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#fragmentShader" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#fragmentShader" id="fragmentShader">fragmentShader</a>  : <a href="javascript:;" class="param">String</a></h3>
+    <p>
+    Fragment shader GLSL code.  This is the actual code for the shader. In the example above,
+    the <strong>vertexShader</strong> and <strong>fragmentShader</strong> code is extracted from the DOM; it could be passed
+    as a string directly or loaded via AJAX instead.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#glslVersion" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#glslVersion" id="glslVersion">glslVersion</a>  : <a href="javascript:;" class="param">String</a></h3>
+    <p>
+    Defines the GLSL version of custom shader code. Only relevant for WebGL 2 in order to define whether to specify
+    GLSL 3.0 or not. Valid values are <strong>v3d.GLSL1</strong> or <strong>v3d.GLSL3</strong>. Default is <strong>null</strong>.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#index0AttributeName" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#index0AttributeName" id="index0AttributeName">index0AttributeName</a>  : <a href="javascript:;" class="param">String</a></h3>
+    <p>
+      If set, this calls <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation"  target="_blank">gl.bindAttribLocation</a>
+      to bind a generic vertex index to an attribute variable.
+      Default is undefined.
+
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#lights" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#lights" id="lights">lights</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Defines whether this material uses lighting; true to pass uniform data related to lighting to this shader. Default is false.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#linewidth" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#linewidth" id="linewidth">linewidth</a>  : <a href="javascript:;" class="param">Float</a></h3>
+    <p>Controls wireframe thickness. Default is 1.<br><br>
+
+    Due to limitations of the <a href="https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf"  target="_blank">OpenGL Core Profile</a>
+    with the <a href="api/ru/renderers/WebGLRenderer.html">WebGL</a> renderer on most platforms linewidth will
+    always be 1 regardless of the set value.
+    </p>
+
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#morphTargets" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#morphTargets" id="morphTargets">morphTargets</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    When set to true, morph target attributes are available in the vertex shader. Default is <strong>false</strong>.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#morphNormals" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#morphNormals" id="morphNormals">morphNormals</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    When set to true, morph normal attributes are available in the vertex shader. Default is <strong>false</strong>.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#flatShading" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#flatShading" id="flatShading">flatShading</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Define whether the material is rendered with flat shading. Default is false.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#skinning" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#skinning" id="skinning">skinning</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Define whether the material uses skinning; true to pass skinning attributes to the shader. Default is false.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#uniforms" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#uniforms" id="uniforms">uniforms</a>  : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      An object of the form:
+      <code>
+{ "uniform1": { value: 1.0 }, "uniform2": { value: 2 } }
+      </code>
+    specifying the uniforms to be passed to the shader code; keys are uniform names, values are definitions of the form
+    <code>
+    { value: 1.0 }
+    </code>
+    where <strong>value</strong> is the value of the uniform. Names must match the name of the uniform,
+    as defined in the GLSL code. Note that uniforms are refreshed on every frame,
+    so updating the value of the uniform will immediately update the value available to the GLSL code.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#uniformsNeedUpdate" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#uniformsNeedUpdate" id="uniformsNeedUpdate">uniformsNeedUpdate</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Can be used to force a uniform update while changing uniforms in <a href="api/ru/core/Object3D.html#onBeforeRender">Object3D.onBeforeRender</a>(). Default is <strong>false</strong>.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#vertexColors" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#vertexColors" id="vertexColors">vertexColors</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Defines whether vertex coloring is used. Default is <strong>false</strong>.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#vertexShader" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#vertexShader" id="vertexShader">vertexShader</a>  : <a href="javascript:;" class="param">String</a></h3>
+    <p>
+    Vertex shader GLSL code.  This is the actual code for the shader. In the example above,
+    the <strong>vertexShader</strong> and <strong>fragmentShader</strong> code is extracted from the DOM; it could be passed
+    as a string directly or loaded via AJAX instead.
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#wireframe" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#wireframe" id="wireframe">wireframe</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+    Render geometry as wireframe (using GL_LINES instead of GL_TRIANGLES). Default is false (i.e. render as flat polygons).
+    </p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#wireframeLinewidth" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#wireframeLinewidth" id="wireframeLinewidth">wireframeLinewidth</a>  : <a href="javascript:;" class="param">Float</a></h3>
+    <p>Controls wireframe thickness. Default is 1.<br><br>
+
+    Due to limitations of the <a href="https://www.khronos.org/registry/OpenGL/specs/gl/glspec46.core.pdf"  target="_blank">OpenGL Core Profile</a>
+    with the <a href="api/ru/renderers/WebGLRenderer.html">WebGL</a> renderer on most platforms linewidth will
+    always be 1 regardless of the set value.
+    </p>
+
+
+
+    <h2>Methods</h2>
+    <p>See the base <a href="api/ru/materials/Material.html">Material</a> class for common methods.</p>
+
+    <h3><a href="api/ru/materials/ShaderMaterial.html#clone" class="permalink">#</a> .<a href="api/ru/materials/ShaderMaterial.html#clone" id="clone">clone</a> () : <a href="api/ru/materials/ShaderMaterial.html" class="param">ShaderMaterial</a> this : <a href="api/ru/materials/ShaderMaterial.html" class="param">ShaderMaterial</a></h3>
+    <p>
+    Generates a shallow copy of this material. Note that the vertexShader and fragmentShader
+    are copied <em>by reference</em>, as are the definitions of the <strong>attributes</strong>; this means
+    that clones of the material will share the same compiled <a href="api/ru/renderers/webgl/WebGLProgram.html">WebGLProgram</a>. However, the
+    <strong>uniforms</strong> are copied <em>by value</em>, which allows you to have different sets of uniforms
+    for different copies of the material.
+    </p>
+
+    <h2>Исходный файл</h2><p>О том как получить исходный код этого модуля читайте <a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html">тут</a>.</p>
+  
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

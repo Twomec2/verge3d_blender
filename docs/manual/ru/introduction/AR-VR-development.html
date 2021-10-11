@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>AR/VR Разработка - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how you can enable Augmented Reality (AR) and Virtual Reality (VR) experience for your Verge3D applications.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/AR-VR-development.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="AR/VR Разработка - Soft8Soft">
+            <meta property="og:description" content="Learn how you can enable Augmented Reality (AR) and Virtual Reality (VR) experience for your Verge3D applications.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/AR-VR-development.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="AR/VR Разработка - Soft8Soft">
+            <meta name="twitter:description" content="Learn how you can enable Augmented Reality (AR) and Virtual Reality (VR) experience for your Verge3D applications.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/legacy-vr-app-creation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/minimal-vr-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/gaze-based-reticle-pointer.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/google-daydream-vr-controller.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/google-play-services-for-ar.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/minimal-ar-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/ar-vr-development/transparent-background-puzzle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>AR/VR Разработка</h1>
+
+    <p>
+      Verge3D позволяет создавать проекты дополненной реальности (AR) и виртуальной реальности (VR) на основе технологии браузера <strong>WebXR</strong> (расширенная реальность в Интернете). Кроме того, вы можете использовать более старую версию этой технологии под названием <strong>WebVR</strong> (включается с помощью опции совместимости <strong>Legacy VR</strong>, смотрите ниже).
+</p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/92AMh4vV4zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/AR-VR-development.html#virtual_reality">Виртуальная Реальность</a><ul><li><a href="manual/ru/introduction/AR-VR-development.html#Setting_up_VR">Настройки</a></li><li><a href="manual/ru/introduction/AR-VR-development.html#Creating_VR_Apps">Создание VR Приложений</a></li></ul></li><li><a href="manual/ru/introduction/AR-VR-development.html#augmented_reality">Дополненная Реальность</a><ul><li><a href="manual/ru/introduction/AR-VR-development.html#Setting_up_AR">Настройки</a></li><li><a href="manual/ru/introduction/AR-VR-development.html#Creating_AR_Apps">Создание AR Приложений</a></li></ul></li><li><a href="manual/ru/introduction/AR-VR-development.html#chrome_debugging">Chrome Debugging</a></li><li><a href="manual/ru/introduction/AR-VR-development.html#whats_next">Что дальше?</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#virtual_reality" id="virtual_reality" class="permalink">#</a></p>
+
+    <h2>Виртуальная Реальность</h2>
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#Setting_up_VR" id="Setting_up_VR" class="permalink">#</a></p>
+
+    <h3>Настройки</h3>
+
+    <p>Мы рекомендуем включить опцию <strong>Legacy VR</strong> в настройках создания приложений в App Manager для поддержки более широкого спектра браузеров (например, Mozilla Firefox) и устройств.</p>
+
+    <img src="files/ar-vr-development/legacy-vr-app-creation-settings.jpg" class="centered" style="max-width: 522px">
+
+    <p>Устройства Cardboard должны работать в любом мобильном браузере, как на Android, так и на iOS..</p>
+
+    <p>Google Daydream работает в стабильном браузере Chrome на телефонах Android, в то время как устройства HTC и Oculus должны работать в браузерах Chrome и Firefox.</p>
+
+    <p class="note">
+      WebXR требует безопасного контекста. Приложения Verge3D должны обслуживаться через HTTPS/SSL или с URL-адреса localhost.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#Creating_VR_Apps" id="Creating_VR_Apps" class="permalink">#</a></p>
+
+    <h3>Создание VR Приложений</h3>
+
+    <p>
+      Режим VR можно настроить для любого приложения Verge3D с помощью пазла <a href="manual/ru/puzzles/AR_VR.html#enter_vr_mode">enter VR mode</a>.
+    </p>
+
+    <img src="files/ar-vr-development/minimal-vr-puzzles.jpg" class="centered" style="max-width: 686px">
+
+    <p>Взаимодействие с 3D-объектами осуществляется с помощью прицельного указателя на основе взгляда, автоматически предоставляемого для VR-устройств <i>без контроллеров</i></p>
+
+    <img src="files/ar-vr-development/gaze-based-reticle-pointer.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Для VR-устройств <i>с контроллерами</i> взаимодействие осуществляется с помощью виртуального луча, отбрасываемого контроллерами.
+    </p>
+
+    <img src="files/ar-vr-development/google-daydream-vr-controller.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Вы можете использовать стандартные пазлы <a href="manual/ru/puzzles/Events.html#when_hovered">при наведении</a> или <a href="manual/ru/puzzles/Events.html#when_clicked">при нажатии</a> для захвата пользовательских действий, а также специфические для VR <a href="manual/ru/puzzles/AR_VR.html#session_event">события при сеансе</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#augmented_reality" id="augmented_reality" class="permalink">#</a></p>
+
+    <h2>Дополненная Реальность</h2>
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#Setting_up_AR" id="Setting_up_AR" class="permalink">#</a></p>
+
+    <h3>Настройки</h3>
+
+    <p>Вы можете запускать свои приложения дополненной реальности на базе Verge3D на мобильных устройствах с операционными системами Anroid или iOS/iPadOS.</p>
+
+    <p class="note">
+      WebXR требует безопасного контекста. Приложения Verge3D должны обслуживаться через HTTPS/SSL или с URL-адреса localhost.
+    </p>
+
+    <h4>Android</h4>
+
+    <p>Чтобы включить дополненную реальность, необходимо устройство Android, поддерживающее технологию <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">ARCore</a>, и последняя версия браузера Google Chrome. Также необходимо установить Google Play Services for AR. Установка этого пакета предлагается автоматически при первом входе в режим AR, если он не был предварительно установлен.
+    </p>
+
+    <img src="files/ar-vr-development/google-play-services-for-ar.jpg" class="centered" style="max-width: 720px">
+
+    <h4>iOS/iPadOS</h4>
+
+    <p>Mozilla <strong>WebXR Viewer</strong> - это приложение для браузера на базе Firefox, которое поддерживает технологию AR на устройствах Apple (начиная с iPhone 6s). Просто <a href="https://apps.apple.com/us/app/webxr-viewer/id1295998056" target="_blank">установите</a> его из App Store.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#Creating_AR_Apps" id="Creating_AR_Apps" class="permalink">#</a></p>
+
+    <h3>Создание AR Приложений</h3>
+
+    <p>
+      Режим AR можно настроить для любого приложения Verge3D с помощью пазла<a href="manual/ru/puzzles/AR_VR.html#enter_ar_mode">enter AR mode</a>.
+    </p>
+
+    <img src="files/ar-vr-development/minimal-ar-puzzles.jpg" class="centered" style="max-width: 645px">
+
+    <p>
+      Войдя в режим AR, вы сможете позиционировать 3D-контент в "реальной" системе координат, которая совмещена с вашим мобильным устройством. Кроме того, вы можете обнаружить и горизонтальные поверхности (столы, полки, пол и т.д.) с помощью AR пазла <a href="manual/ru/puzzles/AR_VR.html#ar_hit_test">detect horizontal surface AR</a>
+    </p>
+
+    <!-- enabling transparency for AR is a hack for WebXR Viewer -->
+
+    <p>
+      Также, чтобы увидеть реальное окружение через 3D холст, необходимо включить опцию <strong>transparent background</strong> в пазле <a href="manual/ru/puzzles/Initialization.html#configure_application">configure application</a>.
+    </p>
+
+    <img src="files/ar-vr-development/transparent-background-puzzle.jpg">
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#chrome_debugging" id="chrome_debugging" class="permalink">#</a></p>
+
+    <h2>Chrome Debugging</h2>
+
+    <p>
+      Для ускорения итераций во время разработки вы можете использовать функцию <a href="manual/ru/introduction/Testing-Mobile-Browsers.html#Port_Forwarding">port forwarding</a> Chrome для запуска вашего AR или VR приложения в мобильном браузере. Это избавит вас от необходимости каждый раз заново загружать его на удаленный веб-сервер.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/AR-VR-development.html#whats_next" id="whats_next" class="permalink">#</a></p>
+
+    <h2>Что дальше?</h2>
+
+    <p>
+      Чтобы узнать, как написать сценарий вашего AR/VR-приложения с помощью головоломок, прочитайте следующий <a href="manual/ru/puzzles/AR_VR.html">раздел</a>. Также ознакомьтесь с руководством по <a href="manual/ru/introduction/Physics-Guide.html">физике</a>, если вы собираетесь моделировать реалистичную виртуальную среду со столкновениями объектов и/или персонажей.
+    </p>
+
+
+    <h3>Остались вопросы?</h3>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

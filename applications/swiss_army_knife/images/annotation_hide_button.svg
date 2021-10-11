@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="78"
+   height="90"
+   viewBox="0 0 20.6375 23.812501"
+   version="1.1"
+   id="svg864">
+  <defs
+     id="defs858" />
+  <metadata
+     id="metadata861">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="M 20.617631,17.876586 10.298881,23.812502 -1.0047024e-7,17.842169 0.01986798,5.935919 10.338618,4.0742793e-6 20.6375,5.9703392 Z"
+     id="path865"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.645277;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+  <path
+     id="path849"
+     d="m 14.797123,11.87541 c 3e-6,2.45519 -1.990319,4.44551 -4.445506,4.44551 -1.236944,0 -4.506636,0.0617 -4.506636,0.0617 0,0 0.06113,-3.28899 0.06113,-4.50723 -2.1e-6,-2.45519 1.9903189,-4.44551 4.445506,-4.44551 2.455187,0 4.445509,1.99032 4.445506,4.44551 z"
+     style="fill:#d9d9d9;fill-opacity:1;fill-rule:nonzero;stroke:#d9d9d9;stroke-width:0.790678;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+  <g
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.66256px;line-height:1.25;font-family:'Days One';-inkscape-font-specification:'Days One';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.464066"
+     id="text854"
+     transform="rotate(-0.33253447)"
+     aria-label="1">
+    <path
+       id="path892"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Days One';-inkscape-font-specification:'Days One';fill:#ffffff;fill-opacity:1;stroke-width:0.464066"
+       d="m 8.4809143,10.380683 q -0.050757,-0.07191 -0.050757,-0.16919 0,-0.09729 0.1395823,-0.2157184 L 9.6018023,9.1075238 Q 9.8259799,8.9087248 10.223578,8.9044951 h 0.621775 q 0.173421,0 0.291854,0.1184334 0.118434,0.1184334 0.118434,0.2833943 v 5.2660582 q 0,0.164961 -0.122663,0.283395 -0.122664,0.114203 -0.287625,0.114203 h -0.786736 q -0.1649609,0 -0.2833943,-0.109974 Q 9.661019,14.745802 9.661019,14.580841 v -4.090184 l -0.4864231,0.355301 q -0.084595,0.05922 -0.1945692,0.03807 -0.1099739,-0.02115 -0.1776502,-0.09728 z" />
+  </g>
+</svg>

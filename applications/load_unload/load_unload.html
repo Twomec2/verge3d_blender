@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+<head>
+  <title>Dynamic Loading and Unloading with Puzzles Scripting</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- Search Engines -->
+  <meta name="description" content="With code-less interactive scenarios provided by Puzzles, you can load and unload your 3D scenes in real-time. Get free sources in Verge3D for Blender.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dynamic Loading and Unloading with Puzzles Scripting">
+  <meta name="twitter:description" content="With code-less interactive scenarios provided by Puzzles, you can load and unload your 3D scenes in real-time. Get free sources in Verge3D for Blender.">
+  <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dynamic Loading and Unloading with Puzzles Scripting">
+  <meta property="og:description" content="With code-less interactive scenarios provided by Puzzles, you can load and unload your 3D scenes in real-time. Get free sources in Verge3D for Blender.">
+  <meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="generator" content="Verge3D 3.8.0">
+
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="manifest" href="media/manifest.json">
+  <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+  <script src="v3d.js"></script>
+  <script src="load_unload.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="load_unload.css">
+</head>
+
+<body>
+  <div id="v3d-container">
+    <div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+    <div id="preloader" class="preloader-div" style="display:none">
+      <div class="preloader-container">
+        <div id="preloader_bar" class="preloader-bar"></div>
+      </div>
+    </div>
+    <div class="menu-div">
+      <div class="form-block w-form">
+        <div id="email-form" name="Scene Loader" data-name="Scene Loader" class="form">
+          <h1 class="heading">Select a Scene:</h1><select id="scene_selector" name="Scenes" data-name="Scenes" required="" class="select-field w-select"><option value="chair">chair.gltf</option><option value="puff">puff.gltf</option><option value="table">table.gltf</option><option value="nightlight">nightlight.gltf</option><option value="tv_stand">tv_stand.gltf</option></select>
+          <input type="submit" value="Add Scene" data-wait="Please wait..." id="button_add" class="submit-button w-button"><input type="submit" value="Remove Scene" data-wait="Please wait..." id="button_unload" class="submit-button-2 w-button"><input type="submit" value="Replace Scene" data-wait="Please wait..." id="button_load" class="submit-button-3 w-button"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

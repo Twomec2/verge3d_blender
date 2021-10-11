@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="24.774193"
+   inkscape:export-xdpi="24.774193"
+   inkscape:export-filename="D:\Repos\verge3d\applications\arcade_racing\media\fullscreen_open.png"
+   sodipodi:docname="fullscreen_open.svg"
+   id="svg2719"
+   version="1.1"
+   viewBox="0 0 16.404167 16.404167"
+   height="62"
+   width="62">
+  <sodipodi:namedview
+     inkscape:snap-bbox="true"
+     showguides="false"
+     inkscape:current-layer="svg2719"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:cy="36.835498"
+     inkscape:cx="41.031164"
+     inkscape:zoom="9.6942059"
+     showgrid="false"
+     id="namedview20"
+     inkscape:window-height="1177"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff">
+    <inkscape:grid
+       id="grid902"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2713">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="935.61182"
+       x2="508.08038"
+       y1="942.95502"
+       x1="501.88306"
+       id="linearGradient2673"
+       xlink:href="#linearGradient2648"
+       gradientTransform="translate(-494.03963,-933.19295)" />
+    <linearGradient
+       id="linearGradient2768">
+      <stop
+         id="stop2764"
+         offset="0"
+         style="stop-color:#414141;stop-opacity:1" />
+      <stop
+         id="stop2766"
+         offset="1"
+         style="stop-color:#767676;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="934.78046"
+       x2="508.85629"
+       y1="948.00964"
+       x1="495.62714"
+       id="linearGradient2665"
+       xlink:href="#linearGradient2648"
+       gradientTransform="translate(-493.24109,-653.06985)" />
+    <linearGradient
+       id="linearGradient2648">
+      <stop
+         id="stop2644"
+         offset="0"
+         style="stop-color:#ebebeb;stop-opacity:1" />
+      <stop
+         id="stop2646"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <filter
+       height="1.24"
+       y="-0.12"
+       width="1.24"
+       x="-0.12"
+       id="filter2688"
+       style="color-interpolation-filters:sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur2690"
+         stdDeviation="0.66145835" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata2716">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path911"
+     d="M 1.5897416,1.5897416 V 14.814425 H 14.814425 V 1.5897416 Z"
+     style="fill:#f38100;fill-opacity:1;stroke:none;stroke-width:0.00448295px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path
+     id="path916"
+     d="m 8.1570983,2.6620145 h 5.5777597 v 5.5400706 h -1.16953 V 7.1298121 H 11.485764 V 5.9681847 H 10.406197 V 4.8959117 H 9.3266303 V 3.8236419 h -1.169532 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.00448295px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+</svg>

@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for Maya: Materials, Textures, and Utility Nodes - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn what kinds of Maya materials, textures, and utility nodes are supported in Verge3D and how to configure them to create good-looking 3D web interactives.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/maya/Materials.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for Maya: Materials, Textures, and Utility Nodes - Soft8Soft">
+            <meta property="og:description" content="Learn what kinds of Maya materials, textures, and utility nodes are supported in Verge3D and how to configure them to create good-looking 3D web interactives.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/maya/Materials.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for Maya: Materials, Textures, and Utility Nodes - Soft8Soft">
+            <meta name="twitter:description" content="Learn what kinds of Maya materials, textures, and utility nodes are supported in Verge3D and how to configure them to create good-looking 3D web interactives.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maya/lambert.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maya/ai-standard-surface-overview.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maya/verge3d-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Materials, Textures, and Utility Nodes / Maya</h1>
+
+    <p>
+      This section references all materials, textures and utility nodes supported in Verge3D for Maya.
+    </p>
+
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/maya/Materials.html#surface_shaders">Surface Shaders</a><ul><li><a href="manual/en/maya/Materials.html#standardSurface">Standard Surface</a></li><li><a href="manual/en/maya/Materials.html#lambert">Lambert</a></li><li><a href="manual/en/maya/Materials.html#blinn_phong">Blinn, Phong, Phong E</a></li><li><a href="manual/en/maya/Materials.html#surfaceShader">Surface Shader</a></li></ul></li><li><a href="manual/en/maya/Materials.html#2d_textures">2D Textures</a><ul><li><a href="manual/en/maya/Materials.html#bulge">Bulge</a></li><li><a href="manual/en/maya/Materials.html#checker">Checker</a></li><li><a href="manual/en/maya/Materials.html#cloth">Cloth</a></li><li><a href="manual/en/maya/Materials.html#file">File</a></li><li><a href="manual/en/maya/Materials.html#grid">Grid</a></li><li><a href="manual/en/maya/Materials.html#noise">Noise</a></li><li><a href="manual/en/maya/Materials.html#ramp">Ramp</a></li></ul></li><li><a href="manual/en/maya/Materials.html#env_textures">Environment Textures</a><ul><li><a href="manual/en/maya/Materials.html#envSphere">Env Sphere</a></li></ul></li><li><a href="manual/en/maya/Materials.html#other_textures">Other Textures</a><ul><li><a href="manual/en/maya/Materials.html#layeredTexture">Layered Texture</a></li></ul></li><li><a href="manual/en/maya/Materials.html#utility_nodes">Utility Nodes</a><ul><li><a href="manual/en/maya/Materials.html#addDoubleLinear">Add Double Linear</a></li><li><a href="manual/en/maya/Materials.html#addMatrix">Add Matrix</a></li><li><a href="manual/en/maya/Materials.html#blendColors">Blend Colors</a></li><li><a href="manual/en/maya/Materials.html#bump2d">Bump 2d</a></li><li><a href="manual/en/maya/Materials.html#clamp">Clamp</a></li><li><a href="manual/en/maya/Materials.html#composeMatrix">Compose Matrix</a></li><li><a href="manual/en/maya/Materials.html#condition">Condition</a></li><li><a href="manual/en/maya/Materials.html#decomposeMatrix">Decompose Matrix</a></li><li><a href="manual/en/maya/Materials.html#fourByFourMatrix">Four By Four Matrix</a></li><li><a href="manual/en/maya/Materials.html#gammaCorrect">Gamma Correct</a></li><li><a href="manual/en/maya/Materials.html#inverseMatrix">Inverse Matrix</a></li><li><a href="manual/en/maya/Materials.html#luminance">Luminance</a></li><li><a href="manual/en/maya/Materials.html#multiplyDivide">Multiply Divide</a></li><li><a href="manual/en/maya/Materials.html#multDoubleLinear">Mult Double Linear</a></li><li><a href="manual/en/maya/Materials.html#multMatrix">Mult Matrix</a></li><li><a href="manual/en/maya/Materials.html#place2dTexture">2d Placement</a></li><li><a href="manual/en/maya/Materials.html#reverse">Reverse</a></li><li><a href="manual/en/maya/Materials.html#samplerInfo">Sampler Info</a></li><li><a href="manual/en/maya/Materials.html#setRange">Set Range</a></li><li><a href="manual/en/maya/Materials.html#transposeMatrix">Transpose Matrix</a></li><li><a href="manual/en/maya/Materials.html#unitConversion">Unit Conversion</a></li><li><a href="manual/en/maya/Materials.html#vectorProduct">Vector Product</a></li><li><a href="manual/en/maya/Materials.html#weightedAddMatrix">Weighted Add Matrix</a></li></ul></li><li><a href="manual/en/maya/Materials.html#lookdevkit_utility_nodes">LookdevKit Utility Nodes</a><ul><li><a href="manual/en/maya/Materials.html#channels">Channels</a></li><li><a href="manual/en/maya/Materials.html#colorComposite">Color Composite</a></li><li><a href="manual/en/maya/Materials.html#colorCondition">Color Condition</a></li><li><a href="manual/en/maya/Materials.html#colorConstant">Color Constant</a></li><li><a href="manual/en/maya/Materials.html#colorLogic">Color Logic</a></li><li><a href="manual/en/maya/Materials.html#colorMask">Color Mask</a></li><li><a href="manual/en/maya/Materials.html#colorMath">Color Math</a></li><li><a href="manual/en/maya/Materials.html#floatComposite">Float Composite</a></li><li><a href="manual/en/maya/Materials.html#floatCondition">Float Condition</a></li><li><a href="manual/en/maya/Materials.html#floatConstant">Float Constant</a></li><li><a href="manual/en/maya/Materials.html#floatLogic">Float Logic</a></li><li><a href="manual/en/maya/Materials.html#floatMask">Float Mask</a></li><li><a href="manual/en/maya/Materials.html#floatMath">Float Math</a></li><li><a href="manual/en/maya/Materials.html#premultiply">Premultiply</a></li><li><a href="manual/en/maya/Materials.html#unpremultiply">Unpremultiply</a></li></ul></li><li><a href="manual/en/maya/Materials.html#arnold_nodes">Arnold Nodes</a><ul><li><a href="manual/en/maya/Materials.html#aiStandardSurface">aiStandardSurface</a></li><li><a href="manual/en/maya/Materials.html#aiAbs">aiAbs</a></li><li><a href="manual/en/maya/Materials.html#aiAdd">aiAdd</a></li><li><a href="manual/en/maya/Materials.html#aiAtan">aiAtan</a></li><li><a href="manual/en/maya/Materials.html#aiCompare">aiCompare</a></li><li><a href="manual/en/maya/Materials.html#aiComplement">aiComlement</a></li><li><a href="manual/en/maya/Materials.html#aiCross">aiCross</a></li><li><a href="manual/en/maya/Materials.html#aiDivide">aiDivide</a></li><li><a href="manual/en/maya/Materials.html#aiDot">aiDot</a></li><li><a href="manual/en/maya/Materials.html#aiExp">aiExp</a></li><li><a href="manual/en/maya/Materials.html#aiFacingRatio">aiFacingRatio</a></li><li><a href="manual/en/maya/Materials.html#aiFlat">aiFlat</a></li><li><a href="manual/en/maya/Materials.html#aiFraction">aiFraction</a></li><li><a href="manual/en/maya/Materials.html#aiIsFinite">aiIsFinite</a></li><li><a href="manual/en/maya/Materials.html#aiLength">aiLength</a></li><li><a href="manual/en/maya/Materials.html#aiLog">aiLog</a></li><li><a href="manual/en/maya/Materials.html#aiMax">aiMax</a></li><li><a href="manual/en/maya/Materials.html#aiMin">aiMin</a></li><li><a href="manual/en/maya/Materials.html#aiMixShader">aiMixShader</a></li><li><a href="manual/en/maya/Materials.html#aiModulo">aiModulo</a></li><li><a href="manual/en/maya/Materials.html#aiMultiply">aiMultiply</a></li><li><a href="manual/en/maya/Materials.html#aiNegate">aiNegate</a></li><li><a href="manual/en/maya/Materials.html#aiNormalize">aiNormalize</a></li><li><a href="manual/en/maya/Materials.html#aiNormalMap">aiNormalMap</a></li><li><a href="manual/en/maya/Materials.html#aiOslShader">aiOslShader</a></li><li><a href="manual/en/maya/Materials.html#aiPow">aiPow</a></li><li><a href="manual/en/maya/Materials.html#aiRaySwitch">aiRaySwitch</a></li><li><a href="manual/en/maya/Materials.html#aiReciprocal">aiReciprocal</a></li><li><a href="manual/en/maya/Materials.html#aiShadowMatte">aiShadowMatte</a></li><li><a href="manual/en/maya/Materials.html#aiSign">aiSign</a></li><li><a href="manual/en/maya/Materials.html#aiSkyDomeLight">aiSkyDomeLight</a></li><li><a href="manual/en/maya/Materials.html#aiSqrt">aiSqrt</a></li><li><a href="manual/en/maya/Materials.html#aiSubtract">aiSubtract</a></li><li><a href="manual/en/maya/Materials.html#aiTrigo">aiTrigo</a></li></ul></li><li><a href="manual/en/maya/Materials.html#performance_considerations">Performance Considerations</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/maya/Materials.html#surface_shaders" id="surface_shaders" class="permalink">#</a></p>
+
+    <h2>Surface Shaders</h2>
+
+
+    <p><a href="manual/en/maya/Materials.html#standardSurface" id="standardSurface" class="permalink">#</a></p>
+
+    <h3>Standard Surface</h3>
+
+    <p>
+      <strong>Standard Surface</strong> shader was introduced in Maya 2020. It's based on and very similar to <a href="manual/en/maya/Materials.html#aiStandardSurface">aiStandardSurface</a>.
+    </p>
+
+    <p>
+      Since it's better supported in Maya Viewport 2.0 and does not require Arnold plug-in to be installed, we recommend it for use when authoring your Verge3D content in Maya 2020 or above.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#lambert" id="lambert" class="permalink">#</a></p>
+
+    <h3>Lambert</h3>
+
+    <p>
+      Basic yet highly efficient node which can be used to represent materials with no specular reflections.
+    </p>
+
+    <img src="files/materials-maya/lambert.jpg">
+
+    <p>The following Lambert settings are supported in Verge3D:</p>
+
+    <ul>
+      <li>Color</li>
+      <li>Transparency</li>
+      <li>Diffuse</li>
+      <li>Bump/Normal Mapping</li>
+    </ul>
+
+    <p>
+      Verge3D settings are also supported, see <a href="manual/en/maya/Materials.html#aiStandardSurface">above</a> for more info.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#blinn_phong" id="blinn_phong" class="permalink">#</a></p>
+
+    <h3>Blinn, Phong, Phong E</h3>
+
+    <p>
+      In Verge3D, these materials will be approximated by the PBR shading model, thus they might look differently compared to Maya Viewport.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#surfaceShader" id="surfaceShader" class="permalink">#</a></p>
+
+    <h3>Surface Shader</h3>
+
+    <p>
+      Use this shader node to create fully-customizable materials. Basically, it just transfers <strong>Out Color</strong> parameter to the renderer as is.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#2d_textures" id="2d_textures" class="permalink">#</a></p>
+
+    <h2>2D Textures</h2>
+
+    <p><a href="manual/en/maya/Materials.html#bulge" id="bulge" class="permalink">#</a></p>
+    <h3>Bulge</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-9F9D693A-9049-4FA3-A0A5-D5E50077CDD7" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#checker" id="checker" class="permalink">#</a></p>
+    <h3>Checker</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-514468B4-60C0-47CE-A865-55B4FFE873C1" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#cloth" id="cloth" class="permalink">#</a></p>
+    <h3>Cloth</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-3A307B63-0156-480D-AE18-5115D5FE15DB" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#file" id="file" class="permalink">#</a></p>
+    <h3>File</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-309A77DA-F5ED-4474-8413-317D7AB241E6" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#grid" id="grid" class="permalink">#</a></p>
+    <h3>Grid</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-1302D193-4DEF-4CEF-8E48-E5B7E84909E5" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#noise" id="noise" class="permalink">#</a></p>
+    <h3>Noise</h3>
+
+    <p>Perlin noise type is only supported.</p>
+
+    <p><a href="manual/en/maya/Materials.html#ramp" id="ramp" class="permalink">#</a></p>
+    <h3>Ramp</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-F2C97013-5E4C-41AC-9684-E23AC52C51B8" target="_blank">here</a>.
+    </p>
+
+
+
+    <p><a href="manual/en/maya/Materials.html#env_textures" id="env_textures" class="permalink">#</a></p>
+
+    <h2>Environment Textures</h2>
+
+
+    <p><a href="manual/en/maya/Materials.html#envSphere" id="envSphere" class="permalink">#</a></p>
+    <h3>Env Sphere</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-1FF8EE4D-DEAF-4E6C-895C-D2E6EB670BAA" target="_blank">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#other_textures" id="other_textures" class="permalink">#</a></p>
+
+    <h2>Other Textures</h2>
+
+
+    <p><a href="manual/en/maya/Materials.html#layeredTexture" id="layeredTexture" class="permalink">#</a></p>
+    <h3>Layered Texture</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-770E22B9-E32A-4E14-A4DC-23656D885AEE" target="_blank">here</a>.
+    </p>
+
+
+
+    <p><a href="manual/en/maya/Materials.html#utility_nodes" id="utility_nodes" class="permalink">#</a></p>
+
+    <h2>Utility Nodes</h2>
+
+
+    <p><a href="manual/en/maya/Materials.html#addDoubleLinear" id="addDoubleLinear" class="permalink">#</a></p>
+    <h3>Add Double Linear</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-3FF423AA-407D-4D57-9888-FC9A2F350E55" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#addMatrix" id="addMatrix" class="permalink">#</a></p>
+    <h3>Add Matrix</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-C1812049-7EBF-4288-B4C7-A712090866CC" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#blendColors" id="blendColors" class="permalink">#</a></p>
+    <h3>Blend Colors</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-25397F02-B0AC-4E6B-849C-462AFE93B0DB" target="_blank">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#bump2d" id="bump2d" class="permalink">#</a></p>
+    <h3>Bump 2d</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-0DC10D4E-6DD4-4E48-98A9-113B9757EF96" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#clamp" id="clamp" class="permalink">#</a></p>
+    <h3>Clamp</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-75A0D963-24A0-4DAB-8073-903734443E03" target="_blank">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#composeMatrix" id="composeMatrix" class="permalink">#</a></p>
+    <h3>Compose Matrix</h3>
+
+    <p>
+      This node composes a 4x4 matrix from the given translation, rotation, and scale components. Shear input is not supported.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#condition" id="condition" class="permalink">#</a></p>
+    <h3>Condition</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-57CE3E34-3C8D-4F15-971B-219DA6176836" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#decomposeMatrix" id="decomposeMatrix" class="permalink">#</a></p>
+    <h3>Decompose Matrix</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-31A82FA7-D887-458B-88A2-C7FF90F84F17" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#fourByFourMatrix" id="fourByFourMatrix" class="permalink">#</a></p>
+    <h3>Four By Four Matrix</h3>
+
+    <p>
+      This node is used to compose a 4x4 matrix from 16 float values.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#gammaCorrect" id="gammaCorrect" class="permalink">#</a></p>
+    <h3>Gamma Correct</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-BA5E19E9-3D21-47BE-95D5-903C59936678" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#inverseMatrix" id="inverseMatrix" class="permalink">#</a></p>
+    <h3>Inverse Matrix</h3>
+
+    <p>
+      Inverts the given 4x4 matrix.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#luminance" id="luminance" class="permalink">#</a></p>
+    <h3>Luminance</h3>
+
+    <p>
+      Convert input color to grayscale value. The conversion formula is:
+    </p>
+
+    <code>
+      Luminance = 0.3 * R + 0.59 * G + 0.11 * B
+    </code>
+
+
+    <p><a href="manual/en/maya/Materials.html#multiplyDivide" id="multiplyDivide" class="permalink">#</a></p>
+    <h3>Multiply Divide</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-DBD3F3B4-AE68-49B1-B215-34F74782BA63" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#multDoubleLinear" id="multDoubleLinear" class="permalink">#</a></p>
+    <h3>Mult Double Linear</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-68236D3D-815B-4F3F-BF60-3D0F1FDFFF87" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#multMatrix" id="multMatrix" class="permalink">#</a></p>
+    <h3>Mult Matrix</h3>
+
+    <p>
+      Multiply two or more matrices. In Verge3D, you can multiply no more than 3 matrices using the single Mult Matrix node.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#place2dTexture" id="place2dTexture" class="permalink">#</a></p>
+    <h3>2d Placement</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-94070C7E-C550-42FD-AFC9-FBE82B173B1D" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#reverse" id="reverse" class="permalink">#</a></p>
+    <h3>Reverse</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-EECA80A5-FD6F-4A41-87FF-05461A2BEB2D" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#samplerInfo" id="samplerInfo" class="permalink">#</a></p>
+    <h3>Sampler Info</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-5134339F-6F76-4193-9F94-713D0A88AAC2" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#setRange" id="setRange" class="permalink">#</a></p>
+    <h3>Set Range</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-1C66C39C-4AAA-478B-929E-3F22D8B3B993" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#transposeMatrix" id="transposeMatrix" class="permalink">#</a></p>
+    <h3>Transpose Matrix</h3>
+
+    <p>
+      Transpose the given 4x4 matrix.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#unitConversion" id="unitConversion" class="permalink">#</a></p>
+    <h3>Unit Conversion</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-2B3D14DB-2917-426D-AD15-DEDCCF5FF496" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#vectorProduct" id="vectorProduct" class="permalink">#</a></p>
+    <h3>Vector Product</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-C1DEE9BC-375C-404C-ABF7-79E9321BE5F8" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#weightedAddMatrix" id="weightedAddMatrix" class="permalink">#</a></p>
+    <h3>Weighted Add Matrix</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-B290C3E6-95BC-4299-BC0D-169EADDE6319" target="_blank">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#lookdevkit_utility_nodes" id="lookdevkit_utility_nodes" class="permalink">#</a></p>
+
+    <h2>LookdevKit Utility Nodes</h2>
+
+    <p>Make sure you have LookdevKit plug-in enabled before using any of these nodes.</p>
+
+    <p><a href="manual/en/maya/Materials.html#channels" id="channels" class="permalink">#</a></p>
+    <h3>Channels</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorComposite" id="colorComposite" class="permalink">#</a></p>
+    <h3>Color Composite</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorCondition" id="colorCondition" class="permalink">#</a></p>
+    <h3>Color Condition</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorConstant" id="colorConstant" class="permalink">#</a></p>
+    <h3>Color Constant</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorLogic" id="colorLogic" class="permalink">#</a></p>
+    <h3>Color Logic</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorMask" id="colorMask" class="permalink">#</a></p>
+    <h3>Color Mask</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#colorMath" id="colorMath" class="permalink">#</a></p>
+    <h3>Color Math</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatComposite" id="floatComposite" class="permalink">#</a></p>
+    <h3>Float Composite</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatCondition" id="floatCondition" class="permalink">#</a></p>
+    <h3>Float Condition</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatConstant" id="floatConstant" class="permalink">#</a></p>
+    <h3>Float Constant</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatLogic" id="floatLogic" class="permalink">#</a></p>
+    <h3>Float Logic</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatMask" id="floatMask" class="permalink">#</a></p>
+    <h3>Float Mask</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#floatMath" id="floatMath" class="permalink">#</a></p>
+    <h3>Float Math</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#premultiply" id="premultiply" class="permalink">#</a></p>
+    <h3>Premultiply</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#unpremultiply" id="unpremultiply" class="permalink">#</a></p>
+    <h3>Unpremultiply</h3>
+
+    <p>
+      Read more <a href="https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-ED31708F-8C54-4EB2-981D-4FCAFE8E45C9" target="_blank">here</a>.
+    </p>
+
+
+    <p><a href="manual/en/maya/Materials.html#arnold_nodes" id="arnold_nodes" class="permalink">#</a></p>
+    <h2>Arnold Nodes</h2>
+
+
+    <p><a href="manual/en/maya/Materials.html#aiStandardSurface" id="aiStandardSurface" class="permalink">#</a></p>
+    <h3>aiStandardSurface</h3>
+
+    <p>
+      This shader comes with Arnold for Maya (MtoA) and can represent many real-world materials (such as metals, plastics, glass, wood, textile etc) by using physically-based shading model.
+    </p>
+
+    <img src="files/materials-maya/ai-standard-surface-overview.jpg" class="centered">
+
+    <p>The following aiStandardSurface settings are supported in Verge3D:</p>
+
+    <h4>Base Panel</h4>
+    <ul>
+      <li>Weight or (Base input in Hypershade)</li>
+      <li>Color or (Base Color input in Hypershade)</li>
+      <li>Metalness</li>
+    </ul>
+
+    <h4>Specular Panel</h4>
+    <ul>
+      <li>Weight (Specular input in Hypershade)</li>
+      <li>Color (Specular Color input in Hypershade)</li>
+      <li>Roughness (Specular Roughness input in Hypershade)</li>
+      <li>IOR (Specular IOR input in Hypershade)</li>
+    </ul>
+
+    <h4>Transmission Panel</h4>
+    <ul>
+      <li>Weight (Transmission input in Hypershade)</li>
+      <li>Color (Transmission Color input in Hypershade)</li>
+    </ul>
+
+    <h4>Coat Panel</h4>
+    <ul>
+      <li>Weight (Coat input in Hypershade)</li>
+      <li>Roughness (Coat Roughness input in Hypershade)</li>
+      <li>Normal (Coat Normal input in Hypershade)</li>
+    </ul>
+
+    <h4>Sheen Panel</h4>
+    <ul>
+      <li>Weight (Sheen input in Hypershade)</li>
+      <li>Color (Sheen Color input in Hypershade)</li>
+      <li>Roughness (Sheen Roughness input in Hypershade)</li>
+    </ul>
+
+    <h4>Emission Panel</h4>
+    <ul>
+      <li>Weight (Emission input in Hypershade)</li>
+      <li>Color (Emission Color input in Hypershade)</li>
+    </ul>
+
+    <h4>Geometry Panel</h4>
+    <ul>
+      <li>Thin Walled</li>
+      <li>Opacity</li>
+      <li>Bump Mapping (Normal Camera input in Hypershade)</li>
+    </ul>
+
+
+    <h4>Additional Verge3D Settings</h4>
+
+    <p>You can tweak your aiStandardSurface materials by using the following settings located on <strong>Verge3D</strong> panel:</p>
+
+    <img src="files/materials-maya/verge3d-settings.jpg" class="centered" style="max-width: 427px">
+
+    <dl>
+      <dt>Alpha Mode</dt>
+      <dd>select transparency mode: <strong>Auto</strong>, <strong>Opaque</strong>, <strong>Blend</strong> or <strong>Mask</strong>. See <a href="manual/en/maya/Transparency.html">transparency guide</a> for more info.</dd>
+      <dt>Two Sided</dt>
+      <dd>make your material two-sided. By default, Verge3D renders only front side of materials, enable this option to render their reverse side as well.</dd>
+      <dt>Depth Write</dt>
+      <dd>render material depth in depth buffer. Use this option for transparent materials to make them rendered in additive manner.</dd>
+      <dt>Depth Test</dt>
+      <dd>perform depth test calculations when rendering your material. Disabling depth test is useful when rendering objects inside semi-transparent objects to prevent them from being culled by the covering objects.</dd>
+      <dt>Dithering</dt>
+      <dd>reduce banding artifacts by using pixel dithering.</dd>
+      <dt>glTF 2.0 Compatible</dt>
+      <dd>force the material to be glTF 2.0 compatible. See the <a href="manual/en/maya/GLTF-Materials.html">following guide</a> for more information.</dd>
+    </dl>
+
+
+    <p><a href="manual/en/maya/Materials.html#aiAbs" id="aiAbs" class="permalink">#</a></p>
+    <h3>aiAbs</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiAdd" id="aiAdd" class="permalink">#</a></p>
+    <h3>aiAdd</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiAtan" id="aiAtan" class="permalink">#</a></p>
+    <h3>aiAtan</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiCompare" id="aiCompare" class="permalink">#</a></p>
+    <h3>aiCompare</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiComplement" id="aiComplement" class="permalink">#</a></p>
+    <h3>aiComlement</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiCross" id="aiCross" class="permalink">#</a></p>
+    <h3>aiCross</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiDivide" id="aiDivide" class="permalink">#</a></p>
+    <h3>aiDivide</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiDot" id="aiDot" class="permalink">#</a></p>
+    <h3>aiDot</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiExp" id="aiExp" class="permalink">#</a></p>
+    <h3>aiExp</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiFacingRatio" id="aiFacingRatio" class="permalink">#</a></p>
+    <h3>aiFacingRatio</h3>
+
+    <p><a href="manual/en/maya/Materials.html#aiFlat" id="aiFlat" class="permalink">#</a></p>
+    <h3>aiFlat</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Flat" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiFraction" id="aiFraction" class="permalink">#</a></p>
+    <h3>aiFraction</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiIsFinite" id="aiIsFinite" class="permalink">#</a></p>
+    <h3>aiIsFinite</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiLength" id="aiLength" class="permalink">#</a></p>
+    <h3>aiLength</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiLog" id="aiLog" class="permalink">#</a></p>
+    <h3>aiLog</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiMax" id="aiMax" class="permalink">#</a></p>
+    <h3>aiMax</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiMin" id="aiMin" class="permalink">#</a></p>
+    <h3>aiMin</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiMixShader" id="aiMixShader" class="permalink">#</a></p>
+    <h3>aiMixShader</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Mix+Shader" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiModulo" id="aiModulo" class="permalink">#</a></p>
+    <h3>aiModulo</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiMultiply" id="aiMultiply" class="permalink">#</a></p>
+    <h3>aiMultiply</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiNegate" id="aiNegate" class="permalink">#</a></p>
+    <h3>aiNegate</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiNormalize" id="aiNormalize" class="permalink">#</a></p>
+    <h3>aiNormalize</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiNormalMap" id="aiNormalMap" class="permalink">#</a></p>
+    <h3>aiNormalMap</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Normal+Map" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiOslShader" id="aiOslShader" class="permalink">#</a></p>
+    <h3>aiOslShader</h3>
+
+    <p>
+      Node to create custom OSL shaders.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#aiPow" id="aiPow" class="permalink">#</a></p>
+    <h3>aiPow</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiRaySwitch" id="aiRaySwitch" class="permalink">#</a></p>
+    <h3>aiRaySwitch</h3>
+
+    <p><a href="manual/en/maya/Materials.html#aiReciprocal" id="aiReciprocal" class="permalink">#</a></p>
+    <h3>aiReciprocal</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiShadowMatte" id="aiShadowMatte" class="permalink">#</a></p>
+    <h3>aiShadowMatte</h3>
+
+    <p><a href="manual/en/maya/Materials.html#aiSign" id="aiSign" class="permalink">#</a></p>
+    <h3>aiSign</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiSkyDomeLight" id="aiSkyDomeLight" class="permalink">#</a></p>
+    <h3>aiSkyDomeLight</h3>
+
+    <p>
+      Used to create image-based environment lighting. See the <a href="manual/en/maya/Lighting-and-Rendering.html">Lighting and Rendering</a> section for more info.
+    </p>
+
+    <p><a href="manual/en/maya/Materials.html#aiSqrt" id="aiSqrt" class="permalink">#</a></p>
+    <h3>aiSqrt</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiSubtract" id="aiSubtract" class="permalink">#</a></p>
+    <h3>aiSubtract</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+    <p><a href="manual/en/maya/Materials.html#aiTrigo" id="aiTrigo" class="permalink">#</a></p>
+    <h3>aiTrigo</h3>
+
+    <p>See more <a href="https://docs.arnoldrenderer.com/display/A5AFMUG/Math+Shaders" target="_blank">here</a>.</p>
+
+
+    <p><a href="manual/en/maya/Materials.html#performance_considerations" id="performance_considerations" class="permalink">#</a></p>
+
+    <h2>Performance Considerations</h2>
+
+    <p>Being the only choice for creating nice and realistic renders, <strong>Standard Surface</strong> (or <strong>aiStandardSurface</strong>) nevertheless require more computing power from your GPU and slows down app loading. This is especially true for scenes with lots of such materials.</p>
+
+    <p>
+      To improve performance you can tweak <a href="manual/en/maya/Lighting-and-Rendering.html#environment_lighting">Texture Resolution</a> or <a href="manual/en/maya/Lighting-and-Rendering.html#global_rendering_settings">IBL Environment Mode</a> property.
+    </p>
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,1824 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для Blender: Примеры Шейдерных Нод - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about Blender shader editor's features supported in Verge3D.">
+    <meta content="https://cdn.soft8soft.com/images/shader_nodes_reference_blender.jpg" property="og:image">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Shader-Nodes-Reference.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для Blender: Примеры Шейдерных Нод - Soft8Soft">
+            <meta property="og:description" content="Information about Blender shader editor's features supported in Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/shader_nodes_reference_blender.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Shader-Nodes-Reference.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для Blender: Примеры Шейдерных Нод - Soft8Soft">
+            <meta name="twitter:description" content="Information about Blender shader editor's features supported in Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/shader_nodes_reference_blender.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-principled-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-principled-bsdf-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-diffuse-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/chrome-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-glossy-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-emission.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-emission-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-transparent-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-transparent-bsdf-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-refraction-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-refraction-bsdf-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-glass-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-translucent-bsdf.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-add-shader.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/shader-mix-shader.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/output-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/output-material-output.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-geometry.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-attribute.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-texture-coordinate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-uv-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-fresnel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-layer-weight.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-rgb.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-camera-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-tangent.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/input-vertex-color.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-checker-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-image-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-gradient-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-voronoi-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-noise-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/texture-wave-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-bright-contrast.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-hue-saturation-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-mix.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-rgb-curves.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-invert.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/color-gamma.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-bump.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-mapping.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-normal.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-normal-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-curves.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-rotate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/vector-transform.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-clamp.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-color-ramp.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-map-range.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-shader-to-rgb.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-rgb-to-bw.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-math.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-vector-math.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/converter-combine-separate-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-specific-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-background.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-output.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-environment.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-environment-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-light-path.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-specific-nodes-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/shader-nodes-reference-blender/world-sky-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Примеры Шейдерных Нод / Blender</h1>
+
+    <p>
+    Verge3D поддерживает практически все ноды, содержащиеся в Blender Shader Editor. Однако для большинства веб-задач связанных с рендером в реальном времени ограниченного набора шейдерных нод будет достаточно. Ниже мы перечислим те из них, которые используются в демонстрационных проектах Verge3D.
+    </p>
+
+    <p>
+    Входы и выходы нод, которые поддерживаются Verge3D, помечены зелеными галочками, а те которые не поддерживаются красными крестиками.
+    </p>
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Shader_Nodes">Шейдерные Ноды</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Principled_BSDF">Principled BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Diffuse_BSDF">Diffuse BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Glossy_BSDF">Glossy BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Emission">Emission</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Transparent_BSDF">Transparent BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Refraction_BSDF">Refraction BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Glass_BSDF">Glass BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Translucent_BSDF">Translucent BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Add_Shader">Add Shader</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mix_Shader">Mix Shader</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Output_Nodes">Output Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Material_Output">Material Output</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Input_Nodes">Input Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Geometry">Geometry</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Attribute">Attribute</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Texture_Coordinate">Texture Coordinate</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#UV_Map">UV Map</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Fresnel">Fresnel</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Layer_Weight">Layer Weight</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB">RGB</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Value">Value</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Camera_Data">Camera Data</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Tangent">Tangent</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vertex_Color">Vertex Color</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Texture_Nodes">Texture Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Checker_Texture">Checker Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Image_Texture">Image Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Gradient_Texture">Gradient Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Voronoi_Texture">Voronoi Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Noise_Texture">Noise Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Wave_Texture">Wave Texture</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Color_Nodes">Color Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Bright_Contrast">Bright/Contrast</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Hue_Saturation_Value">Hue Saturation Value</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mix">Mix</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB_Curves">RGB Curves</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Invert">Invert</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Gamma">Gamma</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Nodes">Vector Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Bump">Bump</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mapping">Mapping</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Normal">Normal</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Normal_Map">Normal Map</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Curves">Vector Curves</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Rotate">Vector Rotate</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Transform">Vector Transform</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Converter_Nodes">Converter Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Clamp">Clamp</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Color_Ramp">Color Ramp</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Map_Range">Map Range</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Shader_to_RGB">Shader to RGB</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB_to_BW">RGB to BW</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Math_Node">Math</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Math">Vector Math</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Combine_Separate_Nodes">Combine/Separate Nodes</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#World_Specific_Nodes">World-Specific Nodes</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Background">Background</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#World_Output">World Output</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Environment_Texture">Environment Texture</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Light_Path">Light Path</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#Sky_Texture">Sky Texture</a></li></ul></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#performance_considerations">Оптимизация Производительности</a><ul><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#principled_bsdf_performance">Оптимизация Principled BSDF</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html#slow_procedural_textures">Медленные Процедурные Текстуры</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Shader_Nodes" id="Shader_Nodes" class="permalink">#</a></p>
+
+    <h2>Шейдерные Ноды</h2>
+
+    <p>
+    Эти ноды являются основными для любого материала, они отвечают за вычисление затенения поверхностей объектов. При создании проектов в Verge3D чаще всего используются нижеуказанные ноды: 
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Principled_BSDF" id="Principled_BSDF" class="permalink">#</a></p>
+
+    <h3>Principled BSDF</h3>
+
+    <p>
+    Данная универсальная нода реализует физически корректную визуализацию модели (также известую как PBR). Она отлично подходит для создания большинства материалов в Verge3D.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-principled-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Изменив всего несколько настроек в ноде <strong>Principled BSDF</strong>, можно достаточно быстро получить красивый материал. Для лучшего результата вы можете использовать ноду <a href="manual/ru/blender/Shader-Nodes-Reference.html#Environment_Texture">environment texture</a>, которая обеспечит отражения и освещение основанное на выбранном изображении, или просто используйте уже готовые настройки окружения из шаблонного проекта Cube.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-principled-bsdf-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Principled BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/principled.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Diffuse_BSDF" id="Diffuse_BSDF" class="permalink">#</a></p>
+
+    <h3>Diffuse BSDF</h3>
+
+    <p>
+    Данная нода реализует диффузный компонент PBR. Она используется для добавления в материал запечённой карты АО, а иногда в сочетании с нодой <strong>Glossy BSDF</strong> для большего контроля относительно <strong>Principled BSDF</strong>.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-diffuse-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    В следующем примере, <strong>Diffuse BSDF</strong> используется для того, чтобы добавить запечённую карту АО в материал хрома:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/chrome-material-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Diffuse BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/diffuse.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Glossy_BSDF" id="Glossy_BSDF" class="permalink">#</a></p>
+
+    <h3>Glossy BSDF</h3>
+
+    <p>
+    Данная нода реализует отражающий компонент PBR. Она используется исключительно для металлических поверхностей или иногда в сочетании с <strong>Diffuse BSDF</strong> для большего контроля.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-glossy-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Glossy BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/glossy.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Emission" id="Emission" class="permalink">#</a></p>
+
+    <h3>Emission</h3>
+
+    <p>
+    Данная нода используется, чтобы представлять неосвещенные (без тени) объекты. Также она используется для обозначения светящихся объектов в сочетании с постэффектом bloom в Verge3D.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-emission.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    В следующем упрощенном примере, <strong>Emission</strong> используется для незатенённых UI иконок:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-emission-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Emission</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/emission.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Transparent_BSDF" id="Transparent_BSDF" class="permalink">#</a></p>
+
+    <h3>Transparent BSDF</h3>
+
+    <p>
+    Данная нода реализует прозрачность материалов путём смешивания с другими шейдерными нодами, например с такими как <strong>Glossy BSDF</strong>.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-transparent-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+      Данная нода поддерживается частично. Она будет иметь большее сходство с окном просмотра Blender, если следовать следующим ограничениям:
+      <br>
+      - на входе <strong>Color</strong> должен быть строго белый цвет (R = 1, G = 1, B = 1)
+      <br>
+      - нода должна использоваться в самом конце дерева нод, т.е. подключаться перед <strong>Material Output</strong> через ноды <strong>Mix Shader</strong> или <strong>Add Shader</strong> (смотрите пример ниже) или непосредственно подключаться в разъем <strong>Surface</strong> <strong>Material Output</strong>
+    </p>
+
+    <p>
+    В упрощённом примере, указанном ниже, <strong>Transparent BSDF</strong> используется для материала стекла обтекателя:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-transparent-bsdf-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Transparent BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/transparent.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Refraction_BSDF" id="Refraction_BSDF" class="permalink">#</a></p>
+
+    <h3>Refraction BSDF</h3>
+
+    <p>
+    Данная нода отвечает за преломление материала, используя для этого карту окружения.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-refraction-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Ниже приведён простой пример использования:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-refraction-bsdf-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Refraction BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/refraction.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Glass_BSDF" id="Glass_BSDF" class="permalink">#</a></p>
+
+    <h3>Glass BSDF</h3>
+
+    <p>
+    Данная нода реализует PBR компоненты отражения и преломления.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-glass-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Чтобы узнать больше информации о ноде <strong>Glass BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/glass.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Translucent_BSDF" id="Translucent_BSDF" class="permalink">#</a></p>
+
+    <h3>Translucent BSDF</h3>
+
+    <p>
+    Данная нода отвечает за эффект прозрачности.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-translucent-bsdf.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    Чтобы узнать больше информации о ноде <strong>Translucent BSDF</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/dev/render/shader_nodes/shader/translucent.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Add_Shader" id="Add_Shader" class="permalink">#</a></p>
+
+    <h3>Add Shader</h3>
+
+    <p>
+    Данная нода складывает свойства двух шейдеров.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-add-shader.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Add Shader</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/add.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mix_Shader" id="Mix_Shader" class="permalink">#</a></p>
+
+    <h3>Mix Shader</h3>
+
+    <p>
+    Данная нода смешивает два шейдера.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/shader-mix-shader.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Mix Shader</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/mix.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Output_Nodes" id="Output_Nodes" class="permalink">#</a></p>
+
+    <h2>Output Nodes</h2>
+
+    <p>
+    Данные ноды являются конечной точкой шейдера. Для материалов типа <strong>Object</strong> доступны только нижеуказанные ноды (существует также специальная нода выхода для материалов типа <strong>World</strong>):
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/output-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Material_Output" id="Material_Output" class="permalink">#</a></p>
+
+    <h3>Material Output</h3>
+
+    <p>
+    Данная нода обеспечивает результат затенения поверхности.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/output-material-output.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Material Output</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/output/material.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Input_Nodes" id="Input_Nodes" class="permalink">#</a></p>
+
+    <h2>Input Nodes</h2>
+
+    <p>
+    Эти ноды обеспечивают разнообразную вводную информацию для шейдера. Те ноды, которые среди них используются чаще всего в работе с Verge3D, указаны ниже:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Geometry" id="Geometry" class="permalink">#</a></p>
+
+    <h3>Geometry</h3>
+
+    <p>
+    Эта нода обеспечивает геометрическую информацию (в мировом пространстве) для точки затенения. На данный момент Verge3D поддерживает только разъемы <strong>Position</strong>, <strong>Normal</strong>, <strong>Tangent</strong>, <strong>Incoming</strong> и <strong>Backfacing</strong>.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-geometry.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Geometry</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/geometry.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Attribute" id="Attribute" class="permalink">#</a></p>
+
+    <h3>Attribute</h3>
+
+    <p>
+    Данная нода извлекает из меша атрибуты. На данный момент Verge3D поддерживает только атрибут Vertex Color.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-attribute.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Attribute</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/attribute.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Texture_Coordinate" id="Texture_Coordinate" class="permalink">#</a></p>
+
+    <h3>Texture Coordinate</h3>
+
+    <p>
+    Данная нода обеспечивает развёртку или процедурно назначенные координаты для текстурирования. Verge3D использует первый слой UV развертки из списка слоёв доступных для меша.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-texture-coordinate.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Texture Coordinate</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/texture_coordinate.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#UV_Map" id="UV_Map" class="permalink">#</a></p>
+
+    <h3>UV Map</h3>
+
+    <p>
+    Данная нода извлекает определённый слой UV развертки из меша. В отличие от ноды <strong>Texture Coordinate</strong>, она работает с любым слоем UV развёртки доступных для меша.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-uv-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>UV Map</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/uv_map.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Fresnel" id="Fresnel" class="permalink">#</a></p>
+
+    <h3>Fresnel</h3>
+
+    <p>
+    Данная нода вычисляет соотношение отражённого и преломлённого света.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-fresnel.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Fresnel</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/fresnel.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Layer_Weight" id="Layer_Weight" class="permalink">#</a></p>
+
+    <h3>Layer Weight</h3>
+
+    <p>
+    Данная нода обеспечивает коэффицент смешения, который зависит от направления, в котором наблюдается поверхность объекта.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-layer-weight.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Layer Weight</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/layer_weight.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB" id="RGB" class="permalink">#</a></p>
+
+    <h3>RGB</h3>
+
+    <p>
+    Данная нода передаёт шейдеру значение цвета.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-rgb.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>RGB</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/rgb.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Value" id="Value" class="permalink">#</a></p>
+
+    <h3>Value</h3>
+
+    <p>
+    Данная нода передаёт шейдеру цифровое значение.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-value.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Value</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/value.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Camera_Data" id="Camera_Data" class="permalink">#</a></p>
+
+    <h3>Camera Data</h3>
+
+    <p>
+    Данная нода передаёт информацию о расположении объекта относительно камеры.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-camera-data.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Camera Data</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/camera_data.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Tangent" id="Tangent" class="permalink">#</a></p>
+
+    <h3>Tangent</h3>
+
+    <p>
+        Данная нода задаёт тангенциальные направления. Если в значении <strong>Direction Type</strong> выставлена
+        "UV Map", то вычисления касательных будет зависеть от активного слоя развертки выбранного меша, а не от слоя развертки указанного в самой ноде (этот параметр не поддерживается).
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-tangent.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Tangent</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/tangent.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vertex_Color" id="Vertex_Color" class="permalink">#</a></p>
+
+    <h3>Vertex Color</h3>
+
+    <p>
+        Данная нода передаёт значения вертексных цветов.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/input-vertex-color.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Vertex Color</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/vertex_color.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Texture_Nodes" id="Texture_Nodes" class="permalink">#</a></p>
+
+    <h2>Texture Nodes</h2>
+
+    <p>
+    С помощью данных нод в шейдер добавляются растровые изображения. При работе в Verge3D чаще всего используются следующие из них:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Checker_Texture" id="Checker_Texture" class="permalink">#</a></p>
+
+    <h3>Checker Texture</h3>
+
+    <p>
+        Данная нода предоставляет растровое изображение с шахматным паттерном.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-checker-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Checker Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/checker.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Image_Texture" id="Image_Texture" class="permalink">#</a></p>
+
+    <h3>Image Texture</h3>
+
+    <p>
+    Данная нода предоставляет файл изображения, для использования в шейдере в качестве текстуры.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-image-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: некоторые опции поддерживаются частично<br>
+        - режим интерполяции: <strong>Linear</strong>, <strong>Closest</strong><br>
+        - источник изображения: <strong>Single Image</strong>, <strong>Generated</strong><br>
+        - цветовое пространство: <strong>Linear</strong>, <strong>sRGB</strong><br>
+    </p>
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Image Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/image.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Gradient_Texture" id="Gradient_Texture" class="permalink">#</a></p>
+
+    <h3>Gradient Texture</h3>
+
+    <p>
+    Данная нода обеспечивает плавно меняющуюся цветовую гамму и её интенсивность.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-gradient-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Gradient Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/gradient.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Voronoi_Texture" id="Voronoi_Texture" class="permalink">#</a></p>
+
+    <h3>Voronoi Texture</h3>
+
+    <p>
+    Данная нода предоставляет растровое изображение с диаграммой Вороного.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-voronoi-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: поддерживается только <strong>3D</strong> измерение, что означает отсутствие поддержки ввода <strong>W</strong><br>
+    </p>
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Voronoi Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/voronoi.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Noise_Texture" id="Noise_Texture" class="permalink">#</a></p>
+
+    <h3>Noise Texture</h3>
+
+    <p>
+    Данная нода предоставляет растровое изображение с текстурой шумома.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-noise-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: поддерживается только <strong>3D</strong> измерение, что означает отсутствие поддержки ввода <strong>W</strong><br>
+    </p>
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Noise Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/noise.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Wave_Texture" id="Wave_Texture" class="permalink">#</a></p>
+
+    <h3>Wave Texture</h3>
+
+    <p>
+        Данная нода предоставляет растровое изображение с волнистым паттерном.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/texture-wave-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Wave Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/wave.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Color_Nodes" id="Color_Nodes" class="permalink">#</a></p>
+
+    <h2>Color Nodes</h2>
+
+    <p>
+    Данные ноды обеспечивают разнообразные взаимодействия с цветом. При работе в Verge3D чаще всего используются следующие из них:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Bright_Contrast" id="Bright_Contrast" class="permalink">#</a></p>
+
+    <h3>Bright/Contrast</h3>
+
+    <p>
+        Данная нода используется для изменения яркости и контраста у цветового входа.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-bright-contrast.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Bright/Contrast</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/bright_contrast.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Hue_Saturation_Value" id="Hue_Saturation_Value" class="permalink">#</a></p>
+
+    <h3>Hue Saturation Value</h3>
+
+    <p>
+        Данная нода используется для изменения HSV модели цветового входа.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-hue-saturation-value.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Hue Saturation Value</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/hue_saturation.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mix" id="Mix" class="permalink">#</a></p>
+
+    <h3>Mix</h3>
+
+    <p>
+    Данная нода смешивает два цветовых входа вместе, используя разнообразные режимы.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-mix.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Mix</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/mix.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB_Curves" id="RGB_Curves" class="permalink">#</a></p>
+
+    <h3>RGB Curves</h3>
+
+    <p>
+    Данная нода используется для коррекции цвета и регулировки уровней.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-rgb-curves.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>RGB Curves</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/rgb_curves.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Invert" id="Invert" class="permalink">#</a></p>
+
+    <h3>Invert</h3>
+
+    <p>
+    Данная нода инвертирует цветовой вход, создавая негатив.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-invert.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Invert</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/invert.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Gamma" id="Gamma" class="permalink">#</a></p>
+
+    <h3>Gamma</h3>
+
+    <p>
+    Данная нода применяет гамма-коррекцию к цветовому входу.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/color-gamma.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Gamma</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/color/gamma.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Nodes" id="Vector_Nodes" class="permalink">#</a></p>
+
+    <h2>Vector Nodes</h2>
+
+    <p>
+    Данные ноды обеспечивают разнообразные операции с векторами. При работе в Verge3D чаще всего используются следующие из них:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Bump" id="Bump" class="permalink">#</a></p>
+
+    <h3>Bump</h3>
+
+    <p>
+        Данная нода генерирует карту рельефа.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-bump.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Bump</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/bump.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Mapping" id="Mapping" class="permalink">#</a></p>
+
+    <h3>Mapping</h3>
+
+    <p>
+    Данная нода используется для изменения растрового изображения, включая перемещение, вращение и масштабирование.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-mapping.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Mapping</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/mapping.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Normal" id="Normal" class="permalink">#</a></p>
+
+    <h3>Normal</h3>
+
+    <p>
+        Данная нода используется для определения вектора нормалей и генерации скалярного произведения.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-normal.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Normal</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/normal.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Normal_Map" id="Normal_Map" class="permalink">#</a></p>
+
+    <h3>Normal Map</h3>
+
+    <p>
+    Данная нода определяет направление нормаей из растрового изображения, интерпретируемого как карта нормалей.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-normal-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: поддерживается только <strong>Tangent Space</strong><br>
+    </p>
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Normal Map</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/normal_map.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Curves" id="Vector_Curves" class="permalink">#</a></p>
+
+    <h3>Vector Curves</h3>
+
+    <p>
+        Данная нода используется для отображения входного вектора в виде кривой.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-curves.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Vector Curves</strong>, ознакомьтесь с руководством Blender, пройдя по следующей 
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/curves.html" target="_blank">link</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Rotate" id="Vector_Rotate" class="permalink">#</a></p>
+
+    <h3>Vector Rotate</h3>
+
+    <p>
+        Данная нода используется для вращения входного вектора вокруг точки опоры.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-rotate.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Vector Rotate</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/vector_rotate.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Transform" id="Vector_Transform" class="permalink">#</a></p>
+
+    <h3>Vector Transform</h3>
+
+    <p>
+    Данная нода используется для преобразования входного вектора между пространствами координат мира, камеры или объекта.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/vector-transform.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Vector Transform</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/vector/transform.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Converter_Nodes" id="Converter_Nodes" class="permalink">#</a></p>
+
+    <h2>Converter Nodes</h2>
+
+    <p>
+    Данные ноды предоставляют данные для преобразования между различными типами. При работе в Verge3D чаще всего используются следующие из них:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Clamp" id="Clamp" class="permalink">#</a></p>
+
+    <h3>Clamp</h3>
+
+    <p>
+        Данная нода фиксирует входное значение в указанном диапазоне.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-clamp.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: поддерживается только тип фиксации <strong>Min Max</strong><br>
+    </p>
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Clamp</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/clamp.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Color_Ramp" id="Color_Ramp" class="permalink">#</a></p>
+
+    <h3>Color Ramp</h3>
+
+    <p>
+    Данная нода преобразует значения в цвета, используя градиент.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-color-ramp.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: некоторые настройки поддерживаются частично<br>
+        - цветовой режим: поддерживается только <strong>RGB</strong><br>
+        - интерполяция: <strong>Linear</strong>, <strong>Constant</strong><br>
+    </p>
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Color Ramp</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/color_ramp.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Map_Range" id="Map_Range" class="permalink">#</a></p>
+
+    <h3>Map Range</h3>
+
+    <p>
+        Данная нода используется для изменения значения из одного диапазона в другой.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-map-range.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: поддерживается только <strong>Linear</strong> интерполяция<br>
+    </p>
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Map Range</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/map_range.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Shader_to_RGB" id="Shader_to_RGB" class="permalink">#</a></p>
+
+    <h3>Shader to RGB</h3>
+
+    <p>
+    Данная нода заменяет шейдерные вычисления простым цветом. Обычно используется для нефотореалистичного рендеринга.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-shader-to-rgb.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Shader to RGB</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/shader_to_rgb.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#RGB_to_BW" id="RGB_to_BW" class="permalink">#</a></p>
+
+    <h3>RGB to BW</h3>
+
+    <p>
+    Данная нода преобразует цвет в чёрно-белое изображения, используя яркость.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-rgb-to-bw.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>RGB to BW</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/rgb_to_bw.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Math_Node" id="Math_Node" class="permalink">#</a></p>
+
+    <h3>Math</h3>
+
+    <p>
+    Данная нода предоставляет математические вычисления с цифровыми значениями:
+    </p>
+
+    <ul>
+        <li>
+            Add, Subtract, Multiply, Divide, Multiply and Add, Power, Logarithm,
+            Square Root, Inverse Square Root, Absolute
+        </li>
+        <li>
+            Minimum, Maximum, Less Than, Greater Than, Sign, Compare,
+            Smooth Minimum, Smooth Maximum
+        </li>
+        <li>
+            Round, Floor, Ceil, Truncate, Fraction, Modulo, Wrap, Snap,
+            Ping-pong
+        </li>
+        <li>
+            Sine, Cosine, Tangent, Arcsine, Arccosine, Arctangent,
+            2-Argument Arctangent, Hyperbolic Sine, Hyperbolic Cosine,
+            Hyperbolic Tangent
+        </li>
+        <li>
+            Convert to Radians, Convert to Degrees
+        </li>
+    </ul>
+
+    <img src="files/shader-nodes-reference-blender/converter-math.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Math</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/math.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Vector_Math" id="Vector_Math" class="permalink">#</a></p>
+
+    <h3>Vector Math</h3>
+
+    <p>
+    Данная нода выполняет операции с векторами:
+    </p>
+
+    <ul>
+        <li>
+            Add, Subtract, Multiply, Divide
+        </li>
+        <li>
+            Cross Product, Project, Reflect, Dot Product
+        </li>
+        <li>
+            Distance, Length, Scale, Normalize
+        </li>
+        <li>
+            Absolute, Minimum, Maximum, Floor, Ceil, Fraction, Modulo, Wrap,
+            Snap
+        </li>
+        <li>
+            Sine, Cosine, Tangent
+        </li>
+    </ul>
+
+    <img src="files/shader-nodes-reference-blender/converter-vector-math.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Vector Math</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/vector_math.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Combine_Separate_Nodes" id="Combine_Separate_Nodes" class="permalink">#</a></p>
+
+    <h3>Combine/Separate Nodes</h3>
+
+    <p>
+    Данные ноды объединяют цвет/вектор из отдельных каналов или разделяют их на отдельные каналы.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/converter-combine-separate-nodes.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о нодах <strong>Combine</strong> и <strong>Separate Nodes</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/converter/combine_separate.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#World_Specific_Nodes" id="World_Specific_Nodes" class="permalink">#</a></p>
+
+    <h2>World-Specific Nodes</h2>
+
+    <p>
+        These nodes are either available only for <strong>World</strong> materials
+        (<strong>Background</strong>, <strong>World Output</strong>), or typically used with <strong>World</strong> materials
+        (<strong>Environment Texture</strong>, <strong>Light Path</strong>, <strong>Sky Texture</strong>):
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-specific-nodes.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Background" id="Background" class="permalink">#</a></p>
+
+    <h3>Background</h3>
+
+    <p>
+    Данная нода используется для настройки фонового цвета, а также для освещения и отражений на основе изображения. Она редко используется сама по себе, потому что обеспечиват только монотонный цвет. Вы можете сочетать её с <a href="manual/ru/blender/Shader-Nodes-Reference.html#Environment_Texture">environment texture</a> для наилучшего результата.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-background.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Background</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/shader/background.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#World_Output" id="World_Output" class="permalink">#</a></p>
+
+    <h3>World Output</h3>
+
+    <p>
+    Данная нода является конечной точкой материалов типа <strong>World</strong>. Она представляет результаты затенения окружения.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-output.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>World Output</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/output/world.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Environment_Texture" id="Environment_Texture" class="permalink">#</a></p>
+
+    <h3>Environment Texture</h3>
+
+    <p>
+    Данная нода предоставляет файл изображения, который будет использован в шейдере в качестве текстуры среды. Изображения должны быть равноугольной проекцией и, как правило, HDR формата, хотя форматы JPEG и PNG также можно использовать.
+    </p>
+
+    <p class="note">
+    Шаблон <strong>default cube</strong> уже содержит в себе HDR изображение, которое вы можете использовать в своих проектах.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-environment.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: некоторые опции поддерживаются частично<br>
+        - режим интерполяции: <strong>Linear</strong>, <strong>Closest</strong><br>
+        - источник изображения: <strong>Single Image</strong>, <strong>Generated</strong><br>
+        - цветовое пространство: <strong>Linear</strong>, <strong>sRGB</strong><br>
+    </p>
+
+    <p>
+    На примере, указанном ниже, изображение формата JPEG одновременно обеспечивает освещение, отражения и фон на основе изображения.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-environment-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Environment Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/environment.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Light_Path" id="Light_Path" class="permalink">#</a></p>
+
+    <h3>Light Path</h3>
+
+    <p>
+    Данная нода предоставляет шейдеру различную информацию логического типа. Для того, чтобы контролировать видимость <a href="manual/ru/blender/Shader-Nodes-Reference.html#Environment_Texture">environment texture</a> на фоне, в Verge3D поддерживается выход <strong>Is Camera Ray</strong>.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-light-path.jpg" class="centered" style="max-width: 1000px">
+
+
+    <p>
+    Следующая типичная настройка используется для обеспечения освещения окружающей среды и отражений сцены, но при этом просто отображает белый сплошной цвет на заднем плане:
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-specific-nodes-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p></p>
+    Чтобы узнать больше информации о ноде <strong>Light Path</strong>, ознакомьтесь с руководством Blender, пройдя по следующей <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/input/light_path.html" target="_blank">ссылке</a>.
+    <p></p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#Sky_Texture" id="Sky_Texture" class="permalink">#</a></p>
+
+    <h3>Sky Texture</h3>
+
+    <p>
+        Данная нода предоставляет процедурно сгенерированную текстуру небосвода.
+    </p>
+
+    <img src="files/shader-nodes-reference-blender/world-sky-texture.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+        ПРИМЕЧАНИЕ: данная нода поддерживается только в Cycles и не работает с движком Eevee.
+    </p>
+
+    <p>
+        Чтобы узнать больше информации о ноде <strong>Sky Texture</strong>, ознакомьтесь с руководством Blender, пройдя по следующей
+        <a href="https://docs.blender.org/manual/ru/latest/render/shader_nodes/textures/sky.html" target="_blank">ссылке</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#performance_considerations" id="performance_considerations" class="permalink">#</a></p>
+
+    <h2>Оптимизация Производительности</h2>
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#principled_bsdf_performance" id="principled_bsdf_performance" class="permalink">#</a></p>
+
+    <h3>Оптимизация Principled BSDF</h3>
+
+    <p>Несмотря на то, что <strong>Principled BSDF</strong> является наиболее часто используемой нодой, она требует большое количество вычислительной мощности вашего графического процессора и замедляет загрузку приложений. Это становится особенно актуально, когда в вашей сцене много материалов созданных на основе <strong>Principled BSDF</strong></p>
+
+    <p>Есть несколько способов оптимизировать материалы основанные на <strong>Principled BSDF</strong>:</p>
+
+    <ul>
+      <li>Замените <strong>Principled BSDF</strong> на <strong>Diffuse BSDF</strong> для матовых, неметаллических поверхностей.</li>
+      <li>Замените <strong>Principled BSDF</strong> на <strong>Glossy BSDF</strong> для металлических материалов.</li>
+      <li>Замените <strong>Principled BSDF</strong> на <strong>Emission</strong> если вы визуализируете материалы, в которых важен только цвет.</li>
+      <li>Настройте свойства <a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties">Cubemap Size</a> или <a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties">IBL Environment Mode</a> для улучшения характеристик освещения окружающей среды.</li>
+      <li>Пересоберите шейдер в совместимый с <a href="manual/ru/blender/GLTF-Materials.html">glTF 2.0 model</a>.</li>
+    </ul>
+
+    <p class="note">Имейте в виду, что последние два метода приведут к тому, что ваши материалы будут выглядеть по-другому по сравнению с окном просмотра Blender.</p>
+
+
+    <p><a href="manual/ru/blender/Shader-Nodes-Reference.html#slow_procedural_textures" id="slow_procedural_textures" class="permalink">#</a></p>
+
+    <h3>Медленные Процедурные Текстуры</h3>
+
+    <p>Существуют процедурные текстуры, которые снижают производительность:</p>
+
+    <ul>
+      <li><strong>Noise Texture</strong>, особенно с высоким значеним <strong>Detail</strong> (16 приведёт к сбою в производительности).</li>
+      <li><strong>Voronoi Texture</strong> используйте параметр <strong>F1</strong>, так как он работает намного лучше, чем любой другой.</li>
+    </ul>
+
+    <p>Вы можете запечь данные текстуры в растровые изображения и использовать ноду <strong>Image Texture</strong>, чтобы достигнуть лучшей производительности.</p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

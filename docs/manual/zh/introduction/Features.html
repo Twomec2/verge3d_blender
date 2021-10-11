@@ -1,0 +1,687 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>Verge3D功能特性 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Verge3D工具包的功能特性清单。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid #2194CE;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: left;
+      min-width: 180px;
+      font-size: 16px;
+    }
+
+    table {
+      margin-bottom: 20px;
+    }
+
+    th {
+      text-align: center;
+      text-decoration: none;
+      color: #0b7188;
+      font-size: 17px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: normal;
+    }
+
+    td ul {
+      margin: 10px 0px;
+      padding-left: 20px;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    td.centered {
+      text-align: center;
+    }
+  </style>
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/Features.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D功能特性 - Soft8Soft">
+            <meta property="og:description" content="Verge3D工具包的功能特性清单。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/Features.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D功能特性 - Soft8Soft">
+            <meta name="twitter:description" content="Verge3D工具包的功能特性清单。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+    <h1>Verge3D功能特性</h1>
+
+    <p>以下是Verge3D主要的特点与功能列表：</p>
+	
+    <iframe class="video-480p" src="https://player.bilibili.com/player.html?aid=44196731&amp;bvid=BV17b411Y7Jm&amp;as_wide=0&amp;page=1&amp;high_quality=1&amp;danmaku=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+
+    <h2>内容</h2>
+
+    <ul>
+      <li><a href="manual/zh/introduction/Features.html#feature_dcc">内容创建</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_materials">材质系统</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_lighting">灯光</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_shadows">阴影</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_app_management">应用管理器</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_animation">动画</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_visual_scripting">可视化编程</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_programming">代码编程</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_publishing">应用发布</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_ui">UI和HTML布局</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_networking">服务器端功能与网络服务</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_postprocessing">后期处理效果</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_vr">虚拟现实</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_ar">增强现实</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_shaders">着色器</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_physics">物理系统</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_audio">音频</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_video">视频</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_material_libraries">材质库</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_demos">演示与范例</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_import_formats">导入格式</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_export_formats">导出格式</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_camera_controls">摄影机控制</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_3d_primitives">3D图元</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_requirements">系统要求</a></li>
+      <li><a href="manual/zh/introduction/Features.html#feature_dev_requirements">开发系统要求</a></li>
+    </ul>
+
+    <h2>功能和需求</h2>
+
+    <table style="width:100%">
+
+      <tbody><tr id="feature_dcc">
+        <th rowspan="3">内容创建</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+
+      <tr>
+        <td class="centered">Blender 2.80-2.93</td>
+        <td class="centered">Autodesk 3ds Max 2019-2022</td>
+        <td class="centered">Autodesk Maya 2018-2022</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">此外，您可以使用任何支持导出为glTF 2.0格式的建模套件，以及任何支持导出这 <a href="manual/zh/introduction/Features.html#feature_import_formats">20余种格式</a> 包括FBX，OBJ，COLLADA和3DS等）的3D图形软件。</td>
+      </tr>
+
+      <tr id="feature_materials">
+        <th rowspan="2">材质系统</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li><a href="manual/zh/blender/Material-System.html#Eevee">Eevee着色器节点</a></li>
+            <li><a href="manual/zh/blender/Material-System.html#Cycles">Cycles着色器节点</a></li>
+            <li><a href="manual/zh/blender/Material-System.html#glTF_compliant_PBR">符合glTF标准的PBR材质</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>以ART渲染器为参考的<a href="manual/zh/max/Material-System.html#Physical">物理材质</a></li>
+            <li>以扫描线渲染器为参考的<a href="manual/zh/max/Material-System.html#Standard">标准材质</a></li>
+            <li><a href="manual/zh/max/Material-System.html#Physical_glTF_compliant">符合glTF标准的物理材质</a></li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>基于Arnold渲染器的 <a href="manual/zh/maya/Materials.html#aiStandardSurface">aiStandardSurface</a> 着色器</li>
+            <li><a href="manual/zh/maya/Materials.html#StandardSurface">标准表面</a> (仅限Maya 2020+)</li>
+            <li>与PBR材质近似的 <a href="manual/zh/maya/Materials.html#Lambert">Lambert, Phong, Blinn, StingrayPBS</a></li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_lighting">
+        <th rowspan="3">灯光</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>灯光：<ul>
+                <li>点光源</li>
+                <li>太阳光</li>
+                <li>聚光灯</li>
+                <li>面光（正方形或矩形）</li>
+              </ul>
+            </li>
+            <li>通过世界着色节点实现的基于图像的照明</li>
+            <li>立方体反射光照探头</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>光度学灯光(点或矩形)：<ul>
+                <li>自由式</li>
+                <li>目标式</li>
+              </ul>
+            </li>
+            <li>标准灯光：<ul>
+                <li>目标聚光灯</li>
+                <li>自由聚光灯</li>
+                <li>目标平行光</li>
+                <li>自由平行光</li>
+                <li>泛光灯</li>
+              </ul>
+            </li>
+            <li>通过环境贴图实现的基于图像的照明</li>
+            <li>立方体反射光照探头</li>
+        </ul></td>
+        <td>
+          <ul>
+            <li>灯光：<ul>
+                <li>环境光</li>
+                <li>平行光</li>
+                <li>点光源</li>
+                <li>聚光灯</li>
+                <li>区域光</li>
+                <li>Arnold的aiAreaLight</li>
+              </ul>
+            </li>
+            <li>通过aiSkyDomeLight（球天灯光）实现的基于图像的照明
+            </li><li>立方体反射光照探头</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">此外，您还可以通过Java脚本创建矩形和半球灯。</td>
+      </tr>
+
+      <tr id="feature_shadows">
+        <th>阴影</th>
+        <td colspan="3">Verge3D仅支持平行光、点光源和聚光灯的投射阴影。<ul>
+            <li>基本的非平滑阴影。</li>
+            <li>双线性阴影。</li>
+            <li>PCF阴影。</li>
+            <li>双线性PCF阴影。</li>
+            <li>泊松碟PCF阴影。</li>
+            <li>ESM阴影。</li>
+            <li>VSM阴影（通过JavaScript代码）。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_app_management">
+        <th>应用管理器</th>
+        <td colspan="3">App Manager是一款轻量化的应用管理工具，可做到：<ul>
+            <li>根据预置模板创建新的应用。</li>
+            <li>运行应用及3D建模套件（Blender, 3ds Max, Maya）。</li>
+            <li>编辑和运行拼图逻辑。</li>
+            <li>升级应用到Verge3D的新版本。</li>
+            <li>发布应用到Verge3D Network。</li>
+            <li>管理授权码</li>
+            <li>访问Verge3D文档及支持渠道。</li>
+          </ul>您可以直接从Blender，3ds Max或Maya轻松启动App Manager。</td>
+      </tr>
+
+      <tr id="feature_animation">
+        <th rowspan="2">动画</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>由骨骼驱动的动画。</li>
+            <li>对象变化动画，包括位移、旋转和比例。</li>
+            <li>RGB/值节点动画。</li>
+            <li>形态键（变形）动画。形态键或变形目标动画。</li>
+            <li>基于 <a href="manual/zh/puzzles/Animation.html#animate_param">animate param(动画参数)</a> 拼图的高级程序动画。</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>由骨骼驱动的动画。</li>
+            <li>对象变化动画，包括位移、旋转和比例。</li>
+            <li>材质控制器动画。支持浮点与颜色参数。</li>
+            <li>基于 <a href="manual/zh/puzzles/Animation.html#animate_param">animate param(动画参数)</a> 拼图的高级程序动画。</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>由骨骼驱动的动画。</li>
+            <li>对象变化动画，包括位移、旋转和比例。</li>
+            <li>材质参数动画。</li>
+            <li>混合形状动画，也称之为融合变形动画。</li>
+            <li>基于 <a href="manual/zh/puzzles/Animation.html#animate_param">animate param(动画参数)</a> 拼图的高级程序动画。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_visual_scripting">
+        <th>可视化编程</th>
+        <td colspan="3"><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html">Verge3D Puzzles</a> 是一种可视化逻辑编程环境，可以用拖拽的方式快速创建互动场景。它具有以下功能：<ul>
+            <li>处理用户事件，例如鼠标单击/触摸，悬停和拖动。</li>
+            <li>检索场景对象、动画和材质。</li>
+            <li>移动、旋转、缩放3D对象，获取对象之间的距离。</li>
+            <li>显示或隐藏对象。</li>
+            <li>改变对象的层级结构。</li>
+            <li>向场景添加二维文本注释（billboards，广告牌）。</li>
+            <li>更改材质参数，加载纹理。</li>
+            <li>控制动画。</li>
+            <li>移动、旋转摄影机。设置活动摄影机。</li>
+            <li>控制光源及环境照明参数。</li>
+            <li>在运行时中加载和导出资产。</li>
+            <li>通过网络以JSON、CSV或文本格式上传、下载数据。</li>
+            <li>加载用户图像。</li>
+            <li>支持撤销、重做功能。</li>
+            <li>撰写和发送客户订单。</li>
+            <li>检测客户端性能，例如浏览器、操作系统等。</li>
+            <li>执行基于计时器的事件。</li>
+            <li>初始化增强现实和虚拟现实会话。</li>
+            <li>管理已加载的HTML与CSS布局。</li>
+            <li>播放音频和视频。</li>
+            <li>模拟物理环境。</li>
+            <li>启用后期处理效果及雾效。</li>
+            <li>管理应用逻辑与数据。</li>
+            <li>执行数学运算。</li>
+            <li>启用线框渲染。</li>
+            <li>运行自定义JavaScript代码。</li>
+          </ul>
+          <p>除此之外，您还可以通过 <a href="manual/zh/puzzles/Plugins.html">Puzzles plug-ins(拼图插件系统)</a> 创建自己的的拼图模块。</p>
+        </td>
+      </tr>
+
+      <tr id="feature_programming">
+        <th>代码编程</th>
+        <td colspan="3">
+          <p>可以通过修改应用源代码或集成代码到拼图的方式， <a href="manual/zh/introduction/Using-JavaScript.html">用JavaScript添加</a> 应用功能。</p>
+          <p>Verge3D基于开源库Three.js构建，并通过 v3d 或 THREE 命名空间公开其API。因此，可以在Verge3D复用任何现有的Three.js代码。</p>
+        </td>
+      </tr>
+
+      <tr id="feature_publishing">
+        <th>应用发布</th>
+        <td colspan="3">您可以通过以下方式发布内容：<ul>
+            <li>您自己的服务器。</li>
+            <li>任意网络托管服务商（例如GoDaddy，DigitalOcean，Amazon AWS，腾讯云，阿里云等）。</li>
+            <li><a href="https://www.soft8soft.com/verge3d-network/" target="_blank">Verge3D Network</a>，Verge3D云托管服务。中国大陆地区访问受限，请咨询我们的中国区技术代表咨询解决方案。
+            </li>
+            <li>通过 <a href="manual/zh/introduction/Creating-Mobile-Apps.html">打包</a> Verge3D app为移动应用的方式，发布到Google Play应用商店或Apple App Store。</li>
+            <li>使用 <a href="manual/zh/introduction/Creating-Desktop-Apps.html">Electron</a> 框架构建的独立桌面应用或移动应用。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ui">
+        <th>UI和HTML布局</th>
+        <td colspan="3">使用外部所见即所得（WYSIWYG）编辑器创建的界面布局可以 <a href="manual/zh/introduction/HTML-based-user-interfaces.html">与Puzzles链接</a>，以触发对浏览器中渲染的3D场景的更改，反之亦然。<br>我们推荐使用 <a href="https://webflow.grsm.io/3441118" target="_blank">Webflow</a> 网站编辑器的完全无代码工作流程。</td>
+      </tr>
+
+      <tr id="feature_networking">
+        <th>服务器端功能与网络服务</th>
+        <td colspan="3">WordPress是当前网络中最为流行的内容管理系统（CMS），Verge3D附带了一个 <a href="manual/zh/introduction/Wordpress-Plugin.html">WordPress插件</a> ，包含了以下功能：<ul>
+            <li>应用托管和发布（嵌入）。</li>
+            <li>持久文件存储。</li>
+            <li>完全可定制的电子商务系统，用于处理客户订单。</li>
+          </ul>除此之外，Puzzles可视化逻辑编辑器还支持基于网络以JSON、CSV和纯文本格式发送检索数据块。</td>
+      </tr>
+
+      <tr id="feature_postprocessing">
+        <th>后期处理效果</th>
+        <td colspan="3">以下效果可以 <a href="manual/zh/puzzles/Postprocessing.html">通过拼图启用</a>：
+          <ul>
+            <li>环境遮蔽(AO)</li>
+            <li>辉光(Bloom)</li>
+            <li>亮度/对比度(Bright/Contrast)</li>
+            <li>景深(Depth of Field)</li>
+            <li>灰度(Grayscale)</li>
+            <li>轮廓(outline)</li>
+            <li>屏幕空间反射与折射(SSR)</li>
+            <li>超采样抗锯齿(SSAA)</li>
+          </ul>
+          此外，可以用JavaScript启用以下效果：
+          <ul>
+            <li>自适应色调映射(Adaptive Tone Mapping)</li>
+            <li>曙暮晖(Crepuscular Rays)，也被称之为云隙光(Sunbeams)或上帝之光(God Rays)</li>
+            <li>增强型亚像素形态抗锯齿（SMAA, Subpixel Morphological Anti-Aliasing）</li>
+            <li>毛刺(Glitch)</li>
+            <li>图像淡入淡出(Image Crossfading)</li>
+            <li>图像遮罩(Image Masking)</li>
+            <li>动态模糊(Motion Blur)</li>
+            <li>像素画图像(Pixelated Imagery)</li>
+            <li>索贝尔滤波器(Sobel Filter)</li>
+            <li>随机采样抗锯齿(TAA, Temporal Anti-Aliasing)</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_vr">
+        <th>虚拟现实</th>
+        <td colspan="3">
+          <p>支持以下 <a href="manual/zh/introduction/AR-VR-development.html">虚拟现实技术</a>：</p>
+          <ul>
+            <li>WebXR</li>
+            <li>WebVR——通过兼容性模块。</li>
+            <li>Cardboard——在上不支持WebXR/WebVR的移动设备上。</li>
+            <li>3D立体图——基于立体摄影机实现，可使用JavaScript激活。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ar">
+        <th>增强现实</th>
+        <td colspan="3">可运行于已经安装了ARCore（面向AR的Google Play服务）的Android系统的Chrome浏览器中，或iOS版本的WebXR Viewer应用中。</td>
+      </tr>
+
+      <tr id="feature_shaders">
+        <th>着色器</th>
+        <td colspan="3">可以使用OpenGL ES着色语言2.0（WebGL 1.0）或3.0（WebGL 2.0）添加自定义着色器。</td>
+      </tr>
+
+      <tr id="feature_physics">
+        <th>物理系统</th>
+        <td colspan="3"><a href="manual/zh/introduction/Physics-Guide.html">Physics module(物理模块)</a> 可实现碰撞检测、动态移动对象、角色和车辆的支持，弹簧，绳索和布料模拟等。从2.11版开始，可直接通过拼图创建和控制物理仿真了，无需编程。</td>
+      </tr>
+
+      <tr id="feature_audio">
+        <th>音频</th>
+        <td colspan="3">Verge3D包括以下音频子系统（通过 <a href="manual/zh/puzzles/Sound.html">拼图</a> 或JavaScript控制）。<ul>
+            <li>基于HTML5的音频，用于播放时间较长的背景音乐。</li>
+            <li>基于WebAudio的音频，以低延迟播放短的音频样本。</li>
+            <li>基本合成器，能够演奏100多种乐器、鼓和MIDI文件。</li>
+          </ul>此外，你可以使用JavaScript API对位置性音源和其他复杂的音频效果进行编程。</td>
+      </tr>
+
+      <tr id="feature_video">
+        <th>视频</th>
+        <td colspan="3">可通过 <a href="manual/zh/puzzles/Sound.html">video(视频)</a> 拼图或JavaScript指定和播放视频纹理。</td>
+      </tr>
+
+      <tr id="feature_material_libraries">
+        <th rowspan="2">材质库</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Blender增强材质包</li>
+            <li>Blender珠宝材质包</li>
+          </ul>
+          <p>在 <a href="manual/zh/blender/Material-Library.html">这里</a> 查看如何使用Blender材质包。</p>
+        </td>
+        <td>
+          <ul>
+            <li>3ds Max增强材质包</li>
+          </ul>
+          <p>在 <a href="manual/zh/max/Material-Library.html">这里</a> 查看如何使用Max材质包。</p>
+        </td>
+        <td>
+          <ul>
+            <li>Maya增强材质包</li>
+          </ul>
+          <p>在 <a href="manual/zh/maya/Material-Library.html">这里</a> 查看如何使用Maya材质包。</p>
+        </td>
+      </tr>
+
+      <tr id="feature_demos">
+        <th>演示与范例</th>
+        <td colspan="3">超过150个编码示例和一系列功能齐全的演示应用，包括:<ul>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/arcade_racing/arcade_racing.html" target="_blank">Arcade Racing</a> — 街机赛车：一个复古风格的赛车游戏，演示了先进的物理性能。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/augmented_reality/augmented_reality.html" target="_blank">Augmented Reality</a> — 增强现实：演示了WebAR的基本功能。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/clipping_planes/clipping_planes.html" target="_blank">Clipping Planes</a> — 剪切平面：展示了如何将剪切平面（又称横截面或平面剖面）用于工程可视化和科学可视化。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/custom_image/custom_image.html" target="_blank">Custom Image</a> — 自定义图片：一个虚拟相框，允许上传、存储和分享图片。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/global_illumination/global_illumination.html" target="_blank">Global Illumination</a> — 全局照明：一个具有高级照明效果的室内演示（如动态立方体反射光照探头和区域光）。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/farmers_journey/index.html" target="_blank">Farmer's Journey</a> — 农民的旅行： 无编程制作的浏览器游戏。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/industrial_robot/index.html" target="_blank">Industrial Robot VR</a> — 工业机器人：具有VR和AR特性的交互式机器人展示。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/jewelry_configurator/index.html" target="_blank">Jewelry Configurator</a> — 珠宝配置器：高级珠宝定制电商系统演示。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/load_unload/load_unload.html" target="_blank">Load Unload</a> — 加载/卸载：资产动态加载案例。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/parametric_models/index.html" target="_blank">Parametric Models</a> — 参数化模型：可执行模型参数化变换的3D配置器。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/pbr/pbr.html" target="_blank">PBR</a> — glTF 2.0兼容性材质演示案例。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/recliner/index.html" target="_blank">Recliner</a> — 可调节沙发：3D配置器，一个开箱即用的电子商务案例。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/player/player.html?load=../applications/ring/ring.gltf" target="_blank">Ring</a> — 戒指：简单的3D戒指定制应用，演示动态报价与在线下单功能。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/scooter/index.html" target="_blank">Scooter</a> — 电动车：先进的3D配置器，具有真实质感的PBR材质，可组合出上百万的配置结果。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/scroll_animation/scroll_animation.html" target="_blank">Scroll Animation</a> — 滚动动画：通过触发3D模型动画实现网页滚动时的动态交互效果。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/simple_configurator/simple_configurator.html" target="_blank">Simple Configurator</a> — 简单配置器：电商基础教程案例。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/spinner/spinner.html" target="_blank">Spinner</a> — 指尖陀螺：简单的产品演示，可配置材质和触发动画，拼图变量可向WooCommerce电商插件发送数据。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/swiss_army_knife/index.html" target="_blank">Swiss Army Knife</a> — 瑞士军刀：电子商务的高级功能演示案例与教程。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/teapot_heater/index.html" target="_blank">Teapot Heater</a> — 茶壶加热器：使用拼图制作的精美的3D交互动画。</li>
+            <li><a href="https://cdn.soft8soft.com/demo/applications/video_texture/video_texture.html" target="_blank">Video Texture</a> — 视频纹理效果演示。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_import_formats">
+        <th>导入格式</th>
+        <td colspan="3">
+          <p>除了glTF 2.0，您还以导入以下格式的文件。</p>
+          <p>几何体/材质：</p>
+          <ul>
+            <li>3DS - Autodesk 3ds Max早期文件格式。</li>
+            <li>3MF - 制造业3D格式。</li>
+            <li>AMF - 积层造型过程文件格式。</li>
+            <li>AWD - 用于Away3D引擎。</li>
+            <li>babylon - 用于Babylon.js引擎。</li>
+            <li>COLLADA</li>
+            <li>CTM - OpenCTM 格式。</li>
+            <li>FBX</li>
+            <li>glTF 1.0 - 早期格式，请改用glTF 2.0。</li>
+            <li>KMZ - Keyhole标记语言，包含主KML文件及多个用ZIP格式打包成一个单元的支持文件。</li>
+            <li>OBJ/MTL</li>
+            <li>PCD - 3D点云数据格式。</li>
+            <li>PDB - 蛋白质数据库格式。</li>
+            <li>PlayCanvas - PlayCanvas引擎中使用的基于JSON的数据格式。</li>
+            <li>PLY - 多边形文件格式，用于存储来自3D扫描仪的三维数据。</li>
+            <li>PRWM - 打包的原始WebGL模型。</li>
+            <li>STL - 立体光刻数据格式，源自3D Systems的CAD软件。</li>
+            <li>SEA3D - 一种用于游戏开发的开源格式。</li>
+            <li>VRML - 虚拟现实建模语言。</li>
+            <li>VRM - 由VRM联盟制定的用于虚拟偶像的文件格式，基于glTF。</li>
+            <li>VTK - 可视化工具包格式。</li>
+            <li>X - DirectX文件格式。</li>
+          </ul>
+          <p>动画：</p>
+          <ul>
+            <li>BVH - BioVision等设备对人体运动进行捕获后产生的角色动画文件格式。</li>
+            <li>MD2 - 用于Quake II引擎。</li>
+            <li>MMD - MikuMikuDance的文件格式。</li>
+          </ul>
+          <p>图像：</p>
+          <ul>
+            <li>DDS - DirectX纹理压缩格式。</li>
+            <li>EXR - OpenEXR，高动态范围栅格文件格式。</li>
+            <li>PVR - DirectX纹理压缩格式。</li>
+            <li>HDR - RGBE 或 Radiance HDR。</li>
+            <li>KTX - Khronos的纹理格式。</li>
+            <li>NRRD - “接近原始栅格数据”格式。</li>
+            <li>SVG</li>
+            <li>TGA - Truevision TGA光栅图形格式。</li>
+            <li>TTF</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_export_formats">
+        <th>导出格式</th>
+        <td colspan="3">除glTF 2.0外，你还可以导出场景到以下格式：<ul>
+            <li>COLLADA</li>
+            <li>MMD</li>
+            <li>OBJ</li>
+            <li>PLY</li>
+            <li>STL</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_camera_controls">
+        <th>摄影机控制</th>
+        <td colspan="3">下列是Verge3D提供的开箱即用的摄影机控制模式：<ul>
+            <li>Orbit Controls - 视轨控制：目标3D视角。</li>
+            <li>Flying Controls - 飞行控制：自由飞行视角。</li>
+            <li>First-Person Controls - 第一人称控制/视角。</li>
+            <li>Virtual Reality Controls - 虚拟现实控制/视角。</li>
+          </ul>下列是可以通过JavaScript启用的摄影机控制模式：<ul>
+            <li>Flyover Controls - 飞掠控制</li>
+            <li>Pointerlock Controls - 指针锁定控制</li>
+            <li>Device Orientation Controls - 设备定向控制：实现由陀螺仪控制的的视图。</li>
+            <li>Map Controls - hovering camera - 地图控制：悬停摄影机。</li>
+            <li>Trackball Controls - 轨迹球控制。</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_3d_primitives">
+        <th>3D图元</th>
+        <td colspan="3">你可以加载从任何三维软件导出的几何图像。除此之外，还可以使用JavaScript创建以下3D基本几何体：<ul>
+            <li>Circle - 圆</li>
+            <li>Cone - 圆锥</li>
+            <li>Convex Hull - 凸壳</li>
+            <li>Cube (Box) - 立方体</li>
+            <li>Cylinder - 圆柱</li>
+            <li>Dodecahedron - 十二面体</li>
+            <li>Extruded Shape - 挤压成型</li>
+            <li>Icosahedron - 二十面体</li>
+            <li>Font - 从 <em>typeface.json</em> 生成的程序文本。</li>
+            <li>Lathe (Vase) - 车削形（花瓶）：一个轴对称的三维实体。</li>
+            <li>Line - 线</li>
+            <li>NURBS - NURBS曲线</li>
+            <li>Octahedron - 八面体</li>
+            <li>Plane - 平面</li>
+            <li>Ring - 环形</li>
+            <li>Sphere - 球体</li>
+            <li>Spline Curve - 样条曲线</li>
+            <li>Tetrahedron - 四面体（金字塔）</li>
+            <li>Polyhedron - 多面体</li>
+            <li>Text - 文本</li>
+            <li>Torus - 环面</li>
+            <li>Tube - 管</li>
+            <li>Utah Teapot - 犹他茶壶：CG世界中最著名的那只茶壶。</li>
+            <li>Wireframe - 线框</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_requirements">
+        <th>系统要求</th>
+        <td colspan="3">Verge3D应用可以在任何能够运行支持WebGL技术的web浏览器的系统上启动。请参阅 <a href="https://www.soft8soft.com/webgl-supported-browsers-and-troubleshooting/" target="_blank">本页</a> 了解支持的浏览器列表。</td>
+      </tr>
+
+      <tr id="feature_dev_requirements">
+        <th rowspan="2">开发系统要求</th>
+        <th>Verge3D for Blender</th>
+        <th>Verge3D for 3ds Max</th>
+        <th>Verge3D for Maya</th>
+      </tr>
+
+      <tr>
+        <td class="centered"><a href="https://www.blender.org/download/requirements/" target="_blank">与Blender类似</a>
+        </td>
+        <td class="centered"><a href="https://knowledge.autodesk.com/support/3ds-max/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-3ds-Max-2018.html" target="_blank">与3ds Max类似</a></td>
+        <td class="centered"><a href="https://knowledge.autodesk.com/support/maya/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Maya-2020.html" target="_blank">与Maya类似</a></td>
+      </tr>
+    </tbody></table>
+
+    <p><a href="manual/zh/introduction/Features.html#see_also" id="see_also" class="permalink">#</a></p>
+
+    <h2>另请参阅</h2>
+
+    <p>想看更多实战案例吗？前往在线 <a href="https://www.soft8soft.com/gallery/" target="_blank">案例</a> 页面，欣赏更多优秀的Verge3D应用。</p>
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

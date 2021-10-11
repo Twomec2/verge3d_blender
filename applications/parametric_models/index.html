@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Parametric Modeling Experience Powered by WebGL Technology</title>
+
+        <!-- Search Engines -->
+        <meta name="description" content="Parametric modeling demo featuring WebGL morphing. Created in Verge3D for Blender without a single line of code.">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Parametric Modeling Experience Powered by WebGL Technology">
+        <meta name="twitter:description" content="Parametric modeling demo featuring WebGL morphing. Created in Verge3D for Blender without a single line of code.">
+        <meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/parametric_models.jpg">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Parametric Modeling Experience Powered by WebGL Technology">
+        <meta property="og:description" content="Parametric modeling demo featuring WebGL morphing. Created in Verge3D for Blender without a single line of code.">
+        <meta property="og:image" content="https://cdn.soft8soft.com/images/parametric_models.jpg">
+        <meta property="og:type" content="website">
+
+        <link href="interface.css" rel="stylesheet" type="text/css">
+        <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    </head>
+    <body>
+        <iframe src="parametric_models.html" id="appliccation" style="position: absolute; display: block; width: 100%; height: 100%; overflow: hidden; border: 0 solid; border-radius: 0; margin: 0; left: 0; top: 0; z-index: 1; float: none; clear: both;" data-pg-name="Application Window"></iframe>
+        <div class="mechanism-part-panel" id="mech_part_panel" data-pg-name="Mechanism Part Panel">
+            <button class="ring-button-core ring-button-4" id="button_mech_1"></button>
+            <button class="ring-button-core ring-button-5" id="button_mech_2"></button>
+            <button class="ring-button-core ring-button-6" id="button_mech_3"></button>
+            <button class="ring-button-core ring-button-7" id="button_mech_4"></button>
+            <button class="ring-button-core ring-button-8" id="button_mech_5"></button>
+            <button class="ring-button-core ring-button-9" id="button_mech_6"></button>
+        </div>
+        <div id="ring_panel" class="ring-panel" data-pg-name="Ring Panel">
+            <button class="ring-button-core ring-button-1" id="button_ring_1"></button>
+            <button class="ring-button-core ring-button-2" id="button_ring_2"></button>
+            <button class="ring-button-core ring-button-3" id="button_ring_3"></button>
+        </div>
+        <div class="shelf-panel" data-pg-name="Shelf Panel" id="shelf_panel">
+            <button class="ring-button-core button-ring-10" id="button_shelf_1"></button>
+            <button class="ring-button-core button-ring-11" id="button_shelf_2"></button>
+        </div>
+        <div class="model-desk-palen-small" id="model_desk_small" data-pg-name="Model Desk Small">
+            <button class="ring-button-core button-desk-1" id="button_desk_1"></button>
+            <button class="ring-button-core button-desk-2" id="button_desk_2"></button>
+            <button class="ring-button-core button-desk-3" id="button_desk_3"></button>
+            <button class="ring-button-core button-desk-4" id="button_desk_fullscreen"></button>
+        </div>
+        <div class="models-desk-div" id="models_desk" data-pg-name="Models Desk">
+            <div class="models-list-central-div">
+                <div class="models-list">
+                    <img src="images/mechanism.png" class="model-button" style="background-position: center center;" id="models_mech"/>
+                    <img src="images/shelf.png" class="model-button" style="background-position: center center;" id="models_shelf"/>
+                    <img src="images/ring.png" class="model-button" style="background-position: center center;" id="models_ring"/>
+                </div>
+            </div>
+        </div>
+        <div class="preloader-div" id="preloader_div" data-pg-name="Preloader">
+            <div class="preloader-center-div">
+                <div class="preloader-percentage" id="preloader_percentage" data-pg-name="Percentage">0%</div>
+            </div>
+        </div>
+    </body>
+</html>

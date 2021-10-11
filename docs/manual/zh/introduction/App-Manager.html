@@ -1,0 +1,678 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>应用管理器 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="了解如何使用Verge3D应用管理器。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/App-Manager.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="应用管理器 - Soft8Soft">
+            <meta property="og:description" content="了解如何使用Verge3D应用管理器。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/App-Manager.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="应用管理器 - Soft8Soft">
+            <meta name="twitter:description" content="了解如何使用Verge3D应用管理器。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-desktop-icon.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-files.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-files-expand.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-search.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-app-link.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create-options.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-created.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-open-folder-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-open-folder-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-cancel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-complete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-qrcode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-upload-archive-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-update-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-update-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-delete-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-delete-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-explanation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-manage.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-choose-created.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-settings-panel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>应用管理器</h1>
+
+    <p>Verge3D的应用管理器（App Manager）很容易操作，可用于创建和执行Verge3D应用的各种操作。</p>
+
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/App-Manager.html#Running_App_Manager">运行应用管理器</a><ul><li><a href="manual/zh/introduction/App-Manager.html#From_Blender_Max_Maya">A. 从Blender、3ds Max或Maya中启动</a></li><li><a href="manual/zh/introduction/App-Manager.html#Using_Desktop_Application">B. 从桌面快捷方式启动</a></li><li><a href="manual/zh/introduction/App-Manager.html#From_Command_Line">C. 用命令行启动</a></li></ul></li><li><a href="manual/zh/introduction/App-Manager.html#Exploring_Applications">探索应用结构</a><ul><li><a href="manual/zh/introduction/App-Manager.html#List_Main_Page">主页应用列表</a></li><li><a href="manual/zh/introduction/App-Manager.html#Application_Page">应用详情页面</a></li></ul></li><li><a href="manual/zh/introduction/App-Manager.html#Creating_Applications">创建新应用</a></li><li><a href="manual/zh/introduction/App-Manager.html#Operations">操作选项</a><ul><li><a href="manual/zh/introduction/App-Manager.html#Edit_Puzzles">编辑拼图</a></li><li><a href="manual/zh/introduction/App-Manager.html#Open_Folder">打开应用文件夹</a></li><li><a href="manual/zh/introduction/App-Manager.html#Publish">发布应用</a></li><li><a href="manual/zh/introduction/App-Manager.html#Upload_Archive">上传应用压缩包</a></li><li><a href="manual/zh/introduction/App-Manager.html#Update">更新应用</a></li><li><a href="manual/zh/introduction/App-Manager.html#Move_to_Trash">移到垃圾箱</a></li></ul></li><li><a href="manual/zh/introduction/App-Manager.html#Templates">模板</a><ul><li><a href="manual/zh/introduction/App-Manager.html#Whats_a_Template">什么是模板</a></li><li><a href="manual/zh/introduction/App-Manager.html#Creating_Templates">创建模板</a></li></ul></li><li><a href="manual/zh/introduction/App-Manager.html#App_Manager_Settings">应用管理器设置</a></li></ul><!-- /TOC -->
+	
+	<p><a href="manual/zh/introduction/App-Manager.html#Running_App_Manager" id="Running_App_Manager" class="permalink">#</a></p>
+
+    <h2>运行应用管理器</h2>
+
+    <p>应用管理器（App Manager）以本地运行的Web服务器的方式实现，界面显示为类似于Wi-Fi路由器管理面板形式的网页。</p>
+    
+    <img src="files/app-manager/app-manager-main.jpg" class="centered" style="max-width: 1000px">
+
+    <p>默认情况下，应用管理器的地址为 <a href="http://localhost:8668/" target="_blank">localhost:8668</a> ， 您可以进行导航、刷新、书签等方式操作，服务器可以通过多种方式启动（见下文）。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#From_Blender_Max_Maya" id="From_Blender_Max_Maya" class="permalink">#</a></p>
+
+    <h3>A. 从Blender、3ds Max或Maya中启动</h3>
+
+    <p>若您已为3D软件安装了Verge3D插件，那启动它们时，会自动启动本地Web服务器。单击App Manager按钮（Blender），或从菜单选项中选择App Manager，都会在网页中显示应用管理器。</p>
+    
+    <img src="files/beginner_guide/app-manager-blender.jpg" class="centered" style="max-width: 951px"> <img src="files/beginner_guide/app-manager-max.jpg" class="centered" style="max-width: 951px">
+
+    <p>如果Web服务器碰巧因为某些原因关闭（如您关闭了3D软件的第一个实例），那么此操作也会将其重新启动。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Using_Desktop_Application" id="Using_Desktop_Application" class="permalink">#</a></p>
+
+    <h3>B. 从桌面快捷方式启动</h3>
+
+    <p>即使没有安装Blender、3ds Max或Maya，也可以启动本地web服务器。只需单击Verge3D安装程序创建的桌面快捷方式图标（仅限Windows），App Manager页面将立即显示在web浏览器中。</p>
+
+    <img src="files/app-manager/app-manager-desktop-icon.jpg" class="centered" style="max-width: 1000px">
+
+    <p>如果Web浏览器已经在运行（例如您已经从3D编辑器启动了它），那么点击桌面快捷方式只会在浏览器中打开应用管理器。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#From_Command_Line" id="From_Command_Line" class="permalink">#</a></p>
+
+    <h3>C. 用命令行启动</h3>
+
+    <p>安装Python 3，比如从 <a href="https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l" target="_blank">微软商店</a> 。当您安装完成，启动 <strong>命令提示符</strong> 并输入：</p>
+
+    <code>
+      cd verge3d_blenders
+    </code>
+
+
+    <p>（或安装Verge3D的任何路径），接着对用于Blender版本的类型：</p>
+
+    <code>
+      python manager\server.py BLENDER
+    </code>
+
+
+    <p>对用于3ds Max的版本：</p>
+    
+    <code>
+      python manager\server.py MAX
+    </code>
+
+    <p>或用于Maya的版本：</p>
+
+    <code>
+      python manager\server.py MAYA
+    </code>
+
+    <p>最后，打开浏览器，并访问此页面 <a href="http://localhost:8668/" target="_blank">localhost:8668</a> 。macOS或Linux用户可以使用相同的命令，但需要使用正斜杠。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Exploring_Applications" id="Exploring_Applications" class="permalink">#</a></p>
+
+    <h2>探索应用结构</h2>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#List_Main_Page" id="List_Main_Page" class="permalink">#</a></p>
+
+    <h3>主页应用列表</h3>
+
+    <p>启动或刷新主页时，应用管理器会扫描安装目录中 <strong>applications</strong> 文件夹目录，并显示出所有找到的文件夹。如果在应用管理器设置中启用了 <strong>External applications directory(外部应用目录)</strong> ，则该目录中的文件夹也将附加在应用列表的底部。</p>
+
+    <p>对于列表中的每个应用，应用管理器都会显示在其文件夹下找到的所有.html、gltf/glb和3D文件（.blend、.max、.ma/mb）等。单击这些文件的图标，可以查看这些文件。</p>
+    
+    <img src="files/app-manager/app-manager-list-files.jpg" class="centered" style="max-width: 800px">
+
+    <p>文件夹中包含太多文件的应用，单击其名称附近的三角形图标，可以展开查看应用文件细节。</p>
+    
+    <img src="files/app-manager/app-manager-list-files-expand.jpg" class="centered" style="max-width: 800px">
+
+    <p>可以使用右上角的搜索工具栏对应用进行过滤。</p>
+    
+    <img src="files/app-manager/app-manager-search.jpg" class="centered" style="max-width: 800px">
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Application_Page" id="Application_Page" class="permalink">#</a></p>
+
+    <h3>应用详情页面</h3>
+
+    <p>点击应用名称后，将显示一个更为详尽的页面。</p>
+    
+    <img src="files/app-manager/app-manager-list-app-link.jpg" class="centered" style="max-width: 800px">
+
+    <p>在此应用详情页中，列出了所有文件及其名称，并可运行。该页面的文件也可通过输入搜索进行过滤。</p>
+    
+    <img src="files/app-manager/app-manager-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Creating_Applications" id="Creating_Applications" class="permalink">#</a></p>
+
+    <h2>创建新应用</h2>
+
+    <p>使用左侧栏目上的新建按钮，即可为Verge3D创建一个新应用。</p>
+    
+    <img src="files/app-manager/app-manager-create.jpg" class="centered" style="max-width: 569px">
+
+    <p>您可以输入新应用的名称，然后从官方提供的模板来创建应用。默认有4套模板可控选用："Standard Light(标准明调模板)", "Standard Dark(标准暗调模板)"，"Blank Scene(空模板)", 以及"Code-Based(基于代码的模板)"。您也可以 <a href="manual/zh/introduction/App-Manager.html#Templates">创建和添加更多模板</a> 以供选择。</p>
+    
+    <img src="files/app-manager/app-manager-create-options.jpg" class="centered" style="max-width: 522px">
+
+    <p>您还可以在应用中包含可选模块：启用Internet Explore 11的支持、添加与旧版WebVR API兼容及在应用中包含物理引擎。</p>
+
+    <p>新应用创建完成后，将显示一个链接，可使用该链接进行跳转到应用页面（或者您也可以直接将其关闭）。</p>
+    
+    <img src="files/app-manager/app-manager-created.jpg" class="centered" style="max-width: 800px">
+
+    <p>新应用将可在主应用列表中显现。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Operations" id="Operations" class="permalink">#</a></p>
+
+    <h2>操作选项</h2>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Edit_Puzzles" id="Edit_Puzzles" class="permalink">#</a></p>
+
+    <h3>编辑拼图</h3>
+
+    <p>您可以通过单击主页上“操作”列中的按钮，来开始为应用添加或编辑拼图：</p>
+    
+    <img src="files/app-manager/app-manager-run-puzzles-from-main.jpg" class="centered" style="max-width: 800px">
+
+    <p>... 或者您也可以在应用详情页面的右侧点击拼图按钮：</p>
+    
+    <img src="files/app-manager/app-manager-run-puzzles-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>在 <a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html">这里</a> 查看更多有关拼图的信息。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Open_Folder" id="Open_Folder" class="permalink">#</a></p>
+
+    <h3>打开应用文件夹</h3>
+
+    <p>您可通过点击应用主页上“操作”列中的按钮打开应用目录文件夹：</p>
+    
+    <img src="files/app-manager/app-manager-open-folder-from-main.jpg" class="centered" style="max-width: 800px">
+
+    <p>... 或者您也可以在应用详情页面的右侧点击拼图按钮：</p>
+    
+    <img src="files/app-manager/app-manager-open-folder-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>此操作将调用操作系统的默认文件管理器(例如WIndows 10中的文件资源管理器）。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Publish" id="Publish" class="permalink">#</a></p>
+
+    <h3>发布应用</h3>
+
+    <p>点击主页“操作”列中的发布按钮，即可发布对应的应用：</p>
+    
+    <img src="files/app-manager/app-manager-publish-from-main.jpg" class="centered" style="max-width: 800px">
+
+    <p>... 或者您也可以在应用详情页面的右侧点击拼图按钮：</p>
+    
+    <img src="files/app-manager/app-manager-publish-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>此操作将开始将应用上传到Verge3D Network（可取消的操作），从而使其可以在线访问。</p>
+    
+    <img src="files/app-manager/app-manager-publish-cancel.jpg" class="centered" style="max-width: 300px">
+
+    <p class="note">如果上传失败并显示消息 "The difference between your local system time and the server time is too large(本地系统时间与服务器时间之间的差异太大)"，则应更正计算机上的时间设置并重试。</p>
+
+    <p>上传完成后，将会弹出信息窗口，从中您可复制应用链接，或者是复制嵌入式代码。</p>
+    
+    <img src="files/app-manager/app-manager-publish-complete.jpg" class="centered" style="max-width: 642px">
+
+    <p>您可以点击社交网络的图标进行分享，或者用手机扫描二维码在移动端查看应用。</p>
+    
+    <img src="files/app-manager/app-manager-publish-qrcode.jpg" class="centered" style="max-width: 1000px">
+
+    <p>已上传的文件，可以在 Network Directory 中查看或者删除。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Upload_Archive" id="Upload_Archive" class="permalink">#</a></p>
+
+    <h3>上传应用压缩包</h3>
+
+    <p>在应用详情页面上时，可使用右侧栏上的按钮上传应用文件夹的zip压缩包：</p>
+    
+    <img src="files/app-manager/app-manager-upload-archive-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>该操作将压缩您的应用文件夹，并将压缩包上传到Verge3D Network（可取消操作），以便可与您的同事、客户或Verge3D开发人员共享项目。</p>
+
+    <p class="note">如果上传失败并显示消息 "The difference between your local system time and the server time is too large(本地系统时间与服务器时间之间的差异太大)"，则应更正计算机上的时间设置并重试。</p>
+
+    <p>上传完成后，您可从弹出窗口中复制zip压缩包的网络路径。</p>
+
+    <!--
+    FIX UI FIRST!
+    <img src="files/app-manager/app-manager-upload-archive-complete.jpg" class="centered" style="max-width: 642px">
+    -->
+    <p>已上传的文件，可以在 Network Directory 中查看或者删除。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Update" id="Update" class="permalink">#</a></p>
+
+    <h3>更新应用</h3>
+
+    <p>如果列表中的某个应用是基于旧版Verge3D创建，那么在主页的“操作”列中，更新按钮将显示为激活状态：</p>
+    
+    <img src="files/app-manager/app-manager-update-from-main.jpg" class="centered" style="max-width: 800px">
+
+    <p>该按钮也会显示在应用页面的右侧侧边栏上：</p>
+    
+    <img src="files/app-manager/app-manager-update-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>在 <a href="manual/zh/introduction/Updating.html">这里</a> 查看更多有关更新应用的更多信息。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Move_to_Trash" id="Move_to_Trash" class="permalink">#</a></p>
+
+    <h3>移到垃圾箱</h3>
+
+    <p>您可通过点击应用主页上“操作”列中的对应按钮将应用删除：</p>
+    
+    <img src="files/app-manager/app-manager-delete-from-main.jpg" class="centered" style="max-width: 800px">
+
+    <p>... 或者您也可以在应用详情页面的右侧点击拼图按钮：</p>
+    
+    <img src="files/app-manager/app-manager-delete-from-app-page.jpg" class="centered" style="max-width: 1000px">
+
+    <p>应用文件夹会移动到系统垃圾箱，并可被还原。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Templates" id="Templates" class="permalink">#</a></p>
+
+    <h2>模板</h2>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Whats_a_Template" id="Whats_a_Template" class="permalink">#</a></p>
+
+    <h3>什么是模板</h3>
+
+    <p>当创建一个新应用时，您可以选择一个模板来作为基础创建应用。默认有4套模板可控选用："Standard Light(标准明调模板)", "Standard Dark(标准暗调模板)"，"Blank Scene(空模板)", 以及"Code-Based(基于代码的模板)"。</p>
+    
+    <img src="files/app-manager/app-manager-templates-explanation.jpg" class="centered" style="max-width: 522px">
+
+    <p>这些模板的源文件可以在模板文件夹中找到，如"verge3d_blender\manager\templates"。您可以修改这些文件或依次创建一个在项目中使用的全新模板。</p>
+
+    <p class="note">在templates文件夹中，还有一个隐藏的模板叫做 "Embeddable" ，您可以用它来创建React.js或Vue.js应用。</p>
+
+    <p>有很多可能用来修改和改进模板的方法，您可以通过编辑嵌入的文件来改变布局，使用一些Java脚本代码或库，替换UI元素或预加载器，或添加一些默认包含在新应用中的拼图。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#Creating_Templates" id="Creating_Templates" class="permalink">#</a></p>
+
+    <h3>创建模板</h3>
+
+    <p>点击左边栏的 <strong>Manage App Templates(管理应用模板)</strong> 来创建您的自定义模板：</p>
+    
+    <img src="files/app-manager/app-manager-templates.jpg" class="centered" style="max-width: 751px">
+
+    <p>在显示的面板中,点击 <strong>+Template</strong> ，输入新模板的名称(例如，"My Template")然后点击 <strong>Apply(应用)</strong>：</p>
+    
+    <img src="files/app-manager/app-manager-templates-manage.jpg" class="centered" style="max-width: 656px">
+
+    <p>这样，每次创建新应用时，都会显示您创建的自定义模板了：</p>
+    
+    <img src="files/app-manager/app-manager-templates-choose-created.jpg" class="centered" style="max-width: 522px">
+
+    <p>默认情况下，使用您刚才自定义模板创建的新应用会是一个空文件夹，因为您还没有在其中提供文件。最简单的模板创建方法是直接复制一个现有模板作为基础（例如"Standard Dark"，标准暗调模板)，然后重命名文件夹为您刚才新建的模板名称（例如，"My Template")。</p>
+
+    <p><a href="manual/zh/introduction/App-Manager.html#App_Manager_Settings" id="App_Manager_Settings" class="permalink">#</a></p>
+
+    <h2>应用管理器设置</h2>
+
+
+
+    <p>单击应用管理器主页左边栏的齿轮按钮，即可打开设置面板：</p>
+    
+    <img src="files/app-manager/app-manager-settings.jpg" class="centered" style="max-width: 751px">
+
+    <p>默认情况下如图所示：</p>
+    
+    <img src="files/app-manager/app-manager-settings-panel.jpg" class="centered" style="max-width: 612px">
+
+    <dl>
+
+      <dt>Notify about Verge3D updates</dt>
+      <dd><b>Verge3D主程序更新提醒</b>：当Verge3D主程序发布新版本时，应用管理器会显示更新提醒（该选项默认开启）。</dd>
+
+      <dt>Hide stock applications</dt>
+      <dd><b>在应用管理器的主界面中隐藏官方案例</b>：比如 <em>Cube</em>, <em>Farmers Journey</em>, <em>Scooter</em>, <em>Teapot Heater</em>,
+        以及其他一些应用。</dd>
+
+      <dt>Upload app sources (models, puzzles, backups)</dt>
+      <dd><b>上传应用源文件（模型、拼图、备份数据）</b>： <a href="manual/zh/introduction/App-Manager.html#Publish">发布</a>
+        功能通常只会上传在线运行应用所必须的文件，所以默认情况下会忽略一些文件，包括.blend, .max, .ma/.mb, visual_logic.xml,
+        以及v3d_app_data文件夹内的内容。如果你需要与同事共享这些文件，可以开启此选项。</dd>
+
+      <dt>Enable external server interface</dt>
+      <dd><b>启用外部服务器访问地址</b>：使用本地Wi-Fi地址访问地址，代替默认使用的 <a href="http://localhost:8668" target="_blank">localhost:8668</a>。您可以从操作系统的网络属性首选项中查看该地址：<a href="https://www.groovypost.com/howto/find-windows-10-device-ip-address/" target="_blank">Win 10</a>, <a href="https://www.groovypost.com/howto/microsoft/windows-7/find-your-local-ip-address-windows-7-cmd/" target="_blank">Win 7</a>, <a href="https://www.wikihow.com/Find-Your-IP-Address-on-a-Mac" target="_blank">Mac</a>, <a href="https://www.linuxtrainingacademy.com/determine-public-ip-address-command-line-curl/" target="_blank">Linux</a>.开启后即可通过IP方式访问应用管理器了，例如：<a href="http://192.168.1.15:8668" target="_blank">192.168.1.15:8668</a></dd>
+
+      <dt>Verge3D Network cache age (minutes)</dt>
+      <dd><b>Verge3D Network缓存更新时间（分钟）</b>：设置Verge3D Network刷新已上传文件缓存的时间。需要在开发中快速迭代时，可将此值设置为0（立即刷新）。</dd>
+
+      <dt>External applications directory</dt>
+      <dd>
+        <b>启用外部应用目录：</b>指定一个额外的应用存放目录（绝对路径，例如C:\Users\Alex\my_verge），这里存放的应用与标准目录（例如verge3d_blender\applications）下的应用，会同时显示在在应用管理器的列表中。
+      </dd>
+
+      <dt>Current theme</dt>
+      <dd><b>当前主题：</b>为应用管理器和拼图编辑器切换“浅色”或“深色”模式外观。</dd>
+
+    </dl>
+
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

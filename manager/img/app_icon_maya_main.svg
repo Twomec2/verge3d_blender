@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26"
+   height="28"
+   viewBox="0 0 6.8791665 7.4083335"
+   version="1.1"
+   id="svg2358"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="app_icon_maya_main.svg">
+  <defs
+     id="defs2352">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2840"
+       id="linearGradient2211"
+       x1="271.81598"
+       y1="122.16029"
+       x2="277.41187"
+       y2="116.12668"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.7651039,0,0,3.7795276,-1019.0127,-438.16222)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2840">
+      <stop
+         style="stop-color:#d91414;stop-opacity:1"
+         offset="0"
+         id="stop2836" />
+      <stop
+         style="stop-color:#f27b7b;stop-opacity:1"
+         offset="1"
+         id="stop2838" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.073242"
+     inkscape:cx="6.4757234"
+     inkscape:cy="19.66587"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2355">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-289.59165)">
+    <path
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.46236563px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;display:inline;fill:url(#linearGradient2211);fill-opacity:1;stroke:none;stroke-width:0.69868439"
+       d="M 2.6152344 0 C 1.1441706 0 0 1.2030283 0 2.625 L 0 25.375 C 0 26.851548 0.52112379 28 1.9921875 28 L 23.384766 28 C 24.801311 28 26 26.851548 26 25.375 L 26 7.21875 C 26 6.5623972 25.673959 5.8515829 25.183594 5.359375 L 20.662109 0.765625 C 20.171892 0.27356831 19.462404 0 18.808594 0 L 2.6152344 0 z M 6.53125 9.3730469 L 6.5332031 9.3730469 L 9.734375 9.3730469 C 9.9388474 9.3730469 10.132986 9.4447733 10.316406 9.5917969 C 10.499713 9.7384425 10.622807 9.9149705 10.685547 10.119141 L 13.005859 16.833984 L 15.326172 10.119141 C 15.388912 9.9146682 15.51043 9.7385181 15.693359 9.5917969 C 15.877044 9.4451512 16.072947 9.3730469 16.277344 9.3730469 L 19.476562 9.3730469 C 19.681035 9.3730469 19.852255 9.4447733 19.988281 9.5917969 C 20.130014 9.7384425 20.199219 9.9198995 20.199219 10.134766 L 20.199219 19.894531 C 20.199219 20.109586 20.125539 20.290703 19.978516 20.4375 C 19.836783 20.578854 19.665221 20.650391 19.460938 20.650391 L 18.044922 20.650391 C 17.840449 20.650391 17.664374 20.579232 17.517578 20.4375 C 17.376224 20.290854 17.306641 20.109435 17.306641 19.894531 L 17.306641 12.212891 L 14.53125 19.941406 C 14.457931 20.135296 14.327876 20.303505 14.144531 20.445312 C 13.961224 20.581753 13.768888 20.650391 13.564453 20.650391 L 12.4375 20.650391 C 12.233028 20.650391 12.040919 20.581753 11.857422 20.445312 C 11.679028 20.303958 11.549468 20.135372 11.470703 19.941406 L 8.703125 12.212891 L 8.703125 19.894531 C 8.703125 20.109586 8.6294455 20.290703 8.4824219 20.4375 C 8.3406896 20.578854 8.1672875 20.650391 7.9628906 20.650391 L 6.5488281 20.650391 C 6.3443557 20.650391 6.1682812 20.579232 6.0214844 20.4375 C 5.8744608 20.290854 5.8007812 20.109435 5.8007812 19.894531 L 5.8007812 10.134766 C 5.8007812 9.9197105 5.8699865 9.7385181 6.0117188 9.5917969 C 6.153451 9.4451512 6.3269287 9.3730469 6.53125 9.3730469 z "
+       id="path3000"
+       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)" />
+  </g>
+</svg>

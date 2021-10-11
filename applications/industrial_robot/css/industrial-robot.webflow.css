@@ -1,0 +1,1131 @@
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.html-embed {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.right-panel {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: right;
+  clear: none;
+}
+
+.button-1 {
+  position: absolute;
+  right: 165px;
+  bottom: 20px;
+  z-index: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f37908), to(#f37908));
+  background-image: linear-gradient(180deg, #f37908, #f37908);
+  text-align: center;
+}
+
+.row {
+  position: relative;
+  z-index: -1;
+  height: 100%;
+}
+
+.column {
+  z-index: -1;
+  height: 100%;
+}
+
+.column-2 {
+  height: 100%;
+}
+
+.column-3 {
+  height: 100%;
+}
+
+.column-4 {
+  height: 100%;
+}
+
+.button-2 {
+  position: absolute;
+  right: 75px;
+  bottom: 60px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8ce62c), to(#8ce62c));
+  background-image: linear-gradient(180deg, #8ce62c, #8ce62c);
+  text-align: center;
+}
+
+.button-3 {
+  position: absolute;
+  right: 20px;
+  bottom: 120px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 45px;
+  background-color: #66a9ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0084db), to(#0084db));
+  background-image: linear-gradient(180deg, #0084db, #0084db);
+  text-align: center;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 5px solid #66a9ff;
+  border-radius: 30px;
+  background-color: #66a9ff;
+  background-image: url('../images/fullscreen-open.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.button-4 {
+  position: absolute;
+  left: 165px;
+  bottom: 20px;
+  z-index: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: url('../images/drill.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: center;
+}
+
+.button-5 {
+  position: absolute;
+  left: 75px;
+  bottom: 60px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: url('../images/welding.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.button-6 {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 45px;
+  background-color: #66a9ff;
+  background-image: url('../images/done.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.button-7 {
+  position: absolute;
+  right: 280px;
+  bottom: 30px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffd634), to(#ffd634));
+  background-image: linear-gradient(180deg, #ffd634, #ffd634);
+  text-align: center;
+}
+
+.button-8 {
+  position: absolute;
+  left: 280px;
+  bottom: 30px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  background-image: url('../images/claws.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.color-mode-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 5px solid #66a9ff;
+  border-radius: 30px;
+  background-color: #66a9ff;
+  background-image: url('../images/multiple_color_mode.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: center;
+}
+
+.reset-pose-button {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 5px solid #66a9ff;
+  border-radius: 30px;
+  background-color: #66a9ff;
+  background-image: url('../images/reset_pose.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: center;
+}
+
+.interface-color-panel {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  overflow: hidden;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #66a9ff;
+}
+
+.intarface-color-button {
+  display: block;
+  overflow: hidden;
+  margin: 10px;
+  border: 5px solid #fff;
+  border-radius: 20px;
+}
+
+.intarface-color-button.blue-button {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #66a9ff;
+}
+
+.intarface-color-button.green-button {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #65df47;
+}
+
+.intarface-color-button.orange-button {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #f08b2e;
+}
+
+.intarface-color-button.yellow-button {
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #ece535;
+}
+
+.preloader-screen {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 3;
+  display: block;
+  background-color: #000;
+}
+
+.image {
+  position: static;
+  left: 0px;
+  top: 40%;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  overflow: hidden;
+  width: auto;
+  height: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 1;
+}
+
+.text-block {
+  position: static;
+  display: block;
+  overflow: hidden;
+  height: auto;
+  margin-top: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Rubik, sans-serif;
+  color: #ebb62f;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.div-block {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: -50px;
+  bottom: -60px;
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button-9 {
+  position: absolute;
+  left: 75px;
+  bottom: 60px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.button-10 {
+  position: absolute;
+  left: 165px;
+  bottom: 20px;
+  z-index: 1;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 80px;
+  line-height: 65px;
+  text-align: center;
+}
+
+.button11 {
+  position: absolute;
+  left: 280px;
+  bottom: 30px;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 75px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.mode-button {
+  position: absolute;
+  left: 10px;
+  top: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.button12 {
+  position: absolute;
+  left: 20px;
+  bottom: 120px;
+  z-index: 1;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 6px solid #66a9ff;
+  border-radius: 45px;
+  background-color: #66a9ff;
+  background-image: url('../images/done.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.help-panel {
+  position: absolute;
+  left: 0px;
+  top: 15%;
+  right: 0px;
+  display: block;
+  width: 350px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border: 5px solid #66a9ff;
+  border-radius: 50px;
+  background-color: rgba(102, 169, 255, 0.4);
+}
+
+.help-panel.animation {
+  top: 15%;
+  display: none;
+}
+
+.help-panel.free {
+  top: 15%;
+  display: none;
+}
+
+.help-heading {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: block;
+  margin: 0px auto;
+  border-style: none;
+  border-width: 0px;
+  border-radius: 0px;
+  font-family: Rubik, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 1px 1px 18px #000;
+}
+
+.animation-help-div {
+  display: block;
+  height: 100px;
+}
+
+.help-images {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.help-text-block {
+  display: inline-block;
+  width: 200px;
+  margin: 10px 10px 10px 0px;
+  float: right;
+  font-family: Rubik, sans-serif;
+  color: #fff;
+  text-align: left;
+  text-shadow: 0 2px 13px #000;
+}
+
+.image-3 {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.image-4 {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.help {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 5px solid #66a9ff;
+  border-radius: 30px;
+  background-color: #66a9ff;
+  background-image: url('../images/help.png');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.separator-2 {
+  height: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #4a9bff;
+}
+
+.separator-1 {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #4a9bff;
+}
+
+.help-close-button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 18px #000;
+}
+
+.vr-mode-button {
+  position: absolute;
+  left: 10px;
+  top: 130px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.div-block-2 {
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+
+.cr-waring-div {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.text-block-2 {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: -250px;
+  bottom: 0%;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  background-color: rgba(255, 199, 199, 0.48);
+  color: red;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.div-block-3 {
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+
+.ar-mode-button {
+  position: absolute;
+  left: 115px;
+  top: 130px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #66a9ff;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (max-width: 991px) {
+  .button-1 {
+    right: 170px;
+    bottom: 50px;
+    width: 75px;
+    height: 75px;
+  }
+  .button-2 {
+    right: 70px;
+    bottom: 60px;
+    width: 90px;
+    height: 90px;
+  }
+  .button-3 {
+    bottom: 140px;
+    width: 60px;
+    height: 60px;
+  }
+  .button-4 {
+    left: 170px;
+    bottom: 50px;
+    width: 75px;
+    height: 75px;
+  }
+  .button-5 {
+    left: 70px;
+    bottom: 60px;
+    width: 90px;
+    height: 90px;
+  }
+  .button-6 {
+    bottom: 140px;
+    width: 60px;
+    height: 60px;
+  }
+  .button-7 {
+    right: 260px;
+    bottom: 60px;
+    width: 60px;
+    height: 60px;
+  }
+  .button-8 {
+    left: 260px;
+    bottom: 60px;
+    width: 60px;
+    height: 60px;
+  }
+  .color-mode-button {
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .reset-pose-button {
+    left: 20px;
+    bottom: 20px;
+  }
+  .image {
+    height: 70%;
+  }
+  .button-9 {
+    left: 70px;
+    bottom: 60px;
+    width: 90px;
+    height: 90px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .button-10 {
+    left: 170px;
+    bottom: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 60px;
+    line-height: 40px;
+  }
+  .button11 {
+    left: 260px;
+    bottom: 60px;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 30px;
+  }
+  .mode-button {
+    height: 40px;
+  }
+  .button12 {
+    bottom: 140px;
+    width: 60px;
+    height: 60px;
+  }
+  .help-panel.free {
+    top: 15%;
+    display: none;
+  }
+  .vr-mode-button {
+    height: 40px;
+  }
+  .ar-mode-button {
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button-1 {
+    right: 80px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+  }
+  .button-2 {
+    right: 30px;
+    bottom: 80px;
+    width: 60px;
+    height: 60px;
+  }
+  .button-3 {
+    bottom: 145px;
+    width: 40px;
+    height: 40px;
+  }
+  .fullscreen {
+    width: 40px;
+    height: 40px;
+  }
+  .button-4 {
+    left: 80px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+  }
+  .button-5 {
+    left: 30px;
+    bottom: 80px;
+    width: 60px;
+    height: 60px;
+  }
+  .button-6 {
+    bottom: 145px;
+    width: 40px;
+    height: 40px;
+  }
+  .button-7 {
+    right: 150px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .button-8 {
+    left: 150px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .color-mode-button {
+    width: 40px;
+    height: 40px;
+  }
+  .reset-pose-button {
+    width: 40px;
+    height: 40px;
+  }
+  .interface-color-panel {
+    height: 40px;
+  }
+  .intarface-color-button.blue-button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    float: left;
+    border-width: 5px;
+    border-radius: 20px;
+    font-size: 0px;
+    line-height: 0px;
+  }
+  .intarface-color-button.green-button {
+    width: 20px;
+    height: 20px;
+    margin: 5px 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .intarface-color-button.orange-button {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .intarface-color-button.yellow-button {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-width: 5px;
+  }
+  .image {
+    height: 70%;
+  }
+  .text-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    clear: none;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .button-9 {
+    left: 30px;
+    bottom: 80px;
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    line-height: 30px;
+  }
+  .button-10 {
+    left: 80px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    font-size: 50px;
+  }
+  .button11 {
+    left: 150px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    padding-left: 7px;
+    font-size: 30px;
+    line-height: 10px;
+  }
+  .mode-button {
+    top: 60px;
+    height: 30px;
+    line-height: 10px;
+  }
+  .button12 {
+    bottom: 145px;
+    width: 40px;
+    height: 40px;
+  }
+  .help-panel.animation {
+    top: 20%;
+    width: 300px;
+  }
+  .help-panel.free {
+    top: 20%;
+    display: none;
+    width: 300px;
+  }
+  .animation-help-div {
+    height: 80px;
+  }
+  .help-images {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .help-text-block {
+    width: 180px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .help {
+    right: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  .vr-mode-button {
+    top: 100px;
+    height: 30px;
+    line-height: 10px;
+  }
+  .ar-mode-button {
+    top: 100px;
+    height: 30px;
+    line-height: 10px;
+  }
+}
+
+@media (max-width: 479px) {
+  .button-1 {
+    right: 0px;
+    bottom: 55px;
+    width: 65px;
+    height: 40px;
+    border-right-width: 0px;
+    border-radius: 75px 0px 0px 75px;
+  }
+  .button-2 {
+    right: 0px;
+    bottom: 100px;
+    width: 50px;
+    height: 40px;
+    border-right-width: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .button-3 {
+    right: 0px;
+    bottom: 145px;
+    border-right-width: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .fullscreen {
+    top: 10px;
+    right: 0px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  .button-4 {
+    left: 0px;
+    bottom: 60px;
+    width: 65px;
+    height: 40px;
+    border-left-width: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .button-5 {
+    left: 0px;
+    bottom: 105px;
+    width: 50px;
+    height: 40px;
+    border-left-width: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .button-6 {
+    left: 0px;
+    bottom: 150px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .button-7 {
+    right: 45px;
+    bottom: 10px;
+  }
+  .button-8 {
+    left: 45px;
+    bottom: 10px;
+  }
+  .color-mode-button {
+    right: 0px;
+    bottom: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .reset-pose-button {
+    left: 0px;
+    bottom: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .interface-color-panel {
+    left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .button-9 {
+    left: 0px;
+    bottom: 105px;
+    width: 50px;
+    height: 40px;
+    border-left-width: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 30px;
+    line-height: 10px;
+  }
+  .button-10 {
+    left: 0px;
+    bottom: 60px;
+    width: 65px;
+    height: 40px;
+    border-left-width: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-size: 30px;
+    line-height: 10px;
+  }
+  .button11 {
+    left: 45px;
+    bottom: 10px;
+  }
+  .mode-button {
+    left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .button12 {
+    left: 0px;
+    bottom: 150px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .help-panel.animation {
+    top: 20%;
+    display: none;
+    width: 220px;
+    border-radius: 30px;
+  }
+  .help-panel.free {
+    top: 20%;
+    display: none;
+    width: 220px;
+  }
+  .animation-help-div {
+    height: 60px;
+  }
+  .help-images {
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+  .help-text-block {
+    width: 130px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .help {
+    top: 10px;
+    right: 0px;
+    margin-top: 45px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  .vr-mode-button {
+    left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .text-block-2 {
+    right: 0px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .div-block-3 {
+    width: 100%;
+  }
+  .ar-mode-button {
+    left: 0px;
+    top: 139px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

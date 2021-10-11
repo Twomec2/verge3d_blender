@@ -1,0 +1,479 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Spotting Verge3D performance bottlenecks - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+
+    <meta property="og:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+    <meta property="article:tag" content="performance">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/introduction/Performance-Bottlenecks.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Spotting Verge3D performance bottlenecks - Soft8Soft">
+            <meta property="og:description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/introduction/Performance-Bottlenecks.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Spotting Verge3D performance bottlenecks - Soft8Soft">
+            <meta name="twitter:description" content="Find out how to spot and eliminate performance bottlenecks in your Verge3D-based applications.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/optimizing-webgl-performance.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/fps-counter.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-red.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-materials.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/network-browser-profile.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-textures.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/performance-bottlenecks/performance-profile-render-buffers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Spotting Verge3D Performance Bottlenecks</h1>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/introduction/Performance-Bottlenecks.html#intro">Intro</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#fps">Check your FPS</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile">Performance Profile</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#performance_bottlenecks">Common Rendering Performance Bottlenecks</a><ul><li><a href="manual/en/introduction/Performance-Bottlenecks.html#complex_materials">Complex Materials</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#postprocessing">Post-processing</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#shadows">Shadows</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#too_much_geometry">Too Much Geometry</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#slow_ibl">Slow Image-Based Lighting</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#too_many_lights">Too Many Lights</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#too_many_render_calls">Too Many Render Calls</a></li></ul></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#scene_loading_time">Scene Loading Time</a><ul><li><a href="manual/en/introduction/Performance-Bottlenecks.html#large_binary_textures">Large Binary Data or Textures</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#shader_compilation">Too Many or Too Complex Materials</a></li></ul></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#gpu_memory_usage">GPU Memory Usage</a><ul><li><a href="manual/en/introduction/Performance-Bottlenecks.html#large_textures">Large Textures</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#many_postprocessing_passes">Too Many Post-Processing Passes</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#large_geometry_buffers">Large Geometry Buffers</a></li></ul></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html#see_also">See Also</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#intro" id="intro" class="permalink">#</a></p>
+
+    <h2>Intro</h2>
+
+    <p>Since a broad internet audience can use your applications, your Verge3D-based apps must show good performance. For example, some classes of WebGL-capable devices may work much worse than you expect:</p>
+
+    <ul>
+      <li>Typical low-end or middle-end laptops with integrated GPUs (Intel, AMD APU graphics).</li>
+      <li>Old smartphones or tablet computers.</li>
+      <li>Mobile VR devices, such as Oculus Go or Oculus Quest. To prevent motion sickness symptoms, it's mandatory that these devices render with appropriate frame rate (60, 72, or even 90 FPS).</li>
+      <li>Devices with battery. Enormous GPU utilization quickly drains out the battery, powering mobile devices.</li>
+    </ul>
+
+    <p>To optimize efficiently, e.g., without degrading your apps' quality, you should understand basic <a href="manual/en/introduction/Optimizing-WebGL-performance.html">asset optimization techniques</a> and be able to spot places in your app that cause slow loading and rendering. These are called <em>performance bottlenecks</em>.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#fps" id="fps" class="permalink">#</a></p>
+
+    <h2>Check your FPS</h2>
+
+    <p>FPS (frames per second, or frame rate) is a crucial quantity representing the rendering time and user experience of your app:</p>
+
+    <ul>
+      <li>&lt; 20 — your app is really slow, almost impossible to use.</li>
+      <li>20-40 — slow, but acceptable.</li>
+      <li>40-60 — good enough.</li>
+      <li>60 — ideal frame rate on desktop and mobile browsers.</li>
+      <li>&gt; 60 — frame rate you should target on VR headsets.</li>
+    </ul>
+
+    <p>Starting from version 3.2, Verge3D comes with the built-in FPS counter. You can activate it by:</p>
+
+    <ul>
+      <li>Quickly pressing <strong>F</strong>, <strong>F</strong>, <strong>F</strong> (triple F) on your keyboard.</li>
+      <li>Using JavaScript and the <a href="api/en/extras/App.html#showFPS">showFPS()</a> API method.</li>
+    </ul>
+
+    <p>Once activated, you can see the current FPS value (along with its range and history plot) on the small panel in the left top corner of your app's canvas:</p>
+
+    <img src="files/performance-bottlenecks/fps-counter.jpg" alt="Verge3D FPS counter window" class="centered" style="max-width: 879px;">
+
+    <p>To get legitimate values, you should measure FPS on the slowest / oldest devices you have. Also, most browsers do not allow frame rate be greater than 60 Hz (this improves frame syncing, saves your battery life, and reduces fan noise).</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile" id="performance_profile" class="permalink">#</a></p>
+
+    <h2>Performance Profile</h2>
+
+    <p>Verge3D comes with a feature to generate performance profiles in real time. You can get a quick insight into what's happening with performance in your application and what you should do to increase it. To produce such profiles, you may use one of the following methods:</p>
+
+    <ul>
+      <li>Quickly press <strong>P</strong>, <strong>P</strong>, <strong>P</strong> (triple P) on your keyboard (Verge3D 3.2+).</li>
+      <li>Use the <a href="manual/en/puzzles/System.html#print_performance_info">print performance info</a> puzzle.</li>
+      <li>Use JavaScript and the <a href="api/en/extras/App.html#printPerformanceInfo">printPerformanceInfo()</a> API method.</li>
+    </ul>
+
+    <p>Wait at least 1 second while Verge3D collects profile data, then open the browser <a href="manual/en/introduction/FAQ.html#browser_console">console</a>. Check out the string in the opened console window:</p>
+
+    <code>--- Verge3D Performance Profile (1s) ---</code>
+
+    <p>Below it, the lines with collected performance information:</p>
+
+    <img src="files/performance-bottlenecks/performance-profile.jpg" alt="Verge3D performance profile" class="centered" style="max-width: 880px;">
+
+    <p>Here is what you can inquire from the generated performance profile:</p>
+
+    <dl>
+      <dt>Scene Loading Time</dt>
+      <dd>Time in seconds it took to load the application's <em>main</em> scene. See <a href="manual/en/introduction/Performance-Bottlenecks.html#scene_loading_time">below</a> on how to reduce it.</dd>
+
+      <dt>FPS</dt>
+      <dd>Rendering frame rate. This is the same value reported by the FPS counter.</dd>
+
+      <dt>Render Calls</dt>
+      <dd>Amount of render calls per frame. An important value that shows how many draw operations are performed during one frame. This value represents the number of different materials on your scene + various supplementary render calls such as shadows, post-processing, etc. </dd>
+
+      <dt>Triangles Rendered</dt>
+      <dd>How many triangles were rendered per frame. See more info about this value below.</dd>
+
+      <dt>Geometry Buffers</dt>
+      <dd>How many geometry buffers your app uses.</dd>
+
+      <dt>HDR Rendering</dt>
+      <dd>Whether HDR rendering switched <em>on</em> or <em>off</em>.</dd>
+
+      <dt>Viewport Resolution</dt>
+      <dd>Rendering viewport resolution.</dd>
+
+      <dt>Pixel Ratio</dt>
+      <dd>Current (used by the renderer) and device (native) pixel ratios.</dd>
+
+      <dt>Image-Based Lighting</dt>
+      <dd>Type of IBL lighting and IBL cube map tile size.</dd>
+
+      <dt>Lights</dt>
+      <dd>The number of lights in your scene.</dd>
+
+      <dt>Reflection Probes</dt>
+      <dd>Amount of cubemap and plane reflection probes in your scene.</dd>
+
+      <dt>Post-Processing</dt>
+      <dd>Scene post-processing passes (in rendering order).</dd>
+
+      <dt>Shadow Map</dt>
+      <dd>Shadow map parameters: filtering type; the number of rendered shadow maps; shadow map resolution.</dd>
+
+      <dt>Materials and Shaders</dt>
+      <dd>The list of rendered materials and shaders. Each list item contains the following info: material name (or names if they share the same shader), shader name, and rendering time per frame (measured in milliseconds).</dd>
+
+      <dt>Total Render Time</dt>
+      <dd>The total amount of time (in milliseconds) it took to render your scene.</dd>
+
+      <dt>Textures &amp; Render Buffers</dt>
+      <dd>Textures and render buffers stats (resolutions). Textures are printed on the top of the list (prefixed with <strong>Texture</strong>), while render buffers printed at the bottom of the list (prefixed with <strong>WebGLRenderTarget</strong>).</dd>
+    </dl>
+
+    <p>
+      To help you spot performance issues, lines which you should pay attention to first, are marked in red. For example, on the screenshot below, the shadow map appears to be too big (4K) which may result in slower rendering.
+    </p>
+
+    <img src="files/performance-bottlenecks/performance-profile-red.png" class="centered" style="max-width: 622px;">
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#performance_bottlenecks" id="performance_bottlenecks" class="permalink">#</a></p>
+
+    <h2>Common Rendering Performance Bottlenecks</h2>
+
+    <p>Here are the most frequent bottlenecks limiting your frame rate.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#complex_materials" id="complex_materials" class="permalink">#</a></p>
+
+    <h3>Complex Materials</h3>
+
+    <p>Graphics hardware can render a limited amount of pixels per second. In most scenarios, you can't render more because your materials use lengthy and sophisticated pixel (aka fragment) shaders, which in turn require too much processing power from the GPU.</p>
+
+    <p>You can easily detect the situation with limited pixel performance by reducing or increasing the browser window size. If your frame rate (FPS) grows substantially when you reduce the size, you have such a situation.</p>
+
+    <p>The most straightforward way to increase performance is to simplify your materials. Pay attention at the top of the <strong>Materials and Shaders</strong> list in the <a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile">performance profile</a>.
+
+    <img src="files/performance-bottlenecks/performance-profile-materials.jpg" alt="Profiling materials and shaders">
+
+    </p><p>In many cases, the issues with material performance happen due to slow shading nodes. See more in the <a href="manual/en/blender/Shader-Nodes-Reference.html#performance_considerations">Blender</a>, <a href="manual/en/max/Materials-Maps-Reference.html#performance_considerations">3ds Max</a> or <a href="manual/en/maya/Materials.html#performance_considerations">Maya</a> material performance subsections.</p>
+
+    <p>You can also get rid of the shader-limited performance problem, by setting the pixel ratio &lt; 1 with the <a href="manual/en/puzzles/System.html#set_screen_scale">set screen scale</a> puzzle. This can severely impact the quality of your app, so consider it a last-hope solution.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#postprocessing" id="postprocessing" class="permalink">#</a></p>
+
+    <h3>Post-processing</h3>
+
+    <p>Several post-processing effects can substantially reduce the performance of your apps:</p>
+
+    <ul>
+      <li>Screen-space refraction and reflection (see <a href="manual/en/puzzles/Postprocessing.html#ssr">puzzle</a>).</li>
+      <li>
+        Ambient occlusion (see
+        <a href="manual/en/blender/Lighting-and-Rendering.html#ambient_occlusion">Blender</a> /
+        <a href="manual/en/max/Lighting-and-Rendering.html#ambient_occlusion">Max</a> /
+        <a href="manual/en/maya/Lighting-and-Rendering.html#ambient_occlusion">Maya</a>
+        manual pages).
+      </li>
+      <li>Depth-of-field (see <a href="manual/en/puzzles/Postprocessing.html#dof">puzzle</a>).</li>
+    </ul>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#shadows" id="shadows" class="permalink">#</a></p>
+
+    <h3>Shadows</h3>
+
+    <p>Complex shadow algorithms with hight shadow map sizes can also negatively affect your rendering speed.</p>
+
+    <ol>
+      <li>If you have multiple lights on your scene, disable shadows for the weakest (with low intensity) ones.</li>
+      <li>In most cases, <em>point</em> light shadows require more calculations than <em>spot</em> or <em>sun/directional</em> shadows.</li>
+      <li>Reduce shadow map size (see <a href="manual/en/blender/Shadows.html#global_settings">Blender</a>, <a href="manual/en/max/Shadows.html#per_light_settings">3ds Max</a>, <a href="manual/en/maya/Shadows.html#per_light_settings">Maya</a>).</li>
+      <li>Switch to less performance-hungry shadow filtering algorithm (see <a href="manual/en/blender/Shadows.html#shadow_filtering">Blender</a>, <a href="manual/en/max/Shadows.html#shadow_filtering">3ds Max</a>, <a href="manual/en/maya/Shadows.html#shadow_filtering">Maya</a>).</li>
+    </ol>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#too_much_geometry" id="too_much_geometry" class="permalink">#</a></p>
+
+    <h3>Too Much Geometry</h3>
+
+    <p>Too complex geometry can also affect your rendering performance. We recommend using no more than 100K triangles per model or 1M triangles per entire scene.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#slow_ibl" id="slow_ibl" class="permalink">#</a></p>
+
+    <h3>Slow Image-Based Lighting</h3>
+
+    <p>In Verge3D you can do several performance tweaks for your environment lighting:</p>
+
+    <ol>
+      <li>Reduce environment cube map tile size (see <a href="manual/en/blender/Lighting-and-Rendering.html">Blender</a>, <a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings">3ds Max</a>, <a href="manual/en/maya/Lighting-and-Rendering.html#environment_lighting">Maya</a>). We recommend using 256 pixel cube maps for most cases.</li>
+      <li>Switch to more performance-efficient environment mode (see <a href="manual/en/blender/Lighting-and-Rendering.html">Blender</a>, <a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings">3ds Max</a>, <a href="manual/en/maya/Lighting-and-Rendering.html#global_rendering_settings">Maya</a>).</li>
+    </ol>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#too_many_lights" id="too_many_lights" class="permalink">#</a></p>
+
+    <h3>Too Many Lights</h3>
+
+    <p>Excessive light calculations increase the complexity of your shaders. Try to reduce their amount or switch to <a href="manual/en/introduction/Optimizing-WebGL-performance.html#HDR_Lighting">IBL-only</a> lighting.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#too_many_render_calls" id="too_many_render_calls" class="permalink">#</a></p>
+
+    <h3>Too Many Render Calls</h3>
+
+    <p>
+      Hundreds of render calls significantly load your CPU. Hence you should keep that value as low as possible. In most situations, we recommend you to keep the amount of render calls below 100.
+    </p>
+
+    <p>
+      If you render many static objects with the same material, you can significantly increase peformance by using the <a href="manual/en/puzzles/Scenes.html#batch_geometry">batch geometry</a> puzzle.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#scene_loading_time" id="scene_loading_time" class="permalink">#</a></p>
+
+    <h2>Scene Loading Time</h2>
+
+    <p>Another thing that you need to pay attention to is the scene loading time. Users really don't like to wait too much for your application to load.</p>
+
+    <p>Here are the most frequently occurring bottlenecks that slow down your app loading.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#large_binary_textures" id="large_binary_textures" class="permalink">#</a></p>
+
+    <h3>Large Binary Data or Textures</h3>
+
+    <p>Since your app assets are transferred over the network, you should minimize their size. To help you with asset optimization, there is a network inspecting tool accessible from the browser <a href="manual/en/introduction/FAQ.html#browser_console">console</a>. Simply click on the <strong>Network</strong> tab and reload your page.</p>
+
+    <img src="files/performance-bottlenecks/network-browser-profile.jpg" alt="Profiling network activity in Verge3D" class="centered" style="max-width: 943px;">
+
+    <p class="note">Check the browser documentation on how to use this feature: <a href="https://developers.google.com/web/tools/chrome-devtools/network" target="_blank">Chrome</a>, <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor" target="_blank">Firefox</a>, <a href="https://developer.apple.com/safari/tools/" target="_blank">Safari</a>.</p>
+
+    <p>Sort the resources by size to get the ones affecting your loading time the most. In most cases, these assets can be divided into two categories:</p>
+
+    <ol>
+      <li><strong>Verge3D Binary</strong> (*.bin or *.bin.xz extensions) — contains geometry, morphing, and animation of your scene. Asset compression can significantly reduce the size of this file, always <a href="manual/en/introduction/Asset-compression.html">enable</a> it for your apps.</li>
+      <li><strong>Textures</strong> (*.jpg, *.png, or *.hdr extensions) — see <a href="manual/en/introduction/Optimizing-WebGL-performance.html#Texturing">here</a> for more info on how to optimize them.</li>
+    </ol>
+
+    <p>Also, there are two dirty but highly effective methods to optimize your textures:</p>
+
+    <ol>
+      <li>Downscale your textures by reducing their dimensions by factor 2 (e.g 2048x2048 to 1024x1024 or even 512x512).</li>
+      <li>Convert all PNG textures to JPEG (even normal maps).</li>
+    </ol>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#shader_compilation" id="shader_compilation" class="permalink">#</a></p>
+
+    <h3>Too Many or Too Complex Materials</h3>
+
+    <p>With some exceptions, each material on your scene requires compiling a pair of special programs called shaders: <em>vertex shader</em> and <em>fragment (aka pixel) shader</em>. A shader is a special program executed on your GPU to calculate various rendering entities like vertex positions, textures, lighting, reflections, refractions, etc.</p>
+
+    <p>Shader compilation is a computation-intensitive task that is performed each time your app is being loaded. If you have a lot of different materials on your scene, shader compilation can significantly increase total loading time.</p>
+
+    <p>So the less shaders your application uses, the faster is loading. Also, shaders are cached by WebGL, so if your shader is used by multiple objects it is compiled only once.</p>
+
+    <p>Therefore for fast loading, it is important to use as few unique shaders as possible. One of possible way to achieve this is to enable the glTF compatibility flag, which a) simplifies the shaders a lot so that they are compiled and work faster and b) standardizes them to enable for more effective caching.</p>
+
+    <p>The obvious drawback of using glTF-compatible shaders is that they may be too simplistic for implementing desired graphics effects. So as it is always in real-time graphics, you need to balance between quality and performance.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#gpu_memory_usage" id="gpu_memory_usage" class="permalink">#</a></p>
+
+    <h2>GPU Memory Usage</h2>
+
+    <p>Excessive GPU memory usage can considerably reduce performance or even crash your app. The following things consume a lot of memory.</p>
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#large_textures" id="large_textures" class="permalink">#</a></p>
+
+    <h3>Large Textures</h3>
+
+    <p>For example, a texture of size 4096x4096 alone occupies almost 90 Mb of video memory. To get all textures in your app, check out <strong>Textures &amp; Render Buffers</strong> section in the <a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile">performance profile</a>.</p>
+
+    <img src="files/performance-bottlenecks/performance-profile-textures.jpg" alt="Profiling textures in Verge3D">
+
+    <p>See also <a href="manual/en/introduction/FAQ.html#texture_memory_usage">here</a> for more info on how to calculate texture memory usage.</p>
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#many_postprocessing_passes" id="many_postprocessing_passes" class="permalink">#</a></p>
+
+    <h3>Too Many Post-Processing Passes</h3>
+
+    <p>Most post-processing effects require additional rendering buffers which consume GPU memory. Check out the bottom part of the <strong>Textures &amp; Render Buffers</strong> list in the <a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile">performance profile</a> to see all render buffers.</p>
+
+    <img src="files/performance-bottlenecks/performance-profile-render-buffers.jpg" alt="Profiling render buffers in Verge3D" class="centered" style="max-width: 816px;">
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#large_geometry_buffers" id="large_geometry_buffers" class="permalink">#</a></p>
+
+    <h3>Large Geometry Buffers</h3>
+
+    <p>Meshes with many triangles require large geometry buffers and hence consume a lot of video memory to store them.</p>
+
+
+
+    <p><a href="manual/en/introduction/Performance-Bottlenecks.html#see_also" id="see_also" class="permalink">#</a></p>
+
+    <h2>See Also</h2>
+
+    <p>
+      Check out the <a href="manual/en/introduction/Optimizing-WebGL-performance.html">Optimization Techniques</a> section for more asset optimization methods.
+    </p>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

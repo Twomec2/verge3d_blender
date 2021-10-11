@@ -1,0 +1,118 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="875" scrolly="421.9999999999999" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="1033.778161413653" scrolly="645.5427453423813" scale="0.99225">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="yXL1GEs3K*YGRr*`c26K" type="">video</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="s09H0:Ye[HMayl;mQl~4" x="-870" y="-430">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <block type="objectList" id="o,l1W[+nmN2D54fztArg">
+          <field name="FIELDNAME">tv_screen</field>
+        </block>
+      </value>
+      <statement name="DO_OVER">
+        <block type="setHTMLElemStyle" id="`bb=C,jG0_i5KxP_a[w#">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="Zb4BFf.|0k]/?S;A*Yj3">
+              <field name="TEXT">pointer</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="DOMObjectSelector" id="nm/0{KUvqUxXcZ$c]Frp">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="setHTMLElemStyle" id="{usaUn-]`c)%BuPb;26}">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="%Y:%3N=C4vzcHuVJ[Dhz">
+              <field name="TEXT">default</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="DOMObjectSelector" id="QX8H$-fh~X^)ChoeL@[8">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="K^s#9x%`jv:107y4W`Yo" x="-870" y="-230">
+      <field name="VAR" id="yXL1GEs3K*YGRr*`c26K">video</field>
+      <value name="VALUE">
+        <block type="loadVideo" id="e)Q|$oJ0`+4#FOFjZz`A">
+          <value name="URL">
+            <shadow type="text" id="OTfI#qRcusHw/-#F;=jv">
+              <field name="TEXT">https://cdn.soft8soft.com/videos/yellow_fish.mp4</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="whenClicked" id="}hwntsYKC9jq7Yr|eG8l">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <block type="objectList" id="ry_~qEIB[B_b#V-v1Ee(">
+              <field name="FIELDNAME">tv_screen</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="replaceTexture" id="cVu1DP5bBA0T0njIw]Hg">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" enabledoslot="true" flextexinput="false"></mutation>
+              <field name="OLD_TEX_NAME">texture_for_video</field>
+              <value name="MATERIAL">
+                <block type="materialList" id="$:N):BcsOc?^4}olc~#n">
+                  <field name="FIELDNAME">tv_screen</field>
+                </block>
+              </value>
+              <value name="NEW_TEX_URL">
+                <shadow type="text" id="5[P8R+U*y~T7y2]E)G[[">
+                  <field name="TEXT">./newTexture.png</field>
+                </shadow>
+                <block type="variables_get" id="Gzqm_x4?+Mz;~0s;I}Hx">
+                  <field name="VAR" id="yXL1GEs3K*YGRr*`c26K">video</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="playAnimationAdv" id="wNT){MoF%#0w=kinDg-~">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="false"></mutation>
+                  <field name="REVERSED">FALSE</field>
+                  <field name="LOOP">LoopRepeat</field>
+                  <value name="VALUE">
+                    <block type="animationList" id=";GEf44A.e;z12tOGLnP1">
+                      <field name="FIELDNAME">Light</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="playSound" id="%cVSqMNS+)ge1C]v7.KF">
+                  <field name="LOOP">TRUE</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="z7q{p4FzPyh=dZ@Q$5P@">
+                      <field name="VAR" id="yXL1GEs3K*YGRr*`c26K">video</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="28" viewport-w="768" viewport-h="460" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

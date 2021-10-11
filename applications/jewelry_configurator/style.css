@@ -1,0 +1,360 @@
+body {
+  overflow: hidden;
+  border: 0px;
+}
+
+.main-app {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.configurator-panel {
+  position: absolute;
+  width: 380px;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.buttons-panel {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.type-controll-panel {
+  display: block;
+  position: static;
+  width: 350px;
+  height: auto;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.ring-type-button {
+    width: 58px;
+    height: 58px;
+    position: static;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid white;
+    float: left;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.ring-button-selected {
+    border: 1px solid #ff6800;
+}
+
+.engrave-div {
+    height: 100%;
+    display: block;
+    background-color: #dadada;
+    width: auto;
+    margin: 2px 15px;
+    position: static;
+    overflow: hidden;
+    border-radius: 5px;
+    border-left-style: none;
+}
+
+.engrave-input-text {
+    width: 98%;
+    height: 20px;
+    position: static;
+    float: left;
+    display: block;
+    overflow: hidden;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-family: Lobster;
+}
+
+.engrave-input-button {
+    width: auto;
+    height: 20px;
+    position: static;
+    float: left;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.controll-panel-header {
+    height: auto;
+    padding-left: 15px;
+    margin-top: 5px;
+    font-family: Bellefair;
+}
+
+.type-head-div {
+    width: 100%;
+    height: 20px;
+    position: static;
+    display: block;
+}
+
+.type-buttons-div {
+    width: auto;
+    height: auto;
+    position: static;
+    display: block;
+    min-height: 64px;
+    max-height: 160px;
+    padding-left: 15px;
+    margin-right: 15px;
+    min-width: 194px;
+    max-width: 710px;
+}
+
+.engrave-text-div {
+    height: auto;
+    width: 182px;
+    min-width: 182px;
+    min-height: 60px;
+    max-width: 224px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.engrave-font-list {
+    height: 26px;
+    width: 100%;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Lobster;
+}
+
+.preloader-screen {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.preloader-center {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    float: left;
+    overflow: visible;
+}
+
+.preloader-container {
+    color: #999999;
+    width: 120px;
+    height: 160px;
+    position: absolute;
+    right: -60px;
+    bottom: -80px;
+    display: block;
+}
+
+.preloader-image-container {
+    width: 100%;
+}
+
+.preloader-image-container {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.preloader-image {
+    position: absolute;
+    z-index: 7;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.preloader-filling-color {
+    position: absolute;
+    width: 120px;
+    z-index: 6;
+    display: block;
+    bottom: 0px;
+    height: 120px;
+    background-color: #dcdcdc;
+}
+
+.preloader-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #bc002c;
+    z-index: 3434534;
+}
+
+.preloader-inner-color {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: #bc0000;
+    margin-top: auto;
+    height: 0%;
+}
+
+.preloader-color-boarder {
+    width: 112px;
+    height: 112px;
+    margin: 4px;
+}
+
+.preloader-percentage {
+    position: static;
+    height: 40px;
+    width: 120px;
+    display: block;
+    font-size: 26px;
+    font-family: Bellefair;
+    text-align: center;
+    line-height: 42px;
+}
+
+.local-preloader-screen {
+    left: 0px;
+    right: 360px;
+    top: 0px;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+.type-buttons-colors {
+  width: 100%;
+  height: 100%;
+}
+
+.local-preloader-container {
+    color: #999999;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right: -60px;
+    bottom: -20px;
+    display: block;
+}
+
+@media only screen and (max-width : 912px) {
+
+.configurator-panel {
+  width: 170px;
+}
+
+.type-controll-panel {
+  width: 160px;
+}
+
+.type-buttons-div {
+  min-width: 150px;
+  min-height: 40px;
+}
+
+.ring-type-button {
+  width: 38px;
+  height: 38px;
+}
+
+.engrave-input-text {
+  width: 120px;
+}
+
+.engrave-font-list {
+  width: 120px;
+}
+
+.local-preloader-screen {
+  right: 170px;
+}
+
+}
+
+@media only screen and (max-width : 375px) and (orientation: portrait) {
+
+.configurator-panel {
+  width: 100%;
+  height: 260px;
+  right: 0;
+  left: 0;
+  top: auto;
+  bottom: 0;
+}
+
+.buttons-panel {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+
+.type-controll-panel {
+  width: auto;
+  margin: 5px 5px 5px 5px;
+}
+
+.type-buttons-div {
+  min-width: 0px;
+  max-width: 350px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 0px;
+}
+
+.engrave-input-text {
+  width: 100%;
+}
+
+.engrave-font-list {
+  width: 100%;
+}
+
+.local-preloader-screen {
+  width: 100%;
+  height: auto;
+  bottom: 260px;
+  right: 0px;
+}
+
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bellefair';
+    src: url('./fonts/Bellefair-Regular.ttf');
+    font-style: normal;
+}

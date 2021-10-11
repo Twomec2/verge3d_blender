@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Персонализация приложений Verge3D - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to customize styles of your Verge3D applications.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Personalizing-Verge3D-Apps.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Персонализация приложений Verge3D - Soft8Soft">
+            <meta property="og:description" content="How to customize styles of your Verge3D applications.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Personalizing-Verge3D-Apps.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Персонализация приложений Verge3D - Soft8Soft">
+            <meta name="twitter:description" content="How to customize styles of your Verge3D applications.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/personalizing-verge3d-apps/light-dark-theme.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/personalizing-verge3d-apps/puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/personalizing-verge3d-apps/annotation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/personalizing-verge3d-apps/app-title.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/personalizing-verge3d-apps/google-title-description.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Персонализация приложений Verge3D</h1>
+
+    <p>
+      Используйте это руководство для создания индивидуальных приложений Verge3D, ориентированных на вашу конкретную аудиторию.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#custom_ui">Пользовательский UI</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#introduction">Введение в стилизацию UI</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#preloader">Настройка Экрана Загрузки</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#annotations">Стилизация Аннотаций</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#fullscreen_button">Изменение Кнопки Полноэкранного Режима</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#title_description">Название и Описание</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#language">Язык</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#icon">Иконка</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#social_media_tags">Теги Социальных Сетей</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#custom_ui" id="custom_ui" class="permalink">#</a></p>
+
+    <h2>Пользовательский UI</h2>
+
+    <p>
+      Лучший способ создать полностью персонализированный UI в Verge3D - это <a href="manual/ru/introduction/HTML-based-user-interfaces.html">создание пользовательского интерфейса поверх 3D</a> (посмотрите демо <a href="https://cdn.soft8soft.com/demo/applications/scooter/index.html" target="_blank">Scooter demo</a> в качестве примера такого подхода). Однако, учитывая трудности создания такого пользовательского интерфейса, здесь мы расскажем о настройке <em>стандартного</em> интерфейса Verge3D. Сюда входят экран предзагрузки, аннотации, кнопка полноэкранного режима, а также заголовок/описание страницы и теги социальных сетей.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#introduction" id="introduction" class="permalink">#</a></p>
+
+    <h2>Введение в стилизацию UI</h2>
+
+    <p>
+      Наряду с экраном, на котором отображается 3D-часть, приложение Verge3D включает в себя дополнительные HTML-элементы для экрана предзагрузки, аннотаций, кнопки полноэкранного режима и др. Все эти элементы дополнены классами CSS, которые можно легко изменить.
+    </p>
+
+    <p>
+      Самый простой способ сделать ваше приложение персонализированным - выбрать <strong>Standard Light</strong> или <strong>Standard Dark</strong> в диалоге создания приложения:
+    </p>
+
+    <img src="files/personalizing-verge3d-apps/light-dark-theme.jpg" class="centered" style="max-width: 522px">
+
+    <p>
+      Для более сложных настроек обратитесь к файлу <em>src/style.css</em> . Не изменяйте этот файл, поскольку он скомпилирован прямо в Verge3D. Вместо этого добавьте весь код стилей в основной CSS-файл вашего приложения. Например, если ваше приложение называется "My Awesome App", то вам следует изменить следующий файл:
+    </p>
+
+    <code>applications/my_awesome_app/my_awesome_app.css</code>
+
+    <p>
+      Кроме того, вы можете изменить классы CSS с помощью редактора пазлов. Смотрите пример пазла <a href="manual/ru/puzzles/HTML.html#set_css_rule">set css rule</a> .
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#preloader" id="preloader" class="permalink">#</a></p>
+
+    <h2>Настройка Экрана Загрузки</h2>
+
+    <p>Для модификации экрана загрузки измените следующие классы CSS:</p>
+
+    <p><strong>v3d-simple-preloader-background</strong> - для изменения фона всего экрана экрана загрузки.</p>
+    <p><strong>v3d-simple-preloader-container</strong> - для изменения элемента контейнера с изображением и полосой экрана загрузки. Переопределив этот класс, вы можете настроить положение и размер экрана загрузки.</p>
+    <p><strong>v3d-simple-preloader-bar</strong> - для изменения полосы загрузки.</p>
+    <p><strong>v3d-simple-preloader-logo</strong> - для изменения изображения экрана загрузки.</p>
+
+    <p>Например, если вам нужно сделать индикатор прогресса <em>красным</em> вместо <em>синего</em> по умолчанию, добавьте следующий код в основной CSS-файл вашего приложения:</p>
+
+    <code class="language-css">
+    .v3d-simple-preloader-bar {
+        background: red;
+    }
+    </code>
+
+    <p>Чтобы изменить изображение экрана загрузки на другое:</p>
+
+    <code class="language-css">
+    .v3d-simple-preloader-logo {
+        background-image: url("PATH_TO_YOUR_IMAGE");
+        background-size: cover;
+    }
+    </code>
+
+    <p>Замените PATH_TO_YOUR_IMAGE на фактический URL вашего изображения, например <em>my_company_logo.png</em>.</p>
+
+    <p class="note">Рекомендуемый размер изображения прелоадера - 110x110px.</p>
+
+    <p>Чтобы назначить пользовательское фоновое изображение вместо стандартного <em>белого</em>:</p>
+
+    <code class="language-css">
+    .v3d-simple-preloader-background {
+        background-image: url("PATH_TO_YOUR_IMAGE");
+    }
+    </code>
+
+    <p>С пазлами все три варианта настройки стиля будут выглядеть следующим образом:</p>
+
+    <!-- HACK: minor styling fix -->
+    <img src="files/personalizing-verge3d-apps/puzzles.jpg" class="centered" style="margin-top:-20px">
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#annotations" id="annotations" class="permalink">#</a></p>
+
+    <h2>Стилизация Аннотаций</h2>
+
+    <p>Для стилизации аннотаций используйте следующие классы CSS:</p>
+
+    <ul>
+      <li><strong>v3d-annotation</strong> - для изменения стиля значка аннотации.</li>
+      <li><strong>v3d-annotation-transparent</strong> - для изменения стиля полупрозрачных аннотаций.</li>
+      <li><strong>v3d-annotation-dialog</strong> - для стилизации всплывающего диалога аннотации.</li>
+    </ul>
+
+    <p>Например, чтобы сделать аннотации квадратными с зеленым фоном код будет выглядеть следующим образом:</p>
+
+    <code class="language-css">
+    .v3d-annotation {
+        border-radius: 0px;
+        background: rgba(0, 255, 0, 0.8);
+    }
+    </code>
+
+    <img src="files/personalizing-verge3d-apps/annotation.jpg" class="centered" style="max-width: 544px">
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#fullscreen_button" id="fullscreen_button" class="permalink">#</a></p>
+
+    <h2>Изменение Кнопки Полноэкранного Режима</h2>
+
+    <p>Стилизация кнопок полноэкранного режима уже управляется вашим приложением. Смотрите следующие классы в главном файле CSS вашего приложения:</p>
+
+    <ul>
+      <li><strong>fullscreen-button</strong> - для изменения стиля обоих кнопок (открытия и закрытия) кнопки полноэкранного режима.</li>
+      <li><strong>fullscreen-open</strong> - для изменения стиля кнопки открытия полноэкранного режима.</li>
+      <li><strong>fullscreen-close</strong> - для изменения кнопки закрытия полноэкранного режима.</li>
+    </ul>
+
+    <p>Например, если вам нужно изменить стандартные изображения открытия/закрытия на что-то другое, измените следующие два класса:</p>
+
+    <code class="language-css">
+    .fullscreen-open {
+        background-image: url('PATH_TO_OPEN_IMAGE');
+    }
+
+    .fullscreen-close {
+        background-image: url('PATH_TO_CLOSE_IMAGE');
+    }
+    </code>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#title_description" id="title_description" class="permalink">#</a></p>
+
+    <h2>Название и Описание</h2>
+
+    <p>
+      Трудно переоценить важность назначения осмысленных заголовка и описания для вашего приложения.
+    </p>
+
+    <p>
+      Заголовок отображается на вкладке браузера, а также используется для названия созданной закладки с вашим приложением:
+    </p>
+
+    <img src="files/personalizing-verge3d-apps/app-title.jpg" class="centered">
+
+    <p>
+      И заголовок, и описание используются поисковыми системами, чтобы найти ваше приложение и представить его пользователю в поисковой выдаче:
+    </p>
+
+    <img src="files/personalizing-verge3d-apps/google-title-description.jpg" class="centered">
+
+    <p>
+      Чтобы изменить название приложения, найдите следующий фрагмент в вашем основном HTML-файле (например<em>my_awesome_app.html</em>):
+    </p>
+
+    <code>
+      &lt;title&gt;Verge3D Web Interactive&lt;/title&gt;
+    </code>
+
+    <p>
+     и измените <em>Verge3D Web Interactive</em> на предпочитаемый заголовок.
+    </p>
+
+    <p class="note">
+      Длина заголовка не должна превышать 50-60 символов.
+    </p>
+
+    <p>
+      Описание приложения может быть изменено таким же образом. Найдите и замените содержание <em>Interactive 3D web application...</em> в теге <em>&lt;meta name="description"&gt;</em> :
+    </p>
+
+    <code>
+&lt;meta name="description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies."&gt;
+    </code>
+
+    <p>
+      на более подходящее описание для приложения.
+    </p>
+
+    <p class="note">
+      Как и заголовок, текст описания не должен быть длинным - 120-160 символов вполне достаточно.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#language" id="language" class="permalink">#</a></p>
+
+    <h2>Язык</h2>
+
+    <p>
+      Измените следующий фрагмент в начале вашего основного HTML-файла, чтобы изменить язык приложения:
+    </p>
+
+    <code>
+      &lt;html lang="en"&gt;
+    </code>
+
+    <p>
+      Смотрите <a href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">здесь</a> для получения списка возможных языков.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#icon" id="icon" class="permalink">#</a></p>
+
+    <h2>Иконка</h2>
+
+    <p>
+      Чтобы настроить иконку страницы, отображаемую в браузере (также известную как favicon), замените следующие файлы в директории <em>media</em> вашего приложения:
+    </p>
+
+    <ul>
+      <li>favicon.ico</li>
+      <li>favicon-16x16.png</li>
+      <li>favicon-32x32.png</li>
+      <li>apple-touch-icon.png</li>
+      <li>android-chrome-192x192.png</li>
+      <li>android-chrome-512x512.png</li>
+      <li>safari-pinned-tab.svg</li>
+    </ul>
+
+    <p>
+      Чтобы упростить дело, в интернете можно найти множество <em>генераторов иконок</em> .
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#social_media_tags" id="social_media_tags" class="permalink">#</a></p>
+
+    <h2>Теги Социальных Сетей</h2>
+
+    <p>
+      Чтобы ссылка на ваше приложение выглядела круто в Twitter, измените следующие теги title/description/image в основном HTML-файле:
+    </p>
+
+    <code>
+&lt;meta name="twitter:title" content="Verge3D Web Interactive"&gt;
+&lt;meta name="twitter:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies."&gt;
+&lt;meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg"&gt;
+    </code>
+
+    <p>
+      Для получения лучшего результата масштабируйте изображение до размера 1200x630 пикселей и укажите <em>полный</em> URL, например <em>https://www.yoursite.com/app_social_image.jpg</em>, не просто <em>app_social_image.jpg</em>.
+    </p>
+
+    <p>
+      Для Facebook, Reddit, WhatsApp, Weibo, VK и других платформ социальных сетей, поддерживающих протокол Open Graph, найдите и измените следующие теги. Вы можете задать им те же значения, которые вы использовали для Twitter:
+    </p>
+
+    <code>
+&lt;meta property="og:title" content="Verge3D Web Interactive"&gt;
+&lt;meta property="og:description" content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies."&gt;
+&lt;meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg"&gt;
+    </code>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

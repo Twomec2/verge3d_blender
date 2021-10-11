@@ -1,0 +1,700 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для 3ds Max: Материалы и Тектсурные Карты - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about 3ds Max material editor's features supported in Verge3D.">
+    <meta content="https://cdn.soft8soft.com/images/materials_maps_max.jpg" property="og:image">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/max/Materials-Maps-Reference.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для 3ds Max: Материалы и Тектсурные Карты - Soft8Soft">
+            <meta property="og:description" content="Information about 3ds Max material editor's features supported in Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/materials_maps_max.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/max/Materials-Maps-Reference.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для 3ds Max: Материалы и Тектсурные Карты - Soft8Soft">
+            <meta name="twitter:description" content="Information about 3ds Max material editor's features supported in Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/materials_maps_max.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/physical-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/physical-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/standard-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/standard-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/blend-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/blend-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/multi-sub-object-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/multi-sub-object-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/bitmap-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/bitmap-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/normal-bump-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/normal-bump-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/gradient-ramp-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/gradient-ramp-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-correction-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-correction-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/composite-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/composite-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/mix-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/mix-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/vertex-color-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/vertex-color-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-additional-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-animation-keys.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-animation-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Материалы и Тектсурные Карты / 3ds Max</h1>
+
+    <p>
+      В той или иной степени Verge3D поддерживает почти все материалы и карты, предоставляемые редактором материалов 3ds Max. Однако для большинства задач веб-графики в реальном времени достаточно использовать лишь ограниченный набор из них. Ниже перечислены только те материалы и карты, которые используются в демонстрационных версиях Verge3D.
+    </p>
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/max/Materials-Maps-Reference.html#conventions">Условные обозначения</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Materials_Reference">Материалы</a><ul><li><a href="manual/ru/max/Materials-Maps-Reference.html#Physical">Physical (Физические)</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Standard">Standart (Стандартный)</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Blend">Blend (Смешивание)</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Multi_Sub_Object">Multi/Sub-Object</a></li></ul></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Maps">Maps (Текстурные Карты)</a><ul><li><a href="manual/ru/max/Materials-Maps-Reference.html#Bitmap">Bitmap (Растровое Изображение)</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Normal_Bump">Normal Bump (Карта Нормалей)</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Gradient_Ramp">Gradient Ramp</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Color_Correction">Color Correction</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Composite">Composite</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Mix">Mix</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Color_Map">Color Map</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Vertex_Color">Vertex Color</a></li></ul></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Controllers">Controllers</a><ul><li><a href="manual/ru/max/Materials-Maps-Reference.html#Introduction">Introduction</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Setting_Up_Use_With_Puzzles">Настройка. Использование с Пазлами.</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#Animation_Controllers">Анимация</a></li></ul></li><li><a href="manual/ru/max/Materials-Maps-Reference.html#performance_considerations">Оптимизация Производительности</a><ul><li><a href="manual/ru/max/Materials-Maps-Reference.html#principled_bsdf_performance">Оптимизация Физических Материалов</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#conventions" id="conventions" class="permalink">#</a></p>
+
+    <h2>Условные обозначения</h2>
+
+    <p>
+      Входы, поддерживаемые Verge3D, отмечены зеленой галочкой, а неподдерживаемые - красной. Параметры, поддерживаемые Verge3D, выделены зеленым цветом. Параметры, расположенные на панели <strong>Verge3D Material Params</strong>, не выделены, так как все они должны работать.
+    </p>
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Materials_Reference" id="Materials_Reference" class="permalink">#</a></p>
+
+    <h2>Материалы</h2>
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Physical" id="Physical" class="permalink">#</a></p>
+
+    <h3>Physical (Физические)</h3>
+
+    <p>
+      <strong>Physical</strong> материалы - мощный инструмент для визуализации поверхностей модели в Verge3D. Для их создания обычно требуется настройка карты окружения (она есть в сцене куба по умолчанию). Быстро проверить работу <strong>Physical</strong> материалов можно на ART-рендере во вьюпорте 3ds Max или в Verge3D с помощью опции меню <strong>Sneak Peek</strong>.
+    </p>
+
+    <img src="files/materials-maps-reference-max/physical-material.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Physical</strong> материалы используются в большинстве демо-версий Verge3D, таких как Scooter, Industrial Robot, Load Unload и др.
+    </p>
+
+    <img src="files/materials-maps-reference-max/physical-material-example.jpg" class="centered" style="max-width: 1000px">
+
+    Дополнительные сведения о материале <strong>Physical</strong> см. на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-809B9123-21A2-443E-A7A4-0DAB70410B8D" target="_blank">Autodesk</a>
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Standard" id="Standard" class="permalink">#</a></p>
+
+    <h3>Standart (Стандартный)</h3>
+
+    <p>
+    <strong>Standard</strong> материал проще <strong>Physical</strong> и обеспечивают лучшую производительность при рендеринге в реальном времени. Обычно они требуют установки некоторого освещения, хотя они будут работать и на сценах без освещения благодаря источникам света, автоматически предоставляемым 3ds Max (которые воспроизводятся Verge3D). Материалы <strong>Standard</strong> можно быстро проверить, используя рендер Scanline во вьюпорте 3ds Max или в Verge3D с помощью опции меню <strong>Sneak Peek</strong>.
+    </p>
+
+    <img src="files/materials-maps-reference-max/standard-material.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Standard</strong> материалы используются, например, в демо Дополненной Реальности Verge3D и игре Farmer's Journey для всех ассетов.
+    </p>
+
+    <img src="files/materials-maps-reference-max/standard-material-example.jpg" class="centered" style="max-width: 1000px">
+
+    Дополнительные сведения о материале <strong>Standard</strong> см. на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-78973040-1D59-491E-8440-30B786641AD0" target="_blank"></a>Autodesk.
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Blend" id="Blend" class="permalink">#</a></p>
+
+    <h3>Blend (Смешивание)</h3>
+
+    <p>
+      Этот компонент смешивает два материала с помощью маски или коэффициента.
+    </p>
+
+    <img src="files/materials-maps-reference-max/blend-material.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Blend</strong> часто используется для подмешивания запеченной карты окклюзии к материалу, чтобы удалить любое освещение с затененной поверхности.
+    </p>
+
+    <img src="files/materials-maps-reference-max/blend-material-example.jpg" class="centered" style="max-width: 1000px">
+
+    Дополнительную информацию о материале <strong>Blend</strong> можно найти на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-D2B59023-7D53-4E86-804F-7A037E787055" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Multi_Sub_Object" id="Multi_Sub_Object" class="permalink">#</a></p>
+
+    <h3>Multi/Sub-Object</h3>
+
+    <p>
+      Этот компонент используется для назначения нескольких материалов различным частям одного и того же объекта.
+    </p>
+
+    <img src="files/materials-maps-reference-max/multi-sub-object-material.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      В следующем примере два <strong>Physical</strong> материала, окрашенная сталь и матовый хром, назначены одному и тому же объекту колеса в разных местах:
+    </p>
+
+    <img src="files/materials-maps-reference-max/multi-sub-object-material-example.jpg" class="centered" style="max-width: 1000px">
+
+    Дополнительные сведения о материале <strong>Multi/Sub-Object</strong> см. на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-D968CDD9-4C5D-489D-A311-ED7486FCD4AA" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Maps" id="Maps" class="permalink">#</a></p>
+
+    <h2>Maps (Текстурные Карты)</h2>
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Bitmap" id="Bitmap" class="permalink">#</a></p>
+
+    <h3>Bitmap (Растровое Изображение)</h3>
+
+    <p>
+      Эта карта назначает изображение для использования в качестве текстуры в материалах.
+    </p>
+
+    <img src="files/materials-maps-reference-max/bitmap-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Пример использования можно увидеть ниже:
+    </p>
+
+    <img src="files/materials-maps-reference-max/bitmap-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о карте <strong>Bitmap</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-A1654CD2-2A7C-42A6-816D-28F7A849F96F" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Normal_Bump" id="Normal_Bump" class="permalink">#</a></p>
+
+    <h3>Normal Bump (Карта Нормалей)</h3>
+
+    <p>
+      Эта карта обеспечивает текстуру нормалей для материалов.
+    </p>
+
+    <img src="files/materials-maps-reference-max/normal-bump-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Пример использования можно увидеть ниже:
+    </p>
+
+    <img src="files/materials-maps-reference-max/normal-bump-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о карте <strong>Normal Bump</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-BFFFC7F4-8B39-435C-9015-A38245A3250B" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Gradient_Ramp" id="Gradient_Ramp" class="permalink">#</a></p>
+
+    <h3>Gradient Ramp</h3>
+
+    <p>
+      Эта карта создает градиент различных видов.
+    </p>
+
+    <img src="files/materials-maps-reference-max/gradient-ramp-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      В следующем упрощенном примере для покрытия фоновой модели используется <strong>Gradient Ramp</strong>.
+    </p>
+
+    <img src="files/materials-maps-reference-max/gradient-ramp-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию на карте <strong>Gradient Ramp</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-08436626-73A4-4246-BD26-1F151C141B0E" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Color_Correction" id="Color_Correction" class="permalink">#</a></p>
+
+    <h3>Color Correction</h3>
+
+    <p>
+      Эта карта изменяет цвет входной карты.
+    </p>
+
+    <img src="files/materials-maps-reference-max/color-correction-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Color Correction</strong> может использоваться для извлечения компонентов окклюзии, шероховатости и металличности, упакованных в R, G, B каналы одной текстуры (она же ORM текстура), или для извлечения любых других масок, упакованных в одну текстуру по причинам оптимизации памяти и размера файла.
+    </p>
+
+    <img src="files/materials-maps-reference-max/color-correction-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию на карте <strong>Color Correction</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-77E1EA94-76CA-4A66-AD3E-27AED8FB7A8A" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Composite" id="Composite" class="permalink">#</a></p>
+
+    <h3>Composite</h3>
+
+    <p>
+      Эта карта накладывает входные карты друг на друга.
+    </p>
+
+    <img src="files/materials-maps-reference-max/composite-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      В следующем упрощенном примере <strong>Composite</strong> используется для объединения локальной карты окклюзии с картой окклюзии всего объекта путем перемножения.
+    </p>
+
+    <img src="files/materials-maps-reference-max/composite-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о карте <strong>Composite</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-850CFCCD-2DF9-4FC9-85F7-9A92AE0C0297" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Mix" id="Mix" class="permalink">#</a></p>
+
+    <h3>Mix</h3>
+
+    <p>
+      Эта карта объединяет 2 входные карты или цвета с помощью коэффициента смешивания.
+    </p>
+
+    <img src="files/materials-maps-reference-max/mix-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Mix</strong> можно использовать, например, для добавления маскированных цветов к материалам или для переключения между вариантами материалов в анимированном переходе.
+    </p>
+
+    <img src="files/materials-maps-reference-max/mix-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о карте <strong>Mix</strong> на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-824EF321-B018-45DF-954A-93BDD0A6A696" target="_blank"></a>Autodesk.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Color_Map" id="Color_Map" class="permalink">#</a></p>
+
+    <h3>Color Map</h3>
+
+    <p>
+      Эта карта предоставляет сплошные цвета или растровые изображения с гамма-коррекцией.
+    </p>
+
+    <img src="files/materials-maps-reference-max/color-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      <strong>Color Map</strong> предпочтительнее использовать в тех случаях, когда необходимо задать один и тот же цвет в нескольких местах для обеспечения согласованности. В следующем примере <strong>Color Map</strong> используется как маскированный <strong>Base Color</strong> и как входной <strong>Emission Color</strong> материала.
+    </p>
+
+    <img src="files/materials-maps-reference-max/color-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о *Цветовой карте* на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-51AF0DA9-A591-41CB-BABE-B6105816E13F" target="_blank">Autodesk</a>.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Vertex_Color" id="Vertex_Color" class="permalink">#</a></p>
+
+    <h3>Vertex Color</h3>
+
+    <p>
+      Эта карта обеспечивает раскраску вершин для использования в материалах.
+    </p>
+
+    <img src="files/materials-maps-reference-max/vertex-color-map.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Пример использования можно увидеть ниже:
+    </p>
+
+    <img src="files/materials-maps-reference-max/vertex-color-map-example.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о карте Vertex Color на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-2701B80A-9335-4E45-859F-11D5EC1CB76B" target="_blank"></a>Autodesk.
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Controllers" id="Controllers" class="permalink">#</a></p>
+
+    <h2>Controllers</h2>
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Introduction" id="Introduction" class="permalink">#</a></p>
+
+    <h3>Introduction</h3>
+
+    <p>
+      <strong>Controllers</strong> используются в 3ds Max для обеспечения анимированных входов, которые могут быть подхвачены Verge3D в качестве анимации. Кроме того, Verge3D имеет средства для изменения значения <strong>Controller</strong> с помощью пазлов (<a href="manual/ru/puzzles/Materials.html#materials_set_color">установить цвет</a> или <a href="manual/ru/puzzles/Materials.html#materials_set_value">установить значение</a>) или с помощью JavaScript.
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Выбор того, какой <strong>Controller</strong> использовать, зависит от того, можно ли соединить его с нужным входом. Как правило, вы можете использовать <strong>RGB/RGBA/Point3/Point4 Controllers</strong> для цветов и <strong>Float Controllers</strong> для значений.
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Setting_Up_Use_With_Puzzles" id="Setting_Up_Use_With_Puzzles" class="permalink">#</a></p>
+
+    <h3>Настройка. Использование с Пазлами.</h3>
+
+    <p>
+      В 3ds Max <strong>Controllers</strong> могут быть подключены только к так называемым <strong>Additional Params</strong> материала или карты. По умолчанию <strong>Additional Params</strong> скрыты, поэтому их нужно сначала показать с помощью меню правой кнопки мыши:
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers-additional-params.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      В следующем примере контроллер <strong>Bezier RGBA Color</strong> подключен к входу <strong>Base Color Map</strong> материала <strong>Physical</strong> через <strong>Color Map</strong> (также может быть подключен напрямую без <strong>Color Map</strong>).
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers-example.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      В результате появляется возможность изменить цвет материала с помощью пазла <a href="manual/ru/puzzles/Materials.html#materials_set_color">set color</a>. Для этого вставьте пазл <a href="manual/ru/puzzles/Selectors.html#select_material">material selector</a> и выберите название материала в его выпадающем меню. Затем выберите название карты с контроллером в выпадающем меню пазла <strong>set color</strong>.
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers-example-puzzles.jpg" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#Animation_Controllers" id="Animation_Controllers" class="permalink">#</a></p>
+
+    <h3>Анимация</h3>
+
+    <p>
+      <strong>Controller</strong> можно анимировать с помощью <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-1026A4FF-5827-4306-8E28-00812550FB4C" target="_blank">standard 3ds Max methods</a>. В следующем примере к контроллеру <strong>Bezier RGBA Color</strong> были добавлены ключи анимации для обеспечения плавного перехода цвета.
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers-example-animation-keys.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Анимацию можно быстро проверить с помощью функции <strong>Sneak Peek</strong> в Verge3D. После экспорта сцены появляется возможность управлять анимацией с помощью <a href="manual/ru/puzzles/Animation.html">Puzzles</a> или JavaScript.
+    </p>
+
+    <img src="files/materials-maps-reference-max/controllers-example-animation-puzzles.jpg" class="centered" style="max-width: 1000px">
+
+    Смотрите дополнительную информацию о *Контроллерах* на сайте <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-C1828D93-F764-4F9C-92AB-A5C0BB20831E" target="_blank">Autodesk</a>.
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#performance_considerations" id="performance_considerations" class="permalink">#</a></p>
+
+    <h2>Оптимизация Производительности</h2>
+
+
+    <p><a href="manual/ru/max/Materials-Maps-Reference.html#principled_bsdf_performance" id="principled_bsdf_performance" class="permalink">#</a></p>
+
+    <h3>Оптимизация Физических Материалов</h3>
+
+    <p>Будучи единственным выбором для создания красивых и реалистичных рендеров, <strong>Physical Material</strong>, тем не менее, требует больше вычислительной мощности от вашего GPU и замедляет загрузку приложений. Это особенно актуально, если в вашей сцене много таких материалов.</p>
+
+    <p>Для повышения производительности вы можете сделать одно из следующих действий:</p>
+
+    <ul>
+      <li>Заменить <strong>Physical Material</strong> на <strong>Standard Material</strong>.</li>
+      <li>Настроить <a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">Environment Map Size</a> или <a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">IBL Environment Mode</a> свойства для улучшения характеристик освещения окружающей среды.</li>
+      <li>Переключение на <a href="manual/ru/max/GLTF-Materials.html">glTF 2.0 model</a>.</li>
+    </ul>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

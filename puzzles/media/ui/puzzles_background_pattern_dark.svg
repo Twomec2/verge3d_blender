@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg5182"
+   version="1.1"
+   viewBox="0 0 4.7625001 4.7625001"
+   height="18"
+   width="18"
+   sodipodi:docname="puzzles_background_pattern_dark.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5006"
+     showgrid="false"
+     inkscape:zoom="64"
+     inkscape:cx="4.9734418"
+     inkscape:cy="14.171249"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5182" />
+  <defs
+     id="defs5176">
+    <pattern
+       patternTransform="matrix(0.26458333,0,0,0.26458333,8.2e-6,292.23755)"
+       id="pattern4843"
+       xlink:href="#pattern4781" />
+    <pattern
+       id="pattern4781"
+       patternTransform="matrix(0.26458333,0,0,0.26458333,528.17474,640.03528)"
+       height="17.999999"
+       width="17.999999"
+       patternUnits="userSpaceOnUse">
+      <g
+         transform="matrix(3.7795276,0,0,3.7795276,-1996.251,-2419.031)"
+         id="g4777">
+        <rect
+           y="640.03528"
+           x="528.17474"
+           height="4.7624998"
+           width="4.7624998"
+           id="rect4773"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.19839579;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+        <rect
+           y="642.15192"
+           x="530.29138"
+           height="0.52916664"
+           width="0.52916664"
+           id="rect4771"
+           style="opacity:1;fill:#cbcbcb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22693051;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+      </g>
+    </pattern>
+    <pattern
+       patternTransform="matrix(0.26458334,0,0,0.26458334,1.7138804e-7,-1.8345245e-5)"
+       id="pattern4982"
+       xlink:href="#pattern5006"
+       inkscape:collect="always" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="17.999999"
+       height="17.999999"
+       patternTransform="matrix(0.26458333,0,0,0.26458333,609.36634,397.21502)"
+       id="pattern5006">
+      <g
+         id="g5004"
+         transform="matrix(3.7795276,0,0,3.7795276,-2215.4602,-2095.9303)">
+        <rect
+           style="opacity:1;fill:#0f0f0f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.16103144;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+           id="rect5000"
+           width="4.7624998"
+           height="4.7624998"
+           x="586.17383"
+           y="554.54822" />
+        <rect
+           y="556.66486"
+           x="588.29047"
+           height="0.52916664"
+           width="0.52916664"
+           id="rect5002"
+           style="opacity:1;fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.01789238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+      </g>
+    </pattern>
+  </defs>
+  <metadata
+     id="metadata5179">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="display:inline;fill:url(#pattern4982);stroke:none;stroke-width:1"
+     width="4.7625003"
+     height="4.7625003"
+     x="0"
+     y="-1.861023e-07"
+     id="rect5011" />
+</svg>

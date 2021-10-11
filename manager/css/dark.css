@@ -1,0 +1,176 @@
+body {
+    background-color: #0f0f0f;
+    color: #c6c6c6;
+}
+
+input[type="text"] {
+    background-color: #000;
+    border: solid #5d5d5d 1px;
+}
+
+input[type="number"] {
+    background-color: #000;
+    border: solid #5d5d5d 1px;
+}
+
+input[type="checkbox"]:checked + span {
+  color: white;
+  background-color: red;
+}
+
+textarea {
+    background-color: #000;
+    border: solid #5d5d5d 1px;
+}
+
+hr {
+    border: solid #5d5d5d 0.5px;
+}
+
+div.banner {
+    background-image: url("../img/dark/banner.svg");
+    background-color: #1e1e1eff;
+}
+
+.button {
+    color: #fff;
+    background-color: #3b3b3b;
+}
+
+.button-like {
+    color: #fff;
+    background-color: #3b3b3b;
+}
+
+a.colored-link {
+    color: #454cff;
+}
+
+div.search .search-input {
+    border: solid #5d5d5d 1px;
+    background-image: url(../img/dark/search.svg);
+    background-color: #0f0f0f;
+}
+
+.main-panel {
+    background-color: #1e1e1e;
+}
+
+.main-panel table {
+    background-color: #131313;
+}
+
+.main-panel table tr:nth-child(odd) {
+    background: #232323;
+}
+
+.main-panel table tr:nth-child(even) {
+    background: #1e1e1e;
+}
+
+.main-panel table th {
+    color: #fff;
+    background-color: #3b3b3b;
+}
+
+.main-panel table tfoot td {
+    color: #fff;
+    background-color: #3b3b3b;
+}
+
+table.app-list a.app-non-collapsible {
+    background-image: url("../img/app_expanded.svg");
+    transform: rotate(-90deg);
+}
+
+table.app-list a.app-collapsed {
+    background-image: url("../img/app_collapsed.svg");
+    transform: none;
+}
+
+table.app-list a.app-expanded {
+    background-image: url("../img/app_collapsed.svg");
+    transform: rotate(90deg);
+}
+
+
+.dialog {
+    background-color: #1e1e1e;
+    filter: drop-shadow(0px 0px 15px black);
+}
+
+.dialog-header {
+    background-color: #3b3b3b;
+}
+
+.dialog-header-text {
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #c50000;
+}
+
+.dialog-icon-help {
+    background-image: url("../img/dark/dialog_icon_help.svg");
+}
+
+.dialog-icon-about {
+    background-image: url("../img/dark/dialog_icon_about.svg");
+}
+
+table.app-list td:nth-of-type(2), table.app-list td:nth-of-type(3), table.app-list td:nth-of-type(4), table.app-list td:nth-of-type(5), table.app-assets-list td:nth-of-type(1), table.app-assets-list td:nth-of-type(3) {
+  border-left: solid #34373aff 1px;
+}
+
+.publishing-preloader {
+    background-image: url("../img/dark/network_publishing.svg");
+}
+
+.published-item-frame {
+    border-color: #5d5d5d;
+}
+
+.published-item-header {
+    background-color: #000;
+}
+
+.new-app-disp-name {
+    color: #646464 !important;
+    background-color: !important;
+}
+
+.new-app-frame {
+    border-color: #5d5d5d;
+}
+
+.app-template-item {
+  padding: 10px 0px;
+  border-bottom: 1px solid #5d5d5d;
+}
+
+.app-icon.app-icon-update {
+  background-image: url(../img/dark/app_icon_update.svg);;
+}
+
+.app-title:hover, a.asset-title:hover  {
+    color: white;
+}
+
+.settings-theme {
+    color: #c6c6c6;
+    border: none;
+    background-color: #3b3b3b;
+}
+
+div.toolbar {
+    background-color: #3b3b3b;
+}
+
+div.toolbar-app {
+    background-color: #3b3b3b;
+}
+
+div.toolbar-network {
+    background-color: #3b3b3b;
+}

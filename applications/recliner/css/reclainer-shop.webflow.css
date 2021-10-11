@@ -1,0 +1,577 @@
+.head {
+  display: block;
+  width: 60%;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu {
+  height: 40px;
+}
+
+.menu-buttons {
+  position: static;
+  display: inline-block;
+  height: 40px;
+  float: none;
+  background-image: -webkit-linear-gradient(270deg, #e6e6e6, #fff 44%, #e6e6e6), -webkit-linear-gradient(270deg, #e6e6e6, #e6e6e6);
+  background-image: linear-gradient(180deg, #e6e6e6, #fff 44%, #e6e6e6), linear-gradient(180deg, #e6e6e6, #e6e6e6);
+  color: #000;
+  font-size: 14px;
+}
+
+.menu-background {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 73%, .5), hsla(0, 0%, 73%, .5));
+  background-image: linear-gradient(180deg, hsla(0, 0%, 73%, .5), hsla(0, 0%, 73%, .5));
+}
+
+.buttons-list {
+  display: block;
+  width: 670px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-page {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 89%, .5), hsla(0, 0%, 89%, .5));
+  background-image: linear-gradient(180deg, hsla(0, 0%, 89%, .5), hsla(0, 0%, 89%, .5));
+}
+
+.location {
+  position: static;
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.furniture-tab {
+  position: static;
+  display: block;
+  width: 60%;
+  height: auto;
+  max-height: auto;
+  min-height: auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #fff, #fff);
+}
+
+.location-text {
+  position: absolute;
+  margin: 9px 20px;
+}
+
+.text-span {
+  color: #36c;
+}
+
+.text-span-2 {
+  color: #36c;
+}
+
+.graphic-block {
+  position: static;
+  display: block;
+  width: 60%;
+  height: 90%;
+  float: left;
+}
+
+.info-block {
+  display: block;
+  width: 40%;
+  height: auto;
+  float: right;
+}
+
+.div-block-3 {
+  display: block;
+  width: 500px;
+  height: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+._3d-canvas {
+  position: static;
+  display: block;
+  overflow: hidden;
+  width: 90%;
+  height: 600px;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 20px auto;
+  float: none;
+}
+
+.heading {
+  width: 90%;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.basket-and-profile {
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+}
+
+.basket {
+  margin-right: 0px;
+  margin-left: 2px;
+  float: right;
+}
+
+.profile {
+  float: right;
+}
+
+.text-block-2 {
+  width: 90%;
+  font-family: Lato, sans-serif;
+  color: #979797;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.reclainer-name {
+  position: static;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+  float: none;
+}
+
+.info-bock {
+  margin: 20px;
+  padding: 0px;
+}
+
+.text-block-3 {
+  font-size: 18px;
+}
+
+.color-button {
+  width: 60px;
+  height: 60px;
+  min-height: auto;
+  min-width: auto;
+  margin: 4px;
+}
+
+.available-colors-block {
+  position: static;
+  z-index: 2;
+  width: 210px;
+  margin: 10px 0px;
+}
+
+.position-button {
+  width: auto;
+  height: 60px;
+  min-height: auto;
+  min-width: auto;
+  margin: 4px;
+}
+
+.text-block-4 {
+  margin-top: 10px;
+}
+
+.unordered-list {
+  margin-top: 10px;
+}
+
+.button {
+  width: 100%;
+  float: right;
+  background-color: #ffa51e;
+  text-align: center;
+}
+
+.boarder-1 {
+  height: 2px;
+  margin: 0px 20px;
+  background-image: -webkit-linear-gradient(270deg, #c7c7c7, #c7c7c7);
+  background-image: linear-gradient(180deg, #c7c7c7, #c7c7c7);
+}
+
+.price-block {
+  position: static;
+  bottom: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.price-line {
+  display: block;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+.div-block-10 {
+  width: 40%;
+  float: right;
+}
+
+.div-block-11 {
+  position: static;
+  display: block;
+  width: 60%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  float: left;
+}
+
+.social-media {
+  width: auto;
+  height: auto;
+  margin: 10px 20px 20px;
+  font-size: 12px;
+}
+
+.facebook {
+  position: static;
+  width: 100px;
+}
+
+.twitter {
+  position: static;
+  overflow: hidden;
+  width: 100px;
+}
+
+.social-media-buttons-old {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+}
+
+.save-to-wishlist-block {
+  width: 190px;
+  height: 80%;
+  float: right;
+}
+
+.save-to-wishlist-text {
+  margin-top: 6px;
+  float: right;
+  color: #8f8f8f;
+  font-size: 16px;
+}
+
+.footer {
+  display: block;
+  width: 60%;
+  height: 300px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  height: 700px;
+}
+
+.footer-head-text {
+  margin: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-common-text {
+  margin: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer-boarder {
+  height: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-image: -webkit-linear-gradient(270deg, rgba(77, 77, 77, .5), rgba(77, 77, 77, .5));
+  background-image: linear-gradient(180deg, rgba(77, 77, 77, .5), rgba(77, 77, 77, .5));
+}
+
+.text-block-6 {
+  position: static;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  overflow: hidden;
+  float: right;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.social-media-block {
+  width: 60%;
+  height: auto;
+  float: left;
+}
+
+.leather-color-button {
+  width: 60px;
+  height: 60px;
+  margin: 2px;
+  background-image: url('../images/black_leather.png');
+  background-position: 0px 0px;
+  background-size: 61px;
+}
+
+.leather-color-button.black-leather {
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.leather-color-button.red-leather {
+  background-image: url('../images/red_leather.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.leather-color-button.white-leather {
+  background-image: url('../images/white_leather.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.leather-color-button.purple-velvet {
+  background-image: url('../images/purple_velvet.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.leather-color-button.green-velvet {
+  background-image: url('../images/green_velvet.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.change-posiion-button {
+  width: 80px;
+  height: 60px;
+  background-image: url('../images/unfold.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.social-media-buttons {
+  width: 30px;
+  height: 30px;
+  margin: 2px 3px;
+}
+
+.social-media-buttons.facebook {
+  background-image: url('../images/social_face.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-media-buttons.instagramm {
+  background-image: url('../images/social_insta.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-media-buttons.twitter {
+  background-image: url('../images/social_twit.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.social-media-buttons.youtube {
+  background-image: url('../images/social_you.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.link-block {
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/profile.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.link-block-2 {
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/busket.png');
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+@media (max-width: 991px) {
+  .furniture-tab {
+    height: auto;
+  }
+  .graphic-block {
+    width: 100%;
+    height: 42%;
+  }
+  .info-block {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  ._3d-canvas {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 400px;
+  }
+  .social-media-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    height: 60px;
+  }
+  .main-page {
+    height: 100%;
+  }
+  .furniture-tab {
+    height: auto;
+    max-height: auto;
+    min-height: auto;
+  }
+  .graphic-block {
+    height: 34%;
+  }
+  .info-block {
+    height: auto;
+  }
+  ._3d-canvas {
+    height: 250px;
+  }
+  .heading {
+    width: 90%;
+  }
+  .basket-and-profile {
+    margin-top: 11px;
+  }
+  .reclainer-name {
+    width: 80%;
+  }
+  .color-button {
+    max-height: auto;
+    max-width: 100%;
+    min-height: auto;
+    min-width: auto;
+  }
+  .position-button {
+    max-height: auto;
+    max-width: 100%;
+    min-height: auto;
+    min-width: auto;
+  }
+  .logo {
+    height: 100%;
+  }
+  .social-media-buttons-old {
+    margin-top: 6px;
+  }
+  .save-to-wishlist-block {
+    margin-right: 10px;
+    float: left;
+  }
+  .save-to-wishlist-text {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .head {
+    height: 40px;
+  }
+  .furniture-tab {
+    height: auto;
+  }
+  .graphic-block {
+    height: 26%;
+  }
+  .info-block {
+    height: auto;
+  }
+  ._3d-canvas {
+    position: static;
+    width: 90%;
+    height: 150px;
+  }
+  .heading {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .basket-and-profile {
+    height: 40px;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .text-block-3 {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  .color-button {
+    width: 40px;
+    height: 40px;
+    max-height: 60px;
+    max-width: 60%;
+    min-height: 40px;
+    min-width: 40px;
+  }
+  .available-colors-block {
+    width: 100px;
+    max-width: 210px;
+    min-width: 100px;
+  }
+  .text-block-4 {
+    font-size: 14px;
+  }
+  .price-line {
+    margin-top: 0px;
+  }
+  .div-block-10 {
+    width: 70%;
+  }
+  .div-block-11 {
+    width: 30%;
+  }
+  .save-to-wishlist-text {
+    display: none;
+  }
+}

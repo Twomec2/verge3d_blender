@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Создание пользовательских интерфейсов на основе HTML для 3D веб-приложений - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how you can extend your Verge3D applications with HTML and CSS.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/HTML-based-user-interfaces.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Создание пользовательских интерфейсов на основе HTML для 3D веб-приложений - Soft8Soft">
+            <meta property="og:description" content="Learn how you can extend your Verge3D applications with HTML and CSS.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/HTML-based-user-interfaces.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Создание пользовательских интерфейсов на основе HTML для 3D веб-приложений - Soft8Soft">
+            <meta name="twitter:description" content="Learn how you can extend your Verge3D applications with HTML and CSS.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/layered-html.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/teapot-heater-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-buy-account-plans.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-new-project.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-new-project2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-iframe4.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons4.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons5.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-add-buttons6.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/webflow-export-code3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/html-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/tutorial-final-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/html-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/HTML-based-user-interfaces/annotation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Создание пользовательских интерфейсов на основе HTML для 3D Веб-приложений</h1>
+
+    <p>
+        Узнайте, как можно использовать стандартные веб-технологии для создания удобных интерфейсов мобильных приложений и для гармоничной web-интеграции.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Introduction">Введение</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Where_to_Add_HTML_and_CSS">Где добавить HTML и CSS</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Quick_Overview_Teapot_Heater">Быстрый обзор: Teapot Heater</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Tutorial">Урок</a><ul><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Designer_Approach">Дизайнерский Подход</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Developer_Approach">Подход Разработчиков</a></li></ul></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#annotations">Аннотации</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html#see_also">Смотрите Также</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Introduction" id="Introduction" class="permalink">#</a></p>
+
+    <h2>Введение</h2>
+
+    <p>
+        Шаблон приложения Verge3D предлагает одностраничный широкоэкранный макет с полноэкранной кнопкой и прелоадером. Интерактивные элементы, такие как кнопки, могут быть реализованы как 3D-объекты, прикрепленные к камере - то же самое относится и к текстовым блокам.
+    </p>
+
+    <p>
+        Однако более гибким и эффективным подходом будет использование установленных веб-стандартов для создания пользовательских интерфейсов. С помощью HTML и CSS вы можете создать любой макет для своего приложения. Пользовательский интерфейс и особенно текст, созданные с помощью HTML и CSS, благодаря специализированным механизмам растеризации современных веб-браузеров обычно выглядят более четкими, чем их 3D-аналоги. Этот подход также позволит вам легко смешивать 2D-медиа, такие как изображения, видео и веб-ссылки, с WebGL-контентом и стилизовать ваше приложение в соответствии с дизайном веб-сайта, на котором оно будет установлено.
+    </p>
+
+    <p>
+        Существует множество инструментов для веб-дизайна, начиная от простого текстового редактора и заканчивая полноценными конструкторами сайтов. Последние могут создавать полные наборы HTML/CSS/JavaScript, готовых к использованию веб-страниц, позволяя вам никогда не прикасаться к коду.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Where_to_Add_HTML_and_CSS" id="Where_to_Add_HTML_and_CSS" class="permalink">#</a></p>
+
+    <h2>Где добавить HTML и CSS</h2>
+
+    <p>
+        Предположим, вы создали свое приложение с помощью App Manager (с параметрами конфигурации по умолчанию) и назвали его <strong>my_awesome_app</strong>. Если вы заглянете в папку <i>verge3d/applications/my_awesome_app</i> то найдете там файлы <i>my_awesome_app.html</i> и <i>my_awesome_app.css</i>, которые, казалось бы, естественно начать редактировать - но это только кажется! 
+    </p>
+
+    <p>
+        На практике вы, возможно, никогда не захотите редактировать эти файлы, поскольку они автоматически генерируются менеджером приложений и могут быть переопределены в результате <a href="manual/ru/introduction/Updating.html" target="_blank">обновления</a>. Более надежным способом добавления собственного HTML/CSS в приложение Verge3D является создание <i>нового</i> файла <strong>.html</strong>, в который встраивается <strong>.html</strong> приложения Verge3D в стиле матрешки.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Quick_Overview_Teapot_Heater" id="Quick_Overview_Teapot_Heater" class="permalink">#</a></p>
+
+    <h2>Быстрый обзор: Teapot Heater</h2>
+
+    <p>
+        Посмотрите на следующий пример (демонстрация Verge3D <a href="https://cdn.soft8soft.com/demo/applications/teapot_heater_max/index.html" target="_blank">Teapot Heater</a>): весь интерфейс построен с помощью стороннего программного обеспечения для веб-дизайна и сохранен как <i>index.html</i> (это имя не является обязательным). Помимо HTML-элементов интерфейса, файл <i>index.html</i> содержит элемент <strong>iframe</strong>, в который встроен проект Verge3D - <i>teapot_heater.html</i>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/layered-html.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+        В Verge3D App Manager такой составной проект имеет два значка запуска, которые можно использовать для независимого запуска чистого проекта Verge3D или собранного приложения:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/teapot-heater-app-manager.jpg" class="centered" style="max-width: 676px;">
+
+    <p>
+        Наконец, 2D и 3D части логически связаны между собой с помощью <a href="manual/ru/puzzles/HTML.html" target="_blank">HTML-пазлов</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Tutorial" id="Tutorial" class="permalink">#</a></p>
+
+    <h2>Урок</h2>
+
+    <p>
+        В следующем уроке мы покажем, как создать простое приложение с пользовательским интерфейсом на основе HTML. В этом приложении будет только 2 кнопки для скрытия и раскрытия стандартного куба.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+
+    <p>
+        Мы начнем с создания нового проекта под названием <strong>my_awesome_app</strong> в App Manager. Затем продемонстрируем вам два способа создания дополнительного файла <strong>.html</strong> для пользовательского интерфейса: с использованием стороннего конструктора веб-страниц и  на основе кода. После того как пользовательский интерфейс будет готов, мы сделаем HTML-кнопки работоспособными с помощью Puzzles.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Designer_Approach" id="Designer_Approach" class="permalink">#</a></p>
+
+    <h3>Дизайнерский Подход</h3>
+
+    <p>
+        Из нескольких бесплатных и платных конструкторов сайтов, для использования в работе с Verge3D, мы рекомендуем <a href="https://webflow.grsm.io/3441118" target="_blank">Webflow</a> - онлайн-редактор, который позволяет даже абсолютному новичку легко создавать пользовательский интерфейс для приложений Verge3D. Тем не менее, вы можете попробовать и другие инструменты, такие как Adobe Dreamweaver, Google Web Designer, Tumult Hype или Pinegrow, хотя они могут потребовать от пользователя определенных знаний HTML/CSS.
+    </p>
+
+    <p>
+        Создайте учетную запись Webflow, нажав кнопку "Get started" на их веб-сайте. Необходимый компонент "Embed" и функция "Export Code" доступны только в платных планах "Account", поэтому вам необходимо приобрести <a href="https://webflow.grsm.io/3441119" target="_blank">подписку</a>, прежде чем приступать к данному руководству.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-buy-account-plans.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Войдите в свою учетную запись Webflow, перейдите в <strong>Dashboard</strong> и нажмите <strong>New Project</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-new-project.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Выберите <strong>Blank Site</strong> среди шаблонов. Заполните название проекта и нажмите кнопку <strong>Create project</strong>:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-new-project2.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Теперь мы встроим наше приложение Verge3D в эту веб-страницу. На левой панели нажмите самую верхнюю кнопку с иконкой "плюс" ((<strong>Добавить элементы</strong>). Найдите компонент <strong>Embed</strong> и щелкните на нем (или перетащите его):
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-iframe.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Скопируйте следующую строку и вставьте ее в окно редактора:
+    </p>
+
+    <code>
+&lt;iframe width="100%" height="100%" frameborder="0" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+    </code>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-iframe2.jpg" class="centered" style="max-width: 801px;">
+
+    <p class="note">
+        Эта строка кода предполагает, что мы скопируем веб-страницу, сгенерированную Webflow, в папку нашего приложения, так что элемент &lt;iframe&gt; подхватит основной HTML-файл приложения Verge3D под названием <b>my_awesome_app.html</b>.
+    </p>
+
+    <p>
+        Нажмите кнопку <strong>Save &amp; Close</strong>. Теперь компонент <strong>Embed</strong> размещен на странице. Не обращайте внимания на надпись об ошибке 404 - она исчезнет после экспорта проекта.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-iframe3.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Сделаем так, чтобы компонент <strong>Embed</strong> занимал всю страницу. Нажмите на кнопку <strong>Style</strong> в правом верхнем углу. На панели <strong>Size</strong> укажите <strong>100%</strong> для <strong>Width</strong> и <strong>Height</strong> (вам придется нажать на маленькие кнопки <strong>PX</strong>, чтобы переключиться с пикселей на проценты). Также выберите <strong>Fixed</strong> для <strong>Position</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-iframe4.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Давайте добавим эти две кнопки. Снова нажмите кнопку <strong>Add Elements</strong> на самой левой панели, найдите элемент <strong>Button</strong> и перетащите его на страницу.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Обратите внимание, что кнопка не будет видна сразу, так как ее полностью закрывает ранее добавленный компонент <strong>Embed</strong>. Чтобы исправить ситуацию, выберите только что добавленный элемент в <strong>Навигаторе</strong> (раскрытый кнопкой на левой панели)...
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons2.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        ...и на вкладке <strong>Style</strong> выберите <strong>Fixed</strong> для элемента <strong>Position</strong>, как мы это делали для компонента <strong>Embed</strong>. Также обеспечьте ему некоторое расстояние, установив верхнее и левое поля по 10 пикселей каждое.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons3.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Теперь кнопка должна стать видимой в левом верхнем углу страницы. Дважды щелкните по ней, чтобы отредактировать надпись и изменить ее на "Hide".
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons4.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Добавьте еще одну кнопку с помощью той же процедуры. Установите ее левое поле на 80 пикселей, чтобы она появилась рядом с кнопкой "Hide", и измените ее надпись на "Show".
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons5.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        Теперь нам нужно задать уникальные <strong>ID</strong> для обеих кнопок - мы будем использовать их в пазлах. Для этого выделите кнопку, перейдите на вкладку <strong>Element Settings</strong> и введите "hide_button" в поле <strong>ID</strong>. Повторите это для второй кнопки, присвоив ей <strong>ID</strong> "show_button".
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-add-buttons6.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+        На этом этапе мы можем сгенерировать наш файл UI <strong>.html</strong> и попробовать его в приложении Verge3D. Нажмите кнопку с угловыми скобками (<strong>Export Code</strong>) в верхней части...
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-export-code.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    ...затем нажмите <strong>Prepare ZIP</strong> и наконец, <strong>Download ZIP</strong>:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-export-code2.jpg" class="centered" style="max-width: 638px">
+
+    <p>
+        Найдите загруженный ZIP-файл и распакуйте его содержимое в папку приложения, <strong>my_awesome_app</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/webflow-export-code3.jpg" class="centered" style="max-width: 829px">
+
+    <p>
+        Запустите/перезагрузите Verge3D App Manager - новый <strong>.html</strong>-файл должен отображаться в виде дополнительной синей иконки.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+
+    <p>
+        Более наглядно структуру файлов можно увидеть на странице приложения, которую можно открыть, нажав на название своего приложения.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+
+    <p>
+        Теперь запустите собранное приложение, нажав на иконку <strong>index.html</strong>. Вы должны увидеть что-то вроде этого:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+
+    <p>
+        Давайте сделаем HTML-кнопки кликабельными, чтобы пользователь мог скрывать и раскрывать куб. Этого легко добиться, используя пазл <a href="manual/ru/puzzles/HTML.html#event">event</a> HTML, используемый в связи с идентификаторами элементов, которые мы назначили в Webflow. Запустите редактор Puzzles и добавьте эти блоки:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/html-puzzles.jpg" class="centered" style="max-width: 632px;">
+
+    <p>
+        Поскольку кнопки расположены в родительском <strong>.html</strong>-файле, в который встроено приложение Verge3D, мы должны установить флажок <strong>in parent doc</strong>, чтобы они работали.
+    </p>
+
+    <p>
+        Вот и все! Сохраните пазлы и запустите/загрузите собранное приложение снова, чтобы проверить, работают ли кнопки на кубике!
+    </p>
+
+<!--
+
+    <h2>Case #2: Google Web Designer</h2>
+
+    <p>
+    There were a video version of this tutorial on our <a href="https://www.youtube.com/watch?v=g0wTXSm5mN0" target="_blank">YouTube channel</a>, but it is now considered outdated. Please refer to the content below for the modern version.
+    </p>
+
+    <p>
+    <a href="https://www.google.com/webdesigner/" target="_blank">Google Web Designer</a> is a free cross-platform tool for creating web pages and web-based adverts in a visual manner. Unfortunately for 3D artists, this tool still requires some knowledge of CSS attributes which should be typed manually in the text box, and have some other issues (aka the hidden cost of freebies). Nevertheless, this tool may still be useful for creating intermediate products with simplified UI to be finalized by a web developer.
+    </p>
+
+    <p>
+    Once you launched this software, select <strong>Create new file</strong>...
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-create-new.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    ...then select <strong>HTML</strong> on the left panel and fill out all the fields: <strong>Name</strong> (e.g. "my_awesome_app_gwd"), <strong>Location</strong> (use any path, yet preferably <i>out</i> of your app folder to avoid confusion with the published version) and <strong>Title</strong> (e.g. "My Awesome App"), and click <strong>OK</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-create-new2.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+    At first run, if you didn't maximize the window at startup and maximized it later, the newly created blank document may appear small. Use the <strong>Viewport Resize</strong> tool and drag the document corner to make it bigger or even fullscreen.
+    <img src="files/HTML-based-user-interfaces/gwd-viewport-resize.jpg" class="centered" style="max-width: 800px">
+    </p>
+
+    <p>
+    Let's start by adding the <strong>iframe</strong> element for embedding our Verge3D app's main launching file, <i>my_awesome_app.html</i>. In Google Web Designer this can be done by dragging the <strong>IFrame</strong> component out from the list under the <strong>Components</strong> tab.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-iframe.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    After the <strong>IFrame</strong> component is placed on the page, switch to the <strong>Properties</strong> tab and make your <strong>iframe</strong> element occupy the entire page by specifying zeroes for the left and top positions and 100% for the width and height. Also, in the <strong>Source</strong> field put the path to Verge3D app main file - "my_awesome_app.html" (assuming that we'll be publishing our UI file in the root of the app folder).
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-iframe2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    At this stage we can generate our UI <strong>.html</strong> file and try it with the Verge3D app. Click the <strong>Publish</strong> button in the top-right corner and select <strong>Locally</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    In the publishing dialog select the path to the <strong>verge3d/applications</strong> folder as <strong>Location</strong>. Use the name of your application folder, <strong>my_awesome_app</strong>, in the <strong>Name</strong> field in order to save the files right in its root.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+    As a result, several new files will be added to your application folder, including <strong>index.html</strong> and some scripts.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-publish-check-files.jpg" class="centered" style="max-width: 602px">
+
+    <p>
+    The new HTML file immediately starts being displayed as an extra blue icon in the App Manager. You can run it to check if it actually loads the Verge3D app.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+
+    <p>
+    More clearly the file structure can be seen from the application page, which you can open by clicking on your application name.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+
+    <p>
+    Now let's add those two buttons. On the most left panel click on the <strong>Element tool</strong>, then select the <strong>Div element</strong> and start drawing a rectangle on the page.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+    In the <strong>Properties</strong> tab use the color picker to fill the button with color, specify its position and dimensions and most importantly, set the <strong>ID</strong> for this element which we will be using for referencing it in Puzzles.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons2.jpg" class="centered" style="max-width: 325px;">
+
+    <p>
+    To add a caption to the button ("Hide" or "Show"), double-click on it so that it becomes outlined in red. Click on the <strong>Text tool</strong>, then on the button and type text in the text area. Use font settings to setup the size, color and other properties. You can use the <strong>Selection tool</strong> (the first button with an arrow) to move your text field on the button.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons3.jpg" class="centered" style="max-width: 1000px;">
+
+    <p>
+    As a result, in the <strong>Outliner</strong> panel you should see the <strong>iframe</strong> element, 2 <strong>div</strong> elements with unique IDs assigned to them and two text elements nested inside those <strong>divs</strong>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons4.jpg" class="centered" style="max-width: 328px;">
+
+    <p>
+    As a finishing touch, in the CSS properties window we can make the mouse cursor turn to its "clicking" form when it is over those buttons:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/gwd-add-buttons5.jpg" class="centered" style="max-width: 384px;">
+
+    <p>
+    After publishing the <i>index.html</i> file and running the assembled app from the App Manager you should see something like this:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+
+    <p>
+    For more information on using Google Web Designer tools and components refer to their <a href="https://support.google.com/webdesigner" target="_blank">docs</a>.
+    </p>
+-->
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#Developer_Approach" id="Developer_Approach" class="permalink">#</a></p>
+
+    <h3>Подход Разработчиков</h3>
+
+    <p>
+        Обычный текстовый редактор по-прежнему считается многими веб-дизайнерами самым подходящим и гибким инструментом для создания веб-страниц. Даже если вы не собираетесь погружаться в кодирование, это руководство может помочь вам понять внутреннюю структуру веб-страницы, созданной с помощью более удобных для художника инструментов.
+    </p>
+
+    <p>
+        Для редактирования HTML/CSS кода можно использовать любой текстовый редактор, но удобнее работать, если ваш редактор поддерживает подсветку синтаксиса и нумерацию строк, как Notepad++ или VS Code.
+    </p>
+
+    <p>
+        Базовый HTML-документ, с которого мы можем начать, выглядит следующим образом. Вы можете просто скопировать это содержимое в новый текстовый документ и сохранить как <i>index.html</i> в папке <strong>verge3d/applications/my_awesome_app</strong>. Опять же, имя файла не является обязательным, и мы используем его везде только для единообразия.
+    </p>
+
+    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Index of My Awesome App&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
+&lt;meta name="description" content="Put some description here - remember about SEO!"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code>
+
+    <p>
+        Запустите/перезагрузите Verge3D App Manager - новый <strong>.html</strong> файл должен отображаться в виде дополнительной синей иконки.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager.jpg" class="centered" style="max-width: 699px;">
+
+    <p>
+        Более наглядно структуру файлов можно увидеть на странице приложения, которую можно открыть, нажав на название своего приложения.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/my-awesome-app-manager-app-page.jpg" class="centered" style="max-width: 875px;">
+
+    <p>
+        Теперь мы можем добавить элемент <strong>iframe</strong> в body документа для встраивания основного запускающего файла нашего приложения Verge3D, <i>my_awesome_app.html</i>:
+    </p>
+
+    <code>
+&lt;body&gt;
+        &lt;iframe id="my_iframe" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+    </code>
+
+    <p>
+        Если вы сейчас запустите собранное приложение из менеджера приложений, оно отобразит небольшую вставку стандартного приложения cube в левом верхнем углу. Мы можем сделать его широкоэкранным и без границ, используя CSS:
+    </p>
+
+    <code>
+&lt;style&gt;
+#my_iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+}
+&lt;/style&gt;
+    </code>
+
+    <p>
+        Теперь давайте создадим 2 кнопки, добавив в тело 2 элемента <strong>div</strong>, снабженные уникальными атрибутами <strong>id</strong> для ссылок в CSS и в пазлах:
+    </p>
+
+    <code>
+&lt;div id="hide_button"&gt;Hide&lt;/div&gt;
+&lt;div id="show_button"&gt;Show&lt;/div&gt;
+    </code>
+
+    <p>
+        Однако вы не заметите их в приложении, пока не настроите их позиционирование и стилизацию с помощью CSS:
+    </p>
+
+    <code>
+#hide_button, #show_button {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background-color: DodgerBlue;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+}
+
+#hide_button {
+        left: 10px;
+}
+
+#show_button {
+        left: 120px;
+}
+    </code>
+
+    <p>
+        Вот и все - теперь у вас есть две HTML-кнопки в вашем приложении! Таким должен получиться финальный <i>index.html</i>:
+    </p>
+
+    <code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Index of My Awesome App&lt;/title&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"&gt;
+&lt;meta name="description" content="Put some description here - remember about SEO!"&gt;
+&lt;style&gt;
+#my_iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+}
+
+#hide_button, #show_button {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background-color: DodgerBlue;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+}
+
+#hide_button {
+        left: 10px;
+}
+
+#show_button {
+        left: 120px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+        &lt;iframe id="my_iframe" src="my_awesome_app.html"&gt;&lt;/iframe&gt;
+
+        &lt;div id="hide_button"&gt;Hide&lt;/div&gt;
+        &lt;div id="show_button"&gt;Show&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+    </code>
+
+    <p>
+        При запуске собранного приложения из диспетчера приложений вы должны увидеть что-то вроде этого:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/tutorial-final-app.jpg" class="centered" style="max-width: 835px;">
+
+    <p>
+        Давайте сделаем HTML-кнопки кликабельными, чтобы пользователь мог скрывать и раскрывать куб. Этого легко добиться, используя пазл <a href="manual/ru/puzzles/HTML.html#event">event</a> HTML, используемый с идентификаторами элементов, которые мы назначили в Webflow. Запустите редактор Puzzles и добавьте эти блоки:
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/html-puzzles.jpg" class="centered" style="max-width: 632px;">
+
+    <p>
+        Поскольку кнопки расположены в родительском <strong>.html</strong> файле, в который встроено приложение Verge3D, мы должны установить флажок <strong>in parent doc</strong>, чтобы они работали.
+    </p>
+
+    <p>
+        Вот и все! Сохраните пазлы и запустите/загрузите собранное приложение снова, чтобы проверить, работают ли кнопки!
+    </p>
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#annotations" id="annotations" class="permalink">#</a></p>
+
+    <h2>Аннотации</h2>
+
+    <p>
+        Аннотации Verge3D - это самый простой способ отобразить информационные всплывающие элементы над 3D-контентом. Вам не нужно знать HTML, чтобы добавить их в свое приложение. Просто воспользуйтесь функцией добавления <a href="manual/ru/puzzles/Objects.html#add_annotation">add annotation</a>.
+    </p>
+
+    <img src="files/HTML-based-user-interfaces/annotation.jpg" class="centered" style="max-width: 600px">
+
+    <p>
+        Вы можете изменить стиль ваших аннотаций, изменив шрифт, форму, цвет или размер. Дополнительную информацию смотрите <a href="manual/ru/introduction/Styling-Verge3D-Apps.html#annotations">здесь</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/HTML-based-user-interfaces.html#see_also" id="see_also" class="permalink">#</a></p>
+
+    <h2>Смотрите Также</h2>
+
+    <p>Ознакомьтесь со следующим видеоуроком, объясняющим, как создавать пользовательские интерфейсы на основе HTML для наших 3D веб-приложений.</p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/F_R_rkC7mgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+    <h2>Остались Вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

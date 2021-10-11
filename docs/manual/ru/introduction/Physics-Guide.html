@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D Physics Guide - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to use Verge3D physics engine to simulate dynamics and collisions on your scene.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Physics-Guide.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D Physics Guide - Soft8Soft">
+            <meta property="og:description" content="How to use Verge3D physics engine to simulate dynamics and collisions on your scene.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Physics-Guide.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D Physics Guide - Soft8Soft">
+            <meta name="twitter:description" content="How to use Verge3D physics engine to simulate dynamics and collisions on your scene.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/app-manager-physics.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/capsule-shape.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/create-character-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/firstperson-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/snap-camera-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/physics-guide/moving-character-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Руководство по физике Verge3D</h1>
+
+    <p>В Verge3D присутствует физический движок, который может заставить ваши 3D-объекты вести себя как в реальном мире. Эта функция особенно полезна для создания 3D-игр и AR/VR-приложений.</p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/RZnFcIXo0Ws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p></p>
+
+    <p>В качестве физического бэкенда мы используем физический движок Bullet с открытым исходным кодом, веб-версия которого называется <a href="https://github.com/kripken/ammo.js" target="_blank">Ammo.js</a>.</p>
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Physics-Guide.html#getting_started_with_physics">Начиная Работу с Физикой</a></li><li><a href="manual/ru/introduction/Physics-Guide.html#using_puzzles">Использование Пазлов</a></li><li><a href="manual/ru/introduction/Physics-Guide.html#general_recommendations">Общие Рекомендации</a></li><li><a href="manual/ru/introduction/Physics-Guide.html#creating_first_person_character">Создание персонажа от первого лица</a></li><li><a href="manual/ru/introduction/Physics-Guide.html#simulating_car_physics">Симуляция физики автомобиля</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Physics-Guide.html#getting_started_with_physics" id="getting_started_with_physics" class="permalink">#</a></p>
+
+    <h2>Начиная Работу с Физикой</h2>
+
+    <p>Прежде чем вы сможете использовать физику, необходимо добавить модуль физики в ваше приложение. Это можно сделать на этапе создания приложения с помощью соответствующей опции в App Manager.</p>
+
+    <img src="files/physics-guide/app-manager-physics.jpg" class="centered" style="max-width: 574px">
+
+    <p class="note">
+      По умолчанию Verge3D использует так называемую WebAssembly-версию физического движка. Эта версия дает значительный прирост производительности по сравнению с обычной версией, но не работает в Internet Explorer 11 и старых браузерах Safari (версии 10 или ниже). Если вам нужно, чтобы ваше приложение поддерживалось в этих браузерах, включите модули <strong>Physics</strong> и <strong>IE 11</strong> в диалоге создания приложения.
+    </p>
+
+    <p>Кроме того, вы можете добавить модуль физики в уже существующее приложение. Для этого скопируйте файлы <strong>ammo.wasm.js</strong> и <strong>ammo.wasm.wasm</strong> из папки <strong>verge3d/build</strong> в папку вашего приложения, и добавьте строку</p>
+
+    <code>
+    &lt;script src="ammo.wasm.js"&gt;&lt;/script&gt;
+    </code>
+
+    <p>в файл <strong>.html</strong> вашего приложения над скриптом <strong>v3d.js</strong> .</p>
+
+
+    <p><a href="manual/ru/introduction/Physics-Guide.html#using_puzzles" id="using_puzzles" class="permalink">#</a></p>
+
+    <h2>Использование Пазлов</h2>
+
+    <p>Ознакомьтесь с <a href="manual/ru/puzzles/Physics.html">пазлами физики</a>.</p>
+
+
+    <p><a href="manual/ru/introduction/Physics-Guide.html#general_recommendations" id="general_recommendations" class="permalink">#</a></p>
+
+    <h2>Общие Рекомендации</h2>
+
+    <ul>
+      <li>
+        Обязательно применяйте масштаб в пакете моделирования, так как физический движок просто игнорирует масштаб объектов.
+      </li>
+      <li>
+        Для достижения наилучших результатов начало координат вашего объекта должно совпадать с центром массы. Чтобы сделать это в Blender 2.8, используйте оператор <strong>Object &gt; Set Origin &gt; Origin to Center of Mass (Volume)</strong>.
+      </li>
+      <li>
+        Никогда не позиционируйте и не анимируйте <em>динамическое</em> тело напрямую. Вместо этого применяйте к нему силу/импульс/скорость используя пазл <a href="manual/ru/puzzles/Physics.html#apply_vector">apply vector</a> или прикрепите его к другому объекту пазлом <a href="manual/ru/puzzles/Physics.html#snap_body">snap body</a> .
+      </li>
+      <li>
+        В целях оптимизации, Verge3D отключает <em>динамические</em> тела после периода бездействия. Вы можете активировать эти тела снова, применив какой-либо вектор, столкнув их с другими телами или используя опцию <strong>activate</strong> пазла <a href="manual/ru/puzzles/Physics.html#set_body_state">set body state</a> . Если вам нужно, чтобы тело было активным постоянно, примените к нему состояние <strong>disable deactivation</strong> используя тот же пазл.
+      </li>
+      <li>
+        Включить метод непрерывного обнаружения столкновений (CCD) для улучшения качества моделирования быстродвижущихся тел, таких как снаряды, шары для пинбола/бильярда/боулинга и т.д. Для этого установите параметры <strong>ccd motion threshold</strong> и <strong>ccd swept sphere radius</strong> на эти тела. См. <a href="manual/ru/puzzles/Physics.html#apply_body_param">здесь</a> для дополнительной информации.
+      </li>
+      <li>
+         Помните, что вы не можете <a href="manual/ru/puzzles/Physics.html#detect_collisions">определить коллизию</a> между  <strong>static</strong>/<strong>static</strong>, <strong>static</strong>/<strong>kinematic</strong>, или <strong>kinematic</strong>/<strong>kinematic</strong> объектами. Если использование <strong>dynamic</strong> тела не представляется возможным, рассмотрите возможность назначения <strong>ghost</strong> физики для реализации обнаружения движущегося рядом нединамического объекта с <strong>static</strong>/<strong>kinematic</strong> средой.
+      </li>
+    </ul>
+
+
+    <p><a href="manual/ru/introduction/Physics-Guide.html#creating_first_person_character" id="creating_first_person_character" class="permalink">#</a></p>
+
+    <h2>Создание персонажа от первого лица</h2>
+
+    <p>Режим персонажа от первого лица может быть удобен не только для шутеров и RPG-игр, но и для любых приложений, требующих исследования больших пространств. Это может быть визуализация архитектуры, приложения для электронного обучения и интерактивные гиды, музеи и другие культурные объекты, и даже виртуальные 3D-рынки. Кроме того, вы можете интегрировать персонажа от первого лица в ваше VR-приложение, сделав его гораздо более реалистичным и увлекательным!</p>
+
+    <p>Существует множество возможных способов реализации режима FPS, но для неопытных пользователей Verge3D мы рекомендуем вам следовать этому краткому руководству для более быстрого достижения результатов.</p>
+
+    <p>Создайте объект в форме капсулы, который символизирует вашего персонажа. Настройте его высоту и ширину, чтобы он выглядел более реалистично. Убедитесь, что вы правильно установили центр объекта.</p>
+
+    <img src="files/physics-guide/capsule-shape.jpg" class="centered" style="max-width: 639px">
+
+    <p>В пазлах, назначьте персонажу <strong>dynamic</strong> <strong>capsule</strong> (капсулообразное) тело и отключите его вращение. Таким образом, вы позволите персонажу двигаться, но не вращаться. Также примените <strong>disable deactivation</strong> к вашей капсуле.</p>
+
+    <img src="files/physics-guide/create-character-puzzles.jpg" style="max-width: 725px">
+
+    <p>Поскольку персонажу нужен пол (+стены) или земля, чтобы ходить, создайте такие тела, используя соответствующие пазлы <strong>create physics body</strong>.</p>
+
+    <p>Следующий шаг - настройка камеры. Камере не будет назначена физика, поскольку она нужна нам только для того, чтобы быть нашими "глазами". Установите на него элементы управления <strong>First-Person</strong>, но не назначайте материал коллизии (мы будем использовать полнофункциональное обнаружение коллизий, предоставляемое физическим движком, а не базовую симуляцию пола/стен). Также, уберите галку с параметра <strong>Allow Panning</strong> , а параметр <strong>Movement Speed</strong> поставьте на ноль:</p>
+
+    <img src="files/physics-guide/firstperson-camera-settings.jpg" class="centered" style="max-width: 320px">
+
+    <p>Теперь нам нужно прикрепить камеру к "голове" персонажа. Нет необходимости создавать модель головы, добавьте в сцену пустой объект под названием "Голова" и прикрепите его к верхней части модели капсулы. Таким образом, "голова" будет двигаться вместе с персонажем.</p>
+
+    <p>С помощью дополнительного объекта "Голова" вы можете прикреплять/откреплять камеру к персонажу. Чтобы прикрепить камеру, используйте <a href="manual/ru/puzzles/Objects.html#parent">parent</a> и <a href="manual/ru/puzzles/Objects.html#snap_to_object">snap to object</a> пазлы:</p>
+
+    <img src="files/physics-guide/snap-camera-puzzles.jpg" style="max-width: 560px">
+
+    <p class="note">Чтобы открепить камеру, используйте пазл <strong>parent</strong> с пустым полем <strong>to object</strong> .</p>
+
+    <p>Персонаж создан! Теперь пришло время заставить его двигаться в вашей сцене. В самом простом случае нам нужно двигаться вперед, когда пользователь нажимает клавишу со стрелкой вверх. Для этого примените к персонажу вектор <strong>linear velocity</strong>, который рассчитывается на основе горизонтального направления камеры. Чтобы сделать симуляцию более достоверной, всегда применяйте векторы, используя пазл <a href="manual/ru/puzzles/Physics.html#on_simulation_tick">on simulation tick</a> .</p>
+
+    <img src="files/physics-guide/moving-character-puzzles.jpg" style="max-width: 981px">
+
+    <p>Для перемещения персонажа на мобильном устройстве вам понадобятся дополнительные элементы "контроллера". Вы можете создать их с помощью 3D-объектов, родительских по отношению к камере или с помощью <a href="manual/ru/introduction/HTML-based-user-interfaces.html">HTML элементов</a>.</p>
+
+    <p>Для перемещения персонажа в режиме VR вы можете использовать пазл <a href="manual/ru/puzzles/AR_VR.html#get_controller_prop">get controller property</a> и пазл <a href="manual/ru/puzzles/System.html#get_gamepad_prop">get gamepad property</a> для получения статуса кнопок/осей контроллера VR.</p>
+
+
+    <p><a href="manual/ru/introduction/Physics-Guide.html#simulating_car_physics" id="simulating_car_physics" class="permalink">#</a></p>
+
+    <h2>Симуляция физики автомобиля</h2>
+
+    <p>
+      Реалистичное симулирование физики автомобиля может быть действительно полезным в таких приложениях, как интерактивные программы настройки автомобиля или гоночные игры. Ознакомьтесь с игрой <em>Arcade Racing</em> в дистрибутиве Verge3D, чтобы понять, как реализовать эту функцию в вашем собственном приложении.
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

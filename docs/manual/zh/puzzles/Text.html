@@ -1,0 +1,584 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>文本类拼图参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="文本拼图提供了各种在拼图场景中操作文本的方法。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/Text.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="文本类拼图参考 - Soft8Soft">
+            <meta property="og:description" content="文本拼图提供了各种在拼图场景中操作文本的方法。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/Text.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="文本类拼图参考 - Soft8Soft">
+            <meta name="twitter:description" content="文本拼图提供了各种在拼图场景中操作文本的方法。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-multiline.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-create-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-create-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-append-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-append-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-replace.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-replace-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-reverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-reverse-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-length.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-length-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-is-empty.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-is-empty-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-find.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-find-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-letter.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-letter-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-region.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-region-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-adjust-case.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-adjust-case-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-trim-spaces.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-trim-spaces-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-count.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-count-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-new-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-convert-to-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-convert-to-number-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-prompt.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-prompt-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>文本 | Text</h1>
+
+    <p>文本拼图提供了各种在拼图场景中操作文本的方法。</p>
+    
+    <img src="files/puzzles/puzzles-text.jpg" style="max-width: 1000px">
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/Text.html#puzzles_reference">拼图参考</a><ul><li><a href="manual/zh/puzzles/Text.html#text">text(文字)</a></li><li><a href="manual/zh/puzzles/Text.html#text_multiline">text multi-line(多行文本)</a></li><li><a href="manual/zh/puzzles/Text.html#create_text">create text(创建文本)</a></li><li><a href="manual/zh/puzzles/Text.html#append_text">append text(附加文本)</a></li><li><a href="manual/zh/puzzles/Text.html#replace">replace(替换)</a></li><li><a href="manual/zh/puzzles/Text.html#reverse">reverse(反转)</a></li><li><a href="manual/zh/puzzles/Text.html#length">length(长度)</a></li><li><a href="manual/zh/puzzles/Text.html#is_empty">is empty(为空)</a></li><li><a href="manual/zh/puzzles/Text.html#find">find(查找)</a></li><li><a href="manual/zh/puzzles/Text.html#get_letter">get letter(获取字母)</a></li><li><a href="manual/zh/puzzles/Text.html#get_region">get region(获取区域)</a></li><li><a href="manual/zh/puzzles/Text.html#adjust_case">adjust case(调整案例)</a></li><li><a href="manual/zh/puzzles/Text.html#trim_spaces">trim spaces(修剪空格)</a></li><li><a href="manual/zh/puzzles/Text.html#count">count(计数)</a></li><li><a href="manual/zh/puzzles/Text.html#new_line">new line(换行)</a></li><li><a href="manual/zh/puzzles/Text.html#convert_to_number">convert to number(转换为数字)</a></li><li><a href="manual/zh/puzzles/Text.html#prompt">prompt(提示)</a></li></ul></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/Text.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>拼图参考</h2>
+
+    <p><a href="manual/zh/puzzles/Text.html#text" id="text" class="permalink">#</a></p>
+
+    <h3>text(文字)</h3>
+
+    <p>这个常用拼图实现了为拼图场景提供一些文本（字，词或句子）的方法。</p>
+    
+    <img src="files/puzzles/puzzles-text-text.jpg" style="max-width: 1000px">
+    <p>文本拼图经常与不同类别的拼图一起使用。例如，您可以为 <a href="manual/en/puzzles/Scenes.html">场景加载器拼图</a> 指定URL输入，为 <a href="manual/en/puzzles/HTML.html">HTML拼图</a> 指定HTML元素ID、CSS规则和颜色，以及为其他一些拼图指定ID和URL。</p>
+    
+    <img src="files/puzzles/puzzles-text-text-example2.jpg" style="max-width: 1000px">
+    <p>这个拼图也可以用来为对象、材质、动画或组提供名称，取代相对应 <a href="manual/en/puzzles/Selectors.html">selector(选择器)拼图</a>，这对于动态加载的内容会很有用。</p>
+    <img src="files/puzzles/puzzles-text-text-example.jpg" style="max-width: 1000px">
+    <p>最后，有些拼图可以配置为提供文本输入取代默认的下拉菜单，这在动态加载的场景中也很有用。</p>
+    
+    <img src="files/puzzles/puzzles-text-text-example3.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#text_multiline" id="text_multiline" class="permalink">#</a></p>
+
+    <h3>text multi-line(多行文本)</h3>
+
+    <p>此拼图实现了在拼图场景提供多行文本的方法。它使用 <a href="https://ace.c9.io/">Ace编辑器</a> 来显示和编辑内容。请查看相关的键盘快捷键简介：<a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts">默认键盘快捷键</a>。</p>
+
+    <p>本拼图可即时切换高亮模式，支持CSS、HTML、Javascript和纯文本类型。</p>
+    
+    <img src="files/puzzles/puzzles-text-text-multiline.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#create_text" id="create_text" class="permalink">#</a></p>
+
+    <h3>create text(创建文本)</h3>
+
+    <p>此拼图允许您将2个或更多的文本合并（连接）成一行。如果您提供非文本的数值，比如数字，它们将被自动转换为文本。可从左边的灰色工具箱中拖出 <strong>item</strong> 块到 <strong>join</strong> 块中来添加额外的输入插槽。</p>
+    
+    <img src="files/puzzles/puzzles-text-create-text.jpg" style="max-width: 1000px">
+    <p>示例：创建一个由一些文本和对象名称组成的标注。</p>
+    
+    <img src="files/puzzles/puzzles-text-create-text-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#append_text" id="append_text" class="permalink">#</a></p>
+
+    <h3>append text(附加文本)</h3>
+
+    <p>这个拼图将给定的文本添加到指定的<a href="manual/en/puzzles/Variables.html">变量</a>中。</p>
+    
+    <img src="files/puzzles/puzzles-text-append-text.jpg" style="max-width: 1000px">
+    <p>示例：创建一个由一些文本和对象名称组成的标注。</p>
+    
+    <img src="files/puzzles/puzzles-text-append-text-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#replace" id="replace" class="permalink">#</a></p>
+
+    <h3>replace(替换)</h3>
+
+    <p>此拼图会搜索给定的文本，并将其用指定的文本替换（区分大小写）。</p>
+    
+    <img src="files/puzzles/puzzles-text-replace.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-replace-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#reverse" id="reverse" class="permalink">#</a></p>
+
+    <h3>reverse(反转)</h3>
+
+    <p>这个拼图可反转给定的文本。</p>
+    
+    <img src="files/puzzles/puzzles-text-reverse.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-reverse-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#length" id="length" class="permalink">#</a></p>
+
+    <h3>length(长度)</h3>
+
+    <p>此拼图用于计算指定文本中的字符数。</p>
+    
+    <img src="files/puzzles/puzzles-text-length.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-length-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#is_empty" id="is_empty" class="permalink">#</a></p>
+
+    <h3>is empty(为空)</h3>
+
+    <p>此拼图用于检查指定的文本是否为空（长度为0）。如果是，结果为<strong>true</strong>，如果不是，结果为<strong>false</strong>。可与 <a href="manual/en/puzzles/Logic.html">逻辑</a> 拼图一起使用。</p>
+    <img src="files/puzzles/puzzles-text-is-empty.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-is-empty-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#find" id="find" class="permalink">#</a></p>
+
+    <h3>find(查找)</h3>
+
+    <p>此拼图可以用来检查一个文本是否在另一个文本中，以及位置状态。如果该文本被找到，它将返回其位置（文本中的字符从0开始索引）。如果没有找到该文本，拼图返回值 -1 。</p>
+    
+    <img src="files/puzzles/puzzles-text-find.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-find-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#get_letter" id="get_letter" class="permalink">#</a></p>
+
+    <h3>get letter(获取字母)</h3>
+
+    <p>此拼图从指定的位置提取字符（文本中的字符从0开始索引）。</p>
+    
+    <img src="files/puzzles/puzzles-text-get-letter.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-get-letter-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#get_region" id="get_region" class="permalink">#</a></p>
+
+    <h3>get region(获取区域)</h3>
+
+    <p>此拼图允许提取两个指定位置之间的文本区域（文本中的字符从0开始索引）。</p>
+    
+    <img src="files/puzzles/puzzles-text-get-region.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-get-region-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#adjust_case" id="adjust_case" class="permalink">#</a></p>
+
+    <h3>adjust case(调整案例)</h3>
+
+    <p>此拼图可为输入的文本为创建不同版本：大写字母（全部都大写），小写字母或者标题字母（第一个字母大写，其他字母小写）。非字母的字符，以及没有大小写的语言的文本，比如中文，不受影响。</p>
+    
+    <img src="files/puzzles/puzzles-text-adjust-case.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-adjust-case-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#trim_spaces" id="trim_spaces" class="permalink">#</a></p>
+
+    <h3>trim spaces(修剪空格)</h3>
+
+    <p>此图可以从文本的开头，文本的结尾或者文本的两边去除空格字符。</p>
+    
+    <img src="files/puzzles/puzzles-text-trim-spaces.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-trim-spaces-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#count" id="count" class="permalink">#</a></p>
+
+    <h3>count(计数)</h3>
+
+    <p>此拼图可计算一个文本在指定文本中出现了多少次。</p>
+    
+    <img src="files/puzzles/puzzles-text-count.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-count-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#new_line" id="new_line" class="permalink">#</a></p>
+
+    <h3>new line(换行)</h3>
+
+    <p>一个换行符（也成为 "end of line" 或 "line break" ）。在 <a href="manual/zh/puzzles/Text.html#create_text">create text(创建文本)</a> 或 <a href="manual/zh/puzzles/Text.html#append_text">append text(附加文本)</a> 拼图中使用该字符来创建多行文本。</p>
+    
+    <img src="files/puzzles/puzzles-text-new-line.jpg" style="max-width: 681px">
+
+    <p><a href="manual/zh/puzzles/Text.html#convert_to_number" id="convert_to_number" class="permalink">#</a></p>
+
+    <h3>convert to number(转换为数字)</h3>
+
+    <p>此拼图将尝试转换指定文本为数字，这样得到的数值就可以作为数字运算的输入。如果转换失败，则返回0。</p>
+    
+    <img src="files/puzzles/puzzles-text-convert-to-number.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-convert-to-number-example.jpg" style="max-width: 1000px">
+
+    <p><a href="manual/zh/puzzles/Text.html#prompt" id="prompt" class="permalink">#</a></p>
+
+    <h3>prompt(提示)</h3>
+
+    <p>此拼图用于创建带有输入字段的弹出式窗口。代码执行进程会暂停，直到用户点击确定或取消按钮，之后拼图会返回输入值。</p>
+    
+    <img src="files/puzzles/puzzles-text-prompt.jpg" style="max-width: 1000px">
+    <p>示例：</p>
+    
+    <img src="files/puzzles/puzzles-text-prompt-example.jpg" style="max-width: 1000px">
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

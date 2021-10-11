@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <title>用于Blender的Verge3D：照明与渲染 - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="如何在Verge3D for Blender中配置环境照明、灯光和渲染属性。">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/blender/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="用于Blender的Verge3D：照明与渲染 - Soft8Soft">
+            <meta property="og:description" content="如何在Verge3D for Blender中配置环境照明、灯光和渲染属性。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/blender/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="用于Blender的Verge3D：照明与渲染 - Soft8Soft">
+            <meta name="twitter:description" content="如何在Verge3D for Blender中配置环境照明、灯光和渲染属性。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/world-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/light-probe-reflection-cubemap.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/world-nodes-advanced.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-indirect.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>照明与渲染/Blender</h1>
+
+    <p>本页包含可与Verge3D for Blender一起使用的照明、渲染和背景属性的信息。</p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/blender/Lighting-and-Rendering.html#renderers">渲染器</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#environment_lighting">环境照明</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#lights">灯光(Lights)</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#light_probes">光照探头</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#background">背景(Background)</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#global_rendering_properties">全局渲染属性</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#outline_rendering">轮廓渲染</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#per_object_rendering_properties">每个对象的渲染属性</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html#clipping_planes">剪切平面</a></li></ul><!-- /TOC --> <p><a href="manual/zh/blender/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>渲染器</h2>
+
+    <p>Verge3D被设计为尽可能地趋近Blender的EEVEE渲染器。它支持基于物理的着色、灯光、阴影和基于图像的照明(IBL)。</p>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>环境照明</h2>
+
+    <p>环境照明是Verge3D图形流水线的一个非常重要的组成部分。您可以只用环境贴图来照亮整个场景，而不使用任何灯光对象。请参阅 <a href="https://www.soft8soft.com/gallery/scooter-3d-product-customizer/" target="_blank">电动车定制器演示</a> 作为示例：</p>
+    
+    <iframe class="video-480p" src="https://player.bilibili.com/player.html?aid=925684140&amp;bvid=BV1WT4y1u7pT&amp;cid=192624099&amp;page=3&amp;high_quality=1&amp;danmaku=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    
+    <p>默认的立方体模板为基于图像的照明提供了一个HDR纹理。您可以用自己的文件替换这个纹理，或者从头开始设置环境照明。这里是基本的 <em>世界节点</em> 设置，它在环境照明和背景上都使用了相同的纹理。</p><img src="files/lighting-blender/world-nodes.jpg" class="centered" style="max-width: 852px"><p class="note">当使用HDR纹理时，确保将<b>色彩空间</b>设置为<b>线性</b>。</p>
+
+
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>灯光(Lights)</h2>
+
+    <p>在某些情况下，仅仅使用基于图像的照明不足以照亮场景。如果您想模拟一些额外的光源，需要动态阴影，或者您需要移动您的灯光（如汽车灯光），可以使用直接光源。</p>
+
+    <p>Verge3D支持以下灯光类型：</p>
+
+    <ul>
+      <li><strong>Point Lights</strong> — <b>点光源</b>，Verge3D支持<b>颜色(Color)</b>和<b>功率(Power)</b>属性。</li>
+      <li><strong>Sun Lights</strong> — <b>太阳光</b>，Verge3D中支持<b>颜色(Color)</b>和<b>强度(Strength)</b>属性。</li>
+      <li><strong>Spot Lights</strong> — <b>聚光灯</b>，<b>颜色(Color)、功率(Power)</b>、<b>聚光灯形状(Spot Shape)</b>：Verge3D中支持<b>尺寸(Size)</b>和<b><b><b><b>混合</b>(Blend)</b></b></b>属性。</li>
+      <li><strong>Area Lights</strong> — <b>面光</b>，Verge3D支持的属性包括<b>颜色(Color)</b>，<b>功率(Power)</b>，“<b>方形(Square-Shaped)</b>”中的<b>尺寸(Size)</b>，以及“<b>长方形 (<b>Rectangular</b>-shaped)”</b>中的<b>X/Y尺寸(<b>Size X</b>/<b>Size Y</b>)</b>。不支持<b>碟形(Disk)</b>和<b>椭圆形(Ellipse)</b>形状属性。</li>
+    </ul>
+
+    <p>此外，您还可以为点光源、太阳光和聚光灯指定阴影属性。请参阅 <a href="manual/zh/blender/Shadows.html">对应章节</a> 的更多信息。</p>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>光照探头</h2>
+
+    <p>光照探头是一种用于通过生成局部立方盒反射来增加局部间接照明的对象。Verge3D目前只支持 <strong>立方盒反射(Reflection Cubemap)</strong> 光照探头。这种类型的光照探头对象在场景中增加了镜面间接照明。</p>
+
+    <p>支持以下属性：</p><img src="files/lighting-blender/light-probe-reflection-cubemap.png" class="centered" style="max-width: 369px"><dl>
+      <dt>探头</dt>
+      <dd>常规探头设置：<dl>
+          <dt>类型</dt>
+          <dd>影响体积的类型：<strong>球形</strong>或<strong>长方体</strong>。只有位于此体积内的对象才会受到光照探头照明的影响。</dd>
+
+          <dt>半径/尺寸</dt>
+          <dd>控制影响体积的大小。您也可以改变对象的比例，使影响体积的形状不均匀。</dd>
+
+          <dt>强度</dt>
+          <dd>间接照明的强度。任何不等于1.0的数值在物理学上都是不正确的。</dd>
+
+          <dt>裁剪起点</dt>
+          <dd>裁剪起始距离。位于比此值更近的对象将不会被渲染到立方盒反射中。</dd>
+
+          <dt>裁剪终点</dt>
+          <dd>裁剪结束距离。位于比此值更远的对象将不会被渲染到立方盒反射中。</dd>
+        </dl>
+      </dd>
+
+      <dt>可见性</dt>
+      <dd>对象可见性设置：<dl>
+          <dt>可见性集合</dt>
+          <dd>将应该出现在立方盒反射上的对象限制在这个集合中。如果未指定，则使用所有场景对象。</dd>
+
+          <dt>反转可见性集合</dt>
+          <dd>如果指定了 <strong>可见性集合</strong> ，则反转对此探头可见对象的选择。</dd>
+        </dl>
+      </dd>
+
+      <dt>自定义视差</dt>
+      <dd>启用视差校正的自定义设置。这一组设置定义了一个视差体积，用来投射探头捕捉到的照明。如果 <strong>自定义视差</strong> 未启用，视差效果将根据影响体积的 <strong>类型</strong> 和 <strong>半径/尺寸</strong> 计算。<dl>
+          <dt>类型</dt>
+          <dd>视差体积的类型：<strong>球形</strong> 或 <strong>长方体</strong>。</dd>
+
+          <dt>半径/尺寸</dt>
+          <dd>视察体积的大小。</dd>
+        </dl>
+      </dd>
+    </dl>
+
+    <p>为了在Blender的视窗看到使用 <strong>立方盒反射</strong> 对象的结果，您需要首先通过<strong>烘焙立方盒反射</strong> 或 <strong>烘焙间接光照明</strong> 按钮烘焙它们的立方体贴图，这两个按钮都位于 <strong>间接照明</strong> 面板中，该面板位于 <strong>渲染属性</strong> 选项卡中。<br><br>另外， <a href="manual/zh/blender/Lighting-and-Rendering.html#cubemap_size">Cubemap Size</a> 属性还可以控制 <strong>立方盒反射</strong> 对象所使用的立方体贴图纹理的大小。<br><br><a href="manual/zh/blender/Lighting-and-Rendering.html#ibl_environment_mode">IBL环境模式</a> 的设置也会影响到由 <strong>立方盒反射</strong> 对象生成的立方体贴图。</p>
+
+    <p>由于实现细节的差异性，在Blender和Verge3D中，<strong>立方盒反射</strong> 光照探头的表现是不同的。</p><ul>
+        <li>Blender支持每个对象有多个光照探头，而Verge3D只支持一个。这就是为什么Verge3D中的对象使用单一的立方体贴图，要么来自 <strong>立方盒反射</strong> 对象，要么来自世界环境。<strong>衰减</strong> 选项不受支持。</li>
+
+        <li>Blender默认不对网格使用背面剔除(Backface Culling)，而Verge3D使用。因此，在Blender中，如果 <strong>裁剪起点(Clipping Start)</strong> / <strong>裁剪终点(Clipping End)</strong> 设置调整不当，放置在探头影响范围内的物体会在立方盒反射上显示为黑点，这是由于背面也被渲染了。默认情况下，Verge3D中不会出现这种情况。</li>
+
+        <li>在将对象渲染（烘焙）到光照探头的立方体贴图中时，Blender只考虑对象材质的漫反射成分，而Verge3D对它们的渲染与在主场景中的渲染方式没有区别。这就是为什么全金属物体在Blender中被渲染成黑色，但在Verge3D中它们仍然反射了世界环境。</li>
+
+        <li>为了让 <strong>可见性集合</strong> 属性在Blender中发挥作用，要求指定的集合也被链接到场景中。在Verge3D中不需要，只需将一个对象分配给一个集合即可。</li>
+      </ul>
+    <p></p>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#background" id="background" class="permalink">#</a></p>
+
+    <h2>背景(Background)</h2>
+
+    <p>在默认情况下，Blender和Verge3D中背景和环境照明会保持一致的渲染。如果需要将它们分开渲染，请使用基于 <a href="manual/zh/blender/Shader-Nodes-Reference.html#Light_Path">光路</a> 节点的<strong>Is Camera Ray</strong>输出的高级世界节点设置。例如，要将背景颜色设置为纯灰色，并继续使用HDR贴图进行环境照明。</p><img src="files/lighting-blender/world-nodes-advanced.jpg" class="centered" style="max-width: 886px">
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#global_rendering_properties" id="global_rendering_properties" class="permalink">#</a></p>
+
+    <h2>全局渲染属性</h2>
+
+    <p>可在Blender的<b>渲染属性</b>面板上设置全局渲染属性。</p><img src="files/lighting-blender/rendering-properties-indirect.jpg" class="centered" style="max-width: 315px"><dl>
+
+      <dt id="cubemap_size">立方体反射尺寸(Cubemap Size)</dt>
+      <dd>用于环境照明的纹理尺寸：<dl>
+          <dt>64, 128</dt>
+          <dd>请勿使用，<strong>256</strong>是Verge3D中可支持的最小值。</dd>
+
+          <dt>256</dt>
+          <dd>最合适的质量和较低的内存消耗（推荐）。</dd>
+
+          <dt>512</dt>
+          <dd>更好的质量，适中的内存消耗和相对降低的性能。可用在渲染高质量的反射的场景，例如渲染珠宝。</dd>
+
+          <dt>1024</dt>
+          <dd>高内存消耗，低性能，最佳渲染质量（一般不推荐）。</dd>
+
+          <dt>2048, 4096</dt>
+          <dd>请勿使用，<strong>1024</strong>是Verge3D中可支持的最大值。</dd>
+        </dl>
+      </dd>
+
+      <dt>视图转换(View Transform)</dt>
+      <dd>应用于Verge3D效果图的额外颜色校正：<dl>
+          <dt>标准</dt>
+          <dd>没有应用其他颜色校正。如果您不需要颜色校正，就改用这种方法，因为它比<strong>Filmic</strong>的工作速度略快。</dd>
+
+          <dt>Filmic</dt>
+          <dd>Blender默认方法。</dd>
+
+          <dt>Filmic Log, Raw, False Color</dt>
+          <dd>不被支持，Verge3D将改用<strong>Standard</strong>。</dd>
+        </dl><img src="files/lighting-blender/rendering-properties-global.jpg" class="centered" style="max-width: 318px"></dd>
+
+      <dt><b>Enable Shadows and Shadow Map Side</b></dt>
+      <dd><b>启用阴影和阴影贴图面</b>。阴影属性，请在 <a href="manual/zh/blender/Shadows.html">此处</a> 了解详情。</dd>
+
+
+      <dt><b>Anti-Aliasing</b></dt>
+      <dd>抗锯齿，选择场景使用何种反锯齿算法：<dl>
+          <dt><b>Auto</b></dt>
+          <dd><b>自动</b>，使用系统默认方法。</dd>
+
+          <dt><b>MSAA 4x</b></dt>
+          <dd>如果目标硬件支持的话，则首选使用4倍采样的多采样抗锯齿。</dd>
+
+          <dt><b>MSAA 8x</b></dt>
+          <dd>如果目标硬件支持的话，则首选使用使用8倍采样的多采样抗锯齿。</dd>
+
+          <dt><b>MSAA 16x</b></dt>
+          <dd>如果目标硬件支持的话，则首选使用使用16倍采样的多采样抗锯齿。</dd>
+
+          <dt><b>FXAA</b></dt>
+          <dd>强制使用FXAA。</dd>
+
+          <dt><b>None</b></dt>
+          <dd>禁用抗锯齿。</dd>
+        </dl>
+      </dd>
+
+      <dt><b>Use HDR Rendering</b></dt>
+      <dd>启用HDR渲染，即高动态范围渲染。</dd>
+
+      <dt id="ibl_environment_mode">IBL Environment Mode(基于图像照明环境模式</dt>
+      <dd>
+        <dl>
+          <dt><b>PMREM (slow)</b></dt>
+          <dd>PMREM（慢速），高质量（默认值）。</dd>
+
+          <dt><b>Light Probe + Cubemap (medium)</b></dt>
+          <dd><b>光照探头+Cubemap（中速）</b>，降低基于图像的镜面反射质量，性能更好。</dd>
+
+          <dt><b>Light Probe (fast)</b></dt>
+          <dd><b>光照探头（快速）</b>，禁用基于图像的镜面反射，性能最高。</dd>
+        </dl>
+      </dd>
+
+      <dt><strong>Outlining Effect</strong></dt>
+      <dd><b>轮廓效果</b>，见 <a href="manual/zh/blender/Lighting-and-Rendering.html#outline_rendering">下文</a> 。</dd>
+
+    </dl>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>轮廓渲染</h2>
+
+    <p>轮廓渲染（又名剪影边缘渲染）是一种常见的非真实感渲染(NPR)技术，可以显著增强场景视觉感知。这种效果可用于各种应用，如电子学习、游戏、建筑可视化和技术绘图。</p>
+
+    <p>要在Verge3D应用中使用物体的轮廓（和可选的辉光），首先在Blender的<b>渲染属性</b>面板上启用该效果，然后将 <a href="manual/zh/puzzles/Objects.html#outline">outline(轮廓)</a> 拼图应用于对象物体。</p>
+
+    <p class="note">轮廓渲染在AR/VR进程中不起作用。可使用其他方法来突出对象物体，如动画或改变材质的颜色。</p><img src="files/lighting-blender/outline-example.jpg" class="centered" style="max-width: 819px"><p>可以使用以下属性来调整轮廓：</p>
+
+    <p><strong>Enabled</strong> —  启用/禁用效果。</p>
+
+    <p><strong>Edge Strength</strong> —  轮廓强度系数。</p>
+
+    <p><strong>Edge Glow</strong>  — 额外发光的强度（渲染在在主轮廓边缘之外）。</p>
+
+    <p><strong>Edge Thickness</strong> — 轮廓边缘厚度系数。</p>
+
+    <p><strong>Pulse Period</strong> — 以秒为单位的脉冲周期。指定以下参数，使效果动画化。</p>
+
+    <p><strong>Visible Edge Color</strong> — <b>可见边颜色</b>。</p>
+
+    <p><strong>Hidden Edge Color</strong> — <b>隐藏边颜色</b>，在任何其他场景对象后面的被渲染的轮廓边的颜色。</p>
+
+    <p><strong>Render Hidden Edge</strong> — <b>渲染隐藏边</b>，启用/禁用渲染其他场景对象后面的轮廓边。</p>
+
+    <p class="note">尽管有可能渲染发光的物体，但在大多数情况下可以用轮廓渲染来提高场景的视觉清晰度。如果您需要从灯或其他明亮的物体上发光，可以考虑使用 <a href="manual/zh/puzzles/Postprocessing.html#bloom">辉光后期处理</a> 来代替。</p>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#per_object_rendering_properties" id="per_object_rendering_properties" class="permalink">#</a></p>
+
+    <h2>每个对象的渲染属性</h2>
+
+    <p>Verge3D为您的几何对象支持以下额外的渲染属性：</p><img src="files/lighting-blender/rendering-properties.jpg" class="centered" style="max-width: 313px"><p><strong>Rendering Order</strong> — <b>渲染顺序</b>，修改特定对象的渲染顺序。索引越小，对象就越早被渲染。在大多数情况下，当使用混合透明度时，您需要调整这个值，以消除透明度的伪影。</p>
+
+    <p><strong>Frustum Culling</strong> — <b>锥台剔除</b>，启用/禁用对象的锥台剔除优化。如果您有一些可以移动到屏幕空间之外的蒙皮对象，请取消勾选这个选项，以防止它被剔除。</p>
+
+    <p><strong>Receive Shadows</strong> — <b>接收阴影</b>，渲染或不渲染给定对象的阴影。参见 <a href="manual/zh/blender/Shadows.html">这里</a> 的更多信息。</p>
+
+    <p><a href="manual/zh/blender/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>剪切平面</h2>
+
+    <p>剪切平面（又称剖面图、横截面图、网格截面）是一种用于显示复杂对象（如建筑物、汽车、电器、小玩意、机器等）内部结构的技术。</p><img src="files/lighting-blender/clipping-plane-example.jpg" class="centered"><p>若要添加新的剪切平面，请使用Blender的“添加对象”菜单中的“Clipping Planes(剪切平面)”菜单项：</p><img src="files/lighting-blender/clipping-plane-new.jpg" class="centered"><p>场景中的对象将在剪切平面对象的 <strong>-Z</strong> 方向被剪切。</p>
+
+    <p>剪切平面具有以下属性：</p><img src="files/lighting-blender/clipping-plane-properties.jpg" class="centered" style="max-width: 382px"><dl>
+      <dt>Affected Objects</dt>
+      <dd>受影响的对象，被平面剪切的对象的集合。如果为空，所有场景对象都将被剪切。</dd>
+      <dt>Negated</dt>
+      <dd>负方向，即对调被剪切和未剪切的两边。</dd>
+      <dt>Clip Shadows</dt>
+      <dd>剪切从被剪切对象投出的阴影。</dd>
+      <dt>Union Planes</dt>
+      <dd>对从所有裁剪平面构造并集，影响对象，而不是使用它们的交集影响对象。</dd>
+      <dt>Filled Cross-Section</dt>
+      <dd>填充剪裁平面和受影响对象之间的横截面。</dd>
+      <dt>Cross-Section Color</dt>
+      <dd>横断面漫反射颜色和不透明度。</dd>
+      <dt>Cross-Section Plane Size</dt>
+      <dd>横截面尺寸。如果使用较大的场景大小，请增加该值。</dd>
+    </dl>
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

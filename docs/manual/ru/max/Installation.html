@@ -1,0 +1,444 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для 3ds Max: Установка - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page describes the installation procedure for 3ds Max version of Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/max/Installation.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для 3ds Max: Установка - Soft8Soft">
+            <meta property="og:description" content="This page describes the installation procedure for 3ds Max version of Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/max/Installation.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для 3ds Max: Установка - Soft8Soft">
+            <meta name="twitter:description" content="This page describes the installation procedure for 3ds Max version of Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installer-max-starting.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installer-max-choosing-path.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation-max-checking-menu.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/app-manager-desktop-launcher.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max1.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max1-2020.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max2.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max3.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max4.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/installation_3ds_max-registering_manually.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/troubleshooting-adding-object-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/python3-conflict.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/win-environment-search-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/win-system-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/win-environment-vars.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/uninstalling-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/installation_3ds_max/cleanup-scene.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Установка / 3ds Max</h1>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/max/Installation.html#Prerequisites">Необходимые Условия</a></li><li><a href="manual/ru/max/Installation.html#Verge3D_Installer">Установщик Verge3D</a></li><li><a href="manual/ru/max/Installation.html#Configuring_Plugin_Path_Manually">Настройка Пути Плагина Вручную</a></li><li><a href="manual/ru/max/Installation.html#Troubleshooting">Устранение Неполадок</a><ul><li><a href="manual/ru/max/Installation.html#no_verge3d_menu">Меню Verge3D по-прежнему отсутствует</a></li><li><a href="manual/ru/max/Installation.html#verge3d_props_missing">Свойства Verge3D для Объектов отсутствуют</a></li><li><a href="manual/ru/max/Installation.html#python3_conflict">Использование модуля python37.dll конфликтует с этой версией Python</a></li></ul></li><li><a href="manual/ru/max/Installation.html#Uninstalling">Деинсталляция</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/max/Installation.html#Prerequisites" id="Prerequisites" class="permalink">#</a></p>
+
+    <h2>Необходимые Условия</h2>
+
+    <h3>3ds Max</h3>
+
+    <p>
+      Verge3D может работать поверх Autodesk 3ds Max 2019-2022, который необходимо установить первым. В противном случае вы можете загрузить бесплатный пробный пакет с <a href="https://www.autodesk.com/products/3ds-max/free-trial" target="_blank">сайта</a> Autodesk или попробовать Verge3D для Blender.
+    </p>
+
+    <p>
+      Мы рекомендуем использовать последнюю версию 3ds Max (на момент написания это версия 2022) для достижения наилучшего результата.
+    </p>
+
+    <h3>Операционная система</h3>
+
+    <p>
+      Мы рекомендуем использовать Verge3D на Windows 10 с установленными последними видеодрайверами. Для установки не требуются привилегии администратора.
+    </p>
+
+    <h3>Веб-браузер</h3>
+
+    <p>
+    Verge3D может работать с любыми из следующих браузеров: Chrome, Firefox, Opera, Edge или Internet Explorer 11. 
+    Однако мы рекомендуем использовать браузер Chrome, так как он быстрый и предоставляет хорошие инструменты для разработки. Возможно, вы захотите сделать его браузером по умолчанию для более удобного предварительного просмотра.
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Installation.html#Verge3D_Installer" id="Verge3D_Installer" class="permalink">#</a></p>
+
+    <h2>Установщик Verge3D</h2>
+
+    <p>
+    <a href="https://www.soft8soft.com/get-verge3d/" target="_blank">Загрузите</a> пакет Verge3D и дважды щелкните мышкой на файле <strong>.exe</strong>, чтобы запустить программу установки.
+    </p>
+
+    <img src="files/installation_3ds_max/installer-max-starting.jpg" class="centered" style="max-width: 500px">
+
+    <p>
+      Выберите папку для установки, которая имеет достаточно прав на чтение и запись (или лучше оставьте ее по умолчанию). Не рекомендуется устанавливать в системные папки "Program Files" и "Desktop". 
+    </p>
+
+    <img src="files/installation_3ds_max/installer-max-choosing-path.jpg" class="centered" style="max-width: 499px">
+
+    <p>
+      После завершения установки вы можете открыть 3ds Max. Если он был запущен, не забудьте закрыть и открыть его снова. Теперь вы должны увидеть меню <strong>Verge3D</strong> в строке главного меню.
+    </p>
+
+    <img src="files/installation_3ds_max/installation-max-checking-menu.jpg" class="centered" style="max-width: 700px">
+
+    <p>
+      Начиная с версии 2.15, вы также можете запустить App Manager без запуска 3ds Max, щелкнув значок на рабочем столе или используя меню "Пуск".
+    </p>
+
+    <img src="files/installation_3ds_max/app-manager-desktop-launcher.jpg" class="centered">
+
+
+
+    <p><a href="manual/ru/max/Installation.html#Configuring_Plugin_Path_Manually" id="Configuring_Plugin_Path_Manually" class="permalink">#</a></p>
+
+    <h2>Настройка Пути Плагина Вручную</h2>
+
+    <p>
+      Иногда меню Verge3D не отображается. Это может произойти по разным причинам:
+    </p>
+
+    <ul>
+      <li>Вы отключили опцию <strong>Auto-Configure</strong> в программе установки.</li>
+      <li>Вы установили и запустили новую версию 3ds Max.</li>
+      <li>Вы сменили пользователя Windows.</li>
+    </ul>
+
+    <p>
+      В этом случае вы можете использовать следующую процедуру для настройки пути к плагину вручную.
+    </p>
+
+    <p>
+      Запустите 3ds Max и выберите "Configure System Paths..." в разделе "Customize" в строке главного меню.
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max1.png" class="centered" style="max-width: 1000px">
+
+    <p>
+      В версии 2020 он называется  "Configure User and System Paths...".
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max1-2020.png" class="centered" style="max-width: 1000px">
+
+    <p>
+      Перейдите на вкладку "3rd Party Plug-ins" и нажмите кнопку "Add...".
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max2.png" class="centered" style="max-width: 1000px">
+
+    <p>
+      Перейдите в папку, в которой установлен Verge3D, а затем в папку "max_plugin" внутри нее. Нажмите "Use Path".
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max3.png" class="centered" style="max-width: 1000px">
+
+    <p>
+      Нажмите "OK" и перезапустите 3ds Max.
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max4.png" class="centered" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/ru/max/Installation.html#Troubleshooting" id="Troubleshooting" class="permalink">#</a></p>
+
+    <h2>Устранение Неполадок</h2>
+
+
+    <p><a href="manual/ru/max/Installation.html#no_verge3d_menu" id="no_verge3d_menu" class="permalink">#</a></p>
+
+    <h3>Меню Verge3D по-прежнему отсутствует</h3>
+
+    <p>
+      В некоторых редких случаях меню Verge3D может не отображаться в строке главного меню, даже если вы настроили путь к плагину и снова открыли 3ds Max. Чтобы зарегистрировать меню вручную, перейдите в раздел *Утилиты*, нажмите <strong>MaxScript</strong> и выберите <strong>Verge3D</strong> в выпадающем меню. Затем нажмите <strong>Register Verge3D menu</strong>.
+    </p>
+
+    <img src="files/installation_3ds_max/installation_3ds_max-registering_manually.jpg" class="centered" style="max-width: 1000px">
+
+    <p><a href="manual/ru/max/Installation.html#verge3d_props_missing" id="verge3d_props_missing" class="permalink">#</a></p>
+
+    <h3>Свойства Verge3D для Объектов отсутствуют</h3>
+
+    <p>
+      Пользовательские свойства, специфичные для Verge3D, автоматически добавляются к объектам при их создании, если включена опция <strong>Verge3D &gt; Auto-Assign Verge3D Params</strong>. Параметры Verge3D не создаются в случаях импорта сцены, открытия файла, который был создан до установки Verge3D, или если вышеупомянутая опция выключена. 
+    </p>
+
+    <img src="files/installation_3ds_max/troubleshooting-adding-object-params.jpg" class="centered" style="max-width: 615px">
+
+    <p>
+      В любом случае, вы можете добавить параметры Verge3D к существующим объектам вручную, перейдя на вкладку <strong>Utilities</strong>, выбрав <strong>Verge3D</strong> в разделе <strong>MAXScript</strong> и нажав <strong>Add Verge3D Params</strong> для выбранных объектов. 
+    </p>
+
+    <p><a href="manual/ru/max/Installation.html#python3_conflict" id="python3_conflict" class="permalink">#</a></p>
+
+    <h3>Использование модуля python37.dll конфликтует с этой версией Python</h3>
+
+    <p>
+      Если вы видите эту ошибку в 3ds Max 2021+ (при запуске или при попытке экспортировать что-либо)...
+    </p>
+
+    <img src="files/installation_3ds_max/python3-conflict.jpg" class="centered" style="max-width: 267px">
+
+    <p>
+      ...тогда возможно, что какой-то плагин мешает корректной работе переменных среды вашей системы (заставляя 3ds Max использовать устаревшую версию Python).
+    </p>
+
+    <p>
+      Чтобы исправить это, запустите Свойства системы, найдя в поиске <em>"изменение системных переменных среды"</em> и щелкните на появившемся приложении:
+    </p>
+
+    <img src="files/installation_3ds_max/win-environment-search-app.jpg" class="centered" style="max-width: 785px">
+
+    <p>
+      В диалоговом окне *Свойства системы* нажмите кнопку <strong>Переменные среды...</strong>:
+    </p>
+
+    <img src="files/installation_3ds_max/win-system-properties.jpg" class="centered" style="max-width: 425px">
+
+    <p>
+      В следующем диалоговом окне найдите переменную <strong>ADSK_3DSMAX_PYTHON_VERSION</strong>. Она должна находиться в списке *Переменные пользователя* или *Системные переменные*.
+    </p>
+
+    <img src="files/installation_3ds_max/win-environment-vars.jpg" class="centered" style="max-width: 574px">
+
+    <p>
+      Замените значение <strong>2</strong> на <strong>3</strong> нажав на кнопку <strong>Изменить...</strong>. Нажмите <strong>OK</strong>, а затем перезапустите систему.
+    </p>
+
+
+    <p><a href="manual/ru/max/Installation.html#Uninstalling" id="Uninstalling" class="permalink">#</a></p>
+
+    <h2>Деинсталляция</h2>
+
+    <p>
+      Чтобы удалить файлы Verge3D, а также значок на рабочем столе и в меню "Пуск" с компьютера, вы можете воспользоваться стандартной функцией *Добавить или удалить программы* в Windows. Она не затронет папки <strong>applications</strong> и <strong>puzzles</strong>, где хранятся пользовательские файлы, поэтому вы можете удалить их вручную, если они вам больше не нужны. 
+    </p>
+
+    <img src="files/installation_3ds_max/uninstalling-max.jpg" class="centered" style="max-width: 802px">
+
+    <p>
+      Перед удалением Verge3D вам может понадобиться удалить пользовательские опции Verge3D, назначенные вашим объектам. Для этого перейдите в <strong>Utilities</strong>, нажмите <strong>MaxScript</strong> и выберите <strong>Verge3D</strong> в выпадающем меню. Затем нажмите на кнопку <strong>Cleanup Scene</strong>.
+    </p>
+
+    <img src="files/installation_3ds_max/cleanup-scene.jpg" class="centered" style="max-width: 355px">
+
+
+    <h2>Что дальше?</h2>
+
+    <p>
+      Ознакомьтесь с <a href="manual/ru/max/Beginners-Guide.html">основами</a>!
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

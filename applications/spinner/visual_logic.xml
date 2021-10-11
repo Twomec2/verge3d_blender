@@ -1,0 +1,478 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="0" scrolly="0" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="522.3893875981486" scrolly="193.49622571136683" scale="0.46035211713348606">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="8JeO|DQ.k/{eoN=#]Hs7" type="">spinner status</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="volume" id="HvS!Oijv%Rc8HP6tvQQp" x="-790" y="-270">
+      <value name="VALUE">
+        <block type="loadSoundAdv" id="rg:QE.pCB@/.5N:Zq:O`">
+          <field name="TYPE">SOUND</field>
+          <value name="URL">
+            <shadow type="text" id="N#dOXA=fkC`:rT=BgZCP">
+              <field name="TEXT">./rolling.wav</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <value name="VOLUME">
+        <shadow type="math_number" id="Ygq2ZQ/6=,#)p4d$.sbv">
+          <field name="NUM">0.3</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="volume" id="_w:7q#~APMLGZlO00@R8">
+          <value name="VALUE">
+            <block type="loadSoundAdv" id="7xtEd_0-WR@YR|6^M:gA">
+              <field name="TYPE">SOUND</field>
+              <value name="URL">
+                <shadow type="text" id="2/gGaEGgjn@ivC-.n!RA">
+                  <field name="TEXT">./paint.mp3</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <value name="VOLUME">
+            <shadow type="math_number" id=",x:|?{tt[!^LzS5LF/`!">
+              <field name="NUM">0.5</field>
+            </shadow>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="|O+1nSkem,L-~U,!dsNc" x="-790" y="-170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="/1*xN,a9VWzI.l|v`[J6">
+          <field name="FIELDNAME">Yellow Ball</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="assignMaterial" id="$q|^Na)6Jt3B]u:{!+RM">
+          <value name="VALUE2">
+            <block type="materialList" id="dFy$2Cqxt9c`]s6)).Bn">
+              <field name="FIELDNAME">Yellow</field>
+            </block>
+          </value>
+          <value name="VALUE1">
+            <block type="groupList" id="N#BPW]|_e!sf`38JyXa1">
+              <field name="FIELDNAME">spinner parts</field>
+            </block>
+          </value>
+          <next>
+            <block type="playSound" id="]%c#XD~w(YLpRl}5d@4=">
+              <field name="LOOP">FALSE</field>
+              <value name="VALUE">
+                <block type="loadSoundAdv" id="V8F~8oD!Rta$SbIwtD}E">
+                  <field name="TYPE">SOUND</field>
+                  <value name="URL">
+                    <shadow type="text" id="+;EMV@qT%x^fiv]oXYwF">
+                      <field name="TEXT">./paint.mp3</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="whenClicked" id="maJ~kMWOkM|@%$u5bPf-">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <block type="objectList" id="dlxPSD6LX{o@nHxE*R[q">
+              <field name="FIELDNAME">Blue Ball</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="assignMaterial" id="bs}|R971WxqQ^dFLH(:7">
+              <value name="VALUE2">
+                <block type="materialList" id="wcGAQVn^J]e+,hQJn8Cb">
+                  <field name="FIELDNAME">Blue</field>
+                </block>
+              </value>
+              <value name="VALUE1">
+                <block type="groupList" id="Q+^^k~N$1j-.P=0%6{TW">
+                  <field name="FIELDNAME">spinner parts</field>
+                </block>
+              </value>
+              <next>
+                <block type="playSound" id="Gh}vFiKd|h!Rj!G~WNVf">
+                  <field name="LOOP">FALSE</field>
+                  <value name="VALUE">
+                    <block type="loadSoundAdv" id="|X4].X?3q3eX}+OO+:}Q">
+                      <field name="TYPE">SOUND</field>
+                      <value name="URL">
+                        <shadow type="text" id="UDRKfIL1ZI?_]V;_]v[w">
+                          <field name="TEXT">./paint.mp3</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="whenClicked" id="!o,O%-@M?l)zkc!;rYbH">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <block type="objectList" id="mGz-M3bI]vwmI8fF-#UK">
+                  <field name="FIELDNAME">Red Ball</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="assignMaterial" id="Qt$4J7HAd~~-;1O]e:Xv">
+                  <value name="VALUE2">
+                    <block type="materialList" id="?RosN~UX@Nl+1T6J5w#2">
+                      <field name="FIELDNAME">Red</field>
+                    </block>
+                  </value>
+                  <value name="VALUE1">
+                    <block type="groupList" id="wLcu@N,[tSmhXie~zp8]">
+                      <field name="FIELDNAME">spinner parts</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="playSound" id="I}fB-!d=0zD+k}0R}2V`">
+                      <field name="LOOP">FALSE</field>
+                      <value name="VALUE">
+                        <block type="loadSoundAdv" id="(2k(/Uf1lB5}{N;oQg4S">
+                          <field name="TYPE">SOUND</field>
+                          <value name="URL">
+                            <shadow type="text" id="BLl#T+IG*x@own@h~:jm">
+                              <field name="TEXT">./paint.mp3</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="ikJZe_6-6F_R{g!Q`/T~" x="-270" y="-130">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="T!OPN+sp1O%h]}g;Omkd">
+          <field name="FIELDNAME">all parts</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="controls_if" id="~:#rhNa%`L$9)TH|fqdn">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="logic_compare" id="*/}x45o#2k]DfMGaoFj.">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="~I^?lXoQJg3A}.7KSx23">
+                  <field name="VAR" id="8JeO|DQ.k/{eoN=#]Hs7">spinner status</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="text" id="|IHG)EVZ5P71(`]U%IC7">
+                  <field name="TEXT">rotating</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="stopAnimation" id="m%$:=eY!3)i-/(^u-io*">
+              <value name="VALUE">
+                <block type="animationList" id="42_L:^%9-QtHD*!Hyl3M">
+                  <field name="FIELDNAME">Spinner</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set" id="Dj_Yb4=U_KCwG7OTF7]1">
+                  <field name="VAR" id="8JeO|DQ.k/{eoN=#]Hs7">spinner status</field>
+                  <value name="VALUE">
+                    <block type="text" id="=3wVJD@/U}#HtPZ4jZ?x">
+                      <field name="TEXT">stopped</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="pauseSound" id="`[vlR~8B~IsfUkq,TZWv">
+                      <value name="VALUE">
+                        <block type="loadSoundAdv" id="/ghB5sZdlV|)RV`h%mxP">
+                          <field name="TYPE">SOUND</field>
+                          <value name="URL">
+                            <shadow type="text" id="masOR_{V`](?R@=AeLTD">
+                              <field name="TEXT">./rolling.wav</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="playSound" id="D=,j=!o6-V%e@87E3#;s">
+              <field name="LOOP">TRUE</field>
+              <value name="VALUE">
+                <block type="loadSoundAdv" id="jrGgLEXsTZVvTxWetO/[">
+                  <field name="TYPE">SOUND</field>
+                  <value name="URL">
+                    <shadow type="text" id="Tm~dSr00grW6:!KD,64`">
+                      <field name="TEXT">./rolling.wav</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="playAnimationAdv" id="%fn3E|r{(78mdsm|g,4C">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" advplaybackoptions="false" enablewhenfinished="false"></mutation>
+                  <field name="REVERSED">FALSE</field>
+                  <field name="LOOP">AUTO</field>
+                  <value name="VALUE">
+                    <block type="animationList" id="|I;(cOne2i]%x-@lX1jg">
+                      <field name="FIELDNAME">Spinner</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="@h{-n9cdV`ej?mE0RlbC">
+                      <field name="VAR" id="8JeO|DQ.k/{eoN=#]Hs7">spinner status</field>
+                      <value name="VALUE">
+                        <block type="text" id="%P]YW)ae5BOIw1SY^OyW">
+                          <field name="TEXT">rotating</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_if" id=")r0sCvJa7j9~3mYi$P8c" x="-790" y="210">
+      <value name="IF0">
+        <block type="featureAvailable" id="Shru#hF]*fC[oQVwnEby">
+          <field name="FEATURE">WOOCOMMERCE</field>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="hide" id="U.yIKf+9yv~!}bzN(QgE">
+          <value name="VALUE">
+            <block type="objectList" id="n~XG61~twz3VGohe),-{">
+              <field name="FIELDNAME">Blue Ball</field>
+            </block>
+          </value>
+          <next>
+            <block type="hide" id="J0Qfbw1+6^LZIDv_nZvT">
+              <value name="VALUE">
+                <block type="objectList" id="f0AZPpt.R*@Y2}Zf`sN+">
+                  <field name="FIELDNAME">Red Ball</field>
+                </block>
+              </value>
+              <next>
+                <block type="hide" id="n!diy8CDKG?]!AAk*5}i">
+                  <value name="VALUE">
+                    <block type="objectList" id="borMefZY%XS+eMoaysPj">
+                      <field name="FIELDNAME">Yellow Ball</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="E-Commerce/wooGetProductInfo" id="}}SZuYQ1}lhc|^5%}ZII">
+                      <statement name="WHEN_READY">
+                        <block type="assignMaterial" id="w:a.Dld~vRA.K_qq{3yy">
+                          <value name="VALUE2">
+                            <block type="text_changeCase" id="emX1q`6D6_fg$!^(v7aC">
+                              <field name="CASE">TITLECASE</field>
+                              <value name="TEXT">
+                                <block type="E-Commerce/wooProductAttribute" id="%PVV{^4PcKdm}^Im7QgD">
+                                  <value name="NAME">
+                                    <shadow type="text" id="HMO#;t1{Hy%(xX9o$k1w">
+                                      <field name="TEXT">color</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="VALUE1">
+                            <block type="groupList" id=".JiVBn)fOja=C=?EI,[+">
+                              <field name="FIELDNAME">spinner parts</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_if" id="I{WTCc,_3!so_VkJSXNq">
+                              <mutation elseif="1" else="1"/>
+                              <value name="IF0">
+                                <block type="logic_compare" id="~-rr/P`[tw3;|j+[!Sh$">
+                                  <field name="OP">EQ</field>
+                                  <value name="A">
+                                    <block type="E-Commerce/wooProductAttribute" id="M6_MmsHx:dz*e_/#03@M">
+                                      <value name="NAME">
+                                        <shadow type="text" id="iL)=#9#=Cu|V4Ev*c*R-">
+                                          <field name="TEXT">size</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text" id="l2p@1k*.hKAS~R0;D!;;">
+                                      <field name="TEXT">Small</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="setObjTransform" id="hso}eA)4YJoy0uo;o7^J">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                                  <field name="MODE">scale</field>
+                                  <field name="OFFSET">FALSE</field>
+                                  <value name="TARGETOBJ">
+                                    <block type="groupList" id="b6G9[[mGe?LiCMxL;J.z">
+                                      <field name="FIELDNAME">spinner parts</field>
+                                    </block>
+                                  </value>
+                                  <value name="X">
+                                    <block type="math_number" id="z`P8Iu2(W+Nca*[}mkbX">
+                                      <field name="NUM">0.7</field>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number" id="Wnlp;uC/O@-f_L^?3IW,">
+                                      <field name="NUM">0.7</field>
+                                    </block>
+                                  </value>
+                                  <value name="Z">
+                                    <block type="math_number" id="j?9O*3}%{=!)n-FCH(Z*">
+                                      <field name="NUM">0.7</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <value name="IF1">
+                                <block type="logic_compare" id="?G/cr5_]:l9$z)]KeMxZ">
+                                  <field name="OP">EQ</field>
+                                  <value name="A">
+                                    <block type="E-Commerce/wooProductAttribute" id="o7DI5oof/X}ywD^#%Ci3">
+                                      <value name="NAME">
+                                        <shadow type="text" id="3iT=GJNdWqRU0?kEEy!#">
+                                          <field name="TEXT">size</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="text" id="NFjv/H[`Sfg0yIgy=;:$">
+                                      <field name="TEXT">Large</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO1">
+                                <block type="setObjTransform" id="zc=FW!W8,kG$`.#6-{OA">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                                  <field name="MODE">scale</field>
+                                  <field name="OFFSET">FALSE</field>
+                                  <value name="TARGETOBJ">
+                                    <block type="groupList" id="2n~NYHM]L{[8]^#N;4?n">
+                                      <field name="FIELDNAME">spinner parts</field>
+                                    </block>
+                                  </value>
+                                  <value name="X">
+                                    <block type="math_number" id="p,$5Cc|1tJmrp5|@3R:8">
+                                      <field name="NUM">1.3</field>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number" id="#2uE^e.)TSJgh=boY)01">
+                                      <field name="NUM">1.3</field>
+                                    </block>
+                                  </value>
+                                  <value name="Z">
+                                    <block type="math_number" id="V+F#fZzEkMRoyi5Z/O|1">
+                                      <field name="NUM">1.3</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <statement name="ELSE">
+                                <block type="setObjTransform" id=".?71bm%fEZ4O]D-iKs;p">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+                                  <field name="MODE">scale</field>
+                                  <field name="OFFSET">FALSE</field>
+                                  <value name="TARGETOBJ">
+                                    <block type="groupList" id="7vdm.~_n]a1HZrC`+hoO">
+                                      <field name="FIELDNAME">spinner parts</field>
+                                    </block>
+                                  </value>
+                                  <value name="X">
+                                    <block type="math_number" id="!i/F4wR{QvouLyzQn3zQ">
+                                      <field name="NUM">1</field>
+                                    </block>
+                                  </value>
+                                  <value name="Y">
+                                    <block type="math_number" id="DddjWp5@V(|^lIIFIOu6">
+                                      <field name="NUM">1</field>
+                                    </block>
+                                  </value>
+                                  <value name="Z">
+                                    <block type="math_number" id="]u]MbB)/ey0:Qom_pTkq">
+                                      <field name="NUM">1</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="playSound" id="jz;.x^D*|e]k=[0x,`qP">
+                                  <field name="LOOP">FALSE</field>
+                                  <value name="VALUE">
+                                    <block type="loadSoundAdv" id="$IPE?w1W,h;k]@RI:r^t">
+                                      <field name="TYPE">MUSIC</field>
+                                      <value name="URL">
+                                        <shadow type="text" id="E)xd`yTfw?o#V1#,Pk=r">
+                                          <field name="TEXT">./paint.mp3</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="846" viewport-y="28" viewport-w="576" viewport-h="249.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

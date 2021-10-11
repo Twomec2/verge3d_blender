@@ -1,0 +1,1270 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="639.0000000000001" scrolly="369" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="yiHV#u|b5q9:8GRufG+T" x="-710" y="-410">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">TRUE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="true" scrollx="-142.76344342441826" scrolly="471.362914498464" scale="0.8227024747918814">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="3Mk9Ez5DOOEr_F3FLi@`" type="">parts_cost</variable>
+      <variable id="9iw%)+MeT}mWvlYoub41" type="">final_cost</variable>
+      <variable id="Er+r:AHI:@JXSV0Qh%Ak" type="">checkout_list</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="refraction" id="2lOM7SzG.EC]6^.-hnU7" x="-650" y="-1710">
+      <value name="MATERIAL">
+        <shadow type="materialList" id="od]6s{QI@R~rW;8vXNy-">
+          <field name="FIELDNAME">gem_outside</field>
+        </shadow>
+      </value>
+      <value name="DISTANCE">
+        <shadow type="number_slider" id="[:[?!yKg*bLr.H-atKP.">
+          <field name="NUM" min="0" max="10" step="0.1">0.17</field>
+        </shadow>
+      </value>
+      <value name="RENDER_AFTER">
+        <shadow type="objectList" id="Dfdg]uPRPr@2;WP+LZUy">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="lists_create_with" id="oni/?,M!P2V=n-)(Xf7f">
+          <mutation items="4"/>
+          <value name="ADD0">
+            <block type="objectList" id="_c%=ar@b~l`;jxa1)TPz">
+              <field name="FIELDNAME">ring_01</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="]H1Z`k`ut8W-G7lyaTh~">
+              <field name="FIELDNAME">ring_02</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="objectList" id="uak1MDIRs]nx}B-a}jQ1">
+              <field name="FIELDNAME">ring_03</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="objectList" id="wOvzh5^vnO:ae{d8bKOV">
+              <field name="FIELDNAME">ring_04</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="bloom" id="OWH=HnTPoEIMBfqCL9T?" x="-650" y="-1510">
+      <value name="THRESHOLD">
+        <shadow type="math_number" id="V(?r)`zZtU),1k.9SB|Y">
+          <field name="NUM">0.98</field>
+        </shadow>
+      </value>
+      <value name="STRENGTH">
+        <shadow type="math_number" id="Z~hCm!Op}ue~T/NL=r|,">
+          <field name="NUM">0.6</field>
+        </shadow>
+      </value>
+      <value name="RADIUS">
+        <shadow type="math_number" id="Aj8o:E%LYq-K8$~p,Qs)">
+          <field name="NUM">0.5</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="variables_set" id="i`-e85EYunXjU+7=8H;m">
+          <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+          <value name="VALUE">
+            <block type="lists_create_with" id="~SLauFc[3[8=^P,./Bx1">
+              <mutation items="2"/>
+              <value name="ADD0">
+                <block type="math_number" id="$k9vV7J15R?}rl%xzrq=">
+                  <field name="NUM">40</field>
+                </block>
+              </value>
+              <value name="ADD1">
+                <block type="math_number" id="Fyne,WtGO-ppeqbViBH[">
+                  <field name="NUM">100</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" id="%GhYam?8,$A%;7Ph6$--">
+              <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+              <value name="VALUE">
+                <block type="lists_create_with" id="xN,x:p40Z9HOK;?i0lLS">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="text" id="(=cg%|PR,H,)~9~5/XXU">
+                      <field name="TEXT">Silver </field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="DxHmlh:LVo/ZYd^m2[}t">
+                      <field name="TEXT">ring with three small gems.</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" id="LPJnagnA2%#gVo|0_fzL">
+                  <mutation name="price_recount"/>
+                  <next>
+                    <block type="setHTMLElemStyle" id="reYLlH,J3tlZlqT*o6EJ">
+                      <field name="PROPERTY">display</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="VALUE">
+                        <block type="text" id="Zk[IO:kWp?3Otpu#rsEN">
+                          <field name="TEXT">none</field>
+                        </block>
+                      </value>
+                      <value name="ID">
+                        <block type="text" id="{[;1s?JH@`7c!84ubgzL">
+                          <field name="TEXT">fullscreen_button</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="=oTx`h8c_kb_s%)O}#Fy" x="90" y="-1490">
+      <field name="NAME">price_recount</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set" id="I)T:}h1Wp|fTU9QC[=+O">
+          <field name="VAR" id="9iw%)+MeT}mWvlYoub41">final_cost</field>
+          <value name="VALUE">
+            <block type="math_arithmetic" id="WR}*;$s)[^7!R^h]Pt4_">
+              <field name="OP">ADD</field>
+              <value name="A">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="j/s=%U3H){7*ib,x~Rk1">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="lists_getIndex" id="k(dqeNGgQVl%D(OdNAOH">
+                  <mutation statement="false" at="true"/>
+                  <field name="MODE">GET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="LUhB3H{SDzAls%qz,MUL">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="fZBC?@{O6jb}QBb;D~R/">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="1L%Q:YHa845$%`#}V1xG">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="lists_getIndex" id="JrCY|~RXP%4,94**ruP/">
+                  <mutation statement="false" at="true"/>
+                  <field name="MODE">GET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="rD6pXk+Ne_=o~8fO@Y!g">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="ZeTBB6P(-vnu4X`Y)+CB">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="updateTextObject" id=".TGVv0WQ*}V`?Vz*5Hs}">
+              <value name="VALUE1">
+                <block type="objectList" id="~E;mIz1RDXn*sB^RYc?p">
+                  <field name="FIELDNAME">final_cost</field>
+                </block>
+              </value>
+              <value name="VALUE2">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="F5a(|0]JU();b:c]K[*E">
+                  <field name="TEXT">Verge3D</field>
+                </shadow>
+                <block type="text_join" id=";Y]cF2R^hu0L?GD]87fU">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="variables_get" id="Mx%S^lCwP?L~kexBep7$">
+                      <field name="VAR" id="9iw%)+MeT}mWvlYoub41">final_cost</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="zeU{4H$Favo;{,a)q4x=">
+                      <field name="TEXT">$</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="6fi7}(WAsN*A3x!@yGO(" x="10" y="-1170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id=";j)T3S#W5.%m!#.84}/$">
+          <field name="FIELDNAME">button_2</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="hide" id="|AQ(sH.}(9F[?kSo3arr">
+          <value name="VALUE">
+            <block type="groupList" id="pn$NQw@TNc**gZ!Y-v-.">
+              <field name="FIELDNAME">everything</field>
+            </block>
+          </value>
+          <next>
+            <block type="show" id="0-MN%Rg0EeuI1fmoz9Rw">
+              <value name="VALUE">
+                <block type="lists_create_with" id="ajb(Z8C{L:n;2CK]5F^c">
+                  <mutation items="5"/>
+                  <value name="ADD0">
+                    <block type="objectList" id="LLLl*rA6G=fEWAQbKPmp">
+                      <field name="FIELDNAME">ring_02</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="objectList" id="xE#1]2[F_oW|!YGsevn{">
+                      <field name="FIELDNAME">gem_01_outside</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="objectList" id="t}Ao*vrQJ/KoBRy)n3]o">
+                      <field name="FIELDNAME">gem_01_inside</field>
+                    </block>
+                  </value>
+                  <value name="ADD3">
+                    <block type="objectList" id="$7PGe==w|E=rVxEmP;+P">
+                      <field name="FIELDNAME">gem_02_outside</field>
+                    </block>
+                  </value>
+                  <value name="ADD4">
+                    <block type="objectList" id="4[;T7dx}c0BLRl5g4tuk">
+                      <field name="FIELDNAME">gem_02_inside</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="XNLy[);jS/~QS?xjgkT)">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id=":M*P3gNi+c`{qnhTIrOP">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="^nwfpmxjsdpAr|~2EWa@">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" id="UG~LUWRa80_.~3$=D(`/">
+                      <field name="NUM">140</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="lists_setIndex" id="dB$u:Ho;J.rr!d~!@m*}">
+                      <mutation at="true"/>
+                      <field name="MODE">SET</field>
+                      <field name="WHERE">FROM_START</field>
+                      <value name="LIST">
+                        <block type="variables_get" id="lxM!S0sZY@S4Sk[9~B_Z">
+                          <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                        </block>
+                      </value>
+                      <value name="AT">
+                        <block type="math_number" id="r{wqSh;xk}EJ0wqMh:JC">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="text" id="o+Z+K!+Pa(pV59uJY#:j">
+                          <field name="TEXT">ring with three small gems.</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="=%_JqM)cgJ@RVNIaLDe3">
+                          <mutation name="price_recount"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="8rGgWA0`cre[iOW7naV6" x="-650" y="-1110">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="-.)V0`O}=S-|sG@2[UkF">
+          <field name="FIELDNAME">button_1</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="hide" id="zgCGP.0|U5cG5:~SthO[">
+          <value name="VALUE">
+            <block type="groupList" id="cw?!#a@/d#c2%g%HH/kB">
+              <field name="FIELDNAME">everything</field>
+            </block>
+          </value>
+          <next>
+            <block type="show" id="@oT=?]+87C4:|~8a[B[v">
+              <value name="VALUE">
+                <block type="lists_create_with" id="@Xy,=##tuzg_60*AR.zB">
+                  <mutation items="3"/>
+                  <value name="ADD0">
+                    <block type="objectList" id="`PDS@P;U!6x(EsAfqfhM">
+                      <field name="FIELDNAME">ring_01</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="objectList" id=";1R.Hl0whQq|x:R3pZIw">
+                      <field name="FIELDNAME">gem_01_outside</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="objectList" id="b=YXDbtwRI.O@eFDq.po">
+                      <field name="FIELDNAME">gem_01_inside</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="6!-n7m$0xwyPT|r,3|.k">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id="U@iH9/prT{W^M[e*g[bP">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="~[y[EH5707_Qj4(=HQ.{">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" id="Lpt4TzC)JiBdRXw89@M6">
+                      <field name="NUM">100</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="lists_setIndex" id="t{UA!jp$z3Q4:cr.^Dky">
+                      <mutation at="true"/>
+                      <field name="MODE">SET</field>
+                      <field name="WHERE">FROM_START</field>
+                      <value name="LIST">
+                        <block type="variables_get" id="nC42SYU=c}P*Hb:~fKTP">
+                          <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                        </block>
+                      </value>
+                      <value name="AT">
+                        <block type="math_number" id="PtDOJLrFMxX^34qPv#LT">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="text" id="AN8r^w=Ppg%~3uY~{}lt">
+                          <field name="TEXT">ring with one small gem.</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="K8#ua:voKC6V?!lF)F55">
+                          <mutation name="price_recount"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="lkN68OIt(-XYkXN[7BA_" x="790" y="-1150">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="=60(dE:?)xJq-#lLCW?i">
+          <field name="FIELDNAME">order_button</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="variables_set" id="$v$_G`uOmw$MmVy,ya,e">
+          <field name="VAR" id="9iw%)+MeT}mWvlYoub41">final_cost</field>
+          <value name="VALUE">
+            <block type="math_arithmetic" id="ke0]Br,5S8#M*gB)Y::S">
+              <field name="OP">ADD</field>
+              <value name="A">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="j/s=%U3H){7*ib,x~Rk1">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="lists_getIndex" id="%%4o+QDjMm#}xLoEH2@D">
+                  <mutation statement="false" at="true"/>
+                  <field name="MODE">GET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="%;f*(wf@P[Q(t%~)?:IA">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="@lbnAS1{uuiP7dWNOS{0">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="1L%Q:YHa845$%`#}V1xG">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="lists_getIndex" id="^q{?qfU[kPLvT#J|/`|R">
+                  <mutation statement="false" at="true"/>
+                  <field name="MODE">GET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="1kZR2mX!6w7@WS|xRBH$">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="~@!GKGDGGWEsF%AYT-sA">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="E-Commerce/placeOrder" id="+xPE+]VS|_P@=i3JNVTQ">
+              <field name="SCREEN">TRUE</field>
+              <value name="URL">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="=Q,YKfIGX3lFb#%0k=0W">
+                  <field name="TEXT">https://www.soft8soft.com/order-form-demo</field>
+                </shadow>
+                <block type="text" id="E/oytJyXap2jv7f)w3sN">
+                  <field name="TEXT">https://sandbox.soft8soft.com/order-form/</field>
+                </block>
+              </value>
+              <value name="TITLE">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="KAmQW#2L80#6U:E^TA9,">
+                  <field name="TEXT">Ring Order.</field>
+                </shadow>
+                <block type="text" id="EOWu8[M1]}(W$ZV%xaa4">
+                  <field name="TEXT">Jewelry configurator</field>
+                </block>
+              </value>
+              <value name="CONTENT">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="+:`J%|lI.pZ[?F$ng!aE">
+                  <field name="TEXT">Order Content</field>
+                </shadow>
+                <block type="text_join" id="hqd(v|5^aLRtBx1@)=bF">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="text" id="xXgS,AtxiovHx+yU2ON;">
+                      <field name="TEXT">Your order is: </field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text_join" id="~G3vS%ct.xH~nBkijAxW">
+                      <mutation items="2"/>
+                      <value name="ADD0">
+                        <block type="lists_getIndex" id=",i{[^)K2I}rFW=GZp(UC">
+                          <mutation statement="false" at="true"/>
+                          <field name="MODE">GET</field>
+                          <field name="WHERE">FROM_START</field>
+                          <value name="VALUE">
+                            <block type="variables_get" id="P%!5H80Wf.LaECV7)p)J">
+                              <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                            </block>
+                          </value>
+                          <value name="AT">
+                            <block type="math_number" id="Gm*4r7K*kHTJ[#r9.Z%d">
+                              <field name="NUM">0</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="lists_getIndex" id="78[$nuew/4UlWf.moI|6">
+                          <mutation statement="false" at="true"/>
+                          <field name="MODE">GET</field>
+                          <field name="WHERE">FROM_START</field>
+                          <value name="VALUE">
+                            <block type="variables_get" id="Hhfzl0uKZ@}z05;rMMq:">
+                              <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                            </block>
+                          </value>
+                          <value name="AT">
+                            <block type="math_number" id="|.lJ4=mo~Pw}qMsBHJ5h">
+                              <field name="NUM">1</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="PRICE">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="=0xB}Vfk^nf/7{L7{qzU">
+                  <field name="NUM">0</field>
+                </shadow>
+                <block type="text_join" id="z]3f3CmG6+vg/6s(0s#/">
+                  <mutation items="2"/>
+                  <value name="ADD0">
+                    <block type="variables_get" id="US.}H)H0Fuj/F)x3YD[)">
+                      <field name="VAR" id="9iw%)+MeT}mWvlYoub41">final_cost</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text" id="6VBTAq?PP0@=](Ta~m!f">
+                      <field name="TEXT">$</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="DKK2[U:k-ctPhS([3H9x" x="-650" y="-810">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="7_1o{zJt1U6^.4BAey!D">
+          <field name="FIELDNAME">button_3</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="hide" id="PYJ@tT[9DK}eRk0ICi{5">
+          <value name="VALUE">
+            <block type="groupList" id="^kxK4~:~{-R?)A/fQxs9">
+              <field name="FIELDNAME">everything</field>
+            </block>
+          </value>
+          <next>
+            <block type="show" id="WZA=hTE#e40J*Zy:xnf`">
+              <value name="VALUE">
+                <block type="lists_create_with" id="xBFp*LaSIs,tMvzRr/Lj">
+                  <mutation items="3"/>
+                  <value name="ADD0">
+                    <block type="objectList" id="TZ}=+`3jnbz21ZdO[=]9">
+                      <field name="FIELDNAME">ring_03</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="objectList" id="_z0}H;_:A^nL^@G~6DNl">
+                      <field name="FIELDNAME">gem_03_outside</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="objectList" id="DVo8K{QuRsE08s[9H^W2">
+                      <field name="FIELDNAME">gem_03_inside</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="FZ%om~x-sw^DTSqbC6w$">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id="6ao`yTzSP{-.^-NV_K0r">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="8RXcM?T#vJP.2@:4ieMX">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" id="xT~!F[e%:~pIr[{l.]6+">
+                      <field name="NUM">180</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="lists_setIndex" id="9KN:BdOU+5qwM{93]RGf">
+                      <mutation at="true"/>
+                      <field name="MODE">SET</field>
+                      <field name="WHERE">FROM_START</field>
+                      <value name="LIST">
+                        <block type="variables_get" id="$Jf!$p67M-jAQg+ubtB8">
+                          <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                        </block>
+                      </value>
+                      <value name="AT">
+                        <block type="math_number" id="J217bIAEmRA.#;C-U$dI">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="text" id="}_{?4RiqF^R$RZ,W8Iuq">
+                          <field name="TEXT">ring with one big gem.</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="t5+%958udu2])CYxIQen">
+                          <mutation name="price_recount"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="2-;G.?e7x2C=,UB.#=36" x="10" y="-810">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="]{lznht5vnSK$^HeM0H(">
+          <field name="FIELDNAME">button_4</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="hide" id="+,2Niyy-,;{^F7=tI#08">
+          <value name="VALUE">
+            <block type="groupList" id="~#ZumxF|W={D~qlX+z2r">
+              <field name="FIELDNAME">everything</field>
+            </block>
+          </value>
+          <next>
+            <block type="show" id="6yE`qC1+qO/P)8jfBx|5">
+              <value name="VALUE">
+                <block type="lists_create_with" id="`5`ltKtD[H-q{/?+Q7@9">
+                  <mutation items="3"/>
+                  <value name="ADD0">
+                    <block type="objectList" id="lv)$,OzJ2l%gig?r}YCa">
+                      <field name="FIELDNAME">ring_04</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="objectList" id="sl07wKnN.6@m-9cm,5R|">
+                      <field name="FIELDNAME">gem_03_outside</field>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="objectList" id="Nt;Y(lCF5bYMK74kYJK=">
+                      <field name="FIELDNAME">gem_03_inside</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="qHBBErJ%4fZ0}76cqWT{">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id="}H/2^?O|4bMf)72)POP|">
+                      <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="#(sir,K8@G4(ZQgeoGG@">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" id="/..Xly#R`$)Wi4GoM_Ky">
+                      <field name="NUM">200</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="lists_setIndex" id="R::;XU8cflX6FQCHHkcF">
+                      <mutation at="true"/>
+                      <field name="MODE">SET</field>
+                      <field name="WHERE">FROM_START</field>
+                      <value name="LIST">
+                        <block type="variables_get" id="qG(@!e{O:(;C2#lfr5|c">
+                          <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                        </block>
+                      </value>
+                      <value name="AT">
+                        <block type="math_number" id="|gA!!)4DEWiIk`7V|n?7">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="text" id="!q;v[REv,vbzKB$9@pO0">
+                          <field name="TEXT">ring with one fastened big gem.</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="h~xN;)27J}+m^u+Z2V]x">
+                          <mutation name="price_recount"/>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenHovered" id="eO7Y#Z#IXv$OpCUNoefQ" x="790" y="-690">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <value name="VALUE">
+        <block type="lists_create_with" id=")j2`Xp-3GlZF856q.Kmy">
+          <mutation items="11"/>
+          <value name="ADD0">
+            <block type="objectList" id="rG)gk~$m*CX280G@jw-0">
+              <field name="FIELDNAME">button_1</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="uNY9Hn3pj(,Dj!ub${.I">
+              <field name="FIELDNAME">button_2</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="objectList" id="pnVpkHsyIHBh-PZ4ZYqN">
+              <field name="FIELDNAME">button_3</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="objectList" id="7?z-sz_1xdQkAQ^TG|V@">
+              <field name="FIELDNAME">button_4</field>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="objectList" id="_r?rhGp8kjD6;$OLI^eZ">
+              <field name="FIELDNAME">button_5</field>
+            </block>
+          </value>
+          <value name="ADD5">
+            <block type="objectList" id="!%BsE`4%/TM]~8N`}#/(">
+              <field name="FIELDNAME">button_6</field>
+            </block>
+          </value>
+          <value name="ADD6">
+            <block type="objectList" id="bdzvPxOT*RmFqtG,FT8y">
+              <field name="FIELDNAME">button_7</field>
+            </block>
+          </value>
+          <value name="ADD7">
+            <block type="objectList" id="A[l+NvrWRzZa^KRtvb,h">
+              <field name="FIELDNAME">facebook_button</field>
+            </block>
+          </value>
+          <value name="ADD8">
+            <block type="objectList" id="xB{m9n`T4OSIib}R[%0k">
+              <field name="FIELDNAME">linkedin_button</field>
+            </block>
+          </value>
+          <value name="ADD9">
+            <block type="objectList" id=".W8s05=!,PbKe55DWo(s">
+              <field name="FIELDNAME">order_button</field>
+            </block>
+          </value>
+          <value name="ADD10">
+            <block type="objectList" id="b7lL(B-?/VnUvqy2(G;q">
+              <field name="FIELDNAME">twitter_button</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO_OVER">
+        <block type="setHTMLElemStyle" id="0+Mhu]JR0_wVSw`~N4$e">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="e]xH!4(B.3!E8yq9L!Pz">
+              <field name="TEXT">pointer</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="HTMLBody" id="}6*)yt/BuNLm%f@=G%GK"/>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_OUT">
+        <block type="setHTMLElemStyle" id=")q*(2^@T{BRFnRtSah=|">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="u-3_{BW96:S(#fmRxa-1">
+              <field name="TEXT">default</field>
+            </block>
+          </value>
+          <value name="ID">
+            <block type="HTMLBody" id="@MZ?W9U|v6k1]+691Cm^"/>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="12Xu{oDGnFlj0(jLLQ(A" x="-650" y="-510">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="eEUx0}8o73Tz1MwPGP|~">
+          <field name="FIELDNAME">button_5</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="assignMaterial" id="${)zl^h@q@Sj+LX7YmET">
+          <value name="VALUE2">
+            <block type="materialList" id="T$O}0Jd2+i15NTG|2p1A">
+              <field name="FIELDNAME">gold_material</field>
+            </block>
+          </value>
+          <value name="VALUE1">
+            <block type="groupList" id=")Ct]!7+1t(WdZpBYuUeV">
+              <field name="FIELDNAME">metal parts</field>
+            </block>
+          </value>
+          <next>
+            <block type="lists_setIndex" id="Q0MD_4@Eb4aTG6:)%Z]5">
+              <mutation at="true"/>
+              <field name="MODE">SET</field>
+              <field name="WHERE">FROM_START</field>
+              <value name="LIST">
+                <block type="variables_get" id="oekK:}fakw}!0MO1R;s!">
+                  <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                </block>
+              </value>
+              <value name="AT">
+                <block type="math_number" id="WQGIp?o96;9SD4O4[kO,">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" id="U-4Y{JF~J9V.V3CSA=1:">
+                  <field name="NUM">80</field>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="+IDOCM5#*,3i9E4ajO.b">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id=",8:%9M)OrX6k!W3.Roze">
+                      <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="cQ}3i%+e2L=1DKe;)f`,">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="text" id="c5JVwdGf2OUz`];V2!V:">
+                      <field name="TEXT">Gold </field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="xYLEh[g`3?Rw}hh@;XoY">
+                      <mutation name="price_recount"/>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="~,TjJkNTGSkEn~5qUcfi" x="-10" y="-510">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="O)=R`qa3)ka5MVv7,_=9">
+          <field name="FIELDNAME">button_6</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="assignMaterial" id="Tx8k4qBnlle:M.Ou-|kB">
+          <value name="VALUE2">
+            <block type="materialList" id="Z-Lt.zGfHc__#B8$jK]f">
+              <field name="FIELDNAME">silver_material</field>
+            </block>
+          </value>
+          <value name="VALUE1">
+            <block type="groupList" id="AQ?_$#2[Q@sixv+zZfZO">
+              <field name="FIELDNAME">metal parts</field>
+            </block>
+          </value>
+          <next>
+            <block type="lists_setIndex" id="AbcYNw+:-#]);u%PlUJ7">
+              <mutation at="true"/>
+              <field name="MODE">SET</field>
+              <field name="WHERE">FROM_START</field>
+              <value name="LIST">
+                <block type="variables_get" id="inr|v}n/`-n+`v!}:O3g">
+                  <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                </block>
+              </value>
+              <value name="AT">
+                <block type="math_number" id="Us_Lf7d!R?/[~D:h5UCY">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" id=",C~RKpQI4+h80rl:)8rh">
+                  <field name="NUM">40</field>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="hO)4f*B1~++L6Ul|F1`m">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id="f{P,_}SWJ6eP;[nvweC[">
+                      <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="*(.]KbKR$c0m:nQxk#f%">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="text" id="QVONtMztc{Gz|KM}gx{s">
+                      <field name="TEXT">Silver </field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="l%D|!C~y{ffOnw/^RfII">
+                      <mutation name="price_recount"/>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="%59HH?FTDPHD^k}dniau" x="-650" y="-290">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="0Hnvu4B?VY~_WFko!y:b">
+          <field name="FIELDNAME">button_7</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="assignMaterial" id=":zzGTlB0b2AFs[X#V~$Y">
+          <value name="VALUE2">
+            <block type="materialList" id="yAo#V`(U~/05n7g+VE@3">
+              <field name="FIELDNAME">pink_gold_material</field>
+            </block>
+          </value>
+          <value name="VALUE1">
+            <block type="groupList" id="R|THG?#BineSXn5!ff37">
+              <field name="FIELDNAME">metal parts</field>
+            </block>
+          </value>
+          <next>
+            <block type="lists_setIndex" id="=^ABZuj@Y:dCfgU)?FL{">
+              <mutation at="true"/>
+              <field name="MODE">SET</field>
+              <field name="WHERE">FROM_START</field>
+              <value name="LIST">
+                <block type="variables_get" id="^,z|OuVNB6C-h*WMyI@}">
+                  <field name="VAR" id="3Mk9Ez5DOOEr_F3FLi@`">parts_cost</field>
+                </block>
+              </value>
+              <value name="AT">
+                <block type="math_number" id="%Jor;fr,8iIu!-P(4ryx">
+                  <field name="NUM">0</field>
+                </block>
+              </value>
+              <value name="TO">
+                <block type="math_number" id="g|%Whtk{q)CZc#]3gNrv">
+                  <field name="NUM">70</field>
+                </block>
+              </value>
+              <next>
+                <block type="lists_setIndex" id="y%RCmI|lKLxA_sn:ph1_">
+                  <mutation at="true"/>
+                  <field name="MODE">SET</field>
+                  <field name="WHERE">FROM_START</field>
+                  <value name="LIST">
+                    <block type="variables_get" id="|5UB3GJ4s[dCyPzj!?,B">
+                      <field name="VAR" id="Er+r:AHI:@JXSV0Qh%Ak">checkout_list</field>
+                    </block>
+                  </value>
+                  <value name="AT">
+                    <block type="math_number" id="gnyXd2MKjO#Bq[%##(Mv">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="text" id="J-U(}FpC^YR4OPwI8u/w">
+                      <field name="TEXT">Pink gold </field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id=")Mz(5g~=U7(]NY%x4C|D">
+                      <mutation name="price_recount"/>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="@%LGXf,ou+Ija1#RvgLO" x="-650" y="-50">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="LcyvGrEY@GuvuSRM%{5U">
+          <field name="FIELDNAME">facebook_button</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="openWebPage" id="?l,k!Oc_7`1Mxkj5#2=I">
+          <field name="MODE">NEW</field>
+          <value name="URL">
+            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="0[Np(tj|@*j=)Jppylew">
+              <field name="TEXT">https://www.soft8soft.com/</field>
+            </shadow>
+            <block type="socialShareLink" id="L-xl(GQG9JuAS(IbSiD2">
+              <field name="MEDIA">FB</field>
+              <value name="TITLE">
+                <shadow type="text" id="dL3;bEy|OzR)y^z9b,n6">
+                  <field name="TEXT">3D Jewelry Configurator</field>
+                </shadow>
+              </value>
+              <value name="TEXT">
+                <shadow type="text" id="`$G:@n@h]6_eBFwr2P]U">
+                  <field name="TEXT">Interactive jewelry configurator made with Verge3D. Design your own precious ring now!</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="WcyQdsP,IXl`?`;X1q_}" x="790" y="-90">
+      <field name="EVENT">click</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text" id="K2AF0a#FnunH}OL!=P,=">
+          <field name="TEXT"/>
+        </shadow>
+        <block type="DOMObjectSelector" id="vQP:34OB+d}LAYP!+1KD">
+          <field name="DOM_OBJECT">WINDOW</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="autoRotateCamera" id="%(mpQ*.l4BOHAe;Ad`51">
+          <field name="ON_OFF">OFF</field>
+          <value name="SPEED">
+            <shadow type="math_number" id="#L`TPYa62^5LN70_RP),">
+              <field name="NUM">2</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setTimer" id="x3D,[@mHa_W62.t?lb*z">
+              <value name="ID">
+                <shadow type="text" id=":]:aaDzSXeN}C=a5fc0N">
+                  <field name="TEXT">autorotate_delay</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <shadow type="math_number" id="sF,HSe{kAeYH8fsf!?((">
+                  <field name="NUM">3</field>
+                </shadow>
+              </value>
+              <value name="REPEAT">
+                <shadow type="math_number" id="Y0.~lIExR{D|,m%46e0#">
+                  <field name="NUM">Infinity</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="autoRotateCamera" id="]#T).3gT1;nIY?f@j2|)">
+                  <field name="ON_OFF">ON</field>
+                  <value name="SPEED">
+                    <shadow type="math_number" id="1~[nb|Oj*-.*:Zg8(1jb">
+                      <field name="NUM">2</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="setTimer" id="2A/|u^nY-%C3g?r+Fuz0">
+          <value name="ID">
+            <shadow type="text" id=".s}WuOky`jVV/TE.1we3">
+              <field name="TEXT">autorotate_delay</field>
+            </shadow>
+          </value>
+          <value name="VALUE">
+            <shadow type="math_number" id=":,q^[6,GP9W/t|KC%vGu">
+              <field name="NUM">3</field>
+            </shadow>
+          </value>
+          <value name="REPEAT">
+            <shadow type="math_number" id="#4%A*V=M#N=OT[?u8dSU">
+              <field name="NUM">Infinity</field>
+            </shadow>
+          </value>
+          <statement name="DO">
+            <block type="autoRotateCamera" id="_sy]PL]izpgg3wiZs-C.">
+              <field name="ON_OFF">ON</field>
+              <value name="SPEED">
+                <shadow type="math_number" id="DR.x(O1gjkiV`(gW8cUe">
+                  <field name="NUM">2</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id=":[lu0v00x=r2vH(NZc}9" x="-650" y="90">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="np~6$y~{zbu?U!T;I+:N">
+          <field name="FIELDNAME">linkedin_button</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="openWebPage" id="k4hN4qkCAm$wI6|$U{^W">
+          <field name="MODE">NEW</field>
+          <value name="URL">
+            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="0[Np(tj|@*j=)Jppylew">
+              <field name="TEXT">https://www.soft8soft.com/</field>
+            </shadow>
+            <block type="socialShareLink" id="p_}Fnxl`X;u9t}xI`jqo">
+              <field name="MEDIA">LINKEDIN</field>
+              <value name="TITLE">
+                <shadow type="text" id="y?cp!%KuImV7j$^B3LQN">
+                  <field name="TEXT">3D Jewelry Configurator</field>
+                </shadow>
+              </value>
+              <value name="TEXT">
+                <shadow type="text" id="6aS1Plz+wpGnb*7qt83P">
+                  <field name="TEXT">Interactive jewelry configurator made with Verge3D. Design your own precious ring now!</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="^+a|G9o.AGA7ZBlZQ2g}" x="-650" y="270">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="$h)aH6hn[hdbNLVi7vp1">
+          <field name="FIELDNAME">twitter_button</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="openWebPage" id="m3J=cc[{nR+kSlWOn8Kq">
+          <field name="MODE">NEW</field>
+          <value name="URL">
+            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="0[Np(tj|@*j=)Jppylew">
+              <field name="TEXT">https://www.soft8soft.com/</field>
+            </shadow>
+            <block type="socialShareLink" id="1}ptGJnVypXml3Q1U)Q=">
+              <field name="MEDIA">TWITTER</field>
+              <value name="TITLE">
+                <shadow type="text" id="10vVMACenpph$y:O5Vn.">
+                  <field name="TEXT">3D Jewelry Configurator</field>
+                </shadow>
+              </value>
+              <value name="TEXT">
+                <shadow type="text" id=";_~_Nh$b,~^9ABSg36MD">
+                  <field name="TEXT">Interactive jewelry configurator made with Verge3D. Design your own precious ring now!</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1289" viewport-y="38" viewport-w="576" viewport-h="385" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

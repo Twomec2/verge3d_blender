@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Text Rendering in Verge3D - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to create text objects in Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/introduction/Text-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Text Rendering in Verge3D - Soft8Soft">
+            <meta property="og:description" content="How to create text objects in Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/introduction/Text-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Text Rendering in Verge3D - Soft8Soft">
+            <meta name="twitter:description" content="How to create text objects in Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/html-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/font-converter-option.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/texture-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Text Rendering</h1>
+    <p>
+      In many 3D web applications you need to display text that supplements 3D models with some informative content. In this section you will find out how to create text in your apps.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/introduction/Text-Rendering.html#dom_css">1. HTML/CSS, Annotations</a></li><li><a href="manual/en/introduction/Text-Rendering.html#dynamic_text_geometry">2. Dynamic Text Geometry</a></li><li><a href="manual/en/introduction/Text-Rendering.html#static_text_geometry">3. Static Text Geometry</a></li><li><a href="manual/en/introduction/Text-Rendering.html#textures_with_text">4. Textures with Text</a></li><li><a href="manual/en/introduction/Text-Rendering.html#canvas_textures">5. Canvas Textures</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/introduction/Text-Rendering.html#dom_css" id="dom_css" class="permalink">#</a></p>
+
+    <h2>1. HTML/CSS, Annotations</h2>
+    <p>
+      HTML/CSS is the most natural way to display information in web-based applications.
+    </p>
+
+    <img src="files/text-rendering/html-text.jpg" style="max-width: 898px;">
+
+    <p>There are possible ways to render text with HTML:</p>
+
+    <ul>
+      <li>Using some third-party website builder like Webflow.</li>
+      <li>Manual editing of project HTML/CSS files.</li>
+      <li>Using HTML puzzles.</li>
+      <li>Using Verge3D annotations.</li>
+    </ul>
+
+    <p>
+      Check out <a href="manual/en/introduction/HTML-based-user-interfaces.html">HTML-Based User Interfaces</a> section to get more info on using HTML, as well as <a href="manual/en/puzzles/Objects.html#add_annotation">add annotation</a> and <a href="manual/en/puzzles/HTML.html">HTML</a> puzzles references.
+    </p>
+
+    <h3>Pros</h3>
+
+    <ul>
+      <li>Approach common in web development.</li>
+      <li>Good quality of rendered text.</li>
+      <li>Possibility to use advanced text styles, such as custom strokes, fonts and 3D transformations.</li>
+    </ul>
+
+    <h3>Cons</h3>
+
+    <ul>
+      <li>No easy integration with rendered scene. In most situations you simply render HTML text above your 3D content.</li>
+      <li>No easy way to use HTML text in Virtual Reality mode.</li>
+      <li>Slow rendering if you have too many dynamic textual elements (such as annotations) in your app.</li>
+    </ul>
+
+    <p><a href="manual/en/introduction/Text-Rendering.html#dynamic_text_geometry" id="dynamic_text_geometry" class="permalink">#</a></p>
+
+    <h2>2. Dynamic Text Geometry</h2>
+    <p>
+      You can use Text objects from your modelling suite to create text geometry similar to regular meshes. "Dynamic" means Verge3D does not store text geometry in the exported glTF asset, instead, it recreates it upon scene loading (using the font data). It also means, that you can edit your text in runtime with <a href="manual/en/puzzles/Objects.html#update_text_object">update text object</a> puzzle or via JavaScript.</p>
+
+    <p>
+      To make your text objects dynamic, make sure that the <strong>Bake Text</strong> option in the export settings is <em>unchecked</em>:
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.6348586517679338" checked="" class="v3d-tab-input" id="0.6348586517679338-0"><label class="v3d-tab-label" for="0.6348586517679338-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/dynamic-text-export-settings-blender.jpg" class="centered" style="max-width: 836px;">
+      </div><input type="radio" name="0.6348586517679338" class="v3d-tab-input" id="0.6348586517679338-1"><label class="v3d-tab-label" for="0.6348586517679338-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/dynamic-text-export-settings-max.jpg" class="centered" style="max-width: 785px;">
+      </div><input type="radio" name="0.6348586517679338" class="v3d-tab-input" id="0.6348586517679338-2"><label class="v3d-tab-label" for="0.6348586517679338-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/dynamic-text-export-settings-maya.jpg" class="centered" style="max-width: 872px;">
+      </div></div>
+
+    <p>
+      You also need to specify the <strong>Font Converter</strong> option (enabled by default) when creating your app to be able to use dynamic text geometry. This option activates <em>opentype.js</em> module in your application which is required to load and process font data.
+    </p>
+
+    <img src="files/text-rendering/font-converter-option.jpg" class="centered" style="max-width: 522px;">
+
+    <p class="note">
+      If you forget to enable <strong>Font Converter</strong> option or created your application before Verge3D 3.6, simply copy <strong>opentype.js</strong> file from the <strong>build</strong> directory of your Verge3D distribution to your application directory.
+    </p>
+
+    <h3>Pros</h3>
+
+    <ul>
+      <li>Text objects are full-featured 3D meshes which can be moved/animated/assigned with custom materials, just like any other 3D meshes in your scene.</li>
+      <li>Dynamic text rendered in runtime, as such does not consume bandwidth to load geometry via network.</li>
+      <li>You can modify not only content, but also font, extrusion depth and bevels.</li>
+    </ul>
+
+    <h3>Cons</h3>
+
+    <ul>
+      <li>Takes some time to generate text during scene loading.</li>
+      <li>Requires loading of font asset (TTF or WOFF) and using additional <em>font converter</em> module.</li>
+      <li>Not all text parameters supported in Verge3D.</li>
+    </ul>
+
+
+    <p><a href="manual/en/introduction/Text-Rendering.html#static_text_geometry" id="static_text_geometry" class="permalink">#</a></p>
+
+    <h2>3. Static Text Geometry</h2>
+    <p>
+      Static text geometry is very similar to dynamic, except it uses baked text mesh which gets stored in exported glTF asset. You cannot edit such meshes in runtime, e.g change their content or font. However, you still able to assign materials or move that text similar to other geometry objects.
+    </p>
+
+    <p>To make your exported text use static geometry, specify <strong>Bake Text</strong> option in the export settings:</p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.1630655780282395" checked="" class="v3d-tab-input" id="0.1630655780282395-0"><label class="v3d-tab-label" for="0.1630655780282395-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/static-text-export-settings-blender.jpg" class="centered" style="max-width: 835px;">
+      </div><input type="radio" name="0.1630655780282395" class="v3d-tab-input" id="0.1630655780282395-1"><label class="v3d-tab-label" for="0.1630655780282395-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/static-text-export-settings-max.jpg" class="centered" style="max-width: 792px;">
+      </div><input type="radio" name="0.1630655780282395" class="v3d-tab-input" id="0.1630655780282395-2"><label class="v3d-tab-label" for="0.1630655780282395-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/text-rendering/static-text-export-settings-maya.jpg" class="centered" style="max-width: 871px;">
+      </div></div>
+
+    <h3>Pros</h3>
+
+    <ul>
+      <li>Text looks exactly as you see it in the modelling suite.</li>
+      <li>Does not require additional font asset or spending time during scene loading to generate glyphs.</li>
+    </ul>
+
+    <h3>Cons</h3>
+
+    <ul>
+      <li>Long texts increase the size of the loaded glTF asset. As such, it might take a lot of time to load your scene, especially via slow connections.</li>
+      <li>You can't edit text in runtime.</li>
+    </ul>
+
+    <p><a href="manual/en/introduction/Text-Rendering.html#textures_with_text" id="textures_with_text" class="permalink">#</a></p>
+
+    <h2>4. Textures with Text</h2>
+    <p>
+      You can render your text to a bitmap texture and then apply that texture to your object. Popular use cases for such technique include customized billboars, personalized cups/T-shirts, as well as jewelry engraving:
+    </p>
+
+    <img src="files/text-rendering/texture-text.jpg" style="max-width: 898px;">
+
+    <p>
+      Check out the <a href="manual/en/puzzles/Materials.html#texture_from_text">texture from text</a> puzzle for more info on how to use textures with custom text.
+    </p>
+
+    <h3>Pros</h3>
+
+    <ul>
+      <li>Good rendering performance and moderate GPU memory consumption.</li>
+      <li>You can add various text effects by using node materials (for example, create bump mapped texture with text).</li>
+    </ul>
+
+    <h3>Cons</h3>
+
+    <ul>
+      <li>Might be slow if you change your text frequently (e.g each frame).</li>
+      <li>You can't use complex text alignments.</li>
+      <li>Text is 2D only, hence no extrusion/bevel effect.</li>
+      <li>Quality is somewhat reduced, especially for small images (less than 1K).</li>
+    </ul>
+
+
+    <p><a href="manual/en/introduction/Text-Rendering.html#canvas_textures" id="canvas_textures" class="permalink">#</a></p>
+
+    <h2>5. Canvas Textures</h2>
+    <p>
+      This method is an extension to the previous technique which allows you to perform more sophisticated tasks by using JavaScript and <em>canvas</em> element. Check out the <a href="manual/en/puzzles/HTML.html#create_canvas_elem">create canvas elem</a> puzzle for more info.
+    </p>
+
+    <h3>Pros</h3>
+
+    <ul>
+      <li>You can do any text customizations with JavaScript.</li>
+      <li>It's possible to draw shapes and images along with text.</li>
+      <li>Good rendering performance and moderate GPU memory consumption.</li>
+      <li>You can add various text effects by using node materials (for example, create bump mapped texture with text).</li>
+    </ul>
+
+    <h3>Cons</h3>
+
+    <ul>
+      <li>Requires good JavaScript programming skills.</li>
+      <li>Text is 2D only, hence no extrusion/bevel effect.</li>
+      <li>Quality is somewhat reduced, especially for small images (less than 1K).</li>
+    </ul>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

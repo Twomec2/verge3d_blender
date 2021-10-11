@@ -1,0 +1,508 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="631.5" scrolly="446.5" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="507.2851813832167" scrolly="192.57806547505947" scale="0.6611724423391471">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="VdC^#ejo!.!x+weU;r2s" type="">midi</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="synthSound" id="GE/gz0V^v7u$s,!i6LGZ" x="-570" y="-30">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="PROGRAM"></mutation>
+      <field name="TYPE">PROGRAM</field>
+      <field name="CHANNEL">0</field>
+      <field name="PROGRAM">25</field>
+      <next>
+        <block type="synthSound" id="^2Q[i`%.uym.qG8E%[#E">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="VOLUME"></mutation>
+          <field name="TYPE">VOLUME</field>
+          <field name="CHANNEL">0</field>
+          <field name="PROGRAM">0</field>
+          <value name="VALUE">
+            <shadow type="math_number" id=":p:)T%M{0o,3bK!IsNbJ">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TIME">
+            <shadow type="math_number" id="a;x}.cE`va[1NV?#mZmw">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="synthSound" id="0k/FDAwk~a?N0FN%*3=.">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="VOLUME"></mutation>
+              <field name="TYPE">VOLUME</field>
+              <field name="CHANNEL">9</field>
+              <field name="PROGRAM">0</field>
+              <value name="VALUE">
+                <shadow type="math_number" id="jDwc9X61P)QjV*mLtPfj">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <value name="TIME">
+                <shadow type="math_number" id="xttK|c==4@7vTABy`~@B">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="4^0_(_SW)0UJ~*c?V8ur" x="-574" y="124">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="*7xhZu}O:WLnwXjm^l{W">
+          <field name="FIELDNAME">part1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="synthSound" id="80R0-4z-kZkH5s~}MJ$O">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+          <field name="TYPE">NOTE_ON</field>
+          <field name="CHANNEL">0</field>
+          <field name="PROGRAM">0</field>
+          <value name="NOTE">
+            <shadow type="getNoteNumber" id="gap0!aA[2N1C7UwL}+$/">
+              <field name="NOTE">0</field>
+              <field name="OCTAVE">4</field>
+            </shadow>
+          </value>
+          <value name="VELOCITY">
+            <shadow type="math_number" id="}27hAv8b%upKQ/j?Z*D:">
+              <field name="NUM">100</field>
+            </shadow>
+          </value>
+          <value name="TIME">
+            <shadow type="math_number" id="s|Al#~HmEkr[fCbP)l,b">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenClicked" id=":QsIRd6KL.-YTP]t^qRS">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="4:`8|f+y$)oV05uM:q{D">
+              <field name="FIELDNAME">part2</field>
+            </shadow>
+          </value>
+          <statement name="DO">
+            <block type="synthSound" id="@daNP$wR8VV!.xdN;0vn">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+              <field name="TYPE">NOTE_ON</field>
+              <field name="CHANNEL">0</field>
+              <field name="PROGRAM">0</field>
+              <value name="NOTE">
+                <shadow type="getNoteNumber" id="as1#6+|AzfVQP=`aXf/l">
+                  <field name="NOTE">2</field>
+                  <field name="OCTAVE">4</field>
+                </shadow>
+              </value>
+              <value name="VELOCITY">
+                <shadow type="math_number" id="oXNW+F_c/Bv]qTnjw1Ul">
+                  <field name="NUM">100</field>
+                </shadow>
+              </value>
+              <value name="TIME">
+                <shadow type="math_number" id="XHLz$dcU*Y6{ma.iB;fq">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+          <next>
+            <block type="whenClicked" id="vE]j!)/a;Be$[nvCDf,}">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="*{Qq9i6.eF26S=nC?r4C">
+                  <field name="FIELDNAME">part3</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="synthSound" id="qqI,uqBJ9J#JdFpZowH0">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+                  <field name="TYPE">NOTE_ON</field>
+                  <field name="CHANNEL">0</field>
+                  <field name="PROGRAM">0</field>
+                  <value name="NOTE">
+                    <shadow type="getNoteNumber" id="/)THgt:?l*LWoDY6riKb">
+                      <field name="NOTE">4</field>
+                      <field name="OCTAVE">4</field>
+                    </shadow>
+                  </value>
+                  <value name="VELOCITY">
+                    <shadow type="math_number" id="~*H5C9Ps|_]K7rfn7]~Y">
+                      <field name="NUM">100</field>
+                    </shadow>
+                  </value>
+                  <value name="TIME">
+                    <shadow type="math_number" id="HO*AGNs2%c)Jfp=a_QSi">
+                      <field name="NUM">0</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="whenClicked" id="68wYF%L]2/y_X4z*L@f@">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                  <field name="X_RAY">FALSE</field>
+                  <field name="DOUBLE_CLICK">FALSE</field>
+                  <field name="LEFT_BUTTON">TRUE</field>
+                  <field name="MIDDLE_BUTTON">TRUE</field>
+                  <field name="RIGHT_BUTTON">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="objectList" id="%T3%f=db9DOsT5QI9R/_">
+                      <field name="FIELDNAME">part4</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="synthSound" id=",ob)3NE*gO72y5x/Vv$b">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+                      <field name="TYPE">NOTE_ON</field>
+                      <field name="CHANNEL">0</field>
+                      <field name="PROGRAM">0</field>
+                      <value name="NOTE">
+                        <shadow type="getNoteNumber" id="TScmZ@%iwh3Q0CVc(u5H">
+                          <field name="NOTE">5</field>
+                          <field name="OCTAVE">4</field>
+                        </shadow>
+                      </value>
+                      <value name="VELOCITY">
+                        <shadow type="math_number" id="@;?|!2dYU[nV{g[SN?0T">
+                          <field name="NUM">100</field>
+                        </shadow>
+                      </value>
+                      <value name="TIME">
+                        <shadow type="math_number" id="P7YdUWvKIB~3f[{N6[_j">
+                          <field name="NUM">0</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="whenClicked" id="m,Zp}zn}aC0fjd_or=IL">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                      <field name="X_RAY">FALSE</field>
+                      <field name="DOUBLE_CLICK">FALSE</field>
+                      <field name="LEFT_BUTTON">TRUE</field>
+                      <field name="MIDDLE_BUTTON">TRUE</field>
+                      <field name="RIGHT_BUTTON">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="objectList" id="L3)B_E]8Ced{ngbk*|Je">
+                          <field name="FIELDNAME">part5</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="synthSound" id="{]EMH,E9g;gc0PXyM%[:">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+                          <field name="TYPE">NOTE_ON</field>
+                          <field name="CHANNEL">0</field>
+                          <field name="PROGRAM">0</field>
+                          <value name="NOTE">
+                            <shadow type="getNoteNumber" id="j4w#GMl!(HM*Z~_IZoeb">
+                              <field name="NOTE">7</field>
+                              <field name="OCTAVE">4</field>
+                            </shadow>
+                          </value>
+                          <value name="VELOCITY">
+                            <shadow type="math_number" id="=g:i[{q.[CUv9Urrp)qs">
+                              <field name="NUM">100</field>
+                            </shadow>
+                          </value>
+                          <value name="TIME">
+                            <shadow type="math_number" id="idNSy1FBLJ.rFUnHJg65">
+                              <field name="NUM">0</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="whenClicked" id=",tuf4{4(K~{?SwT11Cn!">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                          <field name="X_RAY">FALSE</field>
+                          <field name="DOUBLE_CLICK">FALSE</field>
+                          <field name="LEFT_BUTTON">TRUE</field>
+                          <field name="MIDDLE_BUTTON">TRUE</field>
+                          <field name="RIGHT_BUTTON">TRUE</field>
+                          <value name="VALUE">
+                            <shadow type="objectList" id="bL0!f$mI.-v|fS,Q=bjx">
+                              <field name="FIELDNAME">part6</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="synthSound" id="RZt_R2EvkV4s|wffgPW?">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+                              <field name="TYPE">NOTE_ON</field>
+                              <field name="CHANNEL">0</field>
+                              <field name="PROGRAM">0</field>
+                              <value name="NOTE">
+                                <shadow type="getNoteNumber" id="R)26bE?Xp0ouIVfTzi8p">
+                                  <field name="NOTE">9</field>
+                                  <field name="OCTAVE">4</field>
+                                </shadow>
+                              </value>
+                              <value name="VELOCITY">
+                                <shadow type="math_number" id="*[R^`hw:sJ]]v:{19yUu">
+                                  <field name="NUM">100</field>
+                                </shadow>
+                              </value>
+                              <value name="TIME">
+                                <shadow type="math_number" id="dpp3TZMXV(_i(ELgICS.">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="whenClicked" id="u7Z$u)O.5uCM32m;uIo^">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                              <field name="X_RAY">FALSE</field>
+                              <field name="DOUBLE_CLICK">FALSE</field>
+                              <field name="LEFT_BUTTON">TRUE</field>
+                              <field name="MIDDLE_BUTTON">TRUE</field>
+                              <field name="RIGHT_BUTTON">TRUE</field>
+                              <value name="VALUE">
+                                <shadow type="objectList" id="rsO*s0*zU6#.s;uYyBn4">
+                                  <field name="FIELDNAME">part7</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="synthSound" id="Io2-F}N{#G:A*U941fF2">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+                                  <field name="TYPE">NOTE_ON</field>
+                                  <field name="CHANNEL">0</field>
+                                  <field name="PROGRAM">0</field>
+                                  <value name="NOTE">
+                                    <shadow type="getNoteNumber" id="@oBN`5K)|kuz-PCshQ,Q">
+                                      <field name="NOTE">11</field>
+                                      <field name="OCTAVE">4</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="VELOCITY">
+                                    <shadow type="math_number" id="hwn7KNm,PzQ!C=9r|4E,">
+                                      <field name="NUM">100</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="TIME">
+                                    <shadow type="math_number" id="ZS;5AyEyg2pXxVUR$5-.">
+                                      <field name="NUM">0</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="{EK4+A|wTeP`8Jt{f+KL" x="190" y="310">
+      <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+      <value name="VALUE">
+        <block type="loadSoundAdv" id="]]0,ZdM2.3!hDA[-y5w9">
+          <field name="TYPE">MIDI</field>
+          <value name="URL">
+            <shadow type="text" id="{$UOY?8AXr;qL*7ecDHf">
+              <field name="TEXT">../applications/sound_synth/music.mid</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="_!Arc=}X]O$W))3.W^O%" x="190" y="390">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="3.(-lxium/X.N.;t:)|l">
+          <field name="FIELDNAME">note</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="controls_if" id="/|BVl^o.0+q28Bi(v0cA">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="isSoundPlaying" id="mxuh:P1k{7=n%MX8k(V/">
+              <value name="VALUE">
+                <block type="variables_get" id="i5^C/Z%:/6yvv)ft$ehB">
+                  <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="stopSound" id="JgIgcBPVbA]7#Zs?4h%h">
+              <value name="VALUE">
+                <block type="variables_get" id="Ln^xe*bu?ClC7c)11hwR">
+                  <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+                </block>
+              </value>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="volume" id="l|7DBQ.-V+4;m|tx_[!z">
+              <value name="VALUE">
+                <block type="variables_get" id="E58eC2XFs`)4(S+4.@8=">
+                  <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+                </block>
+              </value>
+              <value name="VOLUME">
+                <shadow type="math_number" id="(f2NEcfs3*K#%9`%Y5^*">
+                  <field name="NUM">0.2</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="playSound" id="d?O+$6T*Eklx!g#;[u4r">
+                  <field name="LOOP">FALSE</field>
+                  <value name="VALUE">
+                    <block type="variables_get" id="=xIJEe;!.q^O?:g}f!Le">
+                      <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="animateParam" id="[Sug3dU1}*~M5faT-SxZ" x="590" y="410">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+      <field name="EASING">Cubic</field>
+      <field name="EASING2">InOut</field>
+      <field name="YOYO">TRUE</field>
+      <value name="FROM">
+        <shadow type="math_number" id="tvu7CJMGEguJ~CO=2bc|">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number" id="(ZzxzAWNH9o@F9,1%ZQJ">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="DURATION">
+        <shadow type="math_number" id="y.]c;E[?yYZ.GWGcjd@@">
+          <field name="NUM">0.826</field>
+        </shadow>
+      </value>
+      <value name="REPEAT">
+        <shadow type="math_number" id="qn|+U1Pk4^gzqe1q)O]j">
+          <field name="NUM">1000</field>
+        </shadow>
+      </value>
+      <statement name="ON_UPDATE">
+        <block type="controls_if" id="WwjGW8]$0P:{Gk~*y0Rl">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="isSoundPlaying" id="(y,mL)xdt*,b6-/fpoL.">
+              <value name="VALUE">
+                <block type="variables_get" id="i0-U406B)G6/BV`(zcSP">
+                  <field name="VAR" id="VdC^#ejo!.!x+weU;r2s">midi</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="setMaterialValue" id="v*!UYXYG/~cX*.9?mIl^">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+              <field name="MAT_VAL_NAME">NoteBrightness</field>
+              <value name="MATERIAL">
+                <shadow type="materialList" id="*trY*7Q=KVq1`7ICwP9$">
+                  <field name="FIELDNAME">note</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <shadow type="math_number" id="@WVyurn|vrB8#dk-ZD5O">
+                  <field name="NUM">0.5</field>
+                </shadow>
+                <block type="animateParamUpdate" id="z$5a7N(8t@v605V{`_M2"/>
+              </value>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="setMaterialValue" id="(ByMrujD4)BM^:zb[t%z">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" flexvalinput="false"></mutation>
+              <field name="MAT_VAL_NAME">NoteBrightness</field>
+              <value name="MATERIAL">
+                <shadow type="materialList" id="m5.YV[80+odR@1od;eaa">
+                  <field name="FIELDNAME">note</field>
+                </shadow>
+              </value>
+              <value name="VALUE">
+                <shadow type="math_number" id="nY2nr$qc.9xhpHg6e4{[">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="6S!b4`m-O,t{VTHR.}m#" x="-570" y="730">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="~W3?(Q(DqL[9P$:$p9=[">
+          <field name="FIELDNAME">Balalaika_top</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="synthSound" id="DL7]]pBmkQ2!`0UT=_b2">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" synth_command_type="NOTE_ON"></mutation>
+          <field name="TYPE">NOTE_ON</field>
+          <field name="CHANNEL">9</field>
+          <field name="PROGRAM">0</field>
+          <value name="NOTE">
+            <shadow type="getNoteNumber" id="awVC,-Ug2@Cb7(avL,+1">
+              <field name="NOTE">11</field>
+              <field name="OCTAVE">4</field>
+            </shadow>
+            <block type="getDrumNumber" id="`*hg)?V@2QtT+-]/y|U^">
+              <field name="DRUM">36</field>
+            </block>
+          </value>
+          <value name="VELOCITY">
+            <shadow type="math_number" id="a,2Zhy=w/GSmnx-!+}+F">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="TIME">
+            <shadow type="math_number" id="OP9P}fh;rQsLgF_+f_Ra">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1024.4875" viewport-y="23" viewport-w="509.5" viewport-h="308" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

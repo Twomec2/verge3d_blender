@@ -1,0 +1,603 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Materials Puzzles Reference - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to manage materials and textures with Verge3D Puzzles.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/puzzles/Materials.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Materials Puzzles Reference - Soft8Soft">
+            <meta property="og:description" content="How to manage materials and textures with Verge3D Puzzles.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/puzzles/Materials.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Materials Puzzles Reference - Soft8Soft">
+            <meta name="twitter:description" content="How to manage materials and textures with Verge3D Puzzles.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-assign-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/mesh-attributes-not-optimize-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/mesh-attributes-not-optimize-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/mesh-attributes-not-optimize-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-replace-texture.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-get-texture-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-color.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-color-example-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-color-example-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-color-example-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-get-color.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-value-example-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-value-example-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-set-value-example-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-get-value.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-object-get-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-texture-from-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-texture-from-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-generate-normalmap.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-generate-normalmap-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-materials-enable-disable-wireframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Materials</h1>
+
+    <p>
+    The puzzles from this category perform various operations with materials and textures.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials.jpg">
+
+    <h2>Contents</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/puzzles/Materials.html#puzzles_reference">Puzzles Reference</a><ul><li><a href="manual/ru/puzzles/Materials.html#assign_material">assign material</a></li><li><a href="manual/ru/puzzles/Materials.html#replace_texture">replace texture</a></li><li><a href="manual/ru/puzzles/Materials.html#get_texture_param">get texture param</a></li><li><a href="manual/ru/puzzles/Materials.html#materials_set_color">set color</a></li><li><a href="manual/ru/puzzles/Materials.html#materials_get_color">get color</a></li><li><a href="manual/ru/puzzles/Materials.html#materials_set_value">set value</a></li><li><a href="manual/ru/puzzles/Materials.html#materials_get_value">get value</a></li><li><a href="manual/ru/puzzles/Materials.html#get_material">get material</a></li><li><a href="manual/ru/puzzles/Materials.html#texture_from_text">texture from text</a></li><li><a href="manual/ru/puzzles/Materials.html#generate_normal_map">generate normal map</a></li><li><a href="manual/ru/puzzles/Materials.html#enable_disable_wireframe">enable/disable wireframe</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Puzzles Reference</h2>
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#assign_material" id="assign_material" class="permalink">#</a></p>
+
+    <h3>assign material</h3>
+
+    <p>
+      Assigns a material to an object, completely replacing the old material. Also works for a list of objects, a group (or a list of groups) or with the <a href="manual/ru/puzzles/Selectors.html#all_objects">all objects</a> puzzle.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-assign-material.jpg">
+
+    <p>
+      In some situations, namely when normal-mapped material assigned to an object which have no normal mapping, this puzzle might render your material completely black. If this happens, <em>disable</em> mesh attributes optimization in the export settings:
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.7117607628768157" checked="" class="v3d-tab-input" id="0.7117607628768157-0"><label class="v3d-tab-label" for="0.7117607628768157-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/puzzles/mesh-attributes-not-optimize-blender.jpg" class="centered" style="max-width: 331px;">
+      </div><input type="radio" name="0.7117607628768157" class="v3d-tab-input" id="0.7117607628768157-1"><label class="v3d-tab-label" for="0.7117607628768157-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/puzzles/mesh-attributes-not-optimize-max.jpg" class="centered" style="max-width: 252px;">
+      </div><input type="radio" name="0.7117607628768157" class="v3d-tab-input" id="0.7117607628768157-2"><label class="v3d-tab-label" for="0.7117607628768157-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/puzzles/mesh-attributes-not-optimize-maya.jpg" class="centered" style="max-width: 416px;">
+      </div></div>
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#replace_texture" id="replace_texture" class="permalink">#</a></p>
+
+    <h3>replace texture</h3>
+
+    <p>Replaces a texture found for a specified material with the one loaded from the provided image URI, <a href="manual/ru/puzzles/Sound.html#load_video">video asset</a>, or <a href="manual/ru/puzzles/HTML.html#create_canvas_elem">canvas</a>.</p>
+
+    <img src="files/puzzles/puzzles-materials-replace-texture.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#get_texture_param" id="get_texture_param" class="permalink">#</a></p>
+
+    <h3>get texture param</h3>
+
+    <p>
+    Retrieves the following parameters for a texture found for a specified material: width, height, aspect or dimensions.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-get-texture-param.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#materials_set_color" id="materials_set_color" class="permalink">#</a></p>
+
+    <h3>set color</h3>
+
+    <p>
+    Set R, G and B components of a color parameter found for a specified material.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-set-color.jpg">
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.06118544849745433" checked="" class="v3d-tab-input" id="0.06118544849745433-0"><label class="v3d-tab-label" for="0.06118544849745433-0">Blender</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>RGB</strong> nodes in your node-based materials and their names will be shown in the dropdown menu. In addition, <strong>Base Color</strong> (or <strong>Color</strong>) inputs for BSDF Principled, BSDF Diffuse and BSDF Glossy nodes are also accessible.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-color-example-blender.jpg" class="centered" style="max-width: 643px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR materials</em>, the <strong>BaseColor</strong> and <strong>Emissive</strong> inputs are only accessible with this puzzle.
+        </p>
+      </div><input type="radio" name="0.06118544849745433" class="v3d-tab-input" id="0.06118544849745433-1"><label class="v3d-tab-label" for="0.06118544849745433-1">3ds Max</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>Controllers</strong> in your materials (standard or physical) and their names will be shown in the dropdown menu. In addition, <strong>Diffuse</strong> (or <strong>Base Color</strong>) color inputs for standard or physical material nodes are also accessible.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-color-example-max.jpg" class="centered" style="max-width: 759px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR</em> materials, the <strong>Base Color</strong> and <strong>Emission</strong> inputs are only accessible with this puzzle.
+        </p>
+      </div><input type="radio" name="0.06118544849745433" class="v3d-tab-input" id="0.06118544849745433-2"><label class="v3d-tab-label" for="0.06118544849745433-2">Maya</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>Color Constant</strong> nodes in your materials and their names will be shown in the dropdown menu.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-color-example-maya.jpg" class="centered" style="max-width: 936px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR</em> materials, the <strong>color</strong> and <strong>emissive</strong> inputs are only accessible with this puzzle.
+        </p>
+      </div></div>
+
+    <p>
+    This puzzle can also be used to modify the environment shader. In the drop-down, the name of the environment shader starts with "Verge3D_Environment".
+    </p>
+
+    <p>
+      For more information on materials available to Verge3D users, please refer to Material system overview chapters of this manual: <a href="manual/ru/blender/Material-System.html" target="_blank">Blender</a>, <a href="manual/ru/max/Material-System.html" target="_blank">3ds Max</a>, <a href="manual/ru/maya/Materials.html" target="_blank">Maya</a>.
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#materials_get_color" id="materials_get_color" class="permalink">#</a></p>
+
+    <h3>get color</h3>
+
+    <p>Get color parameter found for a specified material:</p>
+
+    <ul>
+      <li><strong>red</strong> - red color component.</li>
+      <li><strong>green</strong> - green color component.</li>
+      <li><strong>blue</strong> - blue color component.</li>
+      <li><strong>rgb</strong> - RGB color components as vector/list value.</li>
+      <li><strong>css (hex)</strong> - CSS style string, such as #AA00FF.</li>
+      <li><strong>css (rgb)</strong> - CSS style string, such as rgb(127, 0, 255).</li>
+    </ul>
+
+    <p>Specify <strong>flexible color input</strong> parameter to assign custom material parameter as string value.</p>
+
+    <img src="files/puzzles/puzzles-materials-get-color.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#materials_set_value" id="materials_set_value" class="permalink">#</a></p>
+
+    <h3>set value</h3>
+
+    <p>Set a value parameter found for a specified material.</p>
+
+    <img src="files/puzzles/puzzles-materials-set-value.jpg">
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.7232334617176954" checked="" class="v3d-tab-input" id="0.7232334617176954-0"><label class="v3d-tab-label" for="0.7232334617176954-0">Blender</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>Value</strong> nodes in your node-based materials and their names will be shown in the dropdown menu.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-value-example-blender.jpg" class="centered" style="max-width: 687px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR</em> materials, the following inputs are accessible with this puzzle: <strong>metalness</strong>, <strong>roughness</strong>, <strong>bumpScale</strong>, <strong>emissiveIntesity</strong>, and <strong>envMapIntensity</strong>.
+        </p>
+      </div><input type="radio" name="0.7232334617176954" class="v3d-tab-input" id="0.7232334617176954-1"><label class="v3d-tab-label" for="0.7232334617176954-1">3ds Max</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>Controllers</strong> in your materials (standard or physical) and their names will be shown in the dropdown menu.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-value-example-max.jpg" class="centered" style="max-width: 739px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR</em> materials the following inputs are accessible with this puzzle: <strong>Metalness</strong>, <strong>Roughness</strong>, <strong>Bump Scale</strong>, <strong>Emissive Intensity</strong> and <strong>Environment Map Intensity</strong>.
+        </p>
+      </div><input type="radio" name="0.7232334617176954" class="v3d-tab-input" id="0.7232334617176954-2"><label class="v3d-tab-label" for="0.7232334617176954-2">Maya</label><div class="v3d-tab-content">
+        <p>
+          You can add <strong>Float Constant</strong> nodes in your material and their names will be shown in the dropdown menu.
+        </p>
+
+        <img src="files/puzzles/puzzles-materials-set-value-example-maya.jpg" class="centered" style="max-width: 769px;">
+
+        <p>
+          In case of <em>glTF-compliant PBR</em> materials, the following inputs are accessible with this puzzle: <strong>metalness</strong>, <strong>roughness</strong>, <strong>bumpScale</strong>, <strong>emissiveIntensity</strong> and <strong>envMapIntensity</strong>.
+        </p>
+      </div></div>
+
+    <p>
+    This puzzle can also be used to modify the environment shader. In the drop-down, the name of the environment shader starts with "Verge3D_Environment".
+    </p>
+
+    <p>
+      For more information on materials available to Verge3D users, please refer to Material system overview chapters of this manual: <a href="manual/ru/blender/Material-System.html" target="_blank">Blender</a>, <a href="manual/ru/max/Material-System.html" target="_blank">3ds Max</a>, <a href="manual/ru/maya/Materials.html" target="_blank">Maya</a>.
+    </p>
+
+    <p><a href="manual/ru/puzzles/Materials.html#materials_get_value" id="materials_get_value" class="permalink">#</a></p>
+
+    <h3>get value</h3>
+
+    <p>
+      Get a value parameter found for a specified material. Specify <strong>flexible value input</strong> parameter to assign custom material parameter as string value.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-get-value.jpg" style="max-width: 727px">
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#get_material" id="get_material" class="permalink">#</a></p>
+
+    <h3>get material</h3>
+
+    <p>
+    Retrieves the name of a material assigned to an object. If multiple materials are assigned to the same object, returns the first one.
+    </p>
+
+    <img src="files/puzzles/puzzles-object-get-material.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#texture_from_text" id="texture_from_text" class="permalink">#</a></p>
+
+    <h3>texture from text</h3>
+
+    <p>
+      Creates an image from specified text and returns it in <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a> format.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-texture-from-text.jpg">
+
+    <p>
+      Parameters:
+    </p>
+
+    <dl>
+      <dt>text</dt>
+      <dd>
+        input text.
+      </dd>
+      <dt>
+        width, height
+      </dt>
+      <dd>
+        dimensions of the generated image (in pixels). Power-of-two values are recommended (256, 512, 1024 etc).
+      </dd>
+      <dt>font family</dt>
+      <dd>
+        <a href="https://www.w3schools.com/cssref/pr_font_font-family.asp" target="_blank">font-family</a> CSS property to render the text with. You can use system fonts such as "Arial" or custom fonts loaded with the <a href="manual/ru/puzzles/Initialization.html#load_font">load font</a> puzzle.
+      </dd>
+      <dt>size</dt>
+      <dd>
+        size of the text drawn on the generated image (in pixels).
+      </dd>
+      <dt>align</dt>
+      <dd>
+        how the text is aligned on the generated image: <strong>center</strong>, <strong>left</strong>, <strong>right</strong> or <strong>fit</strong>.
+      </dd>
+      <dt>offset</dt>
+      <dd>
+        gap for the drawn text (in pixels).
+      </dd>
+    </dl>
+
+    <p>
+      In the example below, the image generated from text is used on a model via the <a href="manual/ru/puzzles/Materials.html#replace_texture">replace texture</a> puzzle:
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-texture-from-text-example.jpg" style="max-width: 770px">
+
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#generate_normal_map" id="generate_normal_map" class="permalink">#</a></p>
+
+    <h3>generate normal map</h3>
+
+    <p>
+      Converts an image to normal map and returns it in <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a> format.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-generate-normalmap.jpg">
+
+    <p>
+    Parameters:
+    </p>
+
+    <dl>
+      <dt>(source image)</dt>
+      <dd>
+        image URL, usually black and white height map. Also images in <a href="manual/ru/puzzles/HTML.html#data_uri">Data URI</a> format can be supplied such as the output of the <a href="manual/ru/puzzles/Materials.html#texture_from_text">texture from text</a> puzzle.
+      </dd>
+      <dt>strength</dt>
+      <dd>linear factor affecting the height. Recommended values: 0.01 to 5.</dd>
+      <dt>level</dt>
+      <dd>exponential factor affecting the height. Recommended values: 4 to 10.</dd>
+      <dt>blur / sharp</dt>
+      <dd>blurriness/sharpness factor in the Gaussian filter. Recommended values: -10 (blur) to 10 (sharp).</dd>
+      <dt>filter</dt>
+      <dd>selector between Sobel or Scharr algorithms used for edge detection.</dd>
+      <dt>invert R</dt>
+      <dd>
+        invert direction in the normal map's R channel. At the moment this must be disabled for Blender, 3ds Max, and Maya but may require enabling for some other tool supported in the future.
+      </dd>
+      <dt>invert G</dt>
+      <dd>
+        invert direction in the normal map's G channel. Must be enabled for compatibility with 3ds Max’ normal map space but left disabled for Blender/Maya.
+      </dd>
+      <dt>invert height</dt>
+      <dd>change interpretation of height to make darker pixels correspond to lower height.</dd>
+    </dl>
+
+    <p>
+    In the example below, the normal map generated from a loaded image is used on a model via the <a href="manual/ru/puzzles/Materials.html#replace_texture">replace texture</a> puzzle:
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-generate-normalmap-example.jpg" style="max-width: 819px">
+
+
+    <p><a href="manual/ru/puzzles/Materials.html#enable_disable_wireframe" id="enable_disable_wireframe" class="permalink">#</a></p>
+
+    <h3>enable/disable wireframe</h3>
+
+    <p>
+      Enable or disable wireframe rendering for a specified material. Can be used as a non-photorealistic rendering technique, for debugging, or performance optimization.
+    </p>
+
+    <img src="files/puzzles/puzzles-materials-enable-disable-wireframe.jpg">
+
+
+    <h2>Having Troubles with Puzzles?</h2>
+
+    <p>Seek help on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

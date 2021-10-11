@@ -1,0 +1,23 @@
+{
+  "name": "${appID}",
+  "displayName": "${appName}",
+  "version": "${appVersion}",
+  "description": "${appDescription}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "${authorName}",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  }
+}

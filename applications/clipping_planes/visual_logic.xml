@@ -1,0 +1,88 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="875" scrolly="446.5" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="1132.5555164024684" scrolly="438.11110249525484" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id=",M}aOcHprePY@Mj@wWx/" x="-770" y="-130">
+      <field name="X_RAY">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="F-*c4?ih8PTP=SH39Q/g">
+          <field name="FIELDNAME">minus</field>
+        </shadow>
+      </value>
+      <statement name="DO_MOVE">
+        <block type="dragMove" id="O6qjSB8cvT`Sh-e)?CUN">
+          <field name="MODE">X</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="Etg;A/$3K*]rWbBf!Aoe">
+              <field name="FIELDNAME">ClippingPlane</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="dragMove" id="JhFhW2E/sM1/t/CLF!WK">
+              <field name="MODE">X</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id=";,A:Pdt7d%y-]80-/5d2">
+                  <field name="FIELDNAME">minus</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="dragMove" id="YK5h.koI.xbLtYg_hTjz">
+                  <field name="MODE">X</field>
+                  <value name="TARGETOBJ">
+                    <shadow type="objectList" id="lj:QRqPfule+@s:+qCr3">
+                      <field name="FIELDNAME">plus</field>
+                    </shadow>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id=";pN@4_degJ5]+!bs~3c7" x="-790" y="150">
+      <field name="X_RAY">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="BT{yOy)N/rCL.^+tyI2m">
+          <field name="FIELDNAME">plus</field>
+        </shadow>
+      </value>
+      <statement name="DO_MOVE">
+        <block type="dragMove" id="h5NtqdLT7?vGmy+68iNw">
+          <field name="MODE">X</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="YmL_40[0WWeCIa=8pIS)">
+              <field name="FIELDNAME">ClippingPlane</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="dragMove" id="1Y2^g:)z+.%%B2Yqei-z">
+              <field name="MODE">X</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="Aq#`)1vj]q%@T#UKoh`^">
+                  <field name="FIELDNAME">minus</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="dragMove" id="li3![ttr{oja7i0$4_uC">
+                  <field name="MODE">X</field>
+                  <value name="TARGETOBJ">
+                    <shadow type="objectList" id="AAW.exab]|-U_E_v8vUh">
+                      <field name="FIELDNAME">plus</field>
+                    </shadow>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="28" viewport-w="768" viewport-h="484.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="60"
+   height="60"
+   viewBox="0 0 15.875 15.875"
+   version="1.1"
+   id="svg5357"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="iso_menu_upload_to_cloud_button.svg">
+  <defs
+     id="defs5351">
+    <linearGradient
+       id="linearGradient1935"
+       inkscape:collect="always">
+      <stop
+         id="stop1931"
+         offset="0"
+         style="stop-color:#dbdbdb;stop-opacity:1" />
+      <stop
+         id="stop1933"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1935"
+       id="linearGradient6553"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2857144,0,0,1.2857144,68.556842,-41.174485)"
+       x1="333.53189"
+       y1="105.25716"
+       x2="339.22046"
+       y2="99.237892" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1935"
+       id="linearGradient14331"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.859393,0,0,4.859393,-1600.8875,-469.11099)"
+       x1="333.53189"
+       y1="105.25716"
+       x2="339.22046"
+       y2="99.237892" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="8.7432122"
+     inkscape:cx="42.345998"
+     inkscape:cy="25.780247"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5354">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.12498)">
+    <path
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.83225918px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient14331);fill-opacity:1;stroke:none;stroke-width:0.92903239"
+       d="M 30 12 C 20.05645 12 12 20.056441 12 30 C 12 39.943521 20.05645 48 30 48 C 39.943548 48 48 39.943521 48 30 C 48 20.056441 39.943548 12 30 12 z M 29.972656 18.767578 C 30.417213 18.767578 30.871472 18.931205 31.234375 19.257812 L 40.814453 28.912109 C 41.540258 29.565325 41.540258 30.653124 40.814453 31.378906 L 40.015625 32.177734 C 39.362398 32.830988 38.202053 32.831289 37.548828 32.105469 L 32.322266 26.662109 L 32.322266 39.871094 C 32.322266 40.88722 31.523627 41.613281 30.580078 41.613281 L 29.419922 41.613281 C 28.403792 41.613281 27.677734 40.88722 27.677734 39.871094 L 27.677734 26.662109 L 22.378906 32.105469 C 21.72568 32.831289 20.565335 32.830988 19.912109 32.177734 L 19.113281 31.378906 C 18.387475 30.653124 18.387475 29.565325 19.113281 28.912109 L 28.765625 19.257812 C 29.092238 18.931205 29.5281 18.767578 29.972656 18.767578 z "
+       id="path14336"
+       transform="matrix(0.26458333,0,0,0.26458333,0,281.12498)" />
+  </g>
+</svg>

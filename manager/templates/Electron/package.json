@@ -1,0 +1,10 @@
+{
+  "name": "${appName}",
+  "version": "${appVersion}",
+  "author": "${authorName}",
+  "description": "${appDescription}",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}

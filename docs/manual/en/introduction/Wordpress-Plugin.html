@@ -1,0 +1,470 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D WordPress plugin - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to setup and use the Verge3D WordPress plugin for the purposes of publishing and e-commerce.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/introduction/Wordpress-Plugin.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D WordPress plugin - Soft8Soft">
+            <meta property="og:description" content="How to setup and use the Verge3D WordPress plugin for the purposes of publishing and e-commerce.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/introduction/Wordpress-Plugin.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D WordPress plugin - Soft8Soft">
+            <meta name="twitter:description" content="How to setup and use the Verge3D WordPress plugin for the purposes of publishing and e-commerce.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/app.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/update_app.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/send_load_puzzles.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/order_form.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/orders.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/settings.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>WordPress Plugin</h1>
+
+    <p>
+    Verge3D comes with a plugin for WordPress, the most popular content management system (CMS) in use (60+ million installations).
+    </p>
+    <p>Verge3D for WordPress plugin offers the following features:</p>
+    <ul>
+      <li>Application hosting and publishing (embedding).</li>
+      <li>Integration with WooCommerce system.</li>
+      <li>Persistent file storage.</li>
+      <li>Generic e-commerce system for processing customer orders, submitted using the <a href="manual/en/puzzles/ECommerce.html#place_order" target="_parent">place order</a> puzzle.</li>
+      <li>Fully customizable e-commerce system for processing orders submitted in JSON format by the <a href="manual/en/puzzles/Advanced.html#send_data" target="_parent">send data</a> puzzle.</li>
+    </ul>
+    <p>These features can work independently on each other. For example, you might want just the embedding, or you can handle orders received from a Verge3D application hosted somewhere else (such as on Verge3D Network etc).</p>
+
+    <h2>Contents</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/introduction/Wordpress-Plugin.html#Sandbox">Plugin Sandbox</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Installation">Installation</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Uploading_Applications">Uploading Applications</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#WooCommerce">Integrating with WooCommerce</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Uploading_Files">Uploading Files</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Receiving_Basic_Orders">Receiving Basic Orders</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Managing_Orders">Managing Orders</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Advanced_E_Commerce_Applications">Advanced E-Commerce Applications</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Plug_in_Settings">Plugin Settings</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Customizing_E_Commerce_Forms">Customizing E-Commerce Forms</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#E_Commerce_Protocol_Specification">E-Commerce Protocol Specification</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html#Got_Questions">Got Questions?</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Sandbox" id="Sandbox" class="permalink">#</a></p>
+
+    <h2>Plugin Sandbox</h2>
+
+    <p>To try out the features of the plugin please check out the <a href="https://sandbox.soft8soft.com" target="_blank">Verge3D for WordPress sandbox</a>. It provides a safe environment that you can use to test your Verge3D apps.</p>
+
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Installation" id="Installation" class="permalink">#</a></p>
+
+    <h2 id="installation">Installation</h2>
+
+    <p>Before installing the plugin, make sure you have at least WordPress 4.7. To upload applications on your server you need to have a modern browser such as Google Chrome, Firefox, Edge or Safari 11.1+.</p>
+
+    <p>To install, simply:</p>
+
+    <ul>
+      <li>Click <strong>Add New</strong> on the Plugins settings page from your WordPress admin dashboard.</li>
+      <li>Find the Verge3D plugin in the official WordPress.org <a href="https://wordpress.org/plugins/verge3d/" target="_blank">repository</a> and install it.</li>
+      <li>Activate the plugin. <strong>Verge3D</strong> menu should appear in the admin panel.</li>
+    </ul>
+
+    <p>In some cases, you might need to install the plugin from the Verge3D distribution (for example, when you're going  to try a new feature available in the pre-release version of Verge3D). To do so, follow these steps:</p>
+    <ul>
+      <li>Upload the plugin archive from <em>verge3d/wordpress/verge3d.zip</em> via WordPress admin interface.</li>
+      <li>Activate the plugin in the <strong>Plugins</strong> menu. <strong>Verge3D</strong> menu should appear in the admin panel.</li>
+    </ul>
+
+    <p>After activation, try to upload some of your apps or create a test order to verify that plugin works as expected.</p>
+
+    <p class="note">
+      Please note, that your WordPress server configuration might have tight upload limits. If you experience troubles during uploading of your apps, you need to tweak the following settings in your php.ini file:
+      <code>upload_max_filesize = 128M
+post_max_size = 128M</code>
+      Check out the official <a href="http://php.net/manual/en/ini.core.php" target="_blank">PHP documentation</a> for more info about php.ini configuration.
+    </p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Uploading_Applications" id="Uploading_Applications" class="permalink">#</a></p>
+
+    <h2>Uploading Applications</h2>
+
+    <p>Use the <strong>Applications</strong> admin menu to access <strong>Verge3D Applications</strong> screen:</p>
+    <img src="files/wordpress/app.png">
+
+    <p>To upload your app, click <strong>Edit</strong> just under an application's title, click <strong>Choose Files</strong> and select an application folder in the <strong>Update Verge3D Application</strong> form:</p>
+    <img src="files/wordpress/update_app.png" style="max-width: 819px;">
+
+    <p>On this form you can also configure iframe (canvas) size of your application and allow/deny using the fullscreen mode.</p>
+    <p>To embed Verge3D applications in your WordPress pages/posts use the following shortcode:</p>
+
+    <code>[verge3d id="YOUR_APP_ID"]</code>
+
+    <p>where <em>YOUR_APP_ID</em> is an ID of your application displayed in the table on the <strong>Verge3D Application</strong> screen.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#WooCommerce" id="WooCommerce" class="permalink">#</a></p>
+
+    <h2>Integrating with WooCommerce</h2>
+
+    <p>WooCommerce is a popular e-commerce system which powers over 28% of all online stores. As of version 2.16, Verge3D offers a seamless integration with WooCommerce via this WordPress plugin and <a href="manual/en/puzzles/ECommerce.html">e-commerce puzzles</a>.</p>
+
+    <p>Please refer to <a href="https://www.soft8soft.com/making-3d-product-configurator-for-woocommerce/" target="_blank">this tutorial article</a> for the info on how to use this feature. You may also check out the following <a href="https://www.youtube.com/watch?v=dJdUKwSxA8c" target="_blank">video</a>.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Uploading_Files" id="Uploading_Files" class="permalink">#</a></p>
+
+    <h2>Uploading Files</h2>
+
+    <p>This feature allows the users to persistently store content created in Verge3D applications, such as taken screenshots, uploaded textures, and saved configurations.</p>
+
+    <p>To upload your file on the server use the following REST API method:</p>
+
+    <code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/upload_file/</code>
+
+    <p>Where HOSTNAME is the host name of your WordPress server, such as <em>sandbox.soft8soft.com</em></p>
+
+    <p>Upon success this method returns the following JSON file with the info on the uploaded file:</p>
+    <code>
+    {
+        "id": THE_ID_OF_THE_UPLOADED_FILE,
+        "link": LINK_TO_THE_UPLOADED_FILE,
+        "size": FILE_SIZE
+    }</code>
+
+    <p>Use the link provided in the request to retrieve your file or use the ID and <em>get_file</em> REST API method:</p>
+
+    <code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/get_file/ID</code>
+
+    <h3>Using Puzzles</h3>
+
+    <p>Use the <strong>send data</strong> and <strong>loaded data</strong> puzzles to upload your files. Parse the JSON fields of the API response by using the <strong>in dict ... get key ...</strong> puzzle.</p>
+    <p>The example below uploads the user-selected file specified in the "opened file" puzzle to the Soft8Soft sandbox and then saves the web address to that file in the <strong>link</strong> variable:</p>
+
+    <img src="files/wordpress/send_load_puzzles.png">
+
+    <p>To retrieve/download your files use the <strong>load data</strong> and <strong>loaded data</strong> puzzles.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Receiving_Basic_Orders" id="Receiving_Basic_Orders" class="permalink">#</a></p>
+
+    <h2>Receiving Basic Orders</h2>
+
+    <p>To handle regular orders sent by your Verge3D applications (by the <strong>place order</strong> puzzle), add an order form to some of your WordPress page/post using the following shortcode:</p>
+
+    <code>[verge3d_order]</code>
+
+    <p>Then specify the link to that page/post as the "send to" parameter of the "place order" puzzle. Each time this puzzle is executed, your app will redirect users to your order form:</p>
+
+    <img src="files/wordpress/order_form.png" style="max-width: 500px;">
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Managing_Orders" id="Managing_Orders" class="permalink">#</a></p>
+
+    <h2>Managing Orders</h2>
+
+    <p>Use the <strong>E-Commerce</strong> admin menu to access <strong>E-Commerce Orders</strong> screen:</p>
+
+    <img src="files/wordpress/orders.png">
+
+    <p>The orders in this list are created automatically upon receiveing requests from Verge3D applications. You can use this screen for reviewing and managing customer orders.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Advanced_E_Commerce_Applications" id="Advanced_E_Commerce_Applications" class="permalink">#</a></p>
+
+    <h2>Advanced E-Commerce Applications</h2>
+
+    <p>In some cases you might want to extend the functionality of your e-commerce system. For example, if you develop a 3D configurator or require more info from your clients to handle orders properly, you need to add more data to the request as well as handle this data on the server. For such cases, you need to encode your data in the JSON format using the "send data" puzzle and then create custom template forms for your e-commerce system.</p>
+
+    <p>Say you want to create a basic table customizer. This is how your data might look like:</p>
+
+    <code>
+    {
+        "width": 120,
+        "length": 150,
+        "height": 100,
+        "color": "Redwood",
+        "title": "Custom Table",
+        "price" 100,
+        "user_name", "John Smith",
+        "user_email", "john.smith@example.com",
+        "user_phone", "+123456789"
+    }</code>
+
+    <p>You can compose this structure using the dictionary puzzles and then send it to the server using the "send data" puzzle. After that, you need to create custom templates for your order management admin page as well as emails which will be sent to your customers and sales stuff. To do so, copy the following source templates to your WP theme directory under the <em>verge3d</em> subdirectory:</p>
+
+    <code class="language-html">
+WORDPRESS/wp-content/plugins/verge3d/templates/order_admin_form.php -&gt; THEME/verge3d
+WORDPRESS/wp-content/plugins/verge3d/templates/order_email_body.php -&gt; THEME/verge3d
+    </code>
+
+    <p>Where WORDPRESS is the root directory of your WordPress installation and THEME is the directory of your current theme. Edit these files according to the structure specified for your order.</p>
+
+    <p>The last part is to assign a proper URL for your "send data" puzzle. This one looks like:</p>
+
+    <code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/place_order/</code>
+
+    <p>Where HOSTNAME is the host name of your WordPress server, such as <em>sandbox.soft8soft.com</em></p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Plug_in_Settings" id="Plug_in_Settings" class="permalink">#</a></p>
+
+    <h2>Plugin Settings</h2>
+
+    <p>Use <strong>Settings</strong> admin menu to modify the plugin global settings:</p>
+    <img src="files/wordpress/settings.png">
+
+    <p><strong>Order notification e-mail</strong> option is used to specify an e-mail address of the person responsible for managing orders. When a customer places a new order, you will be notified about this order on this e-mail.</p>
+    <p><strong>Order e-mail "From"</strong> option is used to specify a name/e-mail of a person/organisation that is responsible for communicating with the customer. This can be a sales manager e-mail, some common address such as <em>sales@yourcompany.com</em> or just a no-reply address such as <em>noreply@yourcompany.com</em>.</p>
+    <p><strong>Order e-mail PDF attachments</strong> options are used to enable PDF attachment in your order e-mails. This attachment includes order content in a printer-friendly format.</p>
+    <p>To use this feature properly you need to install Chrome/Chromium browser on your server. It will be operated in the so-called <a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank">headless mode</a> to convert HTML orders to PDF format. Specify the path to the Chrome/Chromium executable if you installed it in some custom directory or leave the path field blank if you installed it system-wide.</p>
+    <p>Please note, that it order to install Chrome system-wide you need to have admin access to the server. If you don't, download <a href="https://www.chromium.org/getting-involved/download-chromium" target="_blank">latest Chromium build</a>, unpack it in some user-accessible directory on your server and then specify the path to the Chromium executable in the path field (e.g <em>/home/ubuntu/chrome-linux/chrome)</em>.</p>
+
+    <p><strong>Enable REST APIs</strong> options are used to enable/disable the order management and persistent file storage APIs provided by the plugin.</p>
+    <p><strong>Cross-domain requests</strong> options is used to enable/disable cross-domain (originated from different hosts) requests to the REST APIs provided by the plugin.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#Customizing_E_Commerce_Forms" id="Customizing_E_Commerce_Forms" class="permalink">#</a></p>
+
+    <h2>Customizing E-Commerce Forms</h2>
+
+    <p>To modify e-commerce forms copy the form templates located in the <em>templates</em> directory of the Verge3D plugin to your WordPress theme directory under the <em>verge3d</em> subdirectory.</p>
+
+    <p>For example, if you need to modify order email template:</p>
+
+    <code class="language-html">WORDPRESS/wp-content/plugins/verge3d/templates/order_email_body.php -&gt; THEME/verge3d</code>
+
+    <p>Where WORDPRESS is the root directory of your WordPress installation and THEME is the directory of your current theme.</p>
+
+    <p>Here is the list of templates you can customize:</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>Template File</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>order_admin_form.php</td>
+        <td>Order management form on the WordPress admin dashboard.</td>
+      
+      </tr><tr>
+        <td>order_email_body.php</td>
+        <td>Order email body template. This template used both for order notifications sent to you and to your customers.</td>
+      
+      </tr><tr>
+        <td>order_email_pdf.php</td>
+        <td>Order email PDF attachment template. This template is used to generate HTML files which will be converted to PDF and attached to order emails.</td>
+      
+      </tr><tr>
+        <td>order_form.php</td>
+        <td>Order form template. This form is displayed to you customers on the pages where <strong>[verge3d_order]</strong> shortcode is present.</td>
+      
+      </tr><tr>
+        <td>order_success.php</td>
+        <td>Message displayed when the order was accepted.</td>
+      </tr>
+      <tr>
+        <td>order_failed.php</td>
+        <td>Message displayed when the order was rejected.</td>
+      
+    </tr></tbody></table>
+
+    <h3>Security Measures</h3>
+
+    <p>When using custom forms for your e-commerce applications be sure to properly escape output data sent by your customers. Use the following <a href="https://developer.wordpress.org/plugins/security/securing-output/" target="_blank">guide</a> for more info.</p>
+
+    <p><a href="manual/en/introduction/Wordpress-Plugin.html#E_Commerce_Protocol_Specification" id="E_Commerce_Protocol_Specification" class="permalink">#</a></p>
+
+    <h2>E-Commerce Protocol Specification</h2>
+
+    <p class="note">This section is intended for users with advanced server-side coding experience.</p>
+
+    <p>The "place order" puzzle uses basic protocol to handle orders. Orders are sent from the browser to server using HTTP POST requests with the following parameters:</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>POST parameters</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>v3d_title</td>
+        <td>Order title. This field is used to describe the order. Since this value is of no use to customers, it is of use solely for persons that are responsible for handling orders.</td>
+      </tr>
+      <tr>
+        <td>v3d_content</td>
+        <td>Order content. This text field includes a complete order information and is visible to both the customer and the sales manager.</td>
+      </tr>
+      <tr>
+        <td>v3d_price</td>
+        <td>Order total price. It can be a number or a string, for example 99, 99.99, "$99.99".</td>
+      </tr>
+      <tr>
+        <td>v3d_screenshot</td>
+        <td>Order screenshot. This optional value must be a data URI representing an image. This value is generated by the <strong>HTMLCanvasElement.toDataURL()</strong> method.</td>
+      </tr>
+    </tbody></table>
+
+    <br>
+    <p>The more advanced JSON-based protocol uses the following set of default parameters:</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>JSON fields</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>Order title. This field is used to describe the order. Since this value is of no use to customers, it is of use solely for persons that are responsible for handling orders.</td>
+      </tr>
+      <tr>
+        <td>price</td>
+        <td>Order total price. It can be a number or a string, for example 99, 99.99, "$99.99".</td>
+      </tr>
+      <tr>
+        <td>user_name</td>
+        <td>Customer's full name.</td>
+      </tr>
+      <tr>
+        <td>user_email</td>
+        <td>Customer's e-mail address.</td>
+      </tr>
+      <tr>
+        <td>user_phone</td>
+        <td>Customer's phone number.</td>
+      </tr>
+      <tr>
+        <td>user_comment</td>
+        <td>Order comments.</td>
+      </tr>
+      <tr>
+        <td>screenshot</td>
+        <td>Order screenshot. This optional value must be a data URI representing an image. This value is generated by the <strong>HTMLCanvasElement.toDataURL()</strong> method.</td>
+      </tr>
+    </tbody></table>
+
+    <br>
+    <p>Since this protocol is extensible you can add any parameters you want such as additional configuration options, product properties, shipping address, billing info, taxes, discounts etc.</p>
+
+  <p><a href="manual/en/introduction/Wordpress-Plugin.html#Got_Questions" id="Got_Questions" class="permalink">#</a></p>
+
+  <h2>Got Questions?</h2>
+
+  <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,27 @@
+<template
+    color="#d4af37"
+    inline="true"
+    output="String"
+
+    tooltip="Get WooCommerce product attribute."
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/ECommerce.html#woo_product_attribute"
+>
+    <value name="NAME" type="String">
+        <label>product attribute</label>
+    </value>
+</template>
+
+<script>
+function code(block) {
+    const name = Blockly.JavaScript.valueToCode(block, 'NAME',
+            Blockly.JavaScript.ORDER_NONE) || '\'\'';
+
+    const fun = Plug.provide('wooProductAttribute', function(name) {
+        // wooProductAttribute puzzle
+        const attr = name.toLowerCase().replace(' ', '-');
+        return _pGlob.wooProductInfo.attributes[attr];
+    });
+
+    return [`${fun}(${name})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+}
+</script>

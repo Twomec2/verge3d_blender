@@ -1,0 +1,246 @@
+.html-embed {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.unfold-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  background-image: url('../images/unfold_knife_button.svg');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.fold-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  margin-top: 90px;
+  background-image: url('../images/fold_knife_button.svg');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.annotation-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  margin-top: 180px;
+  background-image: url('../images/annotation_show_button.svg');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.left-panel {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: none;
+  width: 0px;
+  height: 270px;
+  margin-bottom: -145px;
+  margin-left: 10px;
+}
+
+.left-panel-center {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  display: block;
+  width: 0px;
+  height: 50%;
+}
+
+.right-panel-center {
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  width: 0px;
+  height: 50%;
+  margin-right: 100px;
+  padding-right: 0px;
+}
+
+.right-panel {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: none;
+  width: 0px;
+  height: 270px;
+  margin-bottom: -145px;
+}
+
+.carbon-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  background-image: url('../images/carbon_button.png');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.plastic-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  margin-top: 90px;
+  background-image: url('../images/plastic_button.png');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+.wood-button {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  width: 72px;
+  height: 80px;
+  margin-top: 180px;
+  background-image: url('../images/wood_button.png');
+  background-size: 100% 100%;
+  background-repeat: repeat;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .unfold-button {
+    width: 52px;
+    height: 60px;
+  }
+  .fold-button {
+    width: 52px;
+    height: 60px;
+    margin-top: 70px;
+  }
+  .annotation-button {
+    width: 52px;
+    height: 60px;
+    margin-top: 140px;
+  }
+  .left-panel {
+    height: 210px;
+    margin-bottom: -105px;
+  }
+  .right-panel {
+    height: 210px;
+    margin-bottom: -105px;
+  }
+  .carbon-button {
+    width: 52px;
+    height: 60px;
+  }
+  .plastic-button {
+    width: 52px;
+    height: 60px;
+    margin-top: 70px;
+  }
+  .wood-button {
+    width: 52px;
+    height: 60px;
+    margin-top: 140px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .fold-button {
+    margin-top: 0px;
+    margin-left: 70px;
+  }
+  .annotation-button {
+    margin-top: 0px;
+    margin-left: 140px;
+  }
+  .left-panel {
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: auto;
+    width: 210px;
+    height: 10px;
+    margin-right: -105px;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+  .left-panel-center {
+    width: 50%;
+    height: 0px;
+    margin-top: 10px;
+  }
+  .right-panel-center {
+    left: 0%;
+    top: auto;
+    right: auto;
+    bottom: 0%;
+    width: 50%;
+    height: 0px;
+    margin-right: 0px;
+    margin-bottom: 70px;
+  }
+  .right-panel {
+    left: auto;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 210px;
+    height: 0px;
+    margin-right: -105px;
+  }
+  .plastic-button {
+    margin-top: 0px;
+    margin-left: 70px;
+  }
+  .wood-button {
+    margin-top: 0px;
+    margin-left: 140px;
+  }
+}

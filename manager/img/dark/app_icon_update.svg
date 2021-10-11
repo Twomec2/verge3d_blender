@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="28"
+   height="28"
+   viewBox="0 0 7.4083332 7.4083335"
+   version="1.1"
+   id="svg3641">
+  <defs
+     id="defs3635">
+    <linearGradient
+       id="linearGradient2768">
+      <stop
+         style="stop-color:#414141;stop-opacity:1"
+         offset="0"
+         id="stop2764" />
+      <stop
+         style="stop-color:#767676;stop-opacity:1"
+         offset="1"
+         id="stop2766" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient2768"
+       id="linearGradient4293"
+       x1="333.53189"
+       y1="105.25716"
+       x2="339.22046"
+       y2="99.237892"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.53673494,-5.1971741)" />
+    <linearGradient
+       xlink:href="#linearGradient2828"
+       id="linearGradient2794"
+       x1="369.24503"
+       y1="115.87357"
+       x2="373.51144"
+       y2="110.84649"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-367.49217,-109.72201)" />
+    <linearGradient
+       id="linearGradient2828">
+      <stop
+         style="stop-color:#5ab739;stop-opacity:1"
+         offset="0"
+         id="stop2824" />
+      <stop
+         style="stop-color:#8ece78;stop-opacity:1"
+         offset="1"
+         id="stop2826" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata3638">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path1978"
+     d="M 3.7041666,0 C 1.6579166,0 0,1.6579166 0,3.7041666 c 0,2.0462499 1.6579166,3.7041666 3.7041666,3.7041666 2.04626,0 3.7041666,-1.6579167 3.7041666,-3.7041666 C 7.4083332,1.6579166 5.7504266,0 3.7041666,0 Z m 0.058911,0.62631835 c 0.02877,0.001363 0.056583,0.0134398 0.075964,0.0335897 L 5.1376709,2.0060791 c 0.038763,0.0402 0.043787,0.1128999 -0.0031,0.1581299 L 3.7951171,3.4561197 c -0.040186,0.0388 -0.1193667,0.037199 -0.1581298,-0.0031 L 3.3269287,3.1315916 c -0.045227,-0.0469 -0.03709,-0.1188431 0.0031,-0.1576133 L 3.9863199,2.3404256 C 3.4877189,2.2524256 2.9588431,2.38816 2.5636678,2.76934 1.913978,3.39603 1.8951239,4.435271 2.5218099,5.0849609 c 0.6331497,0.6563899 1.6659309,0.668578 2.3156208,0.041858 0.3014046,-0.29074 0.4729747,-0.6627619 0.4997112,-1.0505818 0.00764,-0.0591 0.054579,-0.1042649 0.113688,-0.096635 l 0.4470013,0.00775 c 0.065791,0.00101 0.117714,0.054628 0.1100707,0.1136883 C 5.9716249,4.6532326 5.7316991,5.195481 5.3030355,5.608961 4.3854324,6.4940698 2.9309861,6.4743567 2.0458699,5.5567667 1.1607536,4.6391567 1.1802023,3.198129 2.0913452,2.3063192 2.5805188,1.8215191 3.2360467,1.6027858 3.8669473,1.6536458 L 3.3563843,1.1249959 c -0.038763,-0.0402 -0.037093,-0.1188431 0.0031,-0.1576131 L 3.6809121,0.65680745 c 0.023445,-0.0225999 0.053396,-0.0318516 0.082165,-0.0304891 z"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.64731169px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;fill:url(#linearGradient2794);fill-opacity:1;stroke:none;stroke-width:0.19118281" />
+</svg>

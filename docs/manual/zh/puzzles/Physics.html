@@ -1,0 +1,643 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>物理系统拼图参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="使用拼图来模拟物理学行为。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/Physics.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="物理系统拼图参考 - Soft8Soft">
+            <meta property="og:description" content="使用拼图来模拟物理学行为。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/Physics.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="物理系统拼图参考 - Soft8Soft">
+            <meta name="twitter:description" content="使用拼图来模拟物理学行为。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-create-physics-world.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-create-physics-body.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-create-soft-body.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-remove-physics-body.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-apply-body-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-ccd-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-apply-body-param-impulse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-get-body-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-body-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-body-params-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-apply-vector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-set-body-state.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-on-simulation-tick.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-snap-body.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-add-physics-constraint.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-add-physics-constraint-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-remove-physics-constraint.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-anchor-soft-body.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-detect-collisions.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-physics-detect-collisions-info.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>物理系统</h1>
+
+    <p>此类拼图用来模拟对象的物理系统行为。</p>
+    
+    <img src="files/puzzles/puzzles-physics.jpg" style="max-width: 1000px">
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/Physics.html#physics_puzzles_reference">物理拼图参考</a><ul><li><a href="manual/zh/puzzles/Physics.html#create_physics_world">create physics world(创建物理世界)</a></li><li><a href="manual/zh/puzzles/Physics.html#create_rigid_body">create rigid body(创建刚体)</a></li><li><a href="manual/zh/puzzles/Physics.html#create_soft_body">create soft body(创建柔体)</a></li><li><a href="manual/zh/puzzles/Physics.html#remove_physics_body">Remove physics body(删除物理实体)</a></li><li><a href="manual/zh/puzzles/Physics.html#apply_body_param">apply body param(应用实体参数)</a></li><li><a href="manual/zh/puzzles/Physics.html#get_body_param">get body param(获取实体参数)</a></li><li><a href="manual/zh/puzzles/Physics.html#physics_body_params">physics body params(物理实体参数)</a></li><li><a href="manual/zh/puzzles/Physics.html#apply_vector">apply vector(应用矢量)</a></li><li><a href="manual/zh/puzzles/Physics.html#set_body_state">set body state(设置实体的状态)</a></li><li><a href="manual/zh/puzzles/Physics.html#on_simulation_tick">on simulation tick(在模拟启动时)</a></li><li><a href="manual/zh/puzzles/Physics.html#snap_body">snap body(对齐实体)</a></li><li><a href="manual/zh/puzzles/Physics.html#add_physics_constraint">add constraint to(添加约束到)</a></li><li><a href="manual/zh/puzzles/Physics.html#remove_physics_constraint">remove constraint from(从...移除约束)</a></li><li><a href="manual/zh/puzzles/Physics.html#soft_body_anchor">anchor soft body(锚定柔体)</a></li><li><a href="manual/zh/puzzles/Physics.html#detect_collisions">detect collisions and collision info(检测碰撞与碰撞信息)</a></li></ul></li><li><a href="manual/zh/puzzles/Physics.html#extending_with_javascript">Extending with JavaScript(用JavaScript进行扩展)</a></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/Physics.html#physics_puzzles_reference" id="physics_puzzles_reference" class="permalink">#</a></p>
+
+    <h2>物理拼图参考</h2>
+
+    <p><a href="manual/zh/puzzles/Physics.html#create_physics_world" id="create_physics_world" class="permalink">#</a></p>
+
+    <h3>create physics world(创建物理世界)</h3>
+
+    <p>
+      使用指定的<strong>gravity(重力)</strong>和<strong>frames-per-second(帧/秒)</strong>参数初始化物理引擎。默认的<strong>gravity(重力)</strong>值为9.8，对应于地球表面重力。零代表没有重力，类似在太空。<strong>fps</strong>值越高，模拟质量越好，但要牺牲性能。
+    </p>
+
+    <p><strong>soft body(柔体)</strong>复选框激活了柔体模拟功能。</p>
+    
+    <img src="files/puzzles/puzzles-physics-create-physics-world.jpg">
+    <p>基于引擎，这个拼图还可以实现碰撞检测和自动图形同步。</p><!-- COMPAT: < 3.5 --> <a href="#" id="create_physics_body"></a>
+    <p><a href="manual/zh/puzzles/Physics.html#create_rigid_body" id="create_rigid_body" class="permalink">#</a></p>
+
+    <h3>create rigid body(创建刚体)</h3>
+
+    <p>
+      从一个指定的对象创建一个实体，类型为<strong>dynamic(动态)</strong>、<strong>kinematic(运动)</strong>、<strong>static(静态)</strong>或<strong>ghost(幽灵)</strong>。指定碰撞形状，并为该体设置质量（仅对<strong>dynamic(动态)</strong>体有效）。也适用于对象列表，组（或者组的列表）以及
+      <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a> 拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-create-physics-body.jpg">
+    <p>实体的类型：</p>
+
+    <ul>
+      <li><strong>dynamic</strong> - 动态--由物理引擎移动，受碰撞影响，与其他物体相撞。</li>
+      <li><strong>kinematic</strong> - 通过动画或用户动作移动。动态对象会被推开，但没有来自动态对象的影响。</li>
+      <li><strong>static</strong> - 不能移动，但会与其他对象发生碰撞。</li>
+      <li><strong>ghost</strong> - 类似于<strong>kinematic</strong>，但不产生任何碰撞反应。用它来 <a href="manual/zh/puzzles/Physics.html#detect_collision">detect
+          collision(检测碰撞)</a> （例如，实现接近传感器）。</li>
+    </ul>
+
+    <p>支持的刚体形状：</p>
+
+    <ul>
+      <li><strong>box</strong> - 盒子形状的边界。</li>
+      <li><strong>sphere</strong> - 球体形状的边界。</li>
+      <li><strong>mesh</strong> - 网格形状。</li>
+      <li><strong>capsule</strong> - 沿上下轴拉伸的胶囊形状。</li>
+      <li><strong>cone</strong> - 沿上下轴拉伸的圆锥体形状。</li>
+      <li><strong>cylinder</strong> - 沿上下轴拉伸的圆柱体形状。</li>
+      <li><strong>empty</strong> - 空的形状。用于创建约束性附件和柔体锚点。</li>
+    </ul>
+
+    <p>出于性能因素，优先考虑原始物理形状（盒子、球体、胶囊、圆锥体和圆柱体）而不是网格形状。另外，<strong>static</strong>网格的性能比<strong>dynamic</strong>, <strong>kinematic</strong> 和 <strong>ghost</strong> 的性能好得多。</p>
+
+    <p><a href="manual/zh/puzzles/Physics.html#create_soft_body" id="create_soft_body" class="permalink">#</a></p>
+
+    <h3>create soft body(创建柔体)</h3>
+
+    <p>从一个指定的对象中创建一个柔体，具有给定的总<strong>mass(质量)</strong>和可选的<strong>pressure(压力)</strong>参数。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a> 拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-create-soft-body.jpg">
+    <p>支持的柔体形状:</p>
+
+    <ul>
+      <li><strong>volume</strong> - 封闭受压的三维体积。</li>
+      <li><strong>rope</strong> - 类似绳子的线状对象。</li>
+      <li><strong>patch</strong> - 多边形表面，如布或纺织品补丁。</li>
+    </ul>
+
+    <p class="note">在创建柔体之前，不要忘记激活 <a href="manual/zh/puzzles/Physics.html#create_physics_world">physics world(物理世界)</a>
+      上的柔体模拟。</p>
+
+    <p><a href="manual/zh/puzzles/Physics.html#remove_physics_body" id="remove_physics_body" class="permalink">#</a></p>
+
+    <h3>Remove physics body(删除物理实体)</h3>
+
+    <p>通过破坏与之相关的实体，从指定的对象中移除物理特性。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all
+        objects(所有对象)</a> 拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-remove-physics-body.jpg">
+
+    <p><a href="manual/zh/puzzles/Physics.html#apply_body_param" id="apply_body_param" class="permalink">#</a></p>
+
+    <h3>apply body param(应用实体参数)</h3>
+
+    <p>为与指定对象相关的实体设置参数。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a>
+      拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-apply-body-param.jpg">
+    <p>参数：</p>
+
+    <ul>
+      <li><strong>angular damping</strong> - <strong>角度阻尼</strong>，用于减缓对象旋转的阻尼系数：0-没有阻尼，1-最大阻尼。输入值被钳制在[0, 1]范围内。</li>
+      <li><strong>angular factor</strong> - <strong>角度系数</strong>，设置指定对象的旋转自由度。例如，通过设置Z分量为零，您可以禁止实体围绕上下（Blender，Max）或前后（Maya）轴旋转。</li>
+      <li><strong>angular velocity</strong> - <strong>角速度</strong>，设置旋转速度矢量。</li>
+      <li><strong>ccd motion threshold</strong> - <strong>CCD运动阈值</strong> ，用于模拟连续碰撞检测（CCD）物理学的运动阈值。指定低值，例如 <em>0.001</em></li>
+      <li><strong>ccd swept sphere radius</strong> - <strong>CCD扫掠球半径</strong>
+        ，用于模拟连续碰撞检测（CCD）物理的扫掠球半径。这个值应该与碰撞对象的大小相对应。例如，为了模拟尺寸为0.01米的小子弹，这个值设置为0.5会比较安全。</li>
+    </ul>
+    
+    <img src="files/puzzles/puzzles-physics-ccd-example.jpg">
+    <ul>
+      <li><strong>force</strong> - <strong>作用力</strong>，在指定的方向上推动实体。</li>
+      <li><strong>friction</strong> - <strong>摩擦力</strong>，实体相互滑动的相对运动的阻力系数。</li>
+      <li><strong>gravity</strong> - <strong>重力</strong>，为一个指定的实体单独分配重力。</li>
+      <li><strong>impulse</strong> - <strong>冲量</strong>，作用类似于<strong>线性速度</strong>，但也考虑到了实体的质量（较重的对象将获得较少的速度）。</li>
+    </ul>
+    
+    <img src="files/puzzles/puzzles-physics-apply-body-param-impulse.jpg" style="max-width: 793px">
+    <ul>
+      <li><strong>linear damping</strong> - <strong>线性阻尼</strong>，将使运动对象减速的阻力系数。0-没有阻尼（例如自由落体），1-最大阻尼（例如对象下落时没有加速度）。输入值被钳制在[0, 1]范围内。</li>
+      <li><strong>linear factor</strong> - <strong>线性因子</strong>，为指定的对象设置位置自由度。例如，通过设置Z分量为零，您可以禁止实体的上下（Blender，Max）或前后（Maya）运动。</li>
+      <li><strong>linear velocity</strong> - <strong>线性速度</strong>，设置运动速度矢量。</li>
+      <li><strong>position</strong> - <strong>位置</strong>，设置实体的位置（作用类似于 <a href="manual/zh/puzzles/Physics.html#snap_body">snap body(对齐实体)</a> 的拼图）。
+      </li>
+      <li><strong>restitution</strong> - <strong>恢复</strong>，弹性系数。0 - 实体像粘土一样没有弹性，1 - 实体的行为像由橡胶制成。</li>
+      <li><strong>stiffness</strong> - <strong>刚度</strong>，柔体的刚度，如体积和绳索。</li>
+      <li><strong>torque</strong> - <strong>扭矩</strong>，在一个指定的方向上旋转实体。</li>
+      <li><strong>torque impulse</strong> - <strong>扭矩冲量</strong>，作用类似于<strong>角速度</strong>，但也考虑到了实体的质量（较重的对象将获得较少的旋转速度）。</li>
+    </ul>
+
+    <p class="note">当两个对象发生碰撞时，它们的摩擦力和恢复力参数会被考虑在内。</p>
+
+    <p><a href="manual/zh/puzzles/Physics.html#get_body_param" id="get_body_param" class="permalink">#</a></p>
+
+    <h3>get body param(获取实体参数)</h3>
+
+    <p>从与指定对象相关的实体中获取一个参数。</p>
+    
+    <img src="files/puzzles/puzzles-physics-get-body-param.jpg">
+    <p>参数：</p>
+
+    <ul>
+      <li><strong>angular damping</strong> - <strong>角度阻尼</strong>，用于减缓对象旋转的阻尼系数：0-没有阻尼，1-最大阻尼。</li>
+      <li><strong>angular factor</strong> - <strong>角度系数</strong>，选定对象的旋转自由度(XYZ)。</li>
+      <li><strong>angular velocity</strong> - <strong>角速度</strong>，旋转速度矢量。</li>
+      <li><strong>ccd motion threshold</strong> - <strong>CCD运动阈值</strong> ，用于模拟连续碰撞检测（CCD）物理学的运动阈值。</li>
+      <li><strong>ccd swept sphere radius</strong> - <strong>CCD扫掠球半径</strong> ，用于模拟连续碰撞检测（CCD）物理的扫掠球半径。</li>
+      <li><strong>force</strong> - <strong>作用力</strong>，施加到实体上的力矢量。</li>
+      <li><strong>friction</strong> - <strong>摩擦力</strong>，实体相互滑动的相对运动的阻力系数。</li>
+      <li><strong>gravity</strong> - <strong>重力</strong>，施加在对象上的重力矢量。</li>
+      <li><strong>linear damping</strong> - <strong>线性阻尼</strong>，将使运动对象减速的阻力系数。0-没有阻尼（例如自由落体），1-最大阻尼（例如对象下落时没有加速度）。</li>
+      <li><strong>linear factor</strong> - <strong>线性系数</strong>，指定体的位置自由度（XYZ）。</li>
+      <li><strong>linear velocity</strong> - <strong>线性速度</strong>，运动速度矢量。</li>
+      <li><strong>position</strong> - <strong>位置</strong>，实体的XYZ位置。</li>
+      <li><strong>restitution</strong> - <strong>恢复</strong>，弹性系数。0 - 实体像粘土一样没有弹性，1 - 实体的行为像由橡胶制成。</li>
+      <li><strong>stiffness</strong> - <strong>刚度</strong>，柔体的刚度，如体积和绳索。</li>
+      <li><strong>torque</strong> - <strong>扭矩</strong>，应用于实体的扭矩矢量。</li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Physics.html#physics_body_params" id="physics_body_params" class="permalink">#</a></p>
+
+    <h3>physics body params(物理实体参数)</h3>
+
+    <p class="red">这个拼图现在已经过时了。请使用 <a href="manual/zh/puzzles/Physics.html#apply_body_param">apply body
+        param(应用实体参数)</a> 代替。
+
+    </p><p>为与指定对象相关的实体设置参数。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a>
+      拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-body-params.jpg">
+    <p>参数：</p>
+
+    <ul>
+      <li><strong>friction</strong> - <strong>摩擦力</strong>，用来设置对象的曲面阻力。</li>
+      <li><strong>linear damping</strong> - <strong>线性阻尼</strong>，将使运动对象减速的阻力系数。0-没有阻尼（例如自由落体），1-最大阻尼（例如对象下落时没有加速度）。输入值被钳制在[0, 1]范围内。</li>
+      <li><strong>angular damping</strong> - <strong>角度阻尼</strong>，用于减缓对象旋转的阻尼系数：0-没有阻尼，1-最大阻尼。输入值被钳制在[0, 1]范围内。</li>
+      <li><strong>restitution</strong> - <strong>恢复</strong>，弹性系数。0 - 实体像粘土一样没有弹性，1 - 实体的行为像由橡胶制成。</li>
+    </ul>
+
+    <p>当两个对象发生碰撞时，它们的摩擦力和恢复力参数会被考虑在内。</p>
+    
+    <img src="files/puzzles/puzzles-physics-body-params-example.jpg" style="max-width: 903px">
+
+    <p><a href="manual/zh/puzzles/Physics.html#apply_vector" id="apply_vector" class="permalink">#</a></p>
+
+    <h3>apply vector(应用矢量)</h3>
+
+    <p class="red">这个拼图现在已经过时了。请使用 <a href="manual/zh/puzzles/Physics.html#apply_body_param">apply body
+        param(应用实体参数)</a> 代替。
+
+    </p><p>在世界空间的指定方向，将*力*、<strong>重力</strong>、<strong>线速度</strong>、<strong>角速度</strong>、<strong>冲量</strong>、<strong>扭矩</strong>、<strong>扭矩冲量</strong>或<strong>位置</strong>应用到与指定对象相关的实体上。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a> 拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-apply-vector.jpg">
+    <p>参数：</p>
+
+    <ul>
+      <li><strong>force</strong> - <strong>作用力</strong>，在指定的方向上推动实体。</li>
+      <li><strong>gravity</strong> - <strong>重力</strong>，为一个指定的实体单独分配重力。</li>
+      <li><strong>linear velocity</strong> - <strong>线性速度</strong>，设置运动速度。</li>
+      <li><strong>angular velocity</strong> - <strong>角速度</strong>，设置旋转速度。</li>
+      <li><strong>impulse</strong> - <strong>冲量</strong>，作用类似于<strong>线性速度</strong>，但也考虑到了实体的质量（较重的对象将获得较少的速度）。</li>
+      <li><strong>torque</strong> - <strong>扭矩</strong>，在一个指定的方向上旋转实体。</li>
+      <li><strong>torque impulse</strong> - <strong>扭矩冲量</strong>，作用类似于<strong>角速度</strong>，但也考虑到了实体的质量（较重的对象将获得较少的旋转速度）。</li>
+      <li><strong>linear factor</strong> - <strong>线性因子</strong>，为指定的对象设置位置自由度。例如，通过设置Z分量为零，您可以禁止实体的上下（Blender，Max）或前后（Maya）运动。</li>
+      <li><strong>angular factor</strong> - <strong>角度系数</strong>，设置指定对象的旋转自由度。例如，通过设置Z分量为零，您可以禁止实体围绕上下（Blender，Max）或前后（Maya）轴旋转。</li>
+      <li><strong>position</strong> - <strong>位置</strong>，设置实体的位置（作用类似于 <a href="manual/zh/puzzles/Physics.html#snap_body">snap body(对齐实体)</a> 的拼图）。
+      </li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Physics.html#set_body_state" id="set_body_state" class="permalink">#</a></p>
+
+    <h3>set body state(设置实体的状态)</h3>
+
+    <p>改变与指定对象相关的实体的状态。也适用于对象列表，组（或者组的列表）以及 <a href="manual/zh/puzzles/Selectors.html#all_objects">all objects(所有对象)</a>
+      拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-set-body-state.jpg" class="centered" style="max-width: 764px">
+    <p>参数：</p>
+
+    <ul>
+      <li><strong>activate</strong> - 激活睡眠的实体。</li>
+      <li><strong>sleep</strong> - 强制实体进入睡眠状态。</li>
+      <li><strong>enable simulation</strong> - 启用实体模拟（默认启用）。</li>
+      <li><strong>disable simulation</strong> - 禁用实体模拟。</li>
+      <li><strong>reset</strong> - 清除所有应用于实体的力和速度。</li>
+      <li><strong>enable contact response</strong> - 允许实体之间发生碰撞（默认情况下启用）。</li>
+      <li><strong>disable contact response</strong> - <strong>禁用接触响应</strong>，禁用实体的碰撞。</li>
+      <li><strong>make dynamic</strong> - 使实体动态化。</li>
+      <li><strong>make kinematic</strong> - 使实体运动。</li>
+      <li><strong>make static</strong> - 使实体静止。</li>
+      <li><strong>enable deactivation</strong> - 允许实体在不活动一段时间后转入睡眠状态（默认启用）。</li>
+      <li><strong>disable deactivation</strong>- 禁止实体睡眠。</li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Physics.html#on_simulation_tick" id="on_simulation_tick" class="permalink">#</a></p>
+
+    <h3>on simulation tick(在模拟启动时)</h3>
+
+    <p>在物理模拟启动的瞬间 <em>之前</em> 或 <em>之后</em> ，触发在 "do" 槽中指定的拼图。</p>
+    
+    <img src="files/puzzles/puzzles-physics-on-simulation-tick.jpg" class="centered" style="max-width: 817px">
+    <p>物理模拟计时与创建 <a href="manual/zh/puzzles/Physics.html#create_physics_world">物理世界</a>
+      时指定的FPS值相对应，与渲染帧不一致。因此，我们建议你在模拟启动<strong>之前</strong>应用力、速度和脉冲，在模拟启动<strong>之后</strong>检测实体之间的碰撞。这样您就可以实现更稳定和更真实的模拟。</p>
+
+    <p><a href="manual/zh/puzzles/Physics.html#snap_body" id="snap_body" class="permalink">#</a></p>
+
+    <h3>snap body(对齐实体)</h3>
+
+    <p>通过复制实体的变换数据，将与指定对象相关的实体以及对象本身移动到另一个对象的位置。同时复制旋转。对列表、组或 "all objects(所有对象)" 拼图不起作用。</p>
+    
+    <img src="files/puzzles/puzzles-physics-snap-body.jpg">
+    <p>作用类似于<strong>apply body param / position(应用体参数/位置)</strong>拼图。</p>
+
+    <p><a href="manual/zh/puzzles/Physics.html#add_physics_constraint" id="add_physics_constraint" class="permalink">#</a></p>
+
+    <h3>add constraint to(添加约束到)</h3>
+
+    <p>通过一个给定类型的约束来连接两个实体。</p>
+    
+    <img src="files/puzzles/puzzles-physics-add-physics-constraint.jpg">
+    <p>约束类型：</p>
+
+    <ul>
+      <li><strong>hinge</strong> - *铰链 *，通过共用的轴连接两个实体，被连接的实体仅可以绕一个轴旋转。</li>
+      <li><strong>ball</strong> - *球* ，通过球状的插座来连接两个实体。</li>
+      <li><strong>slider</strong> - <strong>滑块</strong> 约束限制实体移动方向在X轴向上。</li>
+      <li><strong>spring</strong> - <strong>弹簧</strong> ，通过类似弹簧的关节连接两个实体。</li>
+      <li><strong>fixed</strong> - <strong>固定</strong> ，紧密地连接两个实体。</li>
+    </ul>
+    
+    <img src="files/puzzles/puzzles-physics-add-physics-constraint-example.jpg">
+
+    <p><a href="manual/zh/puzzles/Physics.html#remove_physics_constraint" id="remove_physics_constraint" class="permalink">#</a></p>
+
+    <h3>remove constraint from(从...移除约束)</h3>
+
+    <p>移除物理约束。</p>
+    
+    <img src="files/puzzles/puzzles-physics-remove-physics-constraint.jpg">
+
+    <p><a href="manual/zh/puzzles/Physics.html#soft_body_anchor" id="soft_body_anchor" class="permalink">#</a></p>
+
+    <h3>anchor soft body(锚定柔体)</h3>
+
+    <p>将柔体锚定在给定矢量所代表的空间点的给定刚体上。</p>
+    
+    <img src="files/puzzles/puzzles-physics-anchor-soft-body.jpg">
+    <!-- COMPAT: something old --> <a href="#" id="detect_collision"></a> <p><a href="manual/zh/puzzles/Physics.html#detect_collisions" id="detect_collisions" class="permalink">#</a></p>
+
+    <h3>detect collisions and collision info(检测碰撞与碰撞信息)</h3>
+
+    <p>检测指定的实体与另一个实体（或列表中的任一实体与组）在此刻是否有碰撞。如果有碰撞，那么在 "if touching do" 槽中的拼图会被触发，否则将触发在 "if not touching
+      do" 插槽中的拼图。</p>
+
+    <p>"<strong>detect collisions</strong>" 拼图在每一个渲染帧中都会触发它的回调插槽。</p>
+    
+    <img src="files/puzzles/puzzles-physics-detect-collisions.jpg">
+    <p><strong>collision info</strong> 拼图会输出一个 <a href="manual/zh/puzzles/Dictionaries.html">字典</a> ，其字段如下：</p>
+
+    <ul>
+      <li><strong>objectA</strong> - 第一个碰撞实体的名字。</li>
+      <li><strong>objectB</strong> - 第二个碰撞实体的名字。</li>
+      <li><strong>distance</strong> - 碰撞点之间的距离。</li>
+      <li><strong>positionOnA</strong> - 第一个对象上的碰撞点的XYZ坐标。</li>
+      <li><strong>positionOnB</strong> - 第二个对象上的碰撞点的XYZ坐标。</li>
+      <li><strong>normalOnB</strong> - 第二个对象上的碰撞点的法向量的XYZ分量。</li>
+    </ul>
+    
+    <img src="files/puzzles/puzzles-physics-detect-collisions-info.jpg">
+
+    <p><a href="manual/zh/puzzles/Physics.html#extending_with_javascript" id="extending_with_javascript" class="permalink">#</a></p>
+
+    <h2>Extending with JavaScript(用JavaScript进行扩展)</h2>
+
+    <p class="note">在您开始阅读以下内容之前，请先熟悉本用户手册的 <a href="manual/zh/introduction/Using-JavaScript.html">使用JavaScript</a> 部分。
+    </p>
+
+    <p>为了构建物理拼图，我们使用了名为Ammo.js的JavaScript库。这是流行的开源物理引擎Bullet的JavaScript版本，经过编译可以在浏览器中使用。</p>
+
+    <p>要熟悉Bullet，请查阅GitHub上的 <a href="https://github.com/bulletphysics/bullet3/blob/master/docs/Bullet_User_Manual.pdf" target="_blank">Bullet Physics SDK Manual</a> 以及官方的 <a href="https://pybullet.org/Bullet/BulletFull/index.html" target="_blank">Bullet API Reference</a>。</p>
+
+    <p>在Verge3D中，您可以通过使用Ammo命名空间直接执行Bullet/Ammo.js APIs。</p>
+    
+    <code>
+var myVector = new Ammo.btVector3(1.0, 0.0, 0.0);
+console.log('My physics vector is:', myVector.x(), myVector.y(), myVector.z());
+    </code>
+
+    <p>您还可以访问我们在拼图中使用的以下数据结构：</p>
+
+    <h3>World</h3>
+
+    <p>根据所初始化的物理世界，它可以是 <a href="https://pybullet.org/Bullet/BulletFull/classbtDiscreteDynamicsWorld.html">btDiscreteDynamicsWorld</a> 或 <a href="https://pybullet.org/Bullet/BulletFull/classbtSoftRigidDynamicsWorld.html" target="_blank">btSoftRigidDynamicsWorld</a> 类的实例。</p>
+    
+    <code>
+var gravity = v3d.puzzles.physics.world.getGravity();
+console.log('World gravity:', gravity.y());
+    </code>
+
+    <h3>Physics Bodies</h3>
+
+    <p>实体作为键值数据存储在 <strong>v3d. Puzzles.physics.bodies</strong> 对象中。</p>
+    
+    <code>
+var body = v3d.puzzles.physics.bodies['Whirligig'];
+console.log('Body mass:', 1.0 / body.getInvMass());
+    </code>
+
+    <p>刚体是 <a href="https://pybullet.org/Bullet/BulletFull/classbtRigidBody.html" target="_blank">btRigidBody</a>
+      类的实例，而柔体是 <a href="https://pybullet.org/Bullet/BulletFull/classbtSoftBody.html" target="_blank">btSoftBody</a>
+      类的实例。
+    </p><h3>Physics Constraints</h3>
+
+    <p>Bullet/Ammo 约束以键值数据的形式存储在二维的 <strong>v3d. Puzzles.physics.constraints</strong> 对象中。</p>
+    
+    <code>
+var hingeConstraint = v3d.puzzles.physics.constraints['Suzanne']['Axis'];
+hingeConstraint.enableAngularMotor(true, 10, 10);
+    </code>
+
+    <p>这些名称分别代表约束的第一和第二实体。</p>
+
+    <h3>Physics Sync List</h3>
+
+    <p>Verge3D拼图使用所谓的同步列表在空间中移动由实体代表的对象。同步列表不能被直接访问，所以您需要使用下面的API方法来添加实体到该列表，或移除出列表。</p>
+    
+    <code>
+// add obj / body to the sync list
+// the type can be 'DYNAMIC', 'KINEMATIC', 'STATIC', 'GHOST', or 'SOFT_BODY'
+v3d.puzzles.physics.addToSyncList(obj, body, 'DYNAMIC');
+
+// remove obj / body from the sync list
+v3d.puzzles.physics.removeFromSyncList(obj, body);
+    </code>
+
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

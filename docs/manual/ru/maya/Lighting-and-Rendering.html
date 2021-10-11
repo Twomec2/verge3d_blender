@@ -1,0 +1,551 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для Maya: Освещение и рендеринг - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to configure environment lighting, lights and rendering settings in Verge3D for Maya.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/maya/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для Maya: Освещение и рендеринг - Soft8Soft">
+            <meta property="og:description" content="How to configure environment lighting, lights and rendering settings in Verge3D for Maya.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/maya/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для Maya: Освещение и рендеринг - Soft8Soft">
+            <meta name="twitter:description" content="How to configure environment lighting, lights and rendering settings in Verge3D for Maya.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/ai-sky-dome-light.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/ai-sky-dome-light-setup.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/light-probe-reflection-cubemap-create.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/light-probe-reflection-cubemap-effect.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/light-probe-reflection-cubemap-params.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/render-background.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/rendering-settings-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-maya/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Освещение и рендеринг / Maya</h1>
+
+    <p>
+      Эта страница содержит информацию о настройках освещения, рендеринга и фона, которые можно использовать в Maya для Verge3D.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/maya/Lighting-and-Rendering.html#renderers">Рендереры</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#environment_lighting">Освещение Окружающей Среды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#lights">Источники освещения</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#light_probes">Световые зонды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#background">Фон</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#global_rendering_settings">Глобальные настройки рендеринга</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#outline_rendering">Контурный рендеринг</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#per_object_rendering_settings">Настройки рендеринга для каждого объекта</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html#clipping_planes">Clipping Planes(Секущие Плоскости)</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>Рендереры</h2>
+
+    <p>
+      Verge3D разработан для максимально возможного соответствия аппаратному рендереру Viewport 2.0 в Maya. Он поддерживает физически обоснованное затенение, освещение, тени и освещение на основе изображений (IBL).
+    </p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>Освещение Окружающей Среды</h2>
+
+    <p>
+      Освещение Окружающей Среды - очень важная составляющая графического пайплайна в Verge3D. Вы можете осветить всю сцену, используя только карту окружения, без использования каких-либо источников освещения. Ознакомьтесь со <a href="https://www.soft8soft.com/gallery/scooter-3d-product-customizer/" target="_blank">Scooter demo</a> в качестве примера такого подхода.
+    </p>
+
+    <p>Шаблон куба по умолчанию предоставляет HDR-текстуру для освещения на основе изображения. Вы можете заменить эту текстуру своим файлом или настроить освещение окружения с нуля. Для этого просто добавьте Arnold's <strong>aiSkyDomeLight</strong> к вашей сцене и присвойте ему текстуру в качестве <strong>Color</strong>.</p>
+
+    <img src="files/lighting-maya/ai-sky-dome-light.jpg" class="centered" style="max-width: 892px">
+
+    <p>Кроме того, вы можете использовать атрибут <strong>Intensity</strong> для настройки интенсивности освещения окружения и <strong>Texture Resolution</strong> для настройки его качества:</p>
+
+    <ul>
+      <li><strong>Low (64x64)</strong> и <strong>Medium (128x128)</strong> - значения не поддерживаются, вместо них Verge3D будет использовать настройку <strong>High (256x256)</strong> .</li>
+      <li><strong>High (256x256)</strong> - оптимальное качество при низком потреблении памяти (значение по умолчанию).</li>
+      <li><strong>Higher (512x512)</strong> - лучшее качество при умеренном потреблении памяти и снижении производительности. Используйте его для рендеринга отражений высокого качества, например, для рендеринга ювелирных изделий.</li>
+      <li><strong>Ultra (1024x1024)</strong> - наилучшее качество при высоком потреблении памяти и низкой производительности (обычно не рекомендуется).</li>
+    </ul>
+
+    <p>
+      При использовании HDR текстуры для skydome, убедитесь, что для параметра *Цветовое пространство* вы установили значение <strong>Raw</strong>:
+    </p>
+
+    <img src="files/lighting-maya/ai-sky-dome-light-setup.jpg" class="centered" style="max-width: 458px">
+
+    <p class="note">
+      Вы также можете использовать <strong>aiSkyDomeLight</strong> без текстуры, чтобы имитировать свет, равномерно исходящий со всех сторон. Однако гораздо эффективнее использовать для этого Ambient Lights.
+    </p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>Источники освещения</h2>
+
+    <p>
+      В некоторых случаях использования только освещения на основе изображения недостаточно. Если вы хотите смоделировать дополнительный источник света, вам нужны динамические тени, или если вам нужно перемещать освещение (как в случае с автомобильными фарами), вы можете использовать <a href="https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-LightingShading/files/GUID-3B4D131E-D001-4415-8BF9-250612C3A81D-htm.html" target="_blank">источники прямого света</a>.
+    </p>
+
+    <p>
+      Verge3D поддерживает следующие типы освещения: 
+    </p>
+
+    <ul>
+      <li><strong>Ambient Lights</strong> - поддерживаются свойства <strong>Color</strong> и <strong>Power</strong>.</li>
+      <li><strong>Directional Lights</strong> - поддерживаются свойства <strong>Color</strong> и <strong>Intensity</strong>.</li>
+      <li><strong>Point Lights</strong> - поддерживаются свойства <strong>Color</strong>, <strong>Intensity</strong> и <strong>Decay Rate</strong>.</li>
+      <li><strong>Spot Lights</strong> - поддерживаются свойства <strong>Color</strong>,, <strong>Intensity</strong>, <strong>Decay Rate</strong>, <strong>Cone Angle</strong> и <strong>Penumbra Angle</strong> .</li>
+      <li><strong>Area Lights</strong> — поддерживаются свойства <strong>Color</strong>, <strong>Intensity</strong>. Масштабирование трансформации света управляет областью излучения.</li>
+    </ul>
+
+    <p>
+      Кроме того, вы можете назначить свойства Depth Map Shadow Attributes для источников освещения типа directional, point, или spot. Смотрите <a href="manual/ru/maya/Shadows.html">здесь</a> для получения дополнительной информации
+    </p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>Световые зонды</h2>
+
+    <p>
+      Аддон Verge3D добавляет настраеваемый объект светового зонда под названием <strong>v3dReflectionCubemap</strong>, который можно использовать для применения непрямого освещения к объектам с помощью локальной карты отражения.<br><br>
+
+      Новый объект светового зонда можно найти внутри специальной панели <strong>Verge3D</strong>:
+    </p>
+
+    <img src="files/lighting-maya/light-probe-reflection-cubemap-create.png" class="centered" style="max-width: 500px">
+
+    <p>
+      Этот объект определяет область влияния, представленную кубом или сферой.
+      Все объекты, находящиеся внутри этой области, будут использовать локальное отражение, сгенерированное во время выполнения, вместо глобальной текстуры/цвета окружения сцены.<br><br>
+
+      Преимущество использования локальной карты отражения заключается в том, что окружающие объекты запечены в неё, в то время как глобальная карта сцены содержит только
+      текстуру/цвет фона, который может быть задан через объект
+      <a href="manual/ru/maya/Lighting-and-Rendering.html#environment_lighting">aiSkyDomeLight</a> . Локальные карты отражения также имеют эффект параллакса в зависимости от настроек геометрии  <a href="manual/ru/maya/Lighting-and-Rendering.html#influence_volume">influence</a>
+      или <a href="manual/ru/maya/Lighting-and-Rendering.html#parallax_volume">parallax</a> .
+    </p>
+
+    <img src="files/lighting-maya/light-probe-reflection-cubemap-effect.png" class="centered" style="max-width: 1005px">
+    <span class="img-caption">
+      Слева - отражающий объект во вьюпорте Maya, справа - эффект, который он добавляет
+      к отражающему материалу в Verge3D.
+    </span>
+
+    <p>
+      v3dReflectionCubemap объекты имеют следующие параметры:
+    </p>
+
+    <img src="files/lighting-maya/light-probe-reflection-cubemap-params.png" class="centered" style="max-width: 481px">
+
+    <dl>
+      <dt>Общие настройки</dt>
+      <dd>
+        общие настройки светового зонда:
+
+        <dl>
+          <dt id="influence_volume">Influence Type</dt>
+          <dd>
+            тип области влияния: <strong>Sphere</strong> или <strong>Box</strong>. Только объекты
+            расположенные внутри этой области, подвергаются воздействию зонда освещения.
+            По умолчанию используется <strong>Sphere</strong>.
+          </dd>
+
+          <dt>Influence Distance</dt>
+          <dd>
+            размер области влияния. Можно также изменить масштабирование объекта
+            и сделать форму области влияния неоднородной. По умолчанию
+            1.0.
+          </dd>
+
+          <dt>Intensity</dt>
+          <dd>
+            интенсивность непрямого освещения. Любое значение, отличное от 1,0
+            не является физически корректным. По умолчанию - 1,0.
+          </dd>
+
+          <dt>Clipping Start</dt>
+          <dd>
+            расстояние до отсечения. Объекты, расположенные ближе, чем это значение, не будут отображаться в карте отражения. По умолчанию 0,1.
+          </dd>
+
+          <dt>Clipping End</dt>
+          <dd>
+            дальнее расстояние отсечения. Объекты, расположенные дальше этого значения не будут отображаться в карте отражения. По умолчанию 100.0.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Настройки видимости</dt>
+      <dd>
+        настройки видимости объекта:
+
+        <dl>
+          <dt>Selection Set</dt>
+          <dd>
+            ограничить объекты, которые должны появиться на кубокарте отражения, только теми, которые принадлежат данному набору. Выберите опцию пустой строки, чтобы не указывать никакого набора объектов - в этом случае все объекты сцены будут использованы для создания кубической карты отражения. По умолчанию используется пустая строка.
+          </dd>
+
+          <dt>Invert Visibility</dt>
+          <dd>
+            инвертировать выбор объектов, видимых данным световым зондом, если задан <strong>Selection Set</strong>. По умолчанию отключено. 
+          </dd>
+        </dl>
+      </dd>
+
+      <dt id="parallax_volume">Custom Parallax</dt>
+      <dd>
+        настройки параллакса:
+
+        <dl>
+          <dt>Use Custom Parallax</dt>
+          <dd>
+            включить пользовательские настройки для коррекции параллакса. Эта группа
+            настроек определяет область параллакса, который используется для проецирования
+            освещения, полученного датчиком. Если функция <strong>Custom Parallax</strong> не включена
+            эффект параллакса рассчитывается на основе <strong>Influence Type</strong> и
+            <strong>Influence Distance</strong>. По умолчанию отключено.
+          </dd>
+
+          <dt>Parallax Type</dt>
+          <dd>
+            тип области параллакса: <strong>Sphere</strong> или <strong>Box</strong>. По умолчанию это <strong>Sphere</strong>
+          </dd>
+
+          <dt>Parallax Distance</dt>
+          <dd>
+            размер области параллакса. По умолчанию это 1.0.
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#background" id="background" class="permalink">#</a></p>
+
+    <h2>Фон</h2>
+
+    <p>
+      По умолчанию Verge3D отображает тот же фон, который вы видите во вьюпорте Maya (серый в большинстве случаев). При использовании освещения на основе изображения (обеспечиваемого объектами <strong>aiSkyDomeLight</strong>) вместо него отображается текстура окружения.
+    </p>
+
+
+    <p>
+      Чтобы изменить фон на другой цвет, не редактируйте настройки Viewport в Maya, просто назначьте <strong>Background Color</strong> и включите атрибут <strong>Render Background</strong> на основной камере:
+    </p>
+
+    <img src="files/lighting-maya/render-background.jpg" class="centered" style="max-width: 443px">
+
+    <p class="note">
+      Вы можете использовать окно <strong>Render View</strong> в Maya или функцию <strong>Sneak Peek</strong> в Verge3D для предварительного просмотра сцены с пользовательским фоном.
+    </p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#global_rendering_settings" id="global_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Глобальные настройки рендеринга</h2>
+
+    <p>Глобальные настройки рендеринга, доступные из диалогового окна <strong>Verge3D Export Settings</strong>. (<strong>Verge3D-&gt;Export Settings...</strong> в меню Maya).</p>
+
+    <img src="files/lighting-maya/rendering-settings-global.jpg" class="centered" style="max-width: 412px">
+
+    <p><strong>Anti-Aliasing</strong> - выбрать, какой алгоритм сглаживания использовать для сцены:</p>
+
+    <ul>
+      <li><strong>Auto</strong> - использовать системный метод по умолчанию.</li>
+      <li><strong>MSAA 4x</strong> - использовать мультисэмпловое сглаживание с 4x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>MSAA 8x</strong> - использовать мультисэмпловое сглаживание с 8x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>MSAA 16x</strong> - использовать мультисэмпловое сглаживание с 16x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>FXAA</strong> - использовать FXAA.</li>
+      <li><strong>None</strong> - отключить сглаживание.</li>
+    </ul>
+
+    <p><strong>Use HDR Rendering</strong> - включить рендеринг с высоким динамическим диапазоном.</p>
+
+    <p><strong>IBL Environment Mode</strong></p>
+
+    <ul>
+      <li><strong>PMREM (slow)</strong> - высокое качество (по умолчанию).</li>
+      <li><strong>Light Probe + Cubemap (medium)</strong> - снижение качества зеркальных отражений на основе изображений, лучшая производительность.</li>
+      <li><strong>Light Probe (fast)</strong> - отключение зеркальных отражений на основе изображений, высочайшая производительность.</li>
+    </ul>
+
+    <p><strong>Outlining Effect</strong> - смотрите ниже.</p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>Контурный рендеринг</h2>
+
+    <p>
+      Рендеринг контура (он же рендеринг края силуэта) - это распространенная техника нефотореалистичного рендеринга (NPR), которая может значительно улучшить визуальное восприятие вашей сцены. Этот эффект можно использовать в различных приложениях, таких как электронное обучение, игры, архитектурная визуализация и техническое рисование.
+    </p>
+
+    <p>
+      Чтобы использовать обводку объекта (и дополнительное свечение) в приложении Verge3D, сначала включите эффект на панели <strong>Render Properties</strong>, затем используйте пазл <a href="manual/ru/puzzles/Objects.html#outline">outline</a>, чтобы применить его к объекту (объектам).
+    </p>
+
+    <p class="note">
+      Контурный рендеринг не работает в AR/VR. Для выделения объектов используйте другие методы выделения объектов, например анимацию или изменение цвета материала.
+    </p>
+
+    <img src="files/lighting-blender/outline-example.jpg" class="centered" style="max-width: 819px">
+
+    <p>Вы можете настроить контур с помощью следующих параметров:</p>
+
+    <p><strong>Enabled</strong> — включить/выключить эффект.</p>
+
+    <p><strong>Edge Strength</strong> — фактор силы контура.</p>
+
+    <p><strong>Edge Glow</strong> — интенсивность дополнительного свечения (отрисовывается за пределами основного края контура).</p>
+
+    <p><strong>Edge Thickness</strong> — коэффициент толщины края контура.</p>
+
+    <p><strong>Pulse Period</strong> — период импульса в секундах. Задайте, чтобы сделать эффект анимированным.</p>
+
+    <p><strong>Visible Edge Color</strong> — цвет видимого края.</p>
+
+    <p><strong>Hidden Edge Color</strong> — цвет края контура, отображаемого за любыми другими объектами сцены.</p>
+
+    <p><strong>Render Hidden Edge</strong> — включить/выключить отрисовку края контура за другими объектами сцены.</p>
+
+    <p class="note">Хотя есть возможность визуализировать светящиеся объекты, в большинстве случаев контурный рендеринг используется для улучшения повышения чёткости сцены. Если вам нужно свечение от ламп или других ярких объектов, подумайте об использовании постобработки <a href="manual/ru/puzzles/Postprocessing.html#bloom">bloom</a>вместо этого.</p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#per_object_rendering_settings" id="per_object_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Настройки рендеринга для каждого объекта</h2>
+
+    <p>
+      Verge3D поддерживает следующие дополнительные настройки рендеринга геометрических объектов:
+    </p>
+
+    <img src="files/lighting-maya/rendering-settings.jpg" class="centered" style="max-width: 454px">
+
+    <p>
+      <strong>Render Order</strong> - изменяет порядок рендеринга для конкретного объекта. Чем меньше индекс, тем раньше будет отрисован объект. В большинстве случаев это значение необходимо подстроить при использовании прозрачности Blend для устранения артефактов прозрачности. 
+    </p>
+
+    <p>
+      <strong>Frustum Culling</strong> - включает/выключает оптимизацию фруструм кулинга. Снимите этот флажок, если у вас есть какой-либо обтекаемый объект, который может выходить за пределы экранного пространства, чтобы предотвратить его обтекание.
+    </p>
+
+
+    <p><a href="manual/ru/maya/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>Clipping Planes(Секущие Плоскости)</h2>
+
+    <p>
+      Секущие плоскости (они же плоскости сечений) - это способ, используемый для отображения внутреннего устройства сложных объектов, таких как здания, автомобили, приборы, гаджеты, машины и т.д.
+    </p>
+
+    <img src="files/lighting-maya/clipping-plane-example.jpg" class="centered">
+
+    <p>
+      Чтобы добавить новую плоскость, используйте кнопку <strong>Verge3D -&gt; Add a v3dClippingPlane object</strong> расположенную на панели инструментов Maya:
+    </p>
+
+    <img src="files/lighting-maya/clipping-plane-new.jpg" class="centered">
+
+    <p>
+      Объекты на сцене будут обрезаны в отрицательном направлении оси <strong>Y</strong> плоскости сечения.
+    </p>
+
+    <p>
+      Плоскости сечения имеют следующие параметры:
+    </p>
+
+    <dl>
+      <dt>Affected Objects</dt>
+      <dd>
+        Коллекция объектов, с которыми будет взаимодействовать секущая плоскость. Если коллекция не назначена, все объекты сцены будут обрезаны. 
+      </dd>
+      <dt>Negated</dt>
+      <dd>
+        Поменять местами обрезанную и необрезанную стороны.
+      </dd>
+      <dt>Clip Shadows</dt>
+      <dd>
+        Обрезать тени, отбрасываемые обрезанными объектами.
+      </dd>
+      <dt>Union Planes</dt>
+      <dd>
+        Построить объединение из всех плоскостей сечения, воздействуя на объект, а не на их пересечение. 
+      </dd>
+      <dt>Cross-Section</dt>
+      <dd>
+        Заполнить отверстие образованное секущей плоскостью в затронутых объектах. 
+      </dd>
+      <dt>Cross-Section Color</dt>
+      <dd>
+        Цвет и прозрачность поперечного сечения.
+      </dd>
+      <dt>Cross-Section Size</dt>
+      <dd>
+        Размер плоскости сечения. Увеличьте это значение, если вы используете сцену большего размера.
+      </dd>
+    </dl>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

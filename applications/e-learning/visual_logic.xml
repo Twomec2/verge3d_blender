@@ -1,0 +1,577 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="289" scrolly="359" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="235.37373511089135" scrolly="959.7355120785883" scale="0.7045859657155426">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="K5ar^Hf8Up=nyMmt4*(/" type="">current step</variable>
+      <variable id="mP@A*opac![VQezB[V!!" type="">FROM</variable>
+      <variable id="P1W!`*Naew=lMSwH-=]x" type="">TO</variable>
+      <variable id="*f|$3wEXs#};V$3Rm_QX" type="">MSG</variable>
+      <variable id="x0ciC3lY+R}OUtSG},tS" type="">HIGHLIGHT</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="ms-tfKW}^$o[Xx~~h.xu" x="-230" y="-1150">
+      <field name="VAR" id="K5ar^Hf8Up=nyMmt4*(/">current step</field>
+      <value name="VALUE">
+        <block type="math_number" id="dn*wz|_paJ(f@Tz0nD6?">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="YU8t!/@R~JW~P{^*zF~p" x="-230" y="-1110">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="UM8om.!N|%Xf1=W/FI-,">
+          <field name="FIELDNAME">startup_example</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="hide" id="4U#HC1$b7[2;EL~Dp*tW">
+          <value name="VALUE">
+            <block type="objectList" id="~K-$9thR8-,!P23!Q7UH">
+              <field name="FIELDNAME">startup_example</field>
+            </block>
+          </value>
+          <next>
+            <block type="hide" id="^2}^Z_GdedxiJ]-e`wa3">
+              <value name="VALUE">
+                <block type="objectList" id="dGLDQ(.1sA3FM|4/n]Hn">
+                  <field name="FIELDNAME">textbox_top</field>
+                </block>
+              </value>
+              <next>
+                <block type="hide" id="i7VCN[MS*0yU~[7,a({b">
+                  <value name="VALUE">
+                    <block type="objectList" id="8(H_9h@U~]eH:gA({*2:">
+                      <field name="FIELDNAME">Text_caption1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="hide" id="[R*tet0.FvQ8q3M+Rn,Z">
+                      <value name="VALUE">
+                        <block type="objectList" id="U3)v])uKfDq}Hyu..aAN">
+                          <field name="FIELDNAME">Text_caption2</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="show" id="{xyWdIV_HGv9k`(cg9oL">
+                          <value name="VALUE">
+                            <block type="groupList" id="%H7qRA}x0qP`gUm-[`)_">
+                              <field name="FIELDNAME">all parts</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" id="=.n~DEd8K%k@w7|8,^CO">
+                              <mutation name="STEP">
+                                <arg name="FROM"/>
+                                <arg name="TO"/>
+                                <arg name="MSG"/>
+                                <arg name="HIGHLIGHT"/>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="math_number" id="+aD7`[}9.=`[r7F;*@y;">
+                                  <field name="NUM">0</field>
+                                </block>
+                              </value>
+                              <value name="ARG1">
+                                <block type="math_number" id="SF9M)5KB.{nsGvTQ=~Oa">
+                                  <field name="NUM">5</field>
+                                </block>
+                              </value>
+                              <value name="ARG2">
+                                <block type="text" id="sGLWQO%_UH.ghC.aM-#{">
+                                  <field name="TEXT">Step 1: Unfold the carton and square it off.</field>
+                                </block>
+                              </value>
+                              <value name="ARG3">
+                                <block type="groupList" id="][_m9*9sd,Rbb1`R@}2*">
+                                  <field name="FIELDNAME">all parts</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="Tm|s+|9x63HQc{uT,XP," x="-230" y="-790">
+      <mutation>
+        <arg name="FROM" varid="mP@A*opac![VQezB[V!!"/>
+        <arg name="TO" varid="P1W!`*Naew=lMSwH-=]x"/>
+        <arg name="MSG" varid="*f|$3wEXs#};V$3Rm_QX"/>
+        <arg name="HIGHLIGHT" varid="x0ciC3lY+R}OUtSG},tS"/>
+      </mutation>
+      <field name="NAME">STEP</field>
+      <comment pinned="false" h="80" w="160">This procedure proceeds between learning steps from-&gt;to.</comment>
+      <statement name="STACK">
+        <block type="controls_if" id="gX{{?to(E-#~|bC}~3;[">
+          <value name="IF0">
+            <block type="logic_compare" id="?h`7K)6V1;fQIC`*W+Wd">
+              <field name="OP">EQ</field>
+              <value name="A">
+                <block type="variables_get" id="HzNEr~l~SUJGCSx]4j8m">
+                  <field name="VAR" id="K5ar^Hf8Up=nyMmt4*(/">current step</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="variables_get" id="fR]Tm7ma)wZjLZ55joeH">
+                  <field name="VAR" id="mP@A*opac![VQezB[V!!">FROM</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="stopAnimation" id="g$/z#jd|q.FkiCqTm1:a">
+              <value name="VALUE">
+                <block type="getAnimations" id="!{U6dRjl_b?7X1#jGGOF">
+                  <value name="OBJECTINPUT">
+                    <block type="groupList" id="j9+,hDBR?A[~ItTu$(I6">
+                      <field name="FIELDNAME">all parts</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="outline" id="ZzHFZC,s_wmJE9U)nAH*">
+                  <field name="DO_WHAT">DISABLE</field>
+                  <value name="TARGET">
+                    <block type="groupList" id="Ee/`QquvYdz%)Q0,hn5a">
+                      <field name="FIELDNAME">all parts</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="playAnimationExt" id="NS99@(H$pQ9(-*moQT?m">
+                      <field name="REVERSED">FALSE</field>
+                      <value name="VALUE">
+                        <block type="animationList" id="Y7ts;(11S`D%?z^gUil#">
+                          <field name="FIELDNAME">Armature</field>
+                        </block>
+                      </value>
+                      <value name="FROM">
+                        <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="C6uat.mpN`~gFbZuh`r6">
+                          <field name="NUM">0</field>
+                        </shadow>
+                        <block type="variables_get" id="},I77rewnm-8yu[[)O4c">
+                          <field name="VAR" id="mP@A*opac![VQezB[V!!">FROM</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="uFN9gf_[zc4Z+%@oV7+*">
+                          <field name="NUM">1000</field>
+                        </shadow>
+                        <block type="variables_get" id="5,hpV:/hX#a7pg=n/x$T">
+                          <field name="VAR" id="P1W!`*Naew=lMSwH-=]x">TO</field>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="updateTextObject" id=")tcsGjmV~160f89tH6^+">
+                          <value name="VALUE1">
+                            <block type="objectList" id="YvqBBI,KDS5o+[=SiP6=">
+                              <field name="FIELDNAME">Text</field>
+                            </block>
+                          </value>
+                          <value name="VALUE2">
+                            <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="Q.*ZT)^p}*cRi/N7Re?:">
+                              <field name="TEXT">Verge3D</field>
+                            </shadow>
+                            <block type="variables_get" id="tzDr^r7fM/3/Y]TANBbm">
+                              <field name="VAR" id="*f|$3wEXs#};V$3Rm_QX">MSG</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="playAnimation" id="9+L$nP;Ad[_4ZfxMa@u]">
+                              <field name="LOOP">AUTO</field>
+                              <value name="VALUE">
+                                <block type="getAnimations" id="8ukpth.:PstR~UA,NWv%">
+                                  <value name="OBJECTINPUT">
+                                    <block type="variables_get" id="HSScvu]g=vNTSZ{KprEl">
+                                      <field name="VAR" id="x0ciC3lY+R}OUtSG},tS">HIGHLIGHT</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="outline" id=";f,AMxBEmu?5;U%Wg{1g">
+                                  <field name="DO_WHAT">ENABLE</field>
+                                  <value name="TARGET">
+                                    <block type="variables_get" id="~Q+/rbX3e?R^f$8]v2!;">
+                                      <field name="VAR" id="x0ciC3lY+R}OUtSG},tS">HIGHLIGHT</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set" id="j)qyTawvd+gxs0)Y?YN,">
+                                      <field name="VAR" id="K5ar^Hf8Up=nyMmt4*(/">current step</field>
+                                      <value name="VALUE">
+                                        <block type="variables_get" id="}(U=kKu4?3vHe]PtFge/">
+                                          <field name="VAR" id="P1W!`*Naew=lMSwH-=]x">TO</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="Meq{6x{N|BsqebA.nANl" x="-230" y="-470">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="rr=|`#=?~,Zx*O=qRNL;">
+          <field name="FIELDNAME">all parts</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="|J^6{k)%fVvzJCtrBlyj">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="v3~H!8#P8ha^FEW$3Iu8">
+              <field name="NUM">5</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="WdYU`kV}326^SIuFCK{t">
+              <field name="NUM">40</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="GNqL(:N6b1xfrVfSZ~O3">
+              <field name="TEXT">Step 2: Fold top flaps and turn the carton upside down.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="%V13+EPHA)e{KK.6aWZ5">
+              <field name="FIELDNAME">top flaps</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="~kRt2gH(RQC=SrzP{YG!" x="-230" y="-290">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="}6z891sWo8wf4L=EgoIs">
+          <field name="FIELDNAME">top flaps</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="v(Sj~V1r@P]l!9{(q`4$">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="mJ@2qb?^*QT1!`@PK//{">
+              <field name="NUM">40</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="ZSxV8,XgUT_fIX?_USM~">
+              <field name="NUM">140</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="DvLjIXz;w|7]bm2lF}@n">
+              <field name="TEXT">Step 3: Fold bottom flap down into inside of carton.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="objectList" id="8PpZ7K*?cCnDLvTwsN]`">
+              <field name="FIELDNAME">bottom opposite</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="u3y7Ji+rnRs$H/#4ehaM" x="-230" y="-110">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="p;/n2G9}1B#|7mbn9a:E">
+          <field name="FIELDNAME">bottom opposite</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="lYmVxZ]LbN~f(!x(@4FX">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="e0x]hl7J]09g-OR(?LLv">
+              <field name="NUM">140</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="5QmdCu#)`h%f4.dLW#}7">
+              <field name="NUM">160</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id=",sfI5p*t]Y$6$WI7Fdh)">
+              <field name="TEXT">Step 4: Fold side flaps to fold everything over flush with bottom of the carton.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="ax,HRg4[|7x#=rIlDbt]">
+              <field name="FIELDNAME">bottom side flaps</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="6r!D9nlM0(jhY5/8C7oP" x="-230" y="70">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="^dj+_a!M^+uH/_4Wnb.w">
+          <field name="FIELDNAME">bottom side flaps</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="P!q8k(VuRMvd1Gj@^$KG">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="_=ZR[G+ZP%KL*ITi;k_x">
+              <field name="NUM">160</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="7WqiOBjr}Sd`C.m712r3">
+              <field name="NUM">220</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="2ZPGNS!MDX)5b)/TRKNg">
+              <field name="TEXT">Step 5: Turn carton right side up and lay flat on bottom.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="Ni{vYK#0e1r%hB^u#/g5">
+              <field name="FIELDNAME">all parts</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="fY]WZ]I(J5$nU=Zd)8)e" x="-230" y="250">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="d*.f5Re@QeRN|+J9v{s?">
+          <field name="FIELDNAME">all parts</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="%e%?rW,TkS+:qQ8X=lOI">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="i4OgxxMo.oUrmP3+)wD~">
+              <field name="NUM">220</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="y0?+/Ua3xQFBLadnK_$M">
+              <field name="NUM">280</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="tWfTC!NRoirtdleds-Py">
+              <field name="TEXT">Step 6: After carton is turned right-side-up, fold both flaps up and against side of carton.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="LZ@~%7-a1rTwGHBf6qWj">
+              <field name="FIELDNAME">bottom flaps</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="vER]X(W9kc6#VDPWZWFF" x="-230" y="430">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="$h#z=J@~XSGy[/)2PZ[@">
+          <field name="FIELDNAME">bottom flaps</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="zY@%,ecYuByu5x0op32)">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="C-UtH|m)9huo!Jhq7}*,">
+              <field name="NUM">280</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="nI2.rf-2==|L3{DEU*w]">
+              <field name="NUM">320</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="Zso4p9iY+ga/_rjOFKhS">
+              <field name="TEXT">Step 7: Fold bottom flap and then both side flaps down.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="#?8}]c-G78.]z6wOXGsF">
+              <field name="FIELDNAME">bottom top flaps</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="1o1sVAk3$5ys=T+qb?$U" x="-230" y="610">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="?PRHfNf~3STiYH@Iq+uU">
+          <field name="FIELDNAME">bottom top flaps</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="%ZESZ5_}[zS_iZIT#IN0">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="|SDJz#Xevy^q)IEcT5?l">
+              <field name="NUM">320</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="uG,Zeko@U]RNC9NsAw*y">
+              <field name="NUM">360</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="%ClOSoh=9ci7[;LEfgZP">
+              <field name="TEXT">Step 8: Push hand holes on both sides of carton inward to lock through hand holes.</field>
+            </block>
+          </value>
+          <value name="ARG3">
+            <block type="groupList" id="d}]l[n)mo2bF|Uc,$buM">
+              <field name="FIELDNAME">handles</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="N++mQgfMt#z+58yMs21h" x="-230" y="790">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="groupList" id="hvL|oj.sR*1XWG3RGP}G">
+          <field name="FIELDNAME">handles</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="wW@v2[Sby4ryjJ0?{,%l">
+          <mutation name="STEP">
+            <arg name="FROM"/>
+            <arg name="TO"/>
+            <arg name="MSG"/>
+            <arg name="HIGHLIGHT"/>
+          </mutation>
+          <value name="ARG0">
+            <block type="math_number" id="]{ghk$b=SU~.XC;+d.VZ">
+              <field name="NUM">360</field>
+            </block>
+          </value>
+          <value name="ARG1">
+            <block type="math_number" id="gh-Wu:tepu,}#8yZ:m[*">
+              <field name="NUM">380</field>
+            </block>
+          </value>
+          <value name="ARG2">
+            <block type="text" id="XFB!~g@^=vWa:5MQy?x+">
+              <field name="TEXT">Your box is ready!</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="846" viewport-y="28" viewport-w="576" viewport-h="385" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

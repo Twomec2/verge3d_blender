@@ -1,0 +1,580 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>用于3ds Max的Verge3D：材质和贴图参考 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="有关Verge3D支持的3ds Max材质编辑器功能的信息。">
+  <meta content="https://cdn.soft8soft.com/images/materials_maps_max.jpg" property="og:image">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/max/Materials-Maps-Reference.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="用于3ds Max的Verge3D：材质和贴图参考 - Soft8Soft">
+            <meta property="og:description" content="有关Verge3D支持的3ds Max材质编辑器功能的信息。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/materials_maps_max.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/max/Materials-Maps-Reference.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="用于3ds Max的Verge3D：材质和贴图参考 - Soft8Soft">
+            <meta name="twitter:description" content="有关Verge3D支持的3ds Max材质编辑器功能的信息。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/materials_maps_max.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/physical-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/physical-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/standard-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/standard-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/blend-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/blend-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/multi-sub-object-material.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/multi-sub-object-material-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/bitmap-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/bitmap-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/normal-bump-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/normal-bump-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/gradient-ramp-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/gradient-ramp-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-correction-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-correction-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/composite-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/composite-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/mix-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/mix-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/color-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/vertex-color-map.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/vertex-color-map-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-additional-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-animation-keys.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/materials-maps-reference-max/controllers-example-animation-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+
+    <h1>材质和贴图参考 / 3ds Max</h1>
+
+    <p>在某种程度上，Verge3D支持3ds Max的材质编辑器提供的几乎所有材质和贴图。但对于大多数基于 Web 的实时图形任务，只使用其中的一组就足够了。下面我们只列出了Verge3D演示中使用的材质和贴图。</p>
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/max/Materials-Maps-Reference.html#conventions">约定</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Materials_Reference">材质 | Materials</a><ul><li><a href="manual/zh/max/Materials-Maps-Reference.html#Physical">物理</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Standard">标准</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Blend">混合</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Multi_Sub_Object">多维/子对象</a></li></ul></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Maps">贴图</a><ul><li><a href="manual/zh/max/Materials-Maps-Reference.html#Bitmap">位图</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Normal_Bump">法线凹凸</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Gradient_Ramp">渐变坡度</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Color_Correction">颜色校正(Color Correction)</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Composite">合成</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Mix">混合(Mix)</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Color_Map">颜色贴图</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Vertex_Color">顶点颜色(Vertex Color)</a></li></ul></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Controllers">控制器</a><ul><li><a href="manual/zh/max/Materials-Maps-Reference.html#Introduction">简介</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Setting_Up_Use_With_Puzzles">设置，与拼图一起使用</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#Animation_Controllers">动画</a></li></ul></li><li><a href="manual/zh/max/Materials-Maps-Reference.html#performance_considerations">性能考虑因素</a><ul><li><a href="manual/zh/max/Materials-Maps-Reference.html#principled_bsdf_performance">物理材质性能</a></li></ul></li></ul><!-- /TOC -->
+    
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#conventions" id="conventions" class="permalink">#</a></p>
+
+    <h2>约定</h2>
+
+    <p>Verge3D支持的输入用绿色复选标记，而不支持的输入用红色标记。Verge3D支持的参数以绿色覆盖。位于<strong>Verge3D Material Params</strong>面板上的设置没有被覆盖，因为它们都应该是有效的。</p>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Materials_Reference" id="Materials_Reference" class="permalink">#</a></p>
+
+    <h2>材质 | Materials</h2>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Physical" id="Physical" class="permalink">#</a></p>
+
+    <h3>物理</h3>
+
+    <p><b>物理</b>材质是Verge3D中为模型表面进行视觉表现的强大工具。它们通常需要设置一个环境贴图（包含在默认的立方体场景中）。<b>物理</b>材质可以在3ds Max视口的ART渲染器上快速查看，或在Verge3D中使用<strong>Sneak Peek</strong>菜单选项进行预览。</p>
+    
+    <img src="files/materials-maps-reference-max/physical-material.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>在大多数Verge3D演示中都使用了<b>物理</b>材质，如电动车(Scooter)、工业机器人(Industrial Robot)、加载与卸载(Load Unload)等。</p>
+    
+    <img src="files/materials-maps-reference-max/physical-material-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>物理</b>材质的更多信息：<a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-809B9123-21A2-443E-A7A4-0DAB70410B8D" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Standard" id="Standard" class="permalink">#</a></p>
+
+    <h3>标准</h3>
+
+    <p><b>标准</b>材质比<b>物理</b>更简单，可在实时渲染中提供更好的性能。它们通常需要设置一些灯光，虽然由于3ds Max会自动提供光源（在Verge3D会复现），它们可以在没有任何灯光的场景中工作。<b>标准</b>材质可以在3ds Max视口的Scanline渲染器上快速预览，或者在Verge3D中使用*Sneak
+      Peek*菜单选项预览。</p>
+    
+    <img src="files/materials-maps-reference-max/standard-material.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>例如，在Verge3D的增强现实演示和农民之旅游戏中，所有资产都使用了<b>标准</b>材质。</p>
+    
+    <img src="files/materials-maps-reference-max/standard-material-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>标准</b>材质的更多信息：<a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-78973040-1D59-491E-8440-30B786641AD0" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Blend" id="Blend" class="permalink">#</a></p>
+
+    <h3>混合</h3>
+
+    <p>这个组件使用一个遮罩或一个因子来混合两种材质。</p>
+    
+    <img src="files/materials-maps-reference-max/blend-material.jpg" class="centered" style="max-width: 1000px">
+    
+    <p><b>混合</b>通常用于将烘焙过的环境光遮蔽贴图混合到材质中，以消除阴影表面的任何照明。</p>
+    
+    <img src="files/materials-maps-reference-max/blend-material-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>混合</b>材质的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-D2B59023-7D53-4E86-804F-7A037E787055" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Multi_Sub_Object" id="Multi_Sub_Object" class="permalink">#</a></p>
+
+    <h3>多维/子对象</h3>
+
+    <p>该组件用于为同一对象的不同部分分配多种材质。</p>
+    
+    <img src="files/materials-maps-reference-max/multi-sub-object-material.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>在下面的例子中，两个<b>物理</b>材质，漆钢和拉丝铬，被分配到同一个车轮对象的不同地方。</p>
+    
+    <img src="files/materials-maps-reference-max/multi-sub-object-material-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>多维/子对象</b>材质的更多信息：<a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-D968CDD9-4C5D-489D-A311-ED7486FCD4AA" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Maps" id="Maps" class="permalink">#</a></p>
+
+    <h2>贴图</h2>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Bitmap" id="Bitmap" class="permalink">#</a></p>
+
+    <h3>位图</h3>
+
+    <p>此贴图指定了一个图像作为材质中的纹理。</p>
+    
+    <img src="files/materials-maps-reference-max/bitmap-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>下面是一个使用示例。</p>
+    
+    <img src="files/materials-maps-reference-max/bitmap-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>位图</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-A1654CD2-2A7C-42A6-816D-28F7A849F96F" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Normal_Bump" id="Normal_Bump" class="permalink">#</a></p>
+
+    <h3>法线凹凸</h3>
+
+    <p>该贴图为材质提供法线纹理。</p>
+    
+    <img src="files/materials-maps-reference-max/normal-bump-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>下面是一个使用示例。</p>
+    
+    <img src="files/materials-maps-reference-max/normal-bump-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>法线凹凸</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-BFFFC7F4-8B39-435C-9015-A38245A3250B" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Gradient_Ramp" id="Gradient_Ramp" class="permalink">#</a></p>
+
+    <h3>渐变坡度</h3>
+
+    <p>这个贴图可以创建各种类型的渐变。</p>
+    
+    <img src="files/materials-maps-reference-max/gradient-ramp-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>在下面的简化例子中，<b>渐变坡度</b>被用于覆盖背景模型。</p>
+    
+    <img src="files/materials-maps-reference-max/gradient-ramp-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>渐变坡度</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-08436626-73A4-4246-BD26-1F151C141B0E" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Color_Correction" id="Color_Correction" class="permalink">#</a></p>
+
+    <h3>颜色校正(Color Correction)</h3>
+
+    <p>该贴图修改了输入贴图的颜色。</p>
+    
+    <img src="files/materials-maps-reference-max/color-correction-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p><b>颜色校正</b>可用于检索打包在单个纹理（又称ORM纹理）的R、G、B通道中的遮挡、粗糙度和金属度组件，或用于检索打包在单个纹理中的任何其他掩码，以优化内存和文件大小。</p>
+    
+    <img src="files/materials-maps-reference-max/color-correction-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<strong>Color Correction</strong>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-77E1EA94-76CA-4A66-AD3E-27AED8FB7A8A" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Composite" id="Composite" class="permalink">#</a></p>
+
+    <h3>合成</h3>
+
+    <p>该贴图将输入贴图叠加在一起。</p>
+    
+    <img src="files/materials-maps-reference-max/composite-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>在下面的简化例子中，<b>合成</b>用于通过乘法将局部闭塞图与整个物体闭塞图结合起来。</p>
+    
+    <img src="files/materials-maps-reference-max/composite-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>合成</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-850CFCCD-2DF9-4FC9-85F7-9A92AE0C0297" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Mix" id="Mix" class="permalink">#</a></p>
+
+    <h3>混合(Mix)</h3>
+
+    <p>该贴图使用混合系数将2个输入贴图或颜色结合起来。</p>
+    
+    <img src="files/materials-maps-reference-max/mix-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>例如，<b>混合</b>可用于为材质添加蒙版的颜色，或在动画过渡中交换材质选项。</p>
+    
+    <img src="files/materials-maps-reference-max/mix-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>混合</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-824EF321-B018-45DF-954A-93BDD0A6A696" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Color_Map" id="Color_Map" class="permalink">#</a></p>
+
+    <h3>颜色贴图</h3>
+
+    <p>该贴图提供纯色或经过伽马校正的位图。</p>
+    
+    <img src="files/materials-maps-reference-max/color-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>当您需要在多个地方提供相同的颜色以保证一致性时，<b>颜色贴图</b>更适合使用。在下面的例子中，<b>颜色贴图</b>被用作蒙版的<b>基础颜色</b>和作为材质的<b>发射颜色</b>输入。</p>
+    
+    <img src="files/materials-maps-reference-max/color-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>颜色贴图</b>的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-51AF0DA9-A591-41CB-BABE-B6105816E13F" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Vertex_Color" id="Vertex_Color" class="permalink">#</a></p>
+
+    <h3>顶点颜色(Vertex Color)</h3>
+
+    <p>这个贴图提供了顶点着色，以便在材质中使用。</p>
+    
+    <img src="files/materials-maps-reference-max/vertex-color-map.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>下面是一个使用示例。</p>
+    
+    <img src="files/materials-maps-reference-max/vertex-color-map-example.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>顶点颜色</b>贴图的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-2701B80A-9335-4E45-859F-11D5EC1CB76B" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Controllers" id="Controllers" class="permalink">#</a></p>
+
+    <h2>控制器</h2>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Introduction" id="Introduction" class="permalink">#</a></p>
+
+    <h3>简介</h3>
+
+    <p><b>控制器</b>在3ds Max中用于提供动画输入，这些输入可以被Verge3D作为动画接收。除此之外，Verge3D还可以通过拼图（<a href="manual/en/puzzles/Materials.html#materials_set_color">设置颜色(set color)</a> 或 <a href="manual/en/puzzles/Materials.html#materials_set_value">设置值(set value)</a>）或JavaScript来修改一个<b>控制器</b>的值。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>选择使用哪个<b>控制器</b>取决于是否可以将其与所需的输入连接起来。通常，您可以用<b>RGB/RGBA/Point3/Point4控制器</b>来表示颜色，用<b>浮点型控制器</b>表示数值。</p>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Setting_Up_Use_With_Puzzles" id="Setting_Up_Use_With_Puzzles" class="permalink">#</a></p>
+
+    <h3>设置，与拼图一起使用</h3>
+
+    <p>在3ds Max中，<b>控制器</b>只能连接到材质或贴图的所谓<b>附加参数</b>。<b>附加参数</b>默认是隐藏的，所以您需要先用右键菜单显示它们。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers-additional-params.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>在下面的例子中，一个<b>Bezier RGBA颜色</b>控制器通过<b>颜色贴图</b>连接到一个<b>物理</b>材质的<b>基础颜色贴图</b>输入（也可以不通过<b>颜色贴图</b>直接连接）。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers-example.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>因此，可以用 <a href="manual/en/puzzles/Materials.html#materials_set_color">设置颜色(set color)</a> 拼图来改变材质的颜色。要做到这一点，请插入一个
+      <a href="manual/en/puzzles/Selectors.html#select_material">材质选择器(material selector)</a>
+      拼图，并在其下拉菜单中选择您的材质名称。然后，在<b>设置颜<b>色</b>(set color)</b>拼图的下拉菜单中选择控制器启用的贴图的名称。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers-example-puzzles.jpg" class="centered" style="max-width: 1000px">
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#Animation_Controllers" id="Animation_Controllers" class="permalink">#</a></p>
+
+    <h3>动画</h3>
+
+    <p>一个<b>控制器</b>可以使用 <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-1026A4FF-5827-4306-8E28-00812550FB4C" target="_blank">标准的3ds Max方法</a>进行动画制作。在下面的例子中，动画键被添加到<b>Bezier RGBA颜色</b>控制器中，以提供平滑的颜色过渡。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers-example-animation-keys.jpg" class="centered" style="max-width: 1000px">
+    
+    <p>可以用Verge3D的<strong>Sneak Peek</strong>功能快速查看动画。在导出一个场景后，就可以用 <a href="manual/en/puzzles/Animation.html">拼图</a>
+      或JavaScript来控制动画了。</p>
+    
+    <img src="files/materials-maps-reference-max/controllers-example-animation-puzzles.jpg" class="centered" style="max-width: 1000px">参见Autodesk网站上关于<b>控制器</b>的更多信息： <a href="https://help.autodesk.com/view/3DSMAX/2020/ENU/?guid=GUID-C1828D93-F764-4F9C-92AB-A5C0BB20831E" target="_blank">帮助页面</a>。
+      
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#performance_considerations" id="performance_considerations" class="permalink">#</a></p>
+
+    <h2>性能考虑因素</h2>
+
+    <p><a href="manual/zh/max/Materials-Maps-Reference.html#principled_bsdf_performance" id="principled_bsdf_performance" class="permalink">#</a></p>
+
+    <h3>物理材质性能</h3>
+
+    <p>作为创建漂亮而逼真的渲染的唯一选择，<strong>物理材质</strong>需要您的GPU提供更多的计算能力，并减慢应用程序的加载速度。如果您在您的场景中有很多这样的材质，这一点尤其真实。</p>
+
+    <p>为了提高性能，您可以采取以下措施之一。</p>
+
+    <ul>
+      <li>用<b>标准材质</b>取代<b>物理材质</b>。</li>
+      <li>调整 <a href="manual/zh/max/Lighting-and-Rendering.html#global_rendering_settings">环境贴图尺寸</a> 或 <a href="manual/zh/max/Lighting-and-Rendering.html#global_rendering_settings">IBL环境模式</a> 属性以改善环境照明性能。</li>
+      <li>切换到 <a href="manual/zh/max/GLTF-Materials.html">glTF 2.0模式</a>。</li>
+    </ul>
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

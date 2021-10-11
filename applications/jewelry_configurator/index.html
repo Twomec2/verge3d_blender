@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="Verge3D" content="">
+        <title>Jewelry Configurator</title>
+
+
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <!-- favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+        <link rel="manifest" href="media/manifest.json">
+        <link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <iframe src="jewelry_configurator.html" class="main-app" id="main_app"></iframe>
+        <div class="configurator-panel" >
+            <div class="buttons-panel">
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Ring Shape</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="ring-type-button" id="button_ring_type_5" style="background-image: url('media/icon_type_5.png');"></div>
+                        <div class="ring-type-button" id="button_ring_type_2" style="background-image: url('media/icon_type_2.png');"></div>
+                        <div class="ring-type-button" id="button_ring_type_3" style="background-image: url('media/icon_type_3.png');"></div>
+                        <div class="ring-type-button ring-button-selected" id="button_ring_type_1" style="background-image: url('media/icon_type_1.png');"></div>
+                        <div class="ring-type-button" id="button_ring_type_4" style="background-image: url('media/icon_type_4.png');"></div>
+                    </div>
+                </div>
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Gem Type</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="ring-type-button ring-button-selected" id="button_ring_gem_0" style="background-image: url('media/icon_gem_0.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_9" style="background-image: url('media/icon_gem_9.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_1" style="background-image: url('media/icon_gem_1.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_2" style="background-image: url('media/icon_gem_2.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_3" style="background-image: url('media/icon_gem_3.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_4" style="background-image: url('media/icon_gem_4.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_6" style="background-image: url('media/icon_gem_6.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_5" style="background-image: url('media/icon_gem_5.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_7" style="background-image: url('media/icon_gem_7.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_8" style="background-image: url('media/icon_gem_8.png');"></div>
+                        <div class="ring-type-button" id="button_ring_gem_10" style="background-image: url('media/icon_gem_10.png');"></div>
+                    </div>
+                </div>
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Ring Curvature</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="ring-type-button ring-button-selected" id="button_curve_0" style="background-image: url('media/icon_curve_0.png');"></div>
+                        <div class="ring-type-button" id="button_curve_1" style="background-image: url('media/icon_curve_1.png');"></div>
+                        <div class="ring-type-button" id="button_curve_2" style="background-image: url('media/icon_curve_2.png');"></div>
+                        <div class="ring-type-button" id="button_curve_3" style="background-image: url('media/icon_curve_3.png');"></div>
+                        <div class="ring-type-button" id="button_curve_4" style="background-image: url('media/icon_curve_4.png');"></div>
+                    </div>
+                </div>
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Gem Line</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="ring-type-button ring-button-selected" id="button_line_0" style="background-image: url('media/line_0.png');"></div>
+                        <div class="ring-type-button" id="button_line_1" style="background-image: url('media/line_2.png');"></div>
+                        <div class="ring-type-button" id="button_line_2" style="background-image: url('media/line_1.png'); display: none;"></div>
+                    </div>
+                </div>
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Material</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="ring-type-button ring-button-selected" id="button_material_1" style="background-color: #dedede;"></div>
+                        <div class="ring-type-button" id="button_material_2" style="background-color: #f8c559;"></div>
+                        <div class="ring-type-button" id="button_material_3" style="background-color: #f3bbb2;"></div>
+                    </div>
+                </div>
+                <div class="type-controll-panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Gem Color</header>
+                    </div>
+                    <div class="type-buttons-div">
+                      <div class="type-buttons-colors" id="buttons_gem_colors">
+                        <div class="ring-type-button ring-button-selected" id="button_gem_color_1" style="background-image: url('media/icon_gem_color_1.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_2" style="background-image: url('media/icon_gem_color_2.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_3" style="background-image: url('media/icon_gem_color_3.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_4" style="background-image: url('media/icon_gem_color_4.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_5" style="background-image: url('media/icon_gem_color_5.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_6" style="background-image: url('media/icon_gem_color_6.png');"></div>
+                        <div class="ring-type-button" id="button_gem_color_7" style="background-image: url('media/icon_gem_color_7.png');"></div>
+                      </div>
+                      <div class="type-buttons-colors" id="buttons_pearl_colors" style="display: none;">
+                        <div class="ring-type-button ring-button-selected" id="button_pearl_color_1" style="background-image: url('media/icon_pearl_color_1.png');"></div>
+                        <div class="ring-type-button" id="button_pearl_color_2" style="background-image: url('media/icon_pearl_color_2.png');"></div>
+                        <div class="ring-type-button" id="button_pearl_color_3" style="background-image: url('media/icon_pearl_color_3.png');"></div>
+                        <div class="ring-type-button" id="button_pearl_color_4" style="background-image: url('media/icon_pearl_color_4.png');"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="type-controll-panel" id="engrave_panel">
+                    <div class="type-head-div">
+                        <header class="controll-panel-header">Engraving</header>
+                    </div>
+                    <div class="type-buttons-div">
+                        <div class="engrave-text-div">
+                            <input class="engrave-input-text" placeholder="Your engrave text" id="engrave_text">
+                            <select class="engrave-font-list" id="engrave_font" name="Engrave Font">
+                                <option value="days-one">Days One</option>
+                                <option value="bellefair">Bellfare</option>
+                                <option value="caveat">Caveat</option>
+                                <option value="great_vibes">Great Vibes</option>
+                                <option value="lobster">Lobster</option>
+                            </select>
+                        </div>
+                        <div class="ring-type-button" id="button_engrave" style="background-image: url('media/icon_engrave.png');"></div>
+                        <div class="ring-type-button" id="button_clear" style="background-image: url('media/icon_clear.png');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="local-preloader-screen" id="local_preloader_screen" style="display:none;">
+            <div class="preloader-center">
+                <div id="local_preloader_conteiner" class="local-preloader-container">
+                    <div class="preloader-percentage" id="local_preloader_percentage">0%</div>
+                </div>
+            </div>
+        </div>
+        <div class="preloader-screen" id="preloader_screen">
+            <div class="preloader-center">
+                <div class="preloader-container" id="preloader_conteiner">
+                    <div class="preloader-image-container" id="preloader_image_container">
+                        <div class="preloader-filling-color">
+                            <div class="preloader-color-boarder"></div>
+                            <div class="preloader-inner-color" id="preloader_color"></div>
+                        </div>
+                        <img src="media/preloader.svg" class="preloader-image"/>
+                    </div>
+                    <div class="preloader-percentage" id="preloader_percentage">0%</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

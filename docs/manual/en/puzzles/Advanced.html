@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Advanced Puzzles Reference - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="How to use puzzles to implement advanced features in your apps, such as networking, interation with JavaScript code, data conversion, state saving/restoring and more.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/puzzles/Advanced.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Advanced Puzzles Reference - Soft8Soft">
+            <meta property="og:description" content="How to use puzzles to implement advanced features in your apps, such as networking, interation with JavaScript code, data conversion, state saving/restoring and more.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/puzzles/Advanced.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Advanced Puzzles Reference - Soft8Soft">
+            <meta name="twitter:description" content="How to use puzzles to implement advanced features in your apps, such as networking, interation with JavaScript code, data conversion, state saving/restoring and more.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-exec-script.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-call-js-function.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-load-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-send-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-loaded-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-read-JSON.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-read-CSV.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-csv-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-save-state.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-undo-state.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-save-state-and-undo-state-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-all-variable-names.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-variable-value-by-name.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-javascript-object.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-javascript-object-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-wait-promise.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-advanced-connector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Advanced Puzzles</h1>
+
+    <p>Use these puzzles to implement advanced features in your apps, such as networking, interation with JavaScript code, data conversion, state saving/restoring and more.</p>
+
+    <img src="files/puzzles/puzzles-advanced.jpg">
+
+
+    <h2>Contents</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/puzzles/Advanced.html#puzzles_reference">Puzzles Reference</a><ul><li><a href="manual/en/puzzles/Advanced.html#exec_script">exec script</a></li><li><a href="manual/en/puzzles/Advanced.html#call_external_function">call external function</a></li><li><a href="manual/en/puzzles/Advanced.html#load_data">load data</a></li><li><a href="manual/en/puzzles/Advanced.html#send_data">send data</a></li><li><a href="manual/en/puzzles/Advanced.html#loaded_data">loaded data</a></li><li><a href="manual/en/puzzles/Advanced.html#read_JSON">read JSON</a></li><li><a href="manual/en/puzzles/Advanced.html#read_CSV">read CSV</a></li><li><a href="manual/en/puzzles/Advanced.html#save_state">save state</a></li><li><a href="manual/en/puzzles/Advanced.html#undo_state">undo state</a></li><li><a href="manual/en/puzzles/Advanced.html#all_variable_names">all variable names</a></li><li><a href="manual/en/puzzles/Advanced.html#variable_value_by_name">variable value by name</a></li><li><a href="manual/en/puzzles/Advanced.html#javascript_object">JavaScript object</a></li><li><a href="manual/en/puzzles/Advanced.html#wait_promise">wait promise</a></li><li><a href="manual/en/puzzles/Advanced.html#promise_value">promise value</a></li><li><a href="manual/en/puzzles/Advanced.html#connector">connector</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Puzzles Reference</h2>
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#exec_script" id="exec_script" class="permalink">#</a></p>
+
+    <h3>exec script</h3>
+
+    <p>
+        This puzzle executes the specified javascript code. The puzzle uses
+        <a href="https://ace.c9.io/">Ace Editor</a> for displaying and editing
+        the content. See the relevant keyboard shortcuts here:
+        <a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts">Default Keyboard Shortcuts</a>.
+    </p>
+
+    <p>You can use the following built-in variables:</p>
+    <ul>
+        <li><b>app</b> - the application instance, see <a href="api/en/extras/App.html">App</a> for more details</li>
+        <li><b>v3d</b> - the v3d namespace which contains all the engine modules</li>
+        <li><b>VARS</b> - variable puzzles can be accessed through this object</li>
+        <li><b>PROC</b> - procedure puzzles can be accessed through this object</li>
+    </ul>
+
+    <img src="files/puzzles/puzzles-advanced-exec-script.jpg" style="max-width: 1000px">
+
+    <p><b>Specifics of using built-ins regarding to "Init" and other tabs</b></p>
+    <ul>
+        <li>
+            The <b>app</b> built-in variable is not available for this puzzle if
+            it's used inside the <b>Init</b> tab, since at that stage the
+            application is not properly initialized yet.
+        </li>
+        <li>
+            Variables and procedures declared in the <b>Init</b> tab can not be
+            accessed from other tabs via <b>VARS</b> and <b>PROC</b> and vice
+            versa.
+        </li>
+    </ul>
+
+
+    <!-- COMPAT: < 3.5 -->
+    <a href="#" id="call_JS_function"></a>
+    <p><a href="manual/en/puzzles/Advanced.html#call_external_function" id="call_external_function" class="permalink">#</a></p>
+
+    <h3>call external function</h3>
+
+    <p>
+    Executes a function specified in the JavaScript code of the application. Optionally passes parameters to be used as function arguments.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-call-js-function.jpg">
+
+    <p>
+    In order to add a function to JavaScript code, open the application <strong>.js</strong> file (for example, <i>my_awesome_app.js</i> located in <i>verge3d/applications/my_awesome_app</i>) with any text editor. Search for "prepareExternalInterface" and add your function inside that declaration (between the curly brackets), so that it looks like this:
+    </p>
+
+    <code>
+function prepareExternalInterface(app) {
+        app.ExternalInterface.myJSFunction = function(numericArg, textArg) {
+            alert('Got some params from Puzzles: ' + numericArg + ' and ' + textArg);
+        }
+}
+    </code>
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#load_data" id="load_data" class="permalink">#</a></p>
+
+    <h3>load data</h3>
+
+    <p>
+    Attempts to load data from a specified location. The puzzles in the "once ready do" slot are interpreted regardless of whether the attempt was a success. The retrieved data can be accessed via the <a href="manual/en/puzzles/Advanced.html#loaded_data">loaded data</a> puzzle.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-load-data.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#send_data" id="send_data" class="permalink">#</a></p>
+
+    <h3>send data</h3>
+
+    <p>
+    Attempts to send a specified data to a remote location using an asynchronous <a href="https://en.wikipedia.org/wiki/POST_(HTTP)" target="_blank">POST HTTP</a> request. The puzzles in the "once ready do" slot are interpreted regardless of whether the attempt was a success. If there is any response data, it can be accessed via the <a href="manual/en/puzzles/Advanced.html#loaded_data">loaded data</a> puzzle.
+    </p>
+
+
+
+    <img src="files/puzzles/puzzles-advanced-send-data.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#loaded_data" id="loaded_data" class="permalink">#</a></p>
+
+    <h3>loaded data</h3>
+
+    <p>
+    Returns data retrieved by the <a href="manual/en/puzzles/Advanced.html#load_data">load data</a> or <a href="manual/en/puzzles/Advanced.html#send_data">send data</a> puzzles.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-loaded-data.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#read_JSON" id="read_JSON" class="permalink">#</a></p>
+
+    <h3>read JSON</h3>
+
+    <p>
+      Interprets text (or <a href="manual/en/puzzles/HTML.html#data_uri">Data URI</a>) as <a href="https://en.wikipedia.org/wiki/JSON#Example" target="_blank">JavaScript Object Notation</a> data which is returned in a dictionary.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-read-JSON.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#read_CSV" id="read_CSV" class="permalink">#</a></p>
+
+    <h3>read CSV</h3>
+
+    <p>
+      Interprets text (or <a href="manual/en/puzzles/HTML.html#data_uri">Data URI</a>) as <a href="https://en.wikipedia.org/wiki/Comma-separated_values#Example" target="_blank">comma-separated values</a>. Returns a list of table rows, with each row represented as a list of values. The delimiter can be selected with the drop-down to correspond a CSV file's export settings. "From row" value denotes how many rows will be skipped starting from the top.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-read-CSV.jpg">
+
+    <p>
+      Table rows and values are accessed by their numeric indices starting from 0.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-csv-example.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#save_state" id="save_state" class="permalink">#</a></p>
+
+    <h3>save state</h3>
+
+    <p>
+    Saves the state of specified objects and/or the values of variables specified by their names. The objects are cloned and stored in memory. The values of the variables are retrieved and stored in memory for each specified variable name.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-save-state.jpg">
+
+    <p>
+    If this puzzle is called several times, the states are saved in sequence so that it is possible to return to any previous state with the <a href="manual/en/puzzles/Advanced.html#undo_state">undo state</a> puzzle.
+    </p>
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#undo_state" id="undo_state" class="permalink">#</a></p>
+
+    <h3>undo state</h3>
+
+    <p>
+    Restores the state of objects and/or variables saved with the <a href="manual/en/puzzles/Advanced.html#save_state">save state</a> puzzle.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-undo-state.jpg">
+
+    <p>
+    If this puzzle is called several times, the states are restored from the saved sequence (if any) which makes it possible to return to any previously saved state from the stack. Sometimes you need to catch the situation when there is no saved state present in the undo history, e.g to make changes in the UI. For that, use the state counter variable:
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-save-state-and-undo-state-example.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#all_variable_names" id="all_variable_names" class="permalink">#</a></p>
+
+    <h3>all variable names</h3>
+
+    <p>
+    Returns a list with the names of all variables used in Puzzles.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-all-variable-names.jpg">
+
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#variable_value_by_name" id="variable_value_by_name" class="permalink">#</a></p>
+
+    <h3>variable value by name</h3>
+
+    <p>
+    Returns the value of a variable specified by its name. This puzzle works similarly to the standard variable value puzzle, yet does not require to select a variable from the predefined dropdown menu.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-variable-value-by-name.jpg">
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#javascript_object" id="javascript_object" class="permalink">#</a></p>
+
+    <h3>JavaScript object</h3>
+
+    <p>
+      Returns a given JavaScript object.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-javascript-object.jpg">
+
+    <p>You can get the following JavaScript objects with this puzzle:</p>
+
+    <dl>
+      <dt>window</dt>
+      <dd>Return the top-level <strong>window</strong> object as dictionary value.</dd>
+      <dt>arguments</dt>
+      <dd>Returns the list of arguments of the currently executed function. Can be used to get arguments of Puzzles procedures or additional arguments passed to internal Puzzles callbacks (see below).</dd>
+      <dt>this</dt>
+      <dd>JavaScript <strong>this</strong> value.</dd>
+    </dl>
+
+    <p>The <strong>arguments</strong> option can be used to retrieve additional puzzles options. For example, when using <a href="manual/en/puzzles/Events.html#when_clicked">when clicked</a> puzzle, you can get the internal JavaScript event which triggers the puzzle logic using the first argument of the callback executed behind the <strong>do</strong> slot. In the example below we use this event to get X and Y coordinates of the mouse pointer:</p>
+
+    <img src="files/puzzles/puzzles-advanced-javascript-object-example.jpg">
+
+    <p>The following puzzles support advanced options:</p>
+
+    <ul>
+      <li><a href="manual/en/puzzles/Events.html#when_clicked">when clicked</a>, <a href="manual/en/puzzles/Events.html#when_hovered">when hovered</a>, <a href="manual/en/puzzles/Events.html#when_dragged">when dragged</a> — <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" target="_blank">mouse</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent">touch</a> event which triggers puzzles in the <em>do</em> slots.</li>
+      <li><a href="manual/en/puzzles/Time.html#after">after</a>, <a href="manual/en/puzzles/Time.html#set_timer">set timer</a> — timer ID returned by the puzzles' <a href="https://www.w3schools.com/jsref/met_win_setinterval.asp">setInterval()</a> call.</li>
+      <li><a href="manual/en/puzzles/Time.html#every_frame">every frame</a> — delta time and total elapsed time.</li>
+      <li><a href="manual/en/puzzles/HTML.html#event">event</a> — event object.</li>
+      <li><a href="manual/en/puzzles/AR_VR.html#session_event">on session event</a> — WebXR event object.</li>
+    </ul>
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#wait_promise" id="wait_promise" class="permalink">#</a></p>
+
+    <h3>wait promise</h3>
+
+    <p>
+    Wait for the promise to be resolved or rejected and return its value (or rejection reason) in the <a href="manual/en/puzzles/Advanced.html#promise_value">promise value</a> puzzle.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-wait-promise.jpg">
+
+    <p>This puzzle may be required to get value of the <a href="manual/en/puzzles/Scenes.html#export_to_gltf">export to gltf</a> and <a href="manual/en/puzzles/Materials.html#generate_normal_map">generate normal map</a> puzzles. Being async puzzles by their nature, these puzzle do not return resolved values immediately. Instead, they return <em>promise</em> values which are resolved in the puzzles they are used as inputs. In some rare cases, however, this resolving does not happen. In these cases you should use <strong>wait promise</strong> to resolve promise values.</p>
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#promise_value" id="promise_value" class="permalink">#</a></p>
+
+    <h3>promise value</h3>
+
+    <p>Resolved promise value (in case of resolved promise) or error string (in case of rejected promise).</p>
+
+
+    <p><a href="manual/en/puzzles/Advanced.html#connector" id="connector" class="permalink">#</a></p>
+
+    <h3>connector</h3>
+
+    <p>
+        This puzzle facilitates connecting other puzzles with each other, to
+        make it more convenient to move, delete and use them in other puzzles.
+        The most notable application is to join <a href="manual/en/puzzles/Sound.html#load_sound">load sound</a>
+        or <a href="manual/en/puzzles/Sound.html#load_video">load video</a>
+        puzzles into a single group to organize preloading of media resources
+        in your application.
+    </p>
+
+    <img src="files/puzzles/puzzles-advanced-connector.jpg">
+
+
+    <h2>Having Troubles with Puzzles?</h2>
+
+    <p>Seek help on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

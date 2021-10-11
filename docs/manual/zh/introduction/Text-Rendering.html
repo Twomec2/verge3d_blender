@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>Verge3D中的文本渲染 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="了解如何在Verge3D创建文本对象。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/Text-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D中的文本渲染 - Soft8Soft">
+            <meta property="og:description" content="了解如何在Verge3D创建文本对象。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/Text-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D中的文本渲染 - Soft8Soft">
+            <meta name="twitter:description" content="了解如何在Verge3D创建文本对象。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/html-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/dynamic-text-export-settings-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/font-converter-option.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/static-text-export-settings-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/text-rendering/texture-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+    <h1>文本渲染</h1>
+    <p>在许多3D网页应用中，您需要通过显示文本来为3D模型补充信息。在本节中，您将了解如何在应用中创建文本。</p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/Text-Rendering.html#dom_css">1.HTML/CSS，注释</a></li><li><a href="manual/zh/introduction/Text-Rendering.html#dynamic_text_geometry">2.动态文本几何</a></li><li><a href="manual/zh/introduction/Text-Rendering.html#static_text_geometry">3.静态文本几何</a></li><li><a href="manual/zh/introduction/Text-Rendering.html#textures_with_text">4.带文本的纹理</a></li><li><a href="manual/zh/introduction/Text-Rendering.html#canvas_textures">5.画布纹理</a></li></ul><!-- /TOC --> <p><a href="manual/zh/introduction/Text-Rendering.html#dom_css" id="dom_css" class="permalink">#</a></p>
+
+    <h2>1.HTML/CSS，注释</h2>
+    <p>HTML/CSS是在网页应用设计中展示信息的最自然的方式。</p><img src="files/text-rendering/html-text.jpg" style="max-width: 898px;">
+    <p>使用HTML渲染文本有以下几种可行的方法：</p>
+
+    <ul>
+      <li>使用第三方网站设计工具，如Webflow。</li>
+      <li>手动编辑项目中的HTML/CSS文件。</li>
+      <li>使用HTML类的拼图。</li>
+      <li>使用Verge3D的annotations(注释)。</li>
+    </ul>
+
+    <p>请查看 <a href="manual/zh/introduction/HTML-based-user-interfaces.html">基于HTML的用户界面</a> 章节了解使用HTML的更多信息，以及 <a href="manual/zh/puzzles/Objects.html#add_annotation">add annotation(添加注释)</a> 和 <a href="manual/zh/puzzles/HTML.html">HTML</a> 拼图的参考。</p>
+
+    <h3>优点</h3>
+
+    <ul>
+      <li>web开发中常见的方法。</li>
+      <li>渲染的文本质量好。</li>
+      <li>可以使用高级文本样式，如自定义笔画，字体和3D转换。</li>
+    </ul>
+
+    <h3>缺点</h3>
+
+    <ul>
+      <li>不易与已渲染的场景集成。大多数情况下，HTML文本都叠加在3D内容之上渲染。</li>
+      <li>在虚拟现实模式下使用HTML文本没有简单的方法。</li>
+      <li>如果应用中有太多动态文本元素（如注释），会影响渲染速度。</li>
+    </ul>
+
+    <p><a href="manual/zh/introduction/Text-Rendering.html#dynamic_text_geometry" id="dynamic_text_geometry" class="permalink">#</a></p>
+
+    <h2>2.动态文本几何</h2>
+    <p>
+      您可以使用建模套件中的文本对象来创建类似于规则网格的文本几何图形。“动态”意味着Verge3D不在导出的glTF资产中存储文本几何图形数据，而是在场景加载时（使用字体数据）重新创建文本。这还意味着，您可以在运行时中使用
+      <a href="manual/zh/puzzles/Objects.html#update_text_object">update text object(更新文本对象)</a> 拼图或使用JavaScript实时编辑文字。
+    </p>
+
+    <p>若要使文本对象动态化，请确保在导出设置中 <em>不要勾选</em><strong>bake text</strong>选项：</p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.030779209777213268" checked="" class="v3d-tab-input" id="0.030779209777213268-0"><label class="v3d-tab-label" for="0.030779209777213268-0">Blender</label><div class="v3d-tab-content"><img src="files/text-rendering/dynamic-text-export-settings-blender.jpg" class="centered" style="max-width: 836px;"></div><input type="radio" name="0.030779209777213268" class="v3d-tab-input" id="0.030779209777213268-1"><label class="v3d-tab-label" for="0.030779209777213268-1">3ds Max</label><div class="v3d-tab-content"><img src="files/text-rendering/dynamic-text-export-settings-max.jpg" class="centered" style="max-width: 785px;"></div><input type="radio" name="0.030779209777213268" class="v3d-tab-input" id="0.030779209777213268-2"><label class="v3d-tab-label" for="0.030779209777213268-2">Maya</label><div class="v3d-tab-content"><img src="files/text-rendering/dynamic-text-export-settings-maya.jpg" class="centered" style="max-width: 872px;"></div></div>
+
+    <p>创建应用时，您还需勾选<strong>Font Converter</strong>字体转换选项（默认情况下启用），以开启使用动态文本几何图形功能。此选项将激活<em>opentype.js</em>模块，用于加载和处理字体数据。</p><img src="files/text-rendering/font-converter-option.jpg" class="centered" style="max-width: 522px;">
+    <p class="note">如果您创建时忘记启用<strong>Font Converter</strong>选项，或是应用使用早于Verge3D
+      3.6的版本创建，可以手动将<strong>opentype.js</strong>文件从Verge3D安装目录的<strong>build</strong>文件夹复制到应用目录。</p>
+
+    <h3>优点</h3>
+
+    <ul>
+      <li>文本对象是全功能的3D网格对象，可以移动/添加动画/分配自定义材质，与场景中的任何其他3D网格一样。</li>
+      <li>动态文本在运行时中渲染，可减少需通过网络加载的模型数据量。</li>
+      <li>不仅可以修改文本内容，还可以修改字体、挤压深度和斜面。</li>
+    </ul>
+
+    <h3>缺点</h3>
+
+    <ul>
+      <li>在场景加载过程中，需要一点时间来生成文本。</li>
+      <li>需要加载字体文件（TTF或WOFF），并使用 <em>字体转换器</em> 模块。</li>
+      <li>并非所有的文本参数都被Verge3D支持。</li>
+    </ul>
+
+    <p><a href="manual/zh/introduction/Text-Rendering.html#static_text_geometry" id="static_text_geometry" class="permalink">#</a></p>
+
+    <h2>3.静态文本几何</h2>
+    <p>静态文本几何图形与动态文本几何图形非常相似，不同的是它在导出为glTF资产过程中会被烘焙为文本网格数据。因此您无法在运行时中编辑它们，例如更改内容或字体。但仍然可以分配材质或移动文本，类似于其他几何图形对象。</p>
+
+    <p>若要使用静态文本几何图形，请在导出设置中勾选<strong>Bake text</strong>选项：</p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.4618198500480959" checked="" class="v3d-tab-input" id="0.4618198500480959-0"><label class="v3d-tab-label" for="0.4618198500480959-0">Blender</label><div class="v3d-tab-content"><img src="files/text-rendering/static-text-export-settings-blender.jpg" class="centered" style="max-width: 835px;"></div><input type="radio" name="0.4618198500480959" class="v3d-tab-input" id="0.4618198500480959-1"><label class="v3d-tab-label" for="0.4618198500480959-1">3ds Max</label><div class="v3d-tab-content"><img src="files/text-rendering/static-text-export-settings-max.jpg" class="centered" style="max-width: 792px;"></div><input type="radio" name="0.4618198500480959" class="v3d-tab-input" id="0.4618198500480959-2"><label class="v3d-tab-label" for="0.4618198500480959-2">Maya</label><div class="v3d-tab-content"><img src="files/text-rendering/static-text-export-settings-maya.jpg" class="centered" style="max-width: 871px;"></div></div>
+
+    <h3>优点</h3>
+
+    <ul>
+      <li>文本几何的图形会从建模软件中原样输出到场景。</li>
+      <li>不需要额外的字体资产，也无需在场景加载过程中花时间生成字体数据。建议对所有中文文本使用静态文本几何。</li>
+    </ul>
+
+    <h3>缺点</h3>
+
+    <ul>
+      <li>长文本会增加glTF资产的大小。因此，加载场景可能需要很多时间，特别是网速不好时。</li>
+      <li>无法在运行时中编辑文本。</li>
+    </ul>
+
+    <p><a href="manual/zh/introduction/Text-Rendering.html#textures_with_text" id="textures_with_text" class="permalink">#</a></p>
+
+    <h2>4.带文本的纹理</h2>
+    <p>您可以将文本渲染为位图纹理，然后将该纹理应用到对象。这种技术的流行用例包括定制的billboars,个性化的杯子/T恤,以及珠宝雕刻：</p><img src="files/text-rendering/texture-text.jpg" style="max-width: 898px;">
+    <p>查看<a href="manual/zh/puzzles/Materials.html#texture_from_text">texture from
+        text</a>文本纹理拼图章节，了解如何使用纹理与自定义文本的更多信息的拼图。</p>
+
+    <h3>优点</h3>
+
+    <ul>
+      <li>渲染性能不错，GPU内存消耗适中。</li>
+      <li>您可以通过使用节点材质添加各种文本效果（例如，用文本创建凹凸映射纹理）。</li>
+    </ul>
+
+    <h3>缺点</h3>
+
+    <ul>
+      <li>如果经常更改文本（例如每帧），加载速度可能会变慢。</li>
+      <li>不能使用复杂的文本对齐。</li>
+      <li>文本仅为二维，因此没有挤压/斜面效果。</li>
+      <li>质量有些降低，特别是小图像（小于1K)。</li>
+    </ul>
+
+    <p><a href="manual/zh/introduction/Text-Rendering.html#canvas_textures" id="canvas_textures" class="permalink">#</a></p>
+
+    <h2>5.画布纹理</h2>
+    <p>此方法是对前面技术的扩展，它允许您通过使用JavaScript和<em>画布</em>元素。查看<a href="manual/zh/puzzles/HTML.html#create_canvas_elem">create
+        canvas elem(创建画布元素)</a>拼图获取更多信息。</p>
+
+    <h3>优点</h3>
+
+    <ul>
+      <li>您可以使用JavaScript进行任何文本定制。</li>
+      <li>可以在绘制文本的同时绘制形状和图像。</li>
+      <li>渲染性能不错，GPU内存消耗适中。</li>
+      <li>您可以通过使用节点材质添加各种文本效果（例如，用文本创建凹凸映射纹理）。</li>
+    </ul>
+
+    <h3>缺点</h3>
+
+    <ul>
+      <li>需要良好的JavaScript编程技能。</li>
+      <li>文本仅为二维，因此没有挤压/斜面效果。</li>
+      <li>质量有些降低，特别是小图像（小于1K)。</li>
+    </ul>
+
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

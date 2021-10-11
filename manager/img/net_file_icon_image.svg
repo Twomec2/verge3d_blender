@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14"
+   height="16"
+   viewBox="0 0 3.7041665 4.2333332"
+   version="1.1"
+   id="svg25997"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="network_directory_image_button.svg">
+  <defs
+     id="defs25991">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3158"
+       id="linearGradient2013"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5366878,0,0,0.57142797,-150.00969,236.19706)"
+       x1="280.20465"
+       y1="105.71093"
+       x2="286.27216"
+       y2="99.240173" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3158">
+      <stop
+         style="stop-color:#ff7373;stop-opacity:1"
+         offset="0"
+         id="stop3154" />
+      <stop
+         style="stop-color:#ffb3b3;stop-opacity:1"
+         offset="1"
+         id="stop3156" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="25.986174"
+     inkscape:cx="2.2255185"
+     inkscape:cy="6.4783269"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata25994">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-292.76667)">
+    <path
+       inkscape:connector-curvature="0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.46236563px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;display:inline;fill:url(#linearGradient2013);fill-opacity:1;stroke:none;stroke-width:0.10256877"
+       d="M 0.37274213,292.76667 C 0.1630647,292.76667 0,292.94856 0,293.16354 v 3.43959 C 0,296.82637 0.1630647,297 0.37274213,297 H 3.3314245 c 0.2019103,0 0.3727422,-0.17363 0.3727422,-0.39687 v -2.74505 c 0,-0.0992 -0.046679,-0.20671 -0.1164802,-0.28112 l -0.6440596,-0.69453 c -0.069877,-0.0744 -0.1708413,-0.11576 -0.2640291,-0.11576 z"
+       id="path26587" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path2011"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.46236563px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free';letter-spacing:0px;word-spacing:0px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.10583639"
+       d="m 2.6724232,294.90969 c 0.031,0 0.062,0.013 0.0879,0.0388 l 0.2475302,0.2372 v 1.32085 H 0.69636322 v -0.66043 l 0.40255998,-0.40208 c 0.0516,-0.0516 0.12369,-0.0516 0.17519,0 l 0.41289,0.40204 0.8976199,-0.89762 c 0.0258,-0.0258 0.0568,-0.0388 0.0879,-0.0388 z m -1.48104,-0.87953 c 0.26829,0 0.49557,0.22675 0.49557,0.49506 0,0.27862 -0.22728,0.49558 -0.49557,0.49558 -0.27862995,0 -0.49506998,-0.21696 -0.49506998,-0.49558 0,-0.26831 0.21644003,-0.49506 0.49506998,-0.49506 z" />
+  </g>
+</svg>

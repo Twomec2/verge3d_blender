@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg23899"
+   version="1.1"
+   viewBox="0 0 7.4083332 7.4083335"
+   height="28"
+   width="28">
+  <defs
+     id="defs23893">
+    <linearGradient
+       gradientTransform="translate(-324.69241,264.53956)"
+       gradientUnits="userSpaceOnUse"
+       y2="25.052092"
+       x2="332.10071"
+       y1="32.460426"
+       x1="324.69238"
+       id="linearGradient7715"
+       xlink:href="#linearGradient2768" />
+    <linearGradient
+       id="linearGradient2768">
+      <stop
+         id="stop2764"
+         offset="0"
+         style="stop-color:#414141;stop-opacity:1" />
+      <stop
+         id="stop2766"
+         offset="1"
+         style="stop-color:#767676;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata23896">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-289.59165)"
+     id="layer1">
+    <rect
+       y="289.59164"
+       x="5.078125e-07"
+       height="7.4083333"
+       width="7.4083333"
+       id="rect7707"
+       style="opacity:1;fill:url(#linearGradient7715);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31175715;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.25365852;paint-order:markers stroke fill" />
+    <path
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.12618361"
+       d="m 1.4328655,291.02452 v 1.5142 h 1.5142033 v -1.5142 z M 0.92813108,290.51978 H 3.4518033 v 2.52367 H 0.92813108 Z"
+       id="path7721" />
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.12618361"
+       x="1.9376"
+       y="291.52924"
+       width="0.50473446"
+       height="0.50473446"
+       id="rect7723" />
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.12618361"
+       x="1.9376"
+       y="294.55765"
+       width="0.50473446"
+       height="0.50473446"
+       id="rect7725" />
+    <path
+       id="rect7727"
+       transform="matrix(0.26458333,0,0,0.26458333,0,289.59165)"
+       d="M 14.953125 14.953125 L 14.953125 16.861328 L 18.769531 16.861328 L 18.769531 14.953125 L 14.953125 14.953125 z M 20.677734 14.953125 L 20.677734 16.861328 L 22.583984 16.861328 L 22.583984 18.769531 L 18.769531 18.769531 L 18.769531 20.677734 L 22.583984 20.677734 L 22.583984 24.492188 L 24.492188 24.492188 L 24.492188 14.953125 L 22.583984 14.953125 L 20.677734 14.953125 z M 14.953125 18.769531 L 14.953125 24.492188 L 16.861328 24.492188 L 16.861328 18.769531 L 14.953125 18.769531 z M 18.769531 22.583984 L 18.769531 24.492188 L 20.677734 24.492188 L 20.677734 22.583984 L 18.769531 22.583984 z "
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.47691444" />
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.12618361"
+       x="4.9660068"
+       y="291.52924"
+       width="0.50473446"
+       height="0.50473446"
+       id="rect7735" />
+    <path
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.12618361"
+       d="m 4.4612722,291.02452 v 1.5142 h 1.5142033 v -1.5142 z m -0.5047345,-0.50474 h 2.5236722 v 2.52367 H 3.9565377 Z"
+       id="path7737" />
+    <path
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.12618361"
+       d="m 1.4328655,294.05292 v 1.51421 h 1.5142033 v -1.51421 z M 0.92813108,293.54819 H 3.4518033 v 2.52367 H 0.92813108 Z"
+       id="path7739" />
+  </g>
+</svg>

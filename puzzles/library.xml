@@ -1,0 +1,750 @@
+<?xml version="1.0" ?><xml>
+<category name="Hovered Cursor">
+<block type="whenHovered" xmlns="http://www.w3.org/1999/xhtml">
+  <value name="VALUE">
+    <block type="objectList">
+      <field name="FIELDNAME">Cube</field>
+    </block>
+  </value>
+  <statement name="DO_OVER">
+    <block type="setHTMLElemStyle">
+      <field name="PROPERTY">cursor</field>
+      <field name="PARENT">FALSE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">pointer</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="DOMObjectSelector">
+          <field name="DOM_OBJECT">BODY</field>
+        </block>
+      </value>
+    </block>
+  </statement>
+  <statement name="DO_OUT">
+    <block type="setHTMLElemStyle">
+      <field name="PROPERTY">cursor</field>
+      <field name="PARENT">FALSE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">default</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="DOMObjectSelector">
+          <field name="DOM_OBJECT">BODY</field>
+        </block>
+      </value>
+    </block>
+  </statement>
+</block>
+</category>
+<category name="Detect Pressed/Released">
+<block xmlns="https://developers.google.com/blockly/xml" type="comment">
+  <field name="TEXT">Detect if mouse/touch is being pressed or released upon the object. Replace &quot;Cube&quot; by the actual object name.</field>
+  <next>
+    <block type="eventHTMLElem">
+      <field name="EVENT">pointerdown</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text">
+          <field name="TEXT"/>
+        </shadow>
+        <block type="DOMObjectSelector">
+          <field name="DOM_OBJECT">CONTAINER</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="variables_set">
+          <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+          <value name="VALUE">
+            <block type="raycast">
+              <value name="FROM">
+                <block type="getActiveCamera"/>
+              </value>
+              <value name="DIRECTION">
+                <block type="getCameraDirection">
+                  <field name="MOUSE_TOUCH">TRUE</field>
+                  <field name="INVERTED">FALSE</field>
+                </block>
+              </value>
+              <value name="INTERSECT_OBJS">
+                <shadow type="objectList">
+                  <field name="FIELDNAME">Cube</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="logic_operation">
+                  <field name="OP">AND</field>
+                  <value name="A">
+                    <block type="logic_compare">
+                      <field name="OP">GT</field>
+                      <value name="A">
+                        <block type="lists_length">
+                          <value name="VALUE">
+                            <block type="variables_get">
+                              <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number">
+                          <field name="NUM">0</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_compare">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="dictGet">
+                          <value name="DICT">
+                            <block type="lists_getIndex">
+                              <mutation statement="false" at="false"/>
+                              <field name="MODE">GET</field>
+                              <field name="WHERE">FIRST</field>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="KEY">
+                            <shadow type="text">
+                              <field name="TEXT">object</field>
+                            </shadow>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="text">
+                          <field name="TEXT">Cube</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="console.log">
+                  <value name="VALUE">
+                    <shadow type="text">
+                      <field name="TEXT">Mouse/Touch Pressed!</field>
+                    </shadow>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="eventHTMLElem">
+          <field name="EVENT">pointerup</field>
+          <field name="PARENT">FALSE</field>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT"/>
+            </shadow>
+            <block type="DOMObjectSelector">
+              <field name="DOM_OBJECT">CONTAINER</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="variables_set">
+              <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+              <value name="VALUE">
+                <block type="raycast">
+                  <value name="FROM">
+                    <block type="getActiveCamera"/>
+                  </value>
+                  <value name="DIRECTION">
+                    <block type="getCameraDirection">
+                      <field name="MOUSE_TOUCH">TRUE</field>
+                      <field name="INVERTED">FALSE</field>
+                    </block>
+                  </value>
+                  <value name="INTERSECT_OBJS">
+                    <shadow type="objectList">
+                      <field name="FIELDNAME">Cube</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="logic_operation">
+                      <field name="OP">AND</field>
+                      <value name="A">
+                        <block type="logic_compare">
+                          <field name="OP">GT</field>
+                          <value name="A">
+                            <block type="lists_length">
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number">
+                              <field name="NUM">0</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="logic_compare">
+                          <field name="OP">EQ</field>
+                          <value name="A">
+                            <block type="dictGet">
+                              <value name="DICT">
+                                <block type="lists_getIndex">
+                                  <mutation statement="false" at="false"/>
+                                  <field name="MODE">GET</field>
+                                  <field name="WHERE">FIRST</field>
+                                  <value name="VALUE">
+                                    <block type="variables_get">
+                                      <field name="VAR" id="QOe75Oob#y|HhF5iYd=J">raycast</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="KEY">
+                                <shadow type="text">
+                                  <field name="TEXT">object</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="text">
+                              <field name="TEXT">Cube</field>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="console.log">
+                      <value name="VALUE">
+                        <shadow type="text">
+                          <field name="TEXT">Mouse/Touch Released!</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </next>
+</block>
+</category>
+<category name="Keyboard Controls">
+<block type="eventHTMLElem" xmlns="http://www.w3.org/1999/xhtml">
+  <field name="EVENT">keyup</field>
+  <field name="PARENT">FALSE</field>
+  <value name="ID">
+    <block type="DOMObjectSelector">
+      <field name="DOM_OBJECT">DOCUMENT</field>
+    </block>
+  </value>
+  <statement name="DO">
+    <block type="controls_if">
+      <mutation elseif="2"/>
+      <value name="IF0">
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="getEventProperty">
+              <field name="PROPERTY">key</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text">
+              <field name="TEXT">ArrowLeft</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="console.log">
+          <value name="VALUE">
+            <shadow id="l+2Um13XToljrpM@f]1B" type="text">
+              <field name="TEXT">go left!</field>
+            </shadow>
+            <block type="text">
+              <field name="TEXT">go left!</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <value name="IF1">
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="getEventProperty">
+              <field name="PROPERTY">key</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text">
+              <field name="TEXT">ArrowRight</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO1">
+        <block type="console.log">
+          <value name="VALUE">
+            <shadow id="5K$vG_dyH(]q3HJj,V99" type="text">
+              <field name="TEXT">go right!</field>
+            </shadow>
+            <block type="text">
+              <field name="TEXT">go right!</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <value name="IF2">
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+          <value name="A">
+            <block type="getEventProperty">
+              <field name="PROPERTY">key</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="text">
+              <field name="TEXT"> </field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO2">
+        <block type="console.log">
+          <value name="VALUE">
+            <shadow id="5K$vG_dyH(]q3HJj,V99" type="text">
+              <field name="TEXT">go right!</field>
+            </shadow>
+            <block type="text">
+              <field name="TEXT">jump!</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </statement>
+</block>
+</category>
+<category name="Setup Fullscreen iFrame">
+<block type="initFullscreen" xmlns="http://www.w3.org/1999/xhtml">
+  <field name="PARENT">TRUE</field>
+  <value name="ID">
+    <block type="text">
+      <field name="TEXT">fs_button</field>
+    </block>
+  </value>
+  <statement name="DO_ENTER">
+    <block type="setHTMLElemAttribute">
+      <field name="ATTRIBUTE">src</field>
+      <field name="PARENT">TRUE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">exit.png</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="text">
+          <field name="TEXT">fs_image</field>
+        </block>
+      </value>
+    </block>
+  </statement>
+  <statement name="DO_EXIT">
+    <block type="setHTMLElemAttribute">
+      <field name="ATTRIBUTE">src</field>
+      <field name="PARENT">TRUE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">enter.png</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="text">
+          <field name="TEXT">fs_image</field>
+        </block>
+      </value>
+    </block>
+  </statement>
+  <statement name="DO_UNAVAIL">
+    <block type="setHTMLElemStyle">
+      <field name="PROPERTY">visibility</field>
+      <field name="PARENT">TRUE</field>
+      <value name="VALUE">
+        <block type="text">
+          <field name="TEXT">hidden</field>
+        </block>
+      </value>
+      <value name="ID">
+        <block type="text">
+          <field name="TEXT">fs_button</field>
+        </block>
+      </value>
+    </block>
+  </statement>
+</block>
+</category>
+<category name="Sound iOS Workaround">
+<block type="eventHTMLElem" xmlns="http://www.w3.org/1999/xhtml">
+  <field name="EVENT">touchstart</field>
+  <field name="PARENT">FALSE</field>
+  <value name="ID">
+    <block type="DOMObjectSelector">
+      <field name="DOM_OBJECT">DOCUMENT</field>
+    </block>
+  </value>
+  <statement name="DO">
+    <block type="controls_if">
+      <value name="IF0">
+        <block type="logic_negate">
+          <value name="BOOL">
+            <block type="variables_get">
+              <field id=",|#UI=t.+x#-gs(d_)B{" name="VAR" variabletype="">initialised</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="playSound">
+          <field name="LOOP">FALSE</field>
+          <value name="VALUE">
+            <block type="loadSoundAdv">
+              <value name="URL">
+                <shadow type="text">
+                  <field name="TEXT">./mySound.mp3</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <next>
+            <block type="pauseSound">
+              <value name="VALUE">
+                <block type="loadSoundAdv">
+                  <value name="URL">
+                    <shadow type="text">
+                      <field name="TEXT">./mySound.mp3</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <field id=",|#UI=t.+x#-gs(d_)B{" name="VAR" variabletype="">initialised</field>
+                  <value name="VALUE">
+                    <block type="logic_boolean">
+                      <field name="BOOL">TRUE</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </statement>
+</block>
+</category>
+<category name="Alert Message">
+<block xmlns="https://developers.google.com/blockly/xml" type="comment">
+  <field name="TEXT">Shows a warning message for your application users.</field>
+  <next>
+    <block type="addHTMLElement">
+      <field name="ELEMENT">div</field>
+      <field name="MODE">TO</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <shadow type="text">
+          <field name="TEXT">alert</field>
+        </shadow>
+      </value>
+      <value name="TARGET_ID">
+        <shadow type="DOMObjectSelector">
+          <field name="DOM_OBJECT">CONTAINER</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="setHTMLElemAttribute">
+          <field name="ATTRIBUTE">innerHTML</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="textMultiline">
+              <field name="HIGHLIGHT_MODE">text</field>
+              <field name="TEXT">&lt;span id=&quot;close_btn&quot;&gt;&amp;times;&lt;/span&gt;
+Our app does this and that. If you continue to use this app we will assume
+that you are happy with it.</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text">
+              <field name="TEXT">alert</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute">
+              <field name="ATTRIBUTE">style</field>
+              <field name="PARENT">FALSE</field>
+              <value name="VALUE">
+                <block type="textMultiline">
+                  <field name="HIGHLIGHT_MODE">text</field>
+                  <field name="TEXT">position: absolute;
+padding: 20px;
+background-color: #f44336;
+color: white;
+opacity: 1;
+transition: opacity 0.6s;
+left: 0px;
+right: 0px;
+bottom: 0px;
+font-family: sans-serif;
+text-align: center;</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text">
+                  <field name="TEXT">alert</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="setHTMLElemAttribute">
+                  <field name="ATTRIBUTE">style</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <block type="textMultiline">
+                      <field name="HIGHLIGHT_MODE">text</field>
+                      <field name="TEXT">font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;</field>
+                    </block>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text">
+                      <field name="TEXT">close_btn</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="eventHTMLElem">
+                      <field name="EVENT">click</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <shadow type="text">
+                          <field name="TEXT">close_btn</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="setHTMLElemStyle">
+                          <field name="PROPERTY">opacity</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="VALUE">
+                            <block type="text">
+                              <field name="TEXT">0</field>
+                            </block>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text">
+                              <field name="TEXT">alert</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="setTimeout">
+                              <value name="VALUE">
+                                <shadow type="math_number">
+                                  <field name="NUM">0.6</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="setHTMLElemStyle">
+                                  <field name="PROPERTY">opacity</field>
+                                  <field name="PARENT">FALSE</field>
+                                  <value name="VALUE">
+                                    <block type="text">
+                                      <field name="TEXT">none</field>
+                                    </block>
+                                  </value>
+                                  <value name="ID">
+                                    <shadow type="text">
+                                      <field name="TEXT">alert</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </next>
+</block>
+</category>
+<category name="Map Range">
+<block type="procedures_defreturn" xmlns="https://developers.google.com/blockly/xml">
+  <mutation>
+    <arg name="input_range_start" varid="6:EP=bld}4-(9{3q3uLw"/>
+    <arg name="input_range_end" varid="Okq8aCYJC})d]WmNLsY["/>
+    <arg name="result_range_start" varid="6GBQ}o5VUWaEODgJpz-t"/>
+    <arg name="result_range_end" varid="Jb8Zbx!5[%9/Ssy^(QUn"/>
+    <arg name="input_value" varid="T~8CLMM^QYSCS[~/b=?f"/>
+  </mutation>
+  <field name="NAME">map_range</field>
+  <comment h="80" pinned="false" w="160">Describe this function...</comment>
+  <statement name="STACK">
+    <block type="variables_set">
+      <field id="*:|Q(rD4ciC?*P4:ua)v" name="VAR">result_range</field>
+      <value name="VALUE">
+        <block type="math_arithmetic">
+          <field name="OP">DIVIDE</field>
+          <value name="A">
+            <shadow type="math_number">
+              <field name="NUM">2</field>
+            </shadow>
+            <block type="math_arithmetic">
+              <field name="OP">MINUS</field>
+              <value name="A">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get">
+                  <field id="Okq8aCYJC})d]WmNLsY[" name="VAR">input_range_end</field>
+                </block>
+              </value>
+              <value name="B">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get">
+                  <field id="6:EP=bld}4-(9{3q3uLw" name="VAR">input_range_start</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="B">
+            <shadow type="math_number">
+              <field name="NUM">2</field>
+            </shadow>
+            <block type="math_arithmetic">
+              <field name="OP">MINUS</field>
+              <value name="A">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get">
+                  <field id="Jb8Zbx!5[%9/Ssy^(QUn" name="VAR">result_range_end</field>
+                </block>
+              </value>
+              <value name="B">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get">
+                  <field id="6GBQ}o5VUWaEODgJpz-t" name="VAR">result_range_start</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set">
+          <field id="RBncUV|3mJ,xky/.{|vr" name="VAR">output_value</field>
+          <value name="VALUE">
+            <block type="math_arithmetic">
+              <field name="OP">ADD</field>
+              <value name="A">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="math_arithmetic">
+                  <field name="OP">DIVIDE</field>
+                  <value name="A">
+                    <shadow type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="math_arithmetic">
+                      <field name="OP">MINUS</field>
+                      <value name="A">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get">
+                          <field id="T~8CLMM^QYSCS[~/b=?f" name="VAR">input_value</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="variables_get">
+                          <field id="6:EP=bld}4-(9{3q3uLw" name="VAR">input_range_start</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <shadow type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="variables_get">
+                      <field id="*:|Q(rD4ciC?*P4:ua)v" name="VAR">result_range</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <shadow type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="variables_get">
+                  <field id="6GBQ}o5VUWaEODgJpz-t" name="VAR">result_range_start</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+  </statement>
+  <value name="RETURN">
+    <block type="variables_get">
+      <field id="RBncUV|3mJ,xky/.{|vr" name="VAR">output_value</field>
+    </block>
+  </value>
+</block>
+</category>
+</xml>

@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <title>Verge3D WordPress插件 - Soft8Soft</title>
+  <meta charset="utf-8">
+  <meta name="description" content="设置和使用Verge3D WordPress插件，用于内容发布与电子商务。">
+  <base href="../../../">
+  <script src="page.js"></script>
+  <link type="text/css" rel="stylesheet" href="page.css">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+  </style>
+
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/introduction/Wordpress-Plugin.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D WordPress插件 - Soft8Soft">
+            <meta property="og:description" content="设置和使用Verge3D WordPress插件，用于内容发布与电子商务。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/introduction/Wordpress-Plugin.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D WordPress插件 - Soft8Soft">
+            <meta name="twitter:description" content="设置和使用Verge3D WordPress插件，用于内容发布与电子商务。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/app.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/update_app.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/send_load_puzzles.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/order_form.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/orders.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/wordpress/settings.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+
+<body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav>
+  <article>
+    <h1>WordPress插件</h1>
+
+    <p>Verge3D附带了一个用于WordPress的插件，WordPress是目前使用的最流行的内容管理系统(CMS)（全球安装量超过6000多万）。</p>
+    <p>Verge3D for WordPress插件提供以下功能：</p>
+    <ul>
+      <li>应用托管和发布（嵌入）。</li>
+      <li>与WooCommerce系统集成。</li>
+      <li>持久文件存储。</li>
+      <li>用于处理客户订单的通用电子商务系统，使用 <a href="manual/zh/puzzles/ECommerce.html#place_order" target="_parent">place order</a>
+        拼图提交数据。</li>
+      <li>可完全自定义的电子商务系统，用于处理以JSON格式提交的订单 <a href="manual/zh/puzzles/Advanced.html#send_data" target="_parent">send
+          data</a> 拼图。</li>
+    </ul>
+    <p>这些特性可以相互独立地工作。例如，您可能只需要嵌入，或者您可以处理从其他地方托管的Verge3D应用（如Verge3D Network等）接收的命令。</p>
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Sandbox">插件沙箱</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Installation">安装</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Uploading_Applications">上传应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#WooCommerce">与WooCommerce整合</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Uploading_Files">上传文件</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Managing_Orders">管理订单</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Advanced_E_Commerce_Applications">高级电子商务应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Plug_in_Settings">插件设置</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Customizing_E_Commerce_Forms">定制电子商务表单</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#E_Commerce_Protocol_Specification">电子商务协议规范</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html#Got_Questions">遇到问题？</a></li></ul><!-- /TOC --> <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Sandbox" id="Sandbox" class="permalink">#</a></p>
+
+    <h2>插件沙箱</h2>
+
+    <p>要尝试插件的功能，请查看 <a href="https://sandbox.soft8soft.com" target="_blank">Verge3D for
+        WordPress沙盒</a>。它提供了一个安全的环境，您可以用来测试您的Verge3D应用。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Installation" id="Installation" class="permalink">#</a></p>
+
+    <h2 id="installation">安装</h2>
+
+    <p>在安装插件之前，请确保您至少安装了WordPress4.7或更新版本。要在服务器上上传应用，您需要有一个现代浏览器，如Google Chrome、Firefox、Edge或Safari11.1+。</p>
+
+    <p>安装方式很简单：</p>
+
+    <ul>
+      <li>在您的WordPress管理仪表板的插件设置页面上点击 <strong>Add New</strong> 。</li>
+      <li>在WordPress.org的官方 <a href="https://wordpress.org/plugins/verge3d/" target="_blank">存储库</a> 中找到Verge3D插件并安装。
+      </li>
+      <li>激活插件。<strong>Verge3D</strong> 菜单将显示在管理面板中。</li>
+    </ul>
+
+    <p>在某些情况下，您可能需要从Verge3D发行版手动安装插件（例如，当您想要尝试Verge3D预览版中提供的新特性时）。为此,请执行以下步骤：</p>
+    <ul>
+      <li>通过WordPress管理界面上传插件压缩包 <em>verge3d/wordpress/verge3d.zip</em> 。</li>
+      <li>在 <strong>插件</strong> 菜单中激活插件。<strong>Verge3D</strong> 菜单将显示在管理面板中。</li>
+    </ul>
+
+    <p>激活后，试着上传您的一些应用或创建一个测试命令，以验证插件是否按预期工作。</p>
+
+    <p class="note">
+      请注意，您的WordPress服务器配置可能有严格的上传限制。如果您在上传应用时遇到问题，您需要调整php.ini文件中的以下设置：
+
+      <code class=" prettyprint">
+        upload_max_filesize = 128M
+        post_max_size = 128M
+      </code>
+
+      查看官方 <a href="http://php.net/manual/en/ini.core.php" target="_blank">PHP文档</a> 有关php.ini配置的更多信息。
+    </p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Uploading_Applications" id="Uploading_Applications" class="permalink">#</a></p>
+
+    <h2>上传应用</h2>
+
+    <p>使用 <strong>Applications</strong> 管理菜单查看 <strong>Verge3D应用</strong> 界面：</p><img src="files/wordpress/app.png">
+    <p>要上传您的应用，请单击应用的标题下的 <strong>Edit</strong> ，并在 <strong>Update Verge3D Application</strong> 表单中单击 <strong>Choose
+        Files</strong> ：</p><img src="files/wordpress/update_app.png" style="max-width: 819px;">
+    <p>在此表单中，您还可以配置应用的iframe（画布）大小，并设置是否允许使用全屏模式。</p>
+    <p>要在WordPress页面/文章中嵌入Verge3D应用，请使用以下短代码：</p>
+
+    <code>[verge3d id="YOUR_APP_ID"]</code>
+
+    <p>其中 <em>your_app_id</em> 是 <strong>Verge3D Applications</strong> 页面中显示的应用ID。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#WooCommerce" id="WooCommerce" class="permalink">#</a></p>
+
+    <h2>与WooCommerce整合</h2>
+
+    <p>WooCommerce是一套流行的电子商务系统，它驱动了互联网中28%以上的在线商店。从版本2.16开始，Verge3D通过WordPress插件和 <a href="manual/zh/puzzles/ECommerce.html">e-commerce拼图</a>提供了与WooCommerce的无缝集成。</p>
+
+    <p>请参阅 <a href="https://www.soft8soft.com/making-3d-product-configurator-for-woocommerce/" target="_blank">此教程文章</a>
+      中介绍的电商功能特性。您还可以查看此教学 <a href="https://www.youtube.com/watch?v=dJdUKwSxA8c" target="_blank">视频</a>。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Uploading_Files" id="Uploading_Files" class="permalink">#</a></p>
+
+    <h2>上传文件</h2>
+
+    <p>此特性允许用户持久存储在Verge3D应用中创建的内容，例如屏幕截图、上传的纹理和保存的配置等。</p>
+
+    <p>要向服务器上传文件，请使用下面的REST API方法：</p><code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/upload_file/
+</code>
+
+    <p>其中HOSTNAME是WordPress服务器的主机名，例如 <em>sandbox.soft8soft.com</em></p>
+
+    <p>成功后，此方法返回以下JSON文件，其中包含上传文件的信息：</p>
+
+    <code>
+      {
+          "id": THE_ID_OF_THE_UPLOADED_FILE,
+          "link": LINK_TO_THE_UPLOADED_FILE,
+          "size": FILE_SIZE
+      }
+    </code>
+
+    <p>使用请求中提供的链接或使用ID与 <em>get_file</em> REST API方法来检索文件：</p>
+    
+    <code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/get_file/ID</code>
+
+    <h3>使用拼图</h3>
+
+    <p>使用 <strong>send data</strong> 和 <strong>loaded data</strong> 拼图来上传文件。使用 <strong>in dict ... get key ...</strong>
+      拼图解析API响应的JSON字段。</p>
+    <p>在下面的示例中，将用户在“opened file”拼图中指定的文件上载到Soft8Soft沙箱中，然后把web地址保存到 <strong>link</strong> 变量里：</p><img src="files/wordpress/send_load_puzzles.png">
+    <p>若要检索/下载文件，请使用 <strong>load data</strong> 和 <strong>loaded data</strong> 拼图。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Receiving_Basic_Orders" id="Receiving_Basic_Orders" class="permalink">#</a></p>
+
+    <h2>接收基础订单</h2>
+
+    <p>要处理Verge3D应用中由 <strong>place order</strong> 拼图生成的订单,在您的WordPress页面/文章中使用以下短代码添加一个订单表单：</p>
+
+    <code>[verge3d_order]</code>
+
+    <p>然后将指向该页面/应用的链接指定为“place order”拼图的“send to”参数。每次执行此拼图时，您的应用都会将用户重定向到您的订单表单：</p><img src="files/wordpress/order_form.png" style="max-width: 500px;">
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Managing_Orders" id="Managing_Orders" class="permalink">#</a></p>
+
+    <h2>管理订单</h2>
+
+    <p>使用 <strong>E-Commerec</strong> 管理菜单来访问 <strong>E-Commerce Orders</strong> 页面：</p><img src="files/wordpress/orders.png">
+    <p>此列表中的订单会在接收到来自Verge3D应用的请求时自动创建。您可以使用此屏幕查看和管理客户订单。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Advanced_E_Commerce_Applications" id="Advanced_E_Commerce_Applications" class="permalink">#</a></p>
+
+    <h2>高级电子商务应用</h2>
+
+    <p>在某些情况下，您可能希望扩展电子商务系统的功能。例如，如果您开发了3D配置器，或者需要从客户端获得更多信息以正确处理订单，则需要向请求添加更多数据，并在服务器上处理这些数据。对于这种情况，您需要使用“send
+      data”拼图将数据编码为JSON格式，然后为您的电子商务系统创建自定义模板表单。</p>
+
+    <p>假设您想创建一个基本的表单定制器。以下是数据的外观：</p>
+
+    <code>
+      {
+          "width": 120,
+          "length": 150,
+          "height": 100,
+          "color": "Redwood",
+          "title": "Custom Table",
+          "price" 100,
+          "user_name", "John Smith",
+          "user_email", "john.smith@example.com",
+          "user_phone", "+123456789"
+      }
+    </code>
+
+    <p>您可以使用<b>字典拼图</b>来组合这个结构，然后使用“send
+      Data”拼图将其发送到服务器。之后，您需要为订单管理管理页面创建自定义模板，以及将发送给客户和销售人员的电子邮件。为此，请将以下模板源文件复制到 <em>verge3d</em> 子目录：</p>
+
+    <code class="language-html">
+        WORDPRESS/wp-content/plugins/verge3d/templates/order_admin_form.php -&gt; THEME/verge3d
+        WORDPRESS/wp-content/plugins/verge3d/templates/order_email_body.php -&gt; THEME/verge3d
+    </code>
+
+
+    <p>其中WORDPRESS是WordPress安装的根目录,而THEME是当前主题的目录。根据为您的订单指定的结构编辑这些文件。</p>
+
+    <p>最后一部分是为您的“send data”拼图分配一个适当的URL。类似这样：</p>
+
+    <code class="language-html">https://HOSTNAME/wp-json/verge3d/v1/place_order/
+</code>
+
+
+    <p>其中HOSTNAME是WordPress服务器的主机名，例如 <em>sandbox.soft8soft.com</em></p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Plug_in_Settings" id="Plug_in_Settings" class="permalink">#</a></p>
+
+    <h2>插件设置</h2>
+
+    <p>使用 <strong>Settings</strong> 管理菜单修改插件全局设置：</p><img src="files/wordpress/settings.png">
+    <p><strong>Order notification e-mail</strong> 选项用于指定负责管理订单的人员的电子邮件地址。当客户下新订单时，您将在此电子邮件上收到有关此订单的通知。</p>
+    <p><strong>Order e-mail "From"</strong> 选项用于指定负责与客户通信的人员/组织的名称/电子邮件。这可以是销售经理的电子邮件，比如
+      <em>sales@yourcompany.com</em> 或只是一个无回复地址,如 <em>noreply@yourcompany.com</em>.
+    </p>
+    <p><strong>Order e-mail PDF attachments</strong> 选项用于在您的订单电子邮件中启用PDF附件。此附件包含了可打印的订单内容。</p>
+    <p>要正确使用此功能，您需要在服务器上安装Chrome/Chromium浏览器。它将在被称为 <a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank">headless mode</a>
+      中执行将HTML订单转换为PDF格式的操作。如果您在某个自定义目录中安装了Chrome/Chromium可执行文件,请指定路径；如果时安装在系统默认路径,可将路径字段留空。</p>
+    <p>请注意，要安装Chrome到系统默认路径，您需要对服务器具有管理员访问权限。如果没有，请下载 <a href="https://www.chromium.org/getting-involved/download-chromium" target="_blank">最新的Chromium版本</a>，将其解包到服务器上的某个用户可访问的目录中，然后在path字段中指定到Chromium可执行文件的路径（例如
+      <em>/home/ubuntu/chrome-linux/chrome）</em>.
+    </p>
+
+    <p><strong>Enable REST APIs</strong> 选项用于启用或禁用插件提供的订单管理和持久文件存储API。</p>
+    <p><strong>跨域请求(Cross-domain requests)</strong> 选项用于启用或禁用对插件提供的REST API的跨域请求（源自不同主机）。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Customizing_E_Commerce_Forms" id="Customizing_E_Commerce_Forms" class="permalink">#</a></p>
+
+    <h2>定制电子商务表单</h2>
+
+    <p>若要修改电子商务表单，请复制位于Verge3D插件目录的 <em>template</em> 到WordPress主题目录下 <em>verge3d</em> 子目录。</p>
+
+    <p>例如，如果需要修改订单电子邮件模板：</p><code class="language-html">WORDPRESS/wp-content/plugins/verge3d/templates/order_email_body.php -&gt; THEME/verge3d
+</code>
+
+    <p>其中WORDPRESS是WordPress安装的根目录,而THEME是当前主题的目录。</p>
+
+    <p>下面是可以自定义的模板列表：</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>模板文件</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>order_admin_form.php</td>
+        <td>WordPress管理仪表板上的订单管理表单。</td>
+        
+      </tr><tr>
+        <td>order_email_body.php</td>
+        <td>订单电子邮件正文模板。此模板用于发送给您和客户的订单通知。</td>
+        
+      </tr><tr>
+        <td>order_email_pdf.php</td>
+        <td>订购电子邮件PDF附件模板。此模板用于生成即将被转化为订单邮件中PDF格式附件的HTML文件。</td>
+        
+      </tr><tr>
+        <td>order_form.php</td>
+        <td>订单表单模板。此表单将在 <strong>
+
+            [verge3d_order]
+
+          </strong> 短代码所在页面中显示给客户：</td>
+        
+      </tr><tr>
+        <td>order_success.php</td>
+        <td>接受订单时显示的消息。</td>
+      </tr>
+      <tr>
+        <td>order_failed.php</td>
+        <td>拒绝订单时显示的消息。</td>
+        
+    </tr></tbody></table>
+
+    <h3>安全措施</h3>
+
+    <p>在为电子商务应用使用自定义表单时，请确保正确地转义客户发送的输出数据。参见此 <a href="https://developer.wordpress.org/plugins/security/securing-output/" target="_blank">指南</a> 了解更多信息。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#E_Commerce_Protocol_Specification" id="E_Commerce_Protocol_Specification" class="permalink">#</a></p>
+
+    <h2>电子商务协议规范</h2>
+
+    <p class="note">本节针对具有高级服务器端编程经验的用户。</p>
+
+    <p>“place order”拼图使用基础协议处理订单。使用带有如下参数的HTTP POST请求，将订单从浏览器发送到服务器：</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>POST参数</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>v3d_title</td>
+        <td>订单标题。此字段用于描述订单。此处数值对客户没有用处，仅对负责处理订单的人员有意义。</td>
+      </tr>
+      <tr>
+        <td>v3d_content</td>
+        <td>订单内容。此文本字段包括完整的订单信息，并且对客户和销售经理都可见。</td>
+      </tr>
+      <tr>
+        <td>v3d_price</td>
+        <td>订单总价。它可以是一个数字或字符串，例如99、99.99、“$99.99”。</td>
+      </tr>
+      <tr>
+        <td>v3d_screenshot</td>
+        <td>订单截图。此可选值必须是表示图像的数据URI。此值由 <strong>HTMLCanvasElement.toDataURL()</strong> 方法生成。</td>
+      </tr>
+    </tbody></table><br>
+    <p>更高级的基于JSON的协议使用以下一组默认参数：</p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <th>JSON字段</th>
+        <th>说明</th>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>订单标题。此字段用于描述订单。此处数值对客户没有用处，仅对负责处理订单的人员有意义。</td>
+      </tr>
+      <tr>
+        <td>price</td>
+        <td>订单总价。它可以是一个数字或字符串，例如99、99.99、“$99.99”。</td>
+      </tr>
+      <tr>
+        <td>user_name</td>
+        <td>客户的全名。</td>
+      </tr>
+      <tr>
+        <td>user_email</td>
+        <td>客户的电子邮件地址。</td>
+      </tr>
+      <tr>
+        <td>user_phone</td>
+        <td>客户的电话号码。</td>
+      </tr>
+      <tr>
+        <td>user_comment</td>
+        <td>订购备注。</td>
+      </tr>
+      <tr>
+        <td>screenshot</td>
+        <td>订单截图。此可选值必须是表示图像的数据URI。此值由 <strong>HTMLCanvasElement.toDataURL()</strong> 方法生成。</td>
+      </tr>
+    </tbody></table><br>
+    <p>由于此协议是可扩展的，您可以添加任何您想要的参数，如附加配置选项、产品属性、送货地址、帐单信息、税项、折扣等。</p>
+
+    <p><a href="manual/zh/introduction/Wordpress-Plugin.html#Got_Questions" id="Got_Questions" class="permalink">#</a></p>
+
+    <h2>遇到问题？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+
+  </article>
+
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

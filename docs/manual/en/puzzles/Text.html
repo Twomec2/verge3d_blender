@@ -1,0 +1,699 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Text Puzzles Reference - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Text puzzles provide means for various operations with text in your Puzzles scenario.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/puzzles/Text.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Text Puzzles Reference - Soft8Soft">
+            <meta property="og:description" content="Text puzzles provide means for various operations with text in your Puzzles scenario.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/puzzles/Text.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Text Puzzles Reference - Soft8Soft">
+            <meta name="twitter:description" content="Text puzzles provide means for various operations with text in your Puzzles scenario.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-example3.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-text-multiline.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-create-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-create-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-append-text.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-append-text-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-replace.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-replace-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-reverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-reverse-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-length.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-length-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-is-empty.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-is-empty-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-find.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-find-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-letter.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-letter-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-region.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-get-region-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-adjust-case.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-adjust-case-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-trim-spaces.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-trim-spaces-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-count.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-count-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-new-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-convert-to-number.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-convert-to-number-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-prompt.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-text-prompt-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce_Plugin">E-Commerce Plugin</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Text Puzzles</h1>
+
+    <p>
+    Text puzzles provide means for various operations with text in your Puzzles scenario.
+    </p>
+
+    <img src="files/puzzles/puzzles-text.jpg" style="max-width: 1000px">
+
+    <h2>Contents</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/puzzles/Text.html#puzzles_reference">Puzzles Reference</a><ul><li><a href="manual/en/puzzles/Text.html#text">text</a></li><li><a href="manual/en/puzzles/Text.html#text_multiline">text multi-line</a></li><li><a href="manual/en/puzzles/Text.html#create_text">create text</a></li><li><a href="manual/en/puzzles/Text.html#append_text">append text</a></li><li><a href="manual/en/puzzles/Text.html#replace">replace</a></li><li><a href="manual/en/puzzles/Text.html#reverse">reverse</a></li><li><a href="manual/en/puzzles/Text.html#length">length</a></li><li><a href="manual/en/puzzles/Text.html#is_empty">is empty</a></li><li><a href="manual/en/puzzles/Text.html#find">find</a></li><li><a href="manual/en/puzzles/Text.html#get_letter">get letter</a></li><li><a href="manual/en/puzzles/Text.html#get_region">get region</a></li><li><a href="manual/en/puzzles/Text.html#adjust_case">adjust case</a></li><li><a href="manual/en/puzzles/Text.html#trim_spaces">trim spaces</a></li><li><a href="manual/en/puzzles/Text.html#count">count</a></li><li><a href="manual/en/puzzles/Text.html#new_line">new line</a></li><li><a href="manual/en/puzzles/Text.html#convert_to_number">convert to number</a></li><li><a href="manual/en/puzzles/Text.html#prompt">prompt</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/puzzles/Text.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Puzzles Reference</h2>
+
+
+    <p><a href="manual/en/puzzles/Text.html#text" id="text" class="permalink">#</a></p>
+
+    <h3>text</h3>
+
+    <p>
+    This universally used puzzle provides the means to supply some text (a character, word or line) to your Puzzles scenario.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-text.jpg" style="max-width: 1000px">
+
+    <p>
+    The text puzzle is often used with puzzles from different categories. Particularly, you can specify URL inputs to <a href="manual/en/puzzles/Scenes.html">scene loader puzzles</a>, HTML element ids, CSS rules and colors to <a href="manual/en/puzzles/HTML.html">HTML puzzles</a>, and ids and URLs to some other puzzles.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-text-example2.jpg" style="max-width: 1000px">
+
+    <p>
+    This puzzle can also be used to provide names for objects, materials, animations or groups instead of the relevant <a href="manual/en/puzzles/Selectors.html">selector puzzles</a>, which may come in handy for dynamically loaded content.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-text-example.jpg" style="max-width: 1000px">
+
+    <p>
+    Finally, some puzzles are configurable to provide textual input instead of the default dropdown menu which is also useful in the case of dynamically loaded scenes.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-text-example3.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#text_multiline" id="text_multiline" class="permalink">#</a></p>
+
+    <h3>text multi-line</h3>
+
+    <p>
+        This puzzle provides the means to supply some text to your Puzzles
+        scenario. The puzzle uses <a href="https://ace.c9.io/">Ace Editor</a>
+        for displaying and editing the content. See the relevant keyboard
+        shortcuts here: <a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts">Default Keyboard Shortcuts</a>.
+    </p>
+
+    <p>
+        The puzzle supports CSS, HTML, Javascript and plain text highlighting
+        modes, which can be switched on the fly.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-text-multiline.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#create_text" id="create_text" class="permalink">#</a></p>
+
+    <h3>create text</h3>
+
+    <p>
+    This puzzle allows you to combine (concatenate) 2 or more pieces of text into a single line. If you provide non-textual values such as numbers, they will be automatically converted to text. Additional inputs are added by dragging an <strong>item</strong> block from the gray toolbox on the left into the <strong>join</strong> block.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-create-text.jpg" style="max-width: 1000px">
+
+    <p>
+    Example: create an annotation composed of some text and the object name.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-create-text-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#append_text" id="append_text" class="permalink">#</a></p>
+
+    <h3>append text</h3>
+
+    <p>
+    This puzzle adds the given text to the specified <a href="manual/en/puzzles/Variables.html">variable</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-append-text.jpg" style="max-width: 1000px">
+
+    <p>
+    Example: create an annotation composed of some text and the object name.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-append-text-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#replace" id="replace" class="permalink">#</a></p>
+
+    <h3>replace</h3>
+
+    <p>
+    This puzzle searches for the given piece of text and replaces it with the specified piece of text wherever it finds it (case-sensitive).
+    </p>
+
+    <img src="files/puzzles/puzzles-text-replace.jpg" style="max-width: 1000px">
+
+    <p>
+    Examples:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-replace-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#reverse" id="reverse" class="permalink">#</a></p>
+
+    <h3>reverse</h3>
+
+    <p>
+    This puzzle reverses the given piece of text.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-reverse.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-reverse-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/en/puzzles/Text.html#length" id="length" class="permalink">#</a></p>
+
+    <h3>length</h3>
+
+    <p>
+    This puzzle counts the number of characters in the specified text.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-length.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-length-example.jpg" style="max-width: 1000px">
+
+
+
+    <p><a href="manual/en/puzzles/Text.html#is_empty" id="is_empty" class="permalink">#</a></p>
+
+    <h3>is empty</h3>
+
+    <p>
+    This puzzle checks whether the given text is empty (has length 0). The result is <strong>true</strong> if this is the case and <strong>false</strong> if not. For using with <a href="manual/en/puzzles/Logic.html">Logic</a> puzzles.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-is-empty.jpg" style="max-width: 1000px">
+
+    <p>
+    Examples:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-is-empty-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#find" id="find" class="permalink">#</a></p>
+
+    <h3>find</h3>
+
+    <p>
+    This puzzle can be used to check whether a piece of text is in another piece of text and, if so, where it appears. If the text was found, it returns its position (characters in text are indexed starting from 0). If the text was not found, the puzzle returns -1.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-find.jpg" style="max-width: 1000px">
+
+    <p>
+    Examples:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-find-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#get_letter" id="get_letter" class="permalink">#</a></p>
+
+    <h3>get letter</h3>
+
+    <p>
+    This puzzle extracts the character from the specified position (characters in text are indexed starting from 0).
+    </p>
+
+    <img src="files/puzzles/puzzles-text-get-letter.jpg" style="max-width: 1000px">
+
+    <p>
+    Examples:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-get-letter-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#get_region" id="get_region" class="permalink">#</a></p>
+
+    <h3>get region</h3>
+
+    <p>
+    This puzzle allows a region of text between two specified positions to be extracted (characters in text are indexed starting from 0).
+    </p>
+
+    <img src="files/puzzles/puzzles-text-get-region.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-get-region-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#adjust_case" id="adjust_case" class="permalink">#</a></p>
+
+    <h3>adjust case</h3>
+
+    <p>
+    This puzzle creates a version of the input text that is either UPPER CASE (all letters upper-case), lower case or Title Case (first letters upper-case, other letters lower-case). Non-alphabetic characters, and text in languages without case, such as Chinese, are not affected.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-adjust-case.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-adjust-case-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#trim_spaces" id="trim_spaces" class="permalink">#</a></p>
+
+    <h3>trim spaces</h3>
+
+    <p>
+    This puzzle can remove space characters from the beginning of the text, from the end of the text or from both sides of the text.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-trim-spaces.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-trim-spaces-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#count" id="count" class="permalink">#</a></p>
+
+    <h3>count</h3>
+
+    <p>
+    This puzzle counts how many times a piece of text appear in the specified text.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-count.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-count-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#new_line" id="new_line" class="permalink">#</a></p>
+
+    <h3>new line</h3>
+
+    <p>A newline character (also called "end of line" or "line break" character). Use this character inside the <a href="manual/en/puzzles/Text.html#create_text">create text</a> or <a href="manual/en/puzzles/Text.html#append_text">append text</a> puzzles to create multiline texts.</p>
+
+    <img src="files/puzzles/puzzles-text-new-line.jpg" style="max-width: 681px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#convert_to_number" id="convert_to_number" class="permalink">#</a></p>
+
+    <h3>convert to number</h3>
+
+    <p>
+    This puzzle tries to convert the specified text to number, so that the obtained value can be used as input for numeric operations. If conversion fails, returns 0.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-convert-to-number.jpg" style="max-width: 1000px">
+
+    <p>
+    Examples:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-convert-to-number-example.jpg" style="max-width: 1000px">
+
+
+    <p><a href="manual/en/puzzles/Text.html#prompt" id="prompt" class="permalink">#</a></p>
+
+    <h3>prompt</h3>
+
+    <p>
+    This puzzle creates a pop-up window with an input field. The execution chain pauses until the user clicks OK or Cancel buttons, after which the puzzle returns the input value.
+    </p>
+
+    <img src="files/puzzles/puzzles-text-prompt.jpg" style="max-width: 1000px">
+
+    <p>
+    Example:
+    </p>
+
+    <img src="files/puzzles/puzzles-text-prompt-example.jpg" style="max-width: 1000px">
+
+
+    <h2>Having Troubles with Puzzles?</h2>
+
+    <p>Seek help on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

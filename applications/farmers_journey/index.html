@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Thu Aug 02 2018 07:21:55 GMT+0000 (UTC)  -->
+<html data-wf-page="5afee932a7255bd7ec1d09b1" data-wf-site="5afee932a7255be3b01d09b0">
+<head>
+  <meta charset="utf-8">
+  <title>Farmer&#x27;s Journey, an engaging WebGL game based on the Verge3D engine - Soft8Soft</title>
+
+
+  <meta content="Enjoy this interactive game made with open-source software and state-of-the art 3D web technology provided by Verge3D framework. Appealing graphics, interactivity and sound - all of this was created using a completely code-less approach." name="description">
+  <meta content="Farmer&#x27;s Journey, an engaging WebGL game based on the Verge3D engine - Soft8Soft" property="og:title">
+  <meta content="Enjoy this interactive game made with open-source software and state-of-the art 3D web technology provided by Verge3D framework. Appealing graphics, interactivity and sound - all of this was created using a completely code-less approach." property="og:description">
+  <meta content="https://cdn.soft8soft.com/images/farmers_journery.jpg" property="og:image">
+  <meta content="summary" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/farmers-journey.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Changa One:400,400italic","Varela Round:400","Droid Sans:400,700","Varela:400"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="main-div w-clearfix">
+    <div class="html-embed w-embed w-iframe"><iframe src="farmers_journey.html" width="100%" height="100%" frameborder="0"></iframe></div>
+    <div id="help" class="help">
+      <div class="help-desk">
+        <div class="div-block-7">
+          <h1 class="help-header">What to DO?</h1>
+          <div class="help-discription">Simply collect the fruits as much as possible within the given time. Be advised that some of the fruits give you more score, but take away your time; while another give you additional time but less score.<br></div>
+          <div class="help-discription w-hidden-medium w-hidden-small w-hidden-tiny">Use <strong>arrows (← →)</strong> or <strong>A</strong> and <strong>D</strong> keys to move the character, drag with the mouse to view more.<br></div>
+        </div>
+        <div class="row w-row">
+          <div class="column-3 w-col w-col-4 w-col-small-4 w-col-tiny-4">
+            <h1 class="help-header">Fruits</h1><img src="images/apple_icon.png" class="help-image"><img src="images/pear_icon.png" class="help-image"><img src="images/cherry_icon.png" class="help-image"><img src="images/strawberry_icon.png" class="help-image"></div>
+          <div class="column-2 w-col w-col-4 w-col-small-4 w-col-tiny-4">
+            <h1 class="help-header">Score</h1>
+            <div class="text-block-2">2</div>
+            <div class="text-block-2">3</div>
+            <div class="text-block-2">5</div>
+            <div class="text-block-2">10</div>
+          </div>
+          <div class="column w-col w-col-4 w-col-small-4 w-col-tiny-4">
+            <h1 class="help-header">Time</h1>
+            <div class="text-block-2">+4</div>
+            <div class="text-block-2">+2</div>
+            <div class="text-block-2">-1</div>
+            <div class="text-block-2">-3</div>
+          </div>
+        </div>
+        <div class="div-block-8">
+          <h1 class="help-header">Credits and Special Thanks</h1>
+          <div class="help-discription">This game was made with the <a href="https://www.soft8soft.com/" target="_blank">Verge3D</a> engine using <a href="https://www.blender.org/" target="_blank">Blender</a>, <a href="https://www.autodesk.com/" target="_blank">3ds Max</a>, <a href="https://www.autodesk.ru/products/maya/overview" target="_blank">Maya</a>, <a href="https://webflow.com/?rfsn=3441118.131f06" target="_blank">Webflow</a>, <a href="https://krita.org/" target="_blank">Krita</a>, <a href="https://www.gimp.org/" target="_blank">Gimp</a> and <a href="https://www.audacityteam.org/download/" target="_blank">Audacity</a>.<br> Character and some of the props based on concepts of <a href="https://www.artstation.com/nguyenvinh_artis" target="_blank">Vinh Nguyen</a> Thanks to <a href="http://freemusicarchive.org/music/Forget_the_Whale/">Forget the Whale</a> for the soundtrack.</div>
+        </div>
+      </div>
+    </div>
+    <div id="final_scores_bar" class="scores">
+      <div class="tiltle"><img src="images/title.png" class="title-image">
+        <div class="div-block-6 w-clearfix">
+          <h1 id="final_scores" class="text-block scores-text-block">0000</h1>
+          <h1 class="text-block final-score">Scores:</h1>
+        </div><a href="#" id="startagain_button" class="start-again-button w-button">Try Again</a></div>
+    </div>
+    <div id="locker" class="locker">
+      <div class="tiltle"><img src="images/title.png" class="title-image"><a href="#" id="startout_button" class="start-button w-button">Start Out</a></div>
+    </div>
+    <div id="top_left_bar" class="top-left-bar w-clearfix">
+      <div class="fruit-tab w-clearfix"><img src="images/apple_icon.png" class="fruit-image">
+        <div id="apple_count" class="text-block">00</div>
+      </div>
+      <div class="fruit-tab w-clearfix"><img src="images/pear_icon.png" class="fruit-image">
+        <div id="pear_count" class="text-block">00</div>
+      </div>
+      <div class="fruit-tab w-clearfix"><img src="images/cherry_icon.png" class="fruit-image">
+        <div id="cherry_count" class="text-block">00</div>
+      </div>
+      <div class="fruit-tab w-clearfix"><img src="images/strawberry_icon.png" class="fruit-image">
+        <div id="strawberry_count" class="text-block">00</div>
+      </div>
+      <div class="scores-tab w-clearfix">
+        <div class="text-block scores-block">Scores: </div>
+        <div id="scores" class="text-block">0</div>
+      </div>
+      <div class="scores-tab w-clearfix">
+        <div class="text-block scores-block">Time: </div>
+        <div id="time" class="text-block">0</div>
+      </div>
+    </div>
+    <div id="top_right_bar" class="top-right-bar w-clearfix"><a href="#" id="fullscreen_button" class="fullscreen-button w-button">‍</a><a href="#" id="help_button" class="help-button w-button">‍</a></div>
+    <div class="buttons w-hidden-main w-clearfix"><img src="images/button_right.png" id="button_right" class="image-2"><img src="images/button_left.png" id="button_left" class="image"></div>
+  </div>
+  <div id="progress_bar" class="progess-bar">
+    <div class="div-block-9">
+      <div class="div-block-11 w-clearfix">
+        <div id="apple_green" class="green-apple w-clearfix">
+          <div id="apple_red" class="red-apple"></div>
+        </div>
+      </div>
+      <div id="loading_percentage" class="loader-text">0%</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+</html>

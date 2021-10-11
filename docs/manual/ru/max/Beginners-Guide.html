@@ -1,0 +1,558 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для 3ds Max: Руководство для начинающих - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up 3ds Max for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/max/Beginners-Guide.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для 3ds Max: Руководство для начинающих - Soft8Soft">
+            <meta property="og:description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up 3ds Max for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/max/Beginners-Guide.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для 3ds Max: Руководство для начинающих - Soft8Soft">
+            <meta name="twitter:description" content="Get started with Verge3D and learn how to create interactive 3D web experiences from scratch. This guide covers using the app manager, setting up 3ds Max for effective graphics authoring, using the Puzzles environment to create interactive WebGL content without coding and publishing it with Verge3D Network.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/sneak-peek-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create-options.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-app-buttons-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-app-running.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-app-buttons-open-source-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/export-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/export-name-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-app-buttons-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/puzzles-editor.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-toolbox.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-toolbox2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-save.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-app-buttons-network.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-complete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/license-key-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-license-activation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/beginners-guide-max/app-manager-license-activated.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>Руководство для начинающих / 3ds Max</h1>
+
+    <p>
+    Verge3D - это универсальное программное обеспечение, которое вы можете использовать по-разному, в зависимости от ваших предпочтений. В этом руководстве описан только один из возможных способов построения рабочего процесса. Рассматривайте его как дружескую рекомендацию. Единственным условием является то, что вы должны иметь опыт работы с 3ds Max, поверх которого работает Verge3D.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/max/Beginners-Guide.html#Installation">Установка</a></li><li><a href="manual/ru/max/Beginners-Guide.html#Sneak_Peek">Sneak Peek</a></li><li><a href="manual/ru/max/Beginners-Guide.html#App_Manager">App Manager</a></li><li><a href="manual/ru/max/Beginners-Guide.html#Running_Your_App">Запуск приложения</a></li><li><a href="manual/ru/max/Beginners-Guide.html#Export">Экспорт</a></li><li><a href="manual/ru/max/Beginners-Guide.html#Puzzles">Пазлы</a></li><li><a href="manual/ru/max/Beginners-Guide.html#Publishing">Публикация</a></li><li><a href="manual/ru/max/Beginners-Guide.html#License_Key">Активация лицензии</a></li><li><a href="manual/ru/max/Beginners-Guide.html#whats_next">Что дальше?</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Installation" id="Installation" class="permalink">#</a></p>
+
+    <h2>Установка</h2>
+
+    <p>
+      Подробная информация об установке программы <a href="manual/ru/max/Installation.html">здесь</a>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Sneak_Peek" id="Sneak_Peek" class="permalink">#</a></p>
+
+    <h2>Sneak Peek</h2>
+
+    <p>
+      Чтобы убедиться, что Verge3D установлен правильно, вы можете визуализировать базовую модель в веб-браузере с помощью кнопки <strong>Sneak Peek</strong>. Эта функция выполнит экспорт во временную папку и запустит веб-браузер по умолчанию с вашей визуализацией. 
+    </p>
+
+    <img src="files/beginner_guide/sneak-peek-max.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+      Вы можете использовать * Sneak Peek * для быстрых тестов в любое время, когда работаете над своими проектами. 
+    </p>
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#App_Manager" id="App_Manager" class="permalink">#</a></p>
+
+    <h2>App Manager</h2>
+
+    <p>
+      Конечно, вы можете сначала начать работу с графикой, а позже создать проект Verge3D, но мы рекомендуем вам с самого начала привыкнуть к менеджеру приложений. Таким образом вы убедитесь, что ваши файлы правильно организованы и хранятся в одной папке, что важно для целостности проекта, особенно если вы планируете передать его третьим лицам. 
+    </p>
+
+    <p>
+      Еще одним преимуществом использования менеджера приложений является то, что у вас всегда будет работающее веб-приложение, которое вы можете запускать / перезагружать в браузере без необходимости сначала переходить к файлам сцены. 
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-main.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Менеджер приложений открывается в веб-браузере при нажатии кнопки <strong>App Manager</strong>. Будет запущен системный браузер по умолчанию (вы можете изменить его в настройках вашей ОС). Будет работать любой современный браузер, но мы рекомендуем последнюю версию <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>, которая является быстрой, совместима со стандартами и предлагает хорошие инструменты для веб-разработки. 
+    </p>
+
+    <img src="files/beginner_guide/app-manager-max.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+      Вы можете создать новый проект, используя кнопку на левой панели. 
+    </p>
+
+    <img src="files/app-manager/app-manager-create.jpg" class="centered" style="max-width: 569px">
+
+    <p>
+      Введите название проекта (или просто оставьте <i>my_awesome_app</i>) и нажмите <strong>Create App</strong>. Оставьте параметры конфигурации по умолчанию, как есть. 
+    </p>
+
+    <img src="files/app-manager/app-manager-create-options.jpg" class="centered" style="max-width: 522px">
+
+    <p>
+      Как только новое приложение будет создано, оно появится в списке. 
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Running_Your_App" id="Running_Your_App" class="permalink">#</a></p>
+
+    <h2>Запуск приложения</h2>
+
+    <p>
+    Вы можете запустить свое приложение в любое время, щелкнув по иконкам Verge3D, синей или зеленой. Синий значок запускает приложение в его окончательной форме со сценарием пазлов и программным кодом (если он есть). Зеленый значок открывает только экспортированную сцену. 
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-app-buttons-run.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+      После загрузки новое приложение отображает только куб. Вы можете вращать сцену, удерживая нажатой левую кнопку мыши и изменять масштаб с помощью колесика мыши. 
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-app-running.jpg" class="centered" style="max-width: 1000px">
+
+    <p class="note">
+      Если вместо куба отображается что-то вроде «This site can’t be reached», это означает, что сервер разработки не работает, вероятно, из-за того, что вы случайно закрыли первый запущенный экземпляр вашего 3D-редактора и сервер разработки вместе с ним. В этом случае вам следует запустить Blender или, если программа уже запущена, снова запустить App Manager. 
+    </p>
+
+    <p class="note">
+      Хотя это случается очень редко, может отображаться другое предупреждение: «Ouch! Your graphics card does not support WebGL.». Это может произойти, если вы используете устаревший или неподдерживаемый браузер, например Internet Explorer версии ниже 11, или ваша видеокарта и / или драйверы занесены браузером в черный список. Попробуйте установить последнюю версию Google Chrome / обновить ОС / загрузить последние версии драйверов или просто найдите другой компьютер для работы. 
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Export" id="Export" class="permalink">#</a></p>
+
+    <h2>Экспорт</h2>
+
+    <p>
+      Щелкнув по иконке <strong>3</strong> вы можете открыть основной файл <strong>.max</strong> вашего приложения.
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-app-buttons-open-source-file.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+      Файлы сохранения также можно открывать обычным образом через диалоговое окно "File &gt; Open" или просто дважды щелкнув по ним в папке приложения. "File &gt; Open" иногда может быть более эффективным, поскольку он не порождает новый экземпляр 3ds Max.
+    </p>
+
+    <p class="note">
+      Важно понимать, что приложение загружает только файлы, экспортированные в формате glTF, а не файлы сохранения 3ds Max. Поэтому, каждый раз, когда вы меняете что-то в исходном файле, вы должны экспортировать из него, чтобы увидеть измененную сцену в своем приложении. 
+    </p>
+
+    <p>
+      Экспорт можно выполнить из меню <strong>Verge3D</strong> на панели главного меню. Возможно, вы захотите назначить горячюю клавишу для этой операции, так как она выполняется довольно часто.
+    </p>
+
+    <img src="files/beginner_guide/export-max.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+      Экспортируйте свою сцену в корень соответствующей папки приложения в формате <strong>glTF</strong>.
+    </p>
+
+    <img src="files/beginner_guide/export-name-max.jpg" class="centered" style="max-width: 951px">
+
+    <p>
+      Чтобы протестировать, добавьте несколько чайников в свою сцену, экспортируйте в <strong>glTF</strong> и запустите приложение, щелкнув синюю иконку с логотипом Verge3D в менеджере приложений. 
+    </p>
+
+    <p class="note">
+      Для более быстрых действий вы можете всегда держать свое приложение запущенным на вкладке браузера. После повторного экспорта сцены нажмите «F5» на клавиатуре, чтобы она перезагрузилась в браузере. Используйте сочетание клавиш "Alt+Tab" ("Command+Tab" на Mac) для мгновенного переключения между Blender и браузером. 
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Puzzles" id="Puzzles" class="permalink">#</a></p>
+
+    <h2>Пазлы</h2>
+
+    <p>
+      До сих пор мы использовали Verge3D в качестве модного веб-экспортера, который генерирует живые трехмерные сцены, работающие в браузере. С помощью Puzzles, инструмента визуального создания сценариев Verge3D, вы можете добавлять сценарии поведения, чтобы ваша 3D-сцена стала по-настоящему интерактивным веб-приложением. 
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-app-buttons-puzzles.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+      Нажмите кнопку <strong>Puzzles</strong> рядом с названием приложения в менеджере приложений. Это запустит ваше приложение с прикрепленным к нему редактором пазлов. 
+    </p>
+
+    <img src="files/beginners-guide-max/puzzles-editor.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Слева расположена панель инструментов с некоторыми категориями ("Events", "Selectors", "Objects" и т.д.). Категории открываются щелчком мыши, показывая пазлы, которые вы можете перетащить в рабочую область. Соединяя <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">различные пазлы</a> между собой, вы можете создавать сценарии поведения 3D объектов с реакцией на действия пользователя.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-toolbox.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Чтобы потренироваться для начала, перетащите пазл <strong>when clicked</strong> из категории <strong>Events</strong> и пазл <strong>select an object</strong> из <strong>Selectors</strong>
+    </p>
+
+    <img src="files/beginner_guide/puzzles-toolbox2.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      После объединения, приложение будет ждать клика пользователя по объекту, который был указан в раскрывающемся меню (например, "Cube"). При этом никакого действия в ответ происходить не будет, пока вы не добавите что-то в слот <strong>do</strong>. 
+    </p>
+
+    <img src="files/beginner_guide/puzzles-example.jpg" class="centered" style="max-width: 500px">
+
+    <p>
+      Перенесите пазл <strong>hide</strong> из <strong>Objects</strong> и вставьте его в этот слот. Перенесите еще один пазл с селектором объектов и вставьте его в <strong>hide</strong>.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-example2.jpg" class="centered" style="max-width: 500px">
+
+    <p>
+      Теперь, когда пользователь кликнет по 3D объекту, он исчезнет. Нажмите кнопку <strong>Run</strong>, чтобы запустить программу. Для проверки, щелкните по кубу.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-run.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Чтобы сделать сценарий постоянной частью приложения, обязательно сохраните его.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-save.jpg" class="centered" style="max-width: 1000px">
+
+    <p>
+      Закончив с пазлами, вы можете запустить интерактивное приложение, используя синюю иконку в App Manager.
+    </p>
+
+    <p class="note">Поздравляем, вы стали программистом!</p>
+
+    <p>
+      Вы также можете посмотреть <a href="https://www.youtube.com/watch?v=Jsfqd9CIwqQ" target="_blank">видео</a>, где объясняется работа с пазлами.
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#Publishing" id="Publishing" class="permalink">#</a></p>
+
+    <h2>Публикация</h2>
+
+    <h3>На вашем собственном сайте...</h3>
+
+    <p>
+      Вы создали веб-приложение и, вероятно, хотите, чтобы миллиарды пользователей Интернета пришли и оценили его. Если у вас есть веб-сайт, то это не будет проблемой. Загрузите всю папку с приложением на свой сервер (например, через FTP). Теперь вы можете выложить ссылку на HTML-файл приложения на веб-сайте или встроить ее с помощью HTML-элемента <strong>iframe</strong>: 
+    </p>
+
+    <code>
+      &lt;iframe width="1024" height="640" src="https://www.example.com/my_awesome_app/my_awesome_app.html"&gt;&lt;/iframe&gt;
+    </code>
+
+    <h3>Использование WordPress...</h3>
+
+    <p>
+      Задача упрощается, если вы используете CMS WordPress для своего сайта. Используйте бесплатный плагин WordPress для загрузки и встраивания приложения Verge3D.
+    </p>
+
+    <h3>При помощи Verge3D Network...</h3>
+
+    <p>
+      Но что, если у вас не было возможности стать веб-мастером? Нет проблем, нажав кнопку в менеджере приложений, вы можете загрузить программу в <a href="https://www.soft8soft.com/verge3d-network/" target="_blank">Verge3D Network</a>, облачное хранилище и CDN, размещенные на серверах Amazon. 
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-app-buttons-network.jpg" class="centered" style="max-width: 800px">
+
+    <p>
+      После завершения загрузки, появится окно с прямой ссылкой, которой вы можете поделиться любыми способами (в сообщении в блоге, социальных сетях, комментариях, электронной почте и прочее). Также сгенерируется HTML-код для встраивания приложения на сторонние веб-сайты, как вы делаете это с видео на YouTube. 
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-complete.jpg" class="centered" style="max-width: 642px">
+
+    <p>
+      Посмотрите это <a href="https://www.youtube.com/watch?v=d5cPnnblV30" target="_blank">видео</a> о публикации приложения в Verge3D Network. 
+    </p>
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#License_Key" id="License_Key" class="permalink">#</a></p>
+
+    <h2>Активация лицензии</h2>
+
+    <p>
+      Вы можете тестировать ознакомительную версию без ограничений по времени. Однако для использования в продакшене вам потребуется лицензия. Информация о лицензии отправляется по электронной почте (ключ ниже является случайным примером). 
+    </p>
+
+    <img src="files/beginners-guide-max/license-key-example.jpg" class="centered" style="max-width: 900px">
+
+    <img src="files/beginners-guide-max/app-manager-license-activation.jpg" class="centered" style="max-width: 1000px">
+
+
+    <p>
+      Лицензионный ключ активирует ваш экземпляр Verge3D и удалит водяной знак со всех приложений.
+    </p>
+
+    <img src="files/beginners-guide-max/app-manager-license-activated.jpg" class="centered" style="max-width: 476px">
+
+    <p class="note">Каждый раз, после обновления до новой версии, вам потребуется вводить лицензионный ключ.</p>
+
+
+    <p><a href="manual/ru/max/Beginners-Guide.html#whats_next" id="whats_next" class="permalink">#</a></p>
+
+    <h2>Что дальше?</h2>
+
+    <p>
+      Перейдите к главе <a href="manual/ru/introduction/Workflow.html">Рабочий процесс</a>, чтобы получить более подробное руководство по использованию Verge3D. 
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

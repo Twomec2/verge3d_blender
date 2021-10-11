@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="utf-8">
+    <title>App - Verge3D 用户手册 - Soft8Soft</title>
+    <meta name="description" content="App是使用JavaScript创建和管理3D应用程序的主类。">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/zh/extras/App.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="App - Verge3D 用户手册 - Soft8Soft">
+            <meta property="og:description" content="App是使用JavaScript创建和管理3D应用程序的主类。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/zh/extras/App.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="App - Verge3D 用户手册 - Soft8Soft">
+            <meta name="twitter:description" content="App是使用JavaScript创建和管理3D应用程序的主类。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="api/zh/index.html">开发者参考</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>程序员指南</h2><ul id="程序员指南"><li><a href="manual/zh/programmers_guide/Developer-Kit.html" id="程序员指南_开发者套件">开发者套件</a></li><li><a href="manual/zh/programmers_guide/Programming-basics.html" id="程序员指南_编程基础">编程基础</a></li><li><a href="manual/zh/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="程序员指南_与React.js/Vue.js集成">与React.js/Vue.js集成</a></li><li><a href="manual/zh/programmers_guide/Matrix-transformations.html" id="程序员指南_矩阵变换">矩阵变换</a></li><li><a href="manual/zh/programmers_guide/Animation-system.html" id="程序员指南_动画系统">动画系统</a></li><li><a href="manual/zh/programmers_guide/Drawing-lines.html" id="程序员指南_画线">画线</a></li><li><a href="manual/zh/programmers_guide/How-to-update-things.html" id="程序员指南_更新内容">更新内容</a></li><li><a href="manual/zh/programmers_guide/How-to-obtain-Verge3D-sources.html" id="程序员指南_如何获取资源">如何获取资源</a></li></ul></div><div><h2>动画</h2><ul id="动画"><li><a href="api/zh/animation/AnimationAction.html" id="动画_AnimationAction">AnimationAction</a></li><li><a href="api/zh/animation/AnimationClip.html" id="动画_AnimationClip">AnimationClip</a></li><li><a href="api/zh/animation/AnimationMixer.html" id="动画_AnimationMixer">AnimationMixer</a></li><li><a href="api/zh/animation/AnimationObjectGroup.html" id="动画_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/zh/animation/AnimationUtils.html" id="动画_AnimationUtils">AnimationUtils</a></li><li><a href="api/zh/animation/KeyframeTrack.html" id="动画_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/zh/animation/PropertyBinding.html" id="动画_PropertyBinding">PropertyBinding</a></li><li><a href="api/zh/animation/PropertyMixer.html" id="动画_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>动画 / 轨道</h2><ul id="动画_/_轨道"><li><a href="api/zh/animation/tracks/BooleanKeyframeTrack.html" id="动画_/_轨道_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/ColorKeyframeTrack.html" id="动画_/_轨道_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/NumberKeyframeTrack.html" id="动画_/_轨道_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/QuaternionKeyframeTrack.html" id="动画_/_轨道_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/StringKeyframeTrack.html" id="动画_/_轨道_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/zh/animation/tracks/VectorKeyframeTrack.html" id="动画_/_轨道_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>应用</h2><ul id="应用"><li><a href="api/zh/extras/App.html" id="应用_App">App</a></li><li><a href="api/zh/extras/AppUtils.html" id="应用_AppUtils">AppUtils</a></li></ul></div><div><h2>音频</h2><ul id="音频"><li><a href="api/zh/audio/Audio.html" id="音频_Audio">Audio</a></li><li><a href="api/zh/audio/AudioAnalyser.html" id="音频_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/zh/audio/AudioContext.html" id="音频_AudioContext">AudioContext</a></li><li><a href="api/zh/audio/AudioListener.html" id="音频_AudioListener">AudioListener</a></li><li><a href="api/zh/audio/PositionalAudio.html" id="音频_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>摄影机</h2><ul id="摄影机"><li><a href="api/zh/cameras/ArrayCamera.html" id="摄影机_ArrayCamera">ArrayCamera</a></li><li><a href="api/zh/cameras/Camera.html" id="摄影机_Camera">Camera</a></li><li><a href="api/zh/cameras/CubeCamera.html" id="摄影机_CubeCamera">CubeCamera</a></li><li><a href="api/zh/cameras/OrthographicCamera.html" id="摄影机_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/zh/cameras/PerspectiveCamera.html" id="摄影机_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/zh/cameras/StereoCamera.html" id="摄影机_StereoCamera">StereoCamera</a></li></ul></div><div><h2>常量</h2><ul id="常量"><li><a href="api/zh/constants/Animation.html" id="常量_Animation">Animation</a></li><li><a href="api/zh/constants/Controls.html" id="常量_Controls">Controls</a></li><li><a href="api/zh/constants/Core.html" id="常量_Core">Core</a></li><li><a href="api/zh/constants/CustomBlendingEquations.html" id="常量_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/zh/constants/DrawModes.html" id="常量_DrawModes">DrawModes</a></li><li><a href="api/zh/constants/Lights.html" id="常量_Lights">Lights</a></li><li><a href="api/zh/constants/Materials.html" id="常量_Materials">Materials</a></li><li><a href="api/zh/constants/Renderer.html" id="常量_Renderer">Renderer</a></li><li><a href="api/zh/constants/Textures.html" id="常量_Textures">Textures</a></li></ul></div><div><h2>约束</h2><ul id="约束"><li><a href="api/zh/constraints/ChildOfConstraint.html" id="约束_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/zh/constraints/Constraint.html" id="约束_Constraint">Constraint</a></li><li><a href="api/zh/constraints/CopyLocationConstraint.html" id="约束_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/zh/constraints/CopyRotationConstraint.html" id="约束_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/zh/constraints/CopyScaleConstraint.html" id="约束_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/zh/constraints/FloorConstraint.html" id="约束_FloorConstraint">FloorConstraint</a></li><li><a href="api/zh/constraints/LimitLocationConstraint.html" id="约束_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/zh/constraints/LimitRotationConstraint.html" id="约束_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/zh/constraints/LimitScaleConstraint.html" id="约束_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/zh/constraints/LockedTrackConstraint.html" id="约束_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/zh/constraints/TargetConstraint.html" id="约束_TargetConstraint">TargetConstraint</a></li><li><a href="api/zh/constraints/TrackToConstraint.html" id="约束_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>控制</h2><ul id="控制"><li><a href="api/zh/controls/KeyListener.html" id="控制_KeyListener">KeyListener</a></li><li><a href="api/zh/controls/OrbitControls.html" id="控制_OrbitControls">OrbitControls</a></li></ul></div><div><h2>核心</h2><ul id="核心"><li><a href="api/zh/core/BufferAttribute.html" id="核心_BufferAttribute">BufferAttribute</a></li><li><a href="api/zh/core/BufferGeometry.html" id="核心_BufferGeometry">BufferGeometry</a></li><li><a href="api/zh/core/Clock.html" id="核心_Clock">Clock</a></li><li><a href="api/zh/core/Detector.html" id="核心_Detector">Detector</a></li><li><a href="api/zh/core/DirectGeometry.html" id="核心_DirectGeometry">DirectGeometry</a></li><li><a href="api/zh/core/EventDispatcher.html" id="核心_EventDispatcher">EventDispatcher</a></li><li><a href="api/zh/core/Face3.html" id="核心_Face3">Face3</a></li><li><a href="api/zh/core/Geometry.html" id="核心_Geometry">Geometry</a></li><li><a href="api/zh/core/InstancedBufferAttribute.html" id="核心_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/zh/core/InstancedBufferGeometry.html" id="核心_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/zh/core/InstancedInterleavedBuffer.html" id="核心_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBuffer.html" id="核心_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/zh/core/InterleavedBufferAttribute.html" id="核心_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/zh/core/Layers.html" id="核心_Layers">Layers</a></li><li><a href="api/zh/core/Object3D.html" id="核心_Object3D">Object3D</a></li><li><a href="api/zh/core/Raycaster.html" id="核心_Raycaster">Raycaster</a></li><li><a href="api/zh/core/Uniform.html" id="核心_Uniform">Uniform</a></li></ul></div><div><h2>核心 / BufferAttributes</h2><ul id="核心_/_BufferAttributes"><li><a href="api/zh/core/bufferAttributeTypes/BufferAttributeTypes.html" id="核心_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>附件</h2><ul id="附件"><li><a href="api/zh/extras/Earcut.html" id="附件_Earcut">Earcut</a></li><li><a href="api/zh/extras/ImageUtils.html" id="附件_ImageUtils">ImageUtils</a></li><li><a href="api/zh/extras/PMREMGenerator.html" id="附件_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/zh/extras/Preloader.html" id="附件_Preloader">Preloader</a></li><li><a href="api/zh/extras/PuzzlesLoader.html" id="附件_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/zh/extras/SceneUtils.html" id="附件_SceneUtils">SceneUtils</a></li><li><a href="api/zh/extras/ShapeUtils.html" id="附件_ShapeUtils">ShapeUtils</a></li><li><a href="api/zh/extras/SimplePreloader.html" id="附件_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>附件 / 核心</h2><ul id="附件_/_核心"><li><a href="api/zh/extras/core/Curve.html" id="附件_/_核心_Curve">Curve</a></li><li><a href="api/zh/extras/core/CurvePath.html" id="附件_/_核心_CurvePath">CurvePath</a></li><li><a href="api/zh/extras/core/Font.html" id="附件_/_核心_Font">Font</a></li><li><a href="api/zh/extras/core/Interpolations.html" id="附件_/_核心_Interpolations">Interpolations</a></li><li><a href="api/zh/extras/core/Path.html" id="附件_/_核心_Path">Path</a></li><li><a href="api/zh/extras/core/Shape.html" id="附件_/_核心_Shape">Shape</a></li><li><a href="api/zh/extras/core/ShapePath.html" id="附件_/_核心_ShapePath">ShapePath</a></li></ul></div><div><h2>附件 / 曲线</h2><ul id="附件_/_曲线"><li><a href="api/zh/extras/curves/ArcCurve.html" id="附件_/_曲线_ArcCurve">ArcCurve</a></li><li><a href="api/zh/extras/curves/CatmullRomCurve3.html" id="附件_/_曲线_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve.html" id="附件_/_曲线_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/zh/extras/curves/CubicBezierCurve3.html" id="附件_/_曲线_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/zh/extras/curves/EllipseCurve.html" id="附件_/_曲线_EllipseCurve">EllipseCurve</a></li><li><a href="api/zh/extras/curves/LineCurve.html" id="附件_/_曲线_LineCurve">LineCurve</a></li><li><a href="api/zh/extras/curves/LineCurve3.html" id="附件_/_曲线_LineCurve3">LineCurve3</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve.html" id="附件_/_曲线_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/zh/extras/curves/QuadraticBezierCurve3.html" id="附件_/_曲线_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/zh/extras/curves/SplineCurve.html" id="附件_/_曲线_SplineCurve">SplineCurve</a></li></ul></div><div><h2>附件 / 对象</h2><ul id="附件_/_对象"><li><a href="api/zh/extras/objects/ImmediateRenderObject.html" id="附件_/_对象_ImmediateRenderObject">ImmediateRenderObject</a></li><li><a href="api/zh/extras/objects/LineHTML.html" id="附件_/_对象_LineHTML">LineHTML</a></li><li><a href="api/zh/extras/objects/MeshLine.html" id="附件_/_对象_MeshLine">MeshLine</a></li><li><a href="api/zh/extras/objects/MeshLineIndexed.html" id="附件_/_对象_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/zh/extras/objects/MeshLineMaterial.html" id="附件_/_对象_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>几何体</h2><ul id="几何体"><li><a href="api/zh/geometries/BoxBufferGeometry.html" id="几何体_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/zh/geometries/BoxGeometry.html" id="几何体_BoxGeometry">BoxGeometry</a></li><li><a href="api/zh/geometries/CircleBufferGeometry.html" id="几何体_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/zh/geometries/CircleGeometry.html" id="几何体_CircleGeometry">CircleGeometry</a></li><li><a href="api/zh/geometries/ConeBufferGeometry.html" id="几何体_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/zh/geometries/ConeGeometry.html" id="几何体_ConeGeometry">ConeGeometry</a></li><li><a href="api/zh/geometries/CylinderBufferGeometry.html" id="几何体_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/zh/geometries/CylinderGeometry.html" id="几何体_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/zh/geometries/DodecahedronBufferGeometry.html" id="几何体_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/zh/geometries/DodecahedronGeometry.html" id="几何体_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/zh/geometries/EdgesGeometry.html" id="几何体_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/zh/geometries/ExtrudeBufferGeometry.html" id="几何体_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/zh/geometries/ExtrudeGeometry.html" id="几何体_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/zh/geometries/IcosahedronBufferGeometry.html" id="几何体_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/zh/geometries/IcosahedronGeometry.html" id="几何体_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/zh/geometries/LatheBufferGeometry.html" id="几何体_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/zh/geometries/LatheGeometry.html" id="几何体_LatheGeometry">LatheGeometry</a></li><li><a href="api/zh/geometries/OctahedronBufferGeometry.html" id="几何体_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/zh/geometries/OctahedronGeometry.html" id="几何体_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/zh/geometries/ParametricBufferGeometry.html" id="几何体_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/zh/geometries/ParametricGeometry.html" id="几何体_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/zh/geometries/PlaneBufferGeometry.html" id="几何体_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/zh/geometries/PlaneGeometry.html" id="几何体_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/zh/geometries/PolyhedronBufferGeometry.html" id="几何体_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/zh/geometries/PolyhedronGeometry.html" id="几何体_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/zh/geometries/RingBufferGeometry.html" id="几何体_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/zh/geometries/RingGeometry.html" id="几何体_RingGeometry">RingGeometry</a></li><li><a href="api/zh/geometries/ShapeBufferGeometry.html" id="几何体_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/zh/geometries/ShapeGeometry.html" id="几何体_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/zh/geometries/SphereBufferGeometry.html" id="几何体_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/zh/geometries/SphereGeometry.html" id="几何体_SphereGeometry">SphereGeometry</a></li><li><a href="api/zh/geometries/TetrahedronBufferGeometry.html" id="几何体_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/zh/geometries/TetrahedronGeometry.html" id="几何体_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/zh/geometries/TextBufferGeometry.html" id="几何体_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/zh/geometries/TextGeometry.html" id="几何体_TextGeometry">TextGeometry</a></li><li><a href="api/zh/geometries/TorusBufferGeometry.html" id="几何体_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/zh/geometries/TorusGeometry.html" id="几何体_TorusGeometry">TorusGeometry</a></li><li><a href="api/zh/geometries/TorusKnotBufferGeometry.html" id="几何体_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/zh/geometries/TorusKnotGeometry.html" id="几何体_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/zh/geometries/TubeBufferGeometry.html" id="几何体_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/zh/geometries/TubeGeometry.html" id="几何体_TubeGeometry">TubeGeometry</a></li><li><a href="api/zh/geometries/WireframeGeometry.html" id="几何体_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>辅助对象</h2><ul id="辅助对象"><li><a href="api/zh/helpers/ArrowHelper.html" id="辅助对象_ArrowHelper">ArrowHelper</a></li><li><a href="api/zh/helpers/AxesHelper.html" id="辅助对象_AxesHelper">AxesHelper</a></li><li><a href="api/zh/helpers/BoxHelper.html" id="辅助对象_BoxHelper">BoxHelper</a></li><li><a href="api/zh/helpers/Box3Helper.html" id="辅助对象_Box3Helper">Box3Helper</a></li><li><a href="api/zh/helpers/CameraHelper.html" id="辅助对象_CameraHelper">CameraHelper</a></li><li><a href="api/zh/helpers/DirectionalLightHelper.html" id="辅助对象_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/zh/helpers/GridHelper.html" id="辅助对象_GridHelper">GridHelper</a></li><li><a href="api/zh/helpers/PolarGridHelper.html" id="辅助对象_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/zh/helpers/HemisphereLightHelper.html" id="辅助对象_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/zh/helpers/PlaneHelper.html" id="辅助对象_PlaneHelper">PlaneHelper</a></li><li><a href="api/zh/helpers/PointLightHelper.html" id="辅助对象_PointLightHelper">PointLightHelper</a></li><li><a href="api/zh/helpers/SkeletonHelper.html" id="辅助对象_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/zh/helpers/SpotLightHelper.html" id="辅助对象_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>灯光</h2><ul id="灯光"><li><a href="api/zh/lights/AmbientLight.html" id="灯光_AmbientLight">AmbientLight</a></li><li><a href="api/zh/lights/CubeReflectionProbe.html" id="灯光_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/zh/lights/DirectionalLight.html" id="灯光_DirectionalLight">DirectionalLight</a></li><li><a href="api/zh/lights/HemisphereLight.html" id="灯光_HemisphereLight">HemisphereLight</a></li><li><a href="api/zh/lights/Light.html" id="灯光_Light">Light</a></li><li><a href="api/zh/lights/PointLight.html" id="灯光_PointLight">PointLight</a></li><li><a href="api/zh/lights/RectAreaLight.html" id="灯光_RectAreaLight">RectAreaLight</a></li><li><a href="api/zh/lights/SpotLight.html" id="灯光_SpotLight">SpotLight</a></li></ul></div><div><h2>灯光 / 阴影</h2><ul id="灯光_/_阴影"><li><a href="api/zh/lights/shadows/LightShadow.html" id="灯光_/_阴影_LightShadow">LightShadow</a></li><li><a href="api/zh/lights/shadows/PointLightShadow.html" id="灯光_/_阴影_PointLightShadow">PointLightShadow</a></li><li><a href="api/zh/lights/shadows/DirectionalLightShadow.html" id="灯光_/_阴影_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/zh/lights/shadows/SpotLightShadow.html" id="灯光_/_阴影_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>加载器</h2><ul id="加载器"><li><a href="api/zh/loaders/AnimationLoader.html" id="加载器_AnimationLoader">AnimationLoader</a></li><li><a href="api/zh/loaders/AudioLoader.html" id="加载器_AudioLoader">AudioLoader</a></li><li><a href="api/zh/loaders/BufferGeometryLoader.html" id="加载器_BufferGeometryLoader">BufferGeometryLoader</a></li><li><a href="api/zh/loaders/Cache.html" id="加载器_Cache">Cache</a></li><li><a href="api/zh/loaders/CompressedTextureLoader.html" id="加载器_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/zh/loaders/CubeTextureLoader.html" id="加载器_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/zh/loaders/DataTextureLoader.html" id="加载器_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/zh/loaders/FileLoader.html" id="加载器_FileLoader">FileLoader</a></li><li><a href="api/zh/loaders/FontLoader.html" id="加载器_FontLoader">FontLoader</a></li><li><a href="api/zh/loaders/ImageBitmapLoader.html" id="加载器_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/zh/loaders/ImageLoader.html" id="加载器_ImageLoader">ImageLoader</a></li><li><a href="api/zh/loaders/GLTFLoader.html" id="加载器_GLTFLoader">GLTFLoader</a></li><li><a href="api/zh/loaders/Loader.html" id="加载器_Loader">Loader</a></li><li><a href="api/zh/loaders/LoaderUtils.html" id="加载器_LoaderUtils">LoaderUtils</a></li><li><a href="api/zh/loaders/MaterialLoader.html" id="加载器_MaterialLoader">MaterialLoader</a></li><li><a href="api/zh/loaders/ObjectLoader.html" id="加载器_ObjectLoader">ObjectLoader</a></li><li><a href="api/zh/loaders/TextureLoader.html" id="加载器_TextureLoader">TextureLoader</a></li></ul></div><div><h2>加载器 / 管理器</h2><ul id="加载器_/_管理器"><li><a href="api/zh/loaders/managers/DefaultLoadingManager.html" id="加载器_/_管理器_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/zh/loaders/managers/LoadingManager.html" id="加载器_/_管理器_LoadingManager">LoadingManager</a></li></ul></div><div><h2>材质</h2><ul id="材质"><li><a href="api/zh/materials/LineBasicMaterial.html" id="材质_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/zh/materials/LineDashedMaterial.html" id="材质_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/zh/materials/Material.html" id="材质_Material">Material</a></li><li><a href="api/zh/materials/MaterialUtils.html" id="材质_MaterialUtils">MaterialUtils</a></li><li><a href="api/zh/materials/MeshBasicMaterial.html" id="材质_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/zh/materials/MeshDepthMaterial.html" id="材质_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/zh/materials/MeshDistanceMaterial.html" id="材质_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/zh/materials/MeshLambertMaterial.html" id="材质_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/zh/materials/MeshMatcapMaterial.html" id="材质_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/zh/materials/MeshNodeMaterial.html" id="材质_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/zh/materials/MeshNormalMaterial.html" id="材质_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/zh/materials/MeshPhongMaterial.html" id="材质_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/zh/materials/MeshPhysicalMaterial.html" id="材质_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/zh/materials/MeshStandardMaterial.html" id="材质_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/zh/materials/MeshToonMaterial.html" id="材质_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/zh/materials/PointsMaterial.html" id="材质_PointsMaterial">PointsMaterial</a></li><li><a href="api/zh/materials/RawShaderMaterial.html" id="材质_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/zh/materials/ShaderMaterial.html" id="材质_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/zh/materials/ShadowMaterial.html" id="材质_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/zh/materials/SpriteMaterial.html" id="材质_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>数学</h2><ul id="数学"><li><a href="api/zh/math/Box2.html" id="数学_Box2">Box2</a></li><li><a href="api/zh/math/Box3.html" id="数学_Box3">Box3</a></li><li><a href="api/zh/math/Color.html" id="数学_Color">Color</a></li><li><a href="api/zh/math/Cylindrical.html" id="数学_Cylindrical">Cylindrical</a></li><li><a href="api/zh/math/Euler.html" id="数学_Euler">Euler</a></li><li><a href="api/zh/math/Frustum.html" id="数学_Frustum">Frustum</a></li><li><a href="api/zh/math/Interpolant.html" id="数学_Interpolant">Interpolant</a></li><li><a href="api/zh/math/Line3.html" id="数学_Line3">Line3</a></li><li><a href="api/zh/math/Math.html" id="数学_Math">Math</a></li><li><a href="api/zh/math/MathUtils.html" id="数学_MathUtils">MathUtils</a></li><li><a href="api/zh/math/Matrix3.html" id="数学_Matrix3">Matrix3</a></li><li><a href="api/zh/math/Matrix4.html" id="数学_Matrix4">Matrix4</a></li><li><a href="api/zh/math/Plane.html" id="数学_Plane">Plane</a></li><li><a href="api/zh/math/Quaternion.html" id="数学_Quaternion">Quaternion</a></li><li><a href="api/zh/math/Ray.html" id="数学_Ray">Ray</a></li><li><a href="api/zh/math/Sphere.html" id="数学_Sphere">Sphere</a></li><li><a href="api/zh/math/Spherical.html" id="数学_Spherical">Spherical</a></li><li><a href="api/zh/math/Triangle.html" id="数学_Triangle">Triangle</a></li><li><a href="api/zh/math/Vector2.html" id="数学_Vector2">Vector2</a></li><li><a href="api/zh/math/Vector3.html" id="数学_Vector3">Vector3</a></li><li><a href="api/zh/math/Vector4.html" id="数学_Vector4">Vector4</a></li></ul></div><div><h2>数学 / 插值</h2><ul id="数学_/_插值"><li><a href="api/zh/math/interpolants/CubicInterpolant.html" id="数学_/_插值_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/zh/math/interpolants/DiscreteInterpolant.html" id="数学_/_插值_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/zh/math/interpolants/LinearInterpolant.html" id="数学_/_插值_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/zh/math/interpolants/QuaternionLinearInterpolant.html" id="数学_/_插值_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>对象</h2><ul id="对象"><li><a href="api/zh/objects/Annotation.html" id="对象_Annotation">Annotation</a></li><li><a href="api/zh/objects/AnnotationControl.html" id="对象_AnnotationControl">AnnotationControl</a></li><li><a href="api/zh/objects/Bone.html" id="对象_Bone">Bone</a></li><li><a href="api/zh/objects/Group.html" id="对象_Group">Group</a></li><li><a href="api/zh/objects/InstancedMesh.html" id="对象_InstancedMesh">InstancedMesh</a></li><li><a href="api/zh/objects/Line.html" id="对象_Line">Line</a></li><li><a href="api/zh/objects/LineLoop.html" id="对象_LineLoop">LineLoop</a></li><li><a href="api/zh/objects/LineSegments.html" id="对象_LineSegments">LineSegments</a></li><li><a href="api/zh/objects/LOD.html" id="对象_LOD">LOD</a></li><li><a href="api/zh/objects/Mesh.html" id="对象_Mesh">Mesh</a></li><li><a href="api/zh/objects/Points.html" id="对象_Points">Points</a></li><li><a href="api/zh/objects/Skeleton.html" id="对象_Skeleton">Skeleton</a></li><li><a href="api/zh/objects/SkinnedMesh.html" id="对象_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/zh/objects/Sprite.html" id="对象_Sprite">Sprite</a></li></ul></div><div><h2>渲染器</h2><ul id="渲染器"><li><a href="api/zh/renderers/WebGLMultisampleRenderTarget.html" id="渲染器_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/zh/renderers/RenderUtils.html" id="渲染器_RenderUtils">RenderUtils</a></li><li><a href="api/zh/renderers/WebGLRenderer.html" id="渲染器_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/zh/renderers/WebGLRenderTarget.html" id="渲染器_WebGLRenderTarget">WebGLRenderTarget</a></li><li><a href="api/zh/renderers/WebGLCubeRenderTarget.html" id="渲染器_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li></ul></div><div><h2>渲染器 / 着色器</h2><ul id="渲染器_/_着色器"><li><a href="api/zh/renderers/shaders/ShaderChunk.html" id="渲染器_/_着色器_ShaderChunk">ShaderChunk</a></li><li><a href="api/zh/renderers/shaders/ShaderLib.html" id="渲染器_/_着色器_ShaderLib">ShaderLib</a></li><li><a href="api/zh/renderers/shaders/UniformsLib.html" id="渲染器_/_着色器_UniformsLib">UniformsLib</a></li><li><a href="api/zh/renderers/shaders/UniformsUtils.html" id="渲染器_/_着色器_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>场景</h2><ul id="场景"><li><a href="api/zh/scenes/Fog.html" id="场景_Fog">Fog</a></li><li><a href="api/zh/scenes/FogExp2.html" id="场景_FogExp2">FogExp2</a></li><li><a href="api/zh/scenes/Scene.html" id="场景_Scene">Scene</a></li><li><a href="api/zh/scenes/SceneBackground.html" id="场景_SceneBackground">SceneBackground</a></li></ul></div><div><h2>纹理贴图</h2><ul id="纹理贴图"><li><a href="api/zh/textures/CanvasTexture.html" id="纹理贴图_CanvasTexture">CanvasTexture</a></li><li><a href="api/zh/textures/CompressedTexture.html" id="纹理贴图_CompressedTexture">CompressedTexture</a></li><li><a href="api/zh/textures/CubeTexture.html" id="纹理贴图_CubeTexture">CubeTexture</a></li><li><a href="api/zh/textures/DataTexture.html" id="纹理贴图_DataTexture">DataTexture</a></li><li><a href="api/zh/textures/DataTexture3D.html" id="纹理贴图_DataTexture3D">DataTexture3D</a></li><li><a href="api/zh/textures/DepthTexture.html" id="纹理贴图_DepthTexture">DepthTexture</a></li><li><a href="api/zh/textures/Texture.html" id="纹理贴图_Texture">Texture</a></li><li><a href="api/zh/textures/VideoTexture.html" id="纹理贴图_VideoTexture">VideoTexture</a></li></ul></div><div><h2>差异化支持</h2><ul id="差异化支持"><li><a href="api/zh/Polyfills.html" id="差异化支持_Polyfills">Polyfills</a></li></ul></div><div><h2>WebGL渲染器</h2><ul id="WebGL渲染器"><li><a href="api/zh/renderers/webgl/WebGLProgram.html" id="WebGL渲染器_WebGLProgram">WebGLProgram</a></li><li><a href="api/zh/renderers/webgl/WebGLShader.html" id="WebGL渲染器_WebGLShader">WebGLShader</a></li><li><a href="api/zh/renderers/webgl/WebGLState.html" id="WebGL渲染器_WebGLState">WebGLState</a></li></ul></div></div>
+        </nav>
+    <a href="api/zh/core/EventDispatcher.html">EventDispatcher</a> →
+
+    <h1>App</h1>
+
+    <p class="desc">
+    App类可以更轻松地设置3D应用程序。它包括初始化WebGL渲染器的代码、加载glTF场景、自动播放动画以及基本相机控制器的逻辑。
+    </p>
+
+    <h2>示例</h2>
+
+    <code>
+    // loaded GLTF 2.0 asset
+    var url = 'template.gltf';
+
+    // construct a new application with simple rotating preloader
+    var app = new v3d.App('v3d-container', null, new v3d.SimplePreloader({ container: 'v3d-container' }));
+
+    // load main scene
+    app.loadScene(url, function() {
+        app.enableControls();
+        app.run();
+        runCode();
+    });
+
+    function runCode() {
+        // place your own code here
+    }
+    </code>
+
+    <h2>构造函数</h2>
+
+    <h3>App(container, ctxSettings, preloader)</h3>
+    <p>
+      container - html元素的id或包含画布的html元素本身。
+      <br>
+      ctxSettings - 在<strong>canvas.getContext()</strong>方法中传递的WebGL上下文属性。
+      <br>
+      preloader - 应用程序<a href="api/zh/extras/Preloader.html">Preloader</a>类的实例。
+      <br>
+    </p>
+
+    <p>这个构造函数做以下工作:</p>
+
+    <ol>
+      <li>创建一个新的容器元素(如果需要的话)。</li>
+      <li>检查是否支持WebGL技术，如果不支持则显示错误对话框。</li>
+      <li>初始化应用程序时钟。</li>
+      <li>创建一个带有WebGL 1.0或WebGL 2.0上下文的新3D画布，并将其添加到容器元素中。</li>
+      <li>初始化一个GLTF加载器。</li>
+      <li>添加一个应用程序实例到<strong>v3d.apps</strong>列表(在非模块化引擎的情况下)。</li>
+    </ol>
+
+    <h2>属性</h2>
+
+    <h3><a href="api/zh/extras/App.html#actions" class="permalink">#</a> .<a href="api/zh/extras/App.html#actions" id="actions">actions</a>  : <a href="javascript:;" class="param">Array</a></h3>
+
+    <p>用于调度应用程序动画的<a href="api/zh/animation/AnimationAction.html">animation actions</a>数组。除了直接访问这个列表，你还可以使用<a href="api/zh/extras/SceneUtils.html#getAnimationActionByName">getAnimationActionByName</a>方法根据剪辑名来搜索一个动作。</p>
+
+    <h3><a href="api/zh/extras/App.html#clearBkgOnLoad" class="permalink">#</a> .<a href="api/zh/extras/App.html#clearBkgOnLoad" id="clearBkgOnLoad">clearBkgOnLoad</a>  : <a href="javascript:;" class="param">Boolean</a></h3>
+
+    <p>加载glTF场景后，设置场景背景为<strong>null</strong>。默认<strong>false</strong>。
+
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#container" class="permalink">#</a> .<a href="api/zh/extras/App.html#container" id="container">container</a>  : <a href="javascript:;" class="param">HTMLElement</a></h3>
+
+    <p>一个容器元素。这是用于渲染操作的3D画布的父元素。</p>
+
+    <h3><a href="api/zh/extras/App.html#scene" class="permalink">#</a> .<a href="api/zh/extras/App.html#scene" id="scene">scene</a>  : <a href="api/zh/scenes/Scene.html" class="param">Scene</a></h3>
+
+    <p>应用程序的主场景。</p>
+
+    <h3><a href="api/zh/extras/App.html#camera" class="permalink">#</a> .<a href="api/zh/extras/App.html#camera" id="camera">camera</a>  : <a href="api/zh/cameras/Camera.html" class="param">Camera</a></h3>
+
+    <p>应用程序的主相机。</p>
+
+    <h3><a href="api/zh/extras/App.html#clock" class="permalink">#</a> .<a href="api/zh/extras/App.html#clock" id="clock">clock</a>  : <a href="api/zh/core/Clock.html" class="param">Clock</a></h3>
+
+    <p>应用程序的时钟对象。</p>
+
+    <h3><a href="api/zh/extras/App.html#compileCallbacks" class="permalink">#</a> .<a href="api/zh/extras/App.html#compileCallbacks" id="compileCallbacks">compileCallbacks</a>  : <a href="javascript:;" class="param">Array</a></h3>
+
+    <p>在着色器编译之前将被调用的函数数组。着色器编译发生在场景加载所有资产(glTF元数据，二进制，纹理)被获取之后。</p>
+
+    <p>使用编译回调来启用后期处理或添加雾，因为在运行时添加这些效果会对性能产生负面影响。</p>
+
+    <code>
+
+    function initFog(appInstance) {
+        appInstance.scene.fog = new v3d.FogExp2('green', 0.01);
+    }
+
+    // loaded GLTF 2.0 asset
+    var url = 'my_scene.gltf';
+
+    // construct a new application with simple rotating preloader
+    var app = new v3d.App('v3d-container', null, new v3d.SimplePreloader({ container: 'v3d-container' }));
+
+    // initialize fog just before shader compilation
+    app.compileCallbacks.push(initFog);
+
+    // load main scene
+    app.loadScene(url, function() {
+        app.enableControls();
+        app.run();
+    });
+
+    </code>
+
+
+    <h3><a href="api/zh/extras/App.html#controls" class="permalink">#</a> .<a href="api/zh/extras/App.html#controls" id="controls">controls</a>  : <a href="javascript:;" class="param">null</a></h3>
+
+    <p>应用程序主相机控制器物体。</p>
+
+    <h3><a href="api/zh/extras/App.html#frame" class="permalink">#</a> .<a href="api/zh/extras/App.html#frame" id="frame">frame</a>  : <a href="javascript:;" class="param">Number</a></h3>
+
+    <p>应用程序的当前渲染帧。</p>
+
+    <h3><a href="api/zh/extras/App.html#frameRateDivider" class="permalink">#</a> .<a href="api/zh/extras/App.html#frameRateDivider" id="frameRateDivider">frameRateDivider</a>  : <a href="javascript:;" class="param">Number</a></h3>
+
+    <p>应用程序FPS除数。 使用<a href="api/zh/extras/App.html#setFrameRateDivider">setFrameDivider</a> 设置该值。</p>
+
+    <h3><a href="api/zh/extras/App.html#mixer" class="permalink">#</a> .<a href="api/zh/extras/App.html#mixer" id="mixer">mixer</a>  : <a href="api/zh/animation/AnimationMixer.html" class="param">AnimationMixer</a></h3>
+
+    <p>混合器用于播放从glTF数据加载的动画。</p>
+
+    <h3><a href="api/zh/extras/App.html#preloader" class="permalink">#</a> .<a href="api/zh/extras/App.html#preloader" id="preloader">preloader</a>  : <a href="javascript:;" class="param">HTMLElement</a></h3>
+
+    <p>App preloader元素(仅在场景加载时存在)</p>
+
+    <h3><a href="api/zh/extras/App.html#renderer" class="permalink">#</a> .<a href="api/zh/extras/App.html#renderer" id="renderer">renderer</a>  : <a href="api/zh/renderers/WebGLRenderer.html" class="param">WebGLRenderer</a></h3>
+
+    <p>应用程序WebGL渲染器。</p>
+
+    <h3><a href="api/zh/extras/App.html#renderCallbacks" class="permalink">#</a> .<a href="api/zh/extras/App.html#renderCallbacks" id="renderCallbacks">renderCallbacks</a>  : <a href="javascript:;" class="param">Array</a></h3>
+
+    <p>每次渲染开始时将被调用的函数数组。</p>
+
+    <h3><a href="api/zh/extras/App.html#loader" class="permalink">#</a> .<a href="api/zh/extras/App.html#loader" id="loader">loader</a>  : <a href="api/zh/loaders/GLTFLoader.html" class="param">GLTFLoader</a></h3>
+
+    <p>应用程序 glTF 加载器。</p>
+
+    <h3><a href="api/zh/extras/App.html#worldCubemapRes" class="permalink">#</a> .<a href="api/zh/extras/App.html#worldCubemapRes" id="worldCubemapRes">worldCubemapRes</a>  : <a href="javascript:;" class="param">Number</a></h3>
+
+    <p>表示世界材质的立方体贴图纹理的分辨率。默认是1024。</p>
+
+    <h3><a href="api/zh/extras/App.html#worldMaterial" class="permalink">#</a> .<a href="api/zh/extras/App.html#worldMaterial" id="worldMaterial">worldMaterial</a>  : <a href="api/zh/materials/Material.html" class="param">Material</a></h3>
+
+    <p>
+        <span style="color:#f00">已弃用。</span> 使用 <a href="api/zh/scenes/Scene.html#worldMaterial">Scene.worldMaterial</a>
+        代替。 该材质用于生成世界环境。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#xrControllers" class="permalink">#</a> .<a href="api/zh/extras/App.html#xrControllers" id="xrControllers">xrControllers</a>  : <a href="javascript:;" class="param">Array</a></h3>
+
+    <p>活动WebXR会话的控制器对象数组。</p>
+
+    <h3><a href="api/zh/extras/App.html#xrSession" class="permalink">#</a> .<a href="api/zh/extras/App.html#xrSession" id="xrSession">xrSession</a>  : <a href="javascript:;" class="param">XRSession</a></h3>
+
+    <p>活动 WebXR 会话。</p>
+
+
+
+    <h2>方法</h2>
+
+    <h3><a href="api/zh/extras/App.html#animate" class="permalink">#</a> .<a href="api/zh/extras/App.html#animate" id="animate">animate</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      场景更新处理程序:渲染，动画和相机控制。不要改变，除非你知道你在做什么。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#appendScene" class="permalink">#</a> .<a href="api/zh/extras/App.html#appendScene" id="appendScene">appendScene</a> (url, loadCb, progressCb, errorCb, loadCameras, loadLights) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      将指定glTF文件中的场景附加到当前场景。loadCb回调将在加载完成后作为参数接收加载的场景。<br><br>
+      如果应用程序中没有活动场景，则不会添加任何内容。<br><br>
+      <strong>loadCameras</strong>和<strong>loadLights</strong>等参数用于指定相机和灯光是否会从加载的场景中附加。默认情况下，两个参数都为<strong>true</strong>。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#cleanup" class="permalink">#</a> .<a href="api/zh/extras/App.html#cleanup" id="cleanup">cleanup</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      <span style="color:#f00">已弃用。</span> 使用 <a href="api/zh/extras/App.html#dispose">dispose</a>
+      或 <a href="api/zh/extras/App.html#unload">unload</a> 代替。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#disablePostprocessing" class="permalink">#</a> .<a href="api/zh/extras/App.html#disablePostprocessing" id="disablePostprocessing">disablePostprocessing</a> (keepOutline) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      禁用所有后期处理效果(当keepOutline=true时，outline除外)。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#disableRendering" class="permalink">#</a> .<a href="api/zh/extras/App.html#disableRendering" id="disableRendering">disableRendering</a> (after) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      在给定帧数后禁用动画循环中的图形更新(指定0立即禁用)。控制器和动画混合器将不断更新，渲染回调将不断被调用。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#disableSSAA" class="permalink">#</a> .<a href="api/zh/extras/App.html#disableSSAA" id="disableSSAA">disableSSAA</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      禁用超级采样抗锯齿。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#dispose" class="permalink">#</a> .<a href="api/zh/extras/App.html#dispose" id="dispose">dispose</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      卸载场景(通过调用<a href="api/zh/extras/App.html#unload">unload</a>)并处理整个应用程序，包括清理应用程序的<a href="api/zh/renderers/WebGLRenderer.html">renderer</a>和从DOM中删除canvas元素。<br><br>
+      处理后应用程序不再可用。这种方法最适合于需要彻底清理的情况。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#enableControls" class="permalink">#</a> .<a href="api/zh/extras/App.html#enableControls" id="enableControls">enableControls</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      启用应用程序主相机的控制。根据为相机指定的控制类型，这个方法将提供“轨道”，“飞行”或静态相机。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#enablePostprocessing" class="permalink">#</a> .<a href="api/zh/extras/App.html#enablePostprocessing" id="enablePostprocessing">enablePostprocessing</a> (effects) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      启用给定的后处理效果。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#enableRendering" class="permalink">#</a> .<a href="api/zh/extras/App.html#enableRendering" id="enableRendering">enableRendering</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      在动画循环中启用图形更新。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#enableSSAA" class="permalink">#</a> .<a href="api/zh/extras/App.html#enableSSAA" id="enableSSAA">enableSSAA</a> (sampleLevel, iterative) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      开启超级采样抗锯齿。采样的数量计算为2^采样级别(例如指定4以启用16x SSAA)。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#getCamera" class="permalink">#</a> .<a href="api/zh/extras/App.html#getCamera" id="getCamera">getCamera</a> () : <a href="api/zh/cameras/Camera.html" class="param">Camera</a></h3>
+    <p>
+      返回应用程序的主相机。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#getHeight" class="permalink">#</a> .<a href="api/zh/extras/App.html#getHeight" id="getHeight">getHeight</a> () : <a href="javascript:;" class="param">number</a></h3>
+    <p>
+      返回计算的容器元素高度。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#getWidth" class="permalink">#</a> .<a href="api/zh/extras/App.html#getWidth" id="getWidth">getWidth</a> () : <a href="javascript:;" class="param">number</a></h3>
+    <p>
+      返回计算的容器元素宽度。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#initPostprocessing" class="permalink">#</a> .<a href="api/zh/extras/App.html#initPostprocessing" id="initPostprocessing">initPostprocessing</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      应用程序后处理初始化的处理程序。除非你知道你在做什么，否则不要改变。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#hideFPS" class="permalink">#</a> .<a href="api/zh/extras/App.html#hideFPS" id="hideFPS">hideFPS</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      隐藏帧率计数器。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#load" class="permalink">#</a> .<a href="api/zh/extras/App.html#load" id="load">load</a> (url, loadOkCb, loadErrorCb, autoStart) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      <span style="color:#f00">已弃用。</span> 使用 <a href="api/zh/extras/App.html#loadScene">loadScene</a>
+      代替。<br><br>
+      加载glTF场景。加载完成后，loadOkCb回调将接收加载的场景作为参数。<br><br>
+      如果已经有一个活动场景（例如，通过<a href="api/zh/extras/App.html#load">load</a>方法在加载之前加载），则先使用<a href="api/zh/extras/App.html#unload">unload</a>以避免现有场景与加载的场景之间发生冲突。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#loadScene" class="permalink">#</a> .<a href="api/zh/extras/App.html#loadScene" id="loadScene">loadScene</a> (url, loadCb, progressCb, errorCb) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      加载glTF场景。加载完成后，loadOkCb回调将接收加载的场景作为参数。<br><br>
+      如果已经有一个活动场景（例如，通过<a href="api/zh/extras/App.html#load">load</a>方法在加载之前加载），则先使用<a href="api/zh/extras/App.html#unload">unload</a>以避免现有场景与加载的场景之间发生冲突。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#onResize" class="permalink">#</a> .<a href="api/zh/extras/App.html#onResize" id="onResize">onResize</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      画布调整大小事件的处理程序。除非你知道你在做什么，否则不要改变。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#printPerformanceInfo" class="permalink">#</a> .<a href="api/zh/extras/App.html#printPerformanceInfo" id="printPerformanceInfo">printPerformanceInfo</a> (delta) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      评估并打印渲染性能概要文件。Delta是一个可选的评估周期(默认为1)。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#render" class="permalink">#</a> .<a href="api/zh/extras/App.html#render" id="render">render</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      场景渲染处理程序。除非你知道你在做什么，否则不要改变。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#run" class="permalink">#</a> .<a href="api/zh/extras/App.html#run" id="run">run</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      通过移除预加载程序并开始渲染循环来启动应用程序。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#setFrameRateDivider" class="permalink">#</a> .<a href="api/zh/extras/App.html#setFrameRateDivider" id="setFrameRateDivider">setFrameRateDivider</a> (divider : <a href="javascript:;" class="param">Integer</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      通过将最大帧除以指定的整数来降低最大帧。默认情况下，引擎尝试以每秒60帧的速度渲染场景。例如，如果除数设置为2,FPS最高会达到30。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#showFPS" class="permalink">#</a> .<a href="api/zh/extras/App.html#showFPS" id="showFPS">showFPS</a> () : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      显示帧率计数器。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#unload" class="permalink">#</a> .<a href="api/zh/extras/App.html#unload" id="unload">unload</a> (<a href="api/zh/core/Object3D.html">rootObj</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      <a href="api/zh/core/Object3D.html">rootObj</a> -- （可选） 要和子物体一起卸载的物体；如果没有给定物体或给定物体是主应用程序场景，则该方法将执行完全场景清理。<br><br>
+
+      根据参数，卸载部分或整个场景。<br><br>
+
+      如果给定的<strong>rootObj</strong>是场景物体之一，则此方法将从场景中移除给定物体及其子物体，并释放相关资源（几何体、材质、纹理等）。如果给定的<strong>rootObj</strong>是场景实例本身，则该方法执行完整的场景清理，包括处理所有物体、场景环境、摄影机和摄影机控制器、动画、后处理、内部webgl对象等。。。<br><br>
+
+      完全卸载应用程序的场景后，可以使用loadScene方法加载一个全新的场景。这种方法最适合在不处理整个应用程序的情况下加载/卸载多个场景。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#updateEnvironment" class="permalink">#</a> .<a href="api/zh/extras/App.html#updateEnvironment" id="updateEnvironment">updateEnvironment</a> (<a href="api/zh/materials/Material.html">wMat</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      从指定的材质更新世界环境。此类材质通常存储在<a href="api/zh/scenes/Scene.html#worldMaterial">Scene.worldMaterial</a>属性中。
+    </p>
+
+    <h3><a href="api/zh/extras/App.html#updateEnvMapProbes" class="permalink">#</a> .<a href="api/zh/extras/App.html#updateEnvMapProbes" id="updateEnvMapProbes">updateEnvMapProbes</a> (<a href="api/zh/core/Object3D.html">object3d</a>) : <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      object3d - 在其子物体中搜寻探测对象的物体或场景<br><br>
+
+      更新给定<strong>object3d</strong>对象子物体的所有<a href="api/zh/lights/CubeReflectionProbe.html">CubeReflectionProbe</a>对象。
+    </p>
+
+
+    <h2>源代码</h2><p>关于如何获取此模块的源代码，请查看 <a href="manual/zh/programmers_guide/How-to-obtain-Verge3D-sources.html">本页</a>。</p>
+  
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

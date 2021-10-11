@@ -1,0 +1,638 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="0" scrolly="0" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="224.03228261670301" scrolly="276.9231355516093" scale="0.5580191958147874">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="Hy_$@0h|U$OD.9O0:*jf" type="">camDir</variable>
+      <variable id="=8%~7TG:4+QS#r`[=Zon" type="">clonedBall</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsWorld" id="fzr}1;+J$=WP[g)@h%uI" x="-270" y="-450">
+      <field name="SOFT_BODY">TRUE</field>
+      <value name="GRAVITY">
+        <shadow type="math_number" id="/8PaSCrWV5?E-*+%uF|R">
+          <field name="NUM">9.8</field>
+        </shadow>
+      </value>
+      <value name="FPS">
+        <shadow type="math_number" id="M`GpdDh3Esv;}iv9fpuF">
+          <field name="NUM">60</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsBody" id="k()]|1ncSo|LCOcj)XD}" x="-270" y="-390">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+      <field name="TYPE">STATIC</field>
+      <field name="SHAPE">MESH</field>
+      <value name="OBJECT">
+        <block type="objectList" id="PS]0`p,P}35B9+)F[-@|">
+          <field name="FIELDNAME">Ground</field>
+        </block>
+      </value>
+      <next>
+        <block type="createPhysicsBody" id="gq6;Vm4U-l*X{jNOo@U;">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+          <field name="TYPE">DYNAMIC</field>
+          <field name="SHAPE">MESH</field>
+          <value name="OBJECT">
+            <block type="objectList" id="I,7vPF3kCVS(.yT,5kw~">
+              <field name="FIELDNAME">Pin</field>
+            </block>
+          </value>
+          <value name="MASS">
+            <shadow type="math_number" id="V5-P}+p!cD(B)(omn!iW">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="createPhysicsBody" id="fa~#w20/+{2.HS2DEcC1">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+              <field name="TYPE">DYNAMIC</field>
+              <field name="SHAPE">MESH</field>
+              <value name="OBJECT">
+                <block type="objectList" id=":;.}!#%mtL#TMwKq3]5^">
+                  <field name="FIELDNAME">Pin2</field>
+                </block>
+              </value>
+              <value name="MASS">
+                <shadow type="math_number" id="MXuH(Cx5EpNm920j+dt3">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="createPhysicsBody" id="VN`L0my/f198V}rSh%-1">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+                  <field name="TYPE">DYNAMIC</field>
+                  <field name="SHAPE">MESH</field>
+                  <value name="OBJECT">
+                    <block type="objectList" id="Q[N4y}M+`nN1|0=pDfXs">
+                      <field name="FIELDNAME">Pin3</field>
+                    </block>
+                  </value>
+                  <value name="MASS">
+                    <shadow type="math_number" id="_#G|#4.sar-XYI;S@3a)">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="createPhysicsBody" id="Ju.*pZxIkhuQbr64^_/!">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+                      <field name="TYPE">DYNAMIC</field>
+                      <field name="SHAPE">MESH</field>
+                      <value name="OBJECT">
+                        <block type="objectList" id="G~Ou`kS300l-9ys^*-L4">
+                          <field name="FIELDNAME">Whirligig</field>
+                        </block>
+                      </value>
+                      <value name="MASS">
+                        <shadow type="math_number" id="cyO?Fi(MKLTf;=?aB}U3">
+                          <field name="NUM">1</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="createPhysicsBody" id=",7W`A=Y{SWGBgUZX?G8W">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+                          <field name="TYPE">DYNAMIC</field>
+                          <field name="SHAPE">MESH</field>
+                          <value name="OBJECT">
+                            <block type="objectList" id="iVT!P@hQ_D7{7;cfOfAg">
+                              <field name="FIELDNAME">Suzanne</field>
+                            </block>
+                          </value>
+                          <value name="MASS">
+                            <shadow type="math_number" id="1e.+$lVjFTtR1t*s~(!2">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="createPhysicsBody" id="d5@vca;LMmcmB%!.8JGE">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+                              <field name="TYPE">STATIC</field>
+                              <field name="SHAPE">BOX</field>
+                              <value name="OBJECT">
+                                <block type="objectList" id="5H;0wAbu82BxkmMGa~td">
+                                  <field name="FIELDNAME">Axis</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="createPhysicsBody" id="~!n+MozzAPs+Q`g/|p9.">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+                                  <field name="TYPE">STATIC</field>
+                                  <field name="SHAPE">EMPTY</field>
+                                  <value name="OBJECT">
+                                    <shadow type="objectList" id="?V:/TMKa|B:O]rnV4m,V">
+                                      <field name="FIELDNAME">Empty</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="createPhysicsBody" id="tI3${;8?/U}$bW=PvTuw">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+                                      <field name="TYPE">DYNAMIC</field>
+                                      <field name="SHAPE">SPHERE</field>
+                                      <value name="OBJECT">
+                                        <shadow type="objectList" id="wjGytIt/p8,yS+#pYlRc">
+                                          <field name="FIELDNAME">Icosphere</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="MASS">
+                                        <shadow type="math_number" id=":0O+B$u1{Nkq+SN4/d%y">
+                                          <field name="NUM">1</field>
+                                        </shadow>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="createSoftBody" id="2Rol,`Jw44SbScJa+IuN" x="-270" y="-10">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" body_shape="VOLUME"></mutation>
+      <field name="SHAPE">VOLUME</field>
+      <value name="OBJECT">
+        <shadow type="objectList" id="j;xAKsMMB#o0:$pvs5Vl">
+          <field name="FIELDNAME">Cube</field>
+        </shadow>
+      </value>
+      <value name="MASS">
+        <shadow type="math_number" id="ML%BFyiO[/.T1^2nhY~r">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="PRESSURE">
+        <shadow type="math_number" id="CV{m]7X,h2;10qH0)[at">
+          <field name="NUM">500</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="physicsBodyApplyParam" id="G7/c[.-3,O2mP(lwLWu?" x="-270" y="70">
+      <field name="TYPE">LINEAR_FACTOR</field>
+      <value name="PARAM">
+        <block type="createVector" id="6LiA9/8Olu}p0UZ?=;Xb">
+          <value name="X">
+            <shadow type="math_number" id="s6kRNs%Ef9BG:U|43VCY">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number" id="f4b0]rzXAY(3($34!#h9">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Z">
+            <shadow type="math_number" id=".cN_:|rc{,cxERyDFGfw">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <value name="OBJECT">
+        <block type="objectList" id="~eLhe[j,uD#Skzi/3p#n">
+          <field name="FIELDNAME">Whirligig</field>
+        </block>
+      </value>
+      <next>
+        <block type="physicsBodyApplyParam" id="e|S)A~-#T{UIbV*MJ6?J">
+          <field name="TYPE">ANGULAR_FACTOR</field>
+          <value name="PARAM">
+            <block type="createVector" id="+(Bt{Rj#lFQb4srOB|AN">
+              <value name="X">
+                <shadow type="math_number" id="q#d|$w?]Ymd~|+,wWeC-">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <value name="Y">
+                <shadow type="math_number" id="mE$RM3Sqf|9tV}C!ZAL:">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <value name="Z">
+                <shadow type="math_number" id="tE}cH26j8yv6b)B_6*S[">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <value name="OBJECT">
+            <block type="objectList" id="O#a3z2N#Xsn1evGs`4Er">
+              <field name="FIELDNAME">Whirligig</field>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="addPhysicsConstraint" id="e;mkHBr~$=C%[cLS~:43" x="-270" y="210">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" block_type="HINGE"></mutation>
+      <field name="TYPE">HINGE</field>
+      <value name="OBJ1">
+        <shadow type="objectList" id="FID[dvnOAHmKKd@Klbgl">
+          <field name="FIELDNAME">Suzanne</field>
+        </shadow>
+      </value>
+      <value name="OBJ2">
+        <shadow type="objectList" id=":K=/%ND[8)E^WH)1Xe8~">
+          <field name="FIELDNAME">Axis</field>
+        </shadow>
+      </value>
+      <value name="PIVOT">
+        <block type="getObjTransform" id="%y:F(Bh[+U[WF2q,|Q[[">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+          <field name="MODE">position</field>
+          <field name="COORD">xyz</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="/8nx)r0_sa(U%bF`(20X">
+              <field name="FIELDNAME">Axis</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <value name="AXIS">
+        <block type="createVector" id="Kj/`uihJkAgS=aG]ZiW@">
+          <value name="X">
+            <shadow type="math_number" id="Y9@w1Xa8XS1Exg/p{=D~">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number" id="(%tD!G-Ht[$^:Q$?,wa_">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Z">
+            <shadow type="math_number" id="`29Ywro*rEFJKuH:*+#M">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="addPhysicsConstraint" id="5DZJ|)IBOc8zZ)}B]:_:">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" block_type="SPRING"></mutation>
+          <field name="TYPE">SPRING</field>
+          <value name="OBJ1">
+            <shadow type="objectList" id="O0:GP-1V@ZK/k1=XaR|f">
+              <field name="FIELDNAME">Icosphere</field>
+            </shadow>
+          </value>
+          <value name="OBJ2">
+            <shadow type="objectList" id="Ty1*Aj;c%jT32Qzs_gw1">
+              <field name="FIELDNAME">Empty</field>
+            </shadow>
+          </value>
+          <value name="PIVOT">
+            <block type="getObjTransform" id="BSAx}?fbZ;j8/m4PJQ$B">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+              <field name="MODE">position</field>
+              <field name="COORD">xyz</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="OVH(#XKrx*9m(P!8~#%9">
+                  <field name="FIELDNAME">Axis</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+          <value name="STIFFNESS">
+            <shadow type="math_number" id="%S62B~SKs7D~M#/1zB:q">
+              <field name="NUM">50</field>
+            </shadow>
+          </value>
+          <value name="DAMPING">
+            <shadow type="math_number" id="x{/$aXG0o+u#r?7F2k}Z">
+              <field name="NUM">0.5</field>
+            </shadow>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="p+7dME=+3uI/h;DL#O%|" x="350" y="390">
+      <field name="NAME">shoot</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set" id="/SGZ-mXm@U+q($zXs#VN">
+          <field name="VAR" id="Hy_$@0h|U$OD.9O0:*jf">camDir</field>
+          <value name="VALUE">
+            <block type="getCameraDirection" id="/f{N=}L?VzJI8#*WqX?8">
+              <field name="MOUSE_TOUCH">TRUE</field>
+              <field name="INVERTED">FALSE</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set" id="?XNYHFddQHxpHb}xq[cd">
+              <field name="VAR" id="=8%~7TG:4+QS#r`[=Zon">clonedBall</field>
+              <value name="VALUE">
+                <block type="cloneObject" id="2Kq2bDT]uzg0(q21+[[-">
+                  <value name="OBJECTINPUT">
+                    <block type="objectList" id=")w1!*(?d__Bxg3[h#Ugd">
+                      <field name="FIELDNAME">Ball</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="createPhysicsBody" id="UeC[ShSm#2.E,sUCCt/x">
+                  <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+                  <field name="TYPE">DYNAMIC</field>
+                  <field name="SHAPE">SPHERE</field>
+                  <value name="OBJECT">
+                    <block type="variables_get" id="}?/L_/RM{x43`oD.gs?,">
+                      <field name="VAR" id="=8%~7TG:4+QS#r`[=Zon">clonedBall</field>
+                    </block>
+                  </value>
+                  <value name="MASS">
+                    <shadow type="math_number" id="sugoV#dm;uR3sjE1Y$wY">
+                      <field name="NUM">0.5</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="snapBody" id="u,iuB+!zxj?xziwT![Kt">
+                      <value name="SNAPWHAT">
+                        <block type="variables_get" id="~q8UL@XFsU6CxrzPn@[+">
+                          <field name="VAR" id="=8%~7TG:4+QS#r`[=Zon">clonedBall</field>
+                        </block>
+                      </value>
+                      <value name="SNAPTO">
+                        <block type="objectList" id="HM)7*6lg/1s)t=+6VcTk">
+                          <field name="FIELDNAME">Camera</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="setVectorValue" id="5YZ(Nh.hV5jmRZm!AjgA">
+                          <field name="VALUE_NAME">LENGTH</field>
+                          <value name="VECTOR">
+                            <block type="variables_get" id="A+JowI(LcbIIp92=s8+r">
+                              <field name="VAR" id="Hy_$@0h|U$OD.9O0:*jf">camDir</field>
+                            </block>
+                          </value>
+                          <value name="VALUE">
+                            <shadow type="math_number" id="QTjOt6jRB:=^riO+Xae,">
+                              <field name="NUM">0</field>
+                            </shadow>
+                            <block type="math_number" id=":C/5L:uS021/H0SvP@v`">
+                              <field name="NUM">20</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="physicsBodyApplyParam" id="5i7GmBBx0eS6;*M$HL9!">
+                              <field name="TYPE">IMPULSE</field>
+                              <value name="PARAM">
+                                <block type="variables_get" id="vDEaz8?PGW)k]?fDr!Zf">
+                                  <field name="VAR" id="Hy_$@0h|U$OD.9O0:*jf">camDir</field>
+                                </block>
+                              </value>
+                              <value name="OBJECT">
+                                <block type="variables_get" id="mG=%bHM55.sbev%qq,Rz">
+                                  <field name="VAR" id="=8%~7TG:4+QS#r`[=Zon">clonedBall</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="p.!$4i#n^0eLho!$URQW" x="-270" y="430">
+      <field name="EVENT">mousedown</field>
+      <field name="PARENT">FALSE</field>
+      <value name="ID">
+        <block type="DOMObjectSelector" id="yjZ98m].Y1cJ|Fy}I|0W">
+          <field name="DOM_OBJECT">CONTAINER</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="procedures_callnoreturn" id="LR#}idTo7Xsyv1g^e+K3">
+          <mutation name="shoot"/>
+        </block>
+      </statement>
+      <next>
+        <block type="eventHTMLElem" id="T5K{u{M5;n{;|(+ap*_u">
+          <field name="EVENT">touchstart</field>
+          <field name="PARENT">FALSE</field>
+          <value name="ID">
+            <block type="DOMObjectSelector" id="os,MlE4Pp71dyXhnJ0J/">
+              <field name="DOM_OBJECT">CONTAINER</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="procedures_callnoreturn" id="jjTIUiZ=J:i$^tk!wEoX">
+              <mutation name="shoot"/>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="advanced" type="SecondaryTab" active="false" scrollx="55.938900403998446" scrolly="215.3329485837604" scale="0.5950551981052327">
+    <block xmlns="https://developers.google.com/blockly/xml" type="comment" id="vy|jL#$@?qKg]!v[AyWY" x="110" y="-330">
+      <field name="TEXT">Pendulum</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="createSoftBody" id="0F.5[,.PAA8KL-u@d499" x="110" y="-270">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" body_shape="ROPE"></mutation>
+      <field name="SHAPE">ROPE</field>
+      <value name="OBJECT">
+        <shadow type="objectList" id="P=R^5Ke!G:~va`vxPHAf">
+          <field name="FIELDNAME">Rope</field>
+        </shadow>
+      </value>
+      <value name="MASS">
+        <shadow type="math_number" id=")bD/N|;I)AoG=h.(B${=">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="createPhysicsBody" id="~CKs]({0LYhDeg@lY+:9">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+          <field name="TYPE">DYNAMIC</field>
+          <field name="SHAPE">SPHERE</field>
+          <value name="OBJECT">
+            <block type="objectList" id="rNtYFav]Uq.SQTiX!th0">
+              <field name="FIELDNAME">Pendulum</field>
+            </block>
+          </value>
+          <value name="MASS">
+            <shadow type="math_number" id="NXruN^KmHEyL[$tuTOhv">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="createPhysicsBody" id="I5BEp1JD]ps0]fpousBg">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+              <field name="TYPE">STATIC</field>
+              <field name="SHAPE">SPHERE</field>
+              <value name="OBJECT">
+                <block type="objectList" id=";/F7+[rSrCRPIgkssljj">
+                  <field name="FIELDNAME">Pivot</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="physicsBodyApplyParam" id="?,=Vhb[)n,_iwtSYN#Y;" x="110" y="-110">
+      <field name="TYPE">STIFFNESS</field>
+      <value name="PARAM">
+        <block type="math_number" id=":v*n2iiYSEc?^.U5h:]7">
+          <field name="NUM">1.3</field>
+        </block>
+      </value>
+      <value name="OBJECT">
+        <shadow type="objectList" id="wW{/@C4ES[@)CKs{SLZa">
+          <field name="FIELDNAME">Rope</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="softBodyAnchor" id="K#UGZ3R}|gb1])!uIWq2" x="110" y="-30">
+      <value name="ANCHORWHAT">
+        <shadow type="objectList" id="PUg{b`SL^V25Dh;#:3d}">
+          <field name="FIELDNAME">Rope</field>
+        </shadow>
+      </value>
+      <value name="ANCHORTO">
+        <shadow type="objectList" id="3KBtr%)0%5(5{16H5djX">
+          <field name="FIELDNAME">Pivot</field>
+        </shadow>
+      </value>
+      <value name="AT">
+        <block type="getObjTransform" id="T*4bU8@$nUrLxz.qLsn7">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+          <field name="MODE">position</field>
+          <field name="COORD">xyz</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="cM}.RgF1-$)]v:xJ5g}f">
+              <field name="FIELDNAME">Pivot</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="softBodyAnchor" id="nhf-=prT#`v00@QpTy^s">
+          <value name="ANCHORWHAT">
+            <shadow type="objectList" id="`=Q*Xgvv:$K(zCJD6d31">
+              <field name="FIELDNAME">Rope</field>
+            </shadow>
+          </value>
+          <value name="ANCHORTO">
+            <shadow type="objectList" id="l.2A_^YE/-i7(Hc``d[d">
+              <field name="FIELDNAME">Pendulum</field>
+            </shadow>
+          </value>
+          <value name="AT">
+            <block type="getObjTransform" id="Kn_09?Sy)7zZ+4~MzbwV">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+              <field name="MODE">position</field>
+              <field name="COORD">xyz</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="You5P)`[0u.G)4Ky|e]i">
+                  <field name="FIELDNAME">Pendulum</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="comment" id="vnA$JQ!k2nbbmkZ}i[wm" x="110" y="130">
+      <field name="TEXT">Flag</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsBody" id="M5S}h_Ib1)qP;t[CE1;4" x="110" y="190">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+      <field name="TYPE">STATIC</field>
+      <field name="SHAPE">CYLINDER</field>
+      <value name="OBJECT">
+        <shadow type="objectList" id="x=Z}8Wh-M-Lt{`K?8VUZ">
+          <field name="FIELDNAME">FlagPole</field>
+        </shadow>
+      </value>
+      <next>
+        <block type="createSoftBody" id="rL)=;K4m43mg^6J]7eOA">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" body_shape="PATCH"></mutation>
+          <field name="SHAPE">PATCH</field>
+          <value name="OBJECT">
+            <shadow type="objectList" id="yC`,Qozasv}EG568BB//">
+              <field name="FIELDNAME">Banner</field>
+            </shadow>
+          </value>
+          <value name="MASS">
+            <shadow type="math_number" id="*#rj3,j;N{!15qfswJgE">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="softBodyAnchor" id="z`6aTE(6eOySHqi=Jzqc" x="110" y="310">
+      <value name="ANCHORWHAT">
+        <shadow type="objectList" id="8J+4p4~YM%Smjbuov4))">
+          <field name="FIELDNAME">Banner</field>
+        </shadow>
+      </value>
+      <value name="ANCHORTO">
+        <shadow type="objectList" id="{;YgIj;h5;-9DRs:hYY:">
+          <field name="FIELDNAME">FlagPole</field>
+        </shadow>
+      </value>
+      <value name="AT">
+        <block type="getObjTransform" id="We^|!;s8fXaGh.x2QX-B">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+          <field name="MODE">position</field>
+          <field name="COORD">xyz</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="JCuSg8Ff;3Az`Pr/`S4v">
+              <field name="FIELDNAME">FlagAnchorTop</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+      <next>
+        <block type="softBodyAnchor" id="WvZ;RD[aoS7,2drA64~$">
+          <value name="ANCHORWHAT">
+            <shadow type="objectList" id="Vvw-ZX|}uo][sc0LH,04">
+              <field name="FIELDNAME">Banner</field>
+            </shadow>
+          </value>
+          <value name="ANCHORTO">
+            <shadow type="objectList" id="u[GOQ2PN*d@5~N3w`a!u">
+              <field name="FIELDNAME">FlagPole</field>
+            </shadow>
+          </value>
+          <value name="AT">
+            <block type="getObjTransform" id="sq/PlskQ{7(iEmY#p!jS">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+              <field name="MODE">position</field>
+              <field name="COORD">xyz</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="[~_/u2d;`tlZNPhQ5iDd">
+                  <field name="FIELDNAME">FlagAnchorBottom</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="l!f^BC{`ZvMGroEGvjyG" x="110" y="450">
+      <value name="TEXT">
+        <shadow type="textMultiline" id="yrdDfO6L|e{1H~jdpaHT">
+          <field name="HIGHLIGHT_MODE">javascript</field>
+          <field name="TEXT">var body = v3d.puzzles.physics.bodies['Banner'];&#10;&#10;body.get_m_cfg().set_kLF(0.1);&#10;body.get_m_cfg().set_kDG(0.001);&#10;body.get_m_cfg().set_kDP(0.001);&#10;&#10;body.setWindVelocity(new Ammo.btVector3(7, 0, 0));&#10;</field>
+        </shadow>
+      </value>
+    </block>
+  </tab>
+  <editorsettings viewport-x="883.5" viewport-y="28" viewport-w="538.5" viewport-h="318" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

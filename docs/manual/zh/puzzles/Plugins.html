@@ -1,0 +1,1684 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <title>拼图插件参考 - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Verge3D拼图编辑器的自定义插件系统。">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/Plugins.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="拼图插件参考 - Soft8Soft">
+            <meta property="og:description" content="Verge3D拼图编辑器的自定义插件系统。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/Plugins.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="拼图插件参考 - Soft8Soft">
+            <meta name="twitter:description" content="Verge3D拼图编辑器的自定义插件系统。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-ui-location.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-print-puzzle-xml-tree.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-puzzle-xml-tree.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-puzzle-xml-tree-step-1.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-puzzle-xml-tree-step-2.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-puzzle-xml-tree-step-3.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-puzzle-xml-tree-step-4.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-block-order.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-label-elements.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-label-elements-styled.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-sep-elements.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-allow-init.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-default-value-input.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-default-value-input-shadow.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-default-value-statement.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-default-dummy-input.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-compound-puzzle.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-subcategories.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-block-minimal-appearance.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-block-minimal-console.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-template-color.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-template-tooltip.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-template-helpurl.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-template-input-types.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-inputs-inline.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-text-label.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-text.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-text-multiline.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-number.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-number-angle.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-checkbox.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-dropdown.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-color.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-field-alignment.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-output-connections.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-plugins-dummy-block.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>插件 | Plugins</h1>
+
+    <p><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html">Verge3D拼图编辑器</a>提供了加载您自己自定义拼图的能力，从而使您可以用您一直想要的功能来扩展编辑器的功能。</p>
+
+
+    <h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/Plugins.html#installing">安装插件</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_files_overview">插件文件概述</a><ul><li><a href="manual/zh/puzzles/Plugins.html#init_plug_file_format">init.plug文件格式</a><ul><li><a href="manual/zh/puzzles/Plugins.html#init_plug_category">Category(类目)</a><ul><li><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_entry_name">工具箱中的条目名称</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_entry_color">工具箱中的条目颜色</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_available_puzzles">可用的拼图</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_puzzles_order">拼图顺序</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_text_labels">文本标签</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_separator_elements">分隔符</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_available_puzzles_init">在 "init" 初始化标签中可用的拼图模块</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_default_input_field_values">默认的输入和字段值</a></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_subcategories">工具箱内的子类目</a></li></ul></li><li><a href="manual/zh/puzzles/Plugins.html#init_plug_script">脚本</a></li></ul></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_format">.block文件格式</a><ul><li><a href="manual/zh/puzzles/Plugins.html#block_file_template">Block模板</a><ul><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_color">Block的颜色</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_tooltip">Block的工具提示</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_help_url">Block的帮助URL</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_adding_inputs">添加输入插槽</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_arrangement_inputs">输入的排列</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">添加字段</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_field_alignment">字段排列</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_connections">模块的连接</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_template_input_output_type_checking">输入/输出类型检查</a></li></ul></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_code">Code Function</a><ul><li><a href="manual/zh/puzzles/Plugins.html#block_file_code_basic_code_generation">基本的代码生成</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_code_mitigating_code_bloat">缓解代码臃肿问题</a></li><li><a href="manual/zh/puzzles/Plugins.html#block_file_code_inputs_fields">访问输入和字段</a></li></ul></li></ul></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors">插件和图模块的错误</a><ul><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_parsing_0">BlockError(PLUGIN_NAME/BLOCK_NAME): error parsing .block file - "This page contains the following errors:error on line ..."</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_parsing_1">BlockError(PLUGIN_NAME/BLOCK_NAME): error parsing .block file - "ReferenceError (SyntaxError, TypeError, etc...)..."</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_0">BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - " TypeError: Child block does not have output or previous statement."</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_1">BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - "Error: Connection checks failed. Input "PARENT_INPUT_NAME" connection on "PLUGIN_NAME/BLOCK_NAME" block (id="BLOCK_ID") expected TYPE_PARENT, found TYPE_CHILD"</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_2">BlockError(PLUGIN_NAME/null): validation error - "TypeError: Unknown block type: PLUGIN_NAME/null"</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_3">BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - "TypeError: Unknown block type: PLUGIN_NAME/BLOCK_NAME"</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_template">BlockError(PLUGIN_NAME/BLOCK_NAME): error calling template() function ...</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_code">BlockError(PLUGIN_NAME/BLOCK_NAME): error calling code() function ...</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_parsing_0">PluginError(PLUGIN_NAME): error parsing init.plug file - "This page contains the following errors:error on line ..."</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_parsing_1">PluginError(PLUGIN_NAME): error parsing init.plug file - "ReferenceError (SyntaxError, TypeError, etc...)..."</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_code">PluginError(PLUGIN_NAME): error calling code() function ...</a></li><li><a href="manual/zh/puzzles/Plugins.html#plugin_errors_dummy">Puzzle "PLUGIN_NAME/BLOCK_NAME" is not defined properly.Replaced with a dummy block.</a></li></ul></li><li><a href="manual/zh/puzzles/Plugins.html#sharing_your_plugin">分享您的插件</a></li></ul></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/Plugins.html#installing" id="installing" class="permalink">#</a></p>
+
+    <h2>安装插件</h2>
+
+    <p>插件是包含一堆与插件相关的文件的目录。插件应该放在Verge3D的<strong>puzzles/plugins</strong>文件夹中，以便被拼图编辑器识别。仅此而已！重新加载编辑器页面后，所有已安装的插件就会出现在编辑器工具箱的底部，紧随所有标准拼图类目之后。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-ui-location.jpg" class="centered" style="max-width: 570px"> <span class="img-caption">工具箱中的插件类目</span><p id="example_plugin" class="note"><u>提供给插件开发者：</u><br> 这里有一个实用的参考插件实例，包含了一些典型的拼图模块：<a href="files/puzzles/ExamplePlugin.zip">ExamplePlugin.zip</a>。您可以将其解压到 <strong>puzzles/plugins</strong> 文件夹中，然后在工具箱中查看 "Example Plugin " 的拼图类目。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_files_overview" id="plugin_files_overview" class="permalink">#</a></p>
+
+    <h2>插件文件概述</h2>一个典型的插件是一个包含<strong>init.plug</strong>文件的目录，其中包含了插件的通用设置，还有一堆 <b>*.block</b> 文件，每个文件都定义一个拼图模块。如果您使用的文本编辑器支持语法高亮，那么请在开启这两种文件格式时使用HTML模式。<p><a href="manual/zh/puzzles/Plugins.html#init_plug_file_format" id="init_plug_file_format" class="permalink">#</a></p>
+
+    <h3>init.plug文件格式</h3>
+
+    <p><strong>init.plug</strong>是一个强制性的插件文件，它用于指定常规的插件设置。在该文件中，您可以定义工具箱的条目是什么样子的。您也可以在那里为拼图添加一些初步的javascript代码。下面这个简单的示例列出了您将在<strong>init.plug</strong>文件中看到的内容：</p>
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+    &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+    &lt;!-- &lt;block type="testPuzzle"&gt;&lt;/block&gt; --&gt;
+    &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_category" id="init_plug_category" class="permalink">#</a></p>
+
+    <h4>Category(类目)</h4>
+
+    <p><strong>category</strong>部分是一个XML树，它定义了插件及其拼图模块在拼图编辑器工具箱中的显示方式。虽然它是可选的，但如果<strong>init.plug</strong>文件中没有<strong>category</strong>，那么此插件不会被加载到拼图编辑器中。 <br><br> 您可以通过<strong>category</strong>设置以下几个选项：</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_entry_name" id="init_plug_toolbox_entry_name" class="permalink">#</a></p>
+
+    <h5>工具箱中的条目名称</h5>
+
+    <p class="indented">通过<strong>name</strong>属性指定。 
+
+    <code>
+&lt;category name="My Awesome Plugin"&gt;&lt;/category&gt;
+    </code>
+
+    </p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_entry_color" id="init_plug_toolbox_entry_color" class="permalink">#</a></p>
+
+    <h5>工具箱中的条目颜色</h5>
+
+    <p class="indented">通过<strong>color</strong>属性指定。
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;&lt;/category&gt;
+    </code>
+
+    可以用以下格式来定义颜色：</p>
+
+    <ul id="color_formats">
+        <li>十六进制三联体，如： <b>#f61</b> 或 <b>#f0562f</b></li>
+        <li>在0°-360°范围内的色相值，例如： <b>140</b> （在HSV颜色模型的范围内，S和V分别固定为45%和65%）.</li>
+        <li>颜色关键词，如： <b>aqua</b>, <b>black</b>, <b>blue</b>, <b>fuchsia</b>, <b>gray</b>, <b>green</b>, <b>lime</b>, <b>maroon</b>, <b>navy</b>, <b>olive</b>, <b>purple</b>, <b>red</b>, <b>silver</b>, <b>teal</b>, <b>white</b> 和 <b>yellow</b></li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_available_puzzles" id="init_plug_available_puzzles" class="permalink">#</a></p>
+
+    <h5>可用的拼图</h5>
+
+    <div class="indented">
+    
+    <p>要使一个拼图模块在插件的工具箱类目中可用，应该通过<strong>block</strong>元素和其<strong>type</strong>属性来指定。<strong>type</strong>属性可以参考以下拼图。</p>
+
+    <ul>
+    <li id="available_puzzles_plugin">由插件自己定义的拼图——在这种情况下， <strong>type</strong> 应该根据您的插件目录中相应的.block文件的名称来设置（例如，<strong>myPuzzle</strong> 表示block文件<strong>my_awesome_plugin/myPuzzle.block</strong>) 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+    </li>
+    
+    <li id="available_puzzles_stock">库存拼图模块 - <strong>type</strong>应该等于库存拼图的类型（例如：<strong>math_number</strong>）。这样就可以直接在您的插件的工具箱类目中添加库存拼图。 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="math_number"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+    </li>
+    <li>由其他插件定义的拼图——<strong>type</strong>应该是<strong>PLUGIN_DIRECTORY_NAME/PUZZLE_TYPE</strong>的形式。例如，标准的 <a href="manual/zh/puzzles/ECommerce.html">电子商务</a> 插件的拼图可以这样引用： 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="E-Commerce/placeOrder"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+</li>
+    </ul>
+
+    <p id="puzzle-xml-tree">为查找出某个拼图模块的类型，您可以使用拼图上下文菜单中的 "Print Puzzle XML Tree(打印拼图XML树)" 选项：</p>
+      
+    <img src="files/puzzles/puzzles-plugins-print-puzzle-xml-tree.png" class="width-clear border-gray"><p>该菜单选项可将拼图的XML树打印到浏览器控制台。您可以在其中找到拼图类型以及整个XML结构，可用于在设置 <a href="manual/zh/puzzles/Plugins.html#init_plug_default_input_field_values">默认的输入和字段值</a> 时参考。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-puzzle-xml-tree.png" class="width-clear border-gray"><p>"Print Puzzle XML Tree(打印拼图XML树)" 菜单选项提供了一个简单的方法，可以一次性将一整组拼图模块添加到您的插件中。这样便于您创建某种由相连的拼图模块组成的 "代码片段(snippets)" 并将其放入插件中。这使得它有点类似于 <a href="manual/zh/puzzles/Library.html">拼图库</a> 。</p><p>下面的示例解释了如何执行这一操作：</p>
+            <ul>
+                <li>在拼图编辑器中创建一些拼图模块：<br> <img src="files/puzzles/puzzles-plugins-puzzle-xml-tree-step-1.png" class="width-clear border-gray"></li>
+                <li>用鼠标右键点击最上面或最外部的模块，选择 "Print Puzzle XML Tree(打印拼图XML树)" ：<br> <img src="files/puzzles/puzzles-plugins-puzzle-xml-tree-step-2.png" class="width-clear border-gray"></li>
+                <li>进入浏览器控制台，复制打印出来的内容（下面是在谷歌Chrome浏览器中的截图）：<br> <img src="files/puzzles/puzzles-plugins-puzzle-xml-tree-step-3.png" class="width-clear border-gray"></li>
+                <li>把它粘贴到<strong>init.plug</strong>文件中的 <b>"category"</b> 元素内，并保存该文件：<br> <img src="files/puzzles/puzzles-plugins-puzzle-xml-tree-step-4.png" class="width-clear border-gray"></li>
+                <li>然后重新加载拼图编辑器，您所复制的模块就会出现在插件的类目中。</li>
+            </ul>
+        <p></p>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_puzzles_order" id="init_plug_puzzles_order" class="permalink">#</a></p>
+
+    <h5>拼图顺序</h5>
+
+    <p class="indented">拼图模块按照您在<strong>init.plug</strong>文件中定义的顺序在工具箱中排列。 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+        &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+        &lt;!-- &lt;block type="testPuzzle"&gt;&lt;/block&gt; --&gt;
+        &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+ <img src="files/puzzles/puzzles-plugins-block-order.jpg" style="max-width: 523px"><br> 注意，被注释掉的拼图模块 "testPuzzle" 并没有显示在工具箱中。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_text_labels" id="init_plug_text_labels" class="permalink">#</a></p>
+
+    <h5>文本标签</h5>
+
+    <div class="indented">
+        <p>您可以通过<strong>label</strong>元素将文本标签添加到工具箱类目中：</p>
+
+        <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;label text="My Awesome Plugin v1.0"&gt;&lt;/label&gt;
+        &lt;label text="Main Puzzles:"&gt;&lt;/label&gt;
+        &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+        &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+        &lt;label text="Other:"&gt;&lt;/label&gt;
+        &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+        </code>
+
+ <img src="files/puzzles/puzzles-plugins-label-elements.jpg" style="max-width: 523px"><br><p class="note"><strong>label</strong>元素不适合显示多行文本，即不会换行。</p>
+
+        <p><strong>label</strong>元素也可以在一定程度上定义样式。它们支持<strong>web-class</strong>属性，可用于为<strong>label</strong>元素分配自定义的CSS类。该类的CSS规则可以在<strong>init.plug</strong>的<strong>script</strong>部分定义。下方示例描述了实现方式：</p>
+<code>
+&lt;category name="Example Plugin" color="#a52a2a"&gt;&lt;label text="Example Plugin v1.0 by Soft8Soft" web-class="example-plugin__label"&gt;&lt;/label&gt;&lt;/category&gt;&lt;script&gt; const styleElem = document.createElement('style'); styleElem.innerHTML = ` .example-plugin__label .blocklyFlyoutLabelText { fill: #a52a2a; font-style: italic; font-weight: bold; text-decoration: underline; } `; document.head.appendChild(styleElem); &lt;/script&gt;
+</code>
+<p>这是应用自定义CSS规则后的样子：</p>
+      
+    <img src="files/puzzles/puzzles-plugins-label-elements-styled.png" class="width-clear"><p class="note">在为<strong>web-class</strong>属性规划CSS类名时，建议考虑限定CSS范围。例如使用拼图插件名作为专有前缀：在上面的例子中使用了 "example-plugin__label" 类的 "example-plugin" 部分作为前缀。这样，意外破坏页面中已经使用的CSS类的可能性就很小了。</p>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_separator_elements" id="init_plug_separator_elements" class="permalink">#</a></p>
+
+    <h5>分隔符</h5>
+
+    <p class="indented">分隔符可以用来改变拼图模块之间的距离。您可以通过<strong>sep</strong>元素在工具箱类目中添加分隔符。<strong>gap</strong>属性指定了间隙的宽度，单位为像素。不使用<strong>sep</strong>时，模块之间的默认距离等于24像素。 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+        &lt;sep gap="0"&gt;&lt;/sep&gt;
+        &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+        &lt;sep gap="80"&gt;&lt;/sep&gt;
+        &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+ <img src="files/puzzles/puzzles-plugins-sep-elements.jpg" style="max-width: 523px"><br></p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_available_puzzles_init" id="init_plug_available_puzzles_init" class="permalink">#</a></p>
+
+    <h5>在 "init" 初始化标签中可用的拼图模块</h5>
+
+    <p class="indented">默认情况下，拼图模块只在<strong>main</strong>和用户创建的选项卡中可用，在<strong>init(初始化)</strong>选项卡中不可用。这是因为<strong>init</strong>选项卡所产生的代码是在Verge3D应用被加载与完全初始化之前执行的。这意味着那些预期用于3D场景、3D对象、材质的拼图并不适合在<strong>init</strong>中使用，如果使用会导致应用崩溃。但是，对于不作用于3D场景的拼图应该不会有这样的问题。例如，可以在<strong>init</strong>中使用预加载资源拼图或设置用户界面的拼图。<br><br>如果需要让拼图模块出现在<strong>init</strong>标签的工具箱中，您需要在拼图的<strong>block</strong>元素中设置<strong>allow-init</strong>属性为<strong>true</strong>（这也适用于<strong>label</strong>和<strong>sep</strong>元素）。 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;label text="My Awesome Plugin v1.0" allow-init="true"&gt;&lt;/label&gt;
+        &lt;label text="Main Puzzles:"&gt;&lt;/label&gt;
+        &lt;block type="myPuzzle" allow-init="true"&gt;&lt;/block&gt;
+        &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+        &lt;label text="Other:"&gt;&lt;/label&gt;
+        &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+ <img src="files/puzzles/puzzles-plugins-allow-init.jpg" style="max-width: 523px"><br> 注意，没有<strong>allow-init</strong>的<strong>block</strong>和<strong>label</strong>元素是不会显示在工具箱中的。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_default_input_field_values" id="init_plug_default_input_field_values" class="permalink">#</a></p>
+
+    <h5>默认的输入和字段值</h5>
+
+    <p class="indented">如果一个拼图模块有模块输入和/或字段输入，那么您可以指定它们的占位模块和/或默认值。模块输入即连接其他拼图模块的插槽，字段输入即不以拼图模块为形态的UI元素，如选择器、复选框、文本字段等.这个功能有两个目的：为用户提供提示，告诉他们可以插入哪些类型的模块到输入插槽中，同时也可快速调用拼图模块。<br><br>比方说，您的拼图模块有一个名为 "myNumber" 的输入。这里您可以添加一个<strong>math_number</strong>类型的占位符模块插入该槽。
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="myPuzzle"&gt;
+            &lt;value name="myNumber"&gt;
+                &lt;block type="math_number"&gt;&lt;/block&gt;
+            &lt;/value&gt;
+        &lt;/block&gt;
+&lt;/category&gt;
+    </code>        
+
+ 其外观如下：<br> <img src="files/puzzles/puzzles-plugins-default-value-input.jpg" style="max-width: 523px"><br><br> 插入输入插槽的占位符模块也可以是一个<strong>shadow(影子)</strong>模块。<strong>shadow</strong>模块与普通模块基本相同，但它们可被您插入到相应输入插槽中的模块自动替换，当您从插槽中移除该模块时，它们又会自动出现。这使得<strong>shadow</strong>模块比普通的占位符模块更容易使用。<br><br><strong>shadow</strong>模块的定义方式与普通占位符模块几乎相同，唯一的区别是<strong>block</strong>元素被类似的<strong>shadow</strong>元素所取代。
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block type="myPuzzle"&gt;
+        &lt;value name="myNumber"&gt;
+            &lt;shadow type="math_number"&gt;&lt;/shadow&gt;
+        &lt;/value&gt;
+    &lt;/block&gt;
+&lt;/category&gt;
+    </code>
+ 
+它看起来会是这样的：<br> <img src="files/puzzles/puzzles-plugins-default-value-input-shadow.jpg" style="max-width: 523px"><br><br> 拼图模块可以有语句输入，这些输入通常包裹着一系列的子拼图模块。比方说，您的拼图模块有一个名为 "myStatement" 的语句输入，那么您可以在这个输入中添加几个占位符模块，如下所示：
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;
+            &lt;statement name="myStatement"&gt;
+                &lt;block type="addHTMLElement"&gt;
+                    &lt;next&gt;
+                        &lt;block type="setHTMLElemAttribute"&gt;&lt;/block&gt;
+                    &lt;/next&gt;
+                &lt;/block&gt;
+            &lt;/statement&gt;
+        &lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+ 这里使用的<strong>statement</strong>元素通过<strong>name</strong>属性引用 "myStatement" 输入，并在输入中添加了一些占位符模块。另外，这里还使用了<strong>next</strong>元素，用于链接一系列的占位符模块。这个设置的结果如下所示：<br> <img src="files/puzzles/puzzles-plugins-default-value-statement.jpg" style="max-width: 735px"><br><br> 如果您的拼图模块有一个名为 "myCheckbox" 的复选框字段，那么您可以像这样定义它的默认状态（<strong>true</strong> - 启用，<strong>false</strong> - 禁用）：
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;
+            &lt;field name="myCheckbox"&gt;true&lt;/field&gt;
+        &lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+ 结果如下：<br> <img src="files/puzzles/puzzles-plugins-default-dummy-input.jpg" style="max-width: 523px"><br><br> <span id="default_input_values_compound"></span> 通过使用占位符模块和默认字段值，您可以定义复杂的复合拼图，类似于可以添加到 <a href="manual/zh/puzzles/Library.html#using_entries">拼图库</a>中的内容： <img src="files/puzzles/puzzles-plugins-compound-puzzle.jpg" style="max-width: 600px"><br>上图中复杂拼图设置的<strong>init.plug</strong>的代码示例如下： 
+
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;
+
+            &lt;statement name="STATEMENT_0"&gt;
+                &lt;block type="whenClicked"&gt;
+                    &lt;value name="VALUE"&gt;
+                        &lt;block type="objectList"&gt;
+                            &lt;field name="FIELDNAME"&gt;Cube&lt;/field&gt;
+                        &lt;/block&gt;
+                    &lt;/value&gt;
+                &lt;/block&gt;
+            &lt;/statement&gt;
+
+            &lt;statement name="STATEMENT_1"&gt;
+                &lt;block type="loadScene"&gt;
+                    &lt;value name="URL"&gt;
+                        &lt;block type="text"&gt;
+                            &lt;field name="TEXT"&gt;my_scene.gltf&lt;/field&gt;
+                        &lt;/block&gt;
+                    &lt;/value&gt;
+                &lt;/block&gt;
+            &lt;/statement&gt;
+
+            &lt;statement name="STATEMENT_2"&gt;
+                &lt;block type="show"&gt;
+                    &lt;value name="VALUE"&gt;
+                        &lt;block type="objectList"&gt;
+                            &lt;field name="FIELDNAME"&gt;something&lt;/field&gt;
+                        &lt;/block&gt;
+                    &lt;/value&gt;
+                &lt;/block&gt;
+            &lt;/statement&gt;
+
+        &lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+</p><div class="indented">
+            <p class="note">查看 <a href="manual/zh/puzzles/Plugins.html#puzzle-xml-tree"> "Print Puzzle XML Tree(打印拼图XML树)" </a> 上下文菜单选项。它有助于您找出感兴趣的拼图模块的XML结构（输入和字段的配置）。</p>
+        </div>
+    <p></p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_toolbox_subcategories" id="init_plug_toolbox_subcategories" class="permalink">#</a></p>
+
+    <h5>工具箱内的子类目</h5>
+
+    <p class="indented">在编辑器的工具箱中，一个类目可以有子类目，而子类目也可以有子类目，以此类推...如果您想把插件拼图组织成一个树状结构，可以使用此功能。<br><br>通过嵌套<strong>category</strong>元素来实现： 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+        &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+        &lt;category name="1" color="red"&gt;
+            &lt;category name="1.1" color="silver"&gt;
+                &lt;block type="anotherPuzzle"&gt;&lt;/block&gt;
+            &lt;/category&gt;
+        &lt;/category&gt;
+        &lt;category name="2" color="blue"&gt;
+            &lt;block type="doSomethingCool"&gt;&lt;/block&gt;
+        &lt;/category&gt;
+&lt;/category&gt;
+    </code>
+
+ <img src="files/puzzles/puzzles-plugins-subcategories.jpg" style="max-width: 523px"><br> 任何<strong>category</strong>都可以同时包含<strong>category</strong>和<strong>block</strong>元素（但这不是强制性的）。这样在一个父级类目中可同时包含拼图模块和子类目。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#init_plug_script" id="init_plug_script" class="permalink">#</a></p>
+
+    <h4>脚本</h4>
+
+    <p><b>&lt;script&gt;</b> 元素是<strong>init.plug</strong>的一个可选的部分。它可以用来为拼图模块添加一些初始化代码。有时候，在您的拼图被使用之前，您可能需要进行繁重的计算和缓存一些数据——这就是 <b>&lt;script&gt;</b> 的作用。</p>
+
+    <p>如果您在 <b>&lt;script&gt;</b> 中定义了一个<strong>code()</strong>函数，它将被用来生成代码，并在所有拼图之前执行一次。这个<strong>code()</strong>函数会返回一个包含javascript代码的字符串。 
+
+    <code>
+&lt;script&gt;
+function code() {
+    // this line will be executed before any puzzles
+    return `console.log('Powered by My Awesome Plugin!');`;
+}
+&lt;/script&gt;
+    </code>
+
+</p>
+
+    <p class="note">由<strong>code()</strong>函数返回的初始化代码只有在该插件的拼图在应用中被实际使用时，才会被添加到生成的逻辑文件中（被添加到工作区且未被禁用）。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_format" id="block_file_format" class="permalink">#</a></p>
+
+    <h3>.block文件格式</h3>
+
+    <p>以 <b>.block</b> 为扩展名的插件文件是用来定义单个拼图模块的，特别是定义一个拼图模块的外观以及它在添加到工作区时应该产生的代码。一个插件可以没有 <b>.block</b> 文件。如果您想创建一个只有 <a href="manual/zh/puzzles/Plugins.html#available_puzzles_stock">库存</a> 拼图模块的工具箱类目（可以包含 <a href="manual/zh/puzzles/Plugins.html#default_input_values_compound">更复杂的模块设置</a>），可使用此方法。<br><br>一个 <b>.block</b> 文件的名称被用来指示哪些拼图模块应该被 <a href="manual/zh/puzzles/Plugins.html#available_puzzles_plugin">包含在插件的工具箱类目</a> 中。</p>
+
+    <p>下面是一个 <b>.block</b> 文件的最小化实例。 
+
+    <code>
+&lt;template color="green"&gt;
+        &lt;dummy&gt;
+            &lt;label&gt;myPuzzle&lt;/label&gt;
+        &lt;/dummy&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    function code(block) {
+        return `console.log('This is my first puzzle!');`;
+    }
+&lt;/script&gt;
+    </code>
+
+ 这里我们有一个 <b>&lt;template&gt;</b> 元素，定义了拼图模块的外观。还有一个 <b>&lt;script&gt;</b> 元素，里面有一个 <strong>code()</strong> 函数。这个 <strong>code()</strong> 函数返回一个字符串，其中包含将生成的代码，以代替这个拼图。<br><br>因此，根据上面的实例，我们期望得到的简单拼图模块是绿色的，并且有一个 "myPuzzle" 文本标签。<br> <img src="files/puzzles/puzzles-plugins-block-minimal-appearance.jpg" style="max-width: 523px"><br><br> 如果将其添加到工作区，它将会在浏览器控制台中打印出以下信息：<br> <img src="files/puzzles/puzzles-plugins-block-minimal-console.jpg" style="max-width: 523px"><br></p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template" id="block_file_template" class="permalink">#</a></p>
+
+    <h4>Block模板</h4>
+
+    <p>拼图模块的外观可以通过两种方式定义：通过 <b>&lt;template&gt;</b> XML元素和通过 <strong>template()</strong> 函数。前者更简单易用。例如，一个典型拼图的 <b>&lt;template&gt;</b> 可以是这样的：</p>
+    
+    <code>
+&lt;template
+        color="green"
+        inline="true"
+        output="Dictionary"
+        tooltip="This is my first puzzle!"
+        help="https://soft8soft.com"
+&gt;
+        &lt;dummy name="myDummyInput"&gt;
+            &lt;label&gt;enable&lt;/label&gt;
+            &lt;checkbox name="myCheckbox"&gt;true&lt;/checkbox&gt;
+        &lt;/dummy&gt;
+
+        &lt;value name="myValueInput"&gt;
+            &lt;label&gt;input value&lt;/label&gt;
+        &lt;/value&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    function code(block) {
+        return `console.log('This is my first puzzle!');`;
+    }
+&lt;/script&gt;
+        </code>
+    
+<p>另一种方法是使用 <strong>template()</strong> 函数。这是一个您可以在 <b>&lt;script&gt;</b> 元素内定义的函数。它也可以用来配置拼图的外观，但这次是通过 <a href="https://developers.google.com/blockly/reference/overview">Blockly JavaScript API</a> 而非XML元素与属性配置的。它会接收 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg">Blockly.BlockSvg</a> 实例型的<strong>block</strong>参数。<br><br>可以通过使用 <strong>template()</strong> 函数来重写上面实例中的模块，如下所示：</p>
+
+    <code>
+&lt;script&gt;
+function template(block) {
+        block.setColor('green');
+        block.setInputsInline(true);
+        block.setOutput(true, 'Dictionary');
+        block.setTooltip('This is a test puzzle!');
+        block.setHelpUrl('https://soft8soft.com');
+
+        block.appendDummyInput('myDummyInput')
+        .appendField('enable')
+        .appendField(new Blockly.FieldCheckbox(true), 'myCheckbox');
+
+        block.appendValueInput('myValueInput')
+        .appendField('input value');
+}
+
+function code(block) {
+        return `console.log('This is my first puzzle!');`;
+}
+&lt;/script&gt;
+    </code>
+
+<p>这种方法更加灵活，但需要对相应的API有所了解。如果您需要做一些无法通过 <b>&lt;template&gt;</b> 元素实现的设置，可使用这种方法。此外，您可以同时使用 <b>&lt;template&gt;</b> 和 <strong>template()</strong> 。</p>
+
+    <p class="note">本节提供了 <b>&lt;template&gt;</b> （<strong>XML</strong>）和 <strong>template()</strong>(<strong>JS</strong>)两种变体的示例。</p>
+
+    <p class="note">请注意，本节只是简要介绍了如何创建一个自定义拼图模块。关于进行常规定制的详细介绍，请查看谷歌Blockly关于 <a href="https://developers.google.com/blockly/guides/create-custom-blocks/overview">自定义模块</a> 和 <a href="https://developers.google.com/blockly/guides/create-custom-blocks/fields/overview">字段</a> 的文档。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_color" id="block_file_template_block_color" class="permalink">#</a></p>
+
+    <h5>Block的颜色</h5>
+
+    <div class="indented">
+
+        <p>您可以设置拼图模块的颜色，使其外观更加独特。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-template-color.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.17896452260839046" checked="" class="v3d-tab-input" id="0.17896452260839046-0"><label class="v3d-tab-label" for="0.17896452260839046-0">XML</label><div class="v3d-tab-content">可以通过 <strong>color</strong> 属性来设置。 
+    <code>
+&lt;template color="green"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.17896452260839046" class="v3d-tab-input" id="0.17896452260839046-1"><label class="v3d-tab-label" for="0.17896452260839046-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setColour">block.setColor</a> 来设置。 
+        
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setColor('green');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+
+        <p>颜色必须是这里描述的格式之一： <a href="manual/zh/puzzles/Plugins.html#color_formats">颜色格式</a>。</p>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_tooltip" id="block_file_template_block_tooltip" class="permalink">#</a></p>
+
+    <h5>Block的工具提示</h5>
+
+    <div class="indented">
+        <p>您可以添加一个工具提示，当把鼠标悬停在一个模块上面时就会出现。工具提示用于向用户提供简单的描述，如拼图的用途，作用方式的，有哪些使用提示等等。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-template-tooltip.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.24842320268321272" checked="" class="v3d-tab-input" id="0.24842320268321272-0"><label class="v3d-tab-label" for="0.24842320268321272-0">XML</label><div class="v3d-tab-content">可以通过 <strong>tooltip</strong> 属性来设置。 
+
+    <code>
+&lt;template tooltip="This is my first puzzle!"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.24842320268321272" class="v3d-tab-input" id="0.24842320268321272-1"><label class="v3d-tab-label" for="0.24842320268321272-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setTooltip">block.setTooltip</a> 来设置。 
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setTooltip('This is my first puzzle!');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_help_url" id="block_file_template_block_help_url" class="permalink">#</a></p>
+
+    <h5>Block的帮助URL</h5>
+
+    <div class="indented">
+
+        <p>如果 <a href="manual/zh/puzzles/Plugins.html#block_file_template_block_tooltip">工具提示</a> 不足以记录拼图描述，您也可以为其添加一个链接，指向一个有更详尽文档说明的网页。此链接将被用于拼图上下文菜单中的<strong>帮助</strong>条目（在拼图上点击右键）：</p>
+      
+    <img src="files/puzzles/puzzles-plugins-template-helpurl.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.9400511844706836" checked="" class="v3d-tab-input" id="0.9400511844706836-0"><label class="v3d-tab-label" for="0.9400511844706836-0">XML</label><div class="v3d-tab-content">可以通过 <strong>help</strong> 属性设置。 
+    <code>
+&lt;template help="https://www.soft8soft.com/"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.9400511844706836" class="v3d-tab-input" id="0.9400511844706836-1"><label class="v3d-tab-label" for="0.9400511844706836-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setHelpUrl">block.setHelpUrl</a> 来设置。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setHelpUrl('https://www.soft8soft.com/');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_adding_inputs" id="block_file_template_block_adding_inputs" class="permalink">#</a></p>
+
+    <h5>添加输入插槽</h5>
+
+    <div class="indented">
+        <p>拼图模块可以包含输入插槽来插入其他模块。它们也可以使用非模块的UI元素，如复选框或文本字段。有3种不同类型的输入：<strong>value input</strong>，<strong>statement inputs</strong>和<strong>dummy inputs</strong>。</p><ul>
+                <li id="adding_inputs_value"><strong>value input</strong> - 可用于插入具有返回值（输出连接）模块的输入插槽，例如，带有一些数学模块的输入——数学模块会计算并返回数值，可由父模块（包含输入插槽的模块）访问。</li>
+                <li id="adding_inputs_statement"><strong>statement input</strong> - 可用于插入一组代表一系列连续动作的模块的输入，例如 <a href="manual/zh/puzzles/Logic.html#if_else">if-else</a> 拼图就有这种类型的输入，用于在 "if" 或 "else" 条件下将拼图模块分组。</li>
+                <li id="adding_inputs_dummy"><strong>dummy inputs</strong> - 此类输入插槽只适用于添加非模块式的用户界面元素，如复选框、文本字段、图片等。更多信息见 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">添加字段</a> 。</li>
+            </ul>
+        <p></p>
+
+        <p>您可以在下图中看到这些类型的输入的区别。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-template-input-types.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.9591391359969894" checked="" class="v3d-tab-input" id="0.9591391359969894-0"><label class="v3d-tab-label" for="0.9591391359969894-0">XML</label><div class="v3d-tab-content">使用 <b>&lt;value&gt;</b> ， <b>&lt;statement&gt;</b> 和 <b>&lt;dummy&gt;</b> 等元素来添加输入。<strong>value</strong> 和 <strong>statement</strong> 输入必须有一个名称（使用它们的 <strong>name</strong> 属性）。<strong>dummy</strong> 输入通常不需要名字，它们只是 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">字段</a> 的容器。 
+
+    <code>
+&lt;template&gt;
+    &lt;value name="myInput"&gt;&lt;/value&gt;
+
+    &lt;statement name="myStatement"&gt;&lt;/statement&gt;
+
+    &lt;dummy&gt;
+        &lt;checkbox name="myCheckbox"&gt;true&lt;/checkbox&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.9591391359969894" class="v3d-tab-input" id="0.9591391359969894-1"><label class="v3d-tab-label" for="0.9591391359969894-1">JS</label><div class="v3d-tab-content">使用 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#appendValueInput">block.appendValueInput</a> , <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#appendStatementInput">block.appendStatementInput</a> 和 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#appendDummyInput">block.appendDummyInput</a> 方法来添加输入。<strong>value</strong> 和 <strong>statement</strong> 输入必须（通过<strong>name</strong>属性）被命名。<strong>dummy</strong> 输入通常不需要名字，它们只是 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">字段</a> 的容器。 
+        <code>
+    &lt;script&gt;
+    function template(block) {
+        block.appendValueInput('myValue');
+
+        block.appendStatementInput('myStatement');
+
+        block.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox(true), 'myCheckbox');
+    }
+    &lt;/script&gt;
+        </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_arrangement_inputs" id="block_file_template_arrangement_inputs" class="permalink">#</a></p>
+
+    <h5>输入的排列</h5>
+
+    <div class="indented">
+        <p>模块状输入可以垂直（默认）或水平排列。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-inputs-inline.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.8876572726596152" checked="" class="v3d-tab-input" id="0.8876572726596152-0"><label class="v3d-tab-label" for="0.8876572726596152-0">XML</label><div class="v3d-tab-content">可以通过 <strong>inline</strong> 设置为 <strong>true</strong> 或 <strong>false</strong> 的属性。为 <strong>false</strong> 时使用垂直排列，为 <strong>true</strong> 时使用水平排列的变体。 
+    <code>
+&lt;template inline="true"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.8876572726596152" class="v3d-tab-input" id="0.8876572726596152-1"><label class="v3d-tab-label" for="0.8876572726596152-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setInputsInline">block.setInputsInline</a> 方法设置。该方法可接收一个为 <strong>true</strong> 或 <strong>false</strong> 的参数。为 <strong>false</strong> 时使用垂直排列，为 <strong>true</strong> 时使用水平排列的变体。 
+
+        <code>
+    &lt;script&gt;
+    function template(block) {
+        block.setInputsInline(true);
+    }
+    &lt;/script&gt;
+        </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields" id="block_file_template_adding_fields" class="permalink">#</a></p>
+
+    <h5>添加字段</h5>
+
+    <div class="indented">
+        <p>您可以在拼图中添加诸如文本标签、复选框、下拉列表、文本输入等UI元素。这些UI元素被称为 "fields(字段)" 。它们可被添加到任何类型的输入中，但如果您不想为拼图模块额外创建输入插槽，可一致使用 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy input</a> 输入。</p>
+
+        <p>所有字段都有几个共同点：</p><ul>
+                <li>可以指定一个可选的 <strong>name</strong> 参数，这通常用于在 <a href="manual/zh/puzzles/Plugins.html#block_file_code">code()</a> 函数中引用该字段，以获得该字段的值。</li>
+                <li>能够提供一个可选的默认值。如前所述，在<strong>init.plug</strong>的 <a href="manual/zh/puzzles/Plugins.html#init_plug_default_input_field_values">类目</a> 中指定的默认值始终比在拼图模板中定义的默认值具有更高的优先级。</li>
+            </ul>
+        <p></p>
+
+        <p>让我们来看看如何在拼图中添加各种字段。</p>
+    </div>
+
+    <ul>
+        <li>
+            <p>label - 一个不可编辑的文本字段</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-text-label.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.5724318643284207" checked="" class="v3d-tab-input" id="0.5724318643284207-0"><label class="v3d-tab-label" for="0.5724318643284207-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;label&gt;</b> 元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> 、 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;label&gt;a text label&lt;/label&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+                <label>JS</label>
+                <div>可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldLabel">Blockly.FieldLabel</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> ， <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldLabel('a text label'));
+}
+&lt;/script&gt;
+    </code>
+
+</div>
+            
+        </div></div></li>
+
+        <li>
+            <p>text - 一个可编辑的文本字段</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-text.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.8313343103019366" checked="" class="v3d-tab-input" id="0.8313343103019366-0"><label class="v3d-tab-label" for="0.8313343103019366-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;text&gt;</b> 元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> ， <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;text name="myText"&gt;default text&lt;/text&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+                <label>JS</label>
+                <div>可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldTextInput">Blockly.FieldTextInput</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> ， <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldTextInput('default text'), 'myText');
+}
+&lt;/script&gt;
+    </code>
+
+</div>
+            
+        </div></div></li>
+
+        <li>
+            <p>multiline - 一个可编辑的多行文本字段</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-text-multiline.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.9653290143602946" checked="" class="v3d-tab-input" id="0.9653290143602946-0"><label class="v3d-tab-label" for="0.9653290143602946-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;multiline&gt;</b> 元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;multiline name="myTextMultiline"&gt;This is a \n multiline \n   text&lt;/multiline&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+                <label>JS</label>
+                <div>可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldMultilineInput">Blockly.FieldMultilineInput</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+
+    <code>
+        &lt;script&gt;
+        function template(block) {
+            block.appendDummyInput()
+            .appendField(new Blockly.FieldMultilineInput('This is a \n multiline \n   text'), 'myTextMultiline');
+        }
+        &lt;/script&gt;
+    </code>
+
+</div>
+            
+        </div></div></li>
+
+        <li>
+            <p>number - 一个可编辑的数值字段</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-number.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.796803347928642" checked="" class="v3d-tab-input" id="0.796803347928642-0"><label class="v3d-tab-label" for="0.796803347928642-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;number&gt;</b> 元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。 
+
+    <code>
+        &lt;template&gt;
+            &lt;dummy&gt;
+                &lt;number name="myNumber"&gt;3&lt;/number&gt;
+            &lt;/dummy&gt;
+        &lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.796803347928642" class="v3d-tab-input" id="0.796803347928642-1"><label class="v3d-tab-label" for="0.796803347928642-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldNumber">Blockly.FieldNumber</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldNumber(3), 'myNumber');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+        </li>
+
+        <li>
+            <p>angle - 一个可编辑的字段，用于表示角度的数值（单位：度）。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-number-angle.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.49158551499779013" checked="" class="v3d-tab-input" id="0.49158551499779013-0"><label class="v3d-tab-label" for="0.49158551499779013-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;angle&gt;</b> 元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;angle name="myAngle"&gt;15&lt;/angle&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+                <label>JS</label>
+                <div>可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldAngle">Blockly.FieldAngle</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldAngle(15), 'myAngle');
+}
+&lt;/script&gt;
+    </code>
+
+</div>
+            
+        </div></div></li>
+
+        <li id="block_file_template_adding_fields_checkbox">
+            <p>checkbox - 一个典型的复选框字段</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-checkbox.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.3041992168807983" checked="" class="v3d-tab-input" id="0.3041992168807983-0"><label class="v3d-tab-label" for="0.3041992168807983-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;checkbox&gt;</b>  元素嵌套在 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a>, <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入中添加。默认的复选框状态应该被设置为 <strong>true</strong> 或 <strong>false</strong> 。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;checkbox name="myCheckbox"&gt;true&lt;/checkbox&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.3041992168807983" class="v3d-tab-input" id="0.3041992168807983-1"><label class="v3d-tab-label" for="0.3041992168807983-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldCheckbox">Blockly.FieldCheckbox</a> 添加到一个 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。默认的复选框状态作为参数传递给 <strong>Blockly.FieldCheckbox</strong> ，可以是 <strong>true</strong> 或 <strong>false</strong> 。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldCheckbox(true), 'myCheckbox');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+        </li>
+
+        <li id="block_file_template_adding_fields_dropdown">
+            <p>dropdown - 一个可供选择的值的列表</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-dropdown.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.12514436992590272" checked="" class="v3d-tab-input" id="0.12514436992590272-0"><label class="v3d-tab-label" for="0.12514436992590272-0">XML</label><div class="v3d-tab-content">
+                    <p>可以通过 <b>&lt;dropdown&gt;</b>  元素嵌套在  <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a>, <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a>  输入中添加。</p>
+                    <p>为了创建选项列表，在 <b>&lt;dropdown&gt;</b> 内添加 <b>&lt;option&gt;</b> 元素。所有 <b>&lt;option&gt;</b> 元素的 <strong>name</strong> 属性必须设置为一个唯一的标识符（更适合在代码中使用的东西，例如COLOR_GREEN）。在开始和结束的 <b>&lt;option&gt;</b> 标签之间包含的文本被用作该选项的下拉部件中显示的标签。</p>
+                    <p>要设置默认选择，可以将选项的 <strong>default</strong> 属性设置为 <strong>true</strong> 。</p>
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;dropdown name="myDropdown"&gt;
+            &lt;option name="COLOR_GREEN"&gt;green&lt;/option&gt;
+            &lt;option name="COLOR_YELLOW" default="true"&gt;yellow&lt;/option&gt;
+            &lt;option name="COLOR_RED"&gt;red&lt;/option&gt;
+        &lt;/dropdown&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.12514436992590272" class="v3d-tab-input" id="0.12514436992590272-1"><label class="v3d-tab-label" for="0.12514436992590272-1">JS</label><div class="v3d-tab-content">
+                    <p>可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldDropdown">Blockly.FieldDropdown</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> 、 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。</p>
+                    <p><strong>Blockly.FieldDropdown</strong> 的第一个参数可以是一个可用选项的数组。每个选项依次也是一个包含两个元素的数组：一个用于在用户界面中显示文本（表示选项内容的友好提示文本）和一个唯一标识符（更适合在代码中使用的东西，例如COLOR_GREEN）。</p>
+                    <p>可以通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.Field#setValue">setValue</a> 方法来设置默认选择的选项。要指定哪个是默认的，只需将选项的唯一标识符作为参数传入 <strong>setValue</strong> 。</p>
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    let field = new Blockly.FieldDropdown([
+        // [ displayed text, option name ]
+        ['green', 'COLOR_GREEN'],
+        ['yellow', 'COLOR_YELLOW'],
+        ['red', 'COLOR_RED'],
+    ]);
+
+    // setting default option
+    field.setValue('COLOR_YELLOW');
+
+    block.appendDummyInput()
+    .appendField(field, 'myDropdown');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+        </li>
+
+        <li>
+            <p>color picker - 一个颜色选择器部件</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-color.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.4288122654254152" checked="" class="v3d-tab-input" id="0.4288122654254152-0"><label class="v3d-tab-label" for="0.4288122654254152-0">XML</label><div class="v3d-tab-content">可以通过 <b>&lt;color&gt;</b> 元素嵌套在  <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a>, <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a>  输入中添加。 
+
+    <code>
+&lt;template&gt;
+    &lt;dummy&gt;
+        &lt;color name="myColor"&gt;#350af5&lt;/color&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.4288122654254152" class="v3d-tab-input" id="0.4288122654254152-1"><label class="v3d-tab-label" for="0.4288122654254152-1">JS</label><div class="v3d-tab-content">可以通过 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#appendField">appendField</a> 方法和 <a href="https://developers.google.com/blockly/reference/js/Blockly.FieldColour">Blockly.FieldColor</a> 添加到 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_dummy">dummy</a> , <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value</a> 或 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement</a> 输入。 
+                    
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .appendField(new Blockly.FieldColor('#350af5'), 'myColor');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+        </li>
+    </ul>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_field_alignment" id="block_file_template_field_alignment" class="permalink">#</a></p>
+
+    <h5>字段排列</h5>
+
+    <div class="indented">
+        <p>拼图模块中的字段元素总是属于一个特定的输入插槽。无论是单个字段还是每个输入的多个字段，它们总是按照一定的布局进行渲染。有一件事是可以改变的，那就是字段在输入框中的位置，特别是它们被排列在哪一边。您可以让它们向左（默认）、向右和向中间对齐。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-field-alignment.png" class="width-clear border-gray"><div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.639611355237129" checked="" class="v3d-tab-input" id="0.639611355237129-0"><label class="v3d-tab-label" for="0.639611355237129-0">XML</label><div class="v3d-tab-content">要改变某个输入的字段对齐方式，请使用相应的 <a href="manual/zh/puzzles/Plugins.html#block_file_template_block_adding_inputs">输入元素</a> 上的 <strong>align</strong> 属性。这个属性的有效值是：<strong>Left</strong> 、 <strong>center</strong> 和 <strong>right</strong> 。 
+    <code>
+&lt;template&gt;
+    &lt;dummy align="left"&gt;&lt;/dummy&gt;
+    &lt;value align="center" name="myValueInput"&gt;&lt;/value&gt;
+    &lt;statement align="right" name="myStatementInput"&gt;&lt;/statement&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.639611355237129" class="v3d-tab-input" id="0.639611355237129-1"><label class="v3d-tab-label" for="0.639611355237129-1">JS</label><div class="v3d-tab-content">要改变某个输入的字段对齐方式，请使用 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#setAlign">setAlign</a> 方法。它的第一个参数应该是 <strong>Blockly.ALIGN_LEFT</strong> ， <strong>Blockly.ALIGN_CENTER</strong> 或 <strong>Blockly.ALIGN_RIGHT</strong> 。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.appendDummyInput()
+    .setAlign(Blockly.ALIGN_LEFT);
+
+    block.appendValueInput('myValueInput')
+    .setAlign(Blockly.ALIGN_CENTER);
+
+    block.appendStatementInput('myStatementInput')
+    .setAlign(Blockly.ALIGN_RIGHT);
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_block_connections" id="block_file_template_block_connections" class="permalink">#</a></p>
+
+    <h5>模块的连接</h5>
+
+    <div class="indented">
+        <p>拼图模块可以有输入、语句和输出连接。输入连接是为每个创建的输入插槽自动添加的，它的作用是插入子模块。请在这里查看关于创建输入的介绍：<a href="manual/zh/puzzles/Plugins.html#block_file_template_block_adding_inputs">添加输入</a>.<strong>Statement</strong> （previous和next）和 <strong>output</strong> 连接用于将模块连接到父模块或同级模块。</p>
+        <p><strong>previous</strong> 和 <strong>next</strong> 分别在拼图模块的顶部和底部添加连接，因此拼图模块可以从下面/上面连接到其他有匹配连接的模块。</p>
+        <p><strong>output</strong> 在拼图模块的左侧添加了一个连接——这使得该模块可以被插入到父模块的输入插槽中。输出连接通常用于返回数值的拼图模块，例如，一些数学计算的结果。</p>
+        <p>默认情况下，一个拼图模块没有任何连接。您可以在一个拼图模块上添加任何类型的单个连接。您也可以在一个拼图模块中添加2个 <strong>statement</strong> 或 <strong>output</strong> 连接，但只允许以下组合：<strong>previous</strong> + <strong>next</strong> 或 <strong>next</strong> + <strong>output</strong>。</p>
+      
+    <img src="files/puzzles/puzzles-plugins-output-connections.png" class="width-clear border-gray"><p>如下演示如何将所有这些连接添加到一个模块中：</p>
+
+        <div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.6144855409906882" checked="" class="v3d-tab-input" id="0.6144855409906882-0"><label class="v3d-tab-label" for="0.6144855409906882-0">XML</label><div class="v3d-tab-content">可以通过设置 <strong>prev</strong> 属性为 <strong>true</strong> 来启用 <strong>previous</strong> statement连接。 
+    <code>
+&lt;template prev="true"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.6144855409906882" class="v3d-tab-input" id="0.6144855409906882-1"><label class="v3d-tab-label" for="0.6144855409906882-1">JS</label><div class="v3d-tab-content">通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setPreviousStatement">block.setPreviousStatement</a> ，以 <strong>true</strong> 作为第一个参数，可以启用 <strong>previous</strong> statement连接。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setPreviousStatement(true);
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+
+        <div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.8627613644031262" checked="" class="v3d-tab-input" id="0.8627613644031262-0"><label class="v3d-tab-label" for="0.8627613644031262-0">XML</label><div class="v3d-tab-content">可以通过将 <strong>next</strong> 属性设置为 <strong>true</strong> 来启用 <strong>next</strong> statement连接。 
+
+    <code>
+&lt;template next="true"&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.8627613644031262" class="v3d-tab-input" id="0.8627613644031262-1"><label class="v3d-tab-label" for="0.8627613644031262-1">JS</label><div class="v3d-tab-content">可以通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setNextStatement">block.setNextStatement</a> ，以 <strong>true</strong> 作为第一个参数，来启用 <strong>next</strong> statement连接。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setNextStatement(true);
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+
+        <div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.02453676231956381" checked="" class="v3d-tab-input" id="0.02453676231956381-0"><label class="v3d-tab-label" for="0.02453676231956381-0">XML</label><div class="v3d-tab-content">可以通过设置 <strong>output</strong> 属性为空字符串来启用 <strong>output</strong> 连接。 
+    <code>
+&lt;template output=""&gt;&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.02453676231956381" class="v3d-tab-input" id="0.02453676231956381-1"><label class="v3d-tab-label" for="0.02453676231956381-1">JS</label><div class="v3d-tab-content">可以通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setOutput">block.setOutput</a> 启用 <strong>output</strong> 连接，并将 <strong>true</strong> 作为第一个参数。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    block.setOutput(true);
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_template_input_output_type_checking" id="block_file_template_input_output_type_checking" class="permalink">#</a></p>
+
+    <h5>输入/输出类型检查</h5>
+
+    <div class="indented">
+        <p>默认情况下，所有具有合适输入/输出的拼图模块都可以相互连接。但这并不意味着所有的拼图模块都应该是兼容的。比方说，我们有一个拼图模块返回一个坐标数组，而另一个拼图模块有一个期望得到动画名称的输入。如果我们试图将第一个模块插入第二个模块中，那么事情可能不会按预期执行。从这些拼图中产生的代码可能是无效的，甚至可能导致页面崩溃。</p>
+        <p>好在有一种方法可以解决此类情况。每一个输入和输出都可以被分配一个类型，只有那些具有匹配类型的模块可以相互连接。</p>
+        <p class="note">关于输出和其他连接的常用信息，请参见 <a href="manual/zh/puzzles/Plugins.html#block_file_template_block_connections">模块的连接</a> 。</p>
+
+        <div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.11014458847038733" checked="" class="v3d-tab-input" id="0.11014458847038733-0"><label class="v3d-tab-label" for="0.11014458847038733-0">XML</label><div class="v3d-tab-content">输出类型可以通过 <b>&lt;template&gt;</b> 的 <strong>output</strong> 属性来指定。一个特定的输入可以接受的类型是由输入的 <strong>type</strong> 属性定义的。 
+
+    <code>
+&lt;!-- the block's output type is 'String' --&gt;
+&lt;template output="String"&gt;
+    &lt;!-- this input accepts only blocks of type 'Number' --&gt;
+    &lt;value name="myInput" type="Number"&gt;&lt;/value&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.11014458847038733" class="v3d-tab-input" id="0.11014458847038733-1"><label class="v3d-tab-label" for="0.11014458847038733-1">JS</label><div class="v3d-tab-content">输出类型可以通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#setOutput">block.setOutput</a> 方法来分配给一个模块，同时将 <strong>true</strong> 作为其第一个参数，将所需类型作为其第二个参数。通过调用 <a href="https://developers.google.com/blockly/reference/js/Blockly.Input#setCheck">setCheck</a> 方法来设置一个特定输入所能接受的类型。 
+                
+    <code>
+&lt;script&gt;
+function template(block) {
+    // this input accepts only blocks of type 'Number'
+    block.appendValueInput('myInput')
+    .setCheck('Number');
+
+    // the block's output type is 'String'
+    block.setOutput(true, 'String');
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+
+        <p>在上面的例子中，该模块有一个只能接受 "number" 类型或未指定类型的模块的输入（如果没有通过 <strong>setOutput</strong> 设置类型）。该模块也有 "String" 输出类型，这意味着它只能插入具有 "String" 或未指定类型的输入（如果没有通过 <strong>setCheck</strong> 设置类型）。</p>
+        <p>输入和输出也可以有一个以上的类型。</p>
+
+        <div class="v3d-tabs" style="width: 1000px;"><input type="radio" name="0.6622222308015846" checked="" class="v3d-tab-input" id="0.6622222308015846-0"><label class="v3d-tab-label" for="0.6622222308015846-0">XML</label><div class="v3d-tab-content">为了拥有多个输入/输出类型，请在相应的 <strong>type</strong> 和 <strong>output</strong> 属性中填写多个类型值，并以空格分隔： 
+
+    <code>
+&lt;!-- this block's output type is 'String' or 'Animation' --&gt;
+&lt;template output="String Animation"&gt;
+    &lt;!-- this input accepts only blocks of type 'Number' or 'Object3D' --&gt;
+    &lt;value name="myInput" type="Number Object3D"&gt;&lt;/value&gt;
+&lt;/template&gt;
+    </code>
+
+</div><input type="radio" name="0.6622222308015846" class="v3d-tab-input" id="0.6622222308015846-1"><label class="v3d-tab-label" for="0.6622222308015846-1">JS</label><div class="v3d-tab-content">为了拥有多个输入/输出类型，在 <strong>setCheck</strong> 和/或 <strong>setOutput</strong> 中提供类型阵列。 
+
+    <code>
+&lt;script&gt;
+function template(block) {
+    // this input accepts only blocks of type 'Number' or 'Object3D'
+    block.appendValueInput('myInput')
+    .setCheck(['Number', 'Object3D']);
+
+    // this block's output type is 'String' or 'Animation'
+    block.setOutput(true, ['String', 'Animation']);
+}
+&lt;/script&gt;
+    </code>
+
+</div></div>
+
+        <p>标准的Verge3D拼图使用了几种特定的输入/输出类型，您也可以在您的拼图中借用这些类型。</p>
+        <ul>
+            <li>对于Javascript类型和内置对象，有以下几种：<strong>Number</strong>, <strong>String</strong>, <strong>Boolean</strong>, <strong>Dictionary</strong> (针对js对象), <strong>Array</strong>, <strong>Promise</strong></li>
+            <li>对于场景实体：<strong>Object3D</strong>, <strong>Material</strong>, <strong>Animation</strong>.</li>
+            <li>其他类型：<strong>Canvas</strong>, <strong>Sound</strong>, <strong>Video</strong></li>
+        </ul>
+        <p>您无需局限于上述类型，我们鼓励您创造自己的输入/输出类型，以更好地适应您的拼图。</p>
+    </div>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_code" id="block_file_code" class="permalink">#</a></p>
+
+    <h4>Code Function</h4>
+
+    <p><strong>Code()</strong> 函数是用来提供Javascript代码的，如果拼图被添加到工作区，它就会被生成。一般来说，这是您定义拼图逻辑的地方，也是您实现大部分拼图功能的地方。</p>
+
+    <p>该函数预期返回一个包含js代码的字符串。它的工作方式类似于 <a href="manual/zh/puzzles/Plugins.html#init_plug_script">init.plug的代码函数</a> 的工作方式，只是在这种情况下，代码被添加和使用的次数与被添加到工作区的拼图模块的数量相同。这个 <strong>code()</strong> 函数接收一个 <strong>block</strong> 参数——它与在 <a href="manual/zh/puzzles/Plugins.html#block_file_template">template()</a> 中使用的 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg">Blockly.BlockSvg</a> 是同一个实例，。</p>
+
+    <p>一起来看看您能用 <strong>code()</strong> 函数做些什么。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_code_basic_code_generation" id="block_file_code_basic_code_generation" class="permalink">#</a></p>
+
+    <h5>基本的代码生成</h5>
+
+    <p class="indented"><strong>code()</strong> 能做的非常简单的事情就是返回一个带有几行 javascript 代码的字符串，这些代码将被添加到生成的 visual_logic.js 文件中。<br>例如，下面的代码打开了标准的浏览器警报对话框。
+
+    <code>
+function code(block) {
+    return `alert('Test');`;
+}
+    </code>
+
+而在这里，我们只是返回一个为1的值：
+    <code>
+function code(block) {
+    return `1`;
+}
+    </code>
+    
+ - 这个例子并没有什么意义，除非此模块有输出连接。在这种情况下，返回值可以从一个父模块中访问，该父模块的输入端之一插入了这个模块。<br><br>这里是一个更高级的例子：
+
+    <code>
+function code(block) {
+    const fun = function() {
+        app.scene.traverse(function(obj) {
+            obj.material = new v3d.MeshBasicMaterial({
+                color: new v3d.Color(Math.random(), Math.random(), Math.random())
+            });
+        });
+    }
+    return `(${fun})();`;
+}
+    </code>
+
+ - 这里所有的对象都得到了一个新的材质，其颜色是随机生成的。</p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_code_mitigating_code_bloat" id="block_file_code_mitigating_code_bloat" class="permalink">#</a></p>
+
+    <h5>缓解代码臃肿问题</h5>
+
+    <p class="indented">默认情况下，每次在工作区使用拼图时，拼图的代码都会被复制到生成的visual_logic.js文件中。如果您只有几行代码，这并不是什么问题。但是，如果代码很笨重、很复杂，并且分成几个你可能只想声明一次的函数，那么默认的方法就会变得效率低下，并导致产生的visual_logic.js文件变得臃肿。<br><br>为了解决这个问题，您可以利用 <strong>code()</strong> 函数中的一个特殊方法——<strong>Plug.provision()</strong> 。我们通过下方的示例来演示如何使用：
+
+    <code>
+function code(block) {
+    const fun = Plug.provide('myFunction', function(a, b, c) {
+        console.log(a, b, c);
+    });
+
+    return `${fun}(1, 2, 3);`;
+}
+    </code>
+        
+
+ 在这里，我们通过 <strong>Plug.provide()</strong> 定义了一个函数 "myFunction" ，这意味着无论拼图在工作区被使用多少次， "myFunction" 都只会被复制到visual_logic.js中一次。另外，从 <strong>code()</strong> 返回的值只有 <b>${fun}(1, 2, 3);</b> ，这基本上是一个函数调用 <b>"myFunction(1, 2, 3);"</b>  ，它将被插入visual_logic.js中，用于工作区的每个拼图。而这正是我们的拼图所希望的，因为 "myFunction" 只需要声明一次，之后就可以多次调用。<br><br>在 <strong>Plug.provide()</strong> 中的第一个参数应该是一个唯一的函数标识符。返回的变量<strong>fun</strong>是所提供的函数的名称（它通常与第一个参数传递的值几乎相同，但也可以不同，因为拼图编辑器需要确保这个名称是有效的，并且与工作区使用的其他函数/变量没有冲突）。应该使用该名称（而不是原始的 "myFunction" ）来调用提供的函数 - 这就是它在 return 语句下的部分中的完成方式。<br><br></p>
+
+    <p><a href="manual/zh/puzzles/Plugins.html#block_file_code_inputs_fields" id="block_file_code_inputs_fields" class="permalink">#</a></p>
+
+    <h5>访问输入和字段</h5>
+
+    <p class="indented">如果一个拼图模块有 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">fields</a> 或 <a href="manual/zh/puzzles/Plugins.html#block_file_template_block_adding_inputs">input slots</a> 在 <a href="manual/zh/puzzles/Plugins.html#block_file_template">template()</a> 函数中定义，那么您很可能希望它们影响 <strong>code()</strong> 函数内生成的内容。例如， <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields_checkbox">复选框</a> 可以启用或禁用您的拼图的某个功能。<br><br>用于访问 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_value">value inputs</a> 、 <a href="manual/zh/puzzles/Plugins.html#adding_inputs_statement">statement inputs</a> 和 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields">fields</a> 的API方法有：<a href="https://developers.google.com/blockly/reference/js/Blockly.Generator#valueToCode">Blockly.JavaScript.valueToCode</a> , <a href="https://developers.google.com/blockly/reference/js/Blockly.Generator#statementToCode">Blockly.JavaScript.statementToCode</a> 和 <a href="https://developers.google.com/blockly/reference/js/Blockly.BlockSvg#getFieldValue">block.getFieldValue</a> 。<br><br>让我们做一个既有输入又有字段的拼图模块。下面是.block文件的全部内容：
+
+    <code>
+&lt;template color="green"&gt;
+    &lt;dummy&gt;
+        &lt;label&gt;myPuzzle&lt;/label&gt;
+    &lt;/dummy&gt;
+
+    &lt;value name="myValue"&gt;&lt;/value&gt;
+
+    &lt;statement name="myStatement"&gt;&lt;/statement&gt;
+
+    &lt;dummy&gt;
+        &lt;checkbox name="myCheckbox"&gt;true&lt;/checkbox&gt;
+    &lt;/dummy&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+function wrapFn(contents) {
+    return `function() {${contents}}`;
+}
+
+function code(block) {
+    const myInput = Blockly.JavaScript.valueToCode(block, 'myValue',
+            Blockly.JavaScript.ORDER_NONE) || `''`;
+
+    const myStatement = wrapFn(Blockly.JavaScript.statementToCode(block, 'myStatement'));
+
+    const myCheckbox = block.getFieldValue('myCheckbox') === 'TRUE';
+
+    const fun = Plug.provide('myFunction', function(input, statements, checkbox) {
+        console.log('input value:', input);
+        statements(); // execute puzzles from the myStatement input
+        console.log('checkbox state:', checkbox);
+    });
+    return `${fun}(${myInput}, ${myStatement}, ${myCheckbox});`;
+}
+&lt;/script&gt;
+    </code>
+
+ 在这个例子中，该模块定义了一个名为 "myValue" 的数值输入，一个语句输入 "myStatement 和一个复选框字段 "myCheckbox" 。我们通过上面描述的API获得它们的值，但在将它们传入 "myFunction" 之前，它们经历了一些值得注意的变化。
+
+    <code>
+var myInput = Blockly.JavaScript.valueToCode(block, 'myValue', Blockly.JavaScript.ORDER_NONE) || `''`;
+    </code>
+
+ - 输入插槽可能会没有插入模块，所以我们通过在末尾添加*|| `''*部分，来确保在这种情况下可以得到一个空字符串。
+
+    <code>
+function wrapFn(contents) {
+    return `function() {${contents}}`;
+}
+
+...
+
+var myStatement = wrapFn(Blockly.JavaScript.statementToCode(block, 'myStatement'));
+    </code>
+ 
+ - Statement输入插槽通常包含一组Statement。把它们包在一个函数中是很方便的（见 <strong>wrapFn</strong> 的作用），以便把该函数对象作为参数传递，然后把它当作一个回调使用。
+
+    <code>
+var myCheckbox = block.getFieldValue('myCheckbox') === 'TRUE';
+    </code>
+
+- 在这里，复选框的值只用于与 "TRUE" 进行比较，产生一个布尔值的结果。<br><br>最后，所有的值都可以传递给"myFunction" ，如下所示：
+
+    <code>
+return `${fun}(${myInput}, ${myStatement}, ${myCheckbox});`;
+    </code>
+
+ 现在您能够随心所欲地使用它们了。 
+
+    <code>
+const fun = Plug.provide('myFunction', function(input, statements, checkbox) {
+    console.log('input value:', input);
+    statements(); // execute puzzles from the myStatement input
+    console.log('checkbox state:', checkbox);
+});
+    </code>
+
+    [anchor:%TOC_DECLEVEL_HACK]
+
+    </p><h1></h1>
+
+    
+
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors" id="plugin_errors" class="permalink">#</a></p>
+
+    <h2>插件和图模块的错误</h2>
+
+    <p>在开发或使用插件时，您可能会遇到不同类型的错误，与某个拼图模块或与整个插件有关。本节将介绍典型的插件和拼图模块错误，以及如何处理这些问题。</p>
+
+    <p>如果在加载插件或初始化拼图模块的过程中出现错误，那么拼图编辑器会在浏览器控制台中打印出相应的错误信息。通常情况下，这些错误会像下面这样：</p>
+
+    <p class="code red">
+        PluginError(PLUGIN_NAME) ...<br>
+        BlockError(PLUGIN_NAME/BLOCK_NAME) ...<br>
+        Puzzle "PLUGIN_NAME/BLOCK_NAME" is not defined properly. Replaced with a dummy block.
+    </p>
+
+    <p>- 它们指的是一个特定的插件和一个特定模块导致的错误。</p>
+
+    <p>在插件出错的情况下，整个插件的类目很可能都不会在工具箱中显示。如果是拼图模块错误，受影响的拼图模块将被标记为无效，并有一个明显的外观标示：</p>
+      
+    <img src="files/puzzles/puzzles-plugins-dummy-block.jpg" id="dummy_block_appearance" class="centered" style="max-width: 852px"> <span class="img-caption">在工具箱和工作区中的无效拼图</span><p>以下是最常见的插件和拼图模块错误的列表：</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_parsing_0" id="plugin_errors_block_error_parsing_0" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/BLOCK_NAME): error parsing .block file - "This page contains the following errors:error on line ..."</h5>
+    <p class="indented">这意味着在相应的.block文件中存在着XML错误，使其无法被解析。例如，缺少结尾的&lt;script&gt;标签会导致这样的错误。 
+
+    <code>
+&lt;script&gt;
+function template(block) {}
+function code(block) {}
+    </code>
+
+</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_parsing_1" id="plugin_errors_block_error_parsing_1" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/BLOCK_NAME): error parsing .block file - "ReferenceError (SyntaxError, TypeError, etc...)..."</h5>
+
+    <p class="indented">这代表着相应的.block文件的&lt;script&gt;元素中的代码包含错误信息中指定的JavaScript错误。</p><br> 
+    
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_0" id="plugin_errors_block_error_validation_0" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - " TypeError: Child block does not have output or previous statement."</h5>
+    
+    <p class="indented">这个错误所指的模块有一个子模块插入其中。但是，这个子模块没有 <a href="manual/zh/puzzles/Plugins.html#block_file_template_block_connections">输出或前一个连接</a> ，因此不能以这种方式使用。这种情况可能发生在插件的工具箱 <a href="manual/zh/puzzles/Plugins.html#init_plug_category">类目</a> 中的拼图块，因为它们是在init.plug中配置的，也可能发生在工作区实际使用的块上。</p><br> 
+    
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_1" id="plugin_errors_block_error_validation_1" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - "Error: Connection checks failed. Input "PARENT_INPUT_NAME" connection on "PLUGIN_NAME/BLOCK_NAME" block (id="BLOCK_ID") expected TYPE_PARENT, found TYPE_CHILD"</h5>
+    
+    <p class="indented">这个错误所指的模块有一个子模块插入其中，但是父模块的输入插槽和子模块的输出连接的 <a href="manual/zh/puzzles/Plugins.html#block_file_template_input_output_type_checking">类型</a> 不兼容。这种情况可能发生在插件的工具箱 <a href="manual/zh/puzzles/Plugins.html#init_plug_category">类目</a> 中的拼图块，因为它们是在init.plug中配置的，也可能发生在工作区实际使用的块上。</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_2" id="plugin_errors_block_error_validation_2" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/null): validation error - "TypeError: Unknown block type: PLUGIN_NAME/null"</h5>
+    
+    <p class="indented">这个错误意味着该插件的init.plug文件引用了一个没有指定 <a href="manual/zh/puzzles/Plugins.html#init_plug_available_puzzles">类型属性</a> 的模块，这是不允许的。例如，这样做是行不通的： 
+
+    <code>
+&lt;category name="My Awesome Plugin" color="green"&gt;
+    &lt;block&gt;&lt;/block&gt;
+&lt;/category&gt;
+    </code>
+
+</p><br>
+
+<p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_validation_3" id="plugin_errors_block_error_validation_3" class="permalink">#</a></p>
+
+<h5>BlockError(PLUGIN_NAME/BLOCK_NAME): validation error - "TypeError: Unknown block type: PLUGIN_NAME/BLOCK_NAME"</h5>
+
+<p class="indented">这个错误信息通常出现在一个 <a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_parsing_0"> "错误解析的 .block 文件"</a> 的错误之后，它表明由于最初的错误，提到的拼图模块没有被正确加载和初始化。</p><br>
+
+<p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_template" id="plugin_errors_block_error_template" class="permalink">#</a></p>
+
+<h5>BlockError(PLUGIN_NAME/BLOCK_NAME): error calling template() function ...</h5>
+
+<p class="indented">相应的.block文件要么有一个定义不正确的 <a href="manual/zh/puzzles/Plugins.html#block_file_template">"template"</a> 元素，要么在其 <a href="manual/zh/puzzles/Plugins.html#block_file_template">template()</a> 函数中包含JavaScript错误。</p><ul>
+            <li><b>BlockError(PLUGIN_NAME/BLOCK_NAME): error calling template() function - "TypeError: Found invalid FieldDropdown options."</b><br>这个特殊的错误意味着拼图中的一个下拉字段有一个未命名的选项。参见 <a href="manual/zh/puzzles/Plugins.html#block_file_template_adding_fields_dropdown">dropdown field</a> 以了解更多信息。</li>
+        </ul>
+    <p></p><br> 
+    
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_block_error_code" id="plugin_errors_block_error_code" class="permalink">#</a></p>
+
+    <h5>BlockError(PLUGIN_NAME/BLOCK_NAME): error calling code() function ...</h5>
+
+    <p class="indented">相应的.block文件在其 <a href="manual/zh/puzzles/Plugins.html#block_file_code">code()</a> 函数内含有JavaScript错误。</p><br> 
+    
+    <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_parsing_0" id="plugin_errors_plugin_error_parsing_0" class="permalink">#</a></p>
+
+    <h5>PluginError(PLUGIN_NAME): error parsing init.plug file - "This page contains the following errors:error on line ..."</h5>
+
+    <p class="indented">这意味着在插件的init.plug文件中存在着XML错误，使其无法被解析。例如，缺少结尾的&lt;category&gt;标签会导致这样的错误。 
+
+        <code>
+&lt;category name="MyAwesomePlugin" color="green"&gt;
+    &lt;block type="myPuzzle"&gt;&lt;/block&gt;
+        </code>
+
+</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_parsing_1" id="plugin_errors_plugin_error_parsing_1" class="permalink">#</a></p>
+
+    <h5>PluginError(PLUGIN_NAME): error parsing init.plug file - "ReferenceError (SyntaxError, TypeError, etc...)..."</h5>
+
+    <p class="indented">这意味着如果相应的init.plug文件的&lt;script&gt;元素中的代码包含错误信息中指定的JavaScript错误。</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_plugin_error_code" id="plugin_errors_plugin_error_code" class="permalink">#</a></p>
+
+    <h5>PluginError(PLUGIN_NAME): error calling code() function ...</h5>
+    
+    <p class="indented">该插件的init.plug文件在其 <a href="manual/zh/puzzles/Plugins.html#init_plug_script">code()</a> 函数内含有JavaScript错误。</p><br> <p><a href="manual/zh/puzzles/Plugins.html#plugin_errors_dummy" id="plugin_errors_dummy" class="permalink">#</a></p>
+
+    <h5>Puzzle "PLUGIN_NAME/BLOCK_NAME" is not defined properly.Replaced with a dummy block.</h5>
+    <p class="indented">这条错误信息通常出现在一个BlockError和/或PluginError错误信息之后，它表明由于原始错误，提到的拼图模块没有被正确加载和初始化。为了仍然能够加载拼图并在一定程度上保持其可操作性，这样的拼图模块（无论是在插件的工具箱类目中还是在工作区中）都会被特殊的dummy模块所取代。Dummy模块的例子见 <a href="manual/zh/puzzles/Plugins.html#dummy_block_appearance">这张图片</a> 。</p><br> <p><a href="manual/zh/puzzles/Plugins.html#sharing_your_plugin" id="sharing_your_plugin" class="permalink">#</a></p>
+
+    <h2>分享您的插件</h2>
+
+    <p>一旦插件开发完成并经过测试，请随时通过以下方式分享。</p>
+
+    <ul>
+        <li>在 <a href="https://www.soft8soft.com/forum/plugins/" target="_blank">Verge3D论坛上发布链接</a>。</li>
+        <li>如果您希望能在 <a href="manual/zh/introduction/Useful-links.html#third_party_plugins">常用链接</a> 章节中被提及，请<a href="https://www.soft8soft.com/contact/" target="_blank">联系我们</a>！</li>
+        <li>在社交媒体上分享是使用 <strong>#verge3d</strong> 标签。</li>
+        <li>在 <a href="https://gumroad.com/" target="_blank">Gumroad</a> 或类似的资源网站上发布。</li>
+    </ul>
+
+
+    <h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

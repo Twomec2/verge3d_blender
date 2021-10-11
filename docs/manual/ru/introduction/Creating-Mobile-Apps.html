@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Создание мобильных приложений с помощью Apache Cordova - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn how to use Apache Cordova to create cross-platform Verge3D applications for mobile.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <meta property="og:image" content="https://cdn.soft8soft.com/images/cordova.jpg">
+    <meta property="article:tag" content="cordova">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Creating-Mobile-Apps.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Создание мобильных приложений с помощью Apache Cordova - Soft8Soft">
+            <meta property="og:description" content="Learn how to use Apache Cordova to create cross-platform Verge3D applications for mobile.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/cordova.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Creating-Mobile-Apps.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Создание мобильных приложений с помощью Apache Cordova - Soft8Soft">
+            <meta name="twitter:description" content="Learn how to use Apache Cordova to create cross-platform Verge3D applications for mobile.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/cordova.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/creating-mobile-apps/app-manager-create-native-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/creating-mobile-apps/app-manager-cordova.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/creating-mobile-apps/farmers-journey-ios.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/creating-mobile-apps/cordova-events-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Создание Мобильных Приложений с Помощью Apache Cordova</h1>
+
+    <p>
+      Apache Cordova - это инструмент, который конвертирует веб-приложения в кроссплатформенные мобильные приложения. Cordova в основном используется для создания приложений для платформ Android и iOS, однако на ней также можно разрабатывать приложения для Windows, macOS и Linux. Инструмент полностью бесплатен, прост в использовании и позволяет выполнять расширенную настройку с помощью JavaScript (если вам это необходимо).
+    </p>
+
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#preliminary_considerations">Информация к Ознакомлению</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#getting_cordova">Начало Работы с Apache Cordova</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_app_tempalte">Создание Шаблона Приложения</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_android_app">Создание приложения для Android</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_ios_app">Создание Приложения для iOS</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#beautifying_things">Улучшаем Приложение</a><ul><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#modifying_app_icon">Изменение Имени и Значка Приложения</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#cordova_specific_events">Эвенты, присущие Cordova</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#native_ui_dialogs">Создание Нативных Диалогов UI</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#more_features">Дополнительные Возможности</a></li></ul></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html#publishing">Публикация Вашего Приложения</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#preliminary_considerations" id="preliminary_considerations" class="permalink">#</a></p>
+
+    <h2>Информация к Ознакомлению</h2>
+
+    <p>
+      Прежде чем начать работу с Cordova, убедитесь, что у вас в наличии следующее:
+    </p>
+
+    <ul>
+      <li>
+        Аппаратное обеспечение. Вы можете разрабатывать приложения для Android на любом компьютере под управлением Windows, macOS или Linux, в то время как для разработки приложений для устройств Apple потребуется MacOS.      </li>
+
+      <li>
+        Базовые навыки работы с консолью Windows/macOS/Linux (она же командный интерпретатор). Если у вас их нет, пожалуйста, найдите в Интернете учебники для начинающих.
+      </li>
+
+      <li>
+        Время. Следуя этому руководству, вы сможете создать свое первое приложение очень быстро. Однако могут пройти часы или дни, прежде чем вы получите одобрение своего аккаунта разработчика и опубликуете свое приложение в App Store / Google Play.
+      </li>
+
+      <li>
+        Деньги. Создание и запуск приложений на собственных устройствах совершенно бесплатны. Однако для публикации в Google Play вам потребуется $25 (единовременная оплата), а для App Store - $99 (ежегодная оплата).
+      </li>
+    </ul>
+
+    <p>
+      Самое приятное, что вам не нужно быть разработчиком Android или iOS, чтобы создавать приложения для этих платформ. Как только вы запустите свою систему разработки, создание мобильных версий ваших приложений Verge3D станет очень простым!
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#getting_cordova" id="getting_cordova" class="permalink">#</a></p>
+
+    <h2>Начало Работы с Apache Cordova</h2>
+
+    <p>
+      Для работы с Cordova вам понадобится утилита <strong>npm</strong>, которая является частью среды разработки <strong>Node.js</strong>. Вы можете установить ее, следуя <a href="https://nodejs.org/en/download/" target="_blank">этим инструкциям</a>.
+    </p>
+
+    <p class="notes">
+      Для Linux вам лучше получить npm через менеджер пакетов. Смотрите <a href="https://nodejs.org/en/download/package-manager/" target="_blank">здесь</a> для дополнительной информации.
+    </p>
+
+    <p>
+      После установки npm двоичные файлы Cordova можно установить с помощью следующей команды.
+    </p>
+
+    <p>На macOS/Linux:</p>
+
+    <code>sudo npm install -g cordova</code>
+
+    <p>На Windows:</p>
+
+    <code>npm install -g cordova</code>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_app_tempalte" id="creating_app_tempalte" class="permalink">#</a></p>
+
+    <h2>Создание Шаблона Приложения</h2>
+
+    <p>
+      Вы можете создать свое мобильное приложение вручную или с помощью утилиты командной строки Cordova. Однако, чтобы упростить работу, мы интегрировали конструктор шаблонов Cordova прямо в App Manager.
+    </p>
+
+    <img src="files/creating-mobile-apps/app-manager-create-native-app.jpg">
+
+    <p>
+      С его помощью вы можете создать шаблон приложения Cordova прямо из Verge3D.
+    </p>
+
+    <img src="files/creating-mobile-apps/app-manager-cordova.jpg">
+
+    <p>
+      Когда ваш шаблон будет готов, скачайте его, а затем распакуйте zip-архив в какую-либо директорию.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_android_app" id="creating_android_app" class="permalink">#</a></p>
+
+    <h2>Создание приложения для Android</h2>
+
+    <p>
+      Перейдите в каталог, где находится ваш шаблон приложения Cordova, затем добавьте платформу Android:
+    </p>
+
+    <code>cordova platform add android</code>
+
+    <p>
+      Теперь самое сложное. Чтобы иметь возможность создавать и тестировать свое приложение в эмуляторе Android или на реальных устройствах, вам потребуется установить и настроить дополнительное программное обеспечение.
+    </p>
+
+    <p>
+      Во-первых, вам нужно установить Android Studio, возьмите его <a href="https://developer.android.com/studio">здесь</a>.
+    </p>
+
+    <p>
+      После установки Android Studio необходимо указать путь к ней в значении переменной <strong>ANDROID_SDK_ROOT</strong>. В Windows вам также нужно будет установить значение переменной <strong>JAVA_HOME</strong> с путем к каталогу Java.
+    </p>
+
+    <p>
+      Смотрите <a href="https://cordova.apache.org/docs/en/10.x/guide/platforms/android/index.html#setting-environment-variables">здесь</a> о том, как выставить эти переменные.
+    </p>
+
+    <p>
+      Последнее, что вам понадобится, это инструмент сборки <strong>Gradle</strong>. Ознакомьтесь с инструкцией <a href="https://gradle.org/install/">здесь</a> .
+    </p>
+
+    <p>
+      Чтобы проверить соответствие требованиям сборки, выполните следующую команду в директории вашего приложения:
+    </p>
+
+    <code>cordova requirements</code>
+
+    <p>
+      Чтобы создать свое приложение, выполните
+    </p>
+
+    <code>cordova build android</code>
+
+    <p>
+      Чтобы запустить его в эмуляторе Android, выполните:
+    </p>
+
+    <code>cordova emulate android</code>
+
+    <p>
+      Чтобы запустить ваше приложение на реальном телефоне, подключенном к вашей системе, выполните:
+    </p>
+
+    <code>cordova run android</code>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#creating_ios_app" id="creating_ios_app" class="permalink">#</a></p>
+
+    <h2>Создание Приложения для iOS</h2>
+
+    <p>
+      Перейдите в каталог, где находится ваш шаблон приложения Cordova, затем добавьте платформу iOS:
+    </p>
+
+    <code>cordova platform add ios</code>
+
+    <p>
+      Теперь самое сложное. Чтобы иметь возможность создавать и тестировать свое приложение в эмуляторе iOS или на реальных устройствах, вам потребуется установить и настроить дополнительное программное обеспечение.
+    </p>
+
+    <p>
+      Сначала вам нужно установить <strong>XCode</strong>, скачайте его из Mac App Store.
+    </p>
+
+    <p>
+      Затем установите менеджер пакетов <strong>Homebrew</strong>:
+    </p>
+
+    <code class="language-sh">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+
+    <p>
+      После этого вам понадобятся инструменты <strong>ios-deploy</strong> .
+    </p>
+
+    <code>brew install ios-deploy</code>
+
+    <p>
+      Тогда вам понадобится менеджер зависимостей <strong>CocoaPods</strong>:
+    </p>
+
+    <code>sudo gem install cocoapods</code>
+
+    <p>
+      Чтобы проверить соответствие требованиям сборки, выполните следующую команду в каталоге apps:
+    </p>
+
+    <code>cordova requirements</code>
+
+    <p>
+      Пришло время запустить ваше приложение, выполните:
+    </p>
+
+    <code>cordova emulate ios</code>
+
+    <p>
+      чтобы собрать и запустить его в эмуляторе iOS.
+    </p>
+
+    <img src="files/creating-mobile-apps/farmers-journey-ios.jpg" class="centered" style="max-width: 415px">
+
+    <p>
+      Чтобы запустить ваше приложение на реальном телефоне, подключенном к вашей системе, выполните:
+    </p>
+
+    <code>cordova run ios</code>
+
+    <p>
+      Для запуска на реальном устройстве ваше приложение должно быть зарегистрировано в XCode. Инструкции для ознакомления вы найдёте <a href="https://help.apple.com/xcode/mac/current/#/dev5a825a1ca" target="_blank">здесь</a> .
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#beautifying_things" id="beautifying_things" class="permalink">#</a></p>
+
+    <h2>Улучшаем Приложение</h2>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#modifying_app_icon" id="modifying_app_icon" class="permalink">#</a></p>
+
+    <h3>Изменение Имени и Значка Приложения</h3>
+
+    <p>
+      Смотрите <a href="https://cordova.apache.org/docs/en/latest/config_ref/images.html" target="_blank">официальное руководство Cordova</a> о том, как назначить пользовательский значок для вашего приложения.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#cordova_specific_events" id="cordova_specific_events" class="permalink">#</a></p>
+
+    <h3>Эвенты, присущие Cordova</h3>
+
+    <p>
+      Есть 3 "ивента", присущие для Cordova, доступные через JavaScript или пазлы, которые вы можете использовать, чтобы сделать ваши приложения более удобными для мобильных устройств:
+    </p>
+
+    <ul>
+      <li><strong>deviceready</strong> - срабатывает, когда ваше приложение полностью инициализировано. Вы также можете использовать его для определения того, когда ваше приложение запущено на Cordova.</li>
+      <li><strong>pause</strong> — срабатывает, когда приложение переходит в фоновый режим или переключается на другое приложение.  Используйте его для приостановки рендеринга приложения / воспроизведения звука / видео и т.д.</li>
+      <li><strong>resume</strong> — срабатывает, когда ваше приложение становится активным. Это событие противоположно <strong>pause</strong>.</li>
+    </ul>
+
+    <img src="files/creating-mobile-apps/cordova-events-puzzles.jpg">
+
+    <p>
+      Убедитесь, что вы фиксируете эти события в элементе <strong>document</strong>. Также используйте опцию <strong>in parent doc</strong> в случае, если ваше приложение работает в iframe (см. более подробную информацию об этой связке <a href="manual/ru/introduction/HTML-based-user-interfaces.html">здесь</a>).
+    </p>
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#native_ui_dialogs" id="native_ui_dialogs" class="permalink">#</a></p>
+
+    <h3>Создание Нативных Диалогов UI</h3>
+
+    <p>
+      Используйте плагин <a href="https://cordova.apache.org/docs/en/10.x/reference/cordova-plugin-dialogs/index.html" target="_blank">cordova-plugin-dialogs</a> .
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#more_features" id="more_features" class="permalink">#</a></p>
+
+    <h3>Дополнительные Возможности</h3>
+
+    <p>
+      Вы можете создать полнофункциональное приложение с доступом к камере, информации о батарее, файловой системе устройства, геолокации и т.д. Смотрите соответствующий плагин в <a href="https://cordova.apache.org/docs/en/latest/" target="_blank">документации Cordova</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Creating-Mobile-Apps.html#publishing" id="publishing" class="permalink">#</a></p>
+
+    <h2>Публикация Вашего Приложения</h2>
+
+    <p>
+      Ознакомьтесь с инструкцией <a href="https://jackmckew.dev/releasing-cordova-apps-on-google-play-app-store.html" target="_blank">здесь</a> .
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем<a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

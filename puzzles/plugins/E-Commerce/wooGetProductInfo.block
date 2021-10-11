@@ -1,0 +1,48 @@
+<template
+    color="#d4af37"
+    inline="true"
+    prev="true"
+    next="true"
+
+    tooltip="Connect to WooCommerce system to start receiving product information."
+    help="https://www.soft8soft.com/docs/manual/en/puzzles/ECommerce.html#woo_connect"
+>
+    <dummy>
+        <label>connect to WooCommerce</label>
+    </dummy>
+
+    <statement name="WHEN_READY">
+        <label>once product updated do:</label>
+    </statement>
+</template>
+
+<script>
+function wrapStatements(statementsDo, arg) {
+    arg = arg || '';
+    if (statementsDo.length)
+        return 'function(' + arg + ') {\n' + statementsDo + '}';
+    else
+        return 'function(' + arg + ') {}';
+}
+
+function code(block) {
+    const whenReadyCb = Blockly.JavaScript.statementToCode(block, 'WHEN_READY');
+
+    const fun = Plug.provide('wooGetProductInfo', function(whenReadyCb) {
+        // wooGetProductInfo puzzle
+        const woo_fun = window.parent.v3d_woo_get_product_info
+                || window.parent.parent.v3d_woo_get_product_info || null;
+
+        if (woo_fun) {
+            woo_fun(function(info) {
+                _pGlob.wooProductInfo = info;
+                whenReadyCb();
+            });
+        } else {
+            console.error('wooGetProductInfo: WooCommerce not found.');
+        }
+    });
+
+    return `${fun}(${wrapStatements(whenReadyCb)});\n`;
+}
+</script>

@@ -1,0 +1,503 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Verge3D для 3ds Max: Освещение и Рендеринг - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/max/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D для 3ds Max: Освещение и Рендеринг - Soft8Soft">
+            <meta property="og:description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/max/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D для 3ds Max: Освещение и Рендеринг - Soft8Soft">
+            <meta name="twitter:description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-create.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-effect.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-params.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство пользователя Verge3D</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_App_Manager_(менеджер_проектов)">App Manager (менеджер проектов)</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Puzzles(Визуальный_редактор_логики)">Puzzles(Визуальный редактор логики)</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Характеристики_Verge3D">Характеристики Verge3D</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_Проектов">Структура Проектов</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Обновление_SDK">Обновление SDK</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_FAQ">FAQ</a></li><li><a href="manual/ru/introduction/Useful-links.html" id="Начало_работы_Полезные_Ссылки">Полезные Ссылки</a></li></ul></div><div><h2>Основные Темы</h2><ul id="Основные_Темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_Темы_Методы_Оптимизации">Методы Оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_Темы_Сжатие_Ассетов">Сжатие Ассетов</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_Темы_Интерфейс_на_основе_HTML">Интерфейс на основе HTML</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_Темы_Визуализация_Текста">Визуализация Текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_Темы_AR/VR_Разработка">AR/VR Разработка</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_Темы_Руководство_по_Физике">Руководство по Физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_Темы_Персонализация_приложений_Verge3D">Персонализация приложений Verge3D</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_Темы_WordPress_Плагин">WordPress Плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_Темы_Использование_JavaScript">Использование JavaScript</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_Темы_Создание_Компьютерных_Приложений">Создание Компьютерных Приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_Темы_Создание_Мобильных_Приложений">Создание Мобильных Приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_Темы_Особенности_Производительности">Особенности Производительности</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_Темы_Исправление_Неполадок">Исправление Неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_Темы_Тестирование_в_Мобильных_Браузерах">Тестирование в Мобильных Браузерах</a></li></ul></div><div><h2>Руководство 3D Художника по Blender</h2><ul id="Руководство_3D_Художника_по_Blender"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Руководство_3D_Художника_по_Blender_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Руководство_3D_Художника_по_Blender_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Руководство_3D_Художника_по_Blender_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Blender_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/blender/Camera.html" id="Руководство_3D_Художника_по_Blender_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Руководство_3D_Художника_по_Blender_Обзор_Шейдерных_Нод">Обзор Шейдерных Нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Руководство_3D_Художника_по_Blender_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Руководство_3D_Художника_по_Blender_Ключи_Формы_(Морфинг)">Ключи Формы (Морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Руководство_3D_Художника_по_Blender_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Руководство_3D_Художника_по_Blender_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Руководство_3D_Художника_по_Blender_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Руководство_3D_Художника_по_Blender_Объектные_Ограничения">Объектные Ограничения</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Руководство_3D_Художника_по_Blender_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по 3ds Max</h2><ul id="Руководство_3D_Художника_по_3ds_Max"><li><a href="manual/ru/max/Beginners-Guide.html" id="Руководство_3D_Художника_по_3ds_Max_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="Руководство_3D_Художника_по_3ds_Max_Установка">Установка</a></li><li><a href="manual/ru/max/Material-System.html" id="Руководство_3D_Художника_по_3ds_Max_Обзор_Системы_Материалов">Обзор Системы Материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_3ds_Max_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/max/Camera.html" id="Руководство_3D_Художника_по_3ds_Max_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="Руководство_3D_Художника_по_3ds_Max_Материалы_и_Тектсурные_Карты">Материалы и Тектсурные Карты</a></li><li><a href="manual/ru/max/Animation.html" id="Руководство_3D_Художника_по_3ds_Max_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="Руководство_3D_Художника_по_3ds_Max_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="Руководство_3D_Художника_по_3ds_Max_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="Руководство_3D_Художника_по_3ds_Max_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="Руководство_3D_Художника_по_3ds_Max_Вьюпорт_и_Предпросмотр_Рендера">Вьюпорт и Предпросмотр Рендера</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="Руководство_3D_Художника_по_3ds_Max_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="Руководство_3D_Художника_по_3ds_Max_Ограничения_Анимации">Ограничения Анимации</a></li><li><a href="manual/ru/max/Material-Library.html" id="Руководство_3D_Художника_по_3ds_Max_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Руководство 3D Художника по Maya</h2><ul id="Руководство_3D_Художника_по_Maya"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Руководство_3D_Художника_по_Maya_Руководство_для_Начинающих">Руководство для Начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Руководство_3D_Художника_по_Maya_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Руководство_3D_Художника_по_Maya_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Руководство_3D_Художника_по_Maya_Освещение_и_Визуализация">Освещение и Визуализация</a></li><li><a href="manual/ru/maya/Camera.html" id="Руководство_3D_Художника_по_Maya_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Руководство_3D_Художника_по_Maya_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Руководство_3D_Художника_по_Maya_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Руководство_3D_Художника_по_Maya_Морфинг_(Blend_Shapes)">Морфинг (Blend Shapes)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Руководство_3D_Художника_по_Maya_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Руководство_3D_Художника_по_Maya_glTF_Материалы">glTF Материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Руководство_3D_Художника_по_Maya_Ограничения_Объектов">Ограничения Объектов</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Руководство_3D_Художника_по_Maya_Библиотеки_Материалов">Библиотеки Материалов</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/ru/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/ru/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Puzzles_Reference_Animation">Animation</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/ru/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Puzzles_Reference_Physics_(and_Constraints)">Physics (and Constraints)</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/ru/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/ru/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/ru/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Освещение и Рендеринг / 3ds Max</h1>
+
+    <p>
+      Данная страница содержит информацию об освещении и визуализации в 3ds Max, которые могут быть использованы в Verge3D. 
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/max/Lighting-and-Rendering.html#renderers">Рендереры</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#environment_lighting">Освещение Окружающей Среды</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#lights">Источники Освещения</a><ul><li><a href="manual/ru/max/Lighting-and-Rendering.html#photometric_lights">Photometric Lights</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#standard_lights">Standard Lights</a></li></ul></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#light_probes">Light Probes</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#per_object_rendering_settings">Настройки Рендеринга для Каждого Объекта</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">Глобальные Настройки Рендеринга</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#outline_rendering">Outline Rendering (Визуализация Контура)</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#clipping_planes">Clipping Planes (Секущие Плоскости)</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>Рендереры</h2>
+
+    <p>
+      Verge3D поддерживает три рендера, предоставляемые 3ds Max: <strong>Scanline</strong>, <strong>ART</strong> (рекомендуется) и <strong>Arnold</strong>. Рендерер Scanline предназначен для использования со стандартным освещением и материалами, а ART/Arnold обычно используется с фотометрическим освещением и физическими материалами.
+    </p>
+
+    <p>
+      Выбор правильного рендерера - это первое, о чем следует подумать перед началом работы с графикой. Если вы не уверены, какой рендерер выбрать, мы рекомендуем использовать ART. Чтобы установить рендерер в 3ds Max, используйте окно <a href="manual/ru/max/Viewport-Render-Preview.html#Scanline_ART_Rendering">"Render Setup..."</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>Освещение Окружающей Среды</h2>
+
+    <p>
+      Освещение окружения - очень важный компонент графического пайплайна в Verge3D, основанного на ART/физических материалах. Вы можете освещать сцену только с помощью карты окружения, не используя никаких световых объектов (как в демонстрации <a href="https://www.soft8soft.com/gallery/scooter-3d-product-customizer/" target="_blank">Scooter demo</a>).
+    </p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/TqqdzI5kgH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p>
+      Проект-шаблон куб по умолчанию содержит HDR-текстуру для освещения на основе изображения. Вы можете заменить эту текстуру собственным файлом или настроить освещение окружения с нуля, как показано в этом <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">видеоролике</a>.
+    </p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>Источники Освещения</h2>
+
+    <p>
+      Если вы хотите получить динамические тени в сцене, или если вам нужно переместить источник света (как в случае с автомобильными фарами), вы можете использовать <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/3DSMax-Lighting-Shading/files/GUID-57B15284-C5F3-46A8-BBD3-6333FE5E80DE-htm.html" target="_blank">световые объекты</a>.
+    </p>
+
+    <p>
+    Verge3D поддерживает два типа источников освещения предоставляемых 3ds Max: <strong>standard</strong> и <strong>photometric</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#photometric_lights" id="photometric_lights" class="permalink">#</a></p>
+
+    <h3>Photometric Lights</h3>
+
+    <p>
+      Photometric lights обычно используются с <a href="manual/ru/max/Materials-Maps-Reference.html#Physical">Физическими материалами</a>. Verge3D воспроизводит их, используя ART-рендерер 3ds Max в качестве эталона. Кроме того, вы можете использовать настройки Physical Camera <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">Expose Control</a> для настройки яркости и цветового диапазона ваших рендеров.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#standard_lights" id="standard_lights" class="permalink">#</a></p>
+
+    <h3>Standard Lights</h3>
+
+    <p>
+      Standard lights обычно используются со <a href="manual/ru/max/Materials-Maps-Reference.html#Standard">Стандартными материалами</a>. Verge3D воспроизводит их, используя в качестве эталона рендер Scanline в 3ds Max.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>Light Probes</h2>
+
+    <p>
+      Дополнение Verge3D добавляет пользовательский объект датчика света под названием <strong>V3DReflectionCubemap</strong>, который можно использовать для применения косвенного освещения к объектам через локальную кубическую карту отражений.<br><br>
+
+      Этот объект можно найти используя <strong>Create</strong> panel -&gt; <strong>Helpers</strong> category -&gt;
+      <strong>Verge3D</strong>:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-create.png" class="centered" style="max-width: 351px">
+
+    <p>
+      Объект отражения cubemap определяет объем влияния, представленный box или sphere. Все объекты, находящиеся внутри этого объема, будут использовать локальную кубическую карту отражения, созданную во время запуска, вместо глобальной текстуры/цвета окружения сцены.<br><br>
+
+      Преимущество использования локальной карты отражения заключается в том, что на ней прорисованы окружающие объекты, в то время как глобальная карта сцены содержит только фоновую текстуру/цвет, указанный в настройках окружения Max. Локальные карты отражения также имеют эффект параллакса в зависимости от геометрии <a href="manual/ru/max/Lighting-and-Rendering.html#influence_volume">влияния</a> или <a href="manual/ru/max/Lighting-and-Rendering.html#parallax_volume">параллаксного</a> объема. 
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-effect.png" class="centered" style="max-width: 915px">
+    <span class="img-caption">
+      Cлева - отражающий объект cubemap во вьюпорте Max, справа - эффект, который он добавляет к отражающему материалу в Verge3D.
+    </span>
+
+    <p>
+      Объекты Reflection Cubemap имеют следующие параметры: 
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-params.png" class="centered" style="max-width: 335px">
+
+    <dl>
+      <dt>General</dt>
+      <dd>
+        general probe settings:
+
+        <dl>
+          <dt id="influence_volume">Influence Type</dt>
+          <dd>
+            Тип объема влияния: <strong>Sphere</strong> или <strong>Box</strong>. Освещение зонда влияет только на объекты, расположенные внутри этого объема.
+          </dd>
+
+          <dt>Influence Distance</dt>
+          <dd>
+            Размер объема влияния. Можно также изменить масштабирование объекта и сделать форму объема влияния неоднородной.
+          </dd>
+
+          <dt>Intensity</dt>
+          <dd>
+            Интенсивность косвенного освещения. Любое значение, отличное от 1,0 не является физически корректным.
+          </dd>
+
+          <dt>Clipping Start</dt>
+          <dd>
+            Расстояние до отсечения. Объекты, расположенные ближе, чем это значение, не будут отображаться в кубической карте отражения. 
+          </dd>
+
+          <dt>Clipping End</dt>
+          <dd>
+            Дальнее расстояние отсечения. Объекты, расположенные дальше этого значения, не будут отображаться в кубической карте отражения.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Visibility Selection Set</dt>
+      <dd>
+        Настройки видимости объекта: 
+
+        <dl>
+          <dt>Selection Set</dt>
+          <dd>
+            Ограничить объекты, которые должны появиться на кубокарте отражения, только теми, которые принадлежат этому сету. Выберите опцию пустой строки (""), чтобы не указывать никакого набора объектов - в этом случае все объекты сцены будут использованы для создания кубической карты отражения. 
+          </dd>
+
+          <dt>Invert Visibility</dt>
+          <dd>
+            Инвертировать выбор объектов, видимых этим зондом, если <strong>election Set</strong>.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt id="parallax_volume">Custom Parallax</dt>
+      <dd>
+        parallax settings:
+
+        <dl>
+          <dt>Enable Custom Parallax</dt>
+          <dd>
+            включить пользовательские настройки для коррекции параллакса. Эта группа настроек определяет объем параллакса, который используется для проецирования освещения, захваченного датчиком. Если функция <strong>Custom Parallax</strong> не включена эффект параллакса рассчитывается на основе <strong>Influence Type</strong> и <strong>Influence Distance</strong>.
+          </dd>
+
+          <dt>Parallax Type</dt>
+          <dd>
+            тип параллактического объема: <strong>Sphere</strong> или <strong>Box</strong>.
+          </dd>
+
+          <dt>Parallax Distance</dt>
+          <dd>
+            размер параллактического объема.
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#per_object_rendering_settings" id="per_object_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Настройки Рендеринга для Каждого Объекта</h2>
+
+    <img src="files/lighting-max/rendering-settings.jpg" class="centered" style="max-width: 319px">
+
+    <p><strong>Render Order</strong> — изменяет порядок рендеринга для конкретного объекта. Чем меньше индекс, тем раньше будет отрисован объект. В большинстве случаев это значение необходимо подстроить при использовании прозрачности Blend для устранения артефактов прозрачности.</p>
+
+    <p><strong>Frustum Culling</strong> — включает/выключает оптимизацию фруструм кулинга. Снимите этот флажок, если у вас есть какой-либо обтекаемый объект, который может выходить за пределы экранного пространства, чтобы предотвратить его обтекание. 
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings" id="global_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Глобальные Настройки Рендеринга</h2>
+
+    <p>Глобальные настройки рендеринга, доступные из диалогового окна <strong>Verge3D Export Settings</strong> (<strong>Verge3D-&gt;Export Settings...</strong> в меню 3ds Max).</p>
+
+    <img src="files/lighting-max/rendering-settings-global.jpg" class="centered" style="max-width: 252px">
+
+    <p><strong>Anti-Aliasing</strong> — выберите, какой алгоритм сглаживания использовать для сцены:</p>
+
+    <ul>
+      <li><strong>Auto</strong> — использовать системный метод по умолчанию.</li>
+      <li><strong>MSAA 4x</strong> — использовать мультисэмпловое сглаживание с 4x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>MSAA 8x</strong> — использовать мультисэмпловое сглаживание с 8x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>MSAA 16x</strong> — использовать мультисэмпловое сглаживание с 16x сэмплами, если целевое оборудование поддерживает его.</li>
+      <li><strong>FXAA</strong> — использовать FXAA.</li>
+      <li><strong>None</strong> — отключить сглаживание.</li>
+    </ul>
+
+    <p><strong>Use HDR Rendering</strong> — включить рендеринг с высоким динамическим диапазоном.</p>
+
+    <p><strong>Environment Map Size</strong> — размер текстуры для использования при освещении окружения:</p>
+
+    <ul>
+      <li><strong>256</strong> — оптимальное качество при низком потреблении памяти (рекомендовано)..</li>
+      <li><strong>512</strong> — лучшее качество при умеренном потреблении памяти и снижении производительности. Используйте его для рендеринга отражений высокого качества, например, для рендеринга ювелирных изделий.</li>
+      <li><strong>1024</strong> — наилучшее качество при высоком потреблении памяти и низкой производительности (как правило, не рекомендуется).</li>
+    </ul>
+
+    <p><strong>IBL Environment Mode</strong></p>
+
+    <ul>
+      <li><strong>PMREM (медленный)</strong> — высокое качество (значение по умолчанию)..</li>
+      <li><strong>Light Probe + Cubemap (умеренный)</strong> — снижение качества зеркальных отражений на основе изображений, лучшая производительность.</li>
+      <li><strong>Light Probe (быстрый)</strong> — отключение зеркальных отражений на основе изображений, высочайшая производительность.</li>
+    </ul>
+
+    <p><strong>Object Outlining</strong> — читайте ниже.</p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>Outline Rendering (Визуализация Контура)</h2>
+
+    <p>
+      Контурный рендеринг (он же рендеринг края силуэта) - это распространенная техника нефотореалистичного рендеринга (NPR), которая может значительно улучшить визуальное восприятие вашей сцены. Этот эффект можно использовать в различных приложениях, таких как электронное обучение, игры, архитектурная визуализация и техническое рисование.
+    </p>
+
+    <p>
+      Чтобы использовать обводку объекта (и дополнительное свечение) в приложении Verge3D, сначала включите эффект на панели <strong>Render Properties</strong> в Blender, затем используйте пазл <a href="manual/ru/puzzles/Objects.html#outline">outline</a>, чтобы применить его к объекту (объектам).
+    </p>
+
+    <p class="note">
+      Контурный рендеринг не работает в AR/VR. Используйте другие методы выделения объектов, например анимацию или изменение цвета материала.
+    </p>
+
+    <img src="files/lighting-blender/outline-example.jpg" class="centered" style="max-width: 819px">
+
+    <p>Настроить контур можно с помощью следующих свойств:</p>
+
+    <p><strong>Enabled</strong> —  включить/выключить эффект.</p>
+
+    <p><strong>Edge Strength</strong> — фактор силы контура.</p>
+
+    <p><strong>Edge Glow</strong> —  интенсивность дополнительного свечения (отрисовывается за пределами основного края контура).</p>
+
+    <p><strong>Edge Thickness</strong> — коэффициент толщины края контура.</p>
+
+    <p><strong>Pulse Period</strong> — период импульса в секундах. Укажите, чтобы сделать эффект анимированным.</p>
+
+    <p><strong>Visible Edge Color</strong> — цвет видимого контура.</p>
+
+    <p><strong>Hidden Edge Color</strong> — цвет края контура, отображаемого за любыми другими объектами сцены.</p>
+
+    <p><strong>Render Hidden Edge</strong> — включить/выключить отрисовку края контура за другими объектами сцены.</p>
+
+    <p class="note">
+      Хотя светящиеся объекты можно рендерить, в большинстве случаев контурный рендеринг используется для улучшения визуальной четкости сцены. Если вам нужно свечение от ламп или других ярких объектов, подумайте об использовании <a href="manual/ru/puzzles/Postprocessing.html#bloom">bloom post-processing</a>.
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#exposure_control" id="exposure_control" class="permalink">#</a></p>
+
+    </p><h2>Контроль экспозиции</h2>
+
+    <p>Verge3D в 3ds Max поддерживает следующие алгоритмы управления экспозицией:</p>
+
+    <ul>
+      <li><strong>Physical Camera Exposure Control</strong></li>
+      <li><strong>Logarithmic Exposure Control</strong></li>
+    </ul>
+
+    <p>Дополнительные сведения о том, как настроить элементы управления экспозицией для сцены, см. в официальной <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2021/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">документации</a> Autodesk.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>Clipping Planes (Секущие Плоскости)</h2>
+
+    <p>
+      Секущие плоскости (они же плоскости сечений) - это способ, используемый для отображения внутреннего устройства сложных объектов, таких как здания, автомобили, приборы, гаджеты, машины и т.д. 
+    </p>
+
+    <img src="files/lighting-max/clipping-plane-example.jpg" class="centered">
+
+    <p>
+      Чтобы добавить новую плоскость обрезания, используйте кнопку <strong>Create -&gt; Helpers -&gt; Verge3D -&gt; ClippingPlane</strong> в 3ds Max:
+    </p>
+
+    <img src="files/lighting-max/clipping-plane-new.jpg" class="centered" style="max-width: 311px">
+
+    <p>
+      Объекты в вашей сцене будут обрезаны в отрицательном направлении <strong>Z</strong> объекта плоскости сечения. 
+    </p>
+
+    <p>
+      Плоскости сечения обладают следующими свойствами:
+    </p>
+
+    <dl>
+      <dt>Affected Objects</dt>
+      <dd>
+        Коллекция объектов, с которыми будет взаимодействовать секущая плоскость. Если коллекция не назначена, все объекты сцены будут обрезаны.
+      </dd><dt>Negated</dt>
+      <dd>
+        Поменять местами обрезанную и необрезанную стороны.
+      </dd>
+      <dt>Clip Shadows</dt>
+      <dd>
+        Обрезать тени, отбрасываемые обрезанными объектами.
+      </dd>
+      <dt>Union Planes</dt>
+      <dd>
+        Постройте объединение из всех плоскостей сечения, воздействуя на объект, а не на их пересечение.
+      </dd>
+      <dt>Cross-Section</dt>
+      <dd>
+        Заполните отверстие образованное секущей плоскостью в затронутых объектах.
+      </dd>
+      <dt>Cross-Section Color</dt>
+      <dd>
+        Цвет и прозрачность поперечного сечения.
+      </dd>
+      <dt>Cross-Sect. Size</dt>
+      <dd>
+        Размер плоскости сечения. Увеличьте это значение, если вы используете сцену большего размера.
+      </dd>
+    </dl>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/forums/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

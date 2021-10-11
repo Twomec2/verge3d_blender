@@ -1,0 +1,719 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <title>HTML类拼图参考 - Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="如何使用拼图来控制HTML DOM元素。">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/zh/puzzles/HTML.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="HTML类拼图参考 - Soft8Soft">
+            <meta property="og:description" content="如何使用拼图来控制HTML DOM元素。">
+            <meta property="og:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/zh/puzzles/HTML.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="ThreeJS">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="HTML类拼图参考 - Soft8Soft">
+            <meta name="twitter:description" content="如何使用拼图来控制HTML DOM元素。">
+            <meta name="twitter:image" content="https://cdn.soft8soft.com/images/manual.jpg">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="files/icons/favicon-16x16.png">
+            <link rel="manifest" href="files/icons/manifest.json">
+            <link rel="mask-icon" href="files/icons/safari-pinned-tab.svg" color="#5bbad5 ">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-add-html-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-remove-html-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-attr.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-attr.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-css-rule.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-style.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-style.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-style-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-css-rule.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-on-event.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-event-property.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-DOM-object-selector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-query-selector.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-canvas-elem.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-create-canvas-elem-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-draw-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-remove-line.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-bind-element.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-init-fullscreen.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-open-web-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-social-share-link.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-url-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-set-url-param-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-take-screenshot.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-url-data.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-get-url-data-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-download-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-download-file-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-open-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/puzzles-html-drop-file-to.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/data-url-logo.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "url": "https://www.soft8soft.com/docs/files/puzzles/data-url-debugging.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/zh/index.html">Verge3D用户手册</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>入门指南</h2><ul id="入门指南"><li><a href="manual/zh/introduction/Beginners-Guide.html" id="入门指南_新手入门">新手入门</a></li><li><a href="manual/zh/introduction/Workflow.html" id="入门指南_工作流程">工作流程</a></li><li><a href="manual/zh/introduction/App-Manager.html" id="入门指南_应用管理器">应用管理器</a></li><li><a href="manual/zh/introduction/Puzzles-Visual-Logic-Editor.html" id="入门指南_拼图编辑器">拼图编辑器</a></li><li><a href="manual/zh/introduction/Features.html" id="入门指南_功能特性">功能特性</a></li><li><a href="manual/zh/introduction/Project-Structure.html" id="入门指南_项目结构">项目结构</a></li><li><a href="manual/zh/introduction/Updating.html" id="入门指南_版本更新">版本更新</a></li><li><a href="manual/zh/introduction/FAQ.html" id="入门指南_常见问题">常见问题</a></li><li><a href="manual/zh/introduction/Useful-links.html" id="入门指南_实用链接">实用链接</a></li></ul></div><div><h2>通用专题</h2><ul id="通用专题"><li><a href="manual/zh/introduction/Optimizing-WebGL-performance.html" id="通用专题_优化技巧">优化技巧</a></li><li><a href="manual/zh/introduction/Asset-compression.html" id="通用专题_资产压缩">资产压缩</a></li><li><a href="manual/zh/introduction/HTML-based-user-interfaces.html" id="通用专题_基于HTML的用户界面">基于HTML的用户界面</a></li><li><a href="manual/zh/introduction/Text-Rendering.html" id="通用专题_文本渲染">文本渲染</a></li><li><a href="manual/zh/introduction/AR-VR-development.html" id="通用专题_AR/VR开发">AR/VR开发</a></li><li><a href="manual/zh/introduction/Physics-Guide.html" id="通用专题_物理系统指南">物理系统指南</a></li><li><a href="manual/zh/introduction/Personalizing-Verge3D-Apps.html" id="通用专题_个性化Verge3D应用">个性化Verge3D应用</a></li><li><a href="manual/zh/introduction/Wordpress-Plugin.html" id="通用专题_WordPress插件">WordPress插件</a></li><li><a href="manual/zh/introduction/Using-JavaScript.html" id="通用专题_使用JavaScript">使用JavaScript</a></li><li><a href="manual/zh/introduction/Creating-Desktop-Apps.html" id="通用专题_创建桌面应用">创建桌面应用</a></li><li><a href="manual/zh/introduction/Creating-Mobile-Apps.html" id="通用专题_创建移动应用">创建移动应用</a></li><li><a href="manual/zh/introduction/Performance-Bottlenecks.html" id="通用专题_性能瓶颈">性能瓶颈</a></li><li><a href="manual/zh/introduction/Hardware-Related-Issues.html" id="通用专题_硬件相关问题">硬件相关问题</a></li><li><a href="manual/zh/introduction/Testing-Mobile-Browsers.html" id="通用专题_移动端测试">移动端测试</a></li></ul></div><div><h2>Blender艺术家指南</h2><ul id="Blender艺术家指南"><li><a href="manual/zh/blender/Beginners-Guide.html" id="Blender艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/blender/Installation.html" id="Blender艺术家指南_安装">安装</a></li><li><a href="manual/zh/blender/Material-System.html" id="Blender艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/blender/Lighting-and-Rendering.html" id="Blender艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/blender/Camera.html" id="Blender艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/blender/Shader-Nodes-Reference.html" id="Blender艺术家指南_着色器节点">着色器节点</a></li><li><a href="manual/zh/blender/Animation.html" id="Blender艺术家指南_动画">动画</a></li><li><a href="manual/zh/blender/Morphing.html" id="Blender艺术家指南_形态键（变形）">形态键（变形）</a></li><li><a href="manual/zh/blender/Shadows.html" id="Blender艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/blender/Transparency.html" id="Blender艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/blender/GLTF-Materials.html" id="Blender艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/blender/Object-Constraints.html" id="Blender艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/blender/Material-Library.html" id="Blender艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>3ds Max艺术家指南</h2><ul id="3ds_Max艺术家指南"><li><a href="manual/zh/max/Beginners-Guide.html" id="3ds_Max艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/max/Installation.html" id="3ds_Max艺术家指南_安装">安装</a></li><li><a href="manual/zh/max/Material-System.html" id="3ds_Max艺术家指南_材质系统概览">材质系统概览</a></li><li><a href="manual/zh/max/Lighting-and-Rendering.html" id="3ds_Max艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/max/Camera.html" id="3ds_Max艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/max/Materials-Maps-Reference.html" id="3ds_Max艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/max/Animation.html" id="3ds_Max艺术家指南_动画">动画</a></li><li><a href="manual/zh/max/Morphing.html" id="3ds_Max艺术家指南_变形">变形</a></li><li><a href="manual/zh/max/Shadows.html" id="3ds_Max艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/max/Transparency.html" id="3ds_Max艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/max/Viewport-Render-Preview.html" id="3ds_Max艺术家指南_视口及渲染预览">视口及渲染预览</a></li><li><a href="manual/zh/max/GLTF-Materials.html" id="3ds_Max艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/max/Animation-Constraints.html" id="3ds_Max艺术家指南_动画约束">动画约束</a></li><li><a href="manual/zh/max/Material-Library.html" id="3ds_Max艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>Maya艺术家指南</h2><ul id="Maya艺术家指南"><li><a href="manual/zh/maya/Beginners-Guide.html" id="Maya艺术家指南_入门指南">入门指南</a></li><li><a href="manual/zh/maya/Installation.html" id="Maya艺术家指南_安装">安装</a></li><li><a href="manual/zh/maya/Materials.html" id="Maya艺术家指南_材质与贴图">材质与贴图</a></li><li><a href="manual/zh/maya/Lighting-and-Rendering.html" id="Maya艺术家指南_灯光与渲染">灯光与渲染</a></li><li><a href="manual/zh/maya/Camera.html" id="Maya艺术家指南_摄影机">摄影机</a></li><li><a href="manual/zh/maya/Shadows.html" id="Maya艺术家指南_阴影">阴影</a></li><li><a href="manual/zh/maya/Animation.html" id="Maya艺术家指南_动画">动画</a></li><li><a href="manual/zh/maya/Blend-Shapes.html" id="Maya艺术家指南_形态融合（变形）">形态融合（变形）</a></li><li><a href="manual/zh/maya/Transparency.html" id="Maya艺术家指南_透明度">透明度</a></li><li><a href="manual/zh/maya/GLTF-Materials.html" id="Maya艺术家指南_glTF材质">glTF材质</a></li><li><a href="manual/zh/maya/Object-Constraints.html" id="Maya艺术家指南_对象约束">对象约束</a></li><li><a href="manual/zh/maya/Material-Library.html" id="Maya艺术家指南_使用材质库">使用材质库</a></li></ul></div><div><h2>拼图参考</h2><ul id="拼图参考"><li><a href="manual/zh/puzzles/Initialization.html" id="拼图参考_初始化｜Initialization">初始化｜Initialization</a></li><li><a href="manual/zh/puzzles/Events.html" id="拼图参考_事件｜Events">事件｜Events</a></li><li><a href="manual/zh/puzzles/Selectors.html" id="拼图参考_选择器｜Selectors">选择器｜Selectors</a></li><li><a href="manual/zh/puzzles/Objects.html" id="拼图参考_对象｜Objects">对象｜Objects</a></li><li><a href="manual/zh/puzzles/Materials.html" id="拼图参考_材质｜Materials">材质｜Materials</a></li><li><a href="manual/zh/puzzles/Animation.html" id="拼图参考_动画与约束｜Animation_(+Constraints)">动画与约束｜Animation (+Constraints)</a></li><li><a href="manual/zh/puzzles/Camera.html" id="拼图参考_摄影机/灯光｜Camera/Lights">摄影机/灯光｜Camera/Lights</a></li><li><a href="manual/zh/puzzles/Scenes.html" id="拼图参考_场景｜Scenes">场景｜Scenes</a></li><li><a href="manual/zh/puzzles/Time.html" id="拼图参考_时间｜Time">时间｜Time</a></li><li><a href="manual/zh/puzzles/HTML.html" id="拼图参考_HTML">HTML</a></li><li><a href="manual/zh/puzzles/AR_VR.html" id="拼图参考_AR/VR">AR/VR</a></li><li><a href="manual/zh/puzzles/Sound.html" id="拼图参考_音频/视频｜Audio/Video">音频/视频｜Audio/Video</a></li><li><a href="manual/zh/puzzles/Physics.html" id="拼图参考_物理系统｜Physics">物理系统｜Physics</a></li><li><a href="manual/zh/puzzles/Postprocessing.html" id="拼图参考_后期处理｜Post-processing">后期处理｜Post-processing</a></li><li><a href="manual/zh/puzzles/Logic.html" id="拼图参考_逻辑｜Logic">逻辑｜Logic</a></li><li><a href="manual/zh/puzzles/Loops.html" id="拼图参考_循环｜Loops">循环｜Loops</a></li><li><a href="manual/zh/puzzles/Text.html" id="拼图参考_文本｜Text">文本｜Text</a></li><li><a href="manual/zh/puzzles/Numbers.html" id="拼图参考_数字｜Numbers">数字｜Numbers</a></li><li><a href="manual/zh/puzzles/Lists.html" id="拼图参考_列表｜Lists">列表｜Lists</a></li><li><a href="manual/zh/puzzles/Dictionaries.html" id="拼图参考_字典｜Dictionaries">字典｜Dictionaries</a></li><li><a href="manual/zh/puzzles/Variables.html" id="拼图参考_变量｜Variables">变量｜Variables</a></li><li><a href="manual/zh/puzzles/Procedures.html" id="拼图参考_过程｜Procedures">过程｜Procedures</a></li><li><a href="manual/zh/puzzles/System.html" id="拼图参考_系统｜System">系统｜System</a></li><li><a href="manual/zh/puzzles/Advanced.html" id="拼图参考_高级｜Advanced">高级｜Advanced</a></li><li><a href="manual/zh/puzzles/ECommerce.html" id="拼图参考_电商插件｜E-Commerce_Plugin">电商插件｜E-Commerce Plugin</a></li><li><a href="manual/zh/puzzles/Library.html" id="拼图参考_库｜Library">库｜Library</a></li><li><a href="manual/zh/puzzles/Plugins.html" id="拼图参考_插件系统｜Plugins">插件系统｜Plugins</a></li></ul></div></div>
+        </nav><article>
+    <h1>HTML拼图</h1>
+
+    <p>这些拼图可以操作HTML DOM元素。</p>
+      
+    <img src="files/puzzles/puzzles-html.jpg"><h2>内容</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/zh/puzzles/HTML.html#what_is_html_dom">什么是HTML DOM？</a></li><li><a href="manual/zh/puzzles/HTML.html#puzzles_reference">拼图参考</a><ul><li><a href="manual/zh/puzzles/HTML.html#add_HTML_element">add HTML element(添加HTML元素)</a></li><li><a href="manual/zh/puzzles/HTML.html#remove_html_element">remove HTML element(移除HTML元素)</a></li><li><a href="manual/zh/puzzles/HTML.html#get_attribute">get attribute(获取属性)</a></li><li><a href="manual/zh/puzzles/HTML.html#set_attribute">set attribute(设置属性)</a></li><li><a href="manual/zh/puzzles/HTML.html#create_css_rule">create css rule(创建css规则)</a></li><li><a href="manual/zh/puzzles/HTML.html#set_style">set style(设置样式)</a></li><li><a href="manual/zh/puzzles/HTML.html#get_style">get style(获取样式)</a></li><li><a href="manual/zh/puzzles/HTML.html#set_css_rule">set css rule(设置css规则)</a></li><li><a href="manual/zh/puzzles/HTML.html#event">event(事件)</a></li><li><a href="manual/zh/puzzles/HTML.html#get_event_property">get event property(获取事件属性)</a></li><li><a href="manual/zh/puzzles/HTML.html#query_selector">query selector(查询选择器)</a></li><li><a href="manual/zh/puzzles/HTML.html#create_canvas_elem">create canvas elem(创建canvas元素)</a></li><li><a href="manual/zh/puzzles/HTML.html#draw_line">draw line(画线)</a></li><li><a href="manual/zh/puzzles/HTML.html#remove_line">remove line(移除线)</a></li><li><a href="manual/zh/puzzles/HTML.html#bind_element">bind element(绑定元素)</a></li><li><a href="manual/zh/puzzles/HTML.html#init_fullscreen">init fullscreen(初始化全屏)</a></li><li><a href="manual/zh/puzzles/HTML.html#open_web_page">open web page(打开网页)</a></li><li><a href="manual/zh/puzzles/HTML.html#social_share_link">social share link(社交网站分享链接)</a></li><li><a href="manual/zh/puzzles/HTML.html#set_url_param">set URL param(设置URL参数)</a></li><li><a href="manual/zh/puzzles/HTML.html#take_screenshot">take screenshot(截屏)</a></li><li><a href="manual/zh/puzzles/HTML.html#get_url_data">get URL data(获取URL数据)</a></li><li><a href="manual/zh/puzzles/HTML.html#download_file">download file(下载文件)</a></li><li><a href="manual/zh/puzzles/HTML.html#open_file">open file and opened file(打开文件和已打开的文件)</a></li><li><a href="manual/zh/puzzles/HTML.html#drop_file_to">drop file to(将文件拖到)</a></li></ul></li><li><a href="manual/zh/puzzles/HTML.html#data_uri">Data URI Links(数据URI链接)</a></li></ul><!-- /TOC --> <p><a href="manual/zh/puzzles/HTML.html#what_is_html_dom" id="what_is_html_dom" class="permalink">#</a></p>
+
+    <h2>什么是HTML DOM？</h2>
+
+    <p>HTML DOM（文档对象模型，见 <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">技术文档</a>）是一个HTML页面的程序化接口。基本上，这意味着除了通过直接编辑文本代码，还可以通过执行拼图模块来修改应用。例如，您可以添加新的HTML元素来自定义页面外观、在模型上画图、屏幕截图、下载文件等。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>拼图参考</h2>
+
+    <p><a href="manual/zh/puzzles/HTML.html#add_HTML_element" id="add_HTML_element" class="permalink">#</a></p>
+
+    <h3>add HTML element(添加HTML元素)</h3>
+
+    <p>创建一个具有指定 <a href="https://www.w3schools.com/tags/default.asp" target="_blank">类型</a> 和标识符（对应于 "id" 属性）的HTML元素，并将其添加到指定的现有HTML元素之前或之后。</p>
+      
+    <img src="files/puzzles/puzzles-html-add-html-elem.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#remove_html_element" id="remove_html_element" class="permalink">#</a></p>
+
+    <h3>remove HTML element(移除HTML元素)</h3>
+
+    <p>移除一个具有指定标识符的HTML元素。</p>
+      
+    <img src="files/puzzles/puzzles-html-remove-html-elem.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#get_attribute" id="get_attribute" class="permalink">#</a></p>
+
+    <h3>get attribute(获取属性)</h3>
+
+    <p>从一个具有指定id的HTML元素中获取一个 <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">属性</a> 。 如果该HTML元素位于一个外部的HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>嵌入其中），应启用 "in parent doc" 复选框。</p>
+      
+    <img src="files/puzzles/puzzles-html-get-attr.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#set_attribute" id="set_attribute" class="permalink">#</a></p>
+
+    <h3>set attribute(设置属性)</h3>
+
+    <p>为一个具有指定id的HTML元素设置一个 <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">属性</a> 。 如果该HTML元素位于一个外部HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>嵌入其中），应启用 "in parent doc" 复选框。也适用于元素ID的列表。</p>
+      
+    <img src="files/puzzles/puzzles-html-set-attr.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#create_css_rule" id="create_css_rule" class="permalink">#</a></p>
+
+    <h3>create css rule(创建css规则)</h3>
+
+    <p>创建一个新的 <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank">CSS规则</a>。如果样式表属于外部HTML文档（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>嵌入其中），应启用 "in parent doc" 复选框。</p>
+      
+    <img src="files/puzzles/puzzles-html-create-css-rule.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#set_style" id="set_style" class="permalink">#</a></p>
+
+    <h3>set style(设置样式)</h3>
+
+    <p>为具有指定id的HTML元素设置一个 <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS属性</a> 。 如果HTML元素位于一个外部的HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong> 嵌入其中），应启用 "in parent doc" 复选框。也适用于元素ID的列表。</p>
+      
+    <img src="files/puzzles/puzzles-html-set-style.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#get_style" id="get_style" class="permalink">#</a></p>
+
+    <h3>get style(获取样式)</h3>
+
+    <p>从指定id的HTML元素获取一个 <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS属性</a> 。 如果HTML元素位于一个外部的HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong> 嵌入其中），应启用 "in parent doc" 复选框。</p>
+      
+    <img src="files/puzzles/puzzles-html-get-style.jpg"><p>这个拼图在制作3D配置器类应用时非常有用。例如，你可以使用下面的设置，从一些HTML元素的背景颜色中指定材质颜色：</p>
+      
+    <img src="files/puzzles/puzzles-html-get-style-example.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#set_css_rule" id="set_css_rule" class="permalink">#</a></p>
+
+    <h3>set css rule(设置css规则)</h3>
+
+    <p>为指定的CSS规则（可在应用的 <strong>.css</strong> 文件中找到）设置一个 <a href="https://www.w3schools.com/cssref/default.asp" target="_blank">CSS属性</a> 。如果样式表属于外部HTML文档（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>嵌入其中），应启用 "in parent doc" 复选框。</p>
+      
+    <img src="files/puzzles/puzzles-html-set-css-rule.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#event" id="event" class="permalink">#</a></p>
+
+    <h3>event(事件)</h3>
+
+    <p>为一个具有指定id的HTML元素注册一个 <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">事件监听器</a> 。 如果该HTML元素位于一个外部的HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>嵌入其中），应启用 "in parent doc" 复选框。一旦有事件发生，放在 "do" 插槽中的对象就会被触发。也适用于元素ID的列表。</p>
+      
+    <img src="files/puzzles/puzzles-html-on-event.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#get_event_property" id="get_event_property" class="permalink">#</a></p>
+
+    <h3>get event property(获取事件属性)</h3>
+
+    <p>输出由 "event(事件)" 拼图产生的事件 <a href="https://www.w3schools.com/jsref/obj_events.asp" target="_blank">属性</a> 值。</p>
+      
+    <img src="files/puzzles/puzzles-html-get-event-property.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#DOM_object_selector" id="DOM_object_selector" class="permalink">#</a></p> <!--COMPAT--><p><a href="manual/zh/puzzles/HTML.html#window" id="window" class="permalink"></a></p>
+    <p><a href="manual/zh/puzzles/HTML.html#document" id="document" class="permalink"></a></p>
+    <p><a href="manual/zh/puzzles/HTML.html#body" id="body" class="permalink"></a></p>
+
+    <h3>DOM object selector(DOM对象选择器)</h3>
+
+    <p><strong>container</strong>代表画布容器元素——包含渲染场景的HTML元素；<strong>window</strong>代表 <a href="https://www.w3schools.com/jsref/obj_window.asp" target="_blank">DOM窗口对象</a> ——浏览器标签或加载HTML文档的iframe；<strong>document</strong>代表 <a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank">DOM文档对象</a> ——HTML文档的根节点；<strong>body</strong>代表 <a href="https://www.w3schools.com/jsref/dom_obj_body.asp" target="_blank">DOM主体对象</a> ——HTML文档的&lt;body&gt;元素。</p>
+      
+    <img src="files/puzzles/puzzles-html-DOM-object-selector.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#query_selector" id="query_selector" class="permalink">#</a></p>
+
+    <h3>query selector(查询选择器)</h3>
+
+    <p>返回第一个符合指定的 <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">CSS选择器</a>的HTML元素。</p>
+      
+    <img src="files/puzzles/puzzles-html-query-selector.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#create_canvas_elem" id="create_canvas_elem" class="permalink">#</a></p>
+
+    <h3>create canvas elem(创建canvas元素)</h3>
+
+    <p>创建一个具有<strong>id</strong>、<strong>width</strong>和<strong>height</strong>属性的canvas元素。将此对象与 <a href="manual/zh/puzzles/Materials.html#replace_texture">replace texture(替换纹理)</a> 拼图一起使用，可用于创建画布纹理。</p>
+      
+    <img src="files/puzzles/puzzles-html-create-canvas-elem.jpg"><p>画布创建完成后，即可通过JavaScript在上面绘图了。您可以在 <em>your_app_name.js</em> 模块的 <em>runCode()</em> 函数中更新画布，或者使用 <a href="manual/zh/puzzles/Advanced.html#exec_script">exec script(执行脚本)</a> 拼图。</p>
+
+    <p>要更新画布，可通过ID（指定的<strong>id</strong>属性）检索画布纹理。</p>
+    <p></p>
+    
+    
+<code>
+
+    var canvasTex = v3d.puzzles.canvasTextures['my_canvas'];
+    
+</code>
+
+    
+    <p>之后，您可以按以下方式访问HTML画布元素：</p>
+    
+    
+<code>
+
+    var canvas = canvasTex.image;
+    
+</code>
+
+    
+    <p>您可以使用可用于在HTML画布上绘图的标准方法。例如，下方代码在白色背景上绘制了一张蓝色的笑脸：</p>
+    
+    
+<code>
+
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = 'white';
+    ctx.strokeStyle = 'blue';
+
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    ctx.moveTo(110, 75);
+    ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    ctx.moveTo(65, 65);
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    ctx.moveTo(95, 65);
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    ctx.stroke();
+
+</code>
+
+    
+    <p>最后，如果您想让更新在3D渲染中立即可见需将画布纹理标记为动态。</p>
+    
+    
+<code>
+
+    canvasTex.needsUpdate = true;
+    
+</code>
+
+    
+    <img src="files/puzzles/puzzles-html-create-canvas-elem-example.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#draw_line" id="draw_line" class="permalink">#</a></p>
+
+    <h3>draw line(画线)</h3>
+
+    <p>通过一个动态更新的线条将指定的3D对象与指定的HTML元素连接起来。如果HTML元素位于一个外部HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>) 嵌入其中），应启用 "in parent doc" 复选框。您也可以为该行设置宽度、颜色和偏移。</p>
+      
+    <img src="files/puzzles/puzzles-html-draw-line.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#remove_line" id="remove_line" class="permalink">#</a></p>
+
+    <h3>remove line(移除线)</h3>
+
+    <p>从指定的对象中移除一条先前创建的线。</p>
+      
+    <img src="files/puzzles/puzzles-html-remove-line.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#bind_element" id="bind_element" class="permalink">#</a></p>
+
+    <h3>bind element(绑定元素)</h3>
+
+    <p>使一个指定的HTML元素在屏幕空间中跟随一个指定的3D对象的中心。如果HTML元素位于一个外部HTML文档中（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong>) 嵌入其中），应启用 "in parent doc" 复选框。</p>
+      
+    <img src="files/puzzles/puzzles-html-bind-element.jpg"><p><strong>注意</strong>：</p>
+
+    <p>您可以使用 <a href="manual/zh/puzzles/Objects.html#add_annotation">add annotation(添加标注)</a> 拼图来代替，并参照 <a href="manual/zh/introduction/Styling-Verge3D-Apps.html#Annotations" target="_parent">这里</a>的描述定制标注的外观。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#init_fullscreen" id="init_fullscreen" class="permalink">#</a></p>
+
+    <h3>init fullscreen(初始化全屏)</h3>
+
+    <p>设置一个指定的HTML元素为全屏模式按钮——第一次点击进入全屏模式，第二次点击退出全屏。放在 "on enter do" 和 "on exit do" 插槽里的对象会在进入或退出全屏模式时被触发。如果浏览器不支持全屏，放在 "if unavailable do" 插槽中的对象会被触发（例如在iOS Safari中）。</p>
+      
+    <img src="files/puzzles/puzzles-html-init-fullscreen.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#open_web_page" id="open_web_page" class="permalink">#</a></p>
+
+    <h3>open web page(打开网页)</h3>
+
+    <p>当此拼图被触发时，根据下拉选择，一个指定的URL会在一个新的或同一浏览器标签内打开。当从拼图编辑器中触发时，跳出当前页面前会弹出确认提示。</p>
+      
+    <img src="files/puzzles/puzzles-html-open-web-page.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#social_share_link" id="social_share_link" class="permalink">#</a></p>
+
+    <h3>social share link(社交网站分享链接)</h3>
+
+    <p>生成一个链接，以便在主流社交媒体上分享你的应用。</p>
+      
+    <img src="files/puzzles/puzzles-html-social-share-link.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#set_url_param" id="set_url_param" class="permalink">#</a></p>
+
+    <h3>set URL param(设置URL参数)</h3>
+
+    <p>如有必要，可通过自动形成一个有效的 <a href="https://en.wikipedia.org/wiki/Query_string" target="_blank">查询字符串</a> 来分配或更新指定URL中的参数值，并返回更新的URL。</p>
+      
+    <img src="files/puzzles/puzzles-html-set-url-param.jpg"><p>当一个应用的配置数据被存储在其URL中时，此对象会很有用。例如，您可以通过以下方式指定一张图片作为纹理使用：</p>
+
+    <pre class="prettyprint">        
+    <code class="language-html">https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg</code>
+
+    </pre>
+
+    <p>上传一个纹理，检索其服务器端的路径，并将其保存到应用URL的 <strong>image_url</strong> 参数中，如下所示：</p>
+      
+    <img src="files/puzzles/puzzles-html-set-url-param-example.jpg"><p>请参阅Verge3D发行版中的 <strong>Custom Image</strong> 演示案例，了解其完整的工作方式。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#take_screenshot" id="take_screenshot" class="permalink">#</a></p>
+
+    <h3>take screenshot(截屏)</h3>
+
+    <p>获取视口的截图并以 <a href="manual/zh/puzzles/HTML.html#data_uri">数据URI</a> 格式输出。</p>
+      
+    <img src="files/puzzles/puzzles-html-take-screenshot.jpg"><p><strong>注意</strong>：</p>
+
+    <p>您需要使用 <a href="manual/zh/puzzles/Initialization.html#configure_application">configure application(配置应用)</a> 拼图为应用启用屏幕截图，否则将会生成全黑的图像。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#get_url_data" id="get_url_data" class="permalink">#</a></p>
+
+    <h3>get URL data(获取URL数据)</h3>
+
+    <p>检索应用被加载到的窗口的URL数据。</p>
+
+    <p>
+    </p><ul>
+    <li><strong>Entire URL</strong> - 文本，例如： "https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg"</li>
+    <li><strong>Parameters</strong> - 字典，例如： {"image_url": "https://www.uploadserver.com/path/to/image.jpg"}</li>
+    <li><strong>Host name</strong> - 文本，例如： "www.example.com"</li>
+    </ul>如果需要获取外部HTML文档的窗口（Verge3D应用的 <strong>.html</strong> 文件通过 <strong>iframe</strong> 嵌入其中），应启用 "in parent doc" 复选框。<p></p>
+      
+    <img src="files/puzzles/puzzles-html-get-url-data.jpg"><p>当一个应用的配置数据被存储在其URL中时，此对象会很有用。例如，您可以通过以下方式指定一张图片作为纹理使用：</p>
+
+    <pre class="prettyprint"><code class="language-html">
+      https://www.example.com/my_awesome_app.html?image_url=https://www.uploadserver.com/path/to/image.jpg
+      
+</code>
+</pre>
+
+    <p>然后您可以检索 <strong>image_url</strong> 参数，加载并应用该纹理，方法如下。</p>
+      
+    <img src="files/puzzles/puzzles-html-get-url-data-example.jpg"><p>请参阅Verge3D发行版中的 <strong>Custom Image</strong> 演示案例，了解其完整的工作方式。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#download_file" id="download_file" class="permalink">#</a></p>
+
+    <h3>download file(下载文件)</h3>
+
+    <p>下载以 <a href="manual/zh/puzzles/HTML.html#data_uri">数据URI</a> 格式指定的内容到一个文件中。您也可以传递文本、 <a href="manual/zh/puzzles/Dictionaries.html">字典</a>、或 <a href="manual/zh/puzzles/Lists.html">列表</a> 数据，作为文本或JSON文件下载。在这种情况下，给定的对象将被自动转换为适当的数据URI。</p>
+      
+    <img src="files/puzzles/puzzles-html-download-file.jpg"><p>此拼图可用于以下情境：</p>
+
+    <ul>
+      <li>保存屏幕截图</li>
+      <li>通过保存字典（或列表）到 <strong>*.json</strong> 文件来保存应用状态</li>
+      <li>以glTF格式导出模型，以便进一步处理</li>
+      <li>生成文本式的价格信息、报价、报告等。</li>
+    </ul>
+    
+    <img src="files/puzzles/puzzles-html-download-file-example.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#open_file" id="open_file" class="permalink">#</a></p>
+
+    <h3>open file and opened file(打开文件和已打开的文件)</h3>
+
+    <p>调用浏览器的本地对话窗口，从用户的设备中选择文件。当用户选择了文件后，以 <a href="manual/zh/puzzles/HTML.html#data_uri">数据URI</a> 格式返回文件的内容。</p>
+      
+    <img src="files/puzzles/puzzles-html-open-file.jpg">
+
+    <p><a href="manual/zh/puzzles/HTML.html#drop_file_to" id="drop_file_to" class="permalink">#</a></p>
+
+    <h3>drop file to(将文件拖到)</h3>
+
+    <p>返回一个从文件管理器（或其他程序）拖拽的文件，并将其放置在浏览器窗口内给定的HTML元素上。当用户拖放该文件后，将其内容作为 <a href="manual/zh/puzzles/HTML.html#open_file">opened file(打开的文件)</a> 拼图返回（使用 <a href="manual/zh/puzzles/HTML.html#data_uri">数据URI</a> 格式）。</p>
+      
+    <img src="files/puzzles/puzzles-html-drop-file-to.jpg"><p>您可以激活可选的 <strong>drag over</strong> 插槽来处理文件移动事件。例如，您可以将其与 <a href="manual/zh/puzzles/Scenes.html#raycast">raycast(射线)</a> 拼图一起使用，以突出光标或触摸点下方的对象。</p>
+
+    <p><a href="manual/zh/puzzles/HTML.html#data_uri" id="data_uri" class="permalink">#</a></p>
+
+    <h2>Data URI Links(数据URI链接)</h2>
+
+    <p>数据URI（或数据URL）是一种方便的方法，可以嵌入各种资产，如图片、glTF模型、声音、JSON或CSV的链接（<a href="https://en.wikipedia.org/wiki/Data_URI_scheme" target="_blank">技术资料</a>）。</p>
+
+    <p>例如，下面的链接代表了Verge3D的logo：</p>
+    
+<code class="language-html">data:image/png;base64,
+    iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABvFBMVEUAAAAASKUAAFsAvukA RaMA3voAAEoARaQARKMARqQARqQARKMARaQARqQAQ6IATagCcLwCcbwATagARqQASaYARqQASKUC argASKUARqQASqYASKUAR6QAT6kAT6kAR6QAR6UASaUASaUAR6UARKMBWq8BWq8ARKMAQqECaLcC abgAQqEAQaECbboCbroAQaECbrsCbroCabcCa7kCb7sCbrsARaQARaQElNAEldEGrd4GseEDg8cD
+    hcgGtOIGrt8Eks8I1/cFqNwBUqsAQ6IBVKwGrN4Ekc8El9IJ5/8HvOcBU6sASqYDdb8CdL4ASaYB
+    VawHv+gJ5/4EltII0PIJ4PsCc70ARqQEjs0J4vwJ4fsEi8sARaMDdr8J4fwI0fIJ3/sGuuYATKcC
+    ZbYI1fUHyfMHyPMI0/QCYrQATagHvecJ4PwEj80ARKMFnNQHyvMBU8IBUsEFmNII3PkHwuoIyvQH
+    vugAS6cDecEI1/YCbrsBWK4I0vMJ5v8HyPIIz/ICcr0I2PcIz/EDgMUBXrEJ6P8I1vYBW7ADhMcC
+    cb0Hv+kFmNMEkM4GueUJ4PoJ3/oJ3voI3foEltH///+98SuhAAAAOHRSTlMAAAAAAAAAJJPu8Jgn
+    EWjT/v7VEAVLvvq8RwQFe/LweDXn6DdT9/hXWvn6XVv5+lz6+fn6/v7w7sPq7QcAAAABYktHRJPh
+    A9+2AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QsCEC4OPIwcRgAAAQpJREFUGNNjYGBg
+    YGRi5+Dk4uZhZmQAAUYWXj5+AQtLQSE+YRagEKOIqJi4lbWNrZ29uISkFCODtIysg6OTs4uLq5uj
+    u5y8NIOCooenl7ePr59/QGBQsJIyg4pqSGhYeERkVHRMbFy8mjqDhmZCYlJySmpaekZmVoKWNoOO
+    bnZObl5+QWFqUa5DnJ4+g75BsW9SSWlBQX5ZeUWxoQ6DtnhlVXVNbVpdbX1AQ6ORBoO6WlNzS6Nn
+    a6tnW3tHk6oKg7JSkVdYpWdtrWdKZ1e3ogKDtLxcT28fSKA/0UFWRpqBUUpSwth+QmvrRHtjMVER
+    kGdYhPmETCZZmvLz8bJA/cvKw21mzsHOBuICAHx4PYwwa1fDAAAAJXRFWHRkYXRlOmNyZWF0ZQAy MDE3LTExLTAyVDE2OjQ2OjE0KzAxOjAwKvGBdAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0xMS0w MlQxNjo0NjoxNCswMTowMFusOcgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+    AAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMj E0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC
+</code>
+
+    <p>复制整个片段并粘贴到浏览器地址栏打开即可显示该标志。</p>
+      
+    <img src="files/puzzles/data-url-logo.jpg">
+    
+    <p>在拼图中，我们广泛使用数据URI链接，因为它们提供了在不同拼图块之间传递类似于文件的数据的便捷方式。例如，您可以使用 <a href="manual/zh/puzzles/HTML.html#open_file">open file(打开文件)</a> 或 <a href="manual/zh/puzzles/HTML.html#drop_file_to">drag file to(将文件拖到)</a> 拼图加载文件（图像或数据）。然后您可以根据该文件对您的场景进行修改。之后，您可以通过 <a href="manual/zh/puzzles/HTML.html#download_file">download file(下载文件)</a>拼图将修改后的场景（或数据，比如价格表文件）上传到用户机器上，或通过 <a href="manual/zh/puzzles/Advanced.html#send_data">send data(发送数据)</a> 拼图将该文件上传到服务器。在所有这些情况中，数据都将使用数据URI格式传输。</p>
+
+    <p class="note">请参阅Verge3D发行版中的 <strong>Custom Image</strong> 演示案例，了解数据URI的使用方法。</p>
+
+    <p>调试Data URI格式的数据也很容易。只需使用 <a href="manual/zh/puzzles/System.html#print_to_console">print to console(打印到控制台)</a> 拼图，然后打开 <a href="manual/zh/introduction/FAQ.html#browser_console">browser console(浏览器控制台)</a> 来观察输出，然后点击控制台内打印的URI，在单独的浏览器标签中预览数据。</p>
+      
+    <img src="files/puzzles/data-url-debugging.jpg"><h2>在使用拼图时遇到困难？</h2>
+
+    <p>欢迎您随时在 <a href="https://www.soft8soft.com/forums/" target="_blank">论坛</a>上提问！您还可以加入中文用户社区<a href="https://shang.qq.com/wpa/qunwpa?idkey=c31cf6597f3ed7ce68bd47aba6bba23049bf973ac6acc59b0a5a7d1bd933b3ea" target="_blank">QQ群(171678760)</a>，在线寻求帮助。</p>
+
+  </article>
+
+
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript">
+               (function(d, w, c) {
+                 if (document.domain === "www.soft8soft.com") {
+                   (w[c] = w[c] || []).push(function() {
+                       try {
+                           w.yaCounter46001298 = new Ya.Metrika({
+                               id:46001298,
+                               clickmap:true,
+                               trackLinks:true,
+                               accurateTrackBounce:true
+                           });
+                       } catch(e) { }
+                   });
+
+                   var n = d.getElementsByTagName("script")[0],
+                       s = d.createElement("script"),
+                       f = function() { n.parentNode.insertBefore(s, n); };
+                   s.type = "text/javascript";
+                   s.async = true;
+                   s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                   if (w.opera == "[object Opera]") {
+                       d.addEventListener("DOMContentLoaded", f, false);
+                   } else { f(); }
+                 }
+               })(document, window, "yandex_metrika_callbacks");
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+        
+            <div class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on Tue Oct 05 2021</div></div>
+        </body></html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="14"
+   viewBox="0 0 4.2333332 3.7041666"
+   version="1.1"
+   id="svg6720"
+   sodipodi:docname="window_close_button.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs6714">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1935"
+       id="linearGradient5339"
+       gradientUnits="userSpaceOnUse"
+       x1="327.37134"
+       y1="89.370705"
+       x2="331.11148"
+       y2="86.096649"
+       gradientTransform="matrix(0.97358744,0,0,0.97358744,-318.26927,209.68597)" />
+    <linearGradient
+       id="linearGradient1935"
+       inkscape:collect="always">
+      <stop
+         id="stop1931"
+         offset="0"
+         style="stop-color:#dbdbdb;stop-opacity:1" />
+      <stop
+         id="stop1933"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1935"
+       id="linearGradient7277"
+       gradientUnits="userSpaceOnUse"
+       x1="327.37134"
+       y1="89.370705"
+       x2="331.11148"
+       y2="86.096649"
+       gradientTransform="matrix(0.97358745,0,0,0.97358745,8.634359,2.3687511)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="36.75"
+     inkscape:cx="5.8344405"
+     inkscape:cy="6.9325342"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6717">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-293.29583)">
+    <g
+       aria-label=""
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:url(#linearGradient5339);fill-opacity:1;stroke:none;stroke-width:0.10583331"
+       id="text2401">
+      <path
+         d="M 3.8364582,293.29583 H 0.39687509 c -0.22324218,0 -0.396874978738,0.1819 -0.396874978738,0.39687 v 2.91042 C 1.11262e-7,296.82636 0.17363291,297 0.39687509,297 H 3.8364582 c 0.214974,0 0.396875,-0.17364 0.396875,-0.39688 v -2.91042 c 0,-0.21497 -0.181901,-0.39687 -0.396875,-0.39687 z m -0.6945312,2.40605 c 0.041341,0.0413 0.041341,0.10749 0,0.14056 l -0.3389973,0.339 c -0.033073,0.0413 -0.099219,0.0413 -0.1405599,0 l -0.5457031,-0.55397 -0.5539714,0.55397 c -0.041341,0.0413 -0.1074869,0.0413 -0.1405598,0 l -0.3389974,-0.339 c -0.041341,-0.0331 -0.041341,-0.0992 0,-0.14056 l 0.5539713,-0.55397 -0.5539713,-0.5457 c -0.041341,-0.0413 -0.041341,-0.10749 0,-0.14056 l 0.3389974,-0.339 c 0.033073,-0.0413 0.099219,-0.0413 0.1405598,0 l 0.5539714,0.55397 0.5457031,-0.55397 c 0.041341,-0.0413 0.1074869,-0.0413 0.1405599,0 l 0.3389973,0.339 c 0.041341,0.0331 0.041341,0.0992 0,0.14056 l -0.5539713,0.5457 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Font Awesome 5 Free';-inkscape-font-specification:'Font Awesome 5 Free Bold';fill:url(#linearGradient5339);fill-opacity:1;stroke:none;stroke-width:0.10583331"
+         id="path7308" />
+    </g>
+  </g>
+</svg>
