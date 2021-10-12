@@ -825,44 +825,6 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="5sYlmkBgQCpfuPS_+~#Y" x="410" y="-110">
-      <field name="EVENT">mouseover</field>
-      <field name="PARENT">TRUE</field>
-      <value name="ID">
-        <shadow type="text" id="TrW.lYIMINkl/}do8(Q3">
-          <field name="TEXT">fold_knife_button</field>
-        </shadow>
-      </value>
-      <statement name="DO">
-        <block type="autoRotateCamera" id="OZkzoBl[L3BT?MN^Lvi.">
-          <field name="ON_OFF">OFF</field>
-          <value name="SPEED">
-            <shadow type="math_number" id="ZIkt3Ge*H-6j~aY=smFH">
-              <field name="NUM">2</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="woI/~TYLl{w%{FKA2a1Z" x="370" y="150">
-      <field name="EVENT">mouseover</field>
-      <field name="PARENT">TRUE</field>
-      <value name="ID">
-        <shadow type="text" id="n+|i*tDN%$laXFuR348S">
-          <field name="TEXT">unfold_knife_button</field>
-        </shadow>
-      </value>
-      <statement name="DO">
-        <block type="autoRotateCamera" id="oSlW0IeRfo%;1}b3K55O">
-          <field name="ON_OFF">ON</field>
-          <value name="SPEED">
-            <shadow type="math_number" id="$0P164dzTtlX_I(5XHiJ">
-              <field name="NUM">-2</field>
-            </shadow>
-          </value>
-        </block>
-      </statement>
-    </block>
     <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="d9j@.bFWwCmSm*68AUHi" x="-2030" y="550">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
@@ -1522,5 +1484,5 @@
       </statement>
     </block>
   </tab>
-  <editorsettings viewport-x="926" viewport-y="-7" viewport-w="398" viewport-h="852.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+  <editorsettings viewport-x="1504" viewport-y="28" viewport-w="398" viewport-h="852.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
 </xml>

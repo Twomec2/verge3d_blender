@@ -8,7 +8,7 @@
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
   </tab>
-  <tab name="main" type="MainTab" active="true" scrollx="41.63643562544166" scrolly="566.5475104968244" scale="0.7204835185397889">
+  <tab name="main" type="MainTab" active="true" scrollx="1335" scrolly="746" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="[5L:IZg/GUqZ4n3S/,4[" type="">camera_moving</variable>
       <variable id=".gx{4,l];xMw.|-e`|.," type="">material_changing</variable>
@@ -825,41 +825,73 @@
         </block>
       </next>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="5sYlmkBgQCpfuPS_+~#Y" x="410" y="-110">
-      <field name="EVENT">mouseover</field>
-      <field name="PARENT">TRUE</field>
-      <value name="ID">
-        <shadow type="text" id="TrW.lYIMINkl/}do8(Q3">
-          <field name="TEXT">fold_knife_button</field>
-        </shadow>
-      </value>
+    <block xmlns="https://developers.google.com/blockly/xml" type="everyFrame" id="WQVMg/=59oC)2selE+#L" x="310" y="-190">
       <statement name="DO">
-        <block type="autoRotateCamera" id="OZkzoBl[L3BT?MN^Lvi.">
-          <field name="ON_OFF">OFF</field>
-          <value name="SPEED">
-            <shadow type="math_number" id="ZIkt3Ge*H-6j~aY=smFH">
-              <field name="NUM">2</field>
-            </shadow>
+        <block type="controls_if" id="-=wD;sBEN.;|b%4kA*#d">
+          <mutation else="1"/>
+          <value name="IF0">
+            <block type="logic_operation" id="Imo5Mc5BL0DJTQM_MN`R">
+              <field name="OP">AND</field>
+              <value name="A">
+                <block type="logic_operation" id="AaAM0Htom1+?w@|X|~F@">
+                  <field name="OP">AND</field>
+                  <value name="A">
+                    <block type="logic_compare" id="gE3`BjB9n{_*u/B8Yb(F">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="NI0$1c{KQz;Uf8`%,xL|">
+                          <field name="VAR" id="[5L:IZg/GUqZ4n3S/,4[">camera_moving</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="logic_boolean" id="HT[+6H.rruu^_J,/69(q">
+                          <field name="BOOL">FALSE</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_compare" id="c3eR`e=-z=Xpn5:^^E-o">
+                      <field name="OP">EQ</field>
+                      <value name="A">
+                        <block type="variables_get" id="KK7,ULwfoObJGwS=t0@(">
+                          <field name="VAR" id="HKHLe{YG$SSKEU?m(_j?">animation_happens</field>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="logic_boolean" id="shB:e{OX5$rH9nV=MW6E">
+                          <field name="BOOL">FALSE</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="logic_compare" id="$MUE+T-iKwNhj2UWw0W5">
+                  <field name="OP">EQ</field>
+                  <value name="A">
+                    <block type="variables_get" id="{7bnY#b`By}}@g|LwUJZ">
+                      <field name="VAR" id=".gx{4,l];xMw.|-e`|.,">material_changing</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="logic_boolean" id="pp}Rn3X5n8-[LlakY|Vu">
+                      <field name="BOOL">FALSE</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
           </value>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="woI/~TYLl{w%{FKA2a1Z" x="370" y="150">
-      <field name="EVENT">mouseover</field>
-      <field name="PARENT">TRUE</field>
-      <value name="ID">
-        <shadow type="text" id="n+|i*tDN%$laXFuR348S">
-          <field name="TEXT">unfold_knife_button</field>
-        </shadow>
-      </value>
-      <statement name="DO">
-        <block type="autoRotateCamera" id="oSlW0IeRfo%;1}b3K55O">
-          <field name="ON_OFF">ON</field>
-          <value name="SPEED">
-            <shadow type="math_number" id="$0P164dzTtlX_I(5XHiJ">
-              <field name="NUM">-2</field>
-            </shadow>
-          </value>
+          <statement name="DO0">
+            <block type="disableRendering" id="$24?O})x|hm;FM5F,K0A">
+              <field name="AA">TRUE</field>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="enableRendering" id="bChk+#Ut=e;tkG+[@3BX"/>
+          </statement>
         </block>
       </statement>
     </block>
@@ -1522,5 +1554,5 @@
       </statement>
     </block>
   </tab>
-  <editorsettings viewport-x="926" viewport-y="-7" viewport-w="398" viewport-h="852.5" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+  <editorsettings viewport-x="1504" viewport-y="28" viewport-w="398" viewport-h="852.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
 </xml>

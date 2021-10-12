@@ -835,7 +835,7 @@
       </value>
       <statement name="DO">
         <block type="autoRotateCamera" id="OZkzoBl[L3BT?MN^Lvi.">
-          <field name="ON_OFF">OFF</field>
+          <field name="ON_OFF">ON</field>
           <value name="SPEED">
             <shadow type="math_number" id="ZIkt3Ge*H-6j~aY=smFH">
               <field name="NUM">2</field>
